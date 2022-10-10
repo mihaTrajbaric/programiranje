@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>Splošno &#8212; Krožek začetnega programiranja 2022-23</title>
+    <title>Naloge: Čisti začetek &#8212; Krožek začetnega programiranja 2022-23</title>
     
   <!-- Loaded before other Sphinx assets -->
   <link href="_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
@@ -52,7 +52,7 @@ const thebe_selector_output = ".output, .cell_output"
     <script async="async" src="_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="Osnove programiranja" href="01_osnove.html" />
+    <link rel="prev" title="Osnove programiranja" href="01_osnove.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -87,7 +87,7 @@ const thebe_selector_output = ".output, .cell_output"
 <div class="bd-sidebar noprint" id="site-navigation">
     <div class="bd-sidebar__content">
         <div class="bd-sidebar__top"><div class="navbar-brand-box">
-    <a class="navbar-brand text-wrap" href="#">
+    <a class="navbar-brand text-wrap" href="index.html">
       
         <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
         
@@ -106,8 +106,8 @@ const thebe_selector_output = ".output, .cell_output"
     <div class="bd-toc-item active">
         
         <ul class="nav bd-sidenav bd-sidenav__home-link">
-            <li class="toctree-l1 current active">
-                <a class="reference internal" href="#">
+            <li class="toctree-l1">
+                <a class="reference internal" href="index.html">
                     Splošno
                 </a>
             </li>
@@ -117,14 +117,14 @@ const thebe_selector_output = ".output, .cell_output"
   Vsebina
  </span>
 </p>
-<ul class="nav bd-sidenav">
+<ul class="current nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="01_osnove.html">
    Osnove programiranja
   </a>
  </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="01_naloge.html">
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
    Naloge: Čisti začetek
   </a>
  </li>
@@ -218,7 +218,7 @@ title="Source repository"
       </li>
       
       <li>
-        <a href="https://github.com/mihaTrajbaric/programiranje/issues/new?title=Issue%20on%20page%20%2Findex.html&body=Your%20issue%20content%20here."
+        <a href="https://github.com/mihaTrajbaric/programiranje/issues/new?title=Issue%20on%20page%20%2F01_naloge.html&body=Your%20issue%20content%20here."
    class="headerbtn"
    data-toggle="tooltip"
 data-placement="left"
@@ -246,7 +246,7 @@ title="Open an issue"
   <div class="menu-dropdown__content">
     <ul>
       <li>
-        <a href="_sources/index.md"
+        <a href="_sources/01_naloge.md"
    class="headerbtn"
    data-toggle="tooltip"
 data-placement="left"
@@ -306,28 +306,23 @@ title="Print to PDF"
     <nav id="bd-toc-nav" aria-label="Page">
         <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#osnovne-informacije">
-   Osnovne informacije
+  <a class="reference internal nav-link" href="#pretvarjanje-iz-fahrenheitov-v-celzije">
+   Pretvarjanje iz Fahrenheitov v Celzije
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#potek-krozka">
-   Potek krožka
+  <a class="reference internal nav-link" href="#pitagorov-izrek">
+   Pitagorov izrek
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#vsebina">
-   Vsebina
+  <a class="reference internal nav-link" href="#topologija">
+   Topologija
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#priporocena-kolicina-dela">
-   Priporočena količina dela
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#dodatno-gradivo">
-   Dodatno gradivo
+  <a class="reference internal nav-link" href="#ploscina-trikotnika">
+   Ploščina trikotnika
   </a>
  </li>
 </ul>
@@ -339,7 +334,7 @@ title="Print to PDF"
         <div class="col pl-md-3 pl-lg-5 content-container">
             <!-- Table of contents that is only displayed when printing the page -->
             <div id="jb-print-docs-body" class="onlyprint">
-                <h1>Splošno</h1>
+                <h1>Naloge: Čisti začetek</h1>
                 <!-- Table of contents -->
                 <div id="print-main-content">
                     <div id="jb-print-toc">
@@ -350,28 +345,23 @@ title="Print to PDF"
                         <nav aria-label="Page">
                             <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#osnovne-informacije">
-   Osnovne informacije
+  <a class="reference internal nav-link" href="#pretvarjanje-iz-fahrenheitov-v-celzije">
+   Pretvarjanje iz Fahrenheitov v Celzije
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#potek-krozka">
-   Potek krožka
+  <a class="reference internal nav-link" href="#pitagorov-izrek">
+   Pitagorov izrek
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#vsebina">
-   Vsebina
+  <a class="reference internal nav-link" href="#topologija">
+   Topologija
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#priporocena-kolicina-dela">
-   Priporočena količina dela
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#dodatno-gradivo">
-   Dodatno gradivo
+  <a class="reference internal nav-link" href="#ploscina-trikotnika">
+   Ploščina trikotnika
   </a>
  </li>
 </ul>
@@ -384,43 +374,48 @@ title="Print to PDF"
                 
               <div>
                 
-  <section class="tex2jax_ignore mathjax_ignore" id="splosno">
-<h1>Splošno<a class="headerlink" href="#splosno" title="Permalink to this headline">#</a></h1>
-<section id="osnovne-informacije">
-<h2>Osnovne informacije<a class="headerlink" href="#osnovne-informacije" title="Permalink to this headline">#</a></h2>
-<p><strong>Izvajalec</strong><br />
-Mihael Trajbarič, študent računalništva in matematike <br />
-<a class="reference external" href="mailto:miha&#46;trajbaric&#37;&#52;&#48;gmail&#46;com">miha<span>&#46;</span>trajbaric<span>&#64;</span>gmail<span>&#46;</span>com</a></p>
-<p><strong>Termin in lokacija</strong><br />
-Ponedeljek 14.30 - 16.00 v <code class="docutils literal notranslate"><span class="pre">računalnici</span> <span class="pre">1</span></code></p>
+  <section class="tex2jax_ignore mathjax_ignore" id="naloge-cisti-zacetek">
+<h1>Naloge: Čisti začetek<a class="headerlink" href="#naloge-cisti-zacetek" title="Permalink to this headline">#</a></h1>
+<section id="pretvarjanje-iz-fahrenheitov-v-celzije">
+<h2>Pretvarjanje iz Fahrenheitov v Celzije<a class="headerlink" href="#pretvarjanje-iz-fahrenheitov-v-celzije" title="Permalink to this headline">#</a></h2>
+<p>Napiši program, ki mu uporabnik vpiše temperaturo v Fahrenheitovih stopinjah, program pa
+jo izpiše v Celzijevih. Med temperaturama pretvarjamo po formuli C = 5/9 (F – 32). Za potrebe
+Američanov napiši še program, ki računa v nasprotno smer.
+Če se k tej nalogi vračaš, da jo uporabiš za vajo iz pisanja funkcij, pa napiši funkciji <code class="docutils literal notranslate"><span class="pre">celsius(f)</span></code>
+in <code class="docutils literal notranslate"><span class="pre">fahrenheit(c)</span></code>. Prva prejme temperaturo v Fahrenheitih in vrne temperaturo v Celzijevih
+stopinjah, druga pa ravno obratno.</p>
 </section>
-<section id="potek-krozka">
-<h2>Potek krožka<a class="headerlink" href="#potek-krozka" title="Permalink to this headline">#</a></h2>
-<p>Krožek bo potekal v dveh delih. V prvem delu bomo s pomočjo te skripte skupaj pregledali <strong>nove programske konstrukte</strong>, v drugem delu, pa boste dijaki individualno (ali v parih) <strong>reševali naloge</strong>. Pri praktičnem delu bomo uporabljali <a class="reference external" href="https://www.projekt-tomo.si/course/207/">Projekt TOMO</a>.</p>
+<section id="pitagorov-izrek">
+<h2>Pitagorov izrek<a class="headerlink" href="#pitagorov-izrek" title="Permalink to this headline">#</a></h2>
+<p>Napiši program, ki uporabnika vpraša po dolžinah katet pravokotnega trikotnika in izpiše
+dolžino hipotenuze. (Da ponagajamo pokojnemu prof. Križaniču, ki je sovražil dlakocepce,
+dodajmo “dolžino hipotenuze taistega trikotnika”.)
+Če nalogo uporabljaš za vajo iz pisanja funkcij, napiši funkcijo pitagora(a, b), ki prejme
+dolžini katet in vrne dolžino hipotenuze.</p>
 </section>
-<section id="vsebina">
-<h2>Vsebina<a class="headerlink" href="#vsebina" title="Permalink to this headline">#</a></h2>
-<p>Na krožku bomo delali v jeziku <strong>Python 3</strong>. Začeli bomo od osnov programiranja, proti koncu pa se bomo verjetno lotili kakšnih bolj zanimivih projektov, npr. s področja Umetne inteligence, tekmovalnega programiranja, aplikacij, spletnih strani, obdelave (bioloških, kemijskih) znanstvenih podatkov ipd. Kar si boste dijaki pač zaželeli :)</p>
-<p>V začetnem delu bomo v grobem sledili predmetom začetnega programiranja na Fakulteti za Računalništvo in Informatiko ter Fakulteti za Kemijo in Kemijsko tehnologijo.</p>
+<section id="topologija">
+<h2>Topologija<a class="headerlink" href="#topologija" title="Permalink to this headline">#</a></h2>
+<p>Napiši program za izračun dolžine strela s topom (ki brez trenja izstreljuje točkaste krogle v
+brezzračnem prostoru, a pustimo trivio). Program od uporabnika ali uporabnice zahteva, da
+vnese hitrost izstrelka (to je, omenjene točkaste krogle) in kot, pod katerim je izstreljen.
+Program naj izračuna in izpiše, kako daleč bo letela krogla.
+Pomoč za fizično nebogljene: s = v2 sin(2)/g, kjer je s razdalja, v hitrost izstrelka,  je kot, g pa
+osma črka slovenske abecede.
+Preveri tole: krogla leti najdalj, če jo izstrelimo pod kotom 45 stopinj. Poskusi, kako daleč gre
+pod kotom 45 in kako daleč pod 46 stopinj – po 45 mora leteti dlje. Preveri tudi kot 50 stopinj:
+če pod tem kotom leti nazaj (razdalja je negativna), si ga gotovo nekje polomil.
+Če boš napisal rešitev v obliki funkcije, naj bo to funkcija top(v, fi).</p>
 </section>
-<section id="priporocena-kolicina-dela">
-<h2>Priporočena količina dela<a class="headerlink" href="#priporocena-kolicina-dela" title="Permalink to this headline">#</a></h2>
-<p>Kljub temu, da je tole krožek, tj. prostočasna dejavnost, ne moremo pobegniti od dejstva, da je programiranje v resnici <strong>dril</strong>. Če želimo postati vešči programerji oz. programirati v drugem poklicu, pač moramo rešiti kar nekaj nalog :)</p>
-<p>Priporočeno delo tako obsega tedensko <strong>udeležbo na krožku</strong> kjer bomo spoznali nove koncepte in z mojo pomočjo rešili nekaj nalog, ste pa lepo vabljeni, da nekaj nalog rešite tudi doma. Na to lahko gledate kot na <strong>prostovoljno domačo nalogo</strong>.</p>
-<blockquote>
-<div><p>Za primerjavo - študenti imajo v prvem letniku faksa na predmetu programiranje tedensko <code class="docutils literal notranslate"><span class="pre">4,5</span> <span class="pre">ure</span></code> obveznosti na faksu (predavanja, vaje) in obvezno domačo nalogo.</p>
-</div></blockquote>
+<section id="ploscina-trikotnika">
+<h2>Ploščina trikotnika<a class="headerlink" href="#ploscina-trikotnika" title="Permalink to this headline">#</a></h2>
+<p>Ploščino trikotnika s stranicami a, b in c lahko izračunamo po Heronovem obrazcu:
+p = s(s − a)(s − b)(s − c) , kjer je s velikost polobsega, s = (a + b + c) / 2 . Napiši program,
+ki uporabnika vpraša po dolžinah stranic in izpiše (njegovo) ploščino.
+Program naj popazi na nepravilne podatke. Če uporabnik zatrdi, da ima trikotnik stranice 1, 2
+in 5 (takšnega trikotnika – razmisli – pač ni), naj ga program pozove k resnosti.
+Če nalogo rešuješ s funkcijo, naj se imenuje ploscina_trikotnika, prejme naj dolžine stranic
+in ne pazi na nič. Če so podatki čudni, naj se pač sesuje.</p>
 </section>
-<section id="dodatno-gradivo">
-<h2>Dodatno gradivo<a class="headerlink" href="#dodatno-gradivo" title="Permalink to this headline">#</a></h2>
-<ul class="simple">
-<li><p><a class="reference external" href="https://zalozba.fri.uni-lj.si/moskon2020.pdf">Python za neračunalničarje</a></p></li>
-<li><p><a class="reference external" href="https://ucilnica.fri.uni-lj.si/file.php/166/Python%20za%20programerje.pdf">Python za programerje</a></p></li>
-<li><p><a class="reference external" href="https://www.pythoncheatsheet.org/">Python Cheat Sheet</a></p></li>
-</ul>
-</section>
-<div class="toctree-wrapper compound">
-</div>
 </section>
 
     <script type="text/x-thebe-config">
@@ -450,12 +445,12 @@ Ponedeljek 14.30 - 16.00 v <code class="docutils literal notranslate"><span clas
                 
     <!-- Previous / next buttons -->
 <div class='prev-next-area'>
-    <a class='right-next' id="next-link" href="01_osnove.html" title="next page">
-    <div class="prev-next-info">
-        <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Osnove programiranja</p>
-    </div>
-    <i class="fas fa-angle-right"></i>
+    <a class='left-prev' id="prev-link" href="01_osnove.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title">Osnove programiranja</p>
+        </div>
     </a>
 </div>
             </footer>
