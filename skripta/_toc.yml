@@ -2,8 +2,13 @@
 # Learn more at https://jupyterbook.org/customize/toc.html
 
 format: jb-book
-root: Uvod
-chapters:
-- file: pozdrav
-- file: viri
+root: index
+parts:
+# - caption: Birokracija
+#   chapters:
+#     - file: pozdrav
+#     - file: viri
+- caption: Vsebina
+  chapters:
+    - file: 01_osnove
 # - file: markdown-notebooks
