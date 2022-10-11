@@ -1,6 +1,7 @@
 #!/usr/bin/env python
 # coding: utf-8
 
+# # Osnove programiranja
 # ## Moj računalnik je lahko tudi kalkulator
 # 
 # Če poženemo Python dobimo ... kalkulator.
@@ -14,11 +15,11 @@
 # 8
 # ```
 # 
-# Nič posebnega. Temu, kar smo vpisovali, pravimo *izraz*. Pri tem predmetu se sicer ne bomo ukvarjali s pravorečjem; teoretiki nas učijo o razliki med *izrazom*, *stavkom* in bogvečem še, sam pa se tule enkrat za vselej opravičujem, ker bom dal prednost praksi, ne terminologiji. Še definicijo pomena besede *izraz* bom prepustil kolegu Slivniku, ki bo nekatere od vas v tretjem letniku učil zanimivo snov o jezikih, prevajalnikih in sploh vsem).
+# Nič posebnega. Temu, kar smo vpisovali, pravimo *izraz*. Pri tem predmetu se sicer ne bomo ukvarjali s pravorečjem; teoretiki nas učijo o razliki med *izrazom*, *stavkom* in bogvečem še, sam pa se tule enkrat za vselej opravičujem, ker bom dal prednost praksi, ne terminologiji.
 # 
 # Izraz bo za nas pač *nekaj, kar se da izračunati* (kar je ravnokar zaropotalo, je neki [Alan Turing](http://en.wikipedia.org/wiki/Turing), ki se je z jabolkom v ustih obrnil v grobu). In gornje stvari se očitno dajo izračunati. In niti niso preveč zanimive.
 # 
-# Razen, morda, zadnjega izraza. V izrazih lahko uporabljamo presledke in to moramo - kot tudi sicer - početi po občutku. V zadnjem izrazu tega nismo počeli, zato je zapis zavajajoč. Python je dovolj pameten, da ve, da ima *operator* (še ena beseda, ki si jo zapomnimo!) množenja prednost pred operatorjem seštevanja. Kar smo napisali, se računa enako, kot če bi rekli
+# Razen, morda, zadnjega izraza. V izrazih lahko **uporabljamo presledke** in to moramo - kot tudi sicer - početi po občutku. V zadnjem izrazu tega nismo počeli, zato je zapis zavajajoč. Python je dovolj pameten, da ve, da ima *operator* (še ena beseda, ki si jo zapomnimo!) množenja prednost pred operatorjem seštevanja. Kar smo napisali, se računa enako, kot če bi rekli
 # 
 # ```
 # 1+2*3+1
@@ -92,13 +93,13 @@
 # 
 # Če seštejemo realni števili 2.3 in 1.7 dobimo realno število 4.0. Če seštejemo celi števili 2 in 2, dobimo celo število 4.
 # 
-# Kako hitro napredujemo! To, kar smo pravkar spoznali, so "podatkovni tipi". Točneje, spoznali smo dva podatkovna tipa *cela števila* in *števila s plavajočo vejico*. V angleščini se jima reče *integer* in *floating point number* v Pythonu pa `int` in `float`. Odkod ta čudna imena boste izvedeli pri kakem drugem predmetu.
+# Kako hitro napredujemo! To, kar smo pravkar spoznali, so "podatkovni tipi". Točneje, spoznali smo dva podatkovna tipa *cela števila* in *števila s plavajočo vejico*. V angleščini se jima reče *integer* in *floating point number* v Pythonu pa `int` in `float`.
 # 
 # Vsaka reč v Pythonu je reč nekega tipa, in če je ta reč število, je bodisi tipa `int` bodisi `float`. (So števila lahko še kakega drugega tipa? Lahko, nekateri jeziki imajo celo kupe številskih tipov. Vendar nas za zdaj ne brigajo.)
 # 
-# Neučakanega študenta morda pograbila radovednost. Kateri podatkovni tipi pa še obstajajo - razen številskih? Le malo naj počaka, kmalu bodo na vrsti.
+# Neučakanega dijaka morda pograbila radovednost. Kateri podatkovni tipi pa še obstajajo - razen številskih? Le malo naj počaka, kmalu bodo na vrsti.
 # 
-# Preden gremo naprej, samo opozorimo, kaj vas čaka v večini drugih jezikov: v skoraj vseh drugih jezikih deljenje celih števil vrača celo število; v Javi, ki se jo boste učili v drugem semestru, bo 7 / 2 enako 3. Obratno opozorilo, seveda, velja za tiste, ki že znate programirati in ste morda vajeni drugače: v Pythonu izraz 7 / 2 vrne 3.5. Je to pametno? Najbrž je: ko delimo, večinoma hočemo "pravo" deljenje in le redko celoštevilskega. Še več, pri programiranju velikokrat naredimo napako, ko brezskrbno delimo, ne da bi pomislili na to, s kakšnimi števili - celimi ali ne - delamo. Avtorji Pythona so se zato odločili, naj bo deljenje vedno "pravo", kadar hočemo celoštevilsko, pa moramo to posebej povedati tako, da namesto `/` uporabimo `//`.
+# Preden gremo naprej, samo opozorimo, kaj vas čaka v večini drugih jezikov: v skoraj vseh drugih jezikih deljenje celih števil vrača celo število; v Javi bo 7 / 2 enako 3. Obratno opozorilo, seveda, velja za tiste, ki že znate programirati in ste morda vajeni drugače: v Pythonu izraz 7 / 2 vrne 3.5. Je to pametno? Najbrž je: ko delimo, večinoma hočemo "pravo" deljenje in le redko celoštevilskega. Še več, pri programiranju velikokrat naredimo napako, ko brezskrbno delimo, ne da bi pomislili na to, s kakšnimi števili - celimi ali ne - delamo. Avtorji Pythona so se zato odločili, naj bo deljenje vedno "pravo", kadar hočemo celoštevilsko, pa moramo to posebej povedati tako, da namesto `/` uporabimo `//`.
 # 
 # ## O obliki teh zapiskov
 # 
@@ -157,7 +158,7 @@ x
 
 # Kadar rečem `x`, Python poišče, tisto, kar je priredil `x`-u. Če smo `x`-u priredili 5 in rečemo `x + 7`, je to isto, kot če bi rekli `5 + 7`.
 # 
-# Temu `x` Slovenci ponosno rečemo *spremenljivka*. Angleži temu namreč pravijo *variable*, Madžari pa változó. (Predvsem slednje ni posebej pomembno in ne pride v poštev kot izpitno vprašanje, čeprav ni nič narobe, če veste. Koristi pa po drugi strani tudi nobene. ;))
+# Temu `x` Slovenci ponosno rečemo *spremenljivka*, Angleži pa *variable*.
 # 
 # Spremenljivko lahko seveda uporabljamo tudi za računanje novih spremenljivk.
 
@@ -194,7 +195,7 @@ x = x + 2
 x
 
 
-# Kako je *x* lahko enak *x + 2*? Saj ni. Ta enačaj ne predstavlja enakosti, kot v matematiki, temveč prirejanje. Ja? V drugi vrstici Python izračuna vrednost izraza x + 2, to je, 7, in to priredi imenu, spremenljivki `x`. Izraz `x = x + 2` torej pomeni, preprosto, povečaj x za 2. (Napišite kaj takega pred prof. Fijavžem, če si upate!)
+# Kako je *x* lahko enak *x + 2*? Saj ni. Ta enačaj ne predstavlja enakosti, kot v matematiki, temveč prirejanje. Ja? V drugi vrstici Python izračuna vrednost izraza x + 2, to je, 7, in to priredi imenu, spremenljivki `x`. Izraz `x = x + 2` torej pomeni, preprosto, povečaj x za 2.
 # 
 # Tiste, ki že znajo vsaj malo programirati v kakem drugem jeziku, je morda zmotilo, da spremenljivk nismo nikjer deklarirali. (Tisti, ki jim beseda *deklarirati* ne pomeni ničesar, naj ostanejo v umestni nevednosti.) V Pythonu tega (skoraj) ne moremo narediti. Spremenljivka (točneje, ime) se pojavi, ko jo uporabimo, in izgine, ko je ne potrebujemo več. Ali je to dobro ali slabo, si niti teoretiki niso edini. Niti, ali je to dobro ali slabo za začetnika, ne.
 # 
@@ -232,6 +233,7 @@ y = x
 # Kdor razmišlja drugače, je kot Francoz, ki iz patriotizma namerno govori angleško s francoskim naglasom. Ali Štajerc, ki jo zavija po štajersko.
 # 
 # <center>
+# 
 # ![XKCD](http://imgs.xkcd.com/comics/license_plate.png)
 # 
 # <small>The next day: 'What? Six bank robberies!? But I just vandalized the library!' 'Nice try. They saw your plate with all the 1's and I's.' 'That's impossible! I've been with my car the whole ti-- ... wait. Ok, wow, that was clever of her.'</small>
@@ -672,7 +674,7 @@ print(temp_C, "C je enako", temp_K, "K ali", temp_F, "F")
 # 
 # Oba imata dodatke za veliko jezikov: pomagata nam oblikovati kodo, iskati pozabljena imena spremenljivk v dolgih programih, pokazati dokumentacijo posameznih funkcij in, do neke mere, poganjati programe. Njuna lepota je v njuni univerzalnosti in preprostosti.
 # 
-# Starejši mački prisegajo na starejše urejevalnike, kot so emacs in vi oz. vim. Tudi med študenti se vsako leto najde kakšen in nihče mu ne brani. Tudi mazohizem je v sodobni družbi popolnoma sprejeta orientacija.
+# Starejši mački prisegajo na starejše urejevalnike, kot so emacs in vi oz. vim. Tudi med študenti se najde kakšen in nihče mu ne brani. Tudi mazohizem je v sodobni družbi popolnoma sprejeta orientacija.
 # 
 # #### Učna okolja
 # 
@@ -686,7 +688,7 @@ print(temp_C, "C je enako", temp_K, "K ali", temp_F, "F")
 # 
 # PyCharm nam bo pri programiranju pomagal še veliko bolj kot Visual Studio Code. Znal bo dopolnjevati napol napisana imena (nekaj malega zna tudi VS Code, a PyCharm je veliko zvitejši), pomagal pri tipih spremenljivk, argumentih funkcij, iskanju napak...
 # 
-# Odpremo torej PyCharm in naredimo projekt "Programiranje 1". Na levi strani
+# Odpremo torej PyCharm in naredimo projekt "Programiranje". Na levi strani
 # vidimo nekakšne direktorije. Naredimo poddirektorij z zaporedno številko in
 # naslovom predavanj in v njem novo datoteko z imenom temperature.py. (Kako to
 # naredimo, boste že odkrili sami, saj niste prvič za računalnikom.) Poklikamo

@@ -11,4 +11,5 @@ parts:
 - caption: Vsebina
   chapters:
     - file: 01_osnove
+    - file: 01_naloge
 # - file: markdown-notebooks
