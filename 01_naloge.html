@@ -50,6 +50,8 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="_static/sphinx-thebe.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
     <link rel="prev" title="Osnove programiranja" href="01_osnove.html" />
@@ -379,7 +381,7 @@ title="Print to PDF"
 <section id="pretvarjanje-iz-fahrenheitov-v-celzije">
 <h2>Pretvarjanje iz Fahrenheitov v Celzije<a class="headerlink" href="#pretvarjanje-iz-fahrenheitov-v-celzije" title="Permalink to this headline">#</a></h2>
 <p>Napiši program, ki mu uporabnik vpiše temperaturo v Fahrenheitovih stopinjah, program pa
-jo izpiše v Celzijevih. Med temperaturama pretvarjamo po formuli C = 5/9 (F – 32). Za potrebe
+jo izpiše v Celzijevih. Med temperaturama pretvarjamo po formuli <span class="math notranslate nohighlight">\(C = 5/9 (F – 32)\)</span>. Za potrebe
 Američanov napiši še program, ki računa v nasprotno smer.
 Če se k tej nalogi vračaš, da jo uporabiš za vajo iz pisanja funkcij, pa napiši funkciji <code class="docutils literal notranslate"><span class="pre">celsius(f)</span></code>
 in <code class="docutils literal notranslate"><span class="pre">fahrenheit(c)</span></code>. Prva prejme temperaturo v Fahrenheitih in vrne temperaturo v Celzijevih
@@ -388,9 +390,8 @@ stopinjah, druga pa ravno obratno.</p>
 <section id="pitagorov-izrek">
 <h2>Pitagorov izrek<a class="headerlink" href="#pitagorov-izrek" title="Permalink to this headline">#</a></h2>
 <p>Napiši program, ki uporabnika vpraša po dolžinah katet pravokotnega trikotnika in izpiše
-dolžino hipotenuze. (Da ponagajamo pokojnemu prof. Križaniču, ki je sovražil dlakocepce,
-dodajmo “dolžino hipotenuze taistega trikotnika”.)
-Če nalogo uporabljaš za vajo iz pisanja funkcij, napiši funkcijo pitagora(a, b), ki prejme
+dolžino hipotenuze.
+Če nalogo uporabljaš za vajo iz pisanja funkcij, napiši funkcijo <code class="docutils literal notranslate"><span class="pre">pitagora(a,</span> <span class="pre">b)</span></code>, ki prejme
 dolžini katet in vrne dolžino hipotenuze.</p>
 </section>
 <section id="topologija">
@@ -399,21 +400,21 @@ dolžini katet in vrne dolžino hipotenuze.</p>
 brezzračnem prostoru, a pustimo trivio). Program od uporabnika ali uporabnice zahteva, da
 vnese hitrost izstrelka (to je, omenjene točkaste krogle) in kot, pod katerim je izstreljen.
 Program naj izračuna in izpiše, kako daleč bo letela krogla.
-Pomoč za fizično nebogljene: s = v2 sin(2)/g, kjer je s razdalja, v hitrost izstrelka,  je kot, g pa
-osma črka slovenske abecede.
+Pomoč za fizično nebogljene: <span class="math notranslate nohighlight">\(s=v^2sin(2\phi)/g\)</span> kjer je <span class="math notranslate nohighlight">\(s\)</span> razdalja, <span class="math notranslate nohighlight">\(v\)</span> hitrost izstrelka, <span class="math notranslate nohighlight">\(\phi\)</span> je kot, <span class="math notranslate nohighlight">\(g\)</span> pa
+težnostni pospešek (privzemi <span class="math notranslate nohighlight">\(g=9,81 m/s^2\)</span>).
 Preveri tole: krogla leti najdalj, če jo izstrelimo pod kotom 45 stopinj. Poskusi, kako daleč gre
 pod kotom 45 in kako daleč pod 46 stopinj – po 45 mora leteti dlje. Preveri tudi kot 50 stopinj:
 če pod tem kotom leti nazaj (razdalja je negativna), si ga gotovo nekje polomil.
-Če boš napisal rešitev v obliki funkcije, naj bo to funkcija top(v, fi).</p>
+Če boš napisal rešitev v obliki funkcije, naj bo to funkcija <code class="docutils literal notranslate"><span class="pre">top(v,</span> <span class="pre">fi)</span></code>.</p>
 </section>
 <section id="ploscina-trikotnika">
 <h2>Ploščina trikotnika<a class="headerlink" href="#ploscina-trikotnika" title="Permalink to this headline">#</a></h2>
 <p>Ploščino trikotnika s stranicami a, b in c lahko izračunamo po Heronovem obrazcu:
-p = s(s − a)(s − b)(s − c) , kjer je s velikost polobsega, s = (a + b + c) / 2 . Napiši program,
+<span class="math notranslate nohighlight">\(p = \sqrt{s(s − a)(s − b)(s − c)}\)</span> , kjer je s velikost polobsega, <span class="math notranslate nohighlight">\(s = (a + b + c) / 2\)</span> . Napiši program,
 ki uporabnika vpraša po dolžinah stranic in izpiše (njegovo) ploščino.
 Program naj popazi na nepravilne podatke. Če uporabnik zatrdi, da ima trikotnik stranice 1, 2
 in 5 (takšnega trikotnika – razmisli – pač ni), naj ga program pozove k resnosti.
-Če nalogo rešuješ s funkcijo, naj se imenuje ploscina_trikotnika, prejme naj dolžine stranic
+Če nalogo rešuješ s funkcijo, naj se imenuje <code class="docutils literal notranslate"><span class="pre">ploscina_trikotnika</span></code>, prejme naj dolžine stranic
 in ne pazi na nič. Če so podatki čudni, naj se pač sesuje.</p>
 </section>
 </section>

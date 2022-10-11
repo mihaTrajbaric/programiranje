@@ -501,9 +501,9 @@ title="Print to PDF"
 <span class="go">8</span>
 </pre></div>
 </div>
-<p>Nič posebnega. Temu, kar smo vpisovali, pravimo <em>izraz</em>. Pri tem predmetu se sicer ne bomo ukvarjali s pravorečjem; teoretiki nas učijo o razliki med <em>izrazom</em>, <em>stavkom</em> in bogvečem še, sam pa se tule enkrat za vselej opravičujem, ker bom dal prednost praksi, ne terminologiji. Še definicijo pomena besede <em>izraz</em> bom prepustil kolegu Slivniku, ki bo nekatere od vas v tretjem letniku učil zanimivo snov o jezikih, prevajalnikih in sploh vsem).</p>
+<p>Nič posebnega. Temu, kar smo vpisovali, pravimo <em>izraz</em>. Pri tem predmetu se sicer ne bomo ukvarjali s pravorečjem; teoretiki nas učijo o razliki med <em>izrazom</em>, <em>stavkom</em> in bogvečem še, sam pa se tule enkrat za vselej opravičujem, ker bom dal prednost praksi, ne terminologiji.</p>
 <p>Izraz bo za nas pač <em>nekaj, kar se da izračunati</em> (kar je ravnokar zaropotalo, je neki <a class="reference external" href="http://en.wikipedia.org/wiki/Turing">Alan Turing</a>, ki se je z jabolkom v ustih obrnil v grobu). In gornje stvari se očitno dajo izračunati. In niti niso preveč zanimive.</p>
-<p>Razen, morda, zadnjega izraza. V izrazih lahko uporabljamo presledke in to moramo - kot tudi sicer - početi po občutku. V zadnjem izrazu tega nismo počeli, zato je zapis zavajajoč. Python je dovolj pameten, da ve, da ima <em>operator</em> (še ena beseda, ki si jo zapomnimo!) množenja prednost pred operatorjem seštevanja. Kar smo napisali, se računa enako, kot če bi rekli</p>
+<p>Razen, morda, zadnjega izraza. V izrazih lahko <strong>uporabljamo presledke</strong> in to moramo - kot tudi sicer - početi po občutku. V zadnjem izrazu tega nismo počeli, zato je zapis zavajajoč. Python je dovolj pameten, da ve, da ima <em>operator</em> (še ena beseda, ki si jo zapomnimo!) množenja prednost pred operatorjem seštevanja. Kar smo napisali, se računa enako, kot če bi rekli</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="mi">1</span><span class="o">+</span><span class="mi">2</span><span class="o">*</span><span class="mi">3</span><span class="o">+</span><span class="mi">1</span>
 </pre></div>
 </div>
@@ -555,10 +555,10 @@ title="Print to PDF"
 </pre></div>
 </div>
 <p>Če seštejemo realni števili 2.3 in 1.7 dobimo realno število 4.0. Če seštejemo celi števili 2 in 2, dobimo celo število 4.</p>
-<p>Kako hitro napredujemo! To, kar smo pravkar spoznali, so “podatkovni tipi”. Točneje, spoznali smo dva podatkovna tipa <em>cela števila</em> in <em>števila s plavajočo vejico</em>. V angleščini se jima reče <em>integer</em> in <em>floating point number</em> v Pythonu pa <code class="docutils literal notranslate"><span class="pre">int</span></code> in <code class="docutils literal notranslate"><span class="pre">float</span></code>. Odkod ta čudna imena boste izvedeli pri kakem drugem predmetu.</p>
+<p>Kako hitro napredujemo! To, kar smo pravkar spoznali, so “podatkovni tipi”. Točneje, spoznali smo dva podatkovna tipa <em>cela števila</em> in <em>števila s plavajočo vejico</em>. V angleščini se jima reče <em>integer</em> in <em>floating point number</em> v Pythonu pa <code class="docutils literal notranslate"><span class="pre">int</span></code> in <code class="docutils literal notranslate"><span class="pre">float</span></code>.</p>
 <p>Vsaka reč v Pythonu je reč nekega tipa, in če je ta reč število, je bodisi tipa <code class="docutils literal notranslate"><span class="pre">int</span></code> bodisi <code class="docutils literal notranslate"><span class="pre">float</span></code>. (So števila lahko še kakega drugega tipa? Lahko, nekateri jeziki imajo celo kupe številskih tipov. Vendar nas za zdaj ne brigajo.)</p>
-<p>Neučakanega študenta morda pograbila radovednost. Kateri podatkovni tipi pa še obstajajo - razen številskih? Le malo naj počaka, kmalu bodo na vrsti.</p>
-<p>Preden gremo naprej, samo opozorimo, kaj vas čaka v večini drugih jezikov: v skoraj vseh drugih jezikih deljenje celih števil vrača celo število; v Javi, ki se jo boste učili v drugem semestru, bo 7 / 2 enako 3. Obratno opozorilo, seveda, velja za tiste, ki že znate programirati in ste morda vajeni drugače: v Pythonu izraz 7 / 2 vrne 3.5. Je to pametno? Najbrž je: ko delimo, večinoma hočemo “pravo” deljenje in le redko celoštevilskega. Še več, pri programiranju velikokrat naredimo napako, ko brezskrbno delimo, ne da bi pomislili na to, s kakšnimi števili - celimi ali ne - delamo. Avtorji Pythona so se zato odločili, naj bo deljenje vedno “pravo”, kadar hočemo celoštevilsko, pa moramo to posebej povedati tako, da namesto <code class="docutils literal notranslate"><span class="pre">/</span></code> uporabimo <code class="docutils literal notranslate"><span class="pre">//</span></code>.</p>
+<p>Neučakanega dijaka morda pograbila radovednost. Kateri podatkovni tipi pa še obstajajo - razen številskih? Le malo naj počaka, kmalu bodo na vrsti.</p>
+<p>Preden gremo naprej, samo opozorimo, kaj vas čaka v večini drugih jezikov: v skoraj vseh drugih jezikih deljenje celih števil vrača celo število; v Javi bo 7 / 2 enako 3. Obratno opozorilo, seveda, velja za tiste, ki že znate programirati in ste morda vajeni drugače: v Pythonu izraz 7 / 2 vrne 3.5. Je to pametno? Najbrž je: ko delimo, večinoma hočemo “pravo” deljenje in le redko celoštevilskega. Še več, pri programiranju velikokrat naredimo napako, ko brezskrbno delimo, ne da bi pomislili na to, s kakšnimi števili - celimi ali ne - delamo. Avtorji Pythona so se zato odločili, naj bo deljenje vedno “pravo”, kadar hočemo celoštevilsko, pa moramo to posebej povedati tako, da namesto <code class="docutils literal notranslate"><span class="pre">/</span></code> uporabimo <code class="docutils literal notranslate"><span class="pre">//</span></code>.</p>
 </section>
 <section id="o-obliki-teh-zapiskov">
 <h2>O obliki teh zapiskov<a class="headerlink" href="#o-obliki-teh-zapiskov" title="Permalink to this headline">#</a></h2>
@@ -631,7 +631,7 @@ title="Print to PDF"
 </div>
 </div>
 <p>Kadar rečem <code class="docutils literal notranslate"><span class="pre">x</span></code>, Python poišče, tisto, kar je priredil <code class="docutils literal notranslate"><span class="pre">x</span></code>-u. Če smo <code class="docutils literal notranslate"><span class="pre">x</span></code>-u priredili 5 in rečemo <code class="docutils literal notranslate"><span class="pre">x</span> <span class="pre">+</span> <span class="pre">7</span></code>, je to isto, kot če bi rekli <code class="docutils literal notranslate"><span class="pre">5</span> <span class="pre">+</span> <span class="pre">7</span></code>.</p>
-<p>Temu <code class="docutils literal notranslate"><span class="pre">x</span></code> Slovenci ponosno rečemo <em>spremenljivka</em>. Angleži temu namreč pravijo <em>variable</em>, Madžari pa változó. (Predvsem slednje ni posebej pomembno in ne pride v poštev kot izpitno vprašanje, čeprav ni nič narobe, če veste. Koristi pa po drugi strani tudi nobene. ;))</p>
+<p>Temu <code class="docutils literal notranslate"><span class="pre">x</span></code> Slovenci ponosno rečemo <em>spremenljivka</em>, Angleži pa <em>variable</em>.</p>
 <p>Spremenljivko lahko seveda uporabljamo tudi za računanje novih spremenljivk.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -688,7 +688,7 @@ title="Print to PDF"
 </div>
 </div>
 </div>
-<p>Kako je <em>x</em> lahko enak <em>x + 2</em>? Saj ni. Ta enačaj ne predstavlja enakosti, kot v matematiki, temveč prirejanje. Ja? V drugi vrstici Python izračuna vrednost izraza x + 2, to je, 7, in to priredi imenu, spremenljivki <code class="docutils literal notranslate"><span class="pre">x</span></code>. Izraz <code class="docutils literal notranslate"><span class="pre">x</span> <span class="pre">=</span> <span class="pre">x</span> <span class="pre">+</span> <span class="pre">2</span></code> torej pomeni, preprosto, povečaj x za 2. (Napišite kaj takega pred prof. Fijavžem, če si upate!)</p>
+<p>Kako je <em>x</em> lahko enak <em>x + 2</em>? Saj ni. Ta enačaj ne predstavlja enakosti, kot v matematiki, temveč prirejanje. Ja? V drugi vrstici Python izračuna vrednost izraza x + 2, to je, 7, in to priredi imenu, spremenljivki <code class="docutils literal notranslate"><span class="pre">x</span></code>. Izraz <code class="docutils literal notranslate"><span class="pre">x</span> <span class="pre">=</span> <span class="pre">x</span> <span class="pre">+</span> <span class="pre">2</span></code> torej pomeni, preprosto, povečaj x za 2.</p>
 <p>Tiste, ki že znajo vsaj malo programirati v kakem drugem jeziku, je morda zmotilo, da spremenljivk nismo nikjer deklarirali. (Tisti, ki jim beseda <em>deklarirati</em> ne pomeni ničesar, naj ostanejo v umestni nevednosti.) V Pythonu tega (skoraj) ne moremo narediti. Spremenljivka (točneje, ime) se pojavi, ko jo uporabimo, in izgine, ko je ne potrebujemo več. Ali je to dobro ali slabo, si niti teoretiki niso edini. Niti, ali je to dobro ali slabo za začetnika, ne.</p>
 <p>Tem, ki že znajo programirati - posebej, če so uporabljali kak C# ali Javo - povejmo še, da se Pythonove spremenljivke tudi sicer bistevno razlikujejo od spremenljivk, ki so jih vajeni od ondod. Predvsem ni dobro, da so vas najbrž učili, da so “<em>spremenljivke kot nekakšne škatlice</em>”. Za začetek bi bilo veliko lepše, če bi jim rekli <em>ime</em>, ne <em>spremenljivka</em>. Tudi Python jim reče <em>name</em>. A navada je železna srajca in vsi govorimo o <em>spremenljivkah</em>. Pomembno pa je tole: če imamo</p>
 <div class="cell docutils container">
@@ -714,7 +714,7 @@ title="Print to PDF"
 <p>Na to temo bi se dalo povedati še veliko in morda nekoč bomo. Za zdaj pa vam resno polagam na srce, kar je napisano tu. Predvsem tistim, ki že znate programirati in se vam zdi najlepše tako, kot delate zdaj. Meni se zdijo v Pythonu lepa Pythonova pravila, v JavaScriptu pa pravila JavaScripta.</p>
 <p>Kdor razmišlja drugače, je kot Francoz, ki iz patriotizma namerno govori angleško s francoskim naglasom. Ali Štajerc, ki jo zavija po štajersko.</p>
 <center>
-![XKCD](http://imgs.xkcd.com/comics/license_plate.png)
+<p><img alt="XKCD" src="http://imgs.xkcd.com/comics/license_plate.png" /></p>
 <p><small>The next day: ‘What? Six bank robberies!? But I just vandalized the library!’ ‘Nice try. They saw your plate with all the 1’s and I’s.’ ‘That’s impossible! I’ve been with my car the whole ti– … wait. Ok, wow, that was clever of her.’</small></p>
 </center>
 <p>Vsi našteti dogovori (in še veliko podobnih bomo spoznali sproti) so samo dogovori. Če se jih ne držimo, bodo programi še vedno delovali. Pythonu je vseeno. Ni pa vseeno nam: če se držimo takšnih dogovorov, bodo naši programi preglednejši tako za nas, kot za druge, ki upoštevajo enaka pravila pisanja in bodo morali brati naše programe za nami.</p>
@@ -1415,7 +1415,7 @@ potem pa (na Windowsih) <code class="docutils literal notranslate"><span class="
 <h3>Preprosti urejevalniki<a class="headerlink" href="#preprosti-urejevalniki" title="Permalink to this headline">#</a></h3>
 <p>Kdor želi kaj preprostega, bo vzel Sublime ali Visual Studio Code. Drugi je kopija prvega (ukradel mu je približno vse), vendar je odprtokodni, za razliko od Sublimea, ki je sicer zastonj, vendar stalno sitnari, ali ga ne bi morda vseeno kupili.</p>
 <p>Oba imata dodatke za veliko jezikov: pomagata nam oblikovati kodo, iskati pozabljena imena spremenljivk v dolgih programih, pokazati dokumentacijo posameznih funkcij in, do neke mere, poganjati programe. Njuna lepota je v njuni univerzalnosti in preprostosti.</p>
-<p>Starejši mački prisegajo na starejše urejevalnike, kot so emacs in vi oz. vim. Tudi med študenti se vsako leto najde kakšen in nihče mu ne brani. Tudi mazohizem je v sodobni družbi popolnoma sprejeta orientacija.</p>
+<p>Starejši mački prisegajo na starejše urejevalnike, kot so emacs in vi oz. vim. Tudi med študenti se najde kakšen in nihče mu ne brani. Tudi mazohizem je v sodobni družbi popolnoma sprejeta orientacija.</p>
 </section>
 <section id="ucna-okolja">
 <h3>Učna okolja<a class="headerlink" href="#ucna-okolja" title="Permalink to this headline">#</a></h3>
@@ -1426,7 +1426,7 @@ potem pa (na Windowsih) <code class="docutils literal notranslate"><span class="
 <h3>Profesionalna okolja<a class="headerlink" href="#profesionalna-okolja" title="Permalink to this headline">#</a></h3>
 <p>Najbrž najbolj popularno profesionalno okolje za razvoj programov v Pythonu je <a class="reference external" href="https://www.jetbrains.com/pycharm/">PyCharm</a>. Gre za komercialno orodje, vendar ga razvija podjetje, ki je zelo naklonjeno tudi odprti kodi, predvsem pa imajo zastonjsko različico, ki ji prav nič ne manjka. Zato izjemoma nimamo slabe vesti, ker študente navajamo na komercialne programe. Predvsem pa je PyCharm je v resnici neverjetno dober, prav tako pa so izjemna tudi druga orodja tega podjetja. (Vsem, ki bi se radi naučili vročega novega jezika priporočam Kotlin.)</p>
 <p>PyCharm nam bo pri programiranju pomagal še veliko bolj kot Visual Studio Code. Znal bo dopolnjevati napol napisana imena (nekaj malega zna tudi VS Code, a PyCharm je veliko zvitejši), pomagal pri tipih spremenljivk, argumentih funkcij, iskanju napak…</p>
-<p>Odpremo torej PyCharm in naredimo projekt “Programiranje 1”. Na levi strani
+<p>Odpremo torej PyCharm in naredimo projekt “Programiranje”. Na levi strani
 vidimo nekakšne direktorije. Naredimo poddirektorij z zaporedno številko in
 naslovom predavanj in v njem novo datoteko z imenom <a class="reference external" href="http://temperature.py">temperature.py</a>. (Kako to
 naredimo, boste že odkrili sami, saj niste prvič za računalnikom.) Poklikamo
