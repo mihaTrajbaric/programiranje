@@ -1,0 +1,932 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>Branje datotek &#8212; Krožek začetnega programiranja 2022-23</title>
+    
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+<link href="_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" href="_static/styles/sphinx-book-theme.css?digest=5115cc725059bd94278eecd172e13a965bf8f5a9" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" />
+    
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
+
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/clipboard.min.js"></script>
+    <script src="_static/copybutton.js"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?digest=9c920249402e914e316237a7dbc6769907cce411"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
+<!-- Checkboxes to toggle the left sidebar -->
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation" aria-label="Toggle navigation sidebar">
+<label class="overlay overlay-navbar" for="__navigation">
+    <div class="visually-hidden">Toggle navigation sidebar</div>
+</label>
+<!-- Checkboxes to toggle the in-page toc -->
+<input type="checkbox" class="sidebar-toggle" name="__page-toc" id="__page-toc" aria-label="Toggle in-page Table of Contents">
+<label class="overlay overlay-pagetoc" for="__page-toc">
+    <div class="visually-hidden">Toggle in-page Table of Contents</div>
+</label>
+<!-- Headers at the top -->
+<div class="announcement header-item noprint"></div>
+<div class="header header-item noprint"></div>
+
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<!-- Sidebar -->
+<div class="bd-sidebar noprint" id="site-navigation">
+    <div class="bd-sidebar__content">
+        <div class="bd-sidebar__top"><div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="index.html">
+      
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
+      
+      <img src="_static/python-logo.png" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">Krožek začetnega programiranja 2022-23</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="index.html">
+                    Splošno
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Vsebina
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="01_izrazi_spremenljivke_program.html">
+   1. Izrazi in spremenljivke
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="02a_pogoji.html">
+   2. Pogojni stavki
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav></div>
+        <div class="bd-sidebar__bottom">
+             <!-- To handle the deprecated key -->
+            
+            <div class="navbar_extra_footer">
+            Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+            </div>
+            
+        </div>
+    </div>
+    <div id="rtd-footer-container"></div>
+</div>
+
+
+          
+
+
+          
+<!-- A tiny helper pixel to detect if we've scrolled -->
+<div class="sbt-scroll-pixel-helper"></div>
+<!-- Main content -->
+<div class="col py-0 content-container">
+    
+    <div class="header-article row sticky-top noprint">
+        
+
+
+
+<div class="col py-1 d-flex header-article-main">
+    <div class="header-article__left">
+        
+        <label for="__navigation"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="right"
+title="Toggle navigation"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-bars"></i>
+  </span>
+
+</label>
+
+        
+    </div>
+    <div class="header-article__right">
+<div class="menu-dropdown menu-dropdown-launch-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Launch interactive content">
+      <i class="fas fa-rocket"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="https://mybinder.org/v2/gh/mihaTrajbaric/programiranje/main?urlpath=tree/09b datoteke.ipynb"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Launch on Binder"
+>
+  
+
+<span class="headerbtn__icon-container">
+  
+    <img src="_static/images/logo_binder.svg">
+  </span>
+<span class="headerbtn__text-container">Binder</span>
+</a>
+
+      </li>
+      
+      <li>
+        
+<button onclick="initThebeSBT()"
+  class="headerbtn headerbtn-launch-thebe"
+  data-toggle="tooltip"
+data-placement="left"
+title="Launch Thebe"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-play"></i>
+  </span>
+<span class="headerbtn__text-container">Live Code</span>
+</button>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+
+<button onclick="toggleFullScreen()"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="bottom"
+title="Fullscreen mode"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+<div class="menu-dropdown menu-dropdown-repository-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Source repositories">
+      <i class="fab fa-github"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="https://github.com/mihaTrajbaric/programiranje"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Source repository"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="headerbtn__text-container">repository</span>
+</a>
+
+      </li>
+      
+      <li>
+        <a href="https://github.com/mihaTrajbaric/programiranje/issues/new?title=Issue%20on%20page%20%2F09b datoteke.html&body=Your%20issue%20content%20here."
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Open an issue"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="headerbtn__text-container">open issue</span>
+</a>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+
+<div class="menu-dropdown menu-dropdown-download-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Download this page">
+      <i class="fas fa-download"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="_sources/09b datoteke.ipynb"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Download source file"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="headerbtn__text-container">.ipynb</span>
+</a>
+
+      </li>
+      
+      <li>
+        
+<button onclick="printPdf(this)"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="left"
+title="Print to PDF"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="headerbtn__text-container">.pdf</span>
+</button>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+<label for="__page-toc"
+  class="headerbtn headerbtn-page-toc"
+  
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-list"></i>
+  </span>
+
+</label>
+
+    </div>
+</div>
+
+<!-- Table of contents -->
+<div class="col-md-3 bd-toc show noprint">
+    <div class="tocsection onthispage pt-5 pb-3">
+        <i class="fas fa-list"></i> Contents
+    </div>
+    <nav id="bd-toc-nav" aria-label="Page">
+        <ul class="visible nav section-nav flex-column">
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#">
+   Branje datotek
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#pisanje-datotek">
+   Pisanje datotek
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#trenutni-direktorij">
+   Trenutni direktorij
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#kako-je-zapisano-besedilo">
+   Kako je zapisano besedilo
+  </a>
+ </li>
+</ul>
+
+    </nav>
+</div>
+    </div>
+    <div class="article row">
+        <div class="col pl-md-3 pl-lg-5 content-container">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>Branje datotek</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#">
+   Branje datotek
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#pisanje-datotek">
+   Pisanje datotek
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#trenutni-direktorij">
+   Trenutni direktorij
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#kako-je-zapisano-besedilo">
+   Kako je zapisano besedilo
+  </a>
+ </li>
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            <main id="main-content" role="main">
+                
+              <div>
+                
+  <section id="branje-datotek">
+<h1>Branje datotek<a class="headerlink" href="#branje-datotek" title="Permalink to this headline">#</a></h1>
+<p>Delo z datotekami v Pythonu je tako preprosto, da ga že skoraj obvladamo.</p>
+<p>Imejmo datoteko z imenom planeti.txt in takšno vsebino:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Merkur</span>
+<span class="n">Venera</span>
+<span class="n">Zemlja</span>
+<span class="n">Mars</span>
+<span class="n">Jupiter</span>
+<span class="n">Saturn</span>
+<span class="n">Uran</span>
+<span class="n">Neptun</span>
+<span class="n">Pluton</span>
+</pre></div>
+</div>
+<p>Če jo hočemo brati, jo moramo najprej odpreti.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">datoteka</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&quot;planeti.txt&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Kaj se je zgodilo tule? <code class="docutils literal notranslate"><span class="pre">open</span></code> je, očitno, funkcija, ki kot argument dobi ime datoteke, ki jo hočemo odpreti. Kot rezultat vrne … hm, datoteko? Glede na to, da smo rezultat funkcije priredili spremenljivki <code class="docutils literal notranslate"><span class="pre">datoteka</span></code>, lahko s <code class="docutils literal notranslate"><span class="pre">print(datoteka)</span></code> poškilimo vanjo in izvemo naslednje:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">datoteka</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;_io.TextIOWrapper name=&#39;planeti.txt&#39; mode=&#39;r&#39; encoding=&#39;UTF-8&#39;&gt;
+</pre></div>
+</div>
+</div>
+</div>
+<p>Takole: <code class="docutils literal notranslate"><span class="pre">datoteka</span></code> je spremenljivka. Ni število (tipa <code class="docutils literal notranslate"><span class="pre">int</span></code> ali <code class="docutils literal notranslate"><span class="pre">float</span></code>), tudi ni tipa niz (<code class="docutils literal notranslate"><span class="pre">str</span></code>) ali seznam (<code class="docutils literal notranslate"><span class="pre">list</span></code>), temveč neko čudo tipa <code class="docutils literal notranslate"><span class="pre">_io.TextIOWrapper</span></code>. Pač zelo čudno ime tipa, predstavlja pa neko vrsto datoteke. Nadalje izvemo, da je datoteki, na katero se nanaša spremenljivka z imenom <code class="docutils literal notranslate"><span class="pre">datoteka</span></code>, ime <code class="docutils literal notranslate"><span class="pre">'planeti.txt'</span></code>, odprta je na način <code class="docutils literal notranslate"><span class="pre">'r'</span></code> (spoiler: to pomeni, da je odprta za branje, <em>read</em>) in da je besedilo shranjeno v formatu UTF-8 (kaj je to, bomo že še izvedeli).</p>
+<p>Tole ni bilo nič posebej informativnega. Kaj lahko počnemo z datoteko? Lahko jo prehodimo z zanko <code class="docutils literal notranslate"><span class="pre">for</span></code>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">vrstica</span> <span class="ow">in</span> <span class="n">datoteka</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">vrstica</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Merkur
+
+Venera
+
+Zemlja
+
+Mars
+
+Jupiter
+
+Saturn
+
+Uran
+
+Neptun
+
+Pluton
+</pre></div>
+</div>
+</div>
+</div>
+<p>Če torej podtaknemo datoteko zanki for, jo bo zanka brala vrstico za vrstico.</p>
+<p>A gremo še enkrat?</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">vrstica</span> <span class="ow">in</span> <span class="n">datoteka</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">vrstica</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Ne moremo. Ko preberemo datoteko do konca, je prebrana. Če jo hočemo ponovno brati, jo moramo tudi
+ponovno odpreti. (To ni povsem res, vendar je pri besedilnih datotekah <em>dokaj res</em>.)</p>
+<p>Datoteke se v bistvu vedejo kot generatorji, ki smo jih spoznali pred dvema tednoma. <code class="docutils literal notranslate"><span class="pre">next</span></code> pa te reči.</p>
+<p>Zakaj pa so vmes prazne vrstice? V datoteki jih vendar ni. Vse bo jasno, če datoteko preberemo
+nekoliko drugače. Kot vemo od prejšnjih predavanj, imajo seznami in nizi razne metode, ki z njimi
+počnejo različne stvari. Prav tako imajo svoje metode datoteke. Ena od njih je <code class="docutils literal notranslate"><span class="pre">read</span></code>, ki prebere
+celotno datoteko in vrne njeno vsebino kot niz.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">datoteka</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&quot;planeti.txt&quot;</span><span class="p">)</span>
+<span class="n">datoteka</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;Merkur\nVenera\nZemlja\nMars\nJupiter\nSaturn\nUran\nNeptun\nPluton&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<p>(Mimogrede, metodi <code class="docutils literal notranslate"><span class="pre">read</span></code> lahko kot argument podamo številko, ki pove, koliko znakov datoteke naj prebere. Če jo pokličemo brez argumentov, pa prebere celo datoteko.)</p>
+<p>Vidimo, da datoteka, jasno, vsebuje znake <code class="docutils literal notranslate"><span class="pre">\n</span></code>, ki povedo, kje se začenja nova vrstica. Ko beremo datoteko z zanko <code class="docutils literal notranslate"><span class="pre">for</span></code>, dobivamo celotne vrstice, skupaj z <code class="docutils literal notranslate"><span class="pre">\n</span></code>, torej, recimo ‘Merkur\n’. Če poskusimo izpisati <code class="docutils literal notranslate"><span class="pre">print('Merkur\n')</span></code>, na koncu niza izpišemo prazno vrstico, še eno pa sam od sebe doda <code class="docutils literal notranslate"><span class="pre">print</span></code>. Odtod prazne vrstice.</p>
+<p>Dva nauka. Prvi: <code class="docutils literal notranslate"><span class="pre">strip</span></code> je tvoj prijatelj - še prav posebej pri branju datotek.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">datoteka</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&quot;planeti.txt&quot;</span><span class="p">)</span>
+
+<span class="k">for</span> <span class="n">vrstica</span> <span class="ow">in</span> <span class="n">datoteka</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">vrstica</span><span class="o">.</span><span class="n">strip</span><span class="p">())</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Merkur
+Venera
+Zemlja
+Mars
+Jupiter
+Saturn
+Uran
+Neptun
+Pluton
+</pre></div>
+</div>
+</div>
+</div>
+<p>Drugi: kadar po vrsticah berete besedilne datoteke, jih berite z zanko for. Torej tako</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">vrstice</span> <span class="ow">in</span> <span class="n">datoteka</span><span class="p">:</span>
+</pre></div>
+</div>
+<p>in ne tako</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">vrstice</span> <span class="ow">in</span> <span class="n">datoteka</span><span class="o">.</span><span class="n">read</span><span class="p">()</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">):</span>
+</pre></div>
+</div>
+<p>Drugo ni samo daljše in nepotrebno, temveč lahko tudi ne deluje. Če si že morate brez potrebe
+zapletati življenje, potem uporabite vsaj</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">vrstice</span> <span class="ow">in</span> <span class="n">datoteka</span><span class="o">.</span><span class="n">read</span><span class="p">()</span><span class="o">.</span><span class="n">splitlines</span><span class="p">()</span>
+</pre></div>
+</div>
+<p>Poleg metode <code class="docutils literal notranslate"><span class="pre">read</span></code> ima datoteka še kar nekaj metod, med katerimi za zdaj omenimo <code class="docutils literal notranslate"><span class="pre">readline</span></code>, ki prebere eno vrstico, in <code class="docutils literal notranslate"><span class="pre">readlines</span></code>, ki prebere vse vrstice in vrne seznam.</p>
+<p>Datoteke vedno beremo po vrsti. Kot pove njihovo ime, datoteke tečejo.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">datoteka</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&quot;planeti.txt&quot;</span><span class="p">)</span>
+<span class="n">datoteka</span><span class="o">.</span><span class="n">readline</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;Merkur\n&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">datoteka</span><span class="o">.</span><span class="n">readline</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;Venera\n&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">datoteka</span><span class="o">.</span><span class="n">readline</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;Zemlja\n&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">datoteka</span><span class="o">.</span><span class="n">readlines</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&#39;Mars\n&#39;, &#39;Jupiter\n&#39;, &#39;Saturn\n&#39;, &#39;Uran\n&#39;, &#39;Neptun\n&#39;, &#39;Pluton&#39;]
+</pre></div>
+</div>
+</div>
+</div>
+<p>Najprej smo prebrali tri vrstice in nato ostale. Vračanja nazaj ni. (Je, ampak … pustimo.) In
+ko smo na koncu, smo na koncu.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">datoteka</span><span class="o">.</span><span class="n">readline</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">datoteka</span><span class="o">.</span><span class="n">readlines</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[]
+</pre></div>
+</div>
+</div>
+</div>
+<p>Spodobi se, da povemo še ze metodo: <code class="docutils literal notranslate"><span class="pre">close</span></code>. Z njo datoteko zapremo. Zapiranje je potrebno kadar želimo operacijskemu sistemu (da, ne Pythonu, temveč Windowsom oz. macOs-u oz. Linuxu) povedati, da te datoteke ne beremo več. To je pomembno predvsem zato, ker bi se kak drug program morda odločil v datoteko pisati, vendar mu sistem tega ne bo pustil, če je datoteka odprta.</p>
+<p>V Pythonu zapiranje datoteke ni povsem nujno. Če datoteko odpremo v funkciji, se bo kar sama od sebe zaprla, ko bo funkcije konec. Pravijo, da na to ni lepo računati, vendar vsaj sam to pogosto počnem. Datoteko rad odprem kar v zanki for, takole</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">vrstice</span> <span class="ow">in</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&quot;planeti.txt&quot;</span><span class="p">):</span>
+</pre></div>
+</div>
+<p>Saj res ni potrebe, da bi jo tlačili v kakšno posebno spremenljivko.</p>
+<p><em>To je pomembno predvsem zato, ker bi se kak drug program morda odločil v datoteko pisati</em>…
+Pa znamo <em>mi</em> pisati v datoteko?</p>
+</section>
+<section id="pisanje-datotek">
+<h1>Pisanje datotek<a class="headerlink" href="#pisanje-datotek" title="Permalink to this headline">#</a></h1>
+<p>Funkcija <code class="docutils literal notranslate"><span class="pre">open</span></code> sprejme poleg imena datoteke, ki jo želimo odpreti, še nekaj argumentov. Drugi
+po vrsti vsebuje način, na katerega želimo odpreti datoteko. Ta je lahko “r”, “w” ali “a”.
+Način “r” smo že videli zgoraj in vemo, da se nanaša na branje. Potem je očitno, da se “w” na
+pisanje. Način “a” pa pomeni dodajanje na konec datoteke “a”.</p>
+<p>Če torej napišemo</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">datoteka</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&quot;bogovi.txt&quot;</span><span class="p">,</span> <span class="s2">&quot;w&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>ustvarimo novo datoteko z imenom <em>bogovi.txt</em>. Če je takšna datoteka že obstajala … tough luck.
+Zdaj obstaja prazna datoteka s tem imenom. Da uganemo, kako se imenuje metoda za pisanje v
+datoteko, ni potrebno biti Einstein.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">datoteka</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s2">&quot;Hermes&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>6
+</pre></div>
+</div>
+</div>
+</div>
+<p>6?! Zakaj je metoda <code class="docutils literal notranslate"><span class="pre">write</span></code> vrnila 6? Povedala je, koliko znakov je napisala v datoteko. Zakaj?
+Pojma nimam.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">datoteka</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s2">&quot;Afrodita&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>8
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">datoteka</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s2">&quot;Ares&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>4
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">datoteka</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s2">&quot;Zeus&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>4
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">datoteka</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s2">&quot;Kronos&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>6
+</pre></div>
+</div>
+</div>
+</div>
+<p>Pri vseh teh vrnjenih številkah je smešno to, da Python v datoteko v resnici (najbrž) še ni napisal
+ničesar. Če odpremo datoteko, bomo najbrž odkrili, da je prazna. V resnici ne piše vsake drobnarije
+posebej, temveč čaka, da se bo malo nabralo. Zagotovo pa bo zapisal, vse kar je treba, če datoteko
+zapremo.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">datoteka</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Po tem ne moremo več pisati vanjo.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">datoteka</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s2">&quot;Caelus&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">ValueError</span><span class="g g-Whitespace">                                </span>Traceback (most recent call last)
+<span class="o">&lt;</span><span class="n">ipython</span><span class="o">-</span><span class="nb">input</span><span class="o">-</span><span class="mi">20</span><span class="o">-</span><span class="n">b7e03db93281</span><span class="o">&gt;</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="ne">----&gt; </span><span class="mi">1</span> <span class="n">datoteka</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s2">&quot;Caelus&quot;</span><span class="p">)</span>
+
+<span class="ne">ValueError</span>: I/O operation on closed file.
+</pre></div>
+</div>
+</div>
+</div>
+<p>Pač pa lahko datoteko odpremo s PyCharmom ali čim podobnim. In uvidimo, da v njej piše:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">HermesAfroditaAresZeusKronosKronos</span>
+</pre></div>
+</div>
+<p>Ups. Ja, <code class="docutils literal notranslate"><span class="pre">write</span></code> ni <code class="docutils literal notranslate"><span class="pre">print</span></code> (hvalabogu). <code class="docutils literal notranslate"><span class="pre">write</span></code> ne dodaja praznih vrstic.</p>
+<p>Popravni izpit:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">datoteka</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&quot;bogovi.txt&quot;</span><span class="p">,</span> <span class="s2">&quot;w&quot;</span><span class="p">)</span>
+<span class="n">datoteka</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s2">&quot;Hermes</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="n">datoteka</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s2">&quot;Afrodita</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="n">datoteka</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s2">&quot;Ares</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="n">datoteka</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Če zdaj odpremo datoteko, dobimo, kar smo (najbrž) želeli:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Hermes</span>
+<span class="n">Afrodita</span>
+<span class="n">Ares</span>
+</pre></div>
+</div>
+<p>Metoda <code class="docutils literal notranslate"><span class="pre">write</span></code> se od <code class="docutils literal notranslate"><span class="pre">print</span></code>a razlikuje še po nečem: medtem ko <code class="docutils literal notranslate"><span class="pre">print</span></code> dobi poljubno število
+argumentov poljubnega tipa, sprejme <code class="docutils literal notranslate"><span class="pre">write</span></code> kot argument en in natančno en niz. Če bi hoteli
+<em>izpisati</em> prvih deset števil in njihove kvadrate, bi pisali</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">10</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">i</span><span class="p">,</span> <span class="n">i</span> <span class="o">**</span> <span class="mi">2</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0 0
+1 1
+2 4
+3 9
+4 16
+5 25
+6 36
+7 49
+8 64
+9 81
+</pre></div>
+</div>
+</div>
+</div>
+<p>Če bi jih hoteli zapisati v datoteko, bi jih morali najprej preoblikovati v nize.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">k</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&quot;kvadrati.txt&quot;</span><span class="p">,</span> <span class="s2">&quot;w&quot;</span><span class="p">)</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">10</span><span class="p">):</span>
+    <span class="n">k</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">i</span><span class="si">}</span><span class="s2"> </span><span class="si">{</span><span class="n">i</span> <span class="o">**</span> <span class="mi">2</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="n">k</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="trenutni-direktorij">
+<h1>Trenutni direktorij<a class="headerlink" href="#trenutni-direktorij" title="Permalink to this headline">#</a></h1>
+<p>Kje mora biti datoteka, da jo bo <code class="docutils literal notranslate"><span class="pre">open</span></code> našel? Ali, kadar pišemo: kam, v kateri direktorij, jo
+bo shranil?</p>
+<p>Vsak program, ki trenutno teče, ima določen “trenutni direktoij”. V začetku mu ga na nek način
+določi operacijski sistem (kako, je odvisno od sistema, programa in bogvečesa še). V Pythonu ga
+izvemo s funkcijo <code class="docutils literal notranslate"><span class="pre">os.getcwd()</span></code>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">os</span>
+
+<span class="n">os</span><span class="o">.</span><span class="n">getcwd</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;/Users/janez/Desktop/predavanja/p1/predavanja&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<p>Kratica “cwd” pomeni “current working directory”. Spremenimo ga z <code class="docutils literal notranslate"><span class="pre">os.chdir()</span></code>:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">os</span><span class="o">.</span><span class="n">chdir</span><span class="p">(</span><span class="s2">&quot;/Users/jananovak/Desktop&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Če po tem odpremo datoteko v načinu “w”, se bo le-ta pojavila v direktoriju /Users/jananovak/Desktop, kar bi utegnilo biti Janino namizje.</p>
+<p>Ime datoteke je lahko relativno ali absolutno.</p>
+<p>Relativna imena začnemo brez poševnice. Če je trenutni direktorij Users/janez/Downloads in napišemo <code class="docutils literal notranslate"><span class="pre">open(&quot;programi/naloga.py&quot;)</span></code>, bo Python poskusil odpreti datoteko “/Users/jananovak/Desktop/programi/naloga.py”. Takšno ime je torej relativno glede na trenutni direktorij.</p>
+<p>Če pa ime datoteke začnemo s poševnico, gre za absolutno ime, od, s kleno slovensko besedo,
+korenskega imenika oziroma mape. Napišemo lahko torej, na primer,
+<code class="docutils literal notranslate"><span class="pre">open(&quot;/Users/jananovak/Desktop/programi/naloga.py&quot;)</span></code>.</p>
+<p>Ob poševnicah povejmo še, da dandanes vsi operacijski sistemi sprejemajo običajno, “napredno”
+poševnico, <code class="docutils literal notranslate"><span class="pre">/</span></code>. Windowsi (oziroma MS-DOS, na katerem temeljijo) so dolgo uporabljali vzvratno
+poševnico <code class="docutils literal notranslate"><span class="pre">\</span></code>, ki pa povzroča same sitnosti - kot smo izvedeli, ko smo govorili o nizih.</p>
+</section>
+<section id="kako-je-zapisano-besedilo">
+<h1>Kako je zapisano besedilo<a class="headerlink" href="#kako-je-zapisano-besedilo" title="Permalink to this headline">#</a></h1>
+<p>Računalnik v resnici shranjuje samo številke. Da lahko shranimo besedilo, se zmenimo, da vsak znak predstavimo z določeno številko. V ta namen je bilo razvitih več standardov, od katerih je preživel bolj ali manj samo ASCII. Ta pravi, recimo, da veliki A predstavimo s številko 65, B s 66, C z 67… Mali a je 97, b 98 … in tako naprej. Svoje kode imajo tudi drugi znaki: presledek je 32, pika je 46, oklepaj 40… Vsak znak, ki ga lahko natipkamo ali kako drugače napišemo, mora imeti neko kodo. Problem: ASCII je (bil) sedembitni standard, pri čemer so prvih 32 znakov zasedle kontrolne kode, kot recimo prehod v novo vrsto, tabulator, zvonček in še kup eksotičnih reči, ki so jih potrebovali za teleprinterje. Tako so proste le kode od 32 do 127, s čimer lahko zapišemo 96 znakov. To nekako zadošča za angleško abecedo, ločila in še par malenkosti, za trde in mehke č-je pa se Američani, ki so sestavljali standard, niso posebej menili. Kitajci pa si niti s celotnim naborom 96 mest ne bi mogli veliko pomagati.</p>
+<p>ASCII je doživel kup razširitev. Že v sedembitni različici smo ga v rajnki domovini popravili v YUSCII, v katerem smo žrtvovali nekaj znakov, kot so zaviti oklepaji in vzvratne poševnice in jih zamenjali s šumniki. Microsoft in IBM sta kasneje sestavila vsak svoj standard, takoimenovane kodne tabele; gre za razporede, v katerih je “spodnji del”, znaki s kodami do 127, enak kot v izvirnem ASCII, v gornjem delu - kode od 128 do 256 - pa so različni drugi znaki. V naših krajih se je najbolj prijela tabela CP1250, namenjeni srednje- in vzhodnoevropskim jezikom, v kateri ima, recimo, č kodo 232. V zahodnoevroski tabeli, CP1252, č-ja ni, na mestu 232 pa je znak è. Poleg teh, Microsoftovih tabel, obstajajo IBMove, kjer je Slovanom namenjen IBM 852; da bi bilo programiranje še preprostejše, obstaja tudi tretji standard, ISO-8859, ki nam je namenil tabelo ISO-8859-2, ki je podobna, vendar ne povsem enaka CP1250.</p>
+<p>Ko torej računalnik prikazuje kako besedilo, mora vedeti, v katerem kodnem naboru je zapisan, se pravi, kako razumeti, recimo, številko 232. Če je besedilo v CP1252, je to è, če v CP1250, pa č. In kako naj to ve? V splošnem ne more! Spletne strani navadno vsebujejo glavo, v kateri je zapisan podatek o uporabljenem kodnem naboru. Če tega ni, se bodo šumniki pokazali prav ali pa tudi ne. In še huje: vse besedilo je napisano v istem kodnem naboru, zato se lahko zgodi, da ne bo moglo vsebovati tako črke č kot è. (To morda razloži kaj v zvezi s podnapisi filmov, ki napačno sugerirajo, da so na pikniku jedle <em>èvapèièe s èebulo</em>?)</p>
+<p>Obenem pa s tem Kitajci še vedno ne morejo biti zadovoljni, saj jim dodatnih 128 znakov bore malo pomaga.</p>
+<p>Takole smo se hecali do pred nekaj leti, ko je prišel v širšo rabo standard Unicode. Ta je narejen takole: vsakemu znaku je prirejena ena koda. Kod je 2<sup>32</sup>, kar je čez in čez dovolj tudi za Kitajce (vsak ima lahko svojo, če hoče!). Nekatere znake je mogoče pisati tudi na več načinov: obstaja, recimo, znak za strešico in č lahko zapišemo kot č (koda 269) ali kot strešico (309) in c (99). Da bi lahko zapisal 2<sup>32</sup> kod, bi potrebovali po štiri bajte na znak. Američanov to ne bi posebej osrečilo, saj bi se dolžina njihovih besedil početverila in bi se spraševali, kaj je bilo pravzaprav narobe s starim dobrim ASCII. Zato so se snovalci standarda domislili različnih načinov, kako “stisniti” zapis, da bo zahteval manj kot štiri bajte na znak. Med njimi je daleč najbolj razširjen <a class="reference external" href="http://en.wikipedia.org/wiki/UTF-8">UTF-8</a>, občasno pa vidimo še <a class="reference external" href="http://en.wikipedia.org/wiki/UTF-8">UTF-16</a>. UTF-8 je sestavljen zelo zvito: če imamo besedilo v
+starem dobrem ASCIIju (brez neangleških znakov, torej brez kakšnih šumnikov ali francoskih
+naglasov), se lahko delamo, da je v UTF-8. Čim vsebuje šumnike (recimo po standardu CP1250), pa ni več združljiv z UTF-8 in moramo, če ga hočemo pravilno prebrati, vedeti, po katerem standardu je kodirano.</p>
+<p>Smo prišli z dežja pod kap? Smo imeli prej polno kodnih naborov (CP1250 do CP125bogvekoliko, pa IBMovi nabori, pa ISO-8859), zdaj pa imamo kup UTFjev? Niti ne. Razlika je v tem, da so stari nabori določali, kakšne kode imajo posamezni znaki. Po novem imajo vsi znaki določene kode, obstaja le par načinov zapisa teh kod. Med njimi pa vsaj na zahodu prevladuje UTF-8.</p>
+<p>Če imamo torej neko besedilo - recimo v neki datoteki, ali pa na neki spletni strani -, ki ga želimo prebrati, bo ponavadi zapisano v UTF-8 ali CP1250. Če je angleško in vsebuje le angleške znake, je to eno in isto. Če gre za slovensko besedilo, pa moramo vedeti, kako je zapisano. Če gre za novejše besedilo, je verjetno v UTF-8, če je starejše kot kakih deset let ali pa prihaja iz vira, s katerim ima kaj opraviti kakšen domači amaterskih izdelovalec spletnih strani, pa CP-1250. CP-1250 se žal še vedno kar pogosto pojavlja tudi v bližini Windowsov. Vedno ga lahko tudi poskusimo najprej prebrati kot UTF-8; če to uspe, je najbrž v resnici UTF-8, sicer ga preberemo kot CP1250.</p>
+<p>Kako Pythonu povemo, kako naj bere besedilo? Metoda <code class="docutils literal notranslate"><span class="pre">open</span></code> ima še par argumentov. Tretji nas ne zanima in naj ima vrednost <code class="docutils literal notranslate"><span class="pre">-1</span></code>, četrti pa poda vrsto zapisa. Ime mu je <code class="docutils literal notranslate"><span class="pre">encoding</span></code>. Da preskočimo tretjega, <code class="docutils literal notranslate"><span class="pre">encoding</span></code> navadno podamo poimensko.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">open</span><span class="p">(</span><span class="s2">&quot;planeti.txt&quot;</span><span class="p">,</span> <span class="s2">&quot;r&quot;</span><span class="p">,</span> <span class="n">encoding</span><span class="o">=</span><span class="s2">&quot;utf8&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;_io.TextIOWrapper name=&#39;planeti.txt&#39; mode=&#39;r&#39; encoding=&#39;utf8&#39;&gt;
+</pre></div>
+</div>
+</div>
+</div>
+<p>Pa če Pythonu ne povemo, kot kaj želimo brati besedilo - kot kaj ga bo poskusil brati? To je
+odvisno od nastavitev sistema - zato imajo Windowsi nastavitev “System locale”. Tam sprašuje po “Current language for non-Unicode programs”; če imate nastavljeno slovenščino, bo privzeti kodni nabor CP1250. Na Ubuntuju in Macu je kot privzeto kodiranje nastavljen UTF-8. Kako je s tem pri vas, vam pove funkcija <code class="docutils literal notranslate"><span class="pre">locale.getpreferrencoding()</span></code>.</p>
+<p>Kaj pri branju in pisanju datotek pravzaprav naredi ta nastavitev? Tole: ko zapišemo nek niz v
+datoteko, ga mora Python pretvoriti v zaporedje številk. Ta nastavitev pove, kako - v katero
+številko naj se spremeni posamezni znak. (Pozoren študent, ki kaj ve, ve tudi, da so tudi nizi v Pythonu, torej spremenljivke tipa <code class="docutils literal notranslate"><span class="pre">str</span></code>, že shranjene kot zaporedje številke. Drži, vendar Python interno shranjuje nize pač v nekem standardu in nič nas ne briga, v katerem (v resnici v UTF-16 ali UTF-32, saj bi bil UTF-8 za tole zelo nepraktičen), pri zapisovanju v datoteko pa pretvori v tak standard, kot želimo. Pri branju pa je ravno obratno: ko Python bere datoteko, mora spreminjati številke v znake niza; ta nastavitev pove, kako.</p>
+<p>Tule bi se lahko pogovorili še marsikaj. Predvsem ne vsebujejo vse datoteke besedil. Vendar so te stvare že precej tehnične in nekatere tudi specifične za Python, tako da se tu morda ustavimo. Več pa v dodatnih zapiskih</p>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "mihaTrajbaric/programiranje",
+            ref: "main",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+            </main>
+            <footer class="footer-article noprint">
+                
+    <!-- Previous / next buttons -->
+<div class='prev-next-area'>
+</div>
+            </footer>
+        </div>
+    </div>
+    <div class="footer-content row">
+        <footer class="col footer"><p>
+  
+    By Mihael Trajbarič<br/>
+  
+      &copy; Copyright 2022.<br/>
+</p>
+        </footer>
+    </div>
+    
+</div>
+
+
+      </div>
+    </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+
+
+  </body>
+</html>

@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>Osnove programiranja &#8212; Krožek začetnega programiranja 2022-23</title>
+    <title>1. Izrazi in spremenljivke &#8212; Krožek začetnega programiranja 2022-23</title>
     
   <!-- Loaded before other Sphinx assets -->
   <link href="_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
@@ -52,7 +52,7 @@ const thebe_selector_output = ".output, .cell_output"
     <script async="async" src="_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="Naloge: Čisti začetek" href="01_naloge.html" />
+    <link rel="next" title="2. Pogojni stavki" href="02a_pogoji.html" />
     <link rel="prev" title="Splošno" href="index.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
@@ -121,12 +121,12 @@ const thebe_selector_output = ".output, .cell_output"
 <ul class="current nav bd-sidenav">
  <li class="toctree-l1 current active">
   <a class="current reference internal" href="#">
-   Osnove programiranja
+   1. Izrazi in spremenljivke
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="01_naloge.html">
-   Naloge: Čisti začetek
+  <a class="reference internal" href="02a_pogoji.html">
+   2. Pogojni stavki
   </a>
  </li>
 </ul>
@@ -188,7 +188,7 @@ title="Toggle navigation"
   <div class="menu-dropdown__content">
     <ul>
       <li>
-        <a href="https://mybinder.org/v2/gh/mihaTrajbaric/programiranje/master?urlpath=tree/skripta/01_osnove.ipynb"
+        <a href="https://mybinder.org/v2/gh/mihaTrajbaric/programiranje/main?urlpath=tree/01_izrazi_spremenljivke_program.ipynb"
    class="headerbtn"
    data-toggle="tooltip"
 data-placement="left"
@@ -202,6 +202,24 @@ title="Launch on Binder"
   </span>
 <span class="headerbtn__text-container">Binder</span>
 </a>
+
+      </li>
+      
+      <li>
+        
+<button onclick="initThebeSBT()"
+  class="headerbtn headerbtn-launch-thebe"
+  data-toggle="tooltip"
+data-placement="left"
+title="Launch Thebe"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-play"></i>
+  </span>
+<span class="headerbtn__text-container">Live Code</span>
+</button>
 
       </li>
       
@@ -248,7 +266,7 @@ title="Source repository"
       </li>
       
       <li>
-        <a href="https://github.com/mihaTrajbaric/programiranje/issues/new?title=Issue%20on%20page%20%2F01_osnove.html&body=Your%20issue%20content%20here."
+        <a href="https://github.com/mihaTrajbaric/programiranje/issues/new?title=Issue%20on%20page%20%2F01_izrazi_spremenljivke_program.html&body=Your%20issue%20content%20here."
    class="headerbtn"
    data-toggle="tooltip"
 data-placement="left"
@@ -276,7 +294,7 @@ title="Open an issue"
   <div class="menu-dropdown__content">
     <ul>
       <li>
-        <a href="_sources/01_osnove.ipynb"
+        <a href="_sources/01_izrazi_spremenljivke_program.ipynb"
    class="headerbtn"
    data-toggle="tooltip"
 data-placement="left"
@@ -337,62 +355,62 @@ title="Print to PDF"
         <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#moj-racunalnik-je-lahko-tudi-kalkulator">
-   Moj računalnik je lahko tudi kalkulator
+   1.1. Moj računalnik je lahko tudi kalkulator
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#o-obliki-teh-zapiskov">
-   O obliki teh zapiskov
+   1.2. O obliki teh zapiskov
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#moj-racunalnik-je-lahko-tudi-kalkulator-s-spominom">
-   Moj računalnik je lahko tudi kalkulator - s spominom
+   1.3. Moj računalnik je lahko tudi kalkulator - s spominom
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#moj-kalkulator-ima-tudi-funkcije">
-   Moj kalkulator ima tudi funkcije
+   1.4. Moj kalkulator ima tudi funkcije
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#nizi">
-   Nizi
+   1.5. Nizi
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#iz-nizov-v-stevila">
-   Iz nizov v števila
+   1.6. Iz nizov v števila
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#vpis-in-izpis">
-   Vpis in izpis
+   1.7. Vpis in izpis
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#prvi-cisto-pravi-program">
-   Prvi čisto pravi program
+   1.8. Prvi čisto pravi program
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#razvojna-okolja">
-   Razvojna okolja
+   1.9. Razvojna okolja
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#preprosti-urejevalniki">
-     Preprosti urejevalniki
+     1.9.1. Preprosti urejevalniki
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#ucna-okolja">
-     Učna okolja
+     1.9.2. Učna okolja
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#profesionalna-okolja">
-     Profesionalna okolja
+     1.9.3. Profesionalna okolja
     </a>
    </li>
   </ul>
@@ -406,7 +424,7 @@ title="Print to PDF"
         <div class="col pl-md-3 pl-lg-5 content-container">
             <!-- Table of contents that is only displayed when printing the page -->
             <div id="jb-print-docs-body" class="onlyprint">
-                <h1>Osnove programiranja</h1>
+                <h1>Izrazi in spremenljivke</h1>
                 <!-- Table of contents -->
                 <div id="print-main-content">
                     <div id="jb-print-toc">
@@ -418,62 +436,62 @@ title="Print to PDF"
                             <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#moj-racunalnik-je-lahko-tudi-kalkulator">
-   Moj računalnik je lahko tudi kalkulator
+   1.1. Moj računalnik je lahko tudi kalkulator
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#o-obliki-teh-zapiskov">
-   O obliki teh zapiskov
+   1.2. O obliki teh zapiskov
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#moj-racunalnik-je-lahko-tudi-kalkulator-s-spominom">
-   Moj računalnik je lahko tudi kalkulator - s spominom
+   1.3. Moj računalnik je lahko tudi kalkulator - s spominom
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#moj-kalkulator-ima-tudi-funkcije">
-   Moj kalkulator ima tudi funkcije
+   1.4. Moj kalkulator ima tudi funkcije
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#nizi">
-   Nizi
+   1.5. Nizi
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#iz-nizov-v-stevila">
-   Iz nizov v števila
+   1.6. Iz nizov v števila
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#vpis-in-izpis">
-   Vpis in izpis
+   1.7. Vpis in izpis
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#prvi-cisto-pravi-program">
-   Prvi čisto pravi program
+   1.8. Prvi čisto pravi program
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#razvojna-okolja">
-   Razvojna okolja
+   1.9. Razvojna okolja
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#preprosti-urejevalniki">
-     Preprosti urejevalniki
+     1.9.1. Preprosti urejevalniki
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#ucna-okolja">
-     Učna okolja
+     1.9.2. Učna okolja
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#profesionalna-okolja">
-     Profesionalna okolja
+     1.9.3. Profesionalna okolja
     </a>
    </li>
   </ul>
@@ -488,10 +506,10 @@ title="Print to PDF"
                 
               <div>
                 
-  <section class="tex2jax_ignore mathjax_ignore" id="osnove-programiranja">
-<h1>Osnove programiranja<a class="headerlink" href="#osnove-programiranja" title="Permalink to this headline">#</a></h1>
+  <section class="tex2jax_ignore mathjax_ignore" id="izrazi-in-spremenljivke">
+<h1><span class="section-number">1. </span>Izrazi in spremenljivke<a class="headerlink" href="#izrazi-in-spremenljivke" title="Permalink to this headline">#</a></h1>
 <section id="moj-racunalnik-je-lahko-tudi-kalkulator">
-<h2>Moj računalnik je lahko tudi kalkulator<a class="headerlink" href="#moj-racunalnik-je-lahko-tudi-kalkulator" title="Permalink to this headline">#</a></h2>
+<h2><span class="section-number">1.1. </span>Moj računalnik je lahko tudi kalkulator<a class="headerlink" href="#moj-racunalnik-je-lahko-tudi-kalkulator" title="Permalink to this headline">#</a></h2>
 <p>Če poženemo Python dobimo … kalkulator.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="mi">1</span> <span class="o">+</span> <span class="mi">1</span>
 <span class="go">2</span>
@@ -561,12 +579,12 @@ title="Print to PDF"
 <p>Preden gremo naprej, samo opozorimo, kaj vas čaka v večini drugih jezikov: v skoraj vseh drugih jezikih deljenje celih števil vrača celo število; v Javi bo 7 / 2 enako 3. Obratno opozorilo, seveda, velja za tiste, ki že znate programirati in ste morda vajeni drugače: v Pythonu izraz 7 / 2 vrne 3.5. Je to pametno? Najbrž je: ko delimo, večinoma hočemo “pravo” deljenje in le redko celoštevilskega. Še več, pri programiranju velikokrat naredimo napako, ko brezskrbno delimo, ne da bi pomislili na to, s kakšnimi števili - celimi ali ne - delamo. Avtorji Pythona so se zato odločili, naj bo deljenje vedno “pravo”, kadar hočemo celoštevilsko, pa moramo to posebej povedati tako, da namesto <code class="docutils literal notranslate"><span class="pre">/</span></code> uporabimo <code class="docutils literal notranslate"><span class="pre">//</span></code>.</p>
 </section>
 <section id="o-obliki-teh-zapiskov">
-<h2>O obliki teh zapiskov<a class="headerlink" href="#o-obliki-teh-zapiskov" title="Permalink to this headline">#</a></h2>
+<h2><span class="section-number">1.2. </span>O obliki teh zapiskov<a class="headerlink" href="#o-obliki-teh-zapiskov" title="Permalink to this headline">#</a></h2>
 <p>Gornja komunikacija s Pythonom je oblikovana, kot da poženemo Python iz ukazne vrstice. Python sprašuje z <code class="docutils literal notranslate"><span class="pre">&gt;&gt;&gt;</span></code> in potem odgovarja.</p>
 <p>Ti zapiski so pripravljeni z okoljem Jupyter Notebook. Tam vrstice, v katerih vnašamo ukaze Pythonu niso označene z <code class="docutils literal notranslate"><span class="pre">&gt;&gt;&gt;</span></code>, temveč z <code class="docutils literal notranslate"><span class="pre">In</span></code>, njegovi odgovori pa z <code class="docutils literal notranslate"><span class="pre">Out</span></code>. Odslej bodo izpisi v takšni obliki. Če si namestite Jupypter Notebook, lahko prenesete te zapiske na svoj računalnik in izvajate dele kot, ki so v njem. Predlagam, da to poskusite in tudi počnete.</p>
 </section>
 <section id="moj-racunalnik-je-lahko-tudi-kalkulator-s-spominom">
-<h2>Moj računalnik je lahko tudi kalkulator - s spominom<a class="headerlink" href="#moj-racunalnik-je-lahko-tudi-kalkulator-s-spominom" title="Permalink to this headline">#</a></h2>
+<h2><span class="section-number">1.3. </span>Moj računalnik je lahko tudi kalkulator - s spominom<a class="headerlink" href="#moj-racunalnik-je-lahko-tudi-kalkulator-s-spominom" title="Permalink to this headline">#</a></h2>
 <p>Izračunali bomo, koliko je 2 + 3 in rekli računalniku, naj si to zapomni.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -731,7 +749,7 @@ title="Print to PDF"
 <div class="cell_output docutils container">
 <div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
 <span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
-<span class="n">Cell</span> <span class="n">In</span> <span class="p">[</span><span class="mi">11</span><span class="p">],</span> <span class="n">line</span> <span class="mi">2</span>
+<span class="o">&lt;</span><span class="n">ipython</span><span class="o">-</span><span class="nb">input</span><span class="o">-</span><span class="mi">12</span><span class="o">-</span><span class="mi">3</span><span class="n">ef3835d0b71</span><span class="o">&gt;</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
 <span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="n">a</span> <span class="o">=</span> <span class="mi">7</span>
 <span class="ne">----&gt; </span><span class="mi">2</span> <span class="n">a</span> <span class="o">+</span> <span class="n">b</span>
 
@@ -749,10 +767,10 @@ title="Print to PDF"
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span>  <span class="n">Cell</span> <span class="n">In</span> <span class="p">[</span><span class="mi">12</span><span class="p">],</span> <span class="n">line</span> <span class="mi">1</span>
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">  File</span><span class="nn"> &quot;&lt;ipython-input-13-409be5c547e9&gt;&quot;</span><span class="gt">, line </span><span class="mi">1</span>
 <span class="g g-Whitespace">    </span><span class="mi">7</span> <span class="o">=</span> <span class="n">a</span>
-    <span class="o">^</span>
-<span class="ne">SyntaxError</span>: cannot assign to literal here. Maybe you meant &#39;==&#39; instead of &#39;=&#39;?
+         <span class="o">^</span>
+<span class="ne">SyntaxError</span>: can&#39;t assign to literal
 </pre></div>
 </div>
 </div>
@@ -766,10 +784,10 @@ title="Print to PDF"
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span>  <span class="n">Cell</span> <span class="n">In</span> <span class="p">[</span><span class="mi">13</span><span class="p">],</span> <span class="n">line</span> <span class="mi">1</span>
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">  File</span><span class="nn"> &quot;&lt;ipython-input-14-abb8adb6eb95&gt;&quot;</span><span class="gt">, line </span><span class="mi">1</span>
     <span class="kc">True</span> <span class="o">=</span> <span class="mi">12</span>
-    <span class="o">^</span>
-<span class="ne">SyntaxError</span>: cannot assign to True
+             <span class="o">^</span>
+<span class="ne">SyntaxError</span>: can&#39;t assign to keyword
 </pre></div>
 </div>
 </div>
@@ -782,7 +800,7 @@ title="Print to PDF"
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span>  <span class="n">Cell</span> <span class="n">In</span> <span class="p">[</span><span class="mi">14</span><span class="p">],</span> <span class="n">line</span> <span class="mi">1</span>
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">  File</span><span class="nn"> &quot;&lt;ipython-input-15-9b6cbf7468bb&gt;&quot;</span><span class="gt">, line </span><span class="mi">1</span>
     <span class="k">if</span> <span class="o">=</span> <span class="mi">7</span>
        <span class="o">^</span>
 <span class="ne">SyntaxError</span>: invalid syntax
@@ -797,9 +815,9 @@ title="Print to PDF"
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span>  <span class="n">Cell</span> <span class="n">In</span> <span class="p">[</span><span class="mi">15</span><span class="p">],</span> <span class="n">line</span> <span class="mi">1</span>
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">  File</span><span class="nn"> &quot;&lt;ipython-input-16-b1a7fdba72f5&gt;&quot;</span><span class="gt">, line </span><span class="mi">1</span>
     <span class="ow">in</span> <span class="o">=</span> <span class="mi">7</span>
-    <span class="o">^</span>
+     <span class="o">^</span>
 <span class="ne">SyntaxError</span>: invalid syntax
 </pre></div>
 </div>
@@ -809,7 +827,7 @@ title="Print to PDF"
 <p>Morda je koga zaskrbelo, da nam bodo takšne, rezervirane besede v stalno napoto. Bi se dalo videti spisek? Ne bo hudega. Python 3.7 jih ima 35 (naraščanje je počasno: v zadnjih desetih letih je dobil le dve novi) in zelo hitro bomo mimogrede spoznali in uporabljali skoraj vse. Že od naslednjih predavanj naprej vam ne bo prišlo na misel, da bi uporabili <code class="docutils literal notranslate"><span class="pre">if</span></code> kot ime spremenljivke in še kak teden kasneje vam bo stavek <code class="docutils literal notranslate"><span class="pre">if</span> <span class="pre">=</span> <span class="pre">1</span></code> videti grotesken. (Vsaj mene zabolijo oči, ko ga pogledam in prsti se upirajo temu, da bi sploh natipkali kaj takšnega.) Spisek? Ne bom vas strašil z njim, lahko pa si pomagate z Googleom, če hočete. A ni potrebe.</p>
 </section>
 <section id="moj-kalkulator-ima-tudi-funkcije">
-<h2>Moj kalkulator ima tudi funkcije<a class="headerlink" href="#moj-kalkulator-ima-tudi-funkcije" title="Permalink to this headline">#</a></h2>
+<h2><span class="section-number">1.4. </span>Moj kalkulator ima tudi funkcije<a class="headerlink" href="#moj-kalkulator-ima-tudi-funkcije" title="Permalink to this headline">#</a></h2>
 <p>Tako kot spremenljivke, ki v programiranju ne pomenijo čisto istega kot v matematiki in v programiranju ne pomenijo čisto istega, tudi beseda <em>funkcija</em> (Rihanna bi rekla <em>function</em>, če bi znala programirati) ne pomeni povsem istega. Videti pa je zelo podobno. Imamo, recimo, funkcijo <code class="docutils literal notranslate"><span class="pre">abs</span></code>, ki izračuna absolutno vrednost števila.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -881,7 +899,7 @@ title="Print to PDF"
 <p>Funkcije so v resnici zelo pomembna reč. Python ima milijone in milijone funkcij (ne pretiravam, samo en detajl sem zamolčal). Za vsako reč, ki si jo zamislite, obstaja funkcija. Obstaja funkcija, ki bo, če jo pokličete, poslala mail osebi, katere naslov podate kot argument in z vsebino, ki jo podate kot argument. Obstaja funkcija, ki izriše ali pokaže sliko. Funkcija, ki odpre Excel in funkcija, ki piše po njem. S Pythonom lahko naredimo karkoli, le ime funkcije moramo poznati. (Kot rečeno, izpuščam detajle.)</p>
 </section>
 <section id="nizi">
-<h2>Nizi<a class="headerlink" href="#nizi" title="Permalink to this headline">#</a></h2>
+<h2><span class="section-number">1.5. </span>Nizi<a class="headerlink" href="#nizi" title="Permalink to this headline">#</a></h2>
 <p>Nas še vedno muči radovednost o tem, kakšne podatkovne tipe, poleg številskih, še imamo? Ker radovednost ni lepa čednost, jo bomo najlažje odpravili tako, da jo potešimo. Vsaj malo. (“Skušnjavo najlažje premagaš tako, da ji podležeš,” je modroval Oscar Wilde. Res pa je, da so ga potem aretirali in zaprli.) Spoznajmo vsaj še en bolj zapleten podatkovni tip: niz.</p>
 <p>Niz ali, po kot mu pravijo Avstralci, <em>string</em> (oprostite mi boste morali, da bom pogosto uporabljal angleške izraze; pa mi pokažite, lepo prosim, zidarja, ki ne uporablja vaservage in plajbe temveč vodno tehtnico in svinčnico, pa se bom tudi jaz discipliniral), je zaporedje znakov. Aha, kaj pa je to znak? Znaki so črke, številke, ločila in take stvari. Nize moramo vedno zapreti v narekovaje, bodisi enojne (’) bodisi dvojne (“). Uporabiti smemo take, ki so bolj praktični in tudi Python bo izpisoval tako, kot se mu bo zdelo bolj praktično.</p>
 <div class="cell docutils container">
@@ -978,7 +996,7 @@ title="Print to PDF"
 <div class="cell_output docutils container">
 <div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
 <span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
-<span class="n">Cell</span> <span class="n">In</span> <span class="p">[</span><span class="mi">27</span><span class="p">],</span> <span class="n">line</span> <span class="mi">1</span>
+<span class="o">&lt;</span><span class="n">ipython</span><span class="o">-</span><span class="nb">input</span><span class="o">-</span><span class="mi">28</span><span class="o">-</span><span class="n">a10a1af57195</span><span class="o">&gt;</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
 <span class="ne">----&gt; </span><span class="mi">1</span> <span class="n">napoved_zac</span> <span class="o">+</span> <span class="n">mat</span> <span class="o">+</span>  <span class="n">pa</span>  <span class="o">+</span> <span class="n">dez</span>
 
 <span class="ne">NameError</span>: name &#39;pa&#39; is not defined
@@ -1004,7 +1022,7 @@ title="Print to PDF"
 <div class="cell_output docutils container">
 <div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
 <span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
-<span class="n">Cell</span> <span class="n">In</span> <span class="p">[</span><span class="mi">29</span><span class="p">],</span> <span class="n">line</span> <span class="mi">1</span>
+<span class="o">&lt;</span><span class="n">ipython</span><span class="o">-</span><span class="nb">input</span><span class="o">-</span><span class="mi">30</span><span class="o">-</span><span class="mf">149e124</span><span class="n">aca6f</span><span class="o">&gt;</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
 <span class="ne">----&gt; </span><span class="mi">1</span> <span class="n">ime</span> <span class="o">=</span> <span class="n">Benjamin</span>
 
 <span class="ne">NameError</span>: name &#39;Benjamin&#39; is not defined
@@ -1020,9 +1038,9 @@ title="Print to PDF"
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span>  <span class="n">Cell</span> <span class="n">In</span> <span class="p">[</span><span class="mi">30</span><span class="p">],</span> <span class="n">line</span> <span class="mi">1</span>
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">  File</span><span class="nn"> &quot;&lt;ipython-input-31-dd46811d55c1&gt;&quot;</span><span class="gt">, line </span><span class="mi">1</span>
     <span class="n">napoved</span> <span class="o">=</span> <span class="n">Jutri</span> <span class="n">bosta</span> <span class="n">matametika</span> <span class="n">pa</span> <span class="n">dež</span>
-                    <span class="o">^</span>
+                        <span class="o">^</span>
 <span class="ne">SyntaxError</span>: invalid syntax
 </pre></div>
 </div>
@@ -1041,7 +1059,7 @@ title="Print to PDF"
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span>  <span class="n">Cell</span> <span class="n">In</span> <span class="p">[</span><span class="mi">31</span><span class="p">],</span> <span class="n">line</span> <span class="mi">4</span>
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">  File</span><span class="nn"> &quot;&lt;ipython-input-32-8236878fd6a9&gt;&quot;</span><span class="gt">, line </span><span class="mi">4</span>
     <span class="n">x</span> <span class="n">y</span> <span class="n">z</span>
       <span class="o">^</span>
 <span class="ne">SyntaxError</span>: invalid syntax
@@ -1059,9 +1077,9 @@ title="Print to PDF"
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span>  Cell In [32], line 1
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span>  File &quot;&lt;ipython-input-33-e7b97c04099d&gt;&quot;, line 1
     &quot;Cesar vpraša nekoliko nevoljen: &quot;Kaj neki?&quot;&quot;
-                                      ^
+                                        ^
 SyntaxError: invalid syntax
 </pre></div>
 </div>
@@ -1083,7 +1101,7 @@ SyntaxError: invalid syntax
 <p>Ker se niz začne z enojnim narekovajem, se bo s takim tudi končal in vsi dvojni narekovaji znotraj niza so samo znaki kot katerikoli drugi - tako kot recimo dvopičje in vprašaj. O tej temi bi lahko napisali še marsikaj, vendar se za zdaj ustavimo.</p>
 </section>
 <section id="iz-nizov-v-stevila">
-<h2>Iz nizov v števila<a class="headerlink" href="#iz-nizov-v-stevila" title="Permalink to this headline">#</a></h2>
+<h2><span class="section-number">1.6. </span>Iz nizov v števila<a class="headerlink" href="#iz-nizov-v-stevila" title="Permalink to this headline">#</a></h2>
 <p>Da se reč usede, meditirajmo ob naslednjih vrsticah:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1118,7 +1136,7 @@ SyntaxError: invalid syntax
 <div class="cell_output docutils container">
 <div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
 <span class="ne">TypeError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
-<span class="n">Cell</span> <span class="n">In</span> <span class="p">[</span><span class="mi">36</span><span class="p">],</span> <span class="n">line</span> <span class="mi">1</span>
+<span class="o">&lt;</span><span class="n">ipython</span><span class="o">-</span><span class="nb">input</span><span class="o">-</span><span class="mi">37</span><span class="o">-</span><span class="n">b780703cc5f9</span><span class="o">&gt;</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
 <span class="ne">----&gt; </span><span class="mi">1</span> <span class="mi">1</span> <span class="o">+</span> <span class="s2">&quot;1&quot;</span>
 
 <span class="ne">TypeError</span>: unsupported operand type(s) for +: &#39;int&#39; and &#39;str&#39;
@@ -1137,7 +1155,7 @@ podatkovni tip, ki predstavlja nize). Dve števili ali dva niza bi znal sešteti
 <div class="cell_output docutils container">
 <div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
 <span class="ne">TypeError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
-<span class="n">Cell</span> <span class="n">In</span> <span class="p">[</span><span class="mi">37</span><span class="p">],</span> <span class="n">line</span> <span class="mi">1</span>
+<span class="o">&lt;</span><span class="n">ipython</span><span class="o">-</span><span class="nb">input</span><span class="o">-</span><span class="mi">38</span><span class="o">-</span><span class="n">ec358fc6499a</span><span class="o">&gt;</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
 <span class="ne">----&gt; </span><span class="mi">1</span> <span class="s2">&quot;1&quot;</span> <span class="o">+</span> <span class="mi">1</span>
 
 <span class="ne">TypeError</span>: can only concatenate str (not &quot;int&quot;) to str
@@ -1230,7 +1248,7 @@ podatkovni tip, ki predstavlja nize). Dve števili ali dva niza bi znal sešteti
 <p>Ker je <code class="docutils literal notranslate"><span class="pre">int</span></code> funkcija, lahko nastopa v izrazu; potrebe, da bi prepisovali številke v kake nove ali stare spremenljivke, niti ni.</p>
 </section>
 <section id="vpis-in-izpis">
-<h2>Vpis in izpis<a class="headerlink" href="#vpis-in-izpis" title="Permalink to this headline">#</a></h2>
+<h2><span class="section-number">1.7. </span>Vpis in izpis<a class="headerlink" href="#vpis-in-izpis" title="Permalink to this headline">#</a></h2>
 <p>Doslej smo z računalnikom komunicirali tako, da smo tipkali ukaze v <em>ukazno vrstico</em> in če je imela reč kak rezultat (kot ima izraz <code class="docutils literal notranslate"><span class="pre">1</span> <span class="pre">+</span> <span class="pre">1</span></code> rezultat <code class="docutils literal notranslate"><span class="pre">2</span></code>), ga je računalnik izpisal. Ukazna vrstica nam v Pythonu pogosto pride prav za kakšna preskušanja, ko programiramo zares, pa komunikacija z uporabnikom poteka drugače. Če hočemo, da računalnik kaj izpiše, mu moramo to posebej reči. Se pravi, ko bomo programirali, ne bomo napisali le <code class="docutils literal notranslate"><span class="pre">1</span> <span class="pre">+</span> <span class="pre">1</span></code> temveč “izpiši, koliko je 1 + 1”.</p>
 <p>Rekli smo, da funkcije pri programiranju niso nekaj takšnega kot funkcije v matematiki: funkcije v matematiki imajo določeno vrednost pri določenih argumentih (še huje, matematiki pravijo, da so funkcije pravilo, ki vsakemu elementu kodomene funkcije določi … uh, pustimo). “Naše” funkcije pa nekaj delajo in včasih vrnejo kakšen rezultat, recimo številko ali niz ali kaj tretjega. Ena od teh funkcij je namenjena izpisovanju: če jo pokličemo, izpiše tisto, kar smo ji dali kot argument. Imenuje se <code class="docutils literal notranslate"><span class="pre">print</span></code>. Za razliko od, recimo, <code class="docutils literal notranslate"><span class="pre">abs</span></code>, ki zahteva en argument, namreč poljubno število, in vrne njegovo absolutno vrednost, ali <code class="docutils literal notranslate"><span class="pre">pow</span></code>, ki hoče natanko dva argumenta, lahko damo <code class="docutils literal notranslate"><span class="pre">print</span></code>u poljubno število argumentov - številke, nize ali še kaj tretjega -, pa jih bo lepo izpisala.</p>
 <div class="cell docutils container">
@@ -1266,30 +1284,7 @@ podatkovni tip, ki predstavlja nize). Dve števili ali dva niza bi znal sešteti
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">StdinNotImplementedError</span><span class="g g-Whitespace">                  </span>Traceback (most recent call last)
-<span class="n">Cell</span> <span class="n">In</span> <span class="p">[</span><span class="mi">45</span><span class="p">],</span> <span class="n">line</span> <span class="mi">1</span>
-<span class="ne">----&gt; </span><span class="mi">1</span> <span class="n">geslo</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Geslo? &quot;</span><span class="p">)</span>
-
-<span class="nn">File ~/.local/lib/python3.10/site-packages/ipykernel/kernelbase.py:1174,</span> in <span class="ni">Kernel.raw_input</span><span class="nt">(self, prompt)</span>
-<span class="g g-Whitespace">   </span><span class="mi">1167</span> <span class="sd">&quot;&quot;&quot;Forward raw_input to frontends</span>
-<span class="g g-Whitespace">   </span><span class="mi">1168</span><span class="sd"> </span>
-<span class="g g-Whitespace">   </span><span class="mi">1169</span><span class="sd"> Raises</span>
-<span class="g g-Whitespace">   </span><span class="mi">1170</span><span class="sd"> ------</span>
-<span class="g g-Whitespace">   </span><span class="mi">1171</span><span class="sd"> StdinNotImplementedError if active frontend doesn&#39;t support stdin.</span>
-<span class="g g-Whitespace">   </span><span class="mi">1172</span><span class="sd"> &quot;&quot;&quot;</span>
-<span class="g g-Whitespace">   </span><span class="mi">1173</span> <span class="k">if</span> <span class="ow">not</span> <span class="bp">self</span><span class="o">.</span><span class="n">_allow_stdin</span><span class="p">:</span>
-<span class="ne">-&gt; </span><span class="mi">1174</span>     <span class="k">raise</span> <span class="n">StdinNotImplementedError</span><span class="p">(</span>
-<span class="g g-Whitespace">   </span><span class="mi">1175</span>         <span class="s2">&quot;raw_input was called, but this frontend does not support input requests.&quot;</span>
-<span class="g g-Whitespace">   </span><span class="mi">1176</span>     <span class="p">)</span>
-<span class="g g-Whitespace">   </span><span class="mi">1177</span> <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_input_request</span><span class="p">(</span>
-<span class="g g-Whitespace">   </span><span class="mi">1178</span>     <span class="nb">str</span><span class="p">(</span><span class="n">prompt</span><span class="p">),</span>
-<span class="g g-Whitespace">   </span><span class="mi">1179</span>     <span class="bp">self</span><span class="o">.</span><span class="n">_parent_ident</span><span class="p">[</span><span class="s2">&quot;shell&quot;</span><span class="p">],</span>
-<span class="g g-Whitespace">   </span><span class="mi">1180</span>     <span class="bp">self</span><span class="o">.</span><span class="n">get_parent</span><span class="p">(</span><span class="s2">&quot;shell&quot;</span><span class="p">),</span>
-<span class="g g-Whitespace">   </span><span class="mi">1181</span>     <span class="n">password</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
-<span class="g g-Whitespace">   </span><span class="mi">1182</span> <span class="p">)</span>
-
-<span class="ne">StdinNotImplementedError</span>: raw_input was called, but this frontend does not support input requests.
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Geslo? skrivnogeslo
 </pre></div>
 </div>
 </div>
@@ -1301,19 +1296,14 @@ podatkovni tip, ki predstavlja nize). Dve števili ali dva niza bi znal sešteti
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
-<span class="n">Cell</span> <span class="n">In</span> <span class="p">[</span><span class="mi">46</span><span class="p">],</span> <span class="n">line</span> <span class="mi">1</span>
-<span class="ne">----&gt; </span><span class="mi">1</span> <span class="n">geslo</span>
-
-<span class="ne">NameError</span>: name &#39;geslo&#39; is not defined
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;skrivnogeslo&#39;
 </pre></div>
 </div>
 </div>
 </div>
 </section>
 <section id="prvi-cisto-pravi-program">
-<h2>Prvi čisto pravi program<a class="headerlink" href="#prvi-cisto-pravi-program" title="Permalink to this headline">#</a></h2>
+<h2><span class="section-number">1.8. </span>Prvi čisto pravi program<a class="headerlink" href="#prvi-cisto-pravi-program" title="Permalink to this headline">#</a></h2>
 <p>Sestavimo tole: računalnik naj uporabnika prosi za temperaturo v Celzijevih
 stopinjah in računalnik mu bo izpisal, koliko je to v Kelvinih in koliko v
 Fahrenheitih. Iz Celzijev dobimo Kelvine tako, da jim prištejemo 273.15,
@@ -1327,31 +1317,16 @@ Fahrenheite pa tako, da jih pomnožimo z 9/5 in prištejemo 32 (kogar zanima
 </div>
 </div>
 <div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Temperatura [C]? 15
+</pre></div>
+</div>
 <div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">StdinNotImplementedError</span><span class="g g-Whitespace">                  </span>Traceback (most recent call last)
-<span class="n">Cell</span> <span class="n">In</span> <span class="p">[</span><span class="mi">47</span><span class="p">],</span> <span class="n">line</span> <span class="mi">1</span>
-<span class="ne">----&gt; </span><span class="mi">1</span> <span class="n">temp_C</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Temperatura [C]? &quot;</span><span class="p">)</span>
-<span class="g g-Whitespace">      </span><span class="mi">2</span> <span class="n">temp_K</span> <span class="o">=</span> <span class="n">temp_C</span> <span class="o">+</span> <span class="mf">273.15</span>
+<span class="ne">TypeError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
+<span class="o">&lt;</span><span class="n">ipython</span><span class="o">-</span><span class="nb">input</span><span class="o">-</span><span class="mi">49</span><span class="o">-</span><span class="mi">1</span><span class="n">f38fa372baf</span><span class="o">&gt;</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="n">temp_C</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Temperatura [C]? &quot;</span><span class="p">)</span>
+<span class="ne">----&gt; </span><span class="mi">2</span> <span class="n">temp_K</span> <span class="o">=</span> <span class="n">temp_C</span> <span class="o">+</span> <span class="mf">273.15</span>
 
-<span class="nn">File ~/.local/lib/python3.10/site-packages/ipykernel/kernelbase.py:1174,</span> in <span class="ni">Kernel.raw_input</span><span class="nt">(self, prompt)</span>
-<span class="g g-Whitespace">   </span><span class="mi">1167</span> <span class="sd">&quot;&quot;&quot;Forward raw_input to frontends</span>
-<span class="g g-Whitespace">   </span><span class="mi">1168</span><span class="sd"> </span>
-<span class="g g-Whitespace">   </span><span class="mi">1169</span><span class="sd"> Raises</span>
-<span class="g g-Whitespace">   </span><span class="mi">1170</span><span class="sd"> ------</span>
-<span class="g g-Whitespace">   </span><span class="mi">1171</span><span class="sd"> StdinNotImplementedError if active frontend doesn&#39;t support stdin.</span>
-<span class="g g-Whitespace">   </span><span class="mi">1172</span><span class="sd"> &quot;&quot;&quot;</span>
-<span class="g g-Whitespace">   </span><span class="mi">1173</span> <span class="k">if</span> <span class="ow">not</span> <span class="bp">self</span><span class="o">.</span><span class="n">_allow_stdin</span><span class="p">:</span>
-<span class="ne">-&gt; </span><span class="mi">1174</span>     <span class="k">raise</span> <span class="n">StdinNotImplementedError</span><span class="p">(</span>
-<span class="g g-Whitespace">   </span><span class="mi">1175</span>         <span class="s2">&quot;raw_input was called, but this frontend does not support input requests.&quot;</span>
-<span class="g g-Whitespace">   </span><span class="mi">1176</span>     <span class="p">)</span>
-<span class="g g-Whitespace">   </span><span class="mi">1177</span> <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_input_request</span><span class="p">(</span>
-<span class="g g-Whitespace">   </span><span class="mi">1178</span>     <span class="nb">str</span><span class="p">(</span><span class="n">prompt</span><span class="p">),</span>
-<span class="g g-Whitespace">   </span><span class="mi">1179</span>     <span class="bp">self</span><span class="o">.</span><span class="n">_parent_ident</span><span class="p">[</span><span class="s2">&quot;shell&quot;</span><span class="p">],</span>
-<span class="g g-Whitespace">   </span><span class="mi">1180</span>     <span class="bp">self</span><span class="o">.</span><span class="n">get_parent</span><span class="p">(</span><span class="s2">&quot;shell&quot;</span><span class="p">),</span>
-<span class="g g-Whitespace">   </span><span class="mi">1181</span>     <span class="n">password</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
-<span class="g g-Whitespace">   </span><span class="mi">1182</span> <span class="p">)</span>
-
-<span class="ne">StdinNotImplementedError</span>: raw_input was called, but this frontend does not support input requests.
+<span class="ne">TypeError</span>: can only concatenate str (not &quot;float&quot;) to str
 </pre></div>
 </div>
 </div>
@@ -1367,32 +1342,8 @@ Fahrenheite pa tako, da jih pomnožimo z 9/5 in prištejemo 32 (kogar zanima
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">StdinNotImplementedError</span><span class="g g-Whitespace">                  </span>Traceback (most recent call last)
-<span class="n">Cell</span> <span class="n">In</span> <span class="p">[</span><span class="mi">48</span><span class="p">],</span> <span class="n">line</span> <span class="mi">1</span>
-<span class="ne">----&gt; </span><span class="mi">1</span> <span class="n">temp_C</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Temperatura [C]? &quot;</span><span class="p">))</span>
-<span class="g g-Whitespace">      </span><span class="mi">2</span> <span class="n">temp_K</span> <span class="o">=</span> <span class="n">temp_C</span> <span class="o">+</span> <span class="mf">273.15</span>
-<span class="g g-Whitespace">      </span><span class="mi">3</span> <span class="n">temp_F</span> <span class="o">=</span> <span class="n">temp_C</span> <span class="o">*</span> <span class="mi">5</span><span class="o">/</span><span class="mi">9</span> <span class="o">+</span> <span class="mi">32</span>
-
-<span class="nn">File ~/.local/lib/python3.10/site-packages/ipykernel/kernelbase.py:1174,</span> in <span class="ni">Kernel.raw_input</span><span class="nt">(self, prompt)</span>
-<span class="g g-Whitespace">   </span><span class="mi">1167</span> <span class="sd">&quot;&quot;&quot;Forward raw_input to frontends</span>
-<span class="g g-Whitespace">   </span><span class="mi">1168</span><span class="sd"> </span>
-<span class="g g-Whitespace">   </span><span class="mi">1169</span><span class="sd"> Raises</span>
-<span class="g g-Whitespace">   </span><span class="mi">1170</span><span class="sd"> ------</span>
-<span class="g g-Whitespace">   </span><span class="mi">1171</span><span class="sd"> StdinNotImplementedError if active frontend doesn&#39;t support stdin.</span>
-<span class="g g-Whitespace">   </span><span class="mi">1172</span><span class="sd"> &quot;&quot;&quot;</span>
-<span class="g g-Whitespace">   </span><span class="mi">1173</span> <span class="k">if</span> <span class="ow">not</span> <span class="bp">self</span><span class="o">.</span><span class="n">_allow_stdin</span><span class="p">:</span>
-<span class="ne">-&gt; </span><span class="mi">1174</span>     <span class="k">raise</span> <span class="n">StdinNotImplementedError</span><span class="p">(</span>
-<span class="g g-Whitespace">   </span><span class="mi">1175</span>         <span class="s2">&quot;raw_input was called, but this frontend does not support input requests.&quot;</span>
-<span class="g g-Whitespace">   </span><span class="mi">1176</span>     <span class="p">)</span>
-<span class="g g-Whitespace">   </span><span class="mi">1177</span> <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_input_request</span><span class="p">(</span>
-<span class="g g-Whitespace">   </span><span class="mi">1178</span>     <span class="nb">str</span><span class="p">(</span><span class="n">prompt</span><span class="p">),</span>
-<span class="g g-Whitespace">   </span><span class="mi">1179</span>     <span class="bp">self</span><span class="o">.</span><span class="n">_parent_ident</span><span class="p">[</span><span class="s2">&quot;shell&quot;</span><span class="p">],</span>
-<span class="g g-Whitespace">   </span><span class="mi">1180</span>     <span class="bp">self</span><span class="o">.</span><span class="n">get_parent</span><span class="p">(</span><span class="s2">&quot;shell&quot;</span><span class="p">),</span>
-<span class="g g-Whitespace">   </span><span class="mi">1181</span>     <span class="n">password</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
-<span class="g g-Whitespace">   </span><span class="mi">1182</span> <span class="p">)</span>
-
-<span class="ne">StdinNotImplementedError</span>: raw_input was called, but this frontend does not support input requests.
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Temperatura [C]? 15
+15.0 C je enako 288.15 K ali 40.333333333333336 F
 </pre></div>
 </div>
 </div>
@@ -1408,22 +1359,22 @@ potem pa (na Windowsih) <code class="docutils literal notranslate"><span class="
 <p>In to je počel. Najprej je izvedel <code class="docutils literal notranslate"><span class="pre">input</span></code> in nas torej vprašal po temperaturi, v naslednjih dveh vrsticah je računal in v zadnji izpisoval.</p>
 </section>
 <section id="razvojna-okolja">
-<h2>Razvojna okolja<a class="headerlink" href="#razvojna-okolja" title="Permalink to this headline">#</a></h2>
+<h2><span class="section-number">1.9. </span>Razvojna okolja<a class="headerlink" href="#razvojna-okolja" title="Permalink to this headline">#</a></h2>
 <p>Namen gornjega je bil predvsem povedati, da program v Pythonu ni nič drugega kot datoteka z običajnim besedilom (a ne v Wordu - to ni običajno besedilo, saj je datoteka oblikovana tako, da vsebuje še kup drugih podatkov) in da program <code class="docutils literal notranslate"><span class="pre">python</span></code>, ki izvaja programe v jeziku Python, ne dela drugega, kot da prebere takšno datoteko in izvede navodila, napisana v njej.</p>
 <p>Pri tem predmetu bomo uporabljali predvsem dva, Thonny in PyCharm, kdor želi, pa lahko uporablja tudi preprostejše urejevalnike.</p>
 <section id="preprosti-urejevalniki">
-<h3>Preprosti urejevalniki<a class="headerlink" href="#preprosti-urejevalniki" title="Permalink to this headline">#</a></h3>
+<h3><span class="section-number">1.9.1. </span>Preprosti urejevalniki<a class="headerlink" href="#preprosti-urejevalniki" title="Permalink to this headline">#</a></h3>
 <p>Kdor želi kaj preprostega, bo vzel Sublime ali Visual Studio Code. Drugi je kopija prvega (ukradel mu je približno vse), vendar je odprtokodni, za razliko od Sublimea, ki je sicer zastonj, vendar stalno sitnari, ali ga ne bi morda vseeno kupili.</p>
 <p>Oba imata dodatke za veliko jezikov: pomagata nam oblikovati kodo, iskati pozabljena imena spremenljivk v dolgih programih, pokazati dokumentacijo posameznih funkcij in, do neke mere, poganjati programe. Njuna lepota je v njuni univerzalnosti in preprostosti.</p>
 <p>Starejši mački prisegajo na starejše urejevalnike, kot so emacs in vi oz. vim. Tudi med študenti se najde kakšen in nihče mu ne brani. Tudi mazohizem je v sodobni družbi popolnoma sprejeta orientacija.</p>
 </section>
 <section id="ucna-okolja">
-<h3>Učna okolja<a class="headerlink" href="#ucna-okolja" title="Permalink to this headline">#</a></h3>
+<h3><span class="section-number">1.9.2. </span>Učna okolja<a class="headerlink" href="#ucna-okolja" title="Permalink to this headline">#</a></h3>
 <p>Za začetnike so morda primernejša prijaznejša okolja, takšna, ki imajo kaka orodja, ki jasneje kažejo, kaj se dogaja med izvajanjem programov. In to na način, primeren za začetnike - lepo, počasi, nazorno, ne kot profesionalna orodja.</p>
 <p>V ta namen bomo uporabljali <a class="reference external" href="https://thonny.org/">Thonny</a>. Je res osnoven in preprost ter nima niti vsega, kar ima Visual Studio Code z ustreznim dodatkom. Vendar ima prav tisto, kar bomo potrebovali za ta predmet, vsaj na začetku.</p>
 </section>
 <section id="profesionalna-okolja">
-<h3>Profesionalna okolja<a class="headerlink" href="#profesionalna-okolja" title="Permalink to this headline">#</a></h3>
+<h3><span class="section-number">1.9.3. </span>Profesionalna okolja<a class="headerlink" href="#profesionalna-okolja" title="Permalink to this headline">#</a></h3>
 <p>Najbrž najbolj popularno profesionalno okolje za razvoj programov v Pythonu je <a class="reference external" href="https://www.jetbrains.com/pycharm/">PyCharm</a>. Gre za komercialno orodje, vendar ga razvija podjetje, ki je zelo naklonjeno tudi odprti kodi, predvsem pa imajo zastonjsko različico, ki ji prav nič ne manjka. Zato izjemoma nimamo slabe vesti, ker študente navajamo na komercialne programe. Predvsem pa je PyCharm je v resnici neverjetno dober, prav tako pa so izjemna tudi druga orodja tega podjetja. (Vsem, ki bi se radi naučili vročega novega jezika priporočam Kotlin.)</p>
 <p>PyCharm nam bo pri programiranju pomagal še veliko bolj kot Visual Studio Code. Znal bo dopolnjevati napol napisana imena (nekaj malega zna tudi VS Code, a PyCharm je veliko zvitejši), pomagal pri tipih spremenljivk, argumentih funkcij, iskanju napak…</p>
 <p>Odpremo torej PyCharm in naredimo projekt “Programiranje”. Na levi strani
@@ -1443,8 +1394,8 @@ novo datoteko in vanjo vnesemo program.</p>
     {
         requestKernel: true,
         binderOptions: {
-            repo: "binder-examples/jupyter-stacks-datascience",
-            ref: "master",
+            repo: "mihaTrajbaric/programiranje",
+            ref: "main",
         },
         codeMirrorConfig: {
             theme: "abcdef",
@@ -1473,10 +1424,10 @@ novo datoteko in vanjo vnesemo program.</p>
             <p class="prev-next-title">Splošno</p>
         </div>
     </a>
-    <a class='right-next' id="next-link" href="01_naloge.html" title="next page">
+    <a class='right-next' id="next-link" href="02a_pogoji.html" title="next page">
     <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Naloge: Čisti začetek</p>
+        <p class="prev-next-title"><span class="section-number">2. </span>Pogojni stavki</p>
     </div>
     <i class="fas fa-angle-right"></i>
     </a>

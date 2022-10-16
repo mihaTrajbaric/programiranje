@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# # Osnove programiranja
+# # Izrazi in spremenljivke
 # ## Moj računalnik je lahko tudi kalkulator
 # 
 # Če poženemo Python dobimo ... kalkulator.
@@ -132,25 +132,25 @@ x = 2 + 3
 # 
 # Python tokrat ni izpisal ničesar v odgovor. Rezultat si je le zapomnil, shranil ga je pod imenom `x`. Kaj lahko počnemo s tem `x`? Lahko ga uporabljamo v drugih izrazih.
 
-# In[2]:
+# In[3]:
 
 
 x + 7
 
 
-# In[3]:
+# In[4]:
 
 
 x ** 2
 
 
-# In[4]:
+# In[5]:
 
 
 13 % x
 
 
-# In[5]:
+# In[6]:
 
 
 x
@@ -162,7 +162,7 @@ x
 # 
 # Spremenljivko lahko seveda uporabljamo tudi za računanje novih spremenljivk.
 
-# In[6]:
+# In[7]:
 
 
 y = x + 2
@@ -171,14 +171,14 @@ y
 
 # Spremenljivka pri programiranju (v večini jezikov) ne pomeni istega kot v matematiki. Spremenljivke v matematiki se, roko na srce, pravzaprav ne spreminjajo. V matematiki *x* ne more biti v eni vrstici 5, v naslednji pa 8. Pri programiranju pa lahko.
 
-# In[7]:
+# In[8]:
 
 
 x = 5
 x
 
 
-# In[8]:
+# In[9]:
 
 
 x = 8
@@ -187,7 +187,7 @@ x
 
 # Še huje. Če matematiki ne bi znali programirati (pa navadno znajo in to dobro), bi jih utegnilo pretresti tole:
 
-# In[9]:
+# In[10]:
 
 
 x = 5
@@ -201,7 +201,7 @@ x
 # 
 # Tem, ki že znajo programirati - posebej, če so uporabljali kak C# ali Javo - povejmo še, da se Pythonove spremenljivke tudi sicer bistevno razlikujejo od spremenljivk, ki so jih vajeni od ondod. Predvsem ni dobro, da so vas najbrž učili, da so "*spremenljivke kot nekakšne škatlice*". Za začetek bi bilo veliko lepše, če bi jim rekli *ime*, ne *spremenljivka*. Tudi Python jim reče *name*. A navada je železna srajca in vsi govorimo o *spremenljivkah*. Pomembno pa je tole: če imamo
 
-# In[10]:
+# In[11]:
 
 
 x = 42
@@ -248,7 +248,7 @@ y = x
 # 
 # Postavimo, najprej, `a` na `7` in izračunajmo `a + b`.
 
-# In[11]:
+# In[12]:
 
 
 a = 7
@@ -259,7 +259,7 @@ a + b
 # 
 # Kaj pa tole?
 
-# In[12]:
+# In[13]:
 
 
 7 = a
@@ -269,7 +269,7 @@ a + b
 # 
 # Pridelajmo še eno napako.
 
-# In[13]:
+# In[14]:
 
 
 True = 12
@@ -277,13 +277,13 @@ True = 12
 
 # Beseda `True` ima poseben pomen in je ni mogoče uporabljati kot spremenljivko. Takšnim besedam pravimo ključne besede, ali, kot bi jim rekel John Kennedy, če bi bil še živ, *keywords*. Tokrat je bil Python še prijazen, pri večini drugih ključnih besed pa ne bo povedal kaj dosti več kot "nekaj je narobe". Poskusimo z dvema, `if` in `in`:
 
-# In[14]:
+# In[15]:
 
 
 if = 7
 
 
-# In[15]:
+# In[16]:
 
 
 in = 7
@@ -298,7 +298,7 @@ in = 7
 # 
 # Tako kot spremenljivke, ki v programiranju ne pomenijo čisto istega kot v matematiki in v programiranju ne pomenijo čisto istega, tudi beseda *funkcija* (Rihanna bi rekla *function*, če bi znala programirati) ne pomeni povsem istega. Videti pa je zelo podobno. Imamo, recimo, funkcijo `abs`, ki izračuna absolutno vrednost števila.
 
-# In[16]:
+# In[17]:
 
 
 abs(-2.8)
@@ -306,7 +306,7 @@ abs(-2.8)
 
 # Ali pa `pow`, ki naredi isto kot operator `**`.
 
-# In[17]:
+# In[18]:
 
 
 pow(2, 3)
@@ -318,13 +318,13 @@ pow(2, 3)
 # 
 # Tudi klic funkcije, `pow(2, 3)`, je izraz. Kot katerikoli drugi izraz lahko tudi `pow` in `abs` nastopata kot del izraza.
 
-# In[18]:
+# In[19]:
 
 
 (pow(2, 3) + 2) / 5
 
 
-# In[19]:
+# In[20]:
 
 
 pow(2, 3) + abs(-2)
@@ -332,7 +332,7 @@ pow(2, 3) + abs(-2)
 
 # In argumenti funkcij so lahko prav tako izrazi.
 
-# In[20]:
+# In[21]:
 
 
 x = 1
@@ -349,13 +349,13 @@ yy
 # 
 # Niz ali, po kot mu pravijo Avstralci, *string* (oprostite mi boste morali, da bom pogosto uporabljal angleške izraze; pa mi pokažite, lepo prosim, zidarja, ki ne uporablja vaservage in plajbe temveč vodno tehtnico in svinčnico, pa se bom tudi jaz discipliniral), je zaporedje znakov. Aha, kaj pa je to znak? Znaki so črke, številke, ločila in take stvari. Nize moramo vedno zapreti v narekovaje, bodisi enojne (') bodisi dvojne ("). Uporabiti smemo take, ki so bolj praktični in tudi Python bo izpisoval tako, kot se mu bo zdelo bolj praktično.
 
-# In[21]:
+# In[22]:
 
 
 'Tole je primer niza.'
 
 
-# In[22]:
+# In[23]:
 
 
 "Tole je pa še en primer niza."
@@ -365,7 +365,7 @@ yy
 # 
 # Tudi nize lahko priredimo spremenljivkam.
 
-# In[23]:
+# In[24]:
 
 
 napoved = "Jutri bosta matematika pa dež"
@@ -374,7 +374,7 @@ napoved
 
 # Celo seštevamo jih lahko.
 
-# In[24]:
+# In[25]:
 
 
 "Jutri bosta " + "matematika" + " pa " + "dež"
@@ -382,7 +382,7 @@ napoved
 
 # Ali pa oboje
 
-# In[25]:
+# In[26]:
 
 
 napoved_zac = "Jutri bosta "
@@ -393,7 +393,7 @@ napoved_zac + mat + " pa " + dez
 
 # Kako zapleten račun! Predvsem ne spreglejte, da smo dali besedo "pa" pod narekovaje, saj so `napoved_zac`, `mat`, `dez` spremenljivke (ki so v resnici nizi), `" pa "` pa je niz kar tako. To je nekako tako, kot če bi, ko smo se igrali s številkami, pisali
 
-# In[26]:
+# In[27]:
 
 
 x = 1
@@ -405,7 +405,7 @@ x + 2 + y
 # 
 # Kaj pa, če bi slučajno pozabili narekovaje?
 
-# In[27]:
+# In[28]:
 
 
 napoved_zac + mat +  pa  + dez
@@ -413,7 +413,7 @@ napoved_zac + mat +  pa  + dez
 
 # Jasno? Brez narekovajev je `pa` ime spremenljivke - in to takšne, ki še ni definirana. To je tako, kot če bi namesto
 
-# In[28]:
+# In[29]:
 
 
 ime = "Benjamin"
@@ -421,7 +421,7 @@ ime = "Benjamin"
 
 # kar je pravilno, rekli
 
-# In[29]:
+# In[30]:
 
 
 ime = Benjamin
@@ -429,7 +429,7 @@ ime = Benjamin
 
 # Ali pa:
 
-# In[30]:
+# In[31]:
 
 
 napoved = Jutri bosta matametika pa dež
@@ -440,7 +440,7 @@ napoved = Jutri bosta matametika pa dež
 # 
 # Gornje je tako, kot da bi rekli
 
-# In[31]:
+# In[32]:
 
 
 x = 1
@@ -455,7 +455,7 @@ x y z
 # 
 # Zakaj pa smo prejle rekli, da uporabimo tiste narekovaje, ki so bolj *praktični*? Čemu bi bili kakšni narekovaji bolj praktični od drugih?
 
-# In[32]:
+# In[33]:
 
 
 "Cesar vpraša nekoliko nevoljen: "Kaj neki?""
@@ -463,7 +463,7 @@ x y z
 
 # Ni potrebno biti posebno pameten, da vidimo, kaj ga je (namreč Pythona, ne cesarja) onesrečilo tokrat. Ko vidi prvi narekovaj, ve, da gre za niz. Ko pride do naslednjega narekovaja, se niz, tako méni, niz konča. In potem se seveda zmede, ker nizu sledi nekaj, kar ni podobno ničemur. Zdaj pa poskusimo z enojnimi narekovaji.
 
-# In[33]:
+# In[34]:
 
 
 'Cesar vpraša nekoliko nevoljen: "Kaj neki?"'
@@ -476,7 +476,7 @@ x y z
 # 
 # Da se reč usede, meditirajmo ob naslednjih vrsticah:
 
-# In[34]:
+# In[35]:
 
 
 a = 1 + 1
@@ -490,7 +490,7 @@ c = "1" + "1"
 # 
 # Najbolj zanimivo je tretje. Preden razrešimo vprašanje, se vprašajmo nekaj drugega. Recimo
 
-# In[35]:
+# In[36]:
 
 
 ana = "Ana"
@@ -504,7 +504,7 @@ r = ana + benjamin
 # 
 # Nikar ne zamudimo priložnosti za še eno napako!
 
-# In[36]:
+# In[37]:
 
 
 1 + "1"
@@ -513,7 +513,7 @@ r = ana + benjamin
 # Seštevanje je operacija, zato tistemu, kar je levo in desno od `+` pravimo operanda. Sporočilo pravi, da operator `+` ne podpira operandov tipov `int` in `str` (`str` je
 # podatkovni tip, ki predstavlja nize). Dve števili ali dva niza bi znal sešteti, te kombinacije pa ne. Mimogrede, obratni vrstni red da nekoliko drugačno sporočilo:
 
-# In[37]:
+# In[38]:
 
 
 "1" + 1
@@ -525,13 +525,13 @@ r = ana + benjamin
 # Ker nam bo prišlo vsak čas prav, povejmo, kako iz niza dobimo število. Recimo, torej, da imamo `a = "1"` in `b = "2"`. Radi bi ju sešteli - vendar zares, tako da bomo dobili 3, ne "12". Za to ju moramo najprej (ali pa sproti) spremeniti v števili. Iz niza dobimo število tako, da pokličemo "funkcijo" `int` ali `float`; obe funkciji pričakujeta kot argument niz, ki vsebuje neko število in kot rezultat vrneta celo (`int`) ali realno (`float`)
 # število. (Tole bi se spodobilo in bilo pravično povedati: `int` in `float` v resnici nista funkciji, temveč nekaj drugega, a za potrebe prvih toliko in toliko predavanj, se bomo držali Pythonovega načela "Če hodi kot raca in gaga kot raca, potem je raca", ki bo postalo pomembno proti koncu semestra; če se obnašata kot funkciji, ju bomo brez slabe vesti oklicali za funkciji.)
 
-# In[38]:
+# In[39]:
 
 
 int("42")
 
 
-# In[39]:
+# In[40]:
 
 
 float("42")
@@ -539,7 +539,7 @@ float("42")
 
 # Kar želimo, storimo na tri načine, vsak bo poučen po svoje. Prvi:
 
-# In[40]:
+# In[41]:
 
 
 a = "1"
@@ -554,7 +554,7 @@ aa + bb
 # 
 # Drugi:
 
-# In[41]:
+# In[42]:
 
 
 a = "1"
@@ -572,7 +572,7 @@ a + b
 # 
 # Tretji:
 
-# In[42]:
+# In[43]:
 
 
 a = "1"
@@ -590,13 +590,13 @@ int(a) + int(b)
 # 
 # Rekli smo, da funkcije pri programiranju niso nekaj takšnega kot funkcije v matematiki: funkcije v matematiki imajo določeno vrednost pri določenih argumentih (še huje, matematiki pravijo, da so funkcije pravilo, ki vsakemu elementu kodomene funkcije določi ... uh, pustimo). "Naše" funkcije pa nekaj delajo in včasih vrnejo kakšen rezultat, recimo številko ali niz ali kaj tretjega. Ena od teh funkcij je namenjena izpisovanju: če jo pokličemo, izpiše tisto, kar smo ji dali kot argument. Imenuje se `print`. Za razliko od, recimo, `abs`, ki zahteva en argument, namreč poljubno število, in vrne njegovo absolutno vrednost, ali `pow`, ki hoče natanko dva argumenta, lahko damo `print`u poljubno število argumentov - številke, nize ali še kaj tretjega -, pa jih bo lepo izpisala.
 
-# In[43]:
+# In[44]:
 
 
 print(1 + 1, 27, "benjamin")
 
 
-# In[44]:
+# In[45]:
 
 
 print(napoved_zac, mat, "pa", dez, "in", 18, "stopinj")
@@ -606,13 +606,13 @@ print(napoved_zac, mat, "pa", dez, "in", 18, "stopinj")
 # 
 # Druga funkcija, ki nam bo prišla prav, prosi uporabnika, da vpiše kako reč. Kot argument pričakuje niz, vprašanje, ki ga želimo zastaviti uporabniku. Kot rezultat "izračuna" vrne niz, ki ga je vpisal uporabnik.
 
-# In[45]:
+# In[47]:
 
 
 geslo = input("Geslo? ")
 
 
-# In[46]:
+# In[48]:
 
 
 geslo
@@ -626,7 +626,7 @@ geslo
 # Fahrenheite pa tako, da jih pomnožimo z 9/5 in prištejemo 32 (kogar zanima
 # še kaj, naj pogleda na [Wikipedijo](http://en.wikipedia.org/wiki/Conversion_of_units_of_temperature).
 
-# In[47]:
+# In[49]:
 
 
 temp_C = input("Temperatura [C]? ")
@@ -635,7 +635,7 @@ temp_K = temp_C + 273.15
 
 # *Eh.* Funkcija `input` vrne *niz*, ki ga je vpisal uporabnik. Četudi utegne ta izgledati kot številka, je še vedno niz in k nizom ni mogoče prištevati števil. Kot smo videli, lahko storimo troje: naredimo novo spremenljivko, na primer, `temp_Cf = float(temp_C)`, povozimo staro s `temp_Cf = float(temp_C)` ali pa pretvorbo opravimo kar sproti, tako da računamo `temp_K = float(temp_C) + 273.15`. Izmed naštetih možnosti se odločimo za četrto in niz pretvorimo, čim ga uporabnik vpiše. Ponovimo torej vso vajo.
 
-# In[48]:
+# In[50]:
 
 
 temp_C = float(input("Temperatura [C]? "))

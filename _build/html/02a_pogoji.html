@@ -1,0 +1,937 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>2. Pogojni stavki &#8212; Krožek začetnega programiranja 2022-23</title>
+    
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+<link href="_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" href="_static/styles/sphinx-book-theme.css?digest=5115cc725059bd94278eecd172e13a965bf8f5a9" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" />
+    
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
+
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/clipboard.min.js"></script>
+    <script src="_static/copybutton.js"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?digest=9c920249402e914e316237a7dbc6769907cce411"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="prev" title="1. Izrazi in spremenljivke" href="01_izrazi_spremenljivke_program.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
+<!-- Checkboxes to toggle the left sidebar -->
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation" aria-label="Toggle navigation sidebar">
+<label class="overlay overlay-navbar" for="__navigation">
+    <div class="visually-hidden">Toggle navigation sidebar</div>
+</label>
+<!-- Checkboxes to toggle the in-page toc -->
+<input type="checkbox" class="sidebar-toggle" name="__page-toc" id="__page-toc" aria-label="Toggle in-page Table of Contents">
+<label class="overlay overlay-pagetoc" for="__page-toc">
+    <div class="visually-hidden">Toggle in-page Table of Contents</div>
+</label>
+<!-- Headers at the top -->
+<div class="announcement header-item noprint"></div>
+<div class="header header-item noprint"></div>
+
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<!-- Sidebar -->
+<div class="bd-sidebar noprint" id="site-navigation">
+    <div class="bd-sidebar__content">
+        <div class="bd-sidebar__top"><div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="index.html">
+      
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
+      
+      <img src="_static/python-logo.png" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">Krožek začetnega programiranja 2022-23</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="index.html">
+                    Splošno
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Vsebina
+ </span>
+</p>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="01_izrazi_spremenljivke_program.html">
+   1. Izrazi in spremenljivke
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   2. Pogojni stavki
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav></div>
+        <div class="bd-sidebar__bottom">
+             <!-- To handle the deprecated key -->
+            
+            <div class="navbar_extra_footer">
+            Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+            </div>
+            
+        </div>
+    </div>
+    <div id="rtd-footer-container"></div>
+</div>
+
+
+          
+
+
+          
+<!-- A tiny helper pixel to detect if we've scrolled -->
+<div class="sbt-scroll-pixel-helper"></div>
+<!-- Main content -->
+<div class="col py-0 content-container">
+    
+    <div class="header-article row sticky-top noprint">
+        
+
+
+
+<div class="col py-1 d-flex header-article-main">
+    <div class="header-article__left">
+        
+        <label for="__navigation"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="right"
+title="Toggle navigation"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-bars"></i>
+  </span>
+
+</label>
+
+        
+    </div>
+    <div class="header-article__right">
+<div class="menu-dropdown menu-dropdown-launch-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Launch interactive content">
+      <i class="fas fa-rocket"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="https://mybinder.org/v2/gh/mihaTrajbaric/programiranje/main?urlpath=tree/02a_pogoji.ipynb"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Launch on Binder"
+>
+  
+
+<span class="headerbtn__icon-container">
+  
+    <img src="_static/images/logo_binder.svg">
+  </span>
+<span class="headerbtn__text-container">Binder</span>
+</a>
+
+      </li>
+      
+      <li>
+        
+<button onclick="initThebeSBT()"
+  class="headerbtn headerbtn-launch-thebe"
+  data-toggle="tooltip"
+data-placement="left"
+title="Launch Thebe"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-play"></i>
+  </span>
+<span class="headerbtn__text-container">Live Code</span>
+</button>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+
+<button onclick="toggleFullScreen()"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="bottom"
+title="Fullscreen mode"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+<div class="menu-dropdown menu-dropdown-repository-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Source repositories">
+      <i class="fab fa-github"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="https://github.com/mihaTrajbaric/programiranje"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Source repository"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="headerbtn__text-container">repository</span>
+</a>
+
+      </li>
+      
+      <li>
+        <a href="https://github.com/mihaTrajbaric/programiranje/issues/new?title=Issue%20on%20page%20%2F02a_pogoji.html&body=Your%20issue%20content%20here."
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Open an issue"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="headerbtn__text-container">open issue</span>
+</a>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+
+<div class="menu-dropdown menu-dropdown-download-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Download this page">
+      <i class="fas fa-download"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="_sources/02a_pogoji.ipynb"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Download source file"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="headerbtn__text-container">.ipynb</span>
+</a>
+
+      </li>
+      
+      <li>
+        
+<button onclick="printPdf(this)"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="left"
+title="Print to PDF"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="headerbtn__text-container">.pdf</span>
+</button>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+<label for="__page-toc"
+  class="headerbtn headerbtn-page-toc"
+  
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-list"></i>
+  </span>
+
+</label>
+
+    </div>
+</div>
+
+<!-- Table of contents -->
+<div class="col-md-3 bd-toc show noprint">
+    <div class="tocsection onthispage pt-5 pb-3">
+        <i class="fas fa-list"></i> Contents
+    </div>
+    <nav id="bd-toc-nav" aria-label="Page">
+        <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#zakaj-rabimo-pogojni-stavek">
+   2.1. Zakaj rabimo pogojni stavek?
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#gnezdeni-pogoji">
+   2.2. Gnezdeni pogoji
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#sicerce">
+   2.3. Sicerče
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#pogoji">
+   2.4. Pogoji
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#kurzschluss">
+   2.5. Kurzschluss
+  </a>
+ </li>
+</ul>
+
+    </nav>
+</div>
+    </div>
+    <div class="article row">
+        <div class="col pl-md-3 pl-lg-5 content-container">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>Pogojni stavki</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#zakaj-rabimo-pogojni-stavek">
+   2.1. Zakaj rabimo pogojni stavek?
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#gnezdeni-pogoji">
+   2.2. Gnezdeni pogoji
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#sicerce">
+   2.3. Sicerče
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#pogoji">
+   2.4. Pogoji
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#kurzschluss">
+   2.5. Kurzschluss
+  </a>
+ </li>
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            <main id="main-content" role="main">
+                
+              <div>
+                
+  <section class="tex2jax_ignore mathjax_ignore" id="pogojni-stavki">
+<h1><span class="section-number">2. </span>Pogojni stavki<a class="headerlink" href="#pogojni-stavki" title="Permalink to this headline">#</a></h1>
+<section id="zakaj-rabimo-pogojni-stavek">
+<h2><span class="section-number">2.1. </span>Zakaj rabimo pogojni stavek?<a class="headerlink" href="#zakaj-rabimo-pogojni-stavek" title="Permalink to this headline">#</a></h2>
+<p>Začnimo s preprostim programom za izračun indeksa telesne teže.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">teza</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Teža: &quot;</span><span class="p">))</span>
+<span class="n">visina</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Telesna višina: &quot;</span><span class="p">))</span>
+<span class="n">bmi</span> <span class="o">=</span> <span class="n">teza</span> <span class="o">/</span> <span class="n">visina</span> <span class="o">**</span> <span class="mi">2</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Indeks vaše telesne teže je&quot;</span><span class="p">,</span> <span class="n">bmi</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Teža: 60
+Telesna višina: 1.7
+Indeks vaše telesne teže je 20.761245674740486
+</pre></div>
+</div>
+</div>
+</div>
+<p>Želimo si, da bi program povedal še, ali je uporabnik slučajno preobilen. Prvi, seveda napačni poskus, bi bil takšen.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">teza</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Teža: &quot;</span><span class="p">))</span>
+<span class="n">visina</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Telesna višina: &quot;</span><span class="p">))</span>
+<span class="n">bmi</span> <span class="o">=</span> <span class="n">teza</span> <span class="o">/</span> <span class="n">visina</span> <span class="o">**</span> <span class="mi">2</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Indeks vaše telesne teže je&quot;</span><span class="p">,</span> <span class="n">bmi</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Potrebno bo shujšati!&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Program v tej obliki bi, v širši rabi, povzročal anoreksijo, saj vse po vrsti, vključno z najstnicami, pošilja na hujšanje. Zadnjo vrstico, poziv k dieti, mora izvesti le, če je <code class="docutils literal notranslate"><span class="pre">bmi</span></code> večji od 25 (ta meja namreč velja za mejo debelosti, oziroma, politično korektno, prekomerne telesne teže).</p>
+<p>To storimo tako, da pred vrstico dodamo pogoj. Ta se glasi “če bmi &gt; 25”, le da ga moramo napisati v angleščini.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">teza</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Teža: &quot;</span><span class="p">))</span>
+<span class="n">visina</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Telesna višina: &quot;</span><span class="p">))</span>
+<span class="n">bmi</span> <span class="o">=</span> <span class="n">teza</span> <span class="o">/</span> <span class="n">visina</span> <span class="o">**</span> <span class="mi">2</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Indeks vaše telesne teže je&quot;</span><span class="p">,</span> <span class="n">bmi</span><span class="p">)</span>
+<span class="k">if</span> <span class="n">bmi</span> <span class="o">&gt;</span> <span class="mi">25</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Potrebno bo shujšati!&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Ne spreglejmo dveh pomembnih reči. Prva: na konec pogoja smo postavili dvopičje. To ne služi le za okras: dvopičja ne smemo izpustiti. Python na tem mestu <em>zahteva</em> dvopičje.</p>
+<p>Druga: prejšnjič sem prepovedal pisanje presledkov na začetku vrstice … razen takrat, ko vam bom zapovedal, da jih pišite. No, napočil je ta trenutek: zapovedujem vam. Poglejte, kako sem oblikoval program: vrstico za <code class="docutils literal notranslate"><span class="pre">if</span></code>-om sem nekoliko zamaknil. Koliko, ni pomembno, pomembno je samo, da sem vse zamaknil enako. (Neobvezno pravilo: zamik naj bo velik štiri presledke. Ni obvezno, a če boste uporabljali štiri presledke, boste pisali enako kodo kot drugi. In nikoli nikoli ne uporabljajte tabulatorjev, ti naredijo zmedo!)</p>
+<p>Zamaknjenih vrstic bi lahko bilo še več. Vse se izvedejo le, če je pogoj izpolnjen.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">teza</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Teža: &quot;</span><span class="p">))</span>
+<span class="n">visina</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Telesna višina: &quot;</span><span class="p">))</span>
+<span class="n">bmi</span> <span class="o">=</span> <span class="n">teza</span> <span class="o">/</span> <span class="n">visina</span> <span class="o">**</span> <span class="mi">2</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Indeks vaše telesne teže je&quot;</span><span class="p">,</span> <span class="n">bmi</span><span class="p">)</span>
+<span class="k">if</span> <span class="n">bmi</span> <span class="o">&gt;</span> <span class="mi">25</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Potrebno bo shujšati!&quot;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Da, gospod ali gospa, preveč vas je skupaj.&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Pregled je končan, oglasite se spet čez dva tedna.&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Tako kot smo zastavili zdaj, se <code class="docutils literal notranslate"><span class="pre">print</span></code>a, ki sta zamaknjena, izvedeta le, če je oseba preobilna. Zadnji <code class="docutils literal notranslate"><span class="pre">print</span></code> ni več znotraj pogoja, zato se izvede v vsakem primeru, za suhe in debele.</p>
+<p>Tale razlaga je skoraj nepotrebna, saj je to, kdaj se izvede kaj, očitno že kar iz oblike programa. (To je razlog, zakaj je Python tako simpatičen jezik za začetnike: programe v njem je veliko lažje brati kot programe v kakem bolj kriptičnem jeziku.)</p>
+<p>Program bi bil še bolj simpatičen, če bi tiste, ki niso predebeli, pohvalil.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">teza</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Teža: &quot;</span><span class="p">))</span>
+<span class="n">visina</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Telesna višina: &quot;</span><span class="p">))</span>
+<span class="n">bmi</span> <span class="o">=</span> <span class="n">teza</span> <span class="o">/</span> <span class="n">visina</span> <span class="o">**</span> <span class="mi">2</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Indeks vaše telesne teže je&quot;</span><span class="p">,</span> <span class="n">bmi</span><span class="p">)</span>
+<span class="k">if</span> <span class="n">bmi</span> <span class="o">&gt;</span> <span class="mi">25</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Potrebno bo shujšati!&quot;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Da, gospod ali gospa, preveč vas je skupaj.&quot;</span><span class="p">)</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Odlično, le še naprej jejte toliko kot doslej!&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Pregled je končan, oglasite se spet čez dva tedna.&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Pogojnemu stavku (ups, nov izraz; računalnikarji nekaterim rečem rečemo stavek, ker pa vas tule ne bom mučil s terminologijo, si pod besedo <em>stavek</em> predstavljajte preprosto “kos programa”) lahko sledi še <code class="docutils literal notranslate"><span class="pre">else</span></code>, ki vsebuje tisto, kar naj se zgodi, če pogoj ni izpolnjen.</p>
+<p>Znotraj pogojnih stavkov seveda lahko pišemo tudi druge reči, ne le <code class="docutils literal notranslate"><span class="pre">print</span></code>ov. Takole: uporabniki programa se bodo pogosto zmotili in namesto višine v metrih vpisali višino v centimetrih, zato jih bo program obtožil težke anoreksije. To lahko popravimo preprosto tako, da program še pred računanjem BMI preveri, ali je višina slučajno večja od, recimo, treh metrov. V tem primeru sklepa, da je uporabnik podal višino v centimetrih, zato številko, ki jo je vpisal uporabnik, deli s 100.</p>
+<p>Začetek programa tako postane takšen.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">teza</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Teža: &quot;</span><span class="p">))</span>
+<span class="n">visina</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Telesna višina: &quot;</span><span class="p">))</span>
+<span class="k">if</span> <span class="n">visina</span> <span class="o">&gt;</span> <span class="mi">3</span><span class="p">:</span>  <span class="c1"># Predpostavimo, da ni Hagrid</span>
+    <span class="n">visina</span> <span class="o">=</span> <span class="n">visina</span> <span class="o">/</span> <span class="mi">100</span>
+<span class="n">bmi</span> <span class="o">=</span> <span class="n">teza</span> <span class="o">/</span> <span class="n">visina</span> <span class="o">**</span> <span class="mi">2</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Naprej pa gre tako kot prej.</p>
+<p>Na prvem predavanju smo omenjali <em>rezervirane besede</em>, to je, besede, ki ne morejo biti imena spremenljivk. Med drugim sem pokazal besedo <code class="docutils literal notranslate"><span class="pre">if</span></code> - napisal sem <code class="docutils literal notranslate"><span class="pre">if</span> <span class="pre">=</span> <span class="pre">1</span></code> in Python se je pritožil, da mu ni niti približno jasno, kaj hočem povedati.</p>
+<p>Zdaj vidimo, zakaj. Besedi <code class="docutils literal notranslate"><span class="pre">if</span></code> mora slediti nek pogoj. In <code class="docutils literal notranslate"><span class="pre">=</span> <span class="pre">1</span></code> ni pogoj.</p>
+<p>Nekoliko off topic: tako zamaknjenim delom programa pravimo, kot ste me že večkrat slišali reči, <em>bloki</em>. Bloke poznajo vsi “normalni” programski jeziki, le označujejo jih različno. Pogost način označevanja je označevanje z zavitimi oklepaji: v Cju (in iz njega izpeljanih oz. njemu podobnih jezikih C++, Java, C#, JavaScript, Php…) bi bili naši <code class="docutils literal notranslate"><span class="pre">if</span></code>i videti takole (poleg oklepajev je razlik še nekaj, vendar nas ne zanimajo in jih spreglejte):</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">if</span> <span class="p">(</span><span class="n">bmi</span> <span class="o">&gt;</span> <span class="mi">25</span><span class="p">)</span> <span class="p">{</span>
+    <span class="n">printf</span><span class="p">(</span><span class="s2">&quot;Potrebno bo shujšati&quot;</span><span class="p">);</span>
+    <span class="n">printf</span><span class="p">(</span><span class="s2">&quot;Da, gospod ali gospa, preveč vas je skupaj.&quot;</span><span class="p">);</span>
+<span class="p">}</span>
+<span class="k">else</span> <span class="p">{</span>
+    <span class="n">printf</span><span class="p">(</span><span class="s2">&quot;Odlično, le še naprej jejte toliko kot doslej!&quot;</span><span class="p">);</span>
+<span class="p">}</span>
+<span class="n">printf</span><span class="p">(</span><span class="s2">&quot;Pregled je končan, oglasite se spet čez dva tedna.&quot;</span><span class="p">);</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Kaj je lepše, je stvar okusa in predmet številnih verskih vojn.</p>
+<p>Za drugoverce, se pravi heretike, ki so vam zaviti oklepaji bolj všeč od zamikanja: najpogostejša napaka v naslednjih dveh tednih bo, da boste pozabljali dvopičje. Če se vaš program noče izvesti zaradi sintaktične napake, preverite dvopičja. Po dveh tednih se boste navadili.</p>
+<p>Če smo že ravno pri verskih vprašanjih: v Pythonu ne pišemo oklepajev, kjer niso potrebni … razen tam, kjer povečajo čitljivost. Noben greh ni napisati <code class="docutils literal notranslate"><span class="pre">teza</span> <span class="pre">/</span> <span class="pre">(visina</span> <span class="pre">**</span> <span class="pre">2)</span></code>, čeprav bi se vse izračunalo popolnoma enako tudi, če oklepajev ne bi bilo. Potenciranje ima sicer prednost pred deljenjem, vendar je to, če napišemo še oklepaje, jasneje. V pogojnih izrazih pa oklepajev ne pišemo. Napisali bomo torej <code class="docutils literal notranslate"><span class="pre">if</span> <span class="pre">bmi</span> <span class="pre">&gt;</span> <span class="pre">25</span></code> in ne <code class="docutils literal notranslate"><span class="pre">if</span> <span class="pre">(bmi</span> <span class="pre">&gt;</span> <span class="pre">25)</span></code>, kot zahtevajo nekateri drugi jeziki. Oklepajev vam nihče ne brani, vendar vas bodo v teh, Pythonovskih krajih, čudno gledali, če boste preveč strašili z njimi. Ko programiraš v nekem jeziku, programiraj, kot se programira v tem jeziku. Pisati oklepaje v pogojih v Pythonu, je, kot da bi po angleško govorili s fransoskim aksentom samo sato, ker ze vam zdi fransoščina lepša od anglaise.</p>
+<p>Še ena estetska zadeva: za dvopičjem vedno pojdite v novo vrsto. Kot boste zvedavi kmalu odkrili, Python sicer dovoli, da napišete tudi</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">if</span> <span class="n">bmi</span> <span class="o">&gt;</span> <span class="mi">25</span><span class="p">:</span> <span class="nb">print</span> <span class="p">(</span><span class="s2">&quot;Potrebno bo shujšati&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>vendar to vodi v nepregledne programe. To se ne dela.</p>
+<p>Tule pa je še nekaj primerov napačno zamikanih programov.</p>
+<p><img alt="Wrong indent 1" src="_images/02_w_indent_1.png" /></p>
+<p>Tretja vrstica mora imeti enak zamik kot druga, sicer Python ne more vedeti, ali je še znotraj pogoja ali ne.</p>
+<p><img alt="Wrong indent 2" src="_images/02_w_indent_2.png" /></p>
+<p>Ne, tudi v to smer ne smemo. Tu se Python vpraša, zakaj je tretja vrstica zamaknjena še bolj kot druga - smo pozabili še kakšen pogoj ali kaj?</p>
+<p><img alt="Wrong indent 3" src="_images/02_w_indent_3.png" /></p>
+<p>Blok za stavkom <code class="docutils literal notranslate"><span class="pre">if</span></code> mora biti zamaknjen.</p>
+<p><img alt="Wrong indent 4" src="_images/02_w_indent_4.png" /></p>
+<p><code class="docutils literal notranslate"><span class="pre">if</span></code> in <code class="docutils literal notranslate"><span class="pre">else</span></code> morata biti poravnana. Kmalu bomo videli programe z več <code class="docutils literal notranslate"><span class="pre">if</span></code>i in <code class="docutils literal notranslate"><span class="pre">else</span></code>i; zamiki bodo potrebni, da bomo vedeli, kateri <code class="docutils literal notranslate"><span class="pre">else</span></code> sodi h kateremu <code class="docutils literal notranslate"><span class="pre">if</span></code>.</p>
+<p>Če poskušamo zagnati kateregakoli od naštetih programov, bo Python javil sintaktično napako. Za razliko od običajnih napak, ki jih boste delali, in ko bodo programi naredili vsaj nekaj malega in potem crknili, ta ne bo niti trznil, temveč kar takoj javil napako. Spodnji program pa je sintaktično pravilen. Python ga lahko izvede. Najbrž pa to ni to, kar smo hoteli, saj se zadnji <code class="docutils literal notranslate"><span class="pre">print</span></code> izvede le, če pogoj ni izpolnjen.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">if</span> <span class="n">bmi</span> <span class="o">&gt;</span> <span class="mi">25</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Potrebno bo shujšati!&quot;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Da, gospod ali gospa, preveč vas je skupaj.&quot;</span><span class="p">)</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Odlično, le še naprej jejte toliko kot doslej!&quot;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Pregled je končan, oglasite se spet čez dva tedna.&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="gnezdeni-pogoji">
+<h2><span class="section-number">2.2. </span>Gnezdeni pogoji<a class="headerlink" href="#gnezdeni-pogoji" title="Permalink to this headline">#</a></h2>
+<p>Do sem vse lepo in prav, vendar: kaj bomo z anoreksičnimi? Program bi jim mirno svetoval, naj še naprej jedo toliko kot doslej (torej: premalo). Ne: pri takšnih, ki imajo BMI manjši od 18.5, moramo zastokati, naj vendar že začnejo jesti.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">teza</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Teža: &quot;</span><span class="p">))</span>
+<span class="n">visina</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Telesna višina: &quot;</span><span class="p">))</span>
+<span class="n">bmi</span> <span class="o">=</span> <span class="n">teza</span> <span class="o">/</span> <span class="n">visina</span> <span class="o">**</span> <span class="mi">2</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Indeks vaše telesne teže je&quot;</span><span class="p">,</span> <span class="n">bmi</span><span class="p">)</span>
+<span class="k">if</span> <span class="n">bmi</span> <span class="o">&gt;</span> <span class="mi">25</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Potrebno bo shujšati!&quot;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Da, gospod ali gospa, preveč vas je skupaj.&quot;</span><span class="p">)</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="k">if</span> <span class="n">bmi</span> <span class="o">&lt;</span> <span class="mf">18.5</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Trlica!&quot;</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Zunaj so avtomati s sendviči in čokolado. Med pavzo si le postrezite!&quot;</span><span class="p">)</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Odlično, le še naprej jejte toliko kot doslej!&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Pregled je končan, oglasite se spet čez dva tedna.&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Vidimo? Znotraj <code class="docutils literal notranslate"><span class="pre">if</span></code>a ali <code class="docutils literal notranslate"><span class="pre">else</span></code>a smemo ugnezditi nov pogoj. Zamikamo ga lepo naprej.</p>
+<p>Da bodo reči še nekoliko daljše (a poučnejše), dodajmo še en <code class="docutils literal notranslate"><span class="pre">print</span></code>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">teza</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Teža: &quot;</span><span class="p">))</span>
+<span class="n">visina</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Telesna višina: &quot;</span><span class="p">))</span>
+<span class="n">bmi</span> <span class="o">=</span> <span class="n">teza</span> <span class="o">/</span> <span class="n">visina</span> <span class="o">**</span> <span class="mi">2</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Indeks vaše telesne teže je&quot;</span><span class="p">,</span> <span class="n">bmi</span><span class="p">)</span>
+<span class="k">if</span> <span class="n">bmi</span> <span class="o">&gt;</span> <span class="mi">25</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Potrebno bo shujšati!&quot;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Da, gospod ali gospa, preveč vas je skupaj.&quot;</span><span class="p">)</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Predebeli ravno niste.&quot;</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">bmi</span> <span class="o">&lt;</span> <span class="mf">18.5</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Trlica!&quot;</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Zunaj so avtomati s sendviči in čokolado. Med pavzo si le postrezite!&quot;</span><span class="p">)</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Odlično, le še naprej jejte toliko kot doslej!&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Pregled je končan, oglasite se spet čez dva tedna.&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Zdaj program vsem, ki niso predebeli, napiše dobro novico, da niso predebeli. Šele nato se loti preverjanja, da niso slučajno presuhi.</p>
+<p>Tule mimogrede (prvič - a še velikokrat bomo) posvarimo pred ponavljanjem kode. Gornji program bi lahko napisali tudi tako:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">teza</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Teža: &quot;</span><span class="p">))</span>
+<span class="n">visina</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Telesna višina: &quot;</span><span class="p">))</span>
+<span class="n">bmi</span> <span class="o">=</span> <span class="n">teza</span> <span class="o">/</span> <span class="n">visina</span> <span class="o">**</span> <span class="mi">2</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Indeks vaše telesne teže je&quot;</span><span class="p">,</span> <span class="n">bmi</span><span class="p">)</span>
+<span class="k">if</span> <span class="n">bmi</span> <span class="o">&gt;</span> <span class="mi">25</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Potrebno bo shujšati!&quot;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Da, gospod ali gospa, preveč vas je skupaj.&quot;</span><span class="p">)</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="k">if</span> <span class="n">bmi</span> <span class="o">&lt;</span> <span class="mf">18.5</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Predebeli ravno niste.&quot;</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Trlica!&quot;</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Zunaj so avtomati s sendviči in čokolado. Med pavzo si le postrezite!&quot;</span><span class="p">)</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Predebeli ravno niste.&quot;</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Odlično, le še naprej jejte toliko kot doslej!&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Pregled je končan, oglasite se spet čez dva tedna.&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Ali celo tako.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">teza</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Teža: &quot;</span><span class="p">))</span>
+<span class="n">visina</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Telesna višina: &quot;</span><span class="p">))</span>
+<span class="n">bmi</span> <span class="o">=</span> <span class="n">teza</span> <span class="o">/</span> <span class="n">visina</span> <span class="o">**</span> <span class="mi">2</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Indeks vaše telesne teže je&quot;</span><span class="p">,</span> <span class="n">bmi</span><span class="p">)</span>
+<span class="k">if</span> <span class="n">bmi</span> <span class="o">&gt;</span> <span class="mi">25</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Potrebno bo shujšati!&quot;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Da, gospod ali gospa, preveč vas je skupaj.&quot;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Pregled je končan, oglasite se spet čez dva tedna.&quot;</span><span class="p">)</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="k">if</span> <span class="n">bmi</span> <span class="o">&lt;</span> <span class="mf">18.5</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Predebeli ravno niste.&quot;</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Trlica!&quot;</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Zunaj so avtomati s sendviči in čokolado. Med pavzo si le postrezite!&quot;</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Pregled je končan, oglasite se spet čez dva tedna.&quot;</span><span class="p">)</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Predebeli ravno niste.&quot;</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Odlično, le še naprej jejte toliko kot doslej!&quot;</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Pregled je končan, oglasite se spet čez dva tedna.&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>To ni dobra ideja, ker je program daljši, manj pregleden, težje mu je slediti, težje ga je spreminjati… Vedno se izogibajte ponavljanju.</p>
+</section>
+<section id="sicerce">
+<h2><span class="section-number">2.3. </span>Sicerče<a class="headerlink" href="#sicerce" title="Permalink to this headline">#</a></h2>
+<p>Da se ne izgubimo, spet malo skrajšajmo program.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">teza</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Teža: &quot;</span><span class="p">))</span>
+<span class="n">visina</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Telesna višina: &quot;</span><span class="p">))</span>
+<span class="n">bmi</span> <span class="o">=</span> <span class="n">teza</span> <span class="o">/</span> <span class="n">visina</span> <span class="o">**</span> <span class="mi">2</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Indeks vaše telesne teže je&quot;</span><span class="p">,</span> <span class="n">bmi</span><span class="p">)</span>
+<span class="k">if</span> <span class="n">bmi</span> <span class="o">&gt;</span> <span class="mi">25</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Potrebno bo shujšati!&quot;</span><span class="p">)</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="k">if</span> <span class="n">bmi</span> <span class="o">&lt;</span> <span class="mf">18.5</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Trlica!&quot;</span><span class="p">)</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Odlično, le še naprej jejte toliko kot doslej!&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Pogojni stavki se nam lahko hitro zagnezdijo precej globoko in vrstice zbežijo nekam daleč proti desni. (Da ne govorimo o tem, da pogojni stavki niso niti približno edina reč, za katero bomo morali zamikati vrstice.) Ker so situacija, kakršna je zgornja, kar pogoste, imajo nekateri programski jeziki - in Python je med njimi - poleg <code class="docutils literal notranslate"><span class="pre">if</span></code> in <code class="docutils literal notranslate"><span class="pre">else</span></code> še <code class="docutils literal notranslate"><span class="pre">elseif</span></code> oziroma <code class="docutils literal notranslate"><span class="pre">elif</span></code>. (Še ena rezervirana beseda!) V Pythonu se uporablja slednja različica, <code class="docutils literal notranslate"><span class="pre">elif</span></code>. V gornjem programu ga uporabimo takole:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">teza</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Teža: &quot;</span><span class="p">))</span>
+<span class="n">visina</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Telesna višina: &quot;</span><span class="p">))</span>
+<span class="n">bmi</span> <span class="o">=</span> <span class="n">teza</span> <span class="o">/</span> <span class="n">visina</span> <span class="o">**</span> <span class="mi">2</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Indeks vaše telesne teže je&quot;</span><span class="p">,</span> <span class="n">bmi</span><span class="p">)</span>
+<span class="k">if</span> <span class="n">bmi</span> <span class="o">&gt;</span> <span class="mi">25</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Potrebno bo shujšati!&quot;</span><span class="p">)</span>
+<span class="k">elif</span> <span class="n">bmi</span> <span class="o">&lt;</span> <span class="mf">18.5</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Trlica!&quot;</span><span class="p">)</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Odlično, le še naprej jejte toliko kot doslej!&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Program se zdaj prebere še lepše kot prej: če je BMI prevelik, pozovemo k hujšanju, sicerče je premajhen, ozmerjamo dotično najstnico s trlico, sicer pa izrečemo pohvalo.</p>
+<p>Po izkušnjah je <code class="docutils literal notranslate"><span class="pre">elif</span></code> za študente huda, nenavadna skušnjava: nekateri ga pogosto uporabljajo namesto <code class="docutils literal notranslate"><span class="pre">else</span></code>a. Recimo, da bi hoteli sprogramirati skrajšano pesimistično različico, po kateri so vsi, ki niso debeluhi, trlice. Radi bi torej tole:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">if</span> <span class="n">bmi</span> <span class="o">&gt;</span> <span class="mi">25</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Potrebno bo shujšati!&quot;</span><span class="p">)</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Trlica!&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Mnogi bi (iz meni neznanega razloga) naredili takole:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">if</span> <span class="n">bmi</span> <span class="o">&gt;</span> <span class="mi">25</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Potrebno bo shujšati!&quot;</span><span class="p">)</span>
+<span class="k">elif</span> <span class="n">bmi</span> <span class="o">&lt;</span> <span class="mi">25</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Trlica!&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Python ni pozabil <code class="docutils literal notranslate"><span class="pre">if</span></code>a in bo tudi, če napišemo le <code class="docutils literal notranslate"><span class="pre">else</span></code>, čisto dobro vedel, kakšen je pogoj zanj. Drugi pogoj je nepotreben; če <code class="docutils literal notranslate"><span class="pre">bmi</span></code> ni večji od 25, je pač očitno manjši. (No ja, lahko bi bil tudi enak. A sporočilo smo, upam, razumeli.)</p>
+<p>Torej: ne zamenjujte <code class="docutils literal notranslate"><span class="pre">else</span></code> brez potrebe z <code class="docutils literal notranslate"><span class="pre">elif</span></code>.</p>
+</section>
+<section id="pogoji">
+<h2><span class="section-number">2.4. </span>Pogoji<a class="headerlink" href="#pogoji" title="Permalink to this headline">#</a></h2>
+<p>Zdaj pa povejmo nekaj splošnejšega o pogojih. Kakšni vse so lahko? Najprej, pogoj je izraz. Torej nekaj, kar se da izračunati (po naši garažni definiciji izraza). Doslej so bili vsi naši izrazi nekako številski, aritmetični: v njih so nastopala števila in le-ta smo seštevali, množili, odštevali in kar se še takega dela s števili. Pogoji pa so logični izrazi. (V resnici se “logičnost” in “številskost” lahko poljubno prepletata, a to
+bomo mimogrede odkrili sproti.)</p>
+<p>Rezultat logičnega izraza je logična vrednost. Logične vrednosti niso števila (torej niso <code class="docutils literal notranslate"><span class="pre">int</span></code> ali <code class="docutils literal notranslate"><span class="pre">float</span></code>) in niso nizi, torej so nekaj četrtega. Podatkovni tip, ki hrani logične vrednosti, se imenuje <code class="docutils literal notranslate"><span class="pre">bool</span></code> (iz Boolean, po slovensko Booleov). Medtem ko je
+različnih števil (<code class="docutils literal notranslate"><span class="pre">int</span></code>, <code class="docutils literal notranslate"><span class="pre">float</span></code>) kar veliko (koliko, vam bodo povedali kolegi matematiki, ko bodo v predavalnico privlekli Cantorja in njegov trop alefov), ima tip <code class="docutils literal notranslate"><span class="pre">bool</span></code> lahko le eno od dveh vrednosti, <code class="docutils literal notranslate"><span class="pre">True</span></code> ali <code class="docutils literal notranslate"><span class="pre">False</span></code>. Tudi <code class="docutils literal notranslate"><span class="pre">True</span></code> in <code class="docutils literal notranslate"><span class="pre">False</span></code> rezervirani besedi. (Če prav štejemo, smo naleteli že na sedem rezerviranih besed od 35 - <code class="docutils literal notranslate"><span class="pre">if</span></code>, <code class="docutils literal notranslate"><span class="pre">else</span></code>,
+<code class="docutils literal notranslate"><span class="pre">elif</span></code>, <code class="docutils literal notranslate"><span class="pre">True</span></code> in <code class="docutils literal notranslate"><span class="pre">False</span></code>, na vajah oziroma ob domači nalogi pa še <code class="docutils literal notranslate"><span class="pre">from</span></code> in <code class="docutils literal notranslate"><span class="pre">import</span></code>.)</p>
+<p>S števili že znamo računati. Z nizi tudi malo. Kako pa računamo z logičnimi vrednostmi? Menda jih ne moremo kar tako seštevati in odštevati?</p>
+<p>Za logične izraze imamo (predvsem) tri operatorje: <code class="docutils literal notranslate"><span class="pre">or</span></code>, <code class="docutils literal notranslate"><span class="pre">and</span></code> in <code class="docutils literal notranslate"><span class="pre">not</span></code>. Kaj pomenijo, je menda jasno, če je kdo v dvomih, pa naj se pouči ob prvem predavanju iz Diskretnih struktur.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">&gt;&gt;&gt;</span> <span class="kc">True</span> <span class="ow">and</span> <span class="kc">True</span>
+<span class="kc">True</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="kc">True</span> <span class="ow">and</span> <span class="kc">False</span>
+<span class="kc">False</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="kc">False</span> <span class="ow">or</span> <span class="kc">True</span>
+<span class="kc">True</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="ow">not</span> <span class="kc">False</span>
+<span class="kc">True</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="kc">False</span> <span class="ow">or</span> <span class="ow">not</span> <span class="kc">False</span>
+<span class="kc">True</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>(<code class="docutils literal notranslate"><span class="pre">and</span></code>, <code class="docutils literal notranslate"><span class="pre">or</span></code> in <code class="docutils literal notranslate"><span class="pre">not</span></code> so rezervirane besede. 10 od 35!)</p>
+<p>Operator <code class="docutils literal notranslate"><span class="pre">not</span></code> ima prednost pred <code class="docutils literal notranslate"><span class="pre">and</span></code>, <code class="docutils literal notranslate"><span class="pre">and</span></code> pa pred <code class="docutils literal notranslate"><span class="pre">or</span></code>. Spet si lahko pomagamo z
+oklepaji: <code class="docutils literal notranslate"><span class="pre">a</span> <span class="pre">or</span> <span class="pre">b</span> <span class="pre">and</span> <span class="pre">c</span></code> pomeni isto kot <code class="docutils literal notranslate"><span class="pre">a</span> <span class="pre">or</span> <span class="pre">(b</span> <span class="pre">and</span> <span class="pre">c)</span></code> in bo resničen (<code class="docutils literal notranslate"><span class="pre">True</span></code>), če je resničen <code class="docutils literal notranslate"><span class="pre">a</span></code> ali pa sta resnična <code class="docutils literal notranslate"><span class="pre">b</span></code> in <code class="docutils literal notranslate"><span class="pre">c</span></code>. Izraz <code class="docutils literal notranslate"><span class="pre">(a</span> <span class="pre">or</span> <span class="pre">b)</span> <span class="pre">and</span> <span class="pre">c</span></code> pa bo resničen, če sta resnična <code class="docutils literal notranslate"><span class="pre">a</span></code> ali <code class="docutils literal notranslate"><span class="pre">b</span></code> (ali oba), poleg tega pa nujno še <code class="docutils literal notranslate"><span class="pre">c</span></code>. Pri tem seveda predpostavljamo, da <code class="docutils literal notranslate"><span class="pre">a</span></code>, <code class="docutils literal notranslate"><span class="pre">b</span></code> in <code class="docutils literal notranslate"><span class="pre">c</span></code> vsebujejo logične vrednosti.</p>
+<p>Da bo reč lažje razumljiva, jo potrenirajmo na prav tem izrazu, vendar tako, da namesto <code class="docutils literal notranslate"><span class="pre">a</span></code>, <code class="docutils literal notranslate"><span class="pre">b</span></code> in <code class="docutils literal notranslate"><span class="pre">c</span></code> oziroma namesto “golih” <code class="docutils literal notranslate"><span class="pre">True</span></code> in <code class="docutils literal notranslate"><span class="pre">False</span></code> pišemo bolj “konkretne” izraze.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">&gt;&gt;&gt;</span> <span class="mi">352</span> <span class="o">&gt;</span> <span class="mi">0</span>
+<span class="kc">True</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="mi">5</span> <span class="o">&lt;</span> <span class="mi">3</span>
+<span class="kc">False</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="mi">352</span> <span class="o">&gt;</span> <span class="mi">0</span> <span class="ow">or</span> <span class="mi">5</span> <span class="o">&lt;</span> <span class="mi">3</span>
+<span class="kc">True</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="mi">352</span> <span class="o">&gt;</span> <span class="mi">0</span> <span class="ow">or</span> <span class="mi">5</span> <span class="o">&gt;</span> <span class="mi">3</span>
+<span class="kc">True</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="mi">352</span> <span class="o">&gt;</span> <span class="mi">0</span> <span class="ow">and</span> <span class="mi">5</span> <span class="o">&gt;</span> <span class="mi">3</span>
+<span class="kc">True</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="mi">352</span> <span class="o">&gt;</span> <span class="mi">0</span> <span class="ow">and</span> <span class="mi">5</span> <span class="o">&lt;</span> <span class="mi">3</span>
+<span class="kc">False</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="mi">352</span> <span class="o">&gt;</span> <span class="mi">0</span> <span class="ow">and</span> <span class="ow">not</span> <span class="mi">5</span> <span class="o">&lt;</span> <span class="mi">3</span>
+<span class="kc">True</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="mi">10</span> <span class="o">&gt;</span> <span class="mi">8</span> <span class="ow">or</span> <span class="mi">352</span> <span class="o">&gt;</span> <span class="mi">0</span> <span class="ow">and</span> <span class="mi">5</span> <span class="o">&lt;</span> <span class="mi">3</span>
+<span class="kc">True</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="mi">10</span> <span class="o">&gt;</span> <span class="mi">8</span> <span class="ow">or</span> <span class="p">(</span><span class="mi">352</span> <span class="o">&gt;</span> <span class="mi">0</span> <span class="ow">and</span> <span class="mi">5</span> <span class="o">&lt;</span> <span class="mi">3</span><span class="p">)</span>
+<span class="kc">True</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="p">(</span><span class="mi">10</span> <span class="o">&gt;</span> <span class="mi">8</span> <span class="ow">or</span> <span class="mi">352</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">)</span> <span class="ow">and</span> <span class="mi">5</span> <span class="o">&lt;</span> <span class="mi">3</span>
+<span class="kc">False</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="p">(</span><span class="mi">10</span> <span class="o">&gt;</span> <span class="mi">8</span> <span class="ow">or</span> <span class="mi">352</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">)</span> <span class="ow">and</span> <span class="ow">not</span> <span class="mi">5</span> <span class="o">&lt;</span> <span class="mi">3</span>
+<span class="kc">True</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Operatorja &lt; in &gt; pričakujeta na levi in desni kake reči, ki jih je mogoče primerjati; zadovoljna nista le s števili, temveč tudi z, recimo, nizi (primerjala jih bosta po abecedi), ne moreta pa primerjati števila z nizom. Njun rezultat je logična vrednost. Za “večje ali enako” in “manjše ali enako” uporabimo <code class="docutils literal notranslate"><span class="pre">&gt;=</span></code> in <code class="docutils literal notranslate"><span class="pre">&lt;=</span></code>.</p>
+<p>Če želimo preveriti enakost dveh števil (ali, v splošnem, enakost dveh stvari), uporabimo dvojni enačaj, <code class="docutils literal notranslate"><span class="pre">==</span></code>. Enojni enačaj je namreč dobil svojo zadolžitev prejšnjo uro, namenjen je prirejanju. Ali sta dve stvari različni, preverimo z <code class="docutils literal notranslate"><span class="pre">!=</span></code>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">&gt;&gt;&gt;</span> <span class="mi">1</span> <span class="o">+</span> <span class="mi">1</span> <span class="o">==</span> <span class="mi">2</span>
+<span class="kc">True</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="mi">1</span> <span class="o">+</span> <span class="mi">1</span> <span class="o">!=</span> <span class="mi">2</span>
+<span class="kc">False</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Ne zamenjujte dvojnih in enojnih enačajev. Če pomotoma napišemo (a to se nam bo redko zgodilo), <code class="docutils literal notranslate"><span class="pre">a</span> <span class="pre">==</span> <span class="pre">1</span> <span class="pre">+</span> <span class="pre">1</span></code> s tem nismo priredili <code class="docutils literal notranslate"><span class="pre">a</span></code>-ju dvojke, temveč smo le preverili, ali je enak 2. Pogostejša napaka pa bo</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">if</span> <span class="n">a</span> <span class="o">=</span> <span class="mi">1</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Vrednost a je ena&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Ta program pa je sintaktično nepravilen, saj Python za <code class="docutils literal notranslate"><span class="pre">if</span></code> pričakuje pogoj, mi pa smo napisali prireditveni stavek.</p>
+<p>(Omenimo druge jezike: večina tega je enaka v vseh jezikih. Za različnost imajo namesto <code class="docutils literal notranslate"><span class="pre">!=</span></code> nekateri <code class="docutils literal notranslate"><span class="pre">&lt;&gt;</span></code>. Namesto <code class="docutils literal notranslate"><span class="pre">and</span></code>, <code class="docutils literal notranslate"><span class="pre">or</span></code> in <code class="docutils literal notranslate"><span class="pre">not</span></code> imajo mnogi jeziki <code class="docutils literal notranslate"><span class="pre">&amp;&amp;</span></code>, <code class="docutils literal notranslate"><span class="pre">||</span></code> in <code class="docutils literal notranslate"><span class="pre">!</span></code>. V Pythonu so se odločili za “besedne” variante, da so programi zračnejši.)</p>
+<p>Zdaj pa Pythonova posebnost: operatorje smemo nizati. Izraz <code class="docutils literal notranslate"><span class="pre">10</span> <span class="pre">&lt;</span> <span class="pre">t</span> <span class="pre">&lt;</span> <span class="pre">20</span></code> je resničen, če je <code class="docutils literal notranslate"><span class="pre">t</span></code> med 10 in 20. Izraz <code class="docutils literal notranslate"><span class="pre">10</span> <span class="pre">&lt;</span> <span class="pre">t1</span> <span class="pre">&lt;</span> <span class="pre">t2</span> <span class="pre">&lt;</span> <span class="pre">20</span></code> je resničen, če sta <code class="docutils literal notranslate"><span class="pre">t1</span></code> in <code class="docutils literal notranslate"><span class="pre">t2</span></code> med 10 in 20, pri čemer je <code class="docutils literal notranslate"><span class="pre">t1</span></code> manjši od <code class="docutils literal notranslate"><span class="pre">t2</span></code>. Izraz <code class="docutils literal notranslate"><span class="pre">t1</span> <span class="pre">&lt;</span> <span class="pre">10</span> <span class="pre">&lt;</span> <span class="pre">t2</span></code> je resničen, če je <code class="docutils literal notranslate"><span class="pre">t1</span></code> manjši
+od 10, <code class="docutils literal notranslate"><span class="pre">t2</span></code> pa večji od 10. <code class="docutils literal notranslate"><span class="pre">10</span> <span class="pre">&lt;</span> <span class="pre">t1</span> <span class="pre">==</span> <span class="pre">t2</span> <span class="pre">&lt;</span> <span class="pre">20</span></code> je resničen, če sta <code class="docutils literal notranslate"><span class="pre">t1</span></code> in <code class="docutils literal notranslate"><span class="pre">t2</span></code> enaka ter sta nekje med 10 in 20.</p>
+<p>Če se torej končno vrnemo k suhcem in debeluhom: če bi se hoteli skoncentrirati le na te, ki so ravno pravšnji, bi lahko napisali, recimo</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">if</span> <span class="n">bmi</span> <span class="o">&gt;</span> <span class="mf">18.5</span> <span class="ow">and</span> <span class="n">bmi</span> <span class="o">&lt;</span> <span class="mi">25</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Čestitamo, ravno pravšnji ste.&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Če bi kdo napisal</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">if</span> <span class="p">(</span><span class="n">bmi</span> <span class="o">&gt;</span> <span class="mf">18.5</span><span class="p">)</span> <span class="ow">and</span> <span class="p">(</span><span class="n">bmi</span> <span class="o">&lt;</span> <span class="mi">25</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Čestitamo, ravno pravšnji ste.&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>ali celo</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">if</span> <span class="p">((</span><span class="n">bmi</span> <span class="o">&gt;</span> <span class="mf">18.5</span><span class="p">)</span> <span class="ow">and</span> <span class="p">(</span><span class="n">bmi</span> <span class="o">&lt;</span> <span class="mi">25</span><span class="p">)):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Čestitamo, ravno pravšnji ste.&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Ga bomo čudno gledali (((kdor hoče oklepaje, naj gre raje programirat v
+<a class="reference external" href="http://xkcd.com/297/">Lispu</a>))). Prav po Pythonovsko pa se reče:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">if</span> <span class="mf">18.5</span> <span class="o">&lt;</span> <span class="n">bmi</span> <span class="o">&lt;</span> <span class="mi">25</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Čestitamo, ravno pravšnji ste.&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="kurzschluss">
+<h2><span class="section-number">2.5. </span>Kurzschluss<a class="headerlink" href="#kurzschluss" title="Permalink to this headline">#</a></h2>
+<p>Tale tema je nekoliko bolj zapletena, vendar je prav, da tudi pri Programiranju 1 slišite kaj zapletenega. (Pa ne preveč.) No, v resnici pa vam moram tole povedati tudi zavoljo temeljitosti. Da mi ne bo kdo očital, da sem pri poučevanju šlampast. Sploh pa se je na prejšnjih predavanjih pokazalo, da ste pametnejši, kot smo pričakovali, in prav je, da ste
+za to vsaj malo tepeni.</p>
+<p>Wikipedia definira kratek stik v električni napeljavi oz. vezju kot nekaj, kar dovoli elektriki, da potuje po krajši poti, kot je bila mišljena. Po domače, <a class="reference external" href="http://de.wikipedia.org/wiki/Elektrischer_Kurzschluss">kurzschluss</a> je, ko se v televiziji nekaj zabliska, potem pa namesto, da bi delala, samo še smrdi. (Ravno v času pisanja tega besedila sem imel namreč v dnevni sobi na mizi primerek televizije, ki je popolnoma ustrezal gornjemu opisu, vključno z bliskanjem in smradom.) Namesto da bi elektrika tekla čez transformatorje in druga navitja, steče po bližnjici.</p>
+<p>Short-circuit behaviour, lahko bi ga prevedli kot kratkostično vedenje, v programskih jezikih pomeni, da po bližnjici steče izvajanje programa. Pri tem navadno ni ne bliskanja ne smradu, ker je takšno vedenje zaželeno. Za primer poglejmo, kako bi se računala vrednost <code class="docutils literal notranslate"><span class="pre">(10</span> <span class="pre">&lt;</span> <span class="pre">8</span> <span class="pre">or</span> <span class="pre">352</span> <span class="pre">&lt;</span> <span class="pre">0)</span> <span class="pre">and</span> <span class="pre">18574</span> <span class="pre">+</span> <span class="pre">50485</span> <span class="pre">==</span> <span class="pre">69059</span></code>. 10 ni manj od 8 in 352 ni manj od 0. <code class="docutils literal notranslate"><span class="pre">False</span> <span class="pre">or</span> <span class="pre">False</span></code> je <code class="docutils literal notranslate"><span class="pre">False</span></code>. Prvi del izraza, vse, kar je pred <code class="docutils literal notranslate"><span class="pre">and</span></code>-om je <code class="docutils literal notranslate"><span class="pre">False</span></code>. Preden začne računalnik seštevati tiste velike številke desno od <code class="docutils literal notranslate"><span class="pre">and</span></code>-a pa pomisli: komu na čast? Po tem, kar sem naračunal doslej, vem, da imam <code class="docutils literal notranslate"><span class="pre">False</span> <span class="pre">and</span> <span class="pre">18574</span> <span class="pre">+</span> <span class="pre">50485</span> <span class="pre">==</span> <span class="pre">69059</span></code>. To bo neresnično v vsakem primeru, ne glede na ono vsoto. Zato drugega dela sploh ne računa, temveč že kar takoj vrne <code class="docutils literal notranslate"><span class="pre">False</span></code>.</p>
+<p>Pravilo je torej takšno: če je izraz, ki je levo od <code class="docutils literal notranslate"><span class="pre">and</span></code>, neresničen, vrednosti izraza, ki je desno od <code class="docutils literal notranslate"><span class="pre">and</span></code>, sploh ne računa.</p>
+<p>Podobno, le ravno obratno, bližnjico lahko uberemo pri <code class="docutils literal notranslate"><span class="pre">or</span></code>. Kako bi računali vrednost <code class="docutils literal notranslate"><span class="pre">10</span> <span class="pre">&gt;</span> <span class="pre">8</span> <span class="pre">or</span> <span class="pre">352</span> <span class="pre">&gt;</span> <span class="pre">0</span></code>? Najprej ugotovimo, da je 10 res več kot 8. Moramo zdaj res preverjati še, ali je 352 več kot 0? Ne, saj že vemo, da bo izraz resničen. Kako pa je z <code class="docutils literal notranslate"><span class="pre">10</span> <span class="pre">&lt;</span> <span class="pre">8</span> <span class="pre">or</span> <span class="pre">352</span> <span class="pre">&gt;</span> <span class="pre">0</span></code>. Bomo, ko ugotovimo, da ni res, da je 10 manjše od 8, nehali računati? Ne, izraz je še vedno lahko resničen, reši nas lahko drugi del (in tudi v resnici nas). Pač pa bi pri izrazu <code class="docutils literal notranslate"><span class="pre">10</span> <span class="pre">&lt;</span> <span class="pre">8</span> <span class="pre">and</span> <span class="pre">352</span> <span class="pre">&gt;</span> <span class="pre">0</span></code> vrgli puško v koruzo že po prvem neuspehu, saj nas morebitni drugi uspeh ne more rešiti.</p>
+<p>Pravilo kratkega stika si lahko zapomnimo na dva načina. Prvi, formalni, je tale: če je izraz levo od <code class="docutils literal notranslate"><span class="pre">or</span></code> resničen, potem onega desno od <code class="docutils literal notranslate"><span class="pre">or</span></code> ne preverjamo, saj že vemo, da bo rezultat resničen. Prav tako, če je izraz levo od <code class="docutils literal notranslate"><span class="pre">and</span></code> neresničen, potem onega desno od njega ne preverjamo, saj že vemo, da bo rezultat neresničen. Drugi način je neformalen: izraz se računa od leve proti desni in samo, dokler je treba.</p>
+<p>Študent pa se najbrž že sprašuje: me to res briga? Računalnik naj računa kar in kolikor hoče, meni je pomembno samo, da bo na koncu naračunal prav. V resnici je tako: če kratkega stika ne poznamo, nam ne bo nič hudega. Če ga, pa nam lahko pride zelo zelo prav. Primer pride kmalu.</p>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "mihaTrajbaric/programiranje",
+            ref: "main",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+            </main>
+            <footer class="footer-article noprint">
+                
+    <!-- Previous / next buttons -->
+<div class='prev-next-area'>
+    <a class='left-prev' id="prev-link" href="01_izrazi_spremenljivke_program.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title"><span class="section-number">1. </span>Izrazi in spremenljivke</p>
+        </div>
+    </a>
+</div>
+            </footer>
+        </div>
+    </div>
+    <div class="footer-content row">
+        <footer class="col footer"><p>
+  
+    By Mihael Trajbarič<br/>
+  
+      &copy; Copyright 2022.<br/>
+</p>
+        </footer>
+    </div>
+    
+</div>
+
+
+      </div>
+    </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+
+
+  </body>
+</html>

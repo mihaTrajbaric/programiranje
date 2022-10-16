@@ -1,0 +1,699 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>Rekurzija naprej in nazaj &#8212; Krožek začetnega programiranja 2022-23</title>
+    
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+<link href="_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" href="_static/styles/sphinx-book-theme.css?digest=5115cc725059bd94278eecd172e13a965bf8f5a9" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" />
+    
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
+
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/clipboard.min.js"></script>
+    <script src="_static/copybutton.js"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?digest=9c920249402e914e316237a7dbc6769907cce411"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
+<!-- Checkboxes to toggle the left sidebar -->
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation" aria-label="Toggle navigation sidebar">
+<label class="overlay overlay-navbar" for="__navigation">
+    <div class="visually-hidden">Toggle navigation sidebar</div>
+</label>
+<!-- Checkboxes to toggle the in-page toc -->
+<input type="checkbox" class="sidebar-toggle" name="__page-toc" id="__page-toc" aria-label="Toggle in-page Table of Contents">
+<label class="overlay overlay-pagetoc" for="__page-toc">
+    <div class="visually-hidden">Toggle in-page Table of Contents</div>
+</label>
+<!-- Headers at the top -->
+<div class="announcement header-item noprint"></div>
+<div class="header header-item noprint"></div>
+
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<!-- Sidebar -->
+<div class="bd-sidebar noprint" id="site-navigation">
+    <div class="bd-sidebar__content">
+        <div class="bd-sidebar__top"><div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="index.html">
+      
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
+      
+      <img src="_static/python-logo.png" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">Krožek začetnega programiranja 2022-23</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="index.html">
+                    Splošno
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Vsebina
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="01_izrazi_spremenljivke_program.html">
+   1. Izrazi in spremenljivke
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="02a_pogoji.html">
+   2. Pogojni stavki
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav></div>
+        <div class="bd-sidebar__bottom">
+             <!-- To handle the deprecated key -->
+            
+            <div class="navbar_extra_footer">
+            Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+            </div>
+            
+        </div>
+    </div>
+    <div id="rtd-footer-container"></div>
+</div>
+
+
+          
+
+
+          
+<!-- A tiny helper pixel to detect if we've scrolled -->
+<div class="sbt-scroll-pixel-helper"></div>
+<!-- Main content -->
+<div class="col py-0 content-container">
+    
+    <div class="header-article row sticky-top noprint">
+        
+
+
+
+<div class="col py-1 d-flex header-article-main">
+    <div class="header-article__left">
+        
+        <label for="__navigation"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="right"
+title="Toggle navigation"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-bars"></i>
+  </span>
+
+</label>
+
+        
+    </div>
+    <div class="header-article__right">
+<div class="menu-dropdown menu-dropdown-launch-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Launch interactive content">
+      <i class="fas fa-rocket"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="https://mybinder.org/v2/gh/mihaTrajbaric/programiranje/main?urlpath=tree/10c - Rekurzija naprej in nazaj.ipynb"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Launch on Binder"
+>
+  
+
+<span class="headerbtn__icon-container">
+  
+    <img src="_static/images/logo_binder.svg">
+  </span>
+<span class="headerbtn__text-container">Binder</span>
+</a>
+
+      </li>
+      
+      <li>
+        
+<button onclick="initThebeSBT()"
+  class="headerbtn headerbtn-launch-thebe"
+  data-toggle="tooltip"
+data-placement="left"
+title="Launch Thebe"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-play"></i>
+  </span>
+<span class="headerbtn__text-container">Live Code</span>
+</button>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+
+<button onclick="toggleFullScreen()"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="bottom"
+title="Fullscreen mode"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+<div class="menu-dropdown menu-dropdown-repository-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Source repositories">
+      <i class="fab fa-github"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="https://github.com/mihaTrajbaric/programiranje"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Source repository"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="headerbtn__text-container">repository</span>
+</a>
+
+      </li>
+      
+      <li>
+        <a href="https://github.com/mihaTrajbaric/programiranje/issues/new?title=Issue%20on%20page%20%2F10c - Rekurzija naprej in nazaj.html&body=Your%20issue%20content%20here."
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Open an issue"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="headerbtn__text-container">open issue</span>
+</a>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+
+<div class="menu-dropdown menu-dropdown-download-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Download this page">
+      <i class="fas fa-download"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="_sources/10c - Rekurzija naprej in nazaj.ipynb"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Download source file"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="headerbtn__text-container">.ipynb</span>
+</a>
+
+      </li>
+      
+      <li>
+        
+<button onclick="printPdf(this)"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="left"
+title="Print to PDF"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="headerbtn__text-container">.pdf</span>
+</button>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+<label for="__page-toc"
+  class="headerbtn headerbtn-page-toc"
+  
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-list"></i>
+  </span>
+
+</label>
+
+    </div>
+</div>
+
+<!-- Table of contents -->
+<div class="col-md-3 bd-toc show noprint">
+    <div class="tocsection onthispage pt-5 pb-3">
+        <i class="fas fa-list"></i> Contents
+    </div>
+    <nav id="bd-toc-nav" aria-label="Page">
+        <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#potencna-mnozica">
+   Potenčna množica
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#ne-prevec-lepa-rekurzija-nabiranje">
+     Ne preveč lepa rekurzija: nabiranje
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#lepa-rekurzija-pobiranje">
+     Lepa rekurzija: pobiranje
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#akumulator">
+   Akumulator
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#repna-rekurzija">
+   Repna rekurzija
+  </a>
+ </li>
+</ul>
+
+    </nav>
+</div>
+    </div>
+    <div class="article row">
+        <div class="col pl-md-3 pl-lg-5 content-container">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>Rekurzija naprej in nazaj</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#potencna-mnozica">
+   Potenčna množica
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#ne-prevec-lepa-rekurzija-nabiranje">
+     Ne preveč lepa rekurzija: nabiranje
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#lepa-rekurzija-pobiranje">
+     Lepa rekurzija: pobiranje
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#akumulator">
+   Akumulator
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#repna-rekurzija">
+   Repna rekurzija
+  </a>
+ </li>
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            <main id="main-content" role="main">
+                
+              <div>
+                
+  <section class="tex2jax_ignore mathjax_ignore" id="rekurzija-naprej-in-nazaj">
+<h1>Rekurzija naprej in nazaj<a class="headerlink" href="#rekurzija-naprej-in-nazaj" title="Permalink to this headline">#</a></h1>
+<section id="potencna-mnozica">
+<h2>Potenčna množica<a class="headerlink" href="#potencna-mnozica" title="Permalink to this headline">#</a></h2>
+<p>Napišimo funkcijo <code class="docutils literal notranslate"><span class="pre">potencna(s)</span></code>, ki za podani seznam elementov <code class="docutils literal notranslate"><span class="pre">s</span></code> vrne seznam vseh njegovih podseznamov. <code class="docutils literal notranslate"><span class="pre">potencna([1,</span> <span class="pre">2,</span> <span class="pre">3])</span></code> mora vrniti <code class="docutils literal notranslate"><span class="pre">[[],</span> <span class="pre">[1],</span> <span class="pre">[2],</span> <span class="pre">[3],</span> <span class="pre">[1,</span> <span class="pre">2],</span> <span class="pre">[1,</span> <span class="pre">3],</span> <span class="pre">[2,</span> <span class="pre">3],</span> <span class="pre">[1,</span> <span class="pre">2,</span> <span class="pre">3]]</span></code>. Vrstni red ni pomemben. Namesto s seznami bi lahko delali z množicami, vendar ne bomo, ker je s seznami lažje; tako ali tako bomo imeli dovolj drugih težav.</p>
+<section id="ne-prevec-lepa-rekurzija-nabiranje">
+<h3>Ne preveč lepa rekurzija: nabiranje<a class="headerlink" href="#ne-prevec-lepa-rekurzija-nabiranje" title="Permalink to this headline">#</a></h3>
+<p>Če bi dal to nalogo študentom, bi jo večinoma rešili takole. (No, večinoma je ne bi znali rešiti; tisti, ki bi jo, pa bi jo tako.)</p>
+<p>Najprej rešimo enostavnejšo nalogo: izpišimo vse možne podsezname. Funkcija bo imela dva argumenta: seznam <code class="docutils literal notranslate"><span class="pre">s</span></code> in še vrečo (<code class="docutils literal notranslate"><span class="pre">vreca</span></code>), v katero bomo nabirali elemente.</p>
+<ul class="simple">
+<li><p>Najprej sestavimo vse podmnožice <code class="docutils literal notranslate"><span class="pre">s[1:]</span></code> (torej <code class="docutils literal notranslate"><span class="pre">s</span></code> brez prvega elementa), ki vsebujejo <code class="docutils literal notranslate"><span class="pre">s[0]</span></code>: pokličemo <code class="docutils literal notranslate"><span class="pre">potencna(s[1:],</span> <span class="pre">vreca</span> <span class="pre">+</span> <span class="pre">[s[0]])</span></code>, s čimer vržemo <code class="docutils literal notranslate"><span class="pre">s[0]</span></code> v vrečo (k tistemu, kar se je morda že nabralo v njej) in prepustimo rekurzivnemu klicu, da vanjo doda - ali pa ne - še kaj od preostalih elementov.</p></li>
+<li><p>Nato sestavimo še podmnožice <code class="docutils literal notranslate"><span class="pre">s[1:]</span></code>, ki ne vsebujejo <code class="docutils literal notranslate"><span class="pre">s[0]</span></code>: pokličemo <code class="docutils literal notranslate"><span class="pre">potencna(s[1:],</span> <span class="pre">vreca)</span></code>, tako da se bo v vreči morda nabralo kaj iz <code class="docutils literal notranslate"><span class="pre">s[1:]</span></code>, <code class="docutils literal notranslate"><span class="pre">s[0]</span></code> pa ne.</p></li>
+</ul>
+<p>Ko je <code class="docutils literal notranslate"><span class="pre">s</span></code> prazen, se je rekurzija iztekla in le še izpišemo, kar se je nabralo v vreči.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">potencna</span><span class="p">(</span><span class="n">s</span><span class="p">,</span> <span class="n">vreca</span><span class="p">):</span>
+    <span class="k">if</span> <span class="ow">not</span> <span class="n">s</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">vreca</span><span class="p">)</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">potencna</span><span class="p">(</span><span class="n">s</span><span class="p">[</span><span class="mi">1</span><span class="p">:],</span> <span class="n">vreca</span> <span class="o">+</span> <span class="p">[</span><span class="n">s</span><span class="p">[</span><span class="mi">0</span><span class="p">]])</span>
+        <span class="n">potencna</span><span class="p">(</span><span class="n">s</span><span class="p">[</span><span class="mi">1</span><span class="p">:],</span> <span class="n">vreca</span><span class="p">)</span>
+        
+<span class="n">potencna</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">],</span> <span class="p">[])</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[1, 2, 3, 4]
+[1, 2, 3]
+[1, 2, 4]
+[1, 2]
+[1, 3, 4]
+[1, 3]
+[1, 4]
+[1]
+[2, 3, 4]
+[2, 3]
+[2, 4]
+[2]
+[3, 4]
+[3]
+[4]
+[]
+</pre></div>
+</div>
+</div>
+</div>
+<p>Zdaj pa predelajmo funkcijo tako, da bo vrnila seznam seznamov, namesto da jih izpisuje.</p>
+<ul class="simple">
+<li><p>Če je <code class="docutils literal notranslate"><span class="pre">s</span></code> prazen, mora očitno vrniti seznam, ki vsebuje en podseznam, namreč vse, kar se je nabralo v vreče; <code class="docutils literal notranslate"><span class="pre">[vreca]</span></code>.</p></li>
+<li><p>Sicer pa pokliče <code class="docutils literal notranslate"><span class="pre">potencna(s[1:],</span> <span class="pre">vreca)</span></code> in <code class="docutils literal notranslate"><span class="pre">potencna(s[1:],</span> <span class="pre">vreca</span> <span class="pre">+</span> <span class="pre">[s[0]])</span></code>. Tako dobi seznam vseh podmnožic brez <code class="docutils literal notranslate"><span class="pre">s[0]</span></code> in z <code class="docutils literal notranslate"><span class="pre">s[0]</span></code>. Sešteje in vrne.</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">potencna</span><span class="p">(</span><span class="n">s</span><span class="p">,</span> <span class="n">vreca</span><span class="p">):</span>
+    <span class="k">if</span> <span class="ow">not</span> <span class="n">s</span><span class="p">:</span>
+        <span class="k">return</span> <span class="p">[</span><span class="n">vreca</span><span class="p">]</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">potencna</span><span class="p">(</span><span class="n">s</span><span class="p">[</span><span class="mi">1</span><span class="p">:],</span> <span class="n">vreca</span><span class="p">)</span> <span class="o">+</span> <span class="n">potencna</span><span class="p">(</span><span class="n">s</span><span class="p">[</span><span class="mi">1</span><span class="p">:],</span> <span class="n">vreca</span> <span class="o">+</span> <span class="p">[</span><span class="n">s</span><span class="p">[</span><span class="mi">0</span><span class="p">]])</span>
+
+<span class="n">potencna</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">],</span> <span class="p">[])</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[[],
+ [4],
+ [3],
+ [3, 4],
+ [2],
+ [2, 4],
+ [2, 3],
+ [2, 3, 4],
+ [1],
+ [1, 4],
+ [1, 3],
+ [1, 3, 4],
+ [1, 2],
+ [1, 2, 4],
+ [1, 2, 3],
+ [1, 2, 3, 4]]
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="lepa-rekurzija-pobiranje">
+<h3>Lepa rekurzija: pobiranje<a class="headerlink" href="#lepa-rekurzija-pobiranje" title="Permalink to this headline">#</a></h3>
+<p>Tako, kot smo naredili zgoraj, naredimo, kadar imamo za to kak razlog.</p>
+<p>Problem gornjega razmišljanja je, da razmišljamo naprej namesto nazaj. Vzeli smo prvi element, naredili odločitev v zvezi z njim in mu potem pridružili potenčno množico ostanka. Rekurzijo je boljše načrtovati v drugo smer. Najprej rešimo preprostejši problem (potenčna množica seznama brez prvega elementa), nato pa rešitev razširimo v rešitev, ki upošteva tudi ta, prvi element.</p>
+<p>Problem je očitno najpreprostejši, če je seznam <code class="docutils literal notranslate"><span class="pre">s</span></code> prazen. V tem primeru potenčna množica vsebuje eno samo množico, namreč prazno množico.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span>    <span class="k">if</span> <span class="ow">not</span> <span class="n">s</span><span class="p">:</span>
+        <span class="k">return</span> <span class="p">[[]]</span>
+</pre></div>
+</div>
+<p>Sicer pa naredimo tole: najprej sestavimo potenčno množico <code class="docutils literal notranslate"><span class="pre">s</span></code>-ja brez prvega elementa, <code class="docutils literal notranslate"><span class="pre">brez</span> <span class="pre">=</span> <span class="pre">potencna(s[1:])</span></code>. Dobili smo … pač nekaj množic. Zdaj ta seznam podvojimo: enkrat ga vzamemo takšnega kot je (<code class="docutils literal notranslate"><span class="pre">brez</span></code>), enkrat pa k vsem njegovim elementom dodamo še <code class="docutils literal notranslate"><span class="pre">s[0]</span></code> (<code class="docutils literal notranslate"><span class="pre">[[s[0]]</span> <span class="pre">+</span> <span class="pre">b</span> <span class="pre">for</span> <span class="pre">b</span> <span class="pre">in</span> <span class="pre">brez]</span></code>). To potem vrnemo.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">potencna</span><span class="p">(</span><span class="n">s</span><span class="p">):</span>
+    <span class="k">if</span> <span class="ow">not</span> <span class="n">s</span><span class="p">:</span>
+        <span class="k">return</span> <span class="p">[[]]</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">brez</span> <span class="o">=</span> <span class="n">potencna</span><span class="p">(</span><span class="n">s</span><span class="p">[</span><span class="mi">1</span><span class="p">:])</span>
+        <span class="k">return</span> <span class="n">brez</span> <span class="o">+</span> <span class="p">[[</span><span class="n">s</span><span class="p">[</span><span class="mi">0</span><span class="p">]]</span> <span class="o">+</span> <span class="n">b</span> <span class="k">for</span> <span class="n">b</span> <span class="ow">in</span> <span class="n">brez</span><span class="p">]</span>
+
+<span class="n">potencna</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[[],
+ [4],
+ [3],
+ [3, 4],
+ [2],
+ [2, 4],
+ [2, 3],
+ [2, 3, 4],
+ [1],
+ [1, 4],
+ [1, 3],
+ [1, 3, 4],
+ [1, 2],
+ [1, 2, 4],
+ [1, 2, 3],
+ [1, 2, 3, 4]]
+</pre></div>
+</div>
+</div>
+</div>
+<p>Ta rešitev je obrnjena v pravo smer in zato precej krajša in brez dodatnega argumenta, vreče. Poleg tega pa ima še eno lepo lastnost. “Grda” različica dvakrat pokliče sama sebe. Za potenčno množico n elementov se pokliče 2<sup>n</sup>-krat. Ta, druga, se pokliče le enkrat. Za potenčno množico petih elementov se pokliče n-krat.</p>
+<p>To sicer ne pomeni (nujno), da je hitrejša: prva različica vsebuje le eno seštevanje, druga pa zanko. Na koncu koncev morata obe sestaviti množico, ki vsebuje 2<sup>n</sup> elementov, kar bo moralo zahtevati 2<sup>n</sup> korakov. No, v praksi bo druga hitrejša zato, ker so rekurzivni klici počasnejši od zanke.</p>
+<p>A hitrost še niti ni tako pomembna: kar tule šteje, je eleganca. :)</p>
+</section>
+</section>
+<section id="akumulator">
+<h2>Akumulator<a class="headerlink" href="#akumulator" title="Permalink to this headline">#</a></h2>
+<p>Očitna razlika med gornjima funkcijama je v tem, da ima prva še dodaten argument, v katero se tekom rekurzivnih klicev nabirajo vrednosti, nekakšen “akumulator”. Kako ta princip deluje v splošnem, bomo najlepše videli ob funkciji, ki vrne vsoto elementov seznama.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">vsota</span><span class="p">(</span><span class="n">s</span><span class="p">,</span> <span class="n">a</span><span class="p">):</span>
+    <span class="k">if</span> <span class="n">s</span> <span class="o">==</span> <span class="p">[]:</span>
+        <span class="k">return</span> <span class="n">a</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">vsota</span><span class="p">(</span><span class="n">s</span><span class="p">[</span><span class="mi">1</span><span class="p">:],</span> <span class="n">a</span> <span class="o">+</span> <span class="n">s</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+        
+<span class="n">vsota</span><span class="p">([</span><span class="mi">5</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">],</span> <span class="mi">0</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>12
+</pre></div>
+</div>
+</div>
+</div>
+<p>Tu funkcija rekurzivno kliče samo sebe in ob vsakem klicu nekaj prišteje k drugemu argumentu. Ko se rekurzija izteče, funkcija vrne, kar se je nabralo.</p>
+<p>Funkcija ima dodatni argument. Ker gre za število, torej <code class="docutils literal notranslate"><span class="pre">int</span></code>, ki je nespremenljiv (<em>immutable</em>) se tu z lahkoto zmažemo tako, da mu damo privzeto vrednost.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">vsota</span><span class="p">(</span><span class="n">s</span><span class="p">,</span> <span class="n">a</span><span class="o">=</span><span class="mi">0</span><span class="p">):</span>
+    <span class="k">if</span> <span class="n">s</span> <span class="o">==</span> <span class="p">[]:</span>
+        <span class="k">return</span> <span class="n">a</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">vsota</span><span class="p">(</span><span class="n">s</span><span class="p">[</span><span class="mi">1</span><span class="p">:],</span> <span class="n">a</span> <span class="o">+</span> <span class="n">s</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+        
+<span class="n">vsota</span><span class="p">([</span><span class="mi">5</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>12
+</pre></div>
+</div>
+</div>
+</div>
+<p>Trik s privzeto vrednostjo bo včasih vžgal, včasih pa se bo potrebno malo bolj potruditi. A to ni poanta. Primerjajmo to funkcijo z vsoto, ki smo jo sprogramirali na predavanjih (ali pa je vsaj v zapiskih o rekurziji na seznamih).</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">vsota</span><span class="p">(</span><span class="n">s</span><span class="p">):</span>
+    <span class="k">if</span> <span class="n">s</span> <span class="o">==</span> <span class="p">[]:</span>
+        <span class="k">return</span> <span class="mi">0</span>
+    <span class="k">return</span> <span class="n">vsota</span><span class="p">(</span><span class="n">s</span><span class="p">[</span><span class="mi">1</span><span class="p">:])</span> <span class="o">+</span> <span class="n">s</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+
+<span class="n">vsota</span><span class="p">([</span><span class="mi">5</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>12
+</pre></div>
+</div>
+</div>
+</div>
+<p>Tu gre za popolnoma drugačno filozofijo: tu vsote ne nabiramo tja grede, temveč jo dopolnjujemo nazaj grede. Takšna rekurzija je tipično lepša.</p>
+</section>
+<section id="repna-rekurzija">
+<h2>Repna rekurzija<a class="headerlink" href="#repna-rekurzija" title="Permalink to this headline">#</a></h2>
+<p>V kontekstu vsega tega lahko povemo še nekaj o malo naprednejši temi: repni rekurziji.</p>
+<p>Problem rekurzije je, da si mora Python (ali katerikoli jezik že) beležiti, kdo je poklical koga, s kakšnimi argumenti in kakšne so njegove lokalne spremenljivke. (Tehnično: strukturi, v katero se to shranjuje, se reče <em>sklad</em>.) To jemlje pomnilnik. In čas. Python pusti 1000 nivojev rekurzije; ne sicer toliko zaradi pomnilnika, temveč zato, ker ob 1000 nivojih predpostavi, da je šlo nekaj narobe in se je program zaciklal. (To mejo je mogoče spremeniti s klicem <code class="docutils literal notranslate"><span class="pre">sys.setrecursionlimit</span></code>.)</p>
+<p>Včasih pa je to v bistvu nepotrebno. Če je rekurzivni klic čisto zadnja operacija, ki se zgodi, si ni potrebno zapomniti lokalnih spremenljivk in vsega v zvezi s trenutno funkcijo. Namesto, da bi se izvajanje po rekurzivnem klicu vrnilo v to funkcijo, ki ga je naredila, se lahko vrne v kličočo funkcijo.</p>
+<p>Se pravi: recimo, da imamo prvo različico funkcije <code class="docutils literal notranslate"><span class="pre">vsota</span></code>, tisto, ki ima dva argumenta. Recimo, da znotraj neke funkcije <code class="docutils literal notranslate"><span class="pre">f</span></code> pokličemo funkcijo <code class="docutils literal notranslate"><span class="pre">vsota([5,</span> <span class="pre">3,</span> <span class="pre">4],</span> <span class="pre">0)</span></code>. V okviru tega se pokliče <code class="docutils literal notranslate"><span class="pre">vsota([3,</span> <span class="pre">4],</span> <span class="pre">5)</span></code>. Rezultat tega klica bo že končni rezultat, zato se lahko pravzaprav vrne kar neposredno funkciji <code class="docutils literal notranslate"><span class="pre">f</span></code> in ne “funkciji” <code class="docutils literal notranslate"><span class="pre">vsota([5,</span> <span class="pre">3,</span> <span class="pre">4],</span> <span class="pre">0)</span></code>, ki ga bo tako ali tako nespremenjenega samo vrnila funkciji <code class="docutils literal notranslate"><span class="pre">f</span></code>. Reč gre naprej: <code class="docutils literal notranslate"><span class="pre">vsota([3,</span> <span class="pre">4],</span> <span class="pre">5)</span></code> pokliče <code class="docutils literal notranslate"><span class="pre">vsota([4],</span> <span class="pre">8)</span></code>. Rezultat tega klica bo 12 in bi ga spet lahko vrnili kar direktno funkciji <code class="docutils literal notranslate"><span class="pre">f</span></code>, ne pa tistemu, ki je klical. Klic <code class="docutils literal notranslate"><span class="pre">vsota([4],</span> <span class="pre">8)</span></code> pokliče <code class="docutils literal notranslate"><span class="pre">vsota([],</span> <span class="pre">12)</span></code>. Ta klic naredi samo <code class="docutils literal notranslate"><span class="pre">return</span> <span class="pre">a</span></code>. Ta <code class="docutils literal notranslate"><span class="pre">return</span></code> bi lahko letel naravnost v <code class="docutils literal notranslate"><span class="pre">f</span></code>.</p>
+<p>Optimizacijski trik, ki lahko naredi prevajalnik, je torej ta, da ob rekurzivnem klicu pozabi na vmesni klic, temveč preprosto zamenja vrednosti argumentov. Kot sem napovedal na začetku, je ta tema nekoliko zahtevnejša in je zato ni tako lahko razložiti v enem odstavku, sploh, če ne vemo, kako delujejo programski jeziki in zato ne moremo uporabljati primernih izrazov. :) Če bo kaj pomagalo, je tule <a class="reference external" href="https://en.wikipedia.org/wiki/Tail_call">povezava na Wikipedijo</a>.</p>
+<p>Na ta način se rekurzivni klici bistveno pospešijo: rekurzija je navadno kar znatno počasnejša od ekvivalentnega nerekurzivnega programa (kar nikakor ne pomeni, da je ne uporabljamo, kot so me nekoč narobe razumeli študenti in me špecali kolegom v višjih letnikih!). S tem trikom je praktično enako hitra.</p>
+<p>Ta trik je možen pri funkcijah, napisani na prvi način, z akumulatorjem, pri drugi funkciji pa ne, ker mora po rekurzivnem klicu še nekaj prišteti k rezultatu. Prva oblika, ki sem jo označil kot gršo, ima torej včasih praktično prednost pred drugo.</p>
+<p>Slaba novica: Python tega ne podpira. Tudi če napišemo funkcijo, ki bi se jo dalo optimizirati na ta način, Python tega ne bo storil. Ker se avtorjem ne zdi pomembno vlagati truda v to. Python ni jezik, ki bi temeljil na rekurziji. Pač pa je to tipično za jezike, ki nimajo običajnih zank - tipično so to jeziki, ki nimajo spremenljivk, temveč le konstante in je vsako prirejanje “dokončno”.</p>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "mihaTrajbaric/programiranje",
+            ref: "main",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+            </main>
+            <footer class="footer-article noprint">
+                
+    <!-- Previous / next buttons -->
+<div class='prev-next-area'>
+</div>
+            </footer>
+        </div>
+    </div>
+    <div class="footer-content row">
+        <footer class="col footer"><p>
+  
+    By Mihael Trajbarič<br/>
+  
+      &copy; Copyright 2022.<br/>
+</p>
+        </footer>
+    </div>
+    
+</div>
+
+
+      </div>
+    </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+
+
+  </body>
+</html>

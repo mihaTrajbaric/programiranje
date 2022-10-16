@@ -1,0 +1,605 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>Zakaj se učimo pisati “onelinerje”?! Ni to grdo?! &#8212; Krožek začetnega programiranja 2022-23</title>
+    
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+<link href="_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" href="_static/styles/sphinx-book-theme.css?digest=5115cc725059bd94278eecd172e13a965bf8f5a9" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" />
+    
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
+
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/clipboard.min.js"></script>
+    <script src="_static/copybutton.js"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?digest=9c920249402e914e316237a7dbc6769907cce411"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
+<!-- Checkboxes to toggle the left sidebar -->
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation" aria-label="Toggle navigation sidebar">
+<label class="overlay overlay-navbar" for="__navigation">
+    <div class="visually-hidden">Toggle navigation sidebar</div>
+</label>
+<!-- Checkboxes to toggle the in-page toc -->
+<input type="checkbox" class="sidebar-toggle" name="__page-toc" id="__page-toc" aria-label="Toggle in-page Table of Contents">
+<label class="overlay overlay-pagetoc" for="__page-toc">
+    <div class="visually-hidden">Toggle in-page Table of Contents</div>
+</label>
+<!-- Headers at the top -->
+<div class="announcement header-item noprint"></div>
+<div class="header header-item noprint"></div>
+
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<!-- Sidebar -->
+<div class="bd-sidebar noprint" id="site-navigation">
+    <div class="bd-sidebar__content">
+        <div class="bd-sidebar__top"><div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="index.html">
+      
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
+      
+      <img src="_static/python-logo.png" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">Krožek začetnega programiranja 2022-23</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="index.html">
+                    Splošno
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Vsebina
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="01_izrazi_spremenljivke_program.html">
+   1. Izrazi in spremenljivke
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="02a_pogoji.html">
+   2. Pogojni stavki
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav></div>
+        <div class="bd-sidebar__bottom">
+             <!-- To handle the deprecated key -->
+            
+            <div class="navbar_extra_footer">
+            Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+            </div>
+            
+        </div>
+    </div>
+    <div id="rtd-footer-container"></div>
+</div>
+
+
+          
+
+
+          
+<!-- A tiny helper pixel to detect if we've scrolled -->
+<div class="sbt-scroll-pixel-helper"></div>
+<!-- Main content -->
+<div class="col py-0 content-container">
+    
+    <div class="header-article row sticky-top noprint">
+        
+
+
+
+<div class="col py-1 d-flex header-article-main">
+    <div class="header-article__left">
+        
+        <label for="__navigation"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="right"
+title="Toggle navigation"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-bars"></i>
+  </span>
+
+</label>
+
+        
+    </div>
+    <div class="header-article__right">
+<div class="menu-dropdown menu-dropdown-launch-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Launch interactive content">
+      <i class="fas fa-rocket"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="https://mybinder.org/v2/gh/mihaTrajbaric/programiranje/main?urlpath=tree/07a - zakaj se to učimo.ipynb"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Launch on Binder"
+>
+  
+
+<span class="headerbtn__icon-container">
+  
+    <img src="_static/images/logo_binder.svg">
+  </span>
+<span class="headerbtn__text-container">Binder</span>
+</a>
+
+      </li>
+      
+      <li>
+        
+<button onclick="initThebeSBT()"
+  class="headerbtn headerbtn-launch-thebe"
+  data-toggle="tooltip"
+data-placement="left"
+title="Launch Thebe"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-play"></i>
+  </span>
+<span class="headerbtn__text-container">Live Code</span>
+</button>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+
+<button onclick="toggleFullScreen()"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="bottom"
+title="Fullscreen mode"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+<div class="menu-dropdown menu-dropdown-repository-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Source repositories">
+      <i class="fab fa-github"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="https://github.com/mihaTrajbaric/programiranje"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Source repository"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="headerbtn__text-container">repository</span>
+</a>
+
+      </li>
+      
+      <li>
+        <a href="https://github.com/mihaTrajbaric/programiranje/issues/new?title=Issue%20on%20page%20%2F07a - zakaj se to učimo.html&body=Your%20issue%20content%20here."
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Open an issue"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="headerbtn__text-container">open issue</span>
+</a>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+
+<div class="menu-dropdown menu-dropdown-download-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Download this page">
+      <i class="fas fa-download"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="_sources/07a - zakaj se to učimo.ipynb"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Download source file"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="headerbtn__text-container">.ipynb</span>
+</a>
+
+      </li>
+      
+      <li>
+        
+<button onclick="printPdf(this)"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="left"
+title="Print to PDF"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="headerbtn__text-container">.pdf</span>
+</button>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+<label for="__page-toc"
+  class="headerbtn headerbtn-page-toc"
+  
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-list"></i>
+  </span>
+
+</label>
+
+    </div>
+</div>
+
+<!-- Table of contents -->
+<div class="col-md-3 bd-toc show noprint">
+    <div class="tocsection onthispage pt-5 pb-3">
+        <i class="fas fa-list"></i> Contents
+    </div>
+    <nav id="bd-toc-nav" aria-label="Page">
+        <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#spreminjanje-slovarja-z-reduce">
+   Spreminjanje slovarja (z
+   <code class="docutils literal notranslate">
+    <span class="pre">
+     reduce
+    </span>
+   </code>
+   )
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#pravilna-resitev-izpeljani-slovar">
+   Pravilna rešitev: izpeljani slovar
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#vzporedno-racunanje">
+   Vzporedno računanje
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#moderni-jeziki-in-ogrodja">
+   Moderni jeziki in ogrodja
+  </a>
+ </li>
+</ul>
+
+    </nav>
+</div>
+    </div>
+    <div class="article row">
+        <div class="col pl-md-3 pl-lg-5 content-container">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>Zakaj se učimo pisati “onelinerje”?! Ni to grdo?!</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#spreminjanje-slovarja-z-reduce">
+   Spreminjanje slovarja (z
+   <code class="docutils literal notranslate">
+    <span class="pre">
+     reduce
+    </span>
+   </code>
+   )
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#pravilna-resitev-izpeljani-slovar">
+   Pravilna rešitev: izpeljani slovar
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#vzporedno-racunanje">
+   Vzporedno računanje
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#moderni-jeziki-in-ogrodja">
+   Moderni jeziki in ogrodja
+  </a>
+ </li>
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            <main id="main-content" role="main">
+                
+              <div>
+                
+  <section class="tex2jax_ignore mathjax_ignore" id="zakaj-se-ucimo-pisati-onelinerje-ni-to-grdo">
+<h1>Zakaj se učimo pisati “onelinerje”?! Ni to grdo?!<a class="headerlink" href="#zakaj-se-ucimo-pisati-onelinerje-ni-to-grdo" title="Permalink to this headline">#</a></h1>
+<p>Nekateri študenti so zagnani za programe v enih vrsticah. To je šport, izziv, … Ampak - mar to res sodi v Programiranje 1?</p>
+<p>Ne.</p>
+<p>In vsako leto me skrbi, ko sprašujejo, “ali se da tudi za tole narediti oneliner?”. Da. Vse se da. Ampak je navadno brez zveze. Potem, ko znaš, pogosto ni niti več izziv. Kot da bi se vprašal, ali se da iti peš v Pariz. Ja, samo ne vem, zakaj bi to počel.</p>
+<p>Zakaj se potem učimo “pisati onelinerje”? Saj se ne. Učimo se pisati generatorje, iteratorje, izpeljane sezname, množice in slovarje. Zakaj? Namen vaje je privajanje na drugačen način razmišljanja, ki je potreben za to.</p>
+<p>Poglejmo na primeru. Recimo, da imamo nek seznam in naloga je, da preštejemo, kolikokrat se pojavi kateri element.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">s</span> <span class="o">=</span> <span class="p">[</span><span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">4</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>“Po starem” bi naredili tako.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">stevci</span> <span class="o">=</span> <span class="p">{}</span>
+<span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">s</span><span class="p">:</span>
+    <span class="k">if</span> <span class="n">x</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">stevci</span><span class="p">:</span>
+        <span class="n">stevci</span><span class="p">[</span><span class="n">x</span><span class="p">]</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="n">stevci</span><span class="p">[</span><span class="n">x</span><span class="p">]</span> <span class="o">+=</span> <span class="mi">1</span>
+
+<span class="n">stevci</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{4: 3, 5: 1, 1: 4, 3: 4, 2: 1, 6: 1}
+</pre></div>
+</div>
+</div>
+</div>
+<p>Tipično vprašanje, ki ga vsako leto dobim vsaj nekajkrat, je: a se da znotraj izpeljanega slovarja spreminjati njegove elemente? Dopolnjevati, prištevati … karkoli?</p>
+<section id="spreminjanje-slovarja-z-reduce">
+<h2>Spreminjanje slovarja (z <code class="docutils literal notranslate"><span class="pre">reduce</span></code>)<a class="headerlink" href="#spreminjanje-slovarja-z-reduce" title="Permalink to this headline">#</a></h2>
+<p>V principu se da, vendar je točno to tisto, česar nočemo. Če vemo, da je gornje isto kot</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">stevci</span> <span class="o">=</span> <span class="p">{}</span>
+<span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">s</span><span class="p">:</span>
+    <span class="n">stevci</span> <span class="o">=</span> <span class="p">{</span><span class="o">**</span><span class="n">stevci</span><span class="p">,</span> <span class="n">x</span><span class="p">:</span> <span class="mi">1</span> <span class="o">+</span> <span class="n">stevci</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="mi">0</span><span class="p">)}</span>
+    
+<span class="n">stevci</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{4: 3, 5: 1, 1: 4, 3: 4, 2: 1, 6: 1}
+</pre></div>
+</div>
+</div>
+</div>
+<p>(ta trik mi je na predavanjih pokazal eden od študentov; sam sem počel nekaj bolj zapletenega)</p>
+<p>lahko vse skupaj spremenimo v</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">functools</span> <span class="kn">import</span> <span class="n">reduce</span>
+
+<span class="n">stevci</span> <span class="o">=</span> <span class="n">reduce</span><span class="p">(</span><span class="k">lambda</span> <span class="n">acc</span><span class="p">,</span> <span class="n">x</span><span class="p">:</span> <span class="p">{</span><span class="o">**</span><span class="n">acc</span><span class="p">,</span> <span class="n">x</span><span class="p">:</span> <span class="mi">1</span> <span class="o">+</span> <span class="n">stevci</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="mi">0</span><span class="p">)},</span> <span class="n">s</span><span class="p">,</span> <span class="p">{})</span>
+
+<span class="n">stevci</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{4: 4, 5: 2, 1: 5, 3: 5, 2: 2, 6: 2}
+</pre></div>
+</div>
+</div>
+</div>
+<p>Tega niti ne želim prav posebej razlagati - le toliko, da boste razumeli, kaj v osnovi počne. V začetku imamo prazen slovar, potem pa mu v vsakem koraku dodamo ključ <code class="docutils literal notranslate"><span class="pre">x</span></code> z vrednostjo, ki je za <code class="docutils literal notranslate"><span class="pre">1</span></code> večja od vrednosti, ki je bila pod ključem <code class="docutils literal notranslate"><span class="pre">x</span></code> shranjena prej (ali <code class="docutils literal notranslate"><span class="pre">0</span></code>, če je še ni).</p>
+<p>Ta <code class="docutils literal notranslate"><span class="pre">reduce</span></code> torej počne natančno isto kot prva rešitev, tista, ki ni v eni vrstici in uporablja čisto običajno zanko. Zato je to brez zveze. Na ta način se učimo le pisati težje razumljive programe.</p>
+</section>
+<section id="pravilna-resitev-izpeljani-slovar">
+<h2>Pravilna rešitev: izpeljani slovar<a class="headerlink" href="#pravilna-resitev-izpeljani-slovar" title="Permalink to this headline">#</a></h2>
+<p>Pravilna rešitev je</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">stevci</span> <span class="o">=</span> <span class="p">{</span><span class="n">x</span><span class="p">:</span> <span class="n">s</span><span class="o">.</span><span class="n">count</span><span class="p">(</span><span class="n">x</span><span class="p">)</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="nb">set</span><span class="p">(</span><span class="n">s</span><span class="p">)}</span>
+
+<span class="n">stevci</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{1: 4, 2: 1, 3: 4, 4: 3, 5: 1, 6: 1}
+</pre></div>
+</div>
+</div>
+</div>
+<p>S tem povemo, da hočemo slovar, katerega ključi so elementi seznama <code class="docutils literal notranslate"><span class="pre">s</span></code> (mimogrede jih damo v množico, zato da se z vsakim ukvarjamo le enkrat), pripadajoče vrednosti pa števil pojavitev tega elementa v <code class="docutils literal notranslate"><span class="pre">s</span></code>-u.</p>
+<p>Razlika je v tem: zgornja rešitev je “<em>proceduralna</em>”. Opisali smo postopek. Pythonu smo rekli, naj naredi prazen slovar, nato gre čez vse elemente <code class="docutils literal notranslate"><span class="pre">s</span></code>-ja in tako naprej.</p>
+<p>Ta pa je bolj “<em>deklarativna</em>”: povedali smo, kakšen slovar želimo. Seveda se zavedamo tudi, kako bo Python to dobil. Šel bo čez vse vrednosti in za vsako ustvaril ključ in vrednost. A narava, izgled programa je deklarativen. Povemo, kaj hočemo. Opišemo končni rezultat in ne nekih korakov in sprememb, ki bodo vodile do njega.</p>
+<p>Zato se učimo pisati takšne programe.</p>
+<p>Če nekdo reši nalogo na gornji način, z <code class="docutils literal notranslate"><span class="pre">reduce</span></code>, to štejem(o) kot pravilno samo zato, ker je težko dobro razmejiti, kaj je dovoljeno in kaj ne, ter to preskušati s testi. A zares pravilno rešena je, če je rešena na drugi način.</p>
+</section>
+<section id="vzporedno-racunanje">
+<h2>Vzporedno računanje<a class="headerlink" href="#vzporedno-racunanje" title="Permalink to this headline">#</a></h2>
+<p>Rešitev, ki sem jo razglasil za pravilno, je pravzaprav očitno precej slabša. Prvotna rešitev gre prek seznama <code class="docutils literal notranslate"><span class="pre">s</span></code> enkrat samkrat. Ta gre najprej enkrat samo zato, da sestavi množico, potem pa za vsak element te množice prepotuje celoten seznam in šteje.</p>
+<p>V tem kontekstu to ni uporabno, zato bi bila “produkcijska” rešitev te naloge takšna, kot smo jo napisali na začetku. Ali pa bi poklicali kar <code class="docutils literal notranslate"><span class="pre">itertools.Counter(s)</span></code> (ki dela isto).</p>
+<p>Zdaj pa si predstavljamo, da naša naloga ni šteti elemente, temveč ugotoviti, koliko elementov ima določeno lastnost. Torej nekaj takega</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="p">{</span><span class="n">lastnost</span><span class="p">:</span> <span class="n">imajo_lastnost</span><span class="p">(</span><span class="n">s</span><span class="p">,</span> <span class="n">lastnost</span><span class="p">)</span> <span class="k">for</span> <span class="n">lastnost</span> <span class="ow">in</span> <span class="n">lastnosti</span><span class="p">}</span>
+</pre></div>
+</div>
+<p>pri čemer je <code class="docutils literal notranslate"><span class="pre">imajo_lastnost(s,</span> <span class="pre">lastnost)</span></code> funkcija, ki pove, koliko elementov seznama <code class="docutils literal notranslate"><span class="pre">s</span></code> ima lastnost <code class="docutils literal notranslate"><span class="pre">lastnost</span></code>. (Lahko je, recimo <code class="docutils literal notranslate"><span class="pre">sum(ima_lastnost(x,</span> <span class="pre">lastnost)</span> <span class="pre">for</span> <span class="pre">x</span> <span class="pre">in</span> <span class="pre">s)</span></code>, pri čemer <code class="docutils literal notranslate"><span class="pre">ima_lastnost(x,</span> <span class="pre">lastnost)</span></code> pove, ali ima <code class="docutils literal notranslate"><span class="pre">x</span></code> lastnost lastnost.)</p>
+<p>Nadalje predpostavimo, da imamo na voljo toliko procesorjev (jeder, računalnikov …), kolikor je lastnosti. Ali, če že ne ravno toliko, vsaj “več kot enega”. V tem primeru se lahko vsak procesor ukvarja z eno lastnostjo (in če jih je manj, kot je lastnosti, procesor najprej računa eno lastnost, nato se loti druge.</p>
+<p>Z drugimi besedami: elemente tega slovarja je možno računati vzporedno, istočasno na več procesorjih.</p>
+<p>Osnovna prednost izpeljanih seznamov, slovarjev, množic je prav v tem, da so njihovi elementi med seboj neodvisni. Vrednost enega elementa je neodvisna od vrednosti ostalih.</p>
+<p>Pri rešitvi z <code class="docutils literal notranslate"><span class="pre">reduce</span></code> to ni očitno. Tam slovar dopolnjujemo. Stvari tečejo serijsko. Tisto je nemogoče paralelizirati.</p>
+</section>
+<section id="moderni-jeziki-in-ogrodja">
+<h2>Moderni jeziki in ogrodja<a class="headerlink" href="#moderni-jeziki-in-ogrodja" title="Permalink to this headline">#</a></h2>
+<p>Takšni triki (hm, no, ja, vključno z <code class="docutils literal notranslate"><span class="pre">reduce</span></code>) se na veliko uporabljajo v <em>funkcijskih jezikih</em>. Ti imajo precej dobrih lastnosti. Pogosto jih je preprosto paralelizirati; če jih pravilno uporabljamo, so varnejši; znajo biti tudi preglednejši. Še ena zanimiva lastnost: pogosto nimajo spremenljivk, temveč samo konstante. Na vprašanje “Ali se da spreminjati elemente slovarja znotraj izpeljanega slovarja” odgovorimo, čim izgovoritmo “spreminjati”. Ne.</p>
+<p>To je torej razlog, da se učimo teh stvari. V zadnjem času imajo vsi jeziki vedno več funkcijskega pridiha (Python malo, Kotlin pa je tozadevno že prav super), tako da je dobro, da se vadite v razmišljanju na ta način.</p>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "mihaTrajbaric/programiranje",
+            ref: "main",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+            </main>
+            <footer class="footer-article noprint">
+                
+    <!-- Previous / next buttons -->
+<div class='prev-next-area'>
+</div>
+            </footer>
+        </div>
+    </div>
+    <div class="footer-content row">
+        <footer class="col footer"><p>
+  
+    By Mihael Trajbarič<br/>
+  
+      &copy; Copyright 2022.<br/>
+</p>
+        </footer>
+    </div>
+    
+</div>
+
+
+      </div>
+    </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+
+
+  </body>
+</html>

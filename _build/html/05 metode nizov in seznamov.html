@@ -1,0 +1,1420 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>Kako kličemo metode &#8212; Krožek začetnega programiranja 2022-23</title>
+    
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+<link href="_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" href="_static/styles/sphinx-book-theme.css?digest=5115cc725059bd94278eecd172e13a965bf8f5a9" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" />
+    
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
+
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/clipboard.min.js"></script>
+    <script src="_static/copybutton.js"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?digest=9c920249402e914e316237a7dbc6769907cce411"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
+<!-- Checkboxes to toggle the left sidebar -->
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation" aria-label="Toggle navigation sidebar">
+<label class="overlay overlay-navbar" for="__navigation">
+    <div class="visually-hidden">Toggle navigation sidebar</div>
+</label>
+<!-- Checkboxes to toggle the in-page toc -->
+<input type="checkbox" class="sidebar-toggle" name="__page-toc" id="__page-toc" aria-label="Toggle in-page Table of Contents">
+<label class="overlay overlay-pagetoc" for="__page-toc">
+    <div class="visually-hidden">Toggle in-page Table of Contents</div>
+</label>
+<!-- Headers at the top -->
+<div class="announcement header-item noprint"></div>
+<div class="header header-item noprint"></div>
+
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<!-- Sidebar -->
+<div class="bd-sidebar noprint" id="site-navigation">
+    <div class="bd-sidebar__content">
+        <div class="bd-sidebar__top"><div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="index.html">
+      
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
+      
+      <img src="_static/python-logo.png" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">Krožek začetnega programiranja 2022-23</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="index.html">
+                    Splošno
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Vsebina
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="01_izrazi_spremenljivke_program.html">
+   1. Izrazi in spremenljivke
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="02a_pogoji.html">
+   2. Pogojni stavki
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav></div>
+        <div class="bd-sidebar__bottom">
+             <!-- To handle the deprecated key -->
+            
+            <div class="navbar_extra_footer">
+            Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+            </div>
+            
+        </div>
+    </div>
+    <div id="rtd-footer-container"></div>
+</div>
+
+
+          
+
+
+          
+<!-- A tiny helper pixel to detect if we've scrolled -->
+<div class="sbt-scroll-pixel-helper"></div>
+<!-- Main content -->
+<div class="col py-0 content-container">
+    
+    <div class="header-article row sticky-top noprint">
+        
+
+
+
+<div class="col py-1 d-flex header-article-main">
+    <div class="header-article__left">
+        
+        <label for="__navigation"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="right"
+title="Toggle navigation"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-bars"></i>
+  </span>
+
+</label>
+
+        
+    </div>
+    <div class="header-article__right">
+<div class="menu-dropdown menu-dropdown-launch-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Launch interactive content">
+      <i class="fas fa-rocket"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="https://mybinder.org/v2/gh/mihaTrajbaric/programiranje/main?urlpath=tree/05 metode nizov in seznamov.ipynb"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Launch on Binder"
+>
+  
+
+<span class="headerbtn__icon-container">
+  
+    <img src="_static/images/logo_binder.svg">
+  </span>
+<span class="headerbtn__text-container">Binder</span>
+</a>
+
+      </li>
+      
+      <li>
+        
+<button onclick="initThebeSBT()"
+  class="headerbtn headerbtn-launch-thebe"
+  data-toggle="tooltip"
+data-placement="left"
+title="Launch Thebe"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-play"></i>
+  </span>
+<span class="headerbtn__text-container">Live Code</span>
+</button>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+
+<button onclick="toggleFullScreen()"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="bottom"
+title="Fullscreen mode"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+<div class="menu-dropdown menu-dropdown-repository-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Source repositories">
+      <i class="fab fa-github"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="https://github.com/mihaTrajbaric/programiranje"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Source repository"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="headerbtn__text-container">repository</span>
+</a>
+
+      </li>
+      
+      <li>
+        <a href="https://github.com/mihaTrajbaric/programiranje/issues/new?title=Issue%20on%20page%20%2F05 metode nizov in seznamov.html&body=Your%20issue%20content%20here."
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Open an issue"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="headerbtn__text-container">open issue</span>
+</a>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+
+<div class="menu-dropdown menu-dropdown-download-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Download this page">
+      <i class="fas fa-download"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="_sources/05 metode nizov in seznamov.ipynb"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Download source file"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="headerbtn__text-container">.ipynb</span>
+</a>
+
+      </li>
+      
+      <li>
+        
+<button onclick="printPdf(this)"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="left"
+title="Print to PDF"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="headerbtn__text-container">.pdf</span>
+</button>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+<label for="__page-toc"
+  class="headerbtn headerbtn-page-toc"
+  
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-list"></i>
+  </span>
+
+</label>
+
+    </div>
+</div>
+
+<!-- Table of contents -->
+<div class="col-md-3 bd-toc show noprint">
+    <div class="tocsection onthispage pt-5 pb-3">
+        <i class="fas fa-list"></i> Contents
+    </div>
+    <nav id="bd-toc-nav" aria-label="Page">
+        <ul class="visible nav section-nav flex-column">
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#">
+   Kako kličemo metode
+  </a>
+  <ul class="visible nav section-nav flex-column">
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#metode-nizov">
+     Metode nizov
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#metode-seznamov">
+     Metode seznamov
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#metode-terk">
+   Metode terk
+  </a>
+ </li>
+</ul>
+
+    </nav>
+</div>
+    </div>
+    <div class="article row">
+        <div class="col pl-md-3 pl-lg-5 content-container">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>Kako kličemo metode</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#">
+   Kako kličemo metode
+  </a>
+  <ul class="visible nav section-nav flex-column">
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#metode-nizov">
+     Metode nizov
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#metode-seznamov">
+     Metode seznamov
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#metode-terk">
+   Metode terk
+  </a>
+ </li>
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            <main id="main-content" role="main">
+                
+              <div>
+                
+  <section id="kako-klicemo-metode">
+<h1>Kako kličemo metode<a class="headerlink" href="#kako-klicemo-metode" title="Permalink to this headline">#</a></h1>
+<p>Funkcijam, ki smo jih srečevali doslej, smo, da so kaj naredile, morali dati podatke, na katerih so delale. Funkcija <code class="docutils literal notranslate"><span class="pre">len</span></code> kot argument zahteva seznam ali niz, katerega dolžino bi radi izvedeli. Funkcija <code class="docutils literal notranslate"><span class="pre">input</span></code> kot
+argument želi niz z vprašanjem, ki bi ga radi zastavili uporabniku. Razen argumentov, ki jih podamo, te funkcije nimajo drugih podatkov (vsaj ne, da bi mi vedeli zanje).</p>
+<p>Ko smo se učili o seznamih, pa smo mimogrede naleteli na neko nenavadnost: za dodajanje novega elementa v seznam nismo poklicali funkcije, ki bi ji podali seznam in element (na primer <code class="docutils literal notranslate"><span class="pre">append(imena,</span> <span class="pre">&quot;Ana&quot;)</span></code>), temveč smo morali napisati ime seznama, ki mu je sledila pika in <code class="docutils literal notranslate"><span class="pre">append</span></code>, kot argument pa smo navedli le element, ki smo ga želeli dodati, torej <code class="docutils literal notranslate"><span class="pre">imena.append(&quot;Ana&quot;)</span></code>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">imena</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="n">imena</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s2">&quot;Ana&quot;</span><span class="p">)</span>
+<span class="n">imena</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s2">&quot;Berta&quot;</span><span class="p">)</span>
+<span class="n">imena</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&#39;Ana&#39;, &#39;Berta&#39;]
+</pre></div>
+</div>
+</div>
+</div>
+<p><code class="docutils literal notranslate"><span class="pre">append</span></code> je očitno nenavaden, ne kličemo ga tako kot druge funkcije.
+Funkcija <code class="docutils literal notranslate"><span class="pre">append</span></code> “pripada” seznamu; zato mu pravimo <code class="docutils literal notranslate"><span class="pre">imena.append</span></code>.
+Naredimo še en seznam.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">teze</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="n">teze</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="mi">55</span><span class="p">)</span>
+<span class="n">imena</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s2">&quot;Cilka&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">imena</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&#39;Ana&#39;, &#39;Berta&#39;, &#39;Cilka&#39;]
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">teze</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[55]
+</pre></div>
+</div>
+</div>
+</div>
+<p>Vsak seznam ima svoj <code class="docutils literal notranslate"><span class="pre">append</span></code>: <code class="docutils literal notranslate"><span class="pre">imena</span></code> imajo <code class="docutils literal notranslate"><span class="pre">imena.append</span></code> in <code class="docutils literal notranslate"><span class="pre">teze</span></code> imajo <code class="docutils literal notranslate"><span class="pre">teze.append</span></code>.</p>
+<p>Takšnim funkcijam pravimo <em>metode</em>. Klic <code class="docutils literal notranslate"><span class="pre">imena.append</span></code> si predstavljamo, kot da <em>seznamu <code class="docutils literal notranslate"><span class="pre">imena</span></code> rečemo “dodaj si element” <code class="docutils literal notranslate"><span class="pre">&quot;Cene&quot;</span></code></em> in klic <code class="docutils literal notranslate"><span class="pre">teze.append(55)</span></code> pomeni, da <em>seznamu <code class="docutils literal notranslate"><span class="pre">teze</span></code> rečemo “dodaj si element” <code class="docutils literal notranslate"><span class="pre">55</span></code></em>.</p>
+<p>Pika, <code class="docutils literal notranslate"><span class="pre">.</span></code> izraža nekakšno pripadnost, vsebovanost. Ko smo spoznali module, smo videli, da z <code class="docutils literal notranslate"><span class="pre">math.sqrt</span></code> pridemo do <code class="docutils literal notranslate"><span class="pre">math</span></code>-ove funkcije z imenom <code class="docutils literal notranslate"><span class="pre">sqrt</span></code>. Z <code class="docutils literal notranslate"><span class="pre">imena.append</span></code> zahtevamo “imenovo” metodo <code class="docutils literal notranslate"><span class="pre">append</span></code>. In s <code class="docutils literal notranslate"><span class="pre">teze.append</span></code> “tezovo” metodo <code class="docutils literal notranslate"><span class="pre">append</span></code>.</p>
+<p>Takšnih metod je še veliko: takole prosimo niz <code class="docutils literal notranslate"><span class="pre">ime</span></code>, naj nam pove, koliko črk “n” vsebuje.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">ime</span> <span class="o">=</span> <span class="s2">&quot;Benjamin&quot;</span>
+<span class="n">ime</span><span class="o">.</span><span class="n">count</span><span class="p">(</span><span class="s2">&quot;n&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2
+</pre></div>
+</div>
+</div>
+</div>
+<p>Takole pa niz <code class="docutils literal notranslate"><span class="pre">fname</span></code> vprašamo, ali se konča s “torrent”.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">fname</span> <span class="o">=</span> <span class="s2">&quot;en film.torrent&quot;</span>
+<span class="n">fname</span><span class="o">.</span><span class="n">endswith</span><span class="p">(</span><span class="s2">&quot;.torrent&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>True
+</pre></div>
+</div>
+</div>
+</div>
+<p>Kako bi Benjamina spremenili v Benjamaxa? Težko: kot vemo, so nizi nespremenljivi (tako kot terke; od vsega, o čemer smo govorili prejšnji teden, lahko spreminjamo samo sezname). Pač pa lahko vprašamo niz, kako bi bil videti, če “min” zamenjano z “max”.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">ime</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s2">&quot;min&quot;</span><span class="p">,</span> <span class="s2">&quot;max&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;Benjamax&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<p>Metode niso povezane s tem, ali je niz shranjen v spremenljivki ali ne. Metodo moremo poklicati tudi na nizu “kar tako”.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="s2">&quot;Maja&quot;</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;maja&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<p>Skoraj vsaka reč v Pythonu ima metode (ali vsaj nekaj podobnega). Celo običajna števila imajo metode, čeprav zgolj tehnično in z zelo čudnimi imeni, kot lahko vedoželjen študent hitro preveri.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="mf">3.14</span>
+<span class="n">x</span><span class="o">.</span><span class="n">is_integer</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>False
+</pre></div>
+</div>
+</div>
+</div>
+<p>Med tipi, ki smo jih spoznali doslej, pa imajo uporabe vredne metode nizi in seznami. V okviru predavanj ne bomo podrobneje spoznavali vse mogočih podatkovnih tipov. Temeljiteje pa bomo pogledali metode nizov, seznamov in podobnih reči, ki jih pri programiranju v Pythonu vsakodnevno uporabljamo. Obenem bomo tako dobili vtis, kako te reči
+izgledajo.</p>
+<p><strong>Namen tega predavanja ni, da si zapomnite vse te metode in jih znate na pamet za izpit. :)</strong> Namen je le, da dobite predstavo, kako to deluje in kakšne vse stvari obstajajo. Za konkretna imena pa vam bo vedno na voljo dokumentacija.</p>
+<section id="metode-nizov">
+<h2>Metode nizov<a class="headerlink" href="#metode-nizov" title="Permalink to this headline">#</a></h2>
+<p>Nekaj smo jih že spoznali: <code class="docutils literal notranslate"><span class="pre">count</span></code>, <code class="docutils literal notranslate"><span class="pre">replace</span></code> in <code class="docutils literal notranslate"><span class="pre">lower</span></code>. Zadnja ima sestro, <code class="docutils literal notranslate"><span class="pre">upper</span></code>, ki vrne niz, pri katerem so vse črke pretvorjene v velike črke. Podobna sta še <code class="docutils literal notranslate"><span class="pre">capitalize</span></code> in <code class="docutils literal notranslate"><span class="pre">title</span></code>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="s2">&quot;Maja&quot;</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;maja&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="s2">&quot;Maja&quot;</span><span class="o">.</span><span class="n">upper</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;MAJA&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="s2">&quot;maja&quot;</span><span class="o">.</span><span class="n">capitalize</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;Maja&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="s2">&quot;stavek, KI GA bomo povelikočrkovali po anGLEško&quot;</span><span class="o">.</span><span class="n">title</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;Stavek, Ki Ga Bomo Povelikočrkovali Po Angleško&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<p>Da ne bi kdo pozabil, za vsak slučaj še enkrat spomnimo: te metode ne spreminjajo niza, temveč vračajo nove nize. Nizi ostanejo takšni, kot so bili. Po tem primeru bi moralo biti jasno, kaj ne deluje in kako je potrebno pisati, da bo delovalo.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">s</span> <span class="o">=</span> <span class="s2">&quot;Benjamin&quot;</span>
+<span class="n">s</span><span class="o">.</span><span class="n">upper</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;BENJAMIN&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">s</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;Benjamin&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">s</span> <span class="o">=</span> <span class="n">s</span><span class="o">.</span><span class="n">upper</span><span class="p">()</span>
+<span class="n">s</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;BENJAMIN&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<p>Metodo <code class="docutils literal notranslate"><span class="pre">count</span></code> smo že spoznali. Povejmo le še, da lahko išče tudi daljše</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="s2">&quot;Maja&quot;</span><span class="o">.</span><span class="n">count</span><span class="p">(</span><span class="s2">&quot;a&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="s2">&quot;Maja&quot;</span><span class="o">.</span><span class="n">count</span><span class="p">(</span><span class="s2">&quot;aj&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>1
+</pre></div>
+</div>
+</div>
+</div>
+<p>Poleg <code class="docutils literal notranslate"><span class="pre">count</span></code> imamo tudi nekaj funkcij, ki povedo, kje v nizu se nahaja določen podniz. Prvi sta <code class="docutils literal notranslate"><span class="pre">find</span></code> in <code class="docutils literal notranslate"><span class="pre">index</span></code>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="s2">&quot;Benjamin&quot;</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="s2">&quot;jam&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>3
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="s2">&quot;Benjamin&quot;</span><span class="o">.</span><span class="n">index</span><span class="p">(</span><span class="s2">&quot;jam&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>3
+</pre></div>
+</div>
+</div>
+</div>
+<p>Edina razlika med njima je v tem, kaj storita, če iskanega niza ni. <code class="docutils literal notranslate"><span class="pre">find</span></code> vrne -1, <code class="docutils literal notranslate"><span class="pre">index</span></code> pa javi napako.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="s2">&quot;Benjamin&quot;</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="s2">&quot;max&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>-1
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="s2">&quot;Benjamin&quot;</span><span class="o">.</span><span class="n">index</span><span class="p">(</span><span class="s2">&quot;max&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">ValueError</span><span class="g g-Whitespace">                                </span>Traceback (most recent call last)
+<span class="o">&lt;</span><span class="n">ipython</span><span class="o">-</span><span class="nb">input</span><span class="o">-</span><span class="mi">22</span><span class="o">-</span><span class="n">c435d9d16506</span><span class="o">&gt;</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="ne">----&gt; </span><span class="mi">1</span> <span class="s2">&quot;Benjamin&quot;</span><span class="o">.</span><span class="n">index</span><span class="p">(</span><span class="s2">&quot;max&quot;</span><span class="p">)</span>
+
+<span class="ne">ValueError</span>: substring not found
+</pre></div>
+</div>
+</div>
+</div>
+<p>Če se dani podniz pojavi večkrat, bosta funkciji vrnili indeks prve pojavitve - razen, če jima z dodatnimi argumenti povemo, od kod naprej naj iščeta. Poleg <code class="docutils literal notranslate"><span class="pre">find</span></code> in <code class="docutils literal notranslate"><span class="pre">index</span></code> obstajata še funkciji <code class="docutils literal notranslate"><span class="pre">rfind</span></code> in <code class="docutils literal notranslate"><span class="pre">rindex</span></code>, ki iščeta s konca in tako vrneta zadnjo pojavitev podniza v nizu.</p>
+<p>Mimogrede smo že omenili tudi preprosto, a zelo uporabno funkcijo <code class="docutils literal notranslate"><span class="pre">endswith</span></code>, ki pove, ali se niz konča s podanim podnizom. Poleg njega obstaja še <code class="docutils literal notranslate"><span class="pre">startswith</span></code>, ki pove ali se niz <em>začne</em> z danim podnizom.</p>
+<p>Metode <code class="docutils literal notranslate"><span class="pre">ljust</span></code>, <code class="docutils literal notranslate"><span class="pre">rjust</span></code> in <code class="docutils literal notranslate"><span class="pre">center</span></code> dopolnijo niz s presledki z leve, z desne ali z obeh strani, tako da je dolg toliko, kot želimo. Takole napihnemo Benjamina na 15 znakov:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="s2">&quot;Benjamin&quot;</span><span class="o">.</span><span class="n">ljust</span><span class="p">(</span><span class="mi">15</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;Benjamin       &#39;
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="s2">&quot;Benjamin&quot;</span><span class="o">.</span><span class="n">rjust</span><span class="p">(</span><span class="mi">15</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;       Benjamin&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="s2">&quot;Benjamin&quot;</span><span class="o">.</span><span class="n">center</span><span class="p">(</span><span class="mi">15</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;    Benjamin   &#39;
+</pre></div>
+</div>
+</div>
+</div>
+<p>Še enkrat: te metode ne spreminjajo niza, temveč vrnejo nov niz! Nobena metoda ne more spremeniti niza.</p>
+<p>Metoda <code class="docutils literal notranslate"><span class="pre">strip</span></code> naredi ravno nasprotno: odbije presledke (in tabulatorje in znake za prehod v novo vrstico) na levi in desni strani niza. <code class="docutils literal notranslate"><span class="pre">lstrip</span></code> in <code class="docutils literal notranslate"><span class="pre">rstrip</span></code> pospravita samo levo in samo desno stran.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="s2">&quot;     Benjamin    &quot;</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;Benjamin&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="s2">&quot;     Benjamin    &quot;</span><span class="o">.</span><span class="n">lstrip</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;Benjamin    &#39;
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="s2">&quot;     Benjamin    &quot;</span><span class="o">.</span><span class="n">rstrip</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;     Benjamin&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<p>Če se zdi ta metoda komu neuporabna, se moti. Zelo. Svojo zmoto bo spoznal, ko pridemo do branja datotek.</p>
+<p>Nizi imajo še veliko metod. Pogledali bomo le še dve najzanimivejši.</p>
+<p>Metoda <code class="docutils literal notranslate"><span class="pre">split</span></code> razbije niz na seznam podnizov, kakor jih ločujejo presledki, tabulatorji in znaki za nove vrstice. (V prvem približku: razbije jih na besede.)</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">s</span> <span class="o">=</span> <span class="s2">&quot;Metoda split razbije niz na seznam podnizov, kakor jih ločujejo presledki.&quot;</span>
+<span class="n">s</span><span class="o">.</span><span class="n">split</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&#39;Metoda&#39;,
+ &#39;split&#39;,
+ &#39;razbije&#39;,
+ &#39;niz&#39;,
+ &#39;na&#39;,
+ &#39;seznam&#39;,
+ &#39;podnizov,&#39;,
+ &#39;kakor&#39;,
+ &#39;jih&#39;,
+ &#39;ločujejo&#39;,
+ &#39;presledki.&#39;]
+</pre></div>
+</div>
+</div>
+</div>
+<p>Presledkom, tabulatorjem in znakom za novo vrstico rečemo tudi <em>beli prostor</em> (<em>white space</em>). Namesto glede na beli prostor lahko <code class="docutils literal notranslate"><span class="pre">split</span></code> razbije niz tudi glede na kak drug znak, ki ga moramo v tem primeru podati kot argument.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="s2">&quot;123-4123-21&quot;</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s2">&quot;-&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&#39;123&#39;, &#39;4123&#39;, &#39;21&#39;]
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="s2">&quot;123-4123-21&quot;</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s2">&quot;1&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&#39;&#39;, &#39;23-4&#39;, &#39;23-2&#39;, &#39;&#39;]
+</pre></div>
+</div>
+</div>
+</div>
+<p>Zadnja metoda, <code class="docutils literal notranslate"><span class="pre">join</span></code>, dela ravno obratno kot <code class="docutils literal notranslate"><span class="pre">split</span></code>: združuje nize. Način, na katerega je obrnjena, je nenavaden, a če malo razmislimo, vidimo, da drugače ne bi moglo biti.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">imena</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;Ana&quot;</span><span class="p">,</span> <span class="s2">&quot;Berta&quot;</span><span class="p">,</span> <span class="s2">&quot;Cilka&quot;</span><span class="p">,</span> <span class="s2">&quot;Dani&quot;</span><span class="p">,</span> <span class="s2">&quot;Ema&quot;</span><span class="p">]</span>
+<span class="s2">&quot;&quot;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">imena</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;AnaBertaCilkaDaniEma&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<p>Praznemu nizu, <code class="docutils literal notranslate"><span class="pre">&quot;&quot;</span></code>, smo “naročili”, naj združi nize iz podanega seznama. To sicer ni videti preveč lepo, lepše bo, če jih združimo s kakim ločilom.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="s2">&quot; - &quot;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">imena</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;Ana - Berta - Cilka - Dani - Ema&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="s2">&quot;, &quot;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">imena</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;Ana, Berta, Cilka, Dani, Ema&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="s2">&quot; in &quot;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">imena</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;Ana in Berta in Cilka in Dani in Ema&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<p>Najlepše pa bo, če vsa imena do zadnjega združimo z vejicami, nato pa z “in” pripnemo še zadnje ime. Ker ravno poznamo rezine.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="s2">&quot;, &quot;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">imena</span><span class="p">[:</span><span class="o">-</span><span class="mi">1</span><span class="p">])</span> <span class="o">+</span> <span class="s2">&quot; in &quot;</span> <span class="o">+</span> <span class="n">imena</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;Ana, Berta, Cilka, Dani in Ema&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<p>To, mimogrede, deluje celo z dvema imenoma - prvo bo pač pustil pri miru, saj v seznamu, kot je <code class="docutils literal notranslate"><span class="pre">[&quot;Ana&quot;]</span></code> ni česa združevati:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">imena</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;Ana&quot;</span><span class="p">,</span> <span class="s2">&quot;Benjamin&quot;</span><span class="p">]</span>
+<span class="s2">&quot;, &quot;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">imena</span><span class="p">[:</span><span class="o">-</span><span class="mi">1</span><span class="p">])</span> <span class="o">+</span> <span class="s2">&quot; in &quot;</span> <span class="o">+</span> <span class="n">imena</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;Ana in Benjamin&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<p>Pri enem samem pa malo zataji.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">imena</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;Ana&quot;</span><span class="p">]</span>
+<span class="s2">&quot;, &quot;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">imena</span><span class="p">[:</span><span class="o">-</span><span class="mi">1</span><span class="p">])</span> <span class="o">+</span> <span class="s2">&quot; in &quot;</span> <span class="o">+</span> <span class="n">imena</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39; in Ana&#39;
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="metode-seznamov">
+<h2>Metode seznamov<a class="headerlink" href="#metode-seznamov" title="Permalink to this headline">#</a></h2>
+<p>Tako kot nizi imajo tudi seznami metodi <code class="docutils literal notranslate"><span class="pre">count</span></code> in <code class="docutils literal notranslate"><span class="pre">index</span></code>, o katerih ne bomo izgubljali besed.</p>
+<p>Medtem ko vam pri nizih metoda <code class="docutils literal notranslate"><span class="pre">index</span></code> ne bo prišla velikokrat na misel, jo boste, sodeč po izkušnjah iz preteklih generacij, pridno zlorabljali na seznamih. Že kaka dva, tri tedne pred temi predavanji jo nekateri študenti odkrijejo in si z njeno pomočjo otežijo reševanje domačih nalog.</p>
+<p><strong>Metoda <code class="docutils literal notranslate"><span class="pre">index</span></code> je v resnici uporab(lje)na zelo redko.</strong> Metode <code class="docutils literal notranslate"><span class="pre">index</span></code> prav gotovo ne gre uporabljati znotraj zanke <code class="docutils literal notranslate"><span class="pre">for</span></code>, ki gre prek seznama in ob tem poskuša dobiti indeks trenutnega elementa.</p>
+<p>Ena tipičnih zlorab je ta:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">imena</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;Ana&quot;</span><span class="p">,</span> <span class="s2">&quot;Berta&quot;</span><span class="p">,</span> <span class="s2">&quot;Cilka&quot;</span><span class="p">,</span> <span class="s2">&quot;Dani&quot;</span><span class="p">,</span> <span class="s2">&quot;Ema&quot;</span><span class="p">]</span>
+<span class="n">teze</span> <span class="o">=</span> <span class="p">[</span><span class="mi">72</span><span class="p">,</span> <span class="mi">78</span><span class="p">,</span> <span class="mi">70</span><span class="p">,</span> <span class="mi">65</span><span class="p">,</span> <span class="mi">68</span><span class="p">]</span>
+<span class="k">for</span> <span class="n">ime</span> <span class="ow">in</span> <span class="n">imena</span><span class="p">:</span>
+    <span class="n">i</span> <span class="o">=</span> <span class="n">imena</span><span class="o">.</span><span class="n">index</span><span class="p">(</span><span class="n">ime</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">ime</span><span class="p">,</span> <span class="s2">&quot;tehta&quot;</span><span class="p">,</span> <span class="n">teze</span><span class="p">[</span><span class="n">i</span><span class="p">],</span> <span class="s2">&quot;kilogramov.&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Ana tehta 72 kilogramov.
+Berta tehta 78 kilogramov.
+Cilka tehta 70 kilogramov.
+Dani tehta 65 kilogramov.
+Ema tehta 68 kilogramov.
+</pre></div>
+</div>
+</div>
+</div>
+<p>Tole tule slučajno deluje. Neha pa delovati takoj, ko imamo v seznamu dve enaki imeni: <code class="docutils literal notranslate"><span class="pre">index</span></code> bo vrnil prvo.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">imena</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;Ana&quot;</span><span class="p">,</span> <span class="s2">&quot;Ana&quot;</span><span class="p">,</span> <span class="s2">&quot;Ana&quot;</span><span class="p">]</span>
+<span class="n">teze</span> <span class="o">=</span> <span class="p">[</span><span class="mi">72</span><span class="p">,</span> <span class="mi">78</span><span class="p">,</span> <span class="mi">70</span><span class="p">]</span>
+<span class="k">for</span> <span class="n">ime</span> <span class="ow">in</span> <span class="n">imena</span><span class="p">:</span>
+    <span class="n">i</span> <span class="o">=</span> <span class="n">imena</span><span class="o">.</span><span class="n">index</span><span class="p">(</span><span class="n">ime</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">ime</span><span class="p">,</span> <span class="s2">&quot;tehta&quot;</span><span class="p">,</span> <span class="n">teze</span><span class="p">[</span><span class="n">i</span><span class="p">],</span> <span class="s2">&quot;kilogramov.&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Ana tehta 72 kilogramov.
+Ana tehta 72 kilogramov.
+Ana tehta 72 kilogramov.
+</pre></div>
+</div>
+</div>
+</div>
+<p>Tu se študenti tipično pritožijo: ko se <code class="docutils literal notranslate"><span class="pre">ime</span></code> nanaša na drugo Ano v seznamu, bi morala metoda <code class="docutils literal notranslate"><span class="pre">index</span></code> po njihovem vrniti indeks drugega elementa, <code class="docutils literal notranslate"><span class="pre">1</span></code> in ne <code class="docutils literal notranslate"><span class="pre">0</span></code>.</p>
+<p>Če bi <code class="docutils literal notranslate"><span class="pre">index</span></code> res delal tako: kaj bi dobili, če bi poklicali <code class="docutils literal notranslate"><span class="pre">imena.index(&quot;Ana&quot;)</span></code>? V tem primeru se niz <code class="docutils literal notranslate"><span class="pre">&quot;Ana&quot;</span></code> ne nanaša na nek specifičen element v seznamu.</p>
+<p>V resnici je <code class="docutils literal notranslate"><span class="pre">ime</span></code> v gornjem primeru vedno samo <code class="docutils literal notranslate"><span class="pre">&quot;Ana&quot;</span></code>. Ne neka konkretna Ana s tega seznama. Samo Ana. In <code class="docutils literal notranslate"><span class="pre">index</span></code> vrne prvo Ano.</p>
+<p>Vem, vem, zakaj študenti pišejo programe, kot je gornji. Zaradi moje reklame proti <code class="docutils literal notranslate"><span class="pre">range(len(...))</span></code>. Radi bi napisali tole, a si ne upajo.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">imena</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;Ana&quot;</span><span class="p">,</span> <span class="s2">&quot;Berta&quot;</span><span class="p">,</span> <span class="s2">&quot;Cilka&quot;</span><span class="p">,</span> <span class="s2">&quot;Dani&quot;</span><span class="p">,</span> <span class="s2">&quot;Ema&quot;</span><span class="p">]</span>
+<span class="n">teze</span> <span class="o">=</span> <span class="p">[</span><span class="mi">72</span><span class="p">,</span> <span class="mi">78</span><span class="p">,</span> <span class="mi">70</span><span class="p">,</span> <span class="mi">65</span><span class="p">,</span> <span class="mi">68</span><span class="p">]</span>
+
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">imena</span><span class="p">)):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">imena</span><span class="p">[</span><span class="n">i</span><span class="p">],</span> <span class="s2">&quot;tehta&quot;</span><span class="p">,</span> <span class="n">teze</span><span class="p">[</span><span class="n">i</span><span class="p">],</span> <span class="s2">&quot;kilogramov.&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Ana tehta 72 kilogramov.
+Berta tehta 78 kilogramov.
+Cilka tehta 70 kilogramov.
+Dani tehta 65 kilogramov.
+Ema tehta 68 kilogramov.
+</pre></div>
+</div>
+</div>
+</div>
+<p>In prav je, da si ne upajo. To se naredi tako:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">ime</span><span class="p">,</span> <span class="n">teza</span> <span class="ow">in</span> <span class="nb">zip</span><span class="p">(</span><span class="n">imena</span><span class="p">,</span> <span class="n">teze</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">ime</span><span class="p">,</span> <span class="s2">&quot;tehta&quot;</span><span class="p">,</span> <span class="n">teza</span><span class="p">,</span> <span class="s2">&quot;kilogramov.&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Ana tehta 72 kilogramov.
+Berta tehta 78 kilogramov.
+Cilka tehta 70 kilogramov.
+Dani tehta 65 kilogramov.
+Ema tehta 68 kilogramov.
+</pre></div>
+</div>
+</div>
+</div>
+<p>Kadar potrebujemo element in indeks, pa uporabimo <code class="docutils literal notranslate"><span class="pre">enumerate</span></code>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">ime</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">imena</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">i</span><span class="p">,</span> <span class="s2">&quot;:&quot;</span><span class="p">,</span> <span class="n">ime</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0 : Ana
+1 : Berta
+2 : Cilka
+3 : Dani
+4 : Ema
+</pre></div>
+</div>
+</div>
+</div>
+<p>Malo smo skrenili s poti, ampak je pomembno. Zato bom povedal še enkrat <strong>preden uporabite <code class="docutils literal notranslate"><span class="pre">index</span></code>, razmislite, ali ga res potrebujete</strong>. Metoda <code class="docutils literal notranslate"><span class="pre">index</span></code> je</p>
+<ul class="simple">
+<li><p>nevarna, ker vedno vrne prvi element s podano vrednostjo, in tega morda ne pričakujemo,</p></li>
+<li><p>počasna, ker mora Python dejansko pregledati seznam do iskanega elementa,</p></li>
+<li><p>navadno nepotrebna, ker lahko pridemo do indeksa po preprostejši poti,</p></li>
+<li><p>poleg tega pa navadno brez potrebe zapleta program.</p></li>
+</ul>
+<p>Če je tako slab, zakaj obstaja? Ker ga včasih čisto legalno potrebujemo. Zakaj pa o njem govorim programerjem - začetnikom? Zato, ker ga sicer odkrijejo sami. <code class="docutils literal notranslate"><span class="pre">index</span></code> je ena od stvari, za katere je boljše, da otroci o njih slišijo od staršev, ne vrstnikov.</p>
+<p>Zdaj pa nazaj k metodam.</p>
+<p>Že nekaj časa vemo za <code class="docutils literal notranslate"><span class="pre">append</span></code>, ki v seznam doda nov element. Pazite, tole je zelo drugače kot pri nizih! Metoda <code class="docutils literal notranslate"><span class="pre">append</span></code> ne vrača novega seznama, temveč v resnici spreminja seznam.</p>
+<p>Kako pa bi k nizu pripeli seznam? Tule nam <code class="docutils literal notranslate"><span class="pre">append</span></code> ne bo pomagal: kar naredi, je povsem narobe.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">imena</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&#39;Ana&#39;, &#39;Berta&#39;, &#39;Cilka&#39;, &#39;Dani&#39;, &#39;Ema&#39;]
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">imena</span><span class="o">.</span><span class="n">append</span><span class="p">([</span><span class="s2">&quot;Fanči&quot;</span><span class="p">,</span> <span class="s2">&quot;Ema&quot;</span><span class="p">,</span> <span class="s2">&quot;Greta&quot;</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Kaj smo pa pričakovali? Metoda <code class="docutils literal notranslate"><span class="pre">append</span></code> prejme en argument. In to kar prejme, doda k seznamu. Torej: kar
+ji podamo kot argument, bo zadnji element seznama. Če torej <code class="docutils literal notranslate"><span class="pre">append</span></code>-u podamo seznam, bo seznam zadnji element seznama.</p>
+<p>Metoda, ki bo naredila, kar hočemo, je <code class="docutils literal notranslate"><span class="pre">extend</span></code>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">imena</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;Ana&#39;</span><span class="p">,</span> <span class="s1">&#39;Berta&#39;</span><span class="p">,</span> <span class="s1">&#39;Cilka&#39;</span><span class="p">,</span> <span class="s1">&#39;Dani&#39;</span><span class="p">,</span> <span class="s1">&#39;Ema&#39;</span><span class="p">]</span>
+<span class="n">imena</span><span class="o">.</span><span class="n">extend</span><span class="p">([</span><span class="s2">&quot;Fanči&quot;</span><span class="p">,</span> <span class="s2">&quot;Greta&quot;</span><span class="p">])</span>
+<span class="n">imena</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&#39;Ana&#39;, &#39;Berta&#39;, &#39;Cilka&#39;, &#39;Dani&#39;, &#39;Ema&#39;, &#39;Fanči&#39;, &#39;Greta&#39;]
+</pre></div>
+</div>
+</div>
+</div>
+<p>V resnici <code class="docutils literal notranslate"><span class="pre">extend</span></code>-a praktično ne potrebujemo. Ker je sezname možno seštevati, raje uporabimo kar <code class="docutils literal notranslate"><span class="pre">+=</span></code>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">imena</span> <span class="o">+=</span> <span class="p">[</span><span class="s2">&quot;Helga&quot;</span><span class="p">,</span> <span class="s2">&quot;Iva&quot;</span><span class="p">]</span>
+<span class="n">imena</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&#39;Ana&#39;, &#39;Berta&#39;, &#39;Cilka&#39;, &#39;Dani&#39;, &#39;Ema&#39;, &#39;Fanči&#39;, &#39;Greta&#39;, &#39;Helga&#39;, &#39;Iva&#39;]
+</pre></div>
+</div>
+</div>
+</div>
+<p>Metodi <code class="docutils literal notranslate"><span class="pre">insert</span></code> podamo dva argumenta, indeks in element, pa bo vstavila element <em>pred</em> element s podanim indeksom.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">imena</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;Ana&#39;</span><span class="p">,</span> <span class="s1">&#39;Berta&#39;</span><span class="p">,</span> <span class="s1">&#39;Dani&#39;</span><span class="p">,</span> <span class="s1">&#39;Ema&#39;</span><span class="p">,</span> <span class="s1">&#39;Greta&#39;</span><span class="p">]</span>
+<span class="n">imena</span><span class="o">.</span><span class="n">insert</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="s2">&quot;Cilka&quot;</span><span class="p">)</span>
+<span class="n">imena</span><span class="o">.</span><span class="n">insert</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="s2">&quot;Fanči&quot;</span><span class="p">)</span>
+<span class="n">imena</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&#39;Ana&#39;, &#39;Berta&#39;, &#39;Cilka&#39;, &#39;Dani&#39;, &#39;Ema&#39;, &#39;Fanči&#39;, &#39;Greta&#39;]
+</pre></div>
+</div>
+</div>
+</div>
+<p>Očitno deluje tudi indeksiranje s konca.</p>
+<p>Elemente seznama lahko odstranjujemo na tri načine.</p>
+<p>Prvi je <code class="docutils literal notranslate"><span class="pre">del</span></code>. <code class="docutils literal notranslate"><span class="pre">del</span></code> ni metoda in prihaja iz povsem drugega vica, a vseeno ga pač omenimo, ker se ravno učimo o spreminjanju seznamov. Uporabimo ga tako:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">del</span> <span class="n">imena</span><span class="p">[</span><span class="o">-</span><span class="mi">2</span><span class="p">]</span>
+<span class="n">imena</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&#39;Ana&#39;, &#39;Berta&#39;, &#39;Cilka&#39;, &#39;Dani&#39;, &#39;Ema&#39;, &#39;Greta&#39;]
+</pre></div>
+</div>
+</div>
+</div>
+<p>Metoda <code class="docutils literal notranslate"><span class="pre">pop</span></code> vrne element s podanim indeksom in ga pobriše s seznama.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">imena</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;Cilka&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">imena</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&#39;Ana&#39;, &#39;Berta&#39;, &#39;Dani&#39;, &#39;Ema&#39;, &#39;Greta&#39;]
+</pre></div>
+</div>
+</div>
+</div>
+<p>Metodo <code class="docutils literal notranslate"><span class="pre">pop</span></code> redko uporabljamo za pobiranje elementov sredi seznamov. Navadno na ta način poberemo prvi ali zadnji element. Pravzaprav najpogosteje zadnjega, zato lahko <code class="docutils literal notranslate"><span class="pre">pop</span></code> pokličemo tudi brez argumentov, pa bomo dobili zadnji element.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">imena</span><span class="o">.</span><span class="n">pop</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;Greta&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">imena</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&#39;Ana&#39;, &#39;Berta&#39;, &#39;Dani&#39;, &#39;Ema&#39;]
+</pre></div>
+</div>
+</div>
+</div>
+<p>Če bi hoteli, recimo, prestaviti prvi element na konec, bi napisali</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">imena</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">imena</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="mi">0</span><span class="p">))</span>
+<span class="n">imena</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&#39;Berta&#39;, &#39;Dani&#39;, &#39;Ema&#39;, &#39;Ana&#39;]
+</pre></div>
+</div>
+</div>
+</div>
+<p>V obeh primeri, pri <code class="docutils literal notranslate"><span class="pre">del</span></code> in <code class="docutils literal notranslate"><span class="pre">pop</span></code> smo morali podati indeks elementa, ki ga želimo odstarniti. Včasih nimamo indeksa, pač pa poznamo vrednost elementa, ki ga želimo odstraniti. V tem primeru uporabimo <code class="docutils literal notranslate"><span class="pre">remove</span></code>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">imena</span><span class="o">.</span><span class="n">remove</span><span class="p">(</span><span class="s2">&quot;Dani&quot;</span><span class="p">)</span>
+<span class="n">imena</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&#39;Berta&#39;, &#39;Ema&#39;, &#39;Ana&#39;]
+</pre></div>
+</div>
+</div>
+</div>
+<p>Pri tem ne odstrani vseh takšnih elementov, temveč le prvega, na katerega naleti, kakor lahko vidimo v spodnjem primeru.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">s</span> <span class="o">=</span> <span class="p">[</span><span class="mi">7</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">]</span>
+<span class="n">s</span><span class="o">.</span><span class="n">remove</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">s</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[7, 2, 3, 4, 1, 1, 2]
+</pre></div>
+</div>
+</div>
+</div>
+<p>Za metodo <code class="docutils literal notranslate"><span class="pre">remove</span></code> velja vse, kar smo napisali za <code class="docutils literal notranslate"><span class="pre">index</span></code>. V resnici za <code class="docutils literal notranslate"><span class="pre">remove</span></code> sicer obstaja več situacij, ko ga “legalno uporabimo”, vseeno pa je nevaren, ker odstrani prvi takšen element; počasen, ker mora element najprej poiskati; pogosto nepotreben (ker lahko poznamo indeks). Poleg tega pa je še zelo nevaren: študenti ga radi uporabijo znotraj zanke, v kateri gredo čez prav ta isti seznam. Brisati elemente seznama, čez katerega greš ravnokar z zanko, je vedno zelo slaba ideja. Če uporabljaš <code class="docutils literal notranslate"><span class="pre">for</span></code> ali če nisi pošteno previden.</p>
+<p>Metoda <code class="docutils literal notranslate"><span class="pre">s.copy()</span></code> naredi kopijo seznama <code class="docutils literal notranslate"><span class="pre">s</span></code>, tako kot da bi napisali <code class="docutils literal notranslate"><span class="pre">s</span> <span class="pre">=</span> <span class="pre">s[:]</span></code>. Navadno uporabimo <code class="docutils literal notranslate"><span class="pre">s.copy()</span></code>, ker bolj eksplicitno pove, kaj počnemo.</p>
+<p>Metoda <code class="docutils literal notranslate"><span class="pre">s.clear()</span></code> ga izprazni, kar je isto kot <code class="docutils literal notranslate"><span class="pre">s[:]</span> <span class="pre">=</span> <span class="pre">[]</span></code> ali <code class="docutils literal notranslate"><span class="pre">del</span> <span class="pre">s[:]</span></code> in <em>ni isto kot</em> <code class="docutils literal notranslate"><span class="pre">s</span> <span class="pre">=</span> <span class="pre">[]</span></code>. Razlika je tako prefinjena, da bo vredna posebnega predavanja. Navadno uporabimo <code class="docutils literal notranslate"><span class="pre">s.clear()</span></code>.</p>
+<p>Le še dve metodi sta nam ostali. <code class="docutils literal notranslate"><span class="pre">reverse</span></code> obrne vrstni red elementov v seznamu.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">s</span> <span class="o">=</span> <span class="p">[</span><span class="mi">7</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">]</span>
+<span class="n">s</span><span class="o">.</span><span class="n">reverse</span><span class="p">()</span>
+<span class="n">s</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[1, 1, 5, 2, 7]
+</pre></div>
+</div>
+</div>
+</div>
+<p>Zadnja je <code class="docutils literal notranslate"><span class="pre">sort</span></code>, ki uredi elemente po vrsti.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">s</span><span class="o">.</span><span class="n">sort</span><span class="p">()</span>
+<span class="n">s</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[1, 1, 2, 5, 7]
+</pre></div>
+</div>
+</div>
+</div>
+<p>Metoda deluje nad vsakršnimi elementi, ki jih je mogoče primerjati - z njo lahko uredimo seznam števil, nizov… Podamo ji lahko tudi kup argumentov, ki pa jih v tem trenutku še nismo zmožni razumeti.</p>
+<p>Ne spreglejte razlike med metodami nizov in seznamov. Metode nizov vračajo nove nize; <code class="docutils literal notranslate"><span class="pre">s.replace(&quot;min&quot;,</span> <span class="pre">&quot;max&quot;)</span></code> ni spremenil niza <code class="docutils literal notranslate"><span class="pre">s</span></code>, temveč vrnil nov niz. Metode seznamov spreminjajo seznam; <code class="docutils literal notranslate"><span class="pre">s.insert(2,</span> <span class="pre">&quot;Ana&quot;)</span></code> ne vrne novega seznama, temveč spremeni <code class="docutils literal notranslate"><span class="pre">s</span></code>. Enako velja za <code class="docutils literal notranslate"><span class="pre">sort</span></code> in <code class="docutils literal notranslate"><span class="pre">reverse</span></code>.</p>
+<p>Tule omenimo še dve Pythonovi funkciji, ki nista metodi, sta pa podobni gornjima in študente pogosto bega razlika.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">s</span> <span class="o">=</span> <span class="p">[</span><span class="mi">7</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">]</span>
+<span class="k">for</span> <span class="n">e</span> <span class="ow">in</span> <span class="nb">reversed</span><span class="p">(</span><span class="n">s</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">e</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>1
+1
+5
+2
+7
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">s</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[7, 2, 5, 1, 1]
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">sorted</span><span class="p">(</span><span class="n">s</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[1, 1, 2, 5, 7]
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">s</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[7, 2, 5, 1, 1]
+</pre></div>
+</div>
+</div>
+</div>
+<p><code class="docutils literal notranslate"><span class="pre">sort</span></code> in <code class="docutils literal notranslate"><span class="pre">reverse</span></code> sta metodi seznamov. Imeni sta v velelniku - uredi!, obrni! - torej uredita oz. obrneta seznam. Torej: spremenita ga.</p>
+<p><code class="docutils literal notranslate"><span class="pre">sorted</span></code> in <code class="docutils literal notranslate"><span class="pre">reversed</span></code> sta funkciji. Imeni sta urejen in obrnjen, vrneta torej nov seznam (<code class="docutils literal notranslate"><span class="pre">reversed</span></code> v resnici ne vrača seznama, vrne pa nekaj, kar se vede malo podobno kot seznam). Seznam, ki ga podamo kot argument, ostane nespremenjen. Obe funkciji skoraj vedno uporabimo za zanko <code class="docutils literal notranslate"><span class="pre">for</span></code>.</p>
+<p>Eden od razlogov, zakaj <code class="docutils literal notranslate"><span class="pre">sorted</span></code> in <code class="docutils literal notranslate"><span class="pre">reversed</span></code> nista metodi, je tudi, da lahko na ta način sprejemata različne argumente. Zadovoljni sta tudi z nizom ali terko (in vsem drugim, čez kar je možno iti z zanko <code class="docutils literal notranslate"><span class="pre">for</span></code>).</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">sorted</span><span class="p">(</span><span class="s2">&quot;berta&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&#39;a&#39;, &#39;b&#39;, &#39;e&#39;, &#39;r&#39;, &#39;t&#39;]
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">e</span> <span class="ow">in</span> <span class="nb">reversed</span><span class="p">(</span><span class="s2">&quot;berta&quot;</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">e</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>a
+t
+r
+e
+b
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+</section>
+<section id="metode-terk">
+<h1>Metode terk<a class="headerlink" href="#metode-terk" title="Permalink to this headline">#</a></h1>
+<p>Terke imajo enake metode kot seznami, manjkajo jim le metode, ki spreminjajo seznam.</p>
+<p>In, presenečenje: vse metode seznamov spreminjajo seznam. Terke imajo le metodi: <code class="docutils literal notranslate"><span class="pre">count</span></code> in <code class="docutils literal notranslate"><span class="pre">index</span></code>.</p>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "mihaTrajbaric/programiranje",
+            ref: "main",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+            </main>
+            <footer class="footer-article noprint">
+                
+    <!-- Previous / next buttons -->
+<div class='prev-next-area'>
+</div>
+            </footer>
+        </div>
+    </div>
+    <div class="footer-content row">
+        <footer class="col footer"><p>
+  
+    By Mihael Trajbarič<br/>
+  
+      &copy; Copyright 2022.<br/>
+</p>
+        </footer>
+    </div>
+    
+</div>
+
+
+      </div>
+    </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+
+
+  </body>
+</html>

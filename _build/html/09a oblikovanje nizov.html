@@ -1,0 +1,975 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>Oblikovanje nizov &#8212; Krožek začetnega programiranja 2022-23</title>
+    
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+<link href="_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" href="_static/styles/sphinx-book-theme.css?digest=5115cc725059bd94278eecd172e13a965bf8f5a9" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" />
+    
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
+
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/clipboard.min.js"></script>
+    <script src="_static/copybutton.js"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?digest=9c920249402e914e316237a7dbc6769907cce411"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
+<!-- Checkboxes to toggle the left sidebar -->
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation" aria-label="Toggle navigation sidebar">
+<label class="overlay overlay-navbar" for="__navigation">
+    <div class="visually-hidden">Toggle navigation sidebar</div>
+</label>
+<!-- Checkboxes to toggle the in-page toc -->
+<input type="checkbox" class="sidebar-toggle" name="__page-toc" id="__page-toc" aria-label="Toggle in-page Table of Contents">
+<label class="overlay overlay-pagetoc" for="__page-toc">
+    <div class="visually-hidden">Toggle in-page Table of Contents</div>
+</label>
+<!-- Headers at the top -->
+<div class="announcement header-item noprint"></div>
+<div class="header header-item noprint"></div>
+
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<!-- Sidebar -->
+<div class="bd-sidebar noprint" id="site-navigation">
+    <div class="bd-sidebar__content">
+        <div class="bd-sidebar__top"><div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="index.html">
+      
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
+      
+      <img src="_static/python-logo.png" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">Krožek začetnega programiranja 2022-23</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="index.html">
+                    Splošno
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Vsebina
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="01_izrazi_spremenljivke_program.html">
+   1. Izrazi in spremenljivke
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="02a_pogoji.html">
+   2. Pogojni stavki
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav></div>
+        <div class="bd-sidebar__bottom">
+             <!-- To handle the deprecated key -->
+            
+            <div class="navbar_extra_footer">
+            Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+            </div>
+            
+        </div>
+    </div>
+    <div id="rtd-footer-container"></div>
+</div>
+
+
+          
+
+
+          
+<!-- A tiny helper pixel to detect if we've scrolled -->
+<div class="sbt-scroll-pixel-helper"></div>
+<!-- Main content -->
+<div class="col py-0 content-container">
+    
+    <div class="header-article row sticky-top noprint">
+        
+
+
+
+<div class="col py-1 d-flex header-article-main">
+    <div class="header-article__left">
+        
+        <label for="__navigation"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="right"
+title="Toggle navigation"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-bars"></i>
+  </span>
+
+</label>
+
+        
+    </div>
+    <div class="header-article__right">
+<div class="menu-dropdown menu-dropdown-launch-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Launch interactive content">
+      <i class="fas fa-rocket"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="https://mybinder.org/v2/gh/mihaTrajbaric/programiranje/main?urlpath=tree/09a oblikovanje nizov.ipynb"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Launch on Binder"
+>
+  
+
+<span class="headerbtn__icon-container">
+  
+    <img src="_static/images/logo_binder.svg">
+  </span>
+<span class="headerbtn__text-container">Binder</span>
+</a>
+
+      </li>
+      
+      <li>
+        
+<button onclick="initThebeSBT()"
+  class="headerbtn headerbtn-launch-thebe"
+  data-toggle="tooltip"
+data-placement="left"
+title="Launch Thebe"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-play"></i>
+  </span>
+<span class="headerbtn__text-container">Live Code</span>
+</button>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+
+<button onclick="toggleFullScreen()"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="bottom"
+title="Fullscreen mode"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+<div class="menu-dropdown menu-dropdown-repository-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Source repositories">
+      <i class="fab fa-github"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="https://github.com/mihaTrajbaric/programiranje"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Source repository"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="headerbtn__text-container">repository</span>
+</a>
+
+      </li>
+      
+      <li>
+        <a href="https://github.com/mihaTrajbaric/programiranje/issues/new?title=Issue%20on%20page%20%2F09a oblikovanje nizov.html&body=Your%20issue%20content%20here."
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Open an issue"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="headerbtn__text-container">open issue</span>
+</a>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+
+<div class="menu-dropdown menu-dropdown-download-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Download this page">
+      <i class="fas fa-download"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="_sources/09a oblikovanje nizov.ipynb"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Download source file"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="headerbtn__text-container">.ipynb</span>
+</a>
+
+      </li>
+      
+      <li>
+        
+<button onclick="printPdf(this)"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="left"
+title="Print to PDF"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="headerbtn__text-container">.pdf</span>
+</button>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+<label for="__page-toc"
+  class="headerbtn headerbtn-page-toc"
+  
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-list"></i>
+  </span>
+
+</label>
+
+    </div>
+</div>
+
+<!-- Table of contents -->
+<div class="col-md-3 bd-toc show noprint">
+    <div class="tocsection onthispage pt-5 pb-3">
+        <i class="fas fa-list"></i> Contents
+    </div>
+    <nav id="bd-toc-nav" aria-label="Page">
+        <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#f-nizi">
+   f-nizi
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#izrazi-v-f-nizih">
+   Izrazi v f-nizih
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#kako-oblikujemo-reci">
+   Kako oblikujemo reči
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#kontrolni-znaki-v-nizih">
+   Kontrolni znaki v nizih
+  </a>
+ </li>
+</ul>
+
+    </nav>
+</div>
+    </div>
+    <div class="article row">
+        <div class="col pl-md-3 pl-lg-5 content-container">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>Oblikovanje nizov</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#f-nizi">
+   f-nizi
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#izrazi-v-f-nizih">
+   Izrazi v f-nizih
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#kako-oblikujemo-reci">
+   Kako oblikujemo reči
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#kontrolni-znaki-v-nizih">
+   Kontrolni znaki v nizih
+  </a>
+ </li>
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            <main id="main-content" role="main">
+                
+              <div>
+                
+  <section class="tex2jax_ignore mathjax_ignore" id="oblikovanje-nizov">
+<h1>Oblikovanje nizov<a class="headerlink" href="#oblikovanje-nizov" title="Permalink to this headline">#</a></h1>
+<p>Pri izpisovanju smo bili doslej omejeni na dokaj zoprni <code class="docutils literal notranslate"><span class="pre">print</span></code>. Za začetek nam je zadoščal, kmalu pa postane neroden, saj nekaterih stvari z njim preprosto ni mogoče (preprosto) narediti. Za začetek se je potrebno z njim pogajati, da ne gre po vsakem izpisu v novo vrsto in da ne dodaja presledkov med reči, ki jih izpisujemo. Mu je mogoče reči, naj pri izpisu števil ne izpiše vseh šestnajst ali kolikor že decimalk? Tudi ne. <code class="docutils literal notranslate"><span class="pre">print</span></code> se s takimi rečmi ne ukvarja.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="mi">6</span> <span class="o">/</span> <span class="mi">7</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0.8571428571428571
+</pre></div>
+</div>
+</div>
+</div>
+<p>Kaj pa, če bi želeli število izpisati na samo dve decimalki? Res, nerodno.</p>
+<p>Večina besedil, ki jih izpišejo ali kako drugače pokažejo programi, vsebuje fiksno besedilo, v katerega so vstavljeni kaki nizi ali številke. Če računalnik izpiše “Datoteke <a class="reference external" href="http://kraljice.py">kraljice.py</a> ni mogoče najti”, je vstavljeno besedilo “<a class="reference external" href="http://kraljice.py">kraljice.py</a>”, ki je najbrž vsakič drugačno, odvisno pač od tega, katero datoteko (neuspešno) iščemo. V “60 Fahrenheitov je 16 Celzijevih stopinj” sta vstavljeni števili 60 in 16, ki sta odvisni od tega, v katerem semestru poženemo program, ostalo besedilo pa je vedno enako.</p>
+<p>Večina računalniških jezikov omogoča, da sestavimo nize tako, da napišemo “konstantni” niz, označimo mesta, na katera je potrebno nekaj vstaviti. Potem pa na nek način povemo, kaj naj vstavi. Popularni prevajani jeziki so večinoma povzeli način, ki so si ga izmislili v jeziku C; prepoznali ga boste po <code class="docutils literal notranslate"><span class="pre">%i</span></code> <code class="docutils literal notranslate"><span class="pre">%5.3f</span></code> in podobnih rečeh. Novejši jeziki, predvsem skriptni, ki so bližje spletu, pa navadno omogočajo preprostejše in zmogljivejše načine sestavljanja nizov iz vzorcev.</p>
+<p>Eno od načel Pythona je, da se da vsako stvar narediti na en in samo en očiten način. To je dobro zato, ker, posledično, vsi programerji pišemo podobne programe in zato lažje sodelujemo. Prav pri oblikovanju nizov pa se je to sfižilo: nize lahko oblikujemo na tri različne načine. Do tega je prišlo, ko je Python z leti postajal pametnejši. V začetku je uporabljal <a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#printf-style-string-formatting">nekoliko izboljšano različico C-jevskega oblikovanja</a>, saj druge praktično ni bilo. Kasneje so dodali <a class="reference external" href="https://docs.python.org/3.6/library/string.html#format-string-syntax">veliko preprostejši način oblikovanja nizov</a>, C-jevskega pa obdržali zato, da so stari programi še vedno delovali. Leta so tekla in programski jeziki napredovali. V modo je prišel drugačen še veliko prikladnejši način in Python je bil s svojima, precej nerodnejšima, videti prav štorast. Zato lahko od različice 3.6 naprej tudi v Pythonu oblikujemo nize na enak način kot v drugih modernih jezikih.</p>
+<p>Pri tem predmetu se bomo naučili le tretji načinu. Prva dva je potrebno poznati, če boste resno programirali v Pythonu in boste morali brati tudi tuje programe. Sami pa ju boste rekdo uporabili.</p>
+<section id="f-nizi">
+<h2>f-nizi<a class="headerlink" href="#f-nizi" title="Permalink to this headline">#</a></h2>
+<p>Recimo, da imamo</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">fahr</span> <span class="o">=</span> <span class="mi">42</span>
+<span class="n">celz</span> <span class="o">=</span> <span class="p">(</span><span class="n">fahr</span> <span class="o">-</span> <span class="mi">32</span><span class="p">)</span> <span class="o">*</span> <span class="mi">5</span> <span class="o">/</span> <span class="mi">9</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Zdaj bi radi sestavili, v bistvu, takšen niz:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="s2">&quot;</span><span class="si">{fahr}</span><span class="s2"> Fahrenheitov je </span><span class="si">{celz}</span><span class="s2"> Celzijev&quot;</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;{fahr} Fahrenheitov je {celz} Celzijev&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<p>le da želimo, da Python na mesti, ki smo ju označili s <code class="docutils literal notranslate"><span class="pre">{fahr}</span></code> in <code class="docutils literal notranslate"><span class="pre">{celz}</span></code>, vstavi vrednosti spremenljivk <code class="docutils literal notranslate"><span class="pre">fahr</span></code> in <code class="docutils literal notranslate"><span class="pre">celz</span></code>.</p>
+<p>To počnejo f-nizi. F-niz je kot običajen niz, le da mu pred prvi narekovaj dodamo črko f (kot <em>format</em>). V takšnih nizih imajo zaviti oklepaji poseben pomen: kar je v njih, se (izračuna in) vstavi.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">fahr</span><span class="si">}</span><span class="s2"> Fahrenheitov je </span><span class="si">{</span><span class="n">celz</span><span class="si">}</span><span class="s2"> Celzijev&quot;</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;42 Fahrenheitov je 5.555555555555555 Celzijev&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<p>V neki domači nalogi smo - oh, kako je bilo to nerodno! - pisali</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">random</span> <span class="kn">import</span> <span class="n">randint</span>
+
+<span class="n">a</span> <span class="o">=</span> <span class="n">randint</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">10</span><span class="p">)</span>
+<span class="n">b</span> <span class="o">=</span> <span class="n">randint</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">10</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="s2">&quot;krat&quot;</span><span class="p">,</span> <span class="n">b</span><span class="p">)</span>
+<span class="n">c</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Odgovor? &quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>S tem, da najprej izpišemo in potem zahtevmo odgovor, smo se izognili temu, da bi morali mukoma sestavljali niz ob klicu funkcije <code class="docutils literal notranslate"><span class="pre">input</span></code>:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="n">randint</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">10</span><span class="p">)</span>
+<span class="n">b</span> <span class="o">=</span> <span class="n">randint</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">10</span><span class="p">)</span>
+<span class="n">c</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Koliko je &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">a</span><span class="p">)</span> <span class="o">+</span> <span class="s2">&quot;x&quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">b</span><span class="p">)</span> <span class="o">+</span> <span class="s2">&quot;?&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Zdaj, ko poznamo metodo f-nize, poznamo preprostejši način:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="n">randint</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">10</span><span class="p">)</span>
+<span class="n">b</span> <span class="o">=</span> <span class="n">randint</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">10</span><span class="p">)</span>
+<span class="n">c</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Koliko je </span><span class="si">{</span><span class="n">a</span><span class="si">}</span><span class="s2">x</span><span class="si">{</span><span class="n">b</span><span class="si">}</span><span class="s2">? &quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>(Mimogrede omenimo starejša načina oblikovanja nizov, ki smo ju omenjali na začetku: v C-jevskem slogu bi pisali <code class="docutils literal notranslate"><span class="pre">c</span> <span class="pre">=</span> <span class="pre">input(&quot;Koliko</span> <span class="pre">je</span> <span class="pre">%sx%s?</span> <span class="pre">&quot;</span> <span class="pre">%</span> <span class="pre">(a,</span> <span class="pre">b))</span></code>, v onem malo novejšem pa <code class="docutils literal notranslate"><span class="pre">c</span> <span class="pre">=</span> <span class="pre">input(&quot;Koliko</span> <span class="pre">je</span> <span class="pre">{}x{}?</span> <span class="pre">&quot;.format(a,</span> <span class="pre">b))</span></code>. Obema je skupno to, da so v nizu le označena mesta, kamor je potrebno vstavljati, potem pa moramo na nekem drugem mestu, po koncu niza, našteti stvari, ki jih vstavljamo. Z novejšim slogom lahko z nekimi čudnimi triki v zavite oklepaje dodajamo tudi imena spremenljivk, vendar niti približno tako udobno kot po novem.)</p>
+<p>Na ta način ne vstavljamo le števil, temveč karkoli, kar se da izpisati.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">datoteka</span> <span class="o">=</span> <span class="s2">&quot;kraljice.py&quot;</span>
+<span class="sa">f</span><span class="s2">&quot;Datoteke </span><span class="si">{</span><span class="n">datoteka</span><span class="si">}</span><span class="s2"> ne najdem&quot;</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;Datoteke kraljice.py ne najdem&#39;
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="izrazi-v-f-nizih">
+<h2>Izrazi v f-nizih<a class="headerlink" href="#izrazi-v-f-nizih" title="Permalink to this headline">#</a></h2>
+<p>V nize ne vstavljamo le vrednosti spremenljivk: v zavite oklepaje lahko pišemo kar cele izraze.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">fahr</span> <span class="o">=</span> <span class="mi">42</span>
+
+<span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">fahr</span><span class="si">}</span><span class="s2"> Fahrenheitov je </span><span class="si">{</span><span class="p">(</span><span class="n">fahr</span> <span class="o">-</span> <span class="mi">32</span><span class="p">)</span> <span class="o">*</span> <span class="mi">5</span> <span class="o">/</span> <span class="mi">9</span><span class="si">}</span><span class="s2"> Celzijev&quot;</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;42 Fahrenheitov je 5.555555555555555 Celzijev&#39;
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="kako-oblikujemo-reci">
+<h2>Kako oblikujemo reči<a class="headerlink" href="#kako-oblikujemo-reci" title="Permalink to this headline">#</a></h2>
+<p>Nize zdaj znamo zlagati, tistega, kar nas je najbolj motilo, pa se sploh še nismo lotili: 60.0 Fahrenheitov je 15.555555555555555 Celzijev? Za moje potrebe bi popolnoma zadostovalo 15.5 in tudi pri 15 me ne bi nič bolj zeblo.</p>
+<p>Če bi radi povedali, kako naj se izpiše neko število (ali niz ali karkoli že), dodamo izrazu dvopičje in za njim opis formata.</p>
+<p>To bomo najpogosteje potrebovali za oblikovanje necelih števil. To gre tako:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">fahr</span><span class="si">:</span><span class="s2">4.1f</span><span class="si">}</span><span class="s2"> Fahrenheitov je </span><span class="si">{</span><span class="n">celz</span><span class="si">:</span><span class="s2">4.1f</span><span class="si">}</span><span class="s2"> Celzijev&quot;</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;42.0 Fahrenheitov je  5.6 Celzijev&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<p>Opis formata je tule <code class="docutils literal notranslate"><span class="pre">4.1f</span></code>. Pri tem <code class="docutils literal notranslate"><span class="pre">4.1</span></code> pomeni, da bi radi izpis na štiri mesta, pri čemer naj bo eno rezervirano za decimalko. Za črko <code class="docutils literal notranslate"><span class="pre">f</span></code> si predstavljajte, da pomeni <code class="docutils literal notranslate"><span class="pre">float</span></code>.</p>
+<p>Če pustimo za število premalo prostora, ga bo izpis pač zasedel več.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="mf">1234.5678</span>
+<span class="sa">f</span><span class="s2">&quot;Primer predolgega števila: </span><span class="si">{</span><span class="n">x</span><span class="si">:</span><span class="s2">3.1f</span><span class="si">}</span><span class="s2">&quot;</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;Primer predolgega števila: 1234.6&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<p>Zahtevali smo eno decimalko in to smo tudi dobili, vse skupaj pa je širše kot
+štiri mesta, saj je število pač predolgo.</p>
+<p>Določanje števila decimalk je smiselno le pri necelih številih. Če
+vstavljamo nize ali cela števila, lahko določamo le širino:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">podatki</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="p">(</span><span class="mi">74</span><span class="p">,</span> <span class="s2">&quot;Anze&quot;</span><span class="p">,</span> <span class="kc">False</span><span class="p">),</span>
+    <span class="p">(</span><span class="mi">82</span><span class="p">,</span> <span class="s2">&quot;Benjamin&quot;</span><span class="p">,</span> <span class="kc">False</span><span class="p">),</span>
+    <span class="p">(</span><span class="mi">48</span><span class="p">,</span> <span class="s2">&quot;Cilka&quot;</span><span class="p">,</span> <span class="kc">True</span><span class="p">),</span>
+    <span class="p">(</span><span class="mi">66</span><span class="p">,</span> <span class="s2">&quot;Dani&quot;</span><span class="p">,</span> <span class="kc">False</span><span class="p">),</span>
+    <span class="p">(</span><span class="mi">61</span><span class="p">,</span> <span class="s2">&quot;Eva&quot;</span><span class="p">,</span> <span class="kc">True</span><span class="p">),</span>
+    <span class="p">(</span><span class="mi">101</span><span class="p">,</span> <span class="s2">&quot;Franc&quot;</span><span class="p">,</span> <span class="kc">False</span><span class="p">),</span>
+    <span class="p">]</span>
+
+<span class="k">for</span> <span class="n">teza</span><span class="p">,</span> <span class="n">ime</span><span class="p">,</span> <span class="n">spol</span> <span class="ow">in</span> <span class="n">podatki</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">ime</span><span class="si">:</span><span class="s2">10</span><span class="si">}{</span><span class="n">teza</span><span class="si">:</span><span class="s2">6</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Anze          74
+Benjamin      82
+Cilka         48
+Dani          66
+Eva           61
+Franc        101
+</pre></div>
+</div>
+</div>
+</div>
+<p>Tu za številom mest nismo dodajali črke <code class="docutils literal notranslate"><span class="pre">f</span></code>, saj ne gre za (necela) števila. Za nizi pa sploh ne. (Obstajajo sicer druge črke, ki bi jih lahko dodali, da Python povemo, za kaj gre, vendar jih smemo tule brez škode pozabiti.)</p>
+<p>Vsa imena so izpisana z desetimi znaki; manjkajoči prostor je zapolnjen s presledki. Številke so izpisane s šestimi mesti, manjkajoči prostor spet zapolnjujejo presledki.</p>
+<p>Nizi so poravnani na levo - presledki so dodani za njimi. Večina reči, ki jih izpisujemo (nizi in števila namreč niso edino, kar se da izpisati), so poravnani tako. Številke pa so poravnane desno. To lahko spremenimo, če za dvopičje dodamo <code class="docutils literal notranslate"><span class="pre">&lt;</span></code>, <code class="docutils literal notranslate"><span class="pre">&gt;</span></code> ali <code class="docutils literal notranslate"><span class="pre">^</span></code>, s katerimi naročimo, naj bo reč poravnana levo, desno ali na sredino. Ravno obratni izpis kot zgoraj bi dosegli z</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">teza</span><span class="p">,</span> <span class="n">ime</span><span class="p">,</span> <span class="n">spol</span> <span class="ow">in</span> <span class="n">podatki</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">ime</span><span class="si">:</span><span class="s2">&gt;10</span><span class="si">}{</span><span class="n">teza</span><span class="si">:</span><span class="s2">&lt;6</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>      Anze74    
+  Benjamin82    
+     Cilka48    
+      Dani66    
+       Eva61    
+     Franc101   
+</pre></div>
+</div>
+</div>
+</div>
+<p>To ni ravno posrečeno. Dodajmo še presledek.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">teza</span><span class="p">,</span> <span class="n">ime</span><span class="p">,</span> <span class="n">spol</span> <span class="ow">in</span> <span class="n">podatki</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">ime</span><span class="si">:</span><span class="s2">&gt;10</span><span class="si">}</span><span class="s2"> </span><span class="si">{</span><span class="n">teza</span><span class="si">:</span><span class="s2">&lt;6</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>      Anze 74    
+  Benjamin 82    
+     Cilka 48    
+      Dani 66    
+       Eva 61    
+     Franc 101   
+</pre></div>
+</div>
+</div>
+</div>
+<p>To je lažje berljivo, še vedno pa je seveda najlepši prvi izpis.</p>
+<p>Pred znak, ki določa poravnavo, lahko dodamo simbol, ki naj se uporabi za zapolnjevanje - če seveda nismo zadovoljni s presledkom. Poravnajmo imena levo, števile desno, namesto presledkov pa zapolnimo prazen prostor s pikami.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">teza</span><span class="p">,</span> <span class="n">ime</span><span class="p">,</span> <span class="n">spol</span> <span class="ow">in</span> <span class="n">podatki</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">ime</span><span class="si">:</span><span class="s2">.&lt;10</span><span class="si">}{</span><span class="n">teza</span><span class="si">:</span><span class="s2">.&gt;6</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Anze..........74
+Benjamin......82
+Cilka.........48
+Dani..........66
+Eva...........61
+Franc........101
+</pre></div>
+</div>
+</div>
+</div>
+<p>Namesto pik lahko uporabimo poljuben drug znak. Kadar takole zapolnjujemo prostor s čimerkoli drugim kot s presledki, moramo dodati znake za poravnavanje (<code class="docutils literal notranslate"><span class="pre">&lt;</span></code>, <code class="docutils literal notranslate"><span class="pre">&gt;</span></code> ali <code class="docutils literal notranslate"><span class="pre">^</span></code>), tudi kadar z njimi izberemo takšno poravnavanje, kot bi bilo tudi privzeto (desno za števila, levo za vse drugo) všeč.</p>
+<p>V vse detajle ne bomo šli. Določiti je mogoče še veliko reči. Pri številih lahko zahtevamo, naj se vedno izpiše predznak, torej +, kadar je število pozitivno. Za števila lahko določimo, naj se izpišejo dvojiško ali šestnajstiško… Kdor potrebuje več kot to, naj Googla.</p>
+</section>
+<section id="kontrolni-znaki-v-nizih">
+<h2>Kontrolni znaki v nizih<a class="headerlink" href="#kontrolni-znaki-v-nizih" title="Permalink to this headline">#</a></h2>
+<p>Niz se lahko razprostira prek več vrstic, če ga zapremo v trojne narekovaje.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">s</span> <span class="o">=</span> <span class="s2">&quot;&quot;&quot;Niz, ki je</span>
+<span class="s2">dolg vec vrstic.</span>
+<span class="s2">Konkretno, tri!&quot;&quot;&quot;</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">s</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Niz, ki je
+dolg vec vrstic.
+Konkretno, tri!
+</pre></div>
+</div>
+</div>
+</div>
+<p>V nizu so očitno shranjena mesta, ko mora pri izpisu iti v novo vrstico. Kako?</p>
+<p>Poleg “običajnih” znakov, ki jih je mogoče izpisati, vsebuje niz tudi kontrolne znake. Če jih želimo “videti”, to lahko storimo tako, da niz izpišemo v ukazni vrstici, vendar brez <code class="docutils literal notranslate"><span class="pre">print</span></code>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">s</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;Niz, ki je\ndolg vec vrstic.\nKonkretno, tri!&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<p>Znak <code class="docutils literal notranslate"><span class="pre">\n</span></code> ni pravi znak (in, predvsem, nista dva znaka, temveč en sam) in pomeni prehod v novo vrstico. Napišemo ga lahko tudi sami.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">s</span> <span class="o">=</span> <span class="s2">&quot;Tole gre pa</span><span class="se">\n</span><span class="s2">v dve vrstici&quot;</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Se pravi, vedno, ko v niz napišemo <code class="docutils literal notranslate"><span class="pre">\n</span></code>, Python tega ne bo
+razumel kot vzvratno poševnico (<em>backslash</em>), temveč kot znak za
+prehod v novo vrsto (<em>new line</em>). Podobnih znakov je še več, vendar
+navadno uporabljamo le še enega, namreč <code class="docutils literal notranslate"><span class="pre">\t</span></code>, ki pomeni
+tabulator. Pa ga preskusimo.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span> <span class="mi">15</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">i</span><span class="si">}</span><span class="se">\t</span><span class="si">{</span><span class="n">i</span><span class="o">**</span><span class="mi">2</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>5	25
+6	36
+7	49
+8	64
+9	81
+10	100
+11	121
+12	144
+13	169
+14	196
+</pre></div>
+</div>
+</div>
+</div>
+<p>Zaporedjem, ko sta <code class="docutils literal notranslate"><span class="pre">\n</span></code> in <code class="docutils literal notranslate"><span class="pre">\t</span></code> pravimo ubežna zaporedja (<em>escape sequence</em>).</p>
+<p>V računalnikovem pomnilniku so znaki shranjeni kot številke: vsakemu znaku ustreza določena številka. V kodiranju ASCII, ki ga običajno uporabljamo, je, npr. koda znaka A 65, koda B je 66, koda C je 67 in tako naprej. Kode  a, b in c so 97, 98 in 99… Koda presledka je 32. Vsi kontrolni znaki imajo kode manjše od 32. Tako je koda znaka <code class="docutils literal notranslate"><span class="pre">\n</span></code> 10 in koda tabulatorja, <code class="docutils literal notranslate"><span class="pre">\t</span></code> je 9. Več o ASCII si lahko preberete <a class="reference external" href="http://en.wikipedia.org/wiki/Ascii">tule</a>. Na tej strani se nahaja tudi <a class="reference external" href="http://en.wikipedia.org/wiki/Ascii#ASCII_printable_characters">seznam kod ASCII</a>.</p>
+<p>Da gre pri <code class="docutils literal notranslate"><span class="pre">\n</span></code> za en znak in ne za dva, se lahko hitro prepričamo.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">s</span> <span class="o">=</span> <span class="s2">&quot;a</span><span class="se">\n</span><span class="s2">b&quot;</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">s</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>a
+b
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">s</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>3
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">s</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;\n&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<p>Znake lahko opisujemo tudi z njihovimi kodami. To storimo z ubežnim zaporedjem <code class="docutils literal notranslate"><span class="pre">\x</span></code>, ki ji sledi koda znaka, zapisana v šestnajstiškem številskem sistemu. Tako, je, npr. koda črke a 97, to je 61 po šestnajstiško, koda z pa 122 oz. 7a po šestnajstiško. Zato lahko niz “Janez” napišemo tudi takole.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="s2">&quot;J</span><span class="se">\x61</span><span class="s2">ne</span><span class="se">\x7a</span><span class="s2">&quot;</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;Janez&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<p>Tega seveda ne počnemo, ker nima smisla. Pač pa nam ubežno zaporedje pride prav, kadar želimo zapisovati kake nenavadne kontrolne znake. Včasih bomo naleteli, na primer, na znak s kodo 0. Tega zapišemo kot <code class="docutils literal notranslate"><span class="pre">\x00</span></code> (pazite, napisati je potrebno dve ničli!).</p>
+<p>Vzvratna poševnica (<em>backslash</em>) ima torej v nizih posebno vlogo: uporablja se za ubežno zaporedje. Kaj pa, kadar želimo, da bi bila vzvratna poševnica samo vzvratna poševnica? V tem primeru naredimo dve. Torej: <code class="docutils literal notranslate"><span class="pre">\\</span></code> je ubežno zaporedje, ki predstavlja vzvratno poševnico (eno samo!). Kupiš dva, dobiš enega. Na Windowsih bomo to reč najpogosteje srečali v imenih direktorijev.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">dir</span> <span class="o">=</span> <span class="s2">&quot;c:</span><span class="se">\\</span><span class="s2">documents and settings</span><span class="se">\\</span><span class="s2">nina</span><span class="se">\\</span><span class="s2">telovadba&quot;</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">dir</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>c:\documents and settings\nina\telovadba
+</pre></div>
+</div>
+</div>
+</div>
+<p>Še enkrat, ker je pomembno: ko pišemo imena direktorijev, vedno pišemo dvojne vzvratne poševnice, da bomo dobili enojne. Ali pa, še boljše: pišimo kar običajne poševnice, enojne. Tako napisani programi bodo delovali tudi na Linuxu in Macu.</p>
+<p>Če pozabimo pisati dvojne poševnice, dobimo, kar si zaslužimo, kar ni nujno tisto, kar bi radi.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">dir</span> <span class="o">=</span> <span class="s2">&quot;c:\documents and settings</span><span class="se">\n</span><span class="s2">ina</span><span class="se">\t</span><span class="s2">elovadba&quot;</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">dir</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>c:\documents and settings
+ina	elovadba
+</pre></div>
+</div>
+</div>
+</div>
+<p><code class="docutils literal notranslate"><span class="pre">\n</span></code> in <code class="docutils literal notranslate"><span class="pre">\t</span></code> sta znaka za novo vrstico in za tabulator.</p>
+<p>Pisanju dvojnih poševnic se lahko izognemo z r-nizi (<em>r</em> kor <em>raw</em>). Ti so podobni f-nizom, le da pred narekovaj damo črko <code class="docutils literal notranslate"><span class="pre">r</span></code> in vzvratna poševnica bo samo vzvratna poševnica.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">dir</span> <span class="o">=</span> <span class="sa">r</span><span class="s2">&quot;c:\documents and settings\nina\telovadba&quot;</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">dir</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>c:\documents and settings\nina\telovadba
+</pre></div>
+</div>
+</div>
+</div>
+<p>V tem primeru v niz ne moremo dati ubežnega zaporedja <code class="docutils literal notranslate"><span class="pre">\n</span></code>, saj bosta <code class="docutils literal notranslate"><span class="pre">\</span></code> in <code class="docutils literal notranslate"><span class="pre">n</span></code> v tem primeru res pomenila samo <code class="docutils literal notranslate"><span class="pre">\</span></code> in <code class="docutils literal notranslate"><span class="pre">n</span></code>.</p>
+<p>Med vsemi drugimi ubežnimi zaporedji omenimo le še dve: <code class="docutils literal notranslate"><span class="pre">\'</span></code> in <code class="docutils literal notranslate"><span class="pre">\&quot;</span></code> predstavljata enojni in dvojni narekovaj.</p>
+<p>Mimogrede, če vam bo kdaj prišlo prav: kodo znaka dobimo s funkcijo <code class="docutils literal notranslate"><span class="pre">ord</span></code>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">ord</span><span class="p">(</span><span class="s2">&quot;A&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>65
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">ord</span><span class="p">(</span><span class="s2">&quot;B&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>66
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">ord</span><span class="p">(</span><span class="s2">&quot;a&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>97
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">ord</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>10
+</pre></div>
+</div>
+</div>
+</div>
+<p>V drugo smer vodi funkcija <code class="docutils literal notranslate"><span class="pre">chr</span></code>, ki ji povemo kodo znaka in vrne niz, ki vsebuje znak s to kodo.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">chr</span><span class="p">(</span><span class="mi">65</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;A&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">chr</span><span class="p">(</span><span class="mi">66</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;B&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">chr</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;\n&#39;
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "mihaTrajbaric/programiranje",
+            ref: "main",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+            </main>
+            <footer class="footer-article noprint">
+                
+    <!-- Previous / next buttons -->
+<div class='prev-next-area'>
+</div>
+            </footer>
+        </div>
+    </div>
+    <div class="footer-content row">
+        <footer class="col footer"><p>
+  
+    By Mihael Trajbarič<br/>
+  
+      &copy; Copyright 2022.<br/>
+</p>
+        </footer>
+    </div>
+    
+</div>
+
+
+      </div>
+    </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+
+
+  </body>
+</html>
