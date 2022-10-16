@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>Naloge: Čisti začetek &#8212; Krožek začetnega programiranja 2022-23</title>
+    <title>Kako pišemo module &#8212; Krožek začetnega programiranja 2022-23</title>
     
   <!-- Loaded before other Sphinx assets -->
   <link href="_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
@@ -50,8 +50,6 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="_static/sphinx-thebe.js"></script>
-    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
-    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -180,6 +178,53 @@ title="Toggle navigation"
         
     </div>
     <div class="header-article__right">
+<div class="menu-dropdown menu-dropdown-launch-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Launch interactive content">
+      <i class="fas fa-rocket"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="https://mybinder.org/v2/gh/mihaTrajbaric/programiranje/main?urlpath=tree/04c pisanje modulov.ipynb"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Launch on Binder"
+>
+  
+
+<span class="headerbtn__icon-container">
+  
+    <img src="_static/images/logo_binder.svg">
+  </span>
+<span class="headerbtn__text-container">Binder</span>
+</a>
+
+      </li>
+      
+      <li>
+        
+<button onclick="initThebeSBT()"
+  class="headerbtn headerbtn-launch-thebe"
+  data-toggle="tooltip"
+data-placement="left"
+title="Launch Thebe"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-play"></i>
+  </span>
+<span class="headerbtn__text-container">Live Code</span>
+</button>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+
 <button onclick="toggleFullScreen()"
   class="headerbtn"
   data-toggle="tooltip"
@@ -219,7 +264,7 @@ title="Source repository"
       </li>
       
       <li>
-        <a href="https://github.com/mihaTrajbaric/programiranje/issues/new?title=Issue%20on%20page%20%2F01_naloge.html&body=Your%20issue%20content%20here."
+        <a href="https://github.com/mihaTrajbaric/programiranje/issues/new?title=Issue%20on%20page%20%2F04c pisanje modulov.html&body=Your%20issue%20content%20here."
    class="headerbtn"
    data-toggle="tooltip"
 data-placement="left"
@@ -247,7 +292,7 @@ title="Open an issue"
   <div class="menu-dropdown__content">
     <ul>
       <li>
-        <a href="_sources/01_naloge.md"
+        <a href="_sources/04c pisanje modulov.ipynb"
    class="headerbtn"
    data-toggle="tooltip"
 data-placement="left"
@@ -258,7 +303,7 @@ title="Download source file"
 <span class="headerbtn__icon-container">
   <i class="fas fa-file"></i>
   </span>
-<span class="headerbtn__text-container">.md</span>
+<span class="headerbtn__text-container">.ipynb</span>
 </a>
 
       </li>
@@ -284,90 +329,23 @@ title="Print to PDF"
     </ul>
   </div>
 </div>
-<label for="__page-toc"
-  class="headerbtn headerbtn-page-toc"
-  
->
-  
-
-<span class="headerbtn__icon-container">
-  <i class="fas fa-list"></i>
-  </span>
-
-</label>
 
     </div>
 </div>
 
 <!-- Table of contents -->
 <div class="col-md-3 bd-toc show noprint">
-    <div class="tocsection onthispage pt-5 pb-3">
-        <i class="fas fa-list"></i> Contents
-    </div>
-    <nav id="bd-toc-nav" aria-label="Page">
-        <ul class="visible nav section-nav flex-column">
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#pretvarjanje-iz-fahrenheitov-v-celzije">
-   Pretvarjanje iz Fahrenheitov v Celzije
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#pitagorov-izrek">
-   Pitagorov izrek
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#topologija">
-   Topologija
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#ploscina-trikotnika">
-   Ploščina trikotnika
-  </a>
- </li>
-</ul>
-
-    </nav>
 </div>
     </div>
     <div class="article row">
         <div class="col pl-md-3 pl-lg-5 content-container">
             <!-- Table of contents that is only displayed when printing the page -->
             <div id="jb-print-docs-body" class="onlyprint">
-                <h1>Naloge: Čisti začetek</h1>
+                <h1>Kako pišemo module</h1>
                 <!-- Table of contents -->
                 <div id="print-main-content">
                     <div id="jb-print-toc">
                         
-                        <div>
-                            <h2> Contents </h2>
-                        </div>
-                        <nav aria-label="Page">
-                            <ul class="visible nav section-nav flex-column">
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#pretvarjanje-iz-fahrenheitov-v-celzije">
-   Pretvarjanje iz Fahrenheitov v Celzije
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#pitagorov-izrek">
-   Pitagorov izrek
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#topologija">
-   Topologija
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#ploscina-trikotnika">
-   Ploščina trikotnika
-  </a>
- </li>
-</ul>
-
-                        </nav>
                     </div>
                 </div>
             </div>
@@ -375,47 +353,47 @@ title="Print to PDF"
                 
               <div>
                 
-  <section class="tex2jax_ignore mathjax_ignore" id="naloge-cisti-zacetek">
-<h1>Naloge: Čisti začetek<a class="headerlink" href="#naloge-cisti-zacetek" title="Permalink to this headline">#</a></h1>
-<section id="pretvarjanje-iz-fahrenheitov-v-celzije">
-<h2>Pretvarjanje iz Fahrenheitov v Celzije<a class="headerlink" href="#pretvarjanje-iz-fahrenheitov-v-celzije" title="Permalink to this headline">#</a></h2>
-<p>Napiši program, ki mu uporabnik vpiše temperaturo v Fahrenheitovih stopinjah, program pa
-jo izpiše v Celzijevih. Med temperaturama pretvarjamo po formuli <span class="math notranslate nohighlight">\(C = 5/9 (F – 32)\)</span>. Za potrebe
-Američanov napiši še program, ki računa v nasprotno smer.
-Če se k tej nalogi vračaš, da jo uporabiš za vajo iz pisanja funkcij, pa napiši funkciji <code class="docutils literal notranslate"><span class="pre">celsius(f)</span></code>
-in <code class="docutils literal notranslate"><span class="pre">fahrenheit(c)</span></code>. Prva prejme temperaturo v Fahrenheitih in vrne temperaturo v Celzijevih
-stopinjah, druga pa ravno obratno.</p>
-</section>
-<section id="pitagorov-izrek">
-<h2>Pitagorov izrek<a class="headerlink" href="#pitagorov-izrek" title="Permalink to this headline">#</a></h2>
-<p>Napiši program, ki uporabnika vpraša po dolžinah katet pravokotnega trikotnika in izpiše
-dolžino hipotenuze.
-Če nalogo uporabljaš za vajo iz pisanja funkcij, napiši funkcijo <code class="docutils literal notranslate"><span class="pre">pitagora(a,</span> <span class="pre">b)</span></code>, ki prejme
-dolžini katet in vrne dolžino hipotenuze.</p>
-</section>
-<section id="topologija">
-<h2>Topologija<a class="headerlink" href="#topologija" title="Permalink to this headline">#</a></h2>
-<p>Napiši program za izračun dolžine strela s topom (ki brez trenja izstreljuje točkaste krogle v
-brezzračnem prostoru, a pustimo trivio). Program od uporabnika ali uporabnice zahteva, da
-vnese hitrost izstrelka (to je, omenjene točkaste krogle) in kot, pod katerim je izstreljen.
-Program naj izračuna in izpiše, kako daleč bo letela krogla.
-Pomoč za fizično nebogljene: <span class="math notranslate nohighlight">\(s=v^2sin(2\phi)/g\)</span> kjer je <span class="math notranslate nohighlight">\(s\)</span> razdalja, <span class="math notranslate nohighlight">\(v\)</span> hitrost izstrelka, <span class="math notranslate nohighlight">\(\phi\)</span> je kot, <span class="math notranslate nohighlight">\(g\)</span> pa
-težnostni pospešek (privzemi <span class="math notranslate nohighlight">\(g=9,81 m/s^2\)</span>).
-Preveri tole: krogla leti najdalj, če jo izstrelimo pod kotom 45 stopinj. Poskusi, kako daleč gre
-pod kotom 45 in kako daleč pod 46 stopinj – po 45 mora leteti dlje. Preveri tudi kot 50 stopinj:
-če pod tem kotom leti nazaj (razdalja je negativna), si ga gotovo nekje polomil.
-Če boš napisal rešitev v obliki funkcije, naj bo to funkcija <code class="docutils literal notranslate"><span class="pre">top(v,</span> <span class="pre">fi)</span></code>.</p>
-</section>
-<section id="ploscina-trikotnika">
-<h2>Ploščina trikotnika<a class="headerlink" href="#ploscina-trikotnika" title="Permalink to this headline">#</a></h2>
-<p>Ploščino trikotnika s stranicami a, b in c lahko izračunamo po Heronovem obrazcu:
-<span class="math notranslate nohighlight">\(p = \sqrt{s(s − a)(s − b)(s − c)}\)</span> , kjer je s velikost polobsega, <span class="math notranslate nohighlight">\(s = (a + b + c) / 2\)</span> . Napiši program,
-ki uporabnika vpraša po dolžinah stranic in izpiše (njegovo) ploščino.
-Program naj popazi na nepravilne podatke. Če uporabnik zatrdi, da ima trikotnik stranice 1, 2
-in 5 (takšnega trikotnika – razmisli – pač ni), naj ga program pozove k resnosti.
-Če nalogo rešuješ s funkcijo, naj se imenuje <code class="docutils literal notranslate"><span class="pre">ploscina_trikotnika</span></code>, prejme naj dolžine stranic
-in ne pazi na nič. Če so podatki čudni, naj se pač sesuje.</p>
-</section>
+  <section id="kako-pisemo-module">
+<h1>Kako pišemo module<a class="headerlink" href="#kako-pisemo-module" title="Permalink to this headline">#</a></h1>
+<p>Napišimo program, ki bo vseboval konstanto <code class="docutils literal notranslate"><span class="pre">odgovor</span></code>, ki bo imela
+vrednost 42, in funkcijo, ki računa Fibonaccijeva števila.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">odgovor</span> <span class="o">=</span> <span class="mi">42</span>
+
+<span class="k">def</span> <span class="nf">fibonacci</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+    <span class="n">a</span> <span class="o">=</span> <span class="n">b</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+        <span class="n">a</span><span class="p">,</span> <span class="n">b</span> <span class="o">=</span> <span class="n">b</span><span class="p">,</span> <span class="n">a</span><span class="o">+</span><span class="n">b</span>
+    <span class="k">return</span> <span class="n">a</span>
+</pre></div>
+</div>
+<p>Program shranimo pod imenom <a class="reference external" href="http://fibo.py">fibo.py</a>.</p>
+<p>To je to. V drugem programu lahko rečemo</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">fibo</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Odgovor je&quot;</span><span class="p">,</span> <span class="n">fibo</span><span class="o">.</span><span class="n">odgovor</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Deseto Fibonaccijevo število pa je&quot;</span><span class="p">,</span> <span class="n">fibo</span><span class="o">.</span><span class="n">fibonacci</span><span class="p">(</span><span class="mi">10</span><span class="p">))</span>
+</pre></div>
+</div>
+<p>Tudi vse ostale finte, na primer, <code class="docutils literal notranslate"><span class="pre">from</span> <span class="pre">fibo</span> <span class="pre">import</span> <span class="pre">odgovor</span></code>, delujejo.</p>
+<p>Modul ni nič drugega kot program, ki ga uvozimo.</p>
+<p>Tudi vsi drugi programi, ki ste jih napisali doslej, so hkrati moduli:
+lahko jih uvozite. Pazite le na tole: ko modul uvozimo, se ta v resnici
+izvede, čisto tako, kot bi se izvajal program. Vse, kar se v tem
+programu-modulu definira, ostane definirano in se nahaja v modulovem
+imenskem prostoru. Vendar se zgodi tudi vse ostalo, kar piše v modulu:
+če pri izvajanju naleti na <code>print(“Foo”)</code> se bo ob uvozu
+modula izpisalo Foo. Če program-modul vsebuje klic funkcije (in ne le
+definicij), se bo ta funkcija poklicala tudi ob uvozu.</p>
+<p>Kje Python išče module? Navadno v trenutnem direktoriju, poleg tega pa
+še v drugih. Na Windowsih v, recimo, <code>c:-packages</code>. Več o tem
+si lahko preberete v dokumentaciji.</p>
+<p>Tudi sicer ne bomo rinili prav globoko v module, samo še eno stvar
+omenimo, da vas ne bo presenetila. Ko boste prvič uvozili modul, se bo
+poleg datoteke s končnico .py pojavila še ena, z enakim imenom, a
+končnico .pyc. Python si vanjo “prevede” (pravzaprav bi smeli pisati
+brez narekovajev, temu se v resnici reče prevajanje) v obliko, v kateri
+ga bo lahko naslednjič hitreje uvozil. Pri manjših modulih se to ne
+pozna, pri velikem številu velikih modulov pa. Če vas moti, jo lahko
+pobrišete; drugič se bo pač spet pojavila ponovno.</p>
 </section>
 
     <script type="text/x-thebe-config">
