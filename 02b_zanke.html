@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>3. Zanke &#8212; Krožek začetnega programiranja 2022-23</title>
+    <title>Zanke &#8212; Krožek začetnega programiranja 2022-23</title>
     
   <!-- Loaded before other Sphinx assets -->
   <link href="_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
@@ -52,7 +52,6 @@ const thebe_selector_output = ".output, .cell_output"
     <script async="async" src="_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="prev" title="2. Pogojni stavki" href="02a_pogoji.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -117,7 +116,7 @@ const thebe_selector_output = ".output, .cell_output"
   Vsebina
  </span>
 </p>
-<ul class="current nav bd-sidenav">
+<ul class="nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="01_izrazi_spremenljivke_program.html">
    1. Izrazi in spremenljivke
@@ -126,11 +125,6 @@ const thebe_selector_output = ".output, .cell_output"
  <li class="toctree-l1">
   <a class="reference internal" href="02a_pogoji.html">
    2. Pogojni stavki
-  </a>
- </li>
- <li class="toctree-l1 current active">
-  <a class="current reference internal" href="#">
-   3. Zanke
   </a>
  </li>
 </ul>
@@ -359,12 +353,12 @@ title="Print to PDF"
         <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#prva-zanka">
-   3.1. Prva zanka
+   Prva zanka
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#kaj-je-domneval-collatz">
-   3.2. Kaj je domneval Collatz
+   Kaj je domneval Collatz
   </a>
  </li>
 </ul>
@@ -388,12 +382,12 @@ title="Print to PDF"
                             <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#prva-zanka">
-   3.1. Prva zanka
+   Prva zanka
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#kaj-je-domneval-collatz">
-   3.2. Kaj je domneval Collatz
+   Kaj je domneval Collatz
   </a>
  </li>
 </ul>
@@ -407,9 +401,9 @@ title="Print to PDF"
               <div>
                 
   <section class="tex2jax_ignore mathjax_ignore" id="zanke">
-<h1><span class="section-number">3. </span>Zanke<a class="headerlink" href="#zanke" title="Permalink to this headline">#</a></h1>
+<h1>Zanke<a class="headerlink" href="#zanke" title="Permalink to this headline">#</a></h1>
 <section id="prva-zanka">
-<h2><span class="section-number">3.1. </span>Prva zanka<a class="headerlink" href="#prva-zanka" title="Permalink to this headline">#</a></h2>
+<h2>Prva zanka<a class="headerlink" href="#prva-zanka" title="Permalink to this headline">#</a></h2>
 <p>Kaj znamo narediti doslej: znamo napisati program, ki kaj vpraša, kaj računa in kaj izpiše. Naši programi se izvajajo od začetka do konca, s tem da lahko vmes preskočijo kak blok ukazov, ki se nahajajo znotraj kakega <code class="docutils literal notranslate"><span class="pre">if</span></code>, <code class="docutils literal notranslate"><span class="pre">else</span></code> ali <code class="docutils literal notranslate"><span class="pre">elif</span></code>. Večino časa pa smo preživeli ob tem, kako napisati pogoj, se pravi, izraz, katerega vrednost je lahko resnično ali neresnično, <code class="docutils literal notranslate"><span class="pre">True</span></code> ali <code class="docutils literal notranslate"><span class="pre">False</span></code>. Zdaj pa se bomo naučili napisati programe, v katerih se del programa ponavlja.</p>
 <p>V večini programskih jezikov to naredimo z nečim, čemur mi rečemo zanka, Avstralci (razen aboriginov) pa <em>loop</em>. Jeziki imajo navadno več vrst zank, pogosto tri. Python premore samo dve in danes bomo spoznali prvo od njiju: zanko <strong>while</strong>.</p>
 <p>Tisočletna tradicija veleva, da mora biti začetnikov prvi program z zanko program, ki šteje do deset. V Pythonu je videti takole</p>
@@ -441,7 +435,7 @@ title="Print to PDF"
 <p>Tisti, ki veste še kaj več: <code class="docutils literal notranslate"><span class="pre">x++</span></code> boste v Pythonu zaman iskali. Nima ga, iz več razlogov, ki pa so malo pregloboki za nas tule.</p>
 </section>
 <section id="kaj-je-domneval-collatz">
-<h2><span class="section-number">3.2. </span>Kaj je domneval Collatz<a class="headerlink" href="#kaj-je-domneval-collatz" title="Permalink to this headline">#</a></h2>
+<h2>Kaj je domneval Collatz<a class="headerlink" href="#kaj-je-domneval-collatz" title="Permalink to this headline">#</a></h2>
 <p>Vzemimo poljubno število in z njim počnimo tole: če je sodo, ga delimo z 2, če je liho, pa ga pomnožimo s 3 in prištejmo 1. To ponavljamo, dokler ne dobimo 1.</p>
 <p>Za primer vzemimo 12. Ker je sodo, ga delimo z 2 in dobimo 6. 6 je sodo, torej ga delimo z 2 in dobimo 3. 3 je liho, torej ga množimo s 3 in prištejemo 1 - rezultat je 10. 10 je sodo, zato ga delimo z 2 in dobimo 5… Celotno zaporedje je 12, 6, 3, 10, 5, 16, 8, 4, 2, 1. Ko pridemo do 1, se ustavimo.</p>
 <p>Matematiki, ki vedno radi počnejo koristne reči, si belijo glavo z vprašanjem, ali se reč vedno izteče ali pa se lahko kdaj tudi zacikla tako, da se zaporedje ponavlja in ponavlja v nedogled. Lothar Collatz, konkretno je že od leta 1937
@@ -545,13 +539,6 @@ title="Print to PDF"
                 
     <!-- Previous / next buttons -->
 <div class='prev-next-area'>
-    <a class='left-prev' id="prev-link" href="02a_pogoji.html" title="previous page">
-        <i class="fas fa-angle-left"></i>
-        <div class="prev-next-info">
-            <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title"><span class="section-number">2. </span>Pogojni stavki</p>
-        </div>
-    </a>
 </div>
             </footer>
         </div>
