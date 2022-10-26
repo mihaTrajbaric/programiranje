@@ -3,13 +3,14 @@
 
 **Izvajalci**\
 Mihael Trajbarič, študent računalništva in matematike \
-[miha.trajbaric@gmail.com](mailto:miha.trajbaric@gmail.com)\
-Anton Križnar, študent računalništva in informatike  \
-[anton.kriznar@gmail.com](mailto:anton.kriznar@gmail.com)
+[miha.trajbaric@gmail.com](mailto:miha.trajbaric@gmail.com)
+<!-- Anton Križnar, študent računalništva in informatike  \
+[anton.kriznar@gmail.com](mailto:anton.kriznar@gmail.com) -->
 
 **Termini in lokacije**\
-Ponedeljek 14.30 - 16.00 v `računalnici 1` (Mihael) \
-Četrtek 14.30 - 16.00  v `računalnici 1` (Anton)
+Ponedeljek 14.30 - 16.00 v `računalnici 1`
+<!-- Ponedeljek 14.30 - 16.00 v `računalnici 1` (Mihael) \
+Četrtek 14.30 - 16.00  v `računalnici 1` (Anton) -->
 
 
 
