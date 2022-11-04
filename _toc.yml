@@ -8,7 +8,7 @@ parts:
   numbered: true
   chapters:
     - file: 01_izrazi_spremenljivke_program
-
     - file: 02a_pogoji
     - file: 02b_zanke
+    - file: 02c_ponovimo
 
