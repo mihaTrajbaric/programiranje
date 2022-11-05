@@ -39,11 +39,11 @@
 # 
 
 # ## Podatkovni tipi
-# Ko Števila zapisujemo v računalniku, je važno, kakšnega tipa je podatek. Do sedaj smo smoznali **4 podatkovne tipe**. \
+# Ko števila zapisujemo v računalniku, je važno, kakšnega tipa je podatek. Do sedaj smo spoznali **4 podatkovne tipe**. \
 # **int** -> cela števila
 # ```Python
 # >>> 2 + 3
-# 2
+# 5
 # >>> type(2)
 # int
 # ```
@@ -78,12 +78,12 @@
 # >>> int(2.0)
 # 2
 # >>> float("2.34")
-# 2.43
+# 2.34
 # >>> str(3232)
 # '3232'
 # ```
 # 
-# `round(stevilo, decimalk)` -> zaokrozi stevilo na podano stevilo decimalk
+# `round(stevilo, decimalk)` -> zaokroži število na podano število decimalk
 # ```Python
 # >>> round(2.3456, 2)
 # 2.35
@@ -111,7 +111,7 @@
 # ```
 
 # ## Spremenljivke
-# Spremenljivko deklariramo / ji dodelimo vrednost, nato pa jo lahko poklicemo, ko zelimo uporabiti vrednost.
+# Spremenljivko deklariramo / ji dodelimo vrednost, nato pa jo lahko pokličemo, ko želimo uporabiti vrednost.
 # ```Python
 # # deklaracija
 # >>> stevilo = 4
@@ -120,7 +120,7 @@
 # >>> stevilo
 # 4
 # ```
-# Spremenljivko lahko nato uporabimo v racunanju
+# Spremenljivko lahko nato uporabimo v računanju
 # ```
 # >>> 5 + stevilo
 # 9
@@ -146,7 +146,7 @@
 print("hello, world!")
 
 
-# Izraz znotraj printa se bo najprej poracunal, nato pa prikazal na zaslon
+# Izraz znotraj printa se bo najprej poračunal, nato pa prikazal na zaslonu.
 
 # In[24]:
 
@@ -200,9 +200,46 @@ starost = 2022 - letnica_rojstva
 print("Star sem " + str(starost) + " let.")
 
 
+# 
+# ## Primeri pogojev
+# Pogoj je lahko katerikoli izraz, ki se evaluira v `bool` (logično vrednost).
+# 
+
+# In[63]:
+
+
+# primerjanje < > <= >=
+4 < 5
+
+
+# In[62]:
+
+
+# Pozor! Enakost preverjamo z dvojnim enačajem!
+# enakost == in neenakost !=
+4 == 4
+
+
+# In[1]:
+
+
+# pogoje lahko zduzujemo s poljubnimi logičnimi vezniki
+# Logični vezniki: and, or, not
+a = 5
+a != 4 and True
+
+
+# In[2]:
+
+
+# Lahko preverjamo tudi več neenakosti hkrati
+a = 5
+3 < a < 6
+
+
 # ## Pogojni stavek
 # 
-# S pogojnim stavkom lahko v program dodamo pogoje. Kodo ki se izvede pod določenim pogojem, moramo zamakniti za 4 presledke ali tabulator (vendar znotraj programa teh dveh ne mešamo!)
+# S pogojnim stavkom lahko v program dodamo pogoje. Kodo, ki se izvede pod določenim pogojem, moramo zamakniti za 4 presledke ali tabulator (vendar znotraj programa teh dveh ne mešamo!)
 
 # In[39]:
 
@@ -262,40 +299,6 @@ else:
 # 
 # > števec lahko povečamo `i = i + 1` ali krajše `i += 1`. Okrajšava deluje za vse osnovne operacije (`i -= 1`, `i *= 1`, `i /= 1`, `i //= 1` `i %= 1 `)
 # 
-# ### Primeri pogojev
-# Pogoj je lahko katerikoli izraz, ki se evaluira v `bool` (logicno vrednost).
-# 
-
-# In[63]:
-
-
-# primerjanje < > <= >=
-4 < 5
-
-
-# In[62]:
-
-
-# Pozor! Enakost preverjamo z dvojnim enacajem!
-# enakost == in neenakost !=
-4 == 4
-
-
-# In[57]:
-
-
-# pogoje lahko zduzujemo s poljubnimi logicnimi vezniki
-a = 5
-a < 4 and True
-
-
-# In[61]:
-
-
-# Lahko preverjamo tudi vec enakosti hkrati
-a = 5
-3 < a < 6
-
 
 # 
 # ### Petkrat ponovimo `print()`:

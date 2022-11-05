@@ -259,7 +259,7 @@ a + b
 # 
 # Kaj pa tole?
 
-# In[13]:
+# In[1]:
 
 
 7 = a
