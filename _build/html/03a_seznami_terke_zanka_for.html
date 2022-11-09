@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>Seznami &#8212; Krožek začetnega programiranja 2022-23</title>
+    <title>5. Seznami, terke in zanka for &#8212; Krožek začetnega programiranja 2022-23</title>
     
   <!-- Loaded before other Sphinx assets -->
   <link href="_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
@@ -52,6 +52,7 @@ const thebe_selector_output = ".output, .cell_output"
     <script async="async" src="_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
+    <link rel="prev" title="4. Ponovitev" href="02c_ponovimo.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -116,7 +117,7 @@ const thebe_selector_output = ".output, .cell_output"
   Vsebina
  </span>
 </p>
-<ul class="nav bd-sidenav">
+<ul class="current nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="01_izrazi_spremenljivke_program.html">
    1. Izrazi in spremenljivke
@@ -135,6 +136,11 @@ const thebe_selector_output = ".output, .cell_output"
  <li class="toctree-l1">
   <a class="reference internal" href="02c_ponovimo.html">
    4. Ponovitev
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   5. Seznami, terke in zanka for
   </a>
  </li>
 </ul>
@@ -196,7 +202,7 @@ title="Toggle navigation"
   <div class="menu-dropdown__content">
     <ul>
       <li>
-        <a href="https://mybinder.org/v2/gh/mihaTrajbaric/programiranje/main?urlpath=tree/03a seznami, terke in zanka for.ipynb"
+        <a href="https://mybinder.org/v2/gh/mihaTrajbaric/programiranje/main?urlpath=tree/03a_seznami_terke_zanka_for.ipynb"
    class="headerbtn"
    data-toggle="tooltip"
 data-placement="left"
@@ -274,7 +280,7 @@ title="Source repository"
       </li>
       
       <li>
-        <a href="https://github.com/mihaTrajbaric/programiranje/issues/new?title=Issue%20on%20page%20%2F03a seznami, terke in zanka for.html&body=Your%20issue%20content%20here."
+        <a href="https://github.com/mihaTrajbaric/programiranje/issues/new?title=Issue%20on%20page%20%2F03a_seznami_terke_zanka_for.html&body=Your%20issue%20content%20here."
    class="headerbtn"
    data-toggle="tooltip"
 data-placement="left"
@@ -302,7 +308,7 @@ title="Open an issue"
   <div class="menu-dropdown__content">
     <ul>
       <li>
-        <a href="_sources/03a seznami, terke in zanka for.ipynb"
+        <a href="_sources/03a_seznami_terke_zanka_for.ipynb"
    class="headerbtn"
    data-toggle="tooltip"
 data-placement="left"
@@ -361,44 +367,44 @@ title="Print to PDF"
     </div>
     <nav id="bd-toc-nav" aria-label="Page">
         <ul class="visible nav section-nav flex-column">
- <li class="toc-h1 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#">
-   Seznami
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#seznami">
+   5.1. Seznami
   </a>
  </li>
- <li class="toc-h1 nav-item toc-entry">
+ <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#terka">
-   Terka
+   5.2. Terka
   </a>
  </li>
- <li class="toc-h1 nav-item toc-entry">
+ <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#razpakiranje-v-elemente">
-   Razpakiranje v elemente
+   5.3. Razpakiranje v elemente
   </a>
  </li>
- <li class="toc-h1 nav-item toc-entry">
+ <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#zanka-for">
-   Zanka for
+   5.4. Zanka for
   </a>
- </li>
- <li class="toc-h1 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#najdi-taksnega-ki">
-   Najdi takšnega, ki…
-  </a>
- </li>
- <li class="toc-h1 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#prekinjanje-zank">
-   Prekinjanje zank
-  </a>
- </li>
- <li class="toc-h1 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#else-po-zanki">
-   Else po zanki
-  </a>
-  <ul class="visible nav section-nav flex-column">
-   <li class="toc-h2 nav-item toc-entry">
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#najdi-taksnega-ki">
+     5.4.1. Najdi takšnega, ki…
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#prekinjanje-zank">
+     5.4.2. Prekinjanje zank
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#else-po-zanki">
+     5.4.3. Else po zanki
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#razpakiranje-v-zanki-for-in-se-malo-telovadbe">
-     Razpakiranje v zanki
+     5.4.4. Razpakiranje v zanki
      <code class="docutils literal notranslate">
       <span class="pre">
        for
@@ -407,27 +413,27 @@ title="Print to PDF"
      in še malo telovadbe
     </a>
    </li>
-   <li class="toc-h2 nav-item toc-entry">
+   <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#zanka-po-dveh-seznamih">
-     Zanka po dveh seznamih
+     5.4.5. Zanka po dveh seznamih
     </a>
    </li>
-   <li class="toc-h2 nav-item toc-entry">
+   <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#z-zip-om-prek-parov-zaporednih-elementov">
-     Z zip-om prek parov zaporednih elementov
+     5.4.6. Z zip-om prek parov zaporednih elementov
     </a>
    </li>
-   <li class="toc-h2 nav-item toc-entry">
+   <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#id1">
-     Z zip-om prek parov zaporednih elementov
-    </a>
-   </li>
-   <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#dolzina-seznama-terke-niza">
-     Dolžina seznama, terke, niza
+     5.4.7. Z zip-om prek parov zaporednih elementov
     </a>
    </li>
   </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#dolzina-seznama-terke-niza">
+   5.5. Dolžina seznama, terke, niza
+  </a>
  </li>
 </ul>
 
@@ -438,7 +444,7 @@ title="Print to PDF"
         <div class="col pl-md-3 pl-lg-5 content-container">
             <!-- Table of contents that is only displayed when printing the page -->
             <div id="jb-print-docs-body" class="onlyprint">
-                <h1>Seznami</h1>
+                <h1>Seznami, terke in zanka for</h1>
                 <!-- Table of contents -->
                 <div id="print-main-content">
                     <div id="jb-print-toc">
@@ -448,44 +454,44 @@ title="Print to PDF"
                         </div>
                         <nav aria-label="Page">
                             <ul class="visible nav section-nav flex-column">
- <li class="toc-h1 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#">
-   Seznami
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#seznami">
+   5.1. Seznami
   </a>
  </li>
- <li class="toc-h1 nav-item toc-entry">
+ <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#terka">
-   Terka
+   5.2. Terka
   </a>
  </li>
- <li class="toc-h1 nav-item toc-entry">
+ <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#razpakiranje-v-elemente">
-   Razpakiranje v elemente
+   5.3. Razpakiranje v elemente
   </a>
  </li>
- <li class="toc-h1 nav-item toc-entry">
+ <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#zanka-for">
-   Zanka for
+   5.4. Zanka for
   </a>
- </li>
- <li class="toc-h1 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#najdi-taksnega-ki">
-   Najdi takšnega, ki…
-  </a>
- </li>
- <li class="toc-h1 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#prekinjanje-zank">
-   Prekinjanje zank
-  </a>
- </li>
- <li class="toc-h1 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#else-po-zanki">
-   Else po zanki
-  </a>
-  <ul class="visible nav section-nav flex-column">
-   <li class="toc-h2 nav-item toc-entry">
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#najdi-taksnega-ki">
+     5.4.1. Najdi takšnega, ki…
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#prekinjanje-zank">
+     5.4.2. Prekinjanje zank
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#else-po-zanki">
+     5.4.3. Else po zanki
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#razpakiranje-v-zanki-for-in-se-malo-telovadbe">
-     Razpakiranje v zanki
+     5.4.4. Razpakiranje v zanki
      <code class="docutils literal notranslate">
       <span class="pre">
        for
@@ -494,27 +500,27 @@ title="Print to PDF"
      in še malo telovadbe
     </a>
    </li>
-   <li class="toc-h2 nav-item toc-entry">
+   <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#zanka-po-dveh-seznamih">
-     Zanka po dveh seznamih
+     5.4.5. Zanka po dveh seznamih
     </a>
    </li>
-   <li class="toc-h2 nav-item toc-entry">
+   <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#z-zip-om-prek-parov-zaporednih-elementov">
-     Z zip-om prek parov zaporednih elementov
+     5.4.6. Z zip-om prek parov zaporednih elementov
     </a>
    </li>
-   <li class="toc-h2 nav-item toc-entry">
+   <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#id1">
-     Z zip-om prek parov zaporednih elementov
-    </a>
-   </li>
-   <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#dolzina-seznama-terke-niza">
-     Dolžina seznama, terke, niza
+     5.4.7. Z zip-om prek parov zaporednih elementov
     </a>
    </li>
   </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#dolzina-seznama-terke-niza">
+   5.5. Dolžina seznama, terke, niza
+  </a>
  </li>
 </ul>
 
@@ -526,10 +532,12 @@ title="Print to PDF"
                 
               <div>
                 
-  <p>Na prvih dveh predavanjih smo se pogovarjali predvsem o logiki, o tem, kako “usmerjati” program, da se bo vrtel in skakal. Mimogrede smo spoznali tri tipe podatkov, cela števila (<code class="docutils literal notranslate"><span class="pre">int</span></code>), realna števila (<code class="docutils literal notranslate"><span class="pre">float</span></code>), logične vrednosti (<code class="docutils literal notranslate"><span class="pre">bool</span></code>) in nizi (<code class="docutils literal notranslate"><span class="pre">str</span></code>).</p>
+  <section class="tex2jax_ignore mathjax_ignore" id="seznami-terke-in-zanka-for">
+<h1><span class="section-number">5. </span>Seznami, terke in zanka for<a class="headerlink" href="#seznami-terke-in-zanka-for" title="Permalink to this headline">#</a></h1>
+<p>Na prvih dveh predavanjih smo se pogovarjali predvsem o logiki, o tem, kako “usmerjati” program, da se bo vrtel in skakal. Mimogrede smo spoznali tri tipe podatkov, cela števila (<code class="docutils literal notranslate"><span class="pre">int</span></code>), realna števila (<code class="docutils literal notranslate"><span class="pre">float</span></code>), logične vrednosti (<code class="docutils literal notranslate"><span class="pre">bool</span></code>) in nizi (<code class="docutils literal notranslate"><span class="pre">str</span></code>).</p>
 <p>Za te, ki že znate programirati: na predavanju bomo spoznali sezname, vendar bom karseda dolgo zamolčal, da lahko do njihovih elementov dostopamo z indeksi. Namerno. Ideja je v tem, da prej spoznate, kako se do njih dostopa z zanko in na ta način povečamo možnost, da ne boste prevečkrat uporabljali indeksov takrat, ko jih ni treba.</p>
 <section id="seznami">
-<h1>Seznami<a class="headerlink" href="#seznami" title="Permalink to this headline">#</a></h1>
+<h2><span class="section-number">5.1. </span>Seznami<a class="headerlink" href="#seznami" title="Permalink to this headline">#</a></h2>
 <p>Recimo, da smo zbrali teže šestih študentov. Seznam tež zapišemo takole:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -617,7 +625,7 @@ title="Print to PDF"
 </div>
 </section>
 <section id="terka">
-<h1>Terka<a class="headerlink" href="#terka" title="Permalink to this headline">#</a></h1>
+<h2><span class="section-number">5.2. </span>Terka<a class="headerlink" href="#terka" title="Permalink to this headline">#</a></h2>
 <p>Terka (angl. <em>tuple</em>) je podobna seznamu. Kakšna je pomembna razlika, bomo še videli, manj pomembna pa je ta, da pri terki namesto oglatih oklepajev uporabljamo kar okrogle. (Skoraj) vse ostalo ostane enako:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -671,7 +679,7 @@ title="Print to PDF"
 <p>Ker to ni preveč pregledno, pa to počnemo le v posebnih primerih, na katere bomo sproti opozorili.</p>
 </section>
 <section id="razpakiranje-v-elemente">
-<h1>Razpakiranje v elemente<a class="headerlink" href="#razpakiranje-v-elemente" title="Permalink to this headline">#</a></h1>
+<h2><span class="section-number">5.3. </span>Razpakiranje v elemente<a class="headerlink" href="#razpakiranje-v-elemente" title="Permalink to this headline">#</a></h2>
 <p>Kako pridemo do elementov seznama ali terke? Se pravi, kako bi shranili elemente terke v posamezne spremenljivke? Recimo, da imamo</p>
 <p>student = (74, “Anze”, False)</p>
 <p>Če želimo podatke prirediti spremenljivkam <code class="docutils literal notranslate"><span class="pre">teza</span></code>, <code class="docutils literal notranslate"><span class="pre">ime</span></code> in <code class="docutils literal notranslate"><span class="pre">je_zenska</span></code>, terko <em>razpakiramo</em>:</p>
@@ -790,7 +798,7 @@ tale nesmisel:</p>
 <p>Oklepaje okrog terke izpuščamo preprosto zato, ker je takšno prirejanje tako pogosto, da ga programer vajen Pythona takoj prepozna. Pri tem tudi ne razmišljamo o terkah, temveč prirejanje preberemo preprosto tako, da <code class="docutils literal notranslate"><span class="pre">a</span></code>-ju priredimo <code class="docutils literal notranslate"><span class="pre">b</span></code> in <code class="docutils literal notranslate"><span class="pre">b</span></code>-ju <code class="docutils literal notranslate"><span class="pre">a</span></code>.</p>
 </section>
 <section id="zanka-for">
-<h1>Zanka for<a class="headerlink" href="#zanka-for" title="Permalink to this headline">#</a></h1>
+<h2><span class="section-number">5.4. </span>Zanka for<a class="headerlink" href="#zanka-for" title="Permalink to this headline">#</a></h2>
 <p>Python ima dve vrsti zank: zanki <code class="docutils literal notranslate"><span class="pre">while</span></code>, ki jo že poznamo, dela družbo <code class="docutils literal notranslate"><span class="pre">for</span></code>.</p>
 <p><strong>(Medklic za tiste, ki že znate programirati)</strong></p>
 <p>V C-ju in jezikih, izpeljanih iz njega (C++, C#, Java…) imamo običajno dve vrsti zank. Mogoče mislite, da so tri, ampak v resnici sta dve: <code class="docutils literal notranslate"><span class="pre">while</span></code> in <code class="docutils literal notranslate"><span class="pre">do</span></code>-<code class="docutils literal notranslate"><span class="pre">while</span></code>. C-jevski <code class="docutils literal notranslate"><span class="pre">for</span></code> je samo malo bolj zgoščeno zapisan <code class="docutils literal notranslate"><span class="pre">while</span></code>.</p>
@@ -910,9 +918,8 @@ tale nesmisel:</p>
 </div>
 </div>
 </div>
-</section>
 <section id="najdi-taksnega-ki">
-<h1>Najdi takšnega, ki…<a class="headerlink" href="#najdi-taksnega-ki" title="Permalink to this headline">#</a></h1>
+<h3><span class="section-number">5.4.1. </span>Najdi takšnega, ki…<a class="headerlink" href="#najdi-taksnega-ki" title="Permalink to this headline">#</a></h3>
 <p>Zdajle, bolj proti začetku ure, ko smo še sveži, brž naskočimo najtežji oreh današnjega predavanja. Kar bomo počeli zdaj, boste srečali v sto in eni preobleki, na koncu pa skoraj gotovo tudi kot najpreprostejšo nalogo na izpitu.</p>
 <p>Kako bi ugotovili, ali vsebuje seznam kako sodo število?</p>
 <div class="cell docutils container">
@@ -1014,7 +1021,7 @@ tale nesmisel:</p>
 <p>Program že takoj, ko vidi 1, ugotovi, da niso vsa števila v seznamu soda, in postavi <code class="docutils literal notranslate"><span class="pre">sama_soda</span> <span class="pre">=</span> <span class="pre">False</span></code>. Vendar melje seznam naprej in ob vsakem koraku znova nastavlja <code class="docutils literal notranslate"><span class="pre">sama_soda</span></code>. Ko pride do 72, postavi <code class="docutils literal notranslate"><span class="pre">sama_soda</span></code> na <code class="docutils literal notranslate"><span class="pre">True</span></code>. To pa je ravno zadnje število; <code class="docutils literal notranslate"><span class="pre">sama_soda</span></code> ostane <code class="docutils literal notranslate"><span class="pre">True</span></code>… pa smo tam.</p>
 </section>
 <section id="prekinjanje-zank">
-<h1>Prekinjanje zank<a class="headerlink" href="#prekinjanje-zank" title="Permalink to this headline">#</a></h1>
+<h3><span class="section-number">5.4.2. </span>Prekinjanje zank<a class="headerlink" href="#prekinjanje-zank" title="Permalink to this headline">#</a></h3>
 <p>Ko smo prejšnji teden pisali zanko <code class="docutils literal notranslate"><span class="pre">while</span></code>, smo postavili pogoj, do kdaj naj se izvaja. Zanka for bo, če se vmes ne pripeti kaj posebnega, šla vedno od začetka do konca seznama (terke, niza, datoteke…)</p>
 <p>Včasih to ni potrebno. Pravzaprav smo pravkar videli takšen primer: rezultat gornjega programa je znan že, čim naletimo na prvo liho število. Torej bi bilo čisto vseeno, če računalnik v tistem trenutku konča pregledovanje. To mu v resnici lahko naročimo.</p>
 <div class="cell docutils container">
@@ -1112,7 +1119,7 @@ tale nesmisel:</p>
 </div>
 </section>
 <section id="else-po-zanki">
-<h1>Else po zanki<a class="headerlink" href="#else-po-zanki" title="Permalink to this headline">#</a></h1>
+<h3><span class="section-number">5.4.3. </span>Else po zanki<a class="headerlink" href="#else-po-zanki" title="Permalink to this headline">#</a></h3>
 <p>Medtem, ko je ukaz <code class="docutils literal notranslate"><span class="pre">break</span></code> zelo običajna žival v vseh programskih jezikih, ima Python še eno posebnost, povezano z zankami. V večini programskih jezikov lahko <code class="docutils literal notranslate"><span class="pre">else</span></code> uporabimo le kot alternativo <code class="docutils literal notranslate"><span class="pre">if</span></code>-u. V Pythonu pa lahko <code class="docutils literal notranslate"><span class="pre">else</span></code> sledi tudi zanki <code class="docutils literal notranslate"><span class="pre">for</span></code> ali <code class="docutils literal notranslate"><span class="pre">while</span></code>. V pogojnem stavku (<code class="docutils literal notranslate"><span class="pre">if</span></code>) se koda v <code class="docutils literal notranslate"><span class="pre">else</span></code> izvede, če pogoj ni bil resničen. Po zanki se <code class="docutils literal notranslate"><span class="pre">else</span></code> izvede, če se zanka <em>ni prekinila</em> zaradi <code class="docutils literal notranslate"><span class="pre">break</span></code>. Torej, <code class="docutils literal notranslate"><span class="pre">else</span></code> se izvede pri zankah, ki so se iztekle “po naravni poti”.</p>
 <p>Oglejmo si še enkrat gornji program. Kar smo počeli v njem, je kar pogosto: v zanki nekaj iščemo (recimo kako liho število). Če to reč najdemo, nekaj storimo (ga izpišemo) in prekinemo zanko. Sicer (torej, če ga ne najdemo), storimo kaj drugega (izpišemo, da ga nismo našli).</p>
 <p>Zgornji odstavek se približno, a ne čisto povsem prilega zadnjemu kosu programa. V resnici je napisan po spodnjem programu:</p>
@@ -1130,8 +1137,9 @@ tale nesmisel:</p>
 </div>
 </div>
 <p>Se pravi: če najdemo liho število, napišemo, da seznam vsebuje liho število in prekinemo zanko. Ta del je jasen. Ne spreglejte pa, kje je <code class="docutils literal notranslate"><span class="pre">else</span></code>: poravnan je s <code class="docutils literal notranslate"><span class="pre">for</span></code> ne z <code class="docutils literal notranslate"><span class="pre">if</span></code>! Ta <code class="docutils literal notranslate"><span class="pre">else</span></code> se torej nanaša na <code class="docutils literal notranslate"><span class="pre">for</span></code>. Kar napišemo v <code class="docutils literal notranslate"><span class="pre">else</span></code>-u za <code class="docutils literal notranslate"><span class="pre">for</span></code>, se zgodi, če se zanka ni prekinila z <code class="docutils literal notranslate"><span class="pre">break</span></code>om.</p>
+</section>
 <section id="razpakiranje-v-zanki-for-in-se-malo-telovadbe">
-<h2>Razpakiranje v zanki <code class="docutils literal notranslate"><span class="pre">for</span></code> in še malo telovadbe<a class="headerlink" href="#razpakiranje-v-zanki-for-in-se-malo-telovadbe" title="Permalink to this headline">#</a></h2>
+<h3><span class="section-number">5.4.4. </span>Razpakiranje v zanki <code class="docutils literal notranslate"><span class="pre">for</span></code> in še malo telovadbe<a class="headerlink" href="#razpakiranje-v-zanki-for-in-se-malo-telovadbe" title="Permalink to this headline">#</a></h3>
 <p>Nekoč na začetku predavanja smo imeli seznam študentov in njihovih tež:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1192,7 +1200,7 @@ tale nesmisel:</p>
 </div>
 </section>
 <section id="zanka-po-dveh-seznamih">
-<h2>Zanka po dveh seznamih<a class="headerlink" href="#zanka-po-dveh-seznamih" title="Permalink to this headline">#</a></h2>
+<h3><span class="section-number">5.4.5. </span>Zanka po dveh seznamih<a class="headerlink" href="#zanka-po-dveh-seznamih" title="Permalink to this headline">#</a></h3>
 <p>Zdaj pa izpišimo imena in teže, pri tem, da se le-te nahajajo v ločenih seznamih.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1316,7 +1324,7 @@ tale nesmisel:</p>
 <p>(Tisti, ki so prejšnjo uro slišali tale trik, ne potrebujejo predpostavke, da imamo kakšno študentko, saj napišejo <code class="docutils literal notranslate"><span class="pre">skupna_teza</span> <span class="pre">/</span> <span class="pre">(studentk</span> <span class="pre">or</span> <span class="pre">1)</span></code>.)</p>
 </section>
 <section id="z-zip-om-prek-parov-zaporednih-elementov">
-<h2>Z zip-om prek parov zaporednih elementov<a class="headerlink" href="#z-zip-om-prek-parov-zaporednih-elementov" title="Permalink to this headline">#</a></h2>
+<h3><span class="section-number">5.4.6. </span>Z zip-om prek parov zaporednih elementov<a class="headerlink" href="#z-zip-om-prek-parov-zaporednih-elementov" title="Permalink to this headline">#</a></h3>
 <p>Recimo, da imam seznam in bi rad naredil seznam razlik zaporednih elementov.
 Torej, če imam seznam <code class="docutils literal notranslate"><span class="pre">s</span> <span class="pre">=</span> <span class="pre">[5,</span> <span class="pre">3,</span> <span class="pre">8,</span> <span class="pre">2,</span> <span class="pre">1]</span></code>, bi rad pridelal
 seznam <code class="docutils literal notranslate"><span class="pre">[2,</span> <span class="pre">-5,</span> <span class="pre">6,</span> <span class="pre">1]</span></code> (ker je 5 - 3 = 2, 3 - 8 = -6, 8 - 2 = 6,
@@ -1336,7 +1344,7 @@ seznam <code class="docutils literal notranslate"><span class="pre">[2,</span> <
 <p>(Tisti, ki so prejšnjo uro slišali tale trik, ne potrebujejo predpostavke, da imamo kakšno študentko, saj napišejo <code class="docutils literal notranslate"><span class="pre">skupna_teza</span> <span class="pre">/</span> <span class="pre">(studentk</span> <span class="pre">or</span> <span class="pre">1)</span></code>.)</p>
 </section>
 <section id="id1">
-<h2>Z zip-om prek parov zaporednih elementov<a class="headerlink" href="#id1" title="Permalink to this headline">#</a></h2>
+<h3><span class="section-number">5.4.7. </span>Z zip-om prek parov zaporednih elementov<a class="headerlink" href="#id1" title="Permalink to this headline">#</a></h3>
 <p>Recimo, da imam seznam in bi rad naredil seznam razlik zaporednih elementov.
 Torej, če imam seznam <code class="docutils literal notranslate"><span class="pre">s</span> <span class="pre">=</span> <span class="pre">[5,</span> <span class="pre">3,</span> <span class="pre">8,</span> <span class="pre">2,</span> <span class="pre">1]</span></code>, bi rad pridelal
 seznam <code class="docutils literal notranslate"><span class="pre">[2,</span> <span class="pre">-5,</span> <span class="pre">6,</span> <span class="pre">1]</span></code> (ker je 5 - 3 = 2, 3 - 8 = -6, 8 - 2 = 6,
@@ -1386,8 +1394,9 @@ razumeli krajšo rešitev:</p>
 </div>
 </div>
 </section>
+</section>
 <section id="dolzina-seznama-terke-niza">
-<h2>Dolžina seznama, terke, niza<a class="headerlink" href="#dolzina-seznama-terke-niza" title="Permalink to this headline">#</a></h2>
+<h2><span class="section-number">5.5. </span>Dolžina seznama, terke, niza<a class="headerlink" href="#dolzina-seznama-terke-niza" title="Permalink to this headline">#</a></h2>
 <p>Seznami, terke in naši stari znanci nizi imajo nekaj skupnega. Pravzaprav veliko skupnega. Razlikujejo se le v podrobnostih. Skupno jim je, recimo, da imajo vsi trije dolžino. Gornji seznami šestih tež, šestih imen in šestih indikatorjev spola so dolžine 6. Terka <code class="docutils literal notranslate"><span class="pre">(1,</span> <span class="pre">2,</span> <span class="pre">3,</span> <span class="pre">4)</span></code> ima dolžino 4 in niz “Benjamin” je dolžine 8. Dolžine reči, ki imajo dolžino, nam pove funkcija <code class="docutils literal notranslate"><span class="pre">len</span></code>. To sem napisal tako imenitno, da bom moral še enkrat, da bo sploh kdo razumel: funkcija <code class="docutils literal notranslate"><span class="pre">len</span></code>sprejme en argument, recimo seznam, terko ali niz in kot rezultat vrne dolžino tega seznama, terke ali niza.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1447,6 +1456,13 @@ razumeli krajšo rešitev:</p>
                 
     <!-- Previous / next buttons -->
 <div class='prev-next-area'>
+    <a class='left-prev' id="prev-link" href="02c_ponovimo.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title"><span class="section-number">4. </span>Ponovitev</p>
+        </div>
+    </a>
 </div>
             </footer>
         </div>

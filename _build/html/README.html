@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>Kako pišemo module &#8212; Krožek začetnega programiranja 2022-23</title>
+    <title>Programiranje &#8212; Krožek začetnega programiranja 2022-23</title>
     
   <!-- Loaded before other Sphinx assets -->
   <link href="_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
@@ -193,53 +193,6 @@ title="Toggle navigation"
         
     </div>
     <div class="header-article__right">
-<div class="menu-dropdown menu-dropdown-launch-buttons">
-  <button class="headerbtn menu-dropdown__trigger"
-      aria-label="Launch interactive content">
-      <i class="fas fa-rocket"></i>
-  </button>
-  <div class="menu-dropdown__content">
-    <ul>
-      <li>
-        <a href="https://mybinder.org/v2/gh/mihaTrajbaric/programiranje/main?urlpath=tree/04c pisanje modulov.ipynb"
-   class="headerbtn"
-   data-toggle="tooltip"
-data-placement="left"
-title="Launch on Binder"
->
-  
-
-<span class="headerbtn__icon-container">
-  
-    <img src="_static/images/logo_binder.svg">
-  </span>
-<span class="headerbtn__text-container">Binder</span>
-</a>
-
-      </li>
-      
-      <li>
-        
-<button onclick="initThebeSBT()"
-  class="headerbtn headerbtn-launch-thebe"
-  data-toggle="tooltip"
-data-placement="left"
-title="Launch Thebe"
->
-  
-
-<span class="headerbtn__icon-container">
-  <i class="fas fa-play"></i>
-  </span>
-<span class="headerbtn__text-container">Live Code</span>
-</button>
-
-      </li>
-      
-    </ul>
-  </div>
-</div>
-
 <button onclick="toggleFullScreen()"
   class="headerbtn"
   data-toggle="tooltip"
@@ -279,7 +232,7 @@ title="Source repository"
       </li>
       
       <li>
-        <a href="https://github.com/mihaTrajbaric/programiranje/issues/new?title=Issue%20on%20page%20%2F04c pisanje modulov.html&body=Your%20issue%20content%20here."
+        <a href="https://github.com/mihaTrajbaric/programiranje/issues/new?title=Issue%20on%20page%20%2FREADME.html&body=Your%20issue%20content%20here."
    class="headerbtn"
    data-toggle="tooltip"
 data-placement="left"
@@ -307,7 +260,7 @@ title="Open an issue"
   <div class="menu-dropdown__content">
     <ul>
       <li>
-        <a href="_sources/04c pisanje modulov.ipynb"
+        <a href="_sources/README.md"
    class="headerbtn"
    data-toggle="tooltip"
 data-placement="left"
@@ -318,7 +271,7 @@ title="Download source file"
 <span class="headerbtn__icon-container">
   <i class="fas fa-file"></i>
   </span>
-<span class="headerbtn__text-container">.ipynb</span>
+<span class="headerbtn__text-container">.md</span>
 </a>
 
       </li>
@@ -356,7 +309,7 @@ title="Print to PDF"
         <div class="col pl-md-3 pl-lg-5 content-container">
             <!-- Table of contents that is only displayed when printing the page -->
             <div id="jb-print-docs-body" class="onlyprint">
-                <h1>Kako pišemo module</h1>
+                <h1>Programiranje</h1>
                 <!-- Table of contents -->
                 <div id="print-main-content">
                     <div id="jb-print-toc">
@@ -368,47 +321,9 @@ title="Print to PDF"
                 
               <div>
                 
-  <section id="kako-pisemo-module">
-<h1>Kako pišemo module<a class="headerlink" href="#kako-pisemo-module" title="Permalink to this headline">#</a></h1>
-<p>Napišimo program, ki bo vseboval konstanto <code class="docutils literal notranslate"><span class="pre">odgovor</span></code>, ki bo imela
-vrednost 42, in funkcijo, ki računa Fibonaccijeva števila.</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">odgovor</span> <span class="o">=</span> <span class="mi">42</span>
-
-<span class="k">def</span> <span class="nf">fibonacci</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
-    <span class="n">a</span> <span class="o">=</span> <span class="n">b</span> <span class="o">=</span> <span class="mi">0</span>
-    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
-        <span class="n">a</span><span class="p">,</span> <span class="n">b</span> <span class="o">=</span> <span class="n">b</span><span class="p">,</span> <span class="n">a</span><span class="o">+</span><span class="n">b</span>
-    <span class="k">return</span> <span class="n">a</span>
-</pre></div>
-</div>
-<p>Program shranimo pod imenom <a class="reference external" href="http://fibo.py">fibo.py</a>.</p>
-<p>To je to. V drugem programu lahko rečemo</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">fibo</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Odgovor je&quot;</span><span class="p">,</span> <span class="n">fibo</span><span class="o">.</span><span class="n">odgovor</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Deseto Fibonaccijevo število pa je&quot;</span><span class="p">,</span> <span class="n">fibo</span><span class="o">.</span><span class="n">fibonacci</span><span class="p">(</span><span class="mi">10</span><span class="p">))</span>
-</pre></div>
-</div>
-<p>Tudi vse ostale finte, na primer, <code class="docutils literal notranslate"><span class="pre">from</span> <span class="pre">fibo</span> <span class="pre">import</span> <span class="pre">odgovor</span></code>, delujejo.</p>
-<p>Modul ni nič drugega kot program, ki ga uvozimo.</p>
-<p>Tudi vsi drugi programi, ki ste jih napisali doslej, so hkrati moduli:
-lahko jih uvozite. Pazite le na tole: ko modul uvozimo, se ta v resnici
-izvede, čisto tako, kot bi se izvajal program. Vse, kar se v tem
-programu-modulu definira, ostane definirano in se nahaja v modulovem
-imenskem prostoru. Vendar se zgodi tudi vse ostalo, kar piše v modulu:
-če pri izvajanju naleti na <code>print(“Foo”)</code> se bo ob uvozu
-modula izpisalo Foo. Če program-modul vsebuje klic funkcije (in ne le
-definicij), se bo ta funkcija poklicala tudi ob uvozu.</p>
-<p>Kje Python išče module? Navadno v trenutnem direktoriju, poleg tega pa
-še v drugih. Na Windowsih v, recimo, <code>c:-packages</code>. Več o tem
-si lahko preberete v dokumentaciji.</p>
-<p>Tudi sicer ne bomo rinili prav globoko v module, samo še eno stvar
-omenimo, da vas ne bo presenetila. Ko boste prvič uvozili modul, se bo
-poleg datoteke s končnico .py pojavila še ena, z enakim imenom, a
-končnico .pyc. Python si vanjo “prevede” (pravzaprav bi smeli pisati
-brez narekovajev, temu se v resnici reče prevajanje) v obliko, v kateri
-ga bo lahko naslednjič hitreje uvozil. Pri manjših modulih se to ne
-pozna, pri velikem številu velikih modulov pa. Če vas moti, jo lahko
-pobrišete; drugič se bo pač spet pojavila ponovno.</p>
+  <section class="tex2jax_ignore mathjax_ignore" id="programiranje">
+<h1>Programiranje<a class="headerlink" href="#programiranje" title="Permalink to this headline">#</a></h1>
+<p>Ta repozitorij vsebuje skripto, ki jo uporabljam pri krožku Začetnega programiranja na Škofijski klasični gimnaziji v Ljubljani. Skripta je dostopna na <a class="reference external" href="https://mihatrajbaric.github.io/programiranje/">https://mihatrajbaric.github.io/programiranje/</a></p>
 </section>
 
     <script type="text/x-thebe-config">

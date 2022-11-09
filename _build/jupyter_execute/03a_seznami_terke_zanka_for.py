@@ -1,6 +1,7 @@
 #!/usr/bin/env python
 # coding: utf-8
 
+# # Seznami, terke in zanka for
 # Na prvih dveh predavanjih smo se pogovarjali predvsem o logiki, o tem, kako "usmerjati" program, da se bo vrtel in skakal. Mimogrede smo spoznali tri tipe podatkov, cela števila (`int`), realna števila (`float`), logične vrednosti (`bool`) in nizi (`str`).
 # 
 # Za te, ki že znate programirati: na predavanju bomo spoznali sezname, vendar bom karseda dolgo zamolčal, da lahko do njihovih elementov dostopamo z indeksi. Namerno. Ideja je v tem, da prej spoznate, kako se do njih dostopa z zanko in na ta način povečamo možnost, da ne boste prevečkrat uporabljali indeksov takrat, ko jih ni treba.
@@ -413,7 +414,7 @@ for crka in ime:
 'C' 'i' 'l' 'k' 'a'
 
 
-# ### Najdi takšnega, ki...
+# #### Najdi takšnega, ki...
 # 
 # Zdajle, bolj proti začetku ure, ko smo še sveži, brž naskočimo najtežji oreh današnjega predavanja. Kar bomo počeli zdaj, boste srečali v sto in eni preobleki, na koncu pa skoraj gotovo tudi kot najpreprostejšo nalogo na izpitu.
 # 
@@ -523,7 +524,7 @@ for e in s:
 
 # Program že takoj, ko vidi 1, ugotovi, da niso vsa števila v seznamu soda, in postavi `sama_soda = False`. Vendar melje seznam naprej in ob vsakem koraku znova nastavlja `sama_soda`. Ko pride do 72, postavi `sama_soda` na `True`. To pa je ravno zadnje število; `sama_soda` ostane `True`... pa smo tam.
 # 
-# ### Prekinjanje zank
+# #### Prekinjanje zank
 # 
 # Ko smo prejšnji teden pisali zanko `while`, smo postavili pogoj, do kdaj naj se izvaja. Zanka for bo, če se vmes ne pripeti kaj posebnega, šla vedno od začetka do konca seznama (terke, niza, datoteke...)
 # 
@@ -625,8 +626,7 @@ else:
           " prvo liho število je", e)
 
 
-# Else po zanki
-# -------------
+# #### Else po zanki
 # 
 # Medtem, ko je ukaz `break` zelo običajna žival v vseh programskih jezikih, ima Python še eno posebnost, povezano z zankami. V večini programskih jezikov lahko `else` uporabimo le kot alternativo `if`-u. V Pythonu pa lahko `else` sledi tudi zanki `for` ali `while`. V pogojnem stavku (`if`) se koda v `else` izvede, če pogoj ni bil resničen. Po zanki se `else` izvede, če se zanka *ni prekinila* zaradi `break`. Torej, `else` se izvede pri zankah, ki so se iztekle "po naravni poti".
 # 
@@ -649,7 +649,7 @@ else:
 # Se pravi: če najdemo liho število, napišemo, da seznam vsebuje liho število in prekinemo zanko. Ta del je jasen. Ne spreglejte pa, kje je `else`: poravnan je s `for` ne z `if`! Ta `else` se torej nanaša na `for`. Kar napišemo v `else`-u za `for`, se zgodi, če se zanka ni prekinila z `break`om.
 # 
 # 
-# ### Razpakiranje v zanki `for` in še malo telovadbe
+# #### Razpakiranje v zanki `for` in še malo telovadbe
 # 
 # Nekoč na začetku predavanja smo imeli seznam študentov in njihovih tež:
 
@@ -712,7 +712,7 @@ for teza, ime, je_zenska in podatki:
     print(" " * (15 - len(ime)) + ime + " " + "*" * teza)
 
 
-# ### Zanka po dveh seznamih
+# #### Zanka po dveh seznamih
 # 
 # Zdaj pa izpišimo imena in teže, pri tem, da se le-te nahajajo v ločenih seznamih.
 
@@ -843,7 +843,7 @@ print(skupna_teza / studentk)  # ... ob predpostavki, da studentk > 0
 
 # (Tisti, ki so prejšnjo uro slišali tale trik, ne potrebujejo predpostavke, da imamo kakšno študentko, saj napišejo `skupna_teza / (studentk or 1)`.)
 # 
-# ### Z zip-om prek parov zaporednih elementov
+# #### Z zip-om prek parov zaporednih elementov
 # 
 # Recimo, da imam seznam in bi rad naredil seznam razlik zaporednih elementov.
 # Torej, če imam seznam `s = [5, 3, 8, 2, 1]`, bi rad pridelal
@@ -869,7 +869,7 @@ for i in range(1, len(s)):
 [3, 8, 2, 1]
 # (Tisti, ki so prejšnjo uro slišali tale trik, ne potrebujejo predpostavke, da imamo kakšno študentko, saj napišejo `skupna_teza / (studentk or 1)`.)
 # 
-# ### Z zip-om prek parov zaporednih elementov
+# #### Z zip-om prek parov zaporednih elementov
 # 
 # Recimo, da imam seznam in bi rad naredil seznam razlik zaporednih elementov.
 # Torej, če imam seznam `s = [5, 3, 8, 2, 1]`, bi rad pridelal
