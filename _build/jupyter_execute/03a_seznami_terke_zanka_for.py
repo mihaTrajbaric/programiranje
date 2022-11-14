@@ -2,14 +2,14 @@
 # coding: utf-8
 
 # # Seznami, terke in zanka for
-# Na prvih dveh predavanjih smo se pogovarjali predvsem o logiki, o tem, kako "usmerjati" program, da se bo vrtel in skakal. Mimogrede smo spoznali tri tipe podatkov, cela števila (`int`), realna števila (`float`), logične vrednosti (`bool`) in nizi (`str`).
+# Do sedaj smo se pogovarjali predvsem o logiki, o tem, kako "usmerjati" program, da se bo vrtel in skakal. Mimogrede smo spoznali štiri tipe podatkov, cela števila (`int`), realna števila (`float`), logične vrednosti (`bool`) in nize (`str`).
 # 
-# Za te, ki že znate programirati: na predavanju bomo spoznali sezname, vendar bom karseda dolgo zamolčal, da lahko do njihovih elementov dostopamo z indeksi. Namerno. Ideja je v tem, da prej spoznate, kako se do njih dostopa z zanko in na ta način povečamo možnost, da ne boste prevečkrat uporabljali indeksov takrat, ko jih ni treba.
+# Za te, ki že znate programirati: danes bomo spoznali sezname, vendar bom karseda dolgo zamolčal, da lahko do njihovih elementov dostopamo z indeksi. Namerno. Ideja je v tem, da prej spoznate, kako se do njih dostopa z zanko in na ta način povečamo možnost, da ne boste prevečkrat uporabljali indeksov takrat, ko jih ni treba.
 # 
 # 
 # ### Seznami
 # 
-# Recimo, da smo zbrali teže šestih študentov. Seznam tež zapišemo takole:
+# Recimo, da smo zbrali teže šestih dijakov. Seznam tež zapišemo takole:
 
 # In[ ]:
 
@@ -17,7 +17,7 @@
 teze = [74, 82, 58, 66, 61, 84]
 
 
-# Seznam (angl. *list*) je zaporedje česarkoli, recimo števil, lahko pa tudi česa drugega. Števila ali kaj drugega naštejemo, vmes pišemo vejice in vse skupaj zapremo v oglate oklepaje (`[` in `]`). Za primer sestavimo še seznam imen študentov:
+# Seznam (angl. *list*) je zaporedje česarkoli, recimo števil, lahko pa tudi česa drugega. Števila ali kaj drugega naštejemo, vmes pišemo vejice in vse skupaj zapremo v oglate oklepaje (`[` in `]`). Za primer sestavimo še seznam imen dijakov:
 
 # In[ ]:
 
@@ -25,12 +25,12 @@ teze = [74, 82, 58, 66, 61, 84]
 imena = ["Anze", "Benjamin", "Cilka", "Dani", "Eva", "Franc"]
 
 
-# in seznam, ki bo povedal, ali gre za študenta ali študentko
+# in seznam, ki bo povedal, ali gre za dijaka ali dijakinjo
 
 # In[ ]:
 
 
-studentka = [False, False, True, False, True, False]
+dijakinja = [False, False, True, False, True, False]
 
 
 # Seznami lahko vsebujejo tudi še hujšo eksotiko. Imamo lahko, recimo, seznam seznamov - vanj bomo, prikladno, stlačili (pod)sezname teža-ime-spol:
@@ -72,7 +72,7 @@ par_funkcij = [sin, cos, radians]
 
 # Čemu bi kdo hotel narediti seznam funkcij?! Ne boste verjeli, kolikokrat pride to prav!
 # 
-# Nikjer tudi ne piše, da morajo biti vsi elementi seznama istega tipa. To smo pravzaprav že izkoristili: podseznami s težo, imenom in spolom so vsebovali število, niz in logično vrednost. Navrgli bi lahko še dve funkciji in en seznam; pa ne bomo, to se ne dela. Seznamov, ki imajo elemente različnih tipov, ne bomo tako pogosto videvali. (Če obratno parafraziramo Andreja Bauerja: *seznami z elementi različnih tipov se morda komu zdijo dobra ideja. V resnici je to zelo sla  ba ideja.* Če želimo sezname različnih tipov, raje uporabimo terke. Kaj so terke, bomo izvedeli vsak čas.)
+# Nikjer tudi ne piše, da morajo biti vsi elementi seznama istega tipa. To smo pravzaprav že izkoristili: podseznami s težo, imenom in spolom so vsebovali število, niz in logično vrednost. Navrgli bi lahko še dve funkciji in en seznam; pa ne bomo, to se ne dela. Seznamov, ki imajo elemente različnih tipov, ne bomo tako pogosto videvali. (seznami z elementi različnih tipov se morda komu zdijo dobra ideja. V resnici se izkaže, da je to zelo slaba ideja. Če želimo sezname različnih tipov, raje uporabimo terke. Kaj so terke, bomo izvedeli vsak čas.)
 # 
 # Seznam je lahko tudi prazen
 
@@ -279,33 +279,7 @@ a, b = b, a
 # ### Zanka for
 # 
 # Python ima dve vrsti zank: zanki `while`, ki jo že poznamo, dela družbo `for`.
-# 
-# **(Medklic za tiste, ki že znate programirati)**
-# 
-# V C-ju in jezikih, izpeljanih iz njega (C++, C\#, Java...) imamo običajno dve vrsti zank. Mogoče mislite, da so tri, ampak v resnici sta dve: `while` in `do`-`while`. C-jevski `for` je samo malo bolj zgoščeno zapisan `while`.
 
-# ```
-# for(zacetek; pogoj; korak) {
-#     koda;
-# }
-# ```
-
-# je isto kot
-
-# ```
-# zacetek;
-# while(pogoj) {
-#     koda;
-#     korak;
-# }
-# ```
-
-# V C, C++, C\#, Javi sta zanka `for` in `while` le dva načina, na katera povemo eno in isto. Pa tudi med `while` in `do`-`while` ni tako velike razlike, čeprav je slednja včasih - a redko - praktična.
-# 
-# Pač pa obstajajo tudi [druge različice zanke for (http://en.wikipedia.org/wiki/For_loop#Kinds_of_for_loops), ki so v resnici drugačne od `while`. Novejši jeziki imajo - in starejši jeziki dobivajo - drugačno obliko zanke `for`, ki je v današnjih časih, ko vedno več uporabljamo funkcijske jezike, bolj uporabna. Nekateri, recimo C#, jo poznajo pod imenom `foreach`. Pythonov `for` vas bo spominjal nanj in ne na C-jevski `for`.
-# 
-# **(Konec medklica)**
-# 
 # Zastavimo si preprosto nalogo (in ne čisto smiselno) nalogo: izpišimo teže in kvadrate tež vseh študentov v seznamu. Se pravi (po slovensko):
 
 # ```
@@ -415,8 +389,6 @@ for crka in ime:
 
 
 # #### Najdi takšnega, ki...
-# 
-# Zdajle, bolj proti začetku ure, ko smo še sveži, brž naskočimo najtežji oreh današnjega predavanja. Kar bomo počeli zdaj, boste srečali v sto in eni preobleki, na koncu pa skoraj gotovo tudi kot najpreprostejšo nalogo na izpitu.
 # 
 # Kako bi ugotovili, ali vsebuje seznam kako sodo število?
 

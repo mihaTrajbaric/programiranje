@@ -534,11 +534,11 @@ title="Print to PDF"
                 
   <section class="tex2jax_ignore mathjax_ignore" id="seznami-terke-in-zanka-for">
 <h1><span class="section-number">5. </span>Seznami, terke in zanka for<a class="headerlink" href="#seznami-terke-in-zanka-for" title="Permalink to this headline">#</a></h1>
-<p>Na prvih dveh predavanjih smo se pogovarjali predvsem o logiki, o tem, kako “usmerjati” program, da se bo vrtel in skakal. Mimogrede smo spoznali tri tipe podatkov, cela števila (<code class="docutils literal notranslate"><span class="pre">int</span></code>), realna števila (<code class="docutils literal notranslate"><span class="pre">float</span></code>), logične vrednosti (<code class="docutils literal notranslate"><span class="pre">bool</span></code>) in nizi (<code class="docutils literal notranslate"><span class="pre">str</span></code>).</p>
-<p>Za te, ki že znate programirati: na predavanju bomo spoznali sezname, vendar bom karseda dolgo zamolčal, da lahko do njihovih elementov dostopamo z indeksi. Namerno. Ideja je v tem, da prej spoznate, kako se do njih dostopa z zanko in na ta način povečamo možnost, da ne boste prevečkrat uporabljali indeksov takrat, ko jih ni treba.</p>
+<p>Do sedaj smo se pogovarjali predvsem o logiki, o tem, kako “usmerjati” program, da se bo vrtel in skakal. Mimogrede smo spoznali štiri tipe podatkov, cela števila (<code class="docutils literal notranslate"><span class="pre">int</span></code>), realna števila (<code class="docutils literal notranslate"><span class="pre">float</span></code>), logične vrednosti (<code class="docutils literal notranslate"><span class="pre">bool</span></code>) in nize (<code class="docutils literal notranslate"><span class="pre">str</span></code>).</p>
+<p>Za te, ki že znate programirati: danes bomo spoznali sezname, vendar bom karseda dolgo zamolčal, da lahko do njihovih elementov dostopamo z indeksi. Namerno. Ideja je v tem, da prej spoznate, kako se do njih dostopa z zanko in na ta način povečamo možnost, da ne boste prevečkrat uporabljali indeksov takrat, ko jih ni treba.</p>
 <section id="seznami">
 <h2><span class="section-number">5.1. </span>Seznami<a class="headerlink" href="#seznami" title="Permalink to this headline">#</a></h2>
-<p>Recimo, da smo zbrali teže šestih študentov. Seznam tež zapišemo takole:</p>
+<p>Recimo, da smo zbrali teže šestih dijakov. Seznam tež zapišemo takole:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">teze</span> <span class="o">=</span> <span class="p">[</span><span class="mi">74</span><span class="p">,</span> <span class="mi">82</span><span class="p">,</span> <span class="mi">58</span><span class="p">,</span> <span class="mi">66</span><span class="p">,</span> <span class="mi">61</span><span class="p">,</span> <span class="mi">84</span><span class="p">]</span>
@@ -546,7 +546,7 @@ title="Print to PDF"
 </div>
 </div>
 </div>
-<p>Seznam (angl. <em>list</em>) je zaporedje česarkoli, recimo števil, lahko pa tudi česa drugega. Števila ali kaj drugega naštejemo, vmes pišemo vejice in vse skupaj zapremo v oglate oklepaje (<code class="docutils literal notranslate"><span class="pre">[</span></code> in <code class="docutils literal notranslate"><span class="pre">]</span></code>). Za primer sestavimo še seznam imen študentov:</p>
+<p>Seznam (angl. <em>list</em>) je zaporedje česarkoli, recimo števil, lahko pa tudi česa drugega. Števila ali kaj drugega naštejemo, vmes pišemo vejice in vse skupaj zapremo v oglate oklepaje (<code class="docutils literal notranslate"><span class="pre">[</span></code> in <code class="docutils literal notranslate"><span class="pre">]</span></code>). Za primer sestavimo še seznam imen dijakov:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">imena</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;Anze&quot;</span><span class="p">,</span> <span class="s2">&quot;Benjamin&quot;</span><span class="p">,</span> <span class="s2">&quot;Cilka&quot;</span><span class="p">,</span> <span class="s2">&quot;Dani&quot;</span><span class="p">,</span> <span class="s2">&quot;Eva&quot;</span><span class="p">,</span> <span class="s2">&quot;Franc&quot;</span><span class="p">]</span>
@@ -554,10 +554,10 @@ title="Print to PDF"
 </div>
 </div>
 </div>
-<p>in seznam, ki bo povedal, ali gre za študenta ali študentko</p>
+<p>in seznam, ki bo povedal, ali gre za dijaka ali dijakinjo</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">studentka</span> <span class="o">=</span> <span class="p">[</span><span class="kc">False</span><span class="p">,</span> <span class="kc">False</span><span class="p">,</span> <span class="kc">True</span><span class="p">,</span> <span class="kc">False</span><span class="p">,</span> <span class="kc">True</span><span class="p">,</span> <span class="kc">False</span><span class="p">]</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">dijakinja</span> <span class="o">=</span> <span class="p">[</span><span class="kc">False</span><span class="p">,</span> <span class="kc">False</span><span class="p">,</span> <span class="kc">True</span><span class="p">,</span> <span class="kc">False</span><span class="p">,</span> <span class="kc">True</span><span class="p">,</span> <span class="kc">False</span><span class="p">]</span>
 </pre></div>
 </div>
 </div>
@@ -598,7 +598,7 @@ title="Print to PDF"
 </div>
 </div>
 <p>Čemu bi kdo hotel narediti seznam funkcij?! Ne boste verjeli, kolikokrat pride to prav!</p>
-<p>Nikjer tudi ne piše, da morajo biti vsi elementi seznama istega tipa. To smo pravzaprav že izkoristili: podseznami s težo, imenom in spolom so vsebovali število, niz in logično vrednost. Navrgli bi lahko še dve funkciji in en seznam; pa ne bomo, to se ne dela. Seznamov, ki imajo elemente različnih tipov, ne bomo tako pogosto videvali. (Če obratno parafraziramo Andreja Bauerja: <em>seznami z elementi različnih tipov se morda komu zdijo dobra ideja. V resnici je to zelo sla  ba ideja.</em> Če želimo sezname različnih tipov, raje uporabimo terke. Kaj so terke, bomo izvedeli vsak čas.)</p>
+<p>Nikjer tudi ne piše, da morajo biti vsi elementi seznama istega tipa. To smo pravzaprav že izkoristili: podseznami s težo, imenom in spolom so vsebovali število, niz in logično vrednost. Navrgli bi lahko še dve funkciji in en seznam; pa ne bomo, to se ne dela. Seznamov, ki imajo elemente različnih tipov, ne bomo tako pogosto videvali. (seznami z elementi različnih tipov se morda komu zdijo dobra ideja. V resnici se izkaže, da je to zelo slaba ideja. Če želimo sezname različnih tipov, raje uporabimo terke. Kaj so terke, bomo izvedeli vsak čas.)</p>
 <p>Seznam je lahko tudi prazen</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -800,24 +800,6 @@ tale nesmisel:</p>
 <section id="zanka-for">
 <h2><span class="section-number">5.4. </span>Zanka for<a class="headerlink" href="#zanka-for" title="Permalink to this headline">#</a></h2>
 <p>Python ima dve vrsti zank: zanki <code class="docutils literal notranslate"><span class="pre">while</span></code>, ki jo že poznamo, dela družbo <code class="docutils literal notranslate"><span class="pre">for</span></code>.</p>
-<p><strong>(Medklic za tiste, ki že znate programirati)</strong></p>
-<p>V C-ju in jezikih, izpeljanih iz njega (C++, C#, Java…) imamo običajno dve vrsti zank. Mogoče mislite, da so tri, ampak v resnici sta dve: <code class="docutils literal notranslate"><span class="pre">while</span></code> in <code class="docutils literal notranslate"><span class="pre">do</span></code>-<code class="docutils literal notranslate"><span class="pre">while</span></code>. C-jevski <code class="docutils literal notranslate"><span class="pre">for</span></code> je samo malo bolj zgoščeno zapisan <code class="docutils literal notranslate"><span class="pre">while</span></code>.</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">for</span><span class="p">(</span><span class="n">zacetek</span><span class="p">;</span> <span class="n">pogoj</span><span class="p">;</span> <span class="n">korak</span><span class="p">)</span> <span class="p">{</span>
-    <span class="n">koda</span><span class="p">;</span>
-<span class="p">}</span>
-</pre></div>
-</div>
-<p>je isto kot</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">zacetek</span><span class="p">;</span>
-<span class="k">while</span><span class="p">(</span><span class="n">pogoj</span><span class="p">)</span> <span class="p">{</span>
-    <span class="n">koda</span><span class="p">;</span>
-    <span class="n">korak</span><span class="p">;</span>
-<span class="p">}</span>
-</pre></div>
-</div>
-<p>V C, C++, C#, Javi sta zanka <code class="docutils literal notranslate"><span class="pre">for</span></code> in <code class="docutils literal notranslate"><span class="pre">while</span></code> le dva načina, na katera povemo eno in isto. Pa tudi med <code class="docutils literal notranslate"><span class="pre">while</span></code> in <code class="docutils literal notranslate"><span class="pre">do</span></code>-<code class="docutils literal notranslate"><span class="pre">while</span></code> ni tako velike razlike, čeprav je slednja včasih - a redko - praktična.</p>
-<p>Pač pa obstajajo tudi [druge različice zanke for (<a class="reference external" href="http://en.wikipedia.org/wiki/For_loop#Kinds_of_for_loops">http://en.wikipedia.org/wiki/For_loop#Kinds_of_for_loops</a>), ki so v resnici drugačne od <code class="docutils literal notranslate"><span class="pre">while</span></code>. Novejši jeziki imajo - in starejši jeziki dobivajo - drugačno obliko zanke <code class="docutils literal notranslate"><span class="pre">for</span></code>, ki je v današnjih časih, ko vedno več uporabljamo funkcijske jezike, bolj uporabna. Nekateri, recimo C#, jo poznajo pod imenom <code class="docutils literal notranslate"><span class="pre">foreach</span></code>. Pythonov <code class="docutils literal notranslate"><span class="pre">for</span></code> vas bo spominjal nanj in ne na C-jevski <code class="docutils literal notranslate"><span class="pre">for</span></code>.</p>
-<p><strong>(Konec medklica)</strong></p>
 <p>Zastavimo si preprosto nalogo (in ne čisto smiselno) nalogo: izpišimo teže in kvadrate tež vseh študentov v seznamu. Se pravi (po slovensko):</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">za</span> <span class="n">vsako</span> <span class="n">težo</span> <span class="n">s</span> <span class="n">seznama</span> <span class="n">teze</span> <span class="n">stori</span> <span class="n">tole</span><span class="p">:</span>
     <span class="n">izpiši</span> <span class="n">težo</span> <span class="ow">in</span> <span class="n">težo</span> <span class="n">na</span> <span class="n">kvadrat</span>
@@ -920,7 +902,6 @@ tale nesmisel:</p>
 </div>
 <section id="najdi-taksnega-ki">
 <h3><span class="section-number">5.4.1. </span>Najdi takšnega, ki…<a class="headerlink" href="#najdi-taksnega-ki" title="Permalink to this headline">#</a></h3>
-<p>Zdajle, bolj proti začetku ure, ko smo še sveži, brž naskočimo najtežji oreh današnjega predavanja. Kar bomo počeli zdaj, boste srečali v sto in eni preobleki, na koncu pa skoraj gotovo tudi kot najpreprostejšo nalogo na izpitu.</p>
 <p>Kako bi ugotovili, ali vsebuje seznam kako sodo število?</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
