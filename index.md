@@ -3,14 +3,13 @@
 
 **Izvajalci**\
 Mihael Trajbarič, študent računalništva in matematike \
-[miha.trajbaric@gmail.com](mailto:miha.trajbaric@gmail.com)
-<!-- Anton Križnar, študent računalništva in informatike  \
-[anton.kriznar@gmail.com](mailto:anton.kriznar@gmail.com) -->
+[miha.trajbaric@gmail.com](mailto:miha.trajbaric@gmail.com) \
+Anton Križnar, študent računalništva in informatike  \
+[anton.kriznar@gmail.com](mailto:anton.kriznar@gmail.com)
 
 **Termini in lokacije**\
-Ponedeljek 14.30 - 16.00 v `računalnici 1`
-<!-- Ponedeljek 14.30 - 16.00 v `računalnici 1` (Mihael) \
-Četrtek 14.30 - 16.00  v `računalnici 1` (Anton) -->
+Ponedeljek 14.30 - 16.00 v `računalnici 1` (Mihael) \
+Četrtek 14.30 - 16.00  v `računalnici 1` (Anton)
 
 
 
@@ -28,7 +27,7 @@ V začetnem delu bomo v grobem sledili predmetom začetnega programiranja na Fak
 
 Kljub temu, da je tole krožek, tj. prostočasna dejavnost, ne moremo pobegniti od dejstva, da je programiranje v resnici **dril**. Če želimo postati vešči programerji oz. programirati v drugem poklicu, pač moramo rešiti kar nekaj nalog :)
 
-Priporočeno delo tako obsega tedensko **udeležbo na krožku** kjer bomo spoznali nove koncepte in z mojo pomočjo rešili nekaj nalog, ste pa lepo vabljeni, da nekaj nalog rešite tudi doma. Na to lahko gledate kot na **prostovoljno domačo nalogo**.
+Priporočeno delo tako obsega tedensko **udeležbo na krožku** kjer bomo spoznali nove koncepte in ob pomoči ter namigih izvajalcev rešili nekaj nalog, ste pa lepo vabljeni, da še kaj rešite tudi doma. Na to lahko gledate kot na **prostovoljno domačo nalogo**.
 
 
 > Za primerjavo - študenti imajo v prvem letniku faksa na predmetu programiranje tedensko `4,5 ure` obveznosti na faksu (predavanja, vaje) in obvezno domačo nalogo.
@@ -45,5 +44,5 @@ Priporočeno delo tako obsega tedensko **udeležbo na krožku** kjer bomo spozna
 - [Programiranje 1 na FRI](https://github.com/janezd/predavanja/tree/master/p1)
 - [Rešene naloga iz programiranja v Pythonu](https://ucilnica.fri.uni-lj.si/mod/resource/view.php?id=36178)
 
-## Zasluge in  zahvala
+## Zasluge in zahvala
 Pri pripravi gradiva za ta krožek se močno naslanjam na predavanja in vaje, ki jih je za potrebe poučevanja na FRI pripravil prof. Janez Demšar. Brez tega gradiva ta krožek ne bi bil, kar je, zato se profesorju in njegovi ekipi lepo zahvaljujem.
