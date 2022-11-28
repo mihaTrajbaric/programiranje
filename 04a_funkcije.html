@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>Funkcije &#8212; Krožek začetnega programiranja 2022-23</title>
+    <title>6. Funkcije &#8212; Krožek začetnega programiranja 2022-23</title>
     
   <!-- Loaded before other Sphinx assets -->
   <link href="_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
@@ -54,6 +54,7 @@ const thebe_selector_output = ".output, .cell_output"
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
+    <link rel="prev" title="5. Seznami, terke in zanka for" href="03a_seznami_terke_zanka_for.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -118,7 +119,7 @@ const thebe_selector_output = ".output, .cell_output"
   Vsebina
  </span>
 </p>
-<ul class="nav bd-sidenav">
+<ul class="current nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="01_izrazi_spremenljivke_program.html">
    1. Izrazi in spremenljivke
@@ -142,6 +143,11 @@ const thebe_selector_output = ".output, .cell_output"
  <li class="toctree-l1">
   <a class="reference internal" href="03a_seznami_terke_zanka_for.html">
    5. Seznami, terke in zanka for
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   6. Funkcije
   </a>
  </li>
 </ul>
@@ -203,7 +209,7 @@ title="Toggle navigation"
   <div class="menu-dropdown__content">
     <ul>
       <li>
-        <a href="https://mybinder.org/v2/gh/mihaTrajbaric/programiranje/main?urlpath=tree/04a funkcije.ipynb"
+        <a href="https://mybinder.org/v2/gh/mihaTrajbaric/programiranje/main?urlpath=tree/04a_funkcije.ipynb"
    class="headerbtn"
    data-toggle="tooltip"
 data-placement="left"
@@ -281,7 +287,7 @@ title="Source repository"
       </li>
       
       <li>
-        <a href="https://github.com/mihaTrajbaric/programiranje/issues/new?title=Issue%20on%20page%20%2F04a funkcije.html&body=Your%20issue%20content%20here."
+        <a href="https://github.com/mihaTrajbaric/programiranje/issues/new?title=Issue%20on%20page%20%2F04a_funkcije.html&body=Your%20issue%20content%20here."
    class="headerbtn"
    data-toggle="tooltip"
 data-placement="left"
@@ -309,7 +315,7 @@ title="Open an issue"
   <div class="menu-dropdown__content">
     <ul>
       <li>
-        <a href="_sources/04a funkcije.ipynb"
+        <a href="_sources/04a_funkcije.ipynb"
    class="headerbtn"
    data-toggle="tooltip"
 data-placement="left"
@@ -370,71 +376,71 @@ title="Print to PDF"
         <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#popolna-stevila">
-   Popolna števila
+   6.1. Popolna števila
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#delitelji-stevila">
-     Delitelji števila
+     6.1.1. Delitelji števila
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#geometrija">
-     Geometrija
+     6.1.2. Geometrija
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#vsota-stevil-v-seznamu">
-     Vsota števil v seznamu
+     6.1.3. Vsota števil v seznamu
     </a>
     <ul class="nav section-nav flex-column">
      <li class="toc-h4 nav-item toc-entry">
       <a class="reference internal nav-link" href="#za-napredno-mislece">
-       Za napredno misleče
+       6.1.3.1. Za napredno misleče
       </a>
      </li>
     </ul>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#popolno-stevilo">
-     Popolno število
+     6.1.4. Popolno število
     </a>
    </li>
   </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#klici-funkcij">
-   Klici funkcij
+   6.2. Klici funkcij
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#rezultat-sredi-funkcije">
-   Rezultat sredi funkcije
+   6.3. Rezultat sredi funkcije
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#funkcije-navadno-vracajo-rezultate-ne-izpisujejo">
-   Funkcije (navadno) vračajo rezultate, ne izpisujejo
+   6.4. Funkcije (navadno) vračajo rezultate, ne izpisujejo
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#funkcije-ki-ne-vracajo-nicesar">
-   Funkcije, ki ne vračajo ničesar
+   6.5. Funkcije, ki ne vračajo ničesar
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#vec-rezultatov">
-   Več rezultatov
+   6.6. Več rezultatov
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#vec-returnov">
-   Več returnov
+   6.7. Več returnov
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#funkcije-brez-argumentov">
-   Funkcije brez argumentov
+   6.8. Funkcije brez argumentov
   </a>
  </li>
 </ul>
@@ -458,71 +464,71 @@ title="Print to PDF"
                             <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#popolna-stevila">
-   Popolna števila
+   6.1. Popolna števila
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#delitelji-stevila">
-     Delitelji števila
+     6.1.1. Delitelji števila
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#geometrija">
-     Geometrija
+     6.1.2. Geometrija
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#vsota-stevil-v-seznamu">
-     Vsota števil v seznamu
+     6.1.3. Vsota števil v seznamu
     </a>
     <ul class="nav section-nav flex-column">
      <li class="toc-h4 nav-item toc-entry">
       <a class="reference internal nav-link" href="#za-napredno-mislece">
-       Za napredno misleče
+       6.1.3.1. Za napredno misleče
       </a>
      </li>
     </ul>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#popolno-stevilo">
-     Popolno število
+     6.1.4. Popolno število
     </a>
    </li>
   </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#klici-funkcij">
-   Klici funkcij
+   6.2. Klici funkcij
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#rezultat-sredi-funkcije">
-   Rezultat sredi funkcije
+   6.3. Rezultat sredi funkcije
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#funkcije-navadno-vracajo-rezultate-ne-izpisujejo">
-   Funkcije (navadno) vračajo rezultate, ne izpisujejo
+   6.4. Funkcije (navadno) vračajo rezultate, ne izpisujejo
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#funkcije-ki-ne-vracajo-nicesar">
-   Funkcije, ki ne vračajo ničesar
+   6.5. Funkcije, ki ne vračajo ničesar
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#vec-rezultatov">
-   Več rezultatov
+   6.6. Več rezultatov
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#vec-returnov">
-   Več returnov
+   6.7. Več returnov
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#funkcije-brez-argumentov">
-   Funkcije brez argumentov
+   6.8. Funkcije brez argumentov
   </a>
  </li>
 </ul>
@@ -536,14 +542,14 @@ title="Print to PDF"
               <div>
                 
   <section class="tex2jax_ignore mathjax_ignore" id="funkcije">
-<h1>Funkcije<a class="headerlink" href="#funkcije" title="Permalink to this headline">#</a></h1>
+<h1><span class="section-number">6. </span>Funkcije<a class="headerlink" href="#funkcije" title="Permalink to this headline">#</a></h1>
 <p>Funkcije smo si doslej predstavljali kot škatlice: nekaj gre noter (temu smo in bomo rekli <em>argument</em>), nekaj pride ven (temu se reče rezultat funkcije), vmes pa se lahko še kaj opaznega dogaja, recimo izpisuje. Primer funkcije, ki je počela vse to, je <code class="docutils literal notranslate"><span class="pre">input</span></code>: kot argument smo ji povedali, kaj naj vpraša uporabnika; kot rezultat je vrnila, kar je vtipkal uporabnik; vmes se je zgodilo to, da je funkcija nekaj vprašala uporabnika in počakala, da je le-ta odgovoril. Druga funkcija, ki smo jo srečali, je bila <code class="docutils literal notranslate"><span class="pre">sqrt</span></code>, ki dobi kot argument neko število in vrne njegov koren. Vmes se ne dogaja nič opaznega, funkcija le “neopazno” naredi, kar mora narediti.</p>
 <p>S tem, kako delujejo funkcije in kako kaj naredijo, se doslej nismo ukvarjali. Te stvari so za nas napisali drugi (hvala, hvala) in mi jih lahko uporabljamo, ne da bi nas vznemirjalo vprašanje, kako so napisane. S tem, kako so napisane funkcije, ki so jih naredili drugi, se tudi v prihodnje ne bomo ukvarjali. Pač pa se bomo danes naučili pisati svoje.</p>
 <section id="popolna-stevila">
-<h2>Popolna števila<a class="headerlink" href="#popolna-stevila" title="Permalink to this headline">#</a></h2>
+<h2><span class="section-number">6.1. </span>Popolna števila<a class="headerlink" href="#popolna-stevila" title="Permalink to this headline">#</a></h2>
 <p>Število je <em>popolno</em>, če je enako vsoti svojih deliteljev. 28 je deljivo z 1, 2, 4, 7 in 14 ter je popolno, saj je 1+2+4+7+14 ravno 28. Napišimo program, ki sestavi seznam vseh popolnih števil do 1000.</p>
 <section id="delitelji-stevila">
-<h3>Delitelji števila<a class="headerlink" href="#delitelji-stevila" title="Permalink to this headline">#</a></h3>
+<h3><span class="section-number">6.1.1. </span>Delitelji števila<a class="headerlink" href="#delitelji-stevila" title="Permalink to this headline">#</a></h3>
 <p>Znamo napisati program, ki sestavi seznam vseh deliteljev nekega števila <em>n</em>?</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -635,7 +641,7 @@ title="Print to PDF"
 <p>Na koncu (ali tudi že kje vmes - bomo že videli primer) funkcija pove, kaj naj klicatelj dobi kot rezultat. To stori s stavkom <code class="docutils literal notranslate"><span class="pre">return</span> <span class="pre">s</span></code>.</p>
 </section>
 <section id="geometrija">
-<h3>Geometrija<a class="headerlink" href="#geometrija" title="Permalink to this headline">#</a></h3>
+<h3><span class="section-number">6.1.2. </span>Geometrija<a class="headerlink" href="#geometrija" title="Permalink to this headline">#</a></h3>
 <p>Napišimo funkcijo, ki dobi kot argument dolžine stranic trikotnika in vrne njegovo ploščino. Ta funkcija bo imela tri argumente; poimenujmo jih <code class="docutils literal notranslate"><span class="pre">a</span></code>, <code class="docutils literal notranslate"><span class="pre">b</span></code> in <code class="docutils literal notranslate"><span class="pre">c</span></code>.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -666,7 +672,7 @@ title="Print to PDF"
 </div>
 </section>
 <section id="vsota-stevil-v-seznamu">
-<h3>Vsota števil v seznamu<a class="headerlink" href="#vsota-stevil-v-seznamu" title="Permalink to this headline">#</a></h3>
+<h3><span class="section-number">6.1.3. </span>Vsota števil v seznamu<a class="headerlink" href="#vsota-stevil-v-seznamu" title="Permalink to this headline">#</a></h3>
 <p>Zdaj napišimo drugo funkcijo: funkcijo, ki dobi seznam števil in izračuna njihovo vsoto.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -682,7 +688,7 @@ title="Print to PDF"
 <p>Funkcija ima spet en argument, tokrat smo ga poimenovali <code class="docutils literal notranslate"><span class="pre">s</span></code>. Ta argument bo seznam števil, ki jih je potrebno sešteti. Funkcija gre - z zanko <code class="docutils literal notranslate"><span class="pre">for</span></code> - prek tega seznama in sešteva, kot smo počeli že prejšnji teden, le brez funkcij. Na koncu rezultata ne izpiše (<code class="docutils literal notranslate"><span class="pre">print</span></code>), kot smo delali doslej, temveč ga vrne (<code class="docutils literal notranslate"><span class="pre">return</span></code>).</p>
 <p>(Mimogrede povejmo še, da nam funkcije <code class="docutils literal notranslate"><span class="pre">vsota</span></code> ne bi bilo potrebno napisati, saj obstaja: imenuje se <code class="docutils literal notranslate"><span class="pre">sum</span></code>.)</p>
 <section id="za-napredno-mislece">
-<h4>Za napredno misleče<a class="headerlink" href="#za-napredno-mislece" title="Permalink to this headline">#</a></h4>
+<h4><span class="section-number">6.1.3.1. </span>Za napredno misleče<a class="headerlink" href="#za-napredno-mislece" title="Permalink to this headline">#</a></h4>
 <p>Nekateri se sprašujejo, kako funkcija ve, kakšnega tipa bodo argumenti, ki jih bo dobila. Nekateri se zdaj, ko so izvedeli, da se nekateri sprašujejo o tem, sprašujejo, zakaj bi se kdo to spraševal. Vsebina tega razdelka je namenjena predvsem prvim.</p>
 <p>V nekaterih jezikih je potrebno za vsako spremenljivko, preden jo uporabimo, povedati, kakšnega tipa bo. Python ni eden izmed njih. Podobno je z argumenti funkcij. V nekaterih jezikih bi morali povedati, kakšnega tipa bodo argumenti funkcije in kakšen bo rezultat. Tudi takšen Python ni. Funkcija sprejme, kar sprejme in vrača, kar vrača.</p>
 <p>Za primer vzemimo preprostejšo funkcijo <code class="docutils literal notranslate"><span class="pre">sestej</span></code>, ki ji podamo dva argumenta, funkcija pa vrne njuno vsoto.</p>
@@ -945,7 +951,7 @@ mogoče sešteti.</p>
 </section>
 </section>
 <section id="popolno-stevilo">
-<h3>Popolno število<a class="headerlink" href="#popolno-stevilo" title="Permalink to this headline">#</a></h3>
+<h3><span class="section-number">6.1.4. </span>Popolno število<a class="headerlink" href="#popolno-stevilo" title="Permalink to this headline">#</a></h3>
 <p>Vrnimo se k popolnim številom. Rekli smo, da je število popolno, če je
 enako vsoti svojih deliteljev. Lahko bi torej rekli</p>
 <div class="cell docutils container">
@@ -1027,7 +1033,7 @@ ne?</p>
 </section>
 </section>
 <section id="klici-funkcij">
-<h2>Klici funkcij<a class="headerlink" href="#klici-funkcij" title="Permalink to this headline">#</a></h2>
+<h2><span class="section-number">6.2. </span>Klici funkcij<a class="headerlink" href="#klici-funkcij" title="Permalink to this headline">#</a></h2>
 <p>Najprej zberimo vse skupaj:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1069,7 +1075,7 @@ ne?</p>
 <p>Ta program je lep zato, ker je pregleden. Razdelili smo ga na tri funkcije, vsaka opravlja svoje delo. Ko pišemo eno funkcijo, se ne ukvarjamo s celo sliko, temveč le s tem, kar počne ta funkcija. Če mislimo le na eno stvar naenkrat, nam bo lažje programirati in manj se bomo motili.</p>
 </section>
 <section id="rezultat-sredi-funkcije">
-<h2>Rezultat sredi funkcije<a class="headerlink" href="#rezultat-sredi-funkcije" title="Permalink to this headline">#</a></h2>
+<h2><span class="section-number">6.3. </span>Rezultat sredi funkcije<a class="headerlink" href="#rezultat-sredi-funkcije" title="Permalink to this headline">#</a></h2>
 <hr class="docutils" />
 <p>Napišimo funkcijo, ki pove, ali je dano število praštevilo. Vrnila bo <code class="docutils literal notranslate"><span class="pre">True</span></code> (je) ali <code class="docutils literal notranslate"><span class="pre">False</span></code> (ni).</p>
 <p>Prejšnjič smo videli, da lahko zanko prekinemo z <code class="docutils literal notranslate"><span class="pre">break</span></code>. Prekinemo jo lahko tudi z <code class="docutils literal notranslate"><span class="pre">return</span></code>.</p>
@@ -1114,13 +1120,13 @@ ne?</p>
 <p>V drugi različici se zanka for ne bo izvedla nikoli, torej ne bo vrnila <code class="docutils literal notranslate"><span class="pre">False</span></code>, <code class="docutils literal notranslate"><span class="pre">return</span></code> na koncu pa bo vrnil <code class="docutils literal notranslate"><span class="pre">True</span></code> le, če število ni 1.</p>
 </section>
 <section id="funkcije-navadno-vracajo-rezultate-ne-izpisujejo">
-<h2>Funkcije (navadno) vračajo rezultate, ne izpisujejo<a class="headerlink" href="#funkcije-navadno-vracajo-rezultate-ne-izpisujejo" title="Permalink to this headline">#</a></h2>
+<h2><span class="section-number">6.4. </span>Funkcije (navadno) vračajo rezultate, ne izpisujejo<a class="headerlink" href="#funkcije-navadno-vracajo-rezultate-ne-izpisujejo" title="Permalink to this headline">#</a></h2>
 <p>Iz neznanega razloga so študentom - kot opažam na izpitih in v domačih nalogah - veliko bolj pri srcu funkcije, ki nekaj izpišejo, kot funkcije, ki vračajo rezultat. Tako bi jih mikalo, recimo, funkcijo za <code class="docutils literal notranslate"><span class="pre">vsoto</span></code> napisati tako, da bi na koncu namesto <code class="docutils literal notranslate"><span class="pre">return</span> <span class="pre">v</span></code> pisalo <code class="docutils literal notranslate"><span class="pre">print(v)</span></code>.</p>
 <p>Vendar to ni prav! S takšno funkcijo si nimamo kaj pomagati! Ne potrebujemo funkcije, ki <em>izpiše</em> vsoto; potrebujemo funkcijo, ki <em>vrne</em> vsoto, da bomo lahko s to vsoto še kaj počeli. Če jo bomo hoteli izpisati, bomo pač poklicali funkcijo in izpisali, kar vrne. Funkcija naj jo le izračuna. Si predstavljate, kako neuporabna bi bila funkcija <code class="docutils literal notranslate"><span class="pre">sin</span></code>, če bi le izpisala sinus, namesto da ga vrne? Bi si lahko pri programiranju topov z njo sploh kaj pomagali?</p>
 <p>To seveda ne pomeni, da funkcije ne smejo ničesar izpisovati. Smejo; nekatere so pač namenjene temu. Najbolj očiten primer takšne funkcije je očitno kar <code class="docutils literal notranslate"><span class="pre">print</span></code>.</p>
 </section>
 <section id="funkcije-ki-ne-vracajo-nicesar">
-<h2>Funkcije, ki ne vračajo ničesar<a class="headerlink" href="#funkcije-ki-ne-vracajo-nicesar" title="Permalink to this headline">#</a></h2>
+<h2><span class="section-number">6.5. </span>Funkcije, ki ne vračajo ničesar<a class="headerlink" href="#funkcije-ki-ne-vracajo-nicesar" title="Permalink to this headline">#</a></h2>
 <p>Vse funkcije v Pythonu vračajo rezultat. Če funkcija ne vrača ničesar, vrača nič, torej <code class="docutils literal notranslate"><span class="pre">None</span></code>. To se bo zgodilo, kadar funkcija nima <code class="docutils literal notranslate"><span class="pre">return</span></code> ali kadar se ta ne izvede.</p>
 <p>Napišimo, na primer, funkcijo, ki kot argument dobi seznam in vrne prvo sodo število v njem.</p>
 <div class="cell docutils container">
@@ -1224,7 +1230,7 @@ ne?</p>
 </div>
 </section>
 <section id="vec-rezultatov">
-<h2>Več rezultatov<a class="headerlink" href="#vec-rezultatov" title="Permalink to this headline">#</a></h2>
+<h2><span class="section-number">6.6. </span>Več rezultatov<a class="headerlink" href="#vec-rezultatov" title="Permalink to this headline">#</a></h2>
 <p>Funkcija lahko vrača tudi “več rezultatov”, tako kot tale funkcija, ki
 vrne, kvadrat in kub števila.</p>
 <div class="cell docutils container">
@@ -1247,7 +1253,7 @@ vrne, kvadrat in kub števila.</p>
 <p>V tem primeru navadno ne pišemo oklepajev okrog terk. Funkcija bo delovala tudi, če pišemo <code class="docutils literal notranslate"><span class="pre">return</span> <span class="pre">(x</span> <span class="pre">**</span> <span class="pre">2,</span> <span class="pre">x</span> <span class="pre">**</span> <span class="pre">3)</span></code>, vendar to ni običajen zapis za vračanje dveh vrednosti.</p>
 </section>
 <section id="vec-returnov">
-<h2>Več returnov<a class="headerlink" href="#vec-returnov" title="Permalink to this headline">#</a></h2>
+<h2><span class="section-number">6.7. </span>Več returnov<a class="headerlink" href="#vec-returnov" title="Permalink to this headline">#</a></h2>
 <p>Funkcija ima seveda lahko več <code class="docutils literal notranslate"><span class="pre">return</span></code>ov. Izvede se tisti, na katerega naleti. En primer smo že videli (določanje praštevilskosti). Naredimo še enega: funkcijo, ki vrne absolutno vrednost danega števila.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1263,7 +1269,7 @@ vrne, kvadrat in kub števila.</p>
 <p>Funkcija ima torej dva <code class="docutils literal notranslate"><span class="pre">return</span></code>. Eden se izvede, če je število negativno in drugi, če pozitivno.</p>
 </section>
 <section id="funkcije-brez-argumentov">
-<h2>Funkcije brez argumentov<a class="headerlink" href="#funkcije-brez-argumentov" title="Permalink to this headline">#</a></h2>
+<h2><span class="section-number">6.8. </span>Funkcije brez argumentov<a class="headerlink" href="#funkcije-brez-argumentov" title="Permalink to this headline">#</a></h2>
 <p>Funkcija je lahko tudi brez argumentov. Tule je funkcija, ki nima
 argumentov, vrne pa 42. Vedno.</p>
 <div class="cell docutils container">
@@ -1318,6 +1324,13 @@ argumentov, vrne pa 42. Vedno.</p>
                 
     <!-- Previous / next buttons -->
 <div class='prev-next-area'>
+    <a class='left-prev' id="prev-link" href="03a_seznami_terke_zanka_for.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title"><span class="section-number">5. </span>Seznami, terke in zanka for</p>
+        </div>
+    </a>
 </div>
             </footer>
         </div>
