@@ -12,4 +12,5 @@ parts:
     - file: 02b_zanke
     - file: 02c_ponovimo
     - file: 03a_seznami_terke_zanka_for
+    - file: 04a_funkcije
 
