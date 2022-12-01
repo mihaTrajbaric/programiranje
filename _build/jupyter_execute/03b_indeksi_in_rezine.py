@@ -1,6 +1,8 @@
 #!/usr/bin/env python
 # coding: utf-8
 
+# # Indeksi in rezine
+# 
 # ## Štetje z zanko `for`
 # 
 # V programih pogosto potrebujemo še dva tipa zank. Pogosto bomo želeli

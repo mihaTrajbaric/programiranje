@@ -145,8 +145,13 @@ const thebe_selector_output = ".output, .cell_output"
   </a>
  </li>
  <li class="toctree-l1">
+  <a class="reference internal" href="03b_indeksi_in_rezine.html">
+   6. Indeksi in rezine
+  </a>
+ </li>
+ <li class="toctree-l1">
   <a class="reference internal" href="04a_funkcije.html">
-   6. Funkcije
+   7. Funkcije
   </a>
  </li>
 </ul>
@@ -608,7 +613,7 @@ title="Print to PDF"
 <p>Izračunali bomo, koliko je 2 + 3 in rekli računalniku, naj si to zapomni.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="mi">2</span> <span class="o">+</span> <span class="mi">3</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>x = 2 + 3
 </pre></div>
 </div>
 </div>
@@ -622,7 +627,7 @@ title="Print to PDF"
 <p>Python tokrat ni izpisal ničesar v odgovor. Rezultat si je le zapomnil, shranil ga je pod imenom <code class="docutils literal notranslate"><span class="pre">x</span></code>. Kaj lahko počnemo s tem <code class="docutils literal notranslate"><span class="pre">x</span></code>? Lahko ga uporabljamo v drugih izrazih.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">x</span> <span class="o">+</span> <span class="mi">7</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>x + 7
 </pre></div>
 </div>
 </div>
@@ -634,7 +639,7 @@ title="Print to PDF"
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">x</span> <span class="o">**</span> <span class="mi">2</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>x ** 2
 </pre></div>
 </div>
 </div>
@@ -646,7 +651,7 @@ title="Print to PDF"
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="mi">13</span> <span class="o">%</span> <span class="n">x</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>13 % x
 </pre></div>
 </div>
 </div>
@@ -658,7 +663,7 @@ title="Print to PDF"
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">x</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>x
 </pre></div>
 </div>
 </div>
@@ -673,8 +678,8 @@ title="Print to PDF"
 <p>Spremenljivko lahko seveda uporabljamo tudi za računanje novih spremenljivk.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">y</span> <span class="o">=</span> <span class="n">x</span> <span class="o">+</span> <span class="mi">2</span>
-<span class="n">y</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>y = x + 2
+y
 </pre></div>
 </div>
 </div>
@@ -687,8 +692,8 @@ title="Print to PDF"
 <p>Spremenljivka pri programiranju (v večini jezikov) ne pomeni istega kot v matematiki. Spremenljivke v matematiki se, roko na srce, pravzaprav ne spreminjajo. V matematiki <em>x</em> ne more biti v eni vrstici 5, v naslednji pa 8. Pri programiranju pa lahko.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="mi">5</span>
-<span class="n">x</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>x = 5
+x
 </pre></div>
 </div>
 </div>
@@ -700,8 +705,8 @@ title="Print to PDF"
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="mi">8</span>
-<span class="n">x</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>x = 8
+x
 </pre></div>
 </div>
 </div>
@@ -714,9 +719,9 @@ title="Print to PDF"
 <p>Še huje. Če matematiki ne bi znali programirati (pa navadno znajo in to dobro), bi jih utegnilo pretresti tole:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="mi">5</span>
-<span class="n">x</span> <span class="o">=</span> <span class="n">x</span> <span class="o">+</span> <span class="mi">2</span>
-<span class="n">x</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>x = 5
+x = x + 2
+x
 </pre></div>
 </div>
 </div>
@@ -731,8 +736,8 @@ title="Print to PDF"
 <p>Tem, ki že znajo programirati - posebej, če so uporabljali kak C# ali Javo - povejmo še, da se Pythonove spremenljivke tudi sicer bistevno razlikujejo od spremenljivk, ki so jih vajeni od ondod. Predvsem ni dobro, da so vas najbrž učili, da so “<em>spremenljivke kot nekakšne škatlice</em>”. Za začetek bi bilo veliko lepše, če bi jim rekli <em>ime</em>, ne <em>spremenljivka</em>. Tudi Python jim reče <em>name</em>. A navada je železna srajca in vsi govorimo o <em>spremenljivkah</em>. Pomembno pa je tole: če imamo</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="mi">42</span>
-<span class="n">y</span> <span class="o">=</span> <span class="n">x</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>x = 42
+y = x
 </pre></div>
 </div>
 </div>
@@ -761,8 +766,8 @@ title="Print to PDF"
 <p>Postavimo, najprej, <code class="docutils literal notranslate"><span class="pre">a</span></code> na <code class="docutils literal notranslate"><span class="pre">7</span></code> in izračunajmo <code class="docutils literal notranslate"><span class="pre">a</span> <span class="pre">+</span> <span class="pre">b</span></code>.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="mi">7</span>
-<span class="n">a</span> <span class="o">+</span> <span class="n">b</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>a = 7
+a + b
 </pre></div>
 </div>
 </div>
@@ -782,7 +787,7 @@ title="Print to PDF"
 <p>Kaj pa tole?</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="mi">7</span> <span class="o">=</span> <span class="n">a</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>7 = a
 </pre></div>
 </div>
 </div>
@@ -799,7 +804,7 @@ title="Print to PDF"
 <p>Pridelajmo še eno napako.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kc">True</span> <span class="o">=</span> <span class="mi">12</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>True = 12
 </pre></div>
 </div>
 </div>
@@ -815,7 +820,7 @@ title="Print to PDF"
 <p>Beseda <code class="docutils literal notranslate"><span class="pre">True</span></code> ima poseben pomen in je ni mogoče uporabljati kot spremenljivko. Takšnim besedam pravimo ključne besede, ali, kot bi jim rekel John Kennedy, če bi bil še živ, <em>keywords</em>. Tokrat je bil Python še prijazen, pri večini drugih ključnih besed pa ne bo povedal kaj dosti več kot “nekaj je narobe”. Poskusimo z dvema, <code class="docutils literal notranslate"><span class="pre">if</span></code> in <code class="docutils literal notranslate"><span class="pre">in</span></code>:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">if</span> <span class="o">=</span> <span class="mi">7</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>if = 7
 </pre></div>
 </div>
 </div>
@@ -830,7 +835,7 @@ title="Print to PDF"
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="ow">in</span> <span class="o">=</span> <span class="mi">7</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>in = 7
 </pre></div>
 </div>
 </div>
@@ -851,7 +856,7 @@ title="Print to PDF"
 <p>Tako kot spremenljivke, ki v programiranju ne pomenijo čisto istega kot v matematiki in v programiranju ne pomenijo čisto istega, tudi beseda <em>funkcija</em> (Rihanna bi rekla <em>function</em>, če bi znala programirati) ne pomeni povsem istega. Videti pa je zelo podobno. Imamo, recimo, funkcijo <code class="docutils literal notranslate"><span class="pre">abs</span></code>, ki izračuna absolutno vrednost števila.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">abs</span><span class="p">(</span><span class="o">-</span><span class="mf">2.8</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>abs(-2.8)
 </pre></div>
 </div>
 </div>
@@ -864,7 +869,7 @@ title="Print to PDF"
 <p>Ali pa <code class="docutils literal notranslate"><span class="pre">pow</span></code>, ki naredi isto kot operator <code class="docutils literal notranslate"><span class="pre">**</span></code>.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">pow</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>pow(2, 3)
 </pre></div>
 </div>
 </div>
@@ -879,7 +884,7 @@ title="Print to PDF"
 <p>Tudi klic funkcije, <code class="docutils literal notranslate"><span class="pre">pow(2,</span> <span class="pre">3)</span></code>, je izraz. Kot katerikoli drugi izraz lahko tudi <code class="docutils literal notranslate"><span class="pre">pow</span></code> in <code class="docutils literal notranslate"><span class="pre">abs</span></code> nastopata kot del izraza.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="p">(</span><span class="nb">pow</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">)</span> <span class="o">+</span> <span class="mi">2</span><span class="p">)</span> <span class="o">/</span> <span class="mi">5</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>(pow(2, 3) + 2) / 5
 </pre></div>
 </div>
 </div>
@@ -891,7 +896,7 @@ title="Print to PDF"
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">pow</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">)</span> <span class="o">+</span> <span class="nb">abs</span><span class="p">(</span><span class="o">-</span><span class="mi">2</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>pow(2, 3) + abs(-2)
 </pre></div>
 </div>
 </div>
@@ -904,9 +909,9 @@ title="Print to PDF"
 <p>In argumenti funkcij so lahko prav tako izrazi.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="mi">1</span>
-<span class="n">yy</span> <span class="o">=</span> <span class="nb">pow</span><span class="p">(</span><span class="nb">abs</span><span class="p">(</span><span class="o">-</span><span class="mi">2</span><span class="p">),</span> <span class="n">x</span> <span class="o">*</span> <span class="mi">3</span><span class="p">)</span>
-<span class="n">yy</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>x = 1
+yy = pow(abs(-2), x * 3)
+yy
 </pre></div>
 </div>
 </div>
@@ -924,7 +929,7 @@ title="Print to PDF"
 <p>Niz ali, po kot mu pravijo Avstralci, <em>string</em> (oprostite mi boste morali, da bom pogosto uporabljal angleške izraze; pa mi pokažite, lepo prosim, zidarja, ki ne uporablja vaservage in plajbe temveč vodno tehtnico in svinčnico, pa se bom tudi jaz discipliniral), je zaporedje znakov. Aha, kaj pa je to znak? Znaki so črke, številke, ločila in take stvari. Nize moramo vedno zapreti v narekovaje, bodisi enojne (’) bodisi dvojne (“). Uporabiti smemo take, ki so bolj praktični in tudi Python bo izpisoval tako, kot se mu bo zdelo bolj praktično.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="s1">&#39;Tole je primer niza.&#39;</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>&#39;Tole je primer niza.&#39;
 </pre></div>
 </div>
 </div>
@@ -936,7 +941,7 @@ title="Print to PDF"
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="s2">&quot;Tole je pa še en primer niza.&quot;</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>&quot;Tole je pa še en primer niza.&quot;
 </pre></div>
 </div>
 </div>
@@ -950,8 +955,8 @@ title="Print to PDF"
 <p>Tudi nize lahko priredimo spremenljivkam.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">napoved</span> <span class="o">=</span> <span class="s2">&quot;Jutri bosta matematika pa dež&quot;</span>
-<span class="n">napoved</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>napoved = &quot;Jutri bosta matematika pa dež&quot;
+napoved
 </pre></div>
 </div>
 </div>
@@ -964,7 +969,7 @@ title="Print to PDF"
 <p>Celo seštevamo jih lahko.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="s2">&quot;Jutri bosta &quot;</span> <span class="o">+</span> <span class="s2">&quot;matematika&quot;</span> <span class="o">+</span> <span class="s2">&quot; pa &quot;</span> <span class="o">+</span> <span class="s2">&quot;dež&quot;</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>&quot;Jutri bosta &quot; + &quot;matematika&quot; + &quot; pa &quot; + &quot;dež&quot;
 </pre></div>
 </div>
 </div>
@@ -977,10 +982,10 @@ title="Print to PDF"
 <p>Ali pa oboje</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">napoved_zac</span> <span class="o">=</span> <span class="s2">&quot;Jutri bosta &quot;</span>
-<span class="n">mat</span> <span class="o">=</span> <span class="s2">&quot;matematika&quot;</span>
-<span class="n">dez</span> <span class="o">=</span> <span class="s2">&quot;dez&quot;</span>
-<span class="n">napoved_zac</span> <span class="o">+</span> <span class="n">mat</span> <span class="o">+</span> <span class="s2">&quot; pa &quot;</span> <span class="o">+</span> <span class="n">dez</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>napoved_zac = &quot;Jutri bosta &quot;
+mat = &quot;matematika&quot;
+dez = &quot;dez&quot;
+napoved_zac + mat + &quot; pa &quot; + dez
 </pre></div>
 </div>
 </div>
@@ -993,9 +998,9 @@ title="Print to PDF"
 <p>Kako zapleten račun! Predvsem ne spreglejte, da smo dali besedo “pa” pod narekovaje, saj so <code class="docutils literal notranslate"><span class="pre">napoved_zac</span></code>, <code class="docutils literal notranslate"><span class="pre">mat</span></code>, <code class="docutils literal notranslate"><span class="pre">dez</span></code> spremenljivke (ki so v resnici nizi), <code class="docutils literal notranslate"><span class="pre">&quot;</span> <span class="pre">pa</span> <span class="pre">&quot;</span></code> pa je niz kar tako. To je nekako tako, kot če bi, ko smo se igrali s številkami, pisali</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="mi">1</span>
-<span class="n">y</span> <span class="o">=</span> <span class="mi">3</span>
-<span class="n">x</span> <span class="o">+</span> <span class="mi">2</span> <span class="o">+</span> <span class="n">y</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>x = 1
+y = 3
+x + 2 + y
 </pre></div>
 </div>
 </div>
@@ -1009,7 +1014,7 @@ title="Print to PDF"
 <p>Kaj pa, če bi slučajno pozabili narekovaje?</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">napoved_zac</span> <span class="o">+</span> <span class="n">mat</span> <span class="o">+</span>  <span class="n">pa</span>  <span class="o">+</span> <span class="n">dez</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>napoved_zac + mat +  pa  + dez
 </pre></div>
 </div>
 </div>
@@ -1027,7 +1032,7 @@ title="Print to PDF"
 <p>Jasno? Brez narekovajev je <code class="docutils literal notranslate"><span class="pre">pa</span></code> ime spremenljivke - in to takšne, ki še ni definirana. To je tako, kot če bi namesto</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">ime</span> <span class="o">=</span> <span class="s2">&quot;Benjamin&quot;</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>ime = &quot;Benjamin&quot;
 </pre></div>
 </div>
 </div>
@@ -1035,7 +1040,7 @@ title="Print to PDF"
 <p>kar je pravilno, rekli</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">ime</span> <span class="o">=</span> <span class="n">Benjamin</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>ime = Benjamin
 </pre></div>
 </div>
 </div>
@@ -1053,7 +1058,7 @@ title="Print to PDF"
 <p>Ali pa:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">napoved</span> <span class="o">=</span> <span class="n">Jutri</span> <span class="n">bosta</span> <span class="n">matametika</span> <span class="n">pa</span> <span class="n">dež</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>napoved = Jutri bosta matametika pa dež
 </pre></div>
 </div>
 </div>
@@ -1071,10 +1076,10 @@ title="Print to PDF"
 <p>Gornje je tako, kot da bi rekli</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="mi">1</span>
-<span class="n">y</span> <span class="o">=</span> <span class="mi">2</span>
-<span class="n">z</span> <span class="o">=</span> <span class="mi">3</span>
-<span class="n">x</span> <span class="n">y</span> <span class="n">z</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>x = 1
+y = 2
+z = 3
+x y z
 </pre></div>
 </div>
 </div>
@@ -1108,7 +1113,7 @@ SyntaxError: invalid syntax
 <p>Ni potrebno biti posebno pameten, da vidimo, kaj ga je (namreč Pythona, ne cesarja) onesrečilo tokrat. Ko vidi prvi narekovaj, ve, da gre za niz. Ko pride do naslednjega narekovaja, se niz, tako méni, niz konča. In potem se seveda zmede, ker nizu sledi nekaj, kar ni podobno ničemur. Zdaj pa poskusimo z enojnimi narekovaji.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="s1">&#39;Cesar vpraša nekoliko nevoljen: &quot;Kaj neki?&quot;&#39;</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>&#39;Cesar vpraša nekoliko nevoljen: &quot;Kaj neki?&quot;&#39;
 </pre></div>
 </div>
 </div>
@@ -1125,9 +1130,9 @@ SyntaxError: invalid syntax
 <p>Da se reč usede, meditirajmo ob naslednjih vrsticah:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="mi">1</span> <span class="o">+</span> <span class="mi">1</span>
-<span class="n">b</span> <span class="o">=</span> <span class="s2">&quot;1 + 1&quot;</span>
-<span class="n">c</span> <span class="o">=</span> <span class="s2">&quot;1&quot;</span> <span class="o">+</span> <span class="s2">&quot;1&quot;</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>a = 1 + 1
+b = &quot;1 + 1&quot;
+c = &quot;1&quot; + &quot;1&quot;
 </pre></div>
 </div>
 </div>
@@ -1137,9 +1142,9 @@ SyntaxError: invalid syntax
 <p>Najbolj zanimivo je tretje. Preden razrešimo vprašanje, se vprašajmo nekaj drugega. Recimo</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">ana</span> <span class="o">=</span> <span class="s2">&quot;Ana&quot;</span>
-<span class="n">benjamin</span> <span class="o">=</span> <span class="s2">&quot;Benjamin&quot;</span>
-<span class="n">r</span> <span class="o">=</span> <span class="n">ana</span> <span class="o">+</span> <span class="n">benjamin</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>ana = &quot;Ana&quot;
+benjamin = &quot;Benjamin&quot;
+r = ana + benjamin
 </pre></div>
 </div>
 </div>
@@ -1149,7 +1154,7 @@ SyntaxError: invalid syntax
 <p>Nikar ne zamudimo priložnosti za še eno napako!</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="mi">1</span> <span class="o">+</span> <span class="s2">&quot;1&quot;</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>1 + &quot;1&quot;
 </pre></div>
 </div>
 </div>
@@ -1168,7 +1173,7 @@ SyntaxError: invalid syntax
 podatkovni tip, ki predstavlja nize). Dve števili ali dva niza bi znal sešteti, te kombinacije pa ne. Mimogrede, obratni vrstni red da nekoliko drugačno sporočilo:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="s2">&quot;1&quot;</span> <span class="o">+</span> <span class="mi">1</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>&quot;1&quot; + 1
 </pre></div>
 </div>
 </div>
@@ -1188,7 +1193,7 @@ podatkovni tip, ki predstavlja nize). Dve števili ali dva niza bi znal sešteti
 število. (Tole bi se spodobilo in bilo pravično povedati: <code class="docutils literal notranslate"><span class="pre">int</span></code> in <code class="docutils literal notranslate"><span class="pre">float</span></code> v resnici nista funkciji, temveč nekaj drugega, a za potrebe prvih toliko in toliko predavanj, se bomo držali Pythonovega načela “Če hodi kot raca in gaga kot raca, potem je raca”, ki bo postalo pomembno proti koncu semestra; če se obnašata kot funkciji, ju bomo brez slabe vesti oklicali za funkciji.)</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">int</span><span class="p">(</span><span class="s2">&quot;42&quot;</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>int(&quot;42&quot;)
 </pre></div>
 </div>
 </div>
@@ -1200,7 +1205,7 @@ podatkovni tip, ki predstavlja nize). Dve števili ali dva niza bi znal sešteti
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">float</span><span class="p">(</span><span class="s2">&quot;42&quot;</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>float(&quot;42&quot;)
 </pre></div>
 </div>
 </div>
@@ -1213,12 +1218,12 @@ podatkovni tip, ki predstavlja nize). Dve števili ali dva niza bi znal sešteti
 <p>Kar želimo, storimo na tri načine, vsak bo poučen po svoje. Prvi:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="s2">&quot;1&quot;</span>
-<span class="n">b</span> <span class="o">=</span> <span class="s2">&quot;2&quot;</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>a = &quot;1&quot;
+b = &quot;2&quot;
 
-<span class="n">aa</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>
-<span class="n">bb</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">b</span><span class="p">)</span>
-<span class="n">aa</span> <span class="o">+</span> <span class="n">bb</span>
+aa = int(a)
+bb = int(b)
+aa + bb
 </pre></div>
 </div>
 </div>
@@ -1232,12 +1237,12 @@ podatkovni tip, ki predstavlja nize). Dve števili ali dva niza bi znal sešteti
 <p>Drugi:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="s2">&quot;1&quot;</span>
-<span class="n">b</span> <span class="o">=</span> <span class="s2">&quot;2&quot;</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>a = &quot;1&quot;
+b = &quot;2&quot;
 
-<span class="n">a</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>
-<span class="n">b</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">b</span><span class="p">)</span>
-<span class="n">a</span> <span class="o">+</span> <span class="n">b</span>
+a = int(a)
+b = int(b)
+a + b
 </pre></div>
 </div>
 </div>
@@ -1252,10 +1257,10 @@ podatkovni tip, ki predstavlja nize). Dve števili ali dva niza bi znal sešteti
 <p>Tretji:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="s2">&quot;1&quot;</span>
-<span class="n">b</span> <span class="o">=</span> <span class="s2">&quot;2&quot;</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>a = &quot;1&quot;
+b = &quot;2&quot;
 
-<span class="nb">int</span><span class="p">(</span><span class="n">a</span><span class="p">)</span> <span class="o">+</span> <span class="nb">int</span><span class="p">(</span><span class="n">b</span><span class="p">)</span>
+int(a) + int(b)
 </pre></div>
 </div>
 </div>
@@ -1273,7 +1278,7 @@ podatkovni tip, ki predstavlja nize). Dve števili ali dva niza bi znal sešteti
 <p>Rekli smo, da funkcije pri programiranju niso nekaj takšnega kot funkcije v matematiki: funkcije v matematiki imajo določeno vrednost pri določenih argumentih (še huje, matematiki pravijo, da so funkcije pravilo, ki vsakemu elementu kodomene funkcije določi … uh, pustimo). “Naše” funkcije pa nekaj delajo in včasih vrnejo kakšen rezultat, recimo številko ali niz ali kaj tretjega. Ena od teh funkcij je namenjena izpisovanju: če jo pokličemo, izpiše tisto, kar smo ji dali kot argument. Imenuje se <code class="docutils literal notranslate"><span class="pre">print</span></code>. Za razliko od, recimo, <code class="docutils literal notranslate"><span class="pre">abs</span></code>, ki zahteva en argument, namreč poljubno število, in vrne njegovo absolutno vrednost, ali <code class="docutils literal notranslate"><span class="pre">pow</span></code>, ki hoče natanko dva argumenta, lahko damo <code class="docutils literal notranslate"><span class="pre">print</span></code>u poljubno število argumentov - številke, nize ali še kaj tretjega -, pa jih bo lepo izpisala.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="mi">1</span> <span class="o">+</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">27</span><span class="p">,</span> <span class="s2">&quot;benjamin&quot;</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>print(1 + 1, 27, &quot;benjamin&quot;)
 </pre></div>
 </div>
 </div>
@@ -1285,7 +1290,7 @@ podatkovni tip, ki predstavlja nize). Dve števili ali dva niza bi znal sešteti
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">napoved_zac</span><span class="p">,</span> <span class="n">mat</span><span class="p">,</span> <span class="s2">&quot;pa&quot;</span><span class="p">,</span> <span class="n">dez</span><span class="p">,</span> <span class="s2">&quot;in&quot;</span><span class="p">,</span> <span class="mi">18</span><span class="p">,</span> <span class="s2">&quot;stopinj&quot;</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>print(napoved_zac, mat, &quot;pa&quot;, dez, &quot;in&quot;, 18, &quot;stopinj&quot;)
 </pre></div>
 </div>
 </div>
@@ -1299,7 +1304,7 @@ podatkovni tip, ki predstavlja nize). Dve števili ali dva niza bi znal sešteti
 <p>Druga funkcija, ki nam bo prišla prav, prosi uporabnika, da vpiše kako reč. Kot argument pričakuje niz, vprašanje, ki ga želimo zastaviti uporabniku. Kot rezultat “izračuna” vrne niz, ki ga je vpisal uporabnik.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">geslo</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Geslo? &quot;</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>geslo = input(&quot;Geslo? &quot;)
 </pre></div>
 </div>
 </div>
@@ -1311,7 +1316,7 @@ podatkovni tip, ki predstavlja nize). Dve števili ali dva niza bi znal sešteti
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">geslo</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>geslo
 </pre></div>
 </div>
 </div>
@@ -1331,8 +1336,8 @@ Fahrenheite pa tako, da jih pomnožimo z 9/5 in prištejemo 32 (kogar zanima
 še kaj, naj pogleda na <a class="reference external" href="http://en.wikipedia.org/wiki/Conversion_of_units_of_temperature">Wikipedijo</a>.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">temp_C</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Temperatura [C]? &quot;</span><span class="p">)</span>
-<span class="n">temp_K</span> <span class="o">=</span> <span class="n">temp_C</span> <span class="o">+</span> <span class="mf">273.15</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>temp_C = input(&quot;Temperatura [C]? &quot;)
+temp_K = temp_C + 273.15
 </pre></div>
 </div>
 </div>
@@ -1354,10 +1359,10 @@ Fahrenheite pa tako, da jih pomnožimo z 9/5 in prištejemo 32 (kogar zanima
 <p><em>Eh.</em> Funkcija <code class="docutils literal notranslate"><span class="pre">input</span></code> vrne <em>niz</em>, ki ga je vpisal uporabnik. Četudi utegne ta izgledati kot številka, je še vedno niz in k nizom ni mogoče prištevati števil. Kot smo videli, lahko storimo troje: naredimo novo spremenljivko, na primer, <code class="docutils literal notranslate"><span class="pre">temp_Cf</span> <span class="pre">=</span> <span class="pre">float(temp_C)</span></code>, povozimo staro s <code class="docutils literal notranslate"><span class="pre">temp_Cf</span> <span class="pre">=</span> <span class="pre">float(temp_C)</span></code> ali pa pretvorbo opravimo kar sproti, tako da računamo <code class="docutils literal notranslate"><span class="pre">temp_K</span> <span class="pre">=</span> <span class="pre">float(temp_C)</span> <span class="pre">+</span> <span class="pre">273.15</span></code>. Izmed naštetih možnosti se odločimo za četrto in niz pretvorimo, čim ga uporabnik vpiše. Ponovimo torej vso vajo.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">temp_C</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Temperatura [C]? &quot;</span><span class="p">))</span>
-<span class="n">temp_K</span> <span class="o">=</span> <span class="n">temp_C</span> <span class="o">+</span> <span class="mf">273.15</span>
-<span class="n">temp_F</span> <span class="o">=</span> <span class="n">temp_C</span> <span class="o">*</span> <span class="mi">5</span><span class="o">/</span><span class="mi">9</span> <span class="o">+</span> <span class="mi">32</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">temp_C</span><span class="p">,</span> <span class="s2">&quot;C je enako&quot;</span><span class="p">,</span> <span class="n">temp_K</span><span class="p">,</span> <span class="s2">&quot;K ali&quot;</span><span class="p">,</span> <span class="n">temp_F</span><span class="p">,</span> <span class="s2">&quot;F&quot;</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>temp_C = float(input(&quot;Temperatura [C]? &quot;))
+temp_K = temp_C + 273.15
+temp_F = temp_C * 5/9 + 32
+print(temp_C, &quot;C je enako&quot;, temp_K, &quot;K ali&quot;, temp_F, &quot;F&quot;)
 </pre></div>
 </div>
 </div>

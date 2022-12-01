@@ -145,8 +145,13 @@ const thebe_selector_output = ".output, .cell_output"
   </a>
  </li>
  <li class="toctree-l1">
+  <a class="reference internal" href="03b_indeksi_in_rezine.html">
+   6. Indeksi in rezine
+  </a>
+ </li>
+ <li class="toctree-l1">
   <a class="reference internal" href="04a_funkcije.html">
-   6. Funkcije
+   7. Funkcije
   </a>
  </li>
 </ul>
@@ -458,7 +463,7 @@ glavnih razlogov, zakaj se učimo programiranja v Pythonu in ne v jeziku, kjer b
 <p>Modul z matematičnimim funkcijami, <code class="docutils literal notranslate"><span class="pre">math</span></code>, uvozimo tako:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">math</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>import math
 </pre></div>
 </div>
 </div>
@@ -466,7 +471,7 @@ glavnih razlogov, zakaj se učimo programiranja v Pythonu in ne v jeziku, kjer b
 <p>S tem v bistvu dobimo novo spremenljivko, <code class="docutils literal notranslate"><span class="pre">math</span></code>.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">math</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>math
 </pre></div>
 </div>
 </div>
@@ -480,7 +485,7 @@ glavnih razlogov, zakaj se učimo programiranja v Pythonu in ne v jeziku, kjer b
 <p>Modulov ne moremo seštevati ali množiti. Niti izpisati bolj ali manj ne. Kaj pa potem znajo? Kaj je njihov superpower? To, da vsebujejo stvari. Modul <code class="docutils literal notranslate"><span class="pre">math</span></code> vsebuje funkcije <code class="docutils literal notranslate"><span class="pre">sin</span></code>, <code class="docutils literal notranslate"><span class="pre">radians</span></code> in <code class="docutils literal notranslate"><span class="pre">sqrt</span></code>, poleg tega pa tudi kakšno konstanto, na primer <code class="docutils literal notranslate"><span class="pre">pi</span></code>. Do vseh teh stvari pridemo tako, da k spremenljivki, ki predstavlja modul, dodamo piko in ime stvari. Tako je <code class="docutils literal notranslate"><span class="pre">math.sin</span></code> funkcija, ki izračuna sinus in <code class="docutils literal notranslate"><span class="pre">math.pi</span></code> konstanta <span class="math notranslate nohighlight">\(pi\)</span>.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">math</span><span class="o">.</span><span class="n">pi</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>math.pi
 </pre></div>
 </div>
 </div>
@@ -492,7 +497,7 @@ glavnih razlogov, zakaj se učimo programiranja v Pythonu in ne v jeziku, kjer b
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">math</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="n">math</span><span class="o">.</span><span class="n">pi</span> <span class="o">/</span> <span class="mi">4</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>math.sin(math.pi / 4)
 </pre></div>
 </div>
 </div>
@@ -505,7 +510,7 @@ glavnih razlogov, zakaj se učimo programiranja v Pythonu in ne v jeziku, kjer b
 <p>Uvozimo še en modul, <code class="docutils literal notranslate"><span class="pre">os</span></code>.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">os</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>import os
 </pre></div>
 </div>
 </div>
@@ -513,14 +518,14 @@ glavnih razlogov, zakaj se učimo programiranja v Pythonu in ne v jeziku, kjer b
 <p>V <code class="docutils literal notranslate"><span class="pre">os</span></code> so funkcije, s katerimi lahko ustvarimo direktorij ali pobrišemo datoteko. Poleg tega pa vsebuje še nekaj zanimivega: modul. Modul <code class="docutils literal notranslate"><span class="pre">path</span></code> je modul znotraj modula <code class="docutils literal notranslate"><span class="pre">os</span></code>. Vsebuje, recimo, funkcijo <code class="docutils literal notranslate"><span class="pre">splitext</span></code>, ki za podano ime datoteke vrne osnovo in končnico.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">osnova</span><span class="p">,</span> <span class="n">koncnica</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">splitext</span><span class="p">(</span><span class="s2">&quot;nek_film.avi&quot;</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>osnova, koncnica = os.path.splitext(&quot;nek_film.avi&quot;)
 </pre></div>
 </div>
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">osnova</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>osnova
 </pre></div>
 </div>
 </div>
@@ -532,7 +537,7 @@ glavnih razlogov, zakaj se učimo programiranja v Pythonu in ne v jeziku, kjer b
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">koncnica</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>koncnica
 </pre></div>
 </div>
 </div>
@@ -553,14 +558,14 @@ glavnih razlogov, zakaj se učimo programiranja v Pythonu in ne v jeziku, kjer b
 <p>Boljše bi bilo imeti te funkcije pri roki brez ponavljajočega se <code class="docutils literal notranslate"><span class="pre">math</span></code>. Uvozimo jih z</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">math</span> <span class="kn">import</span> <span class="n">sin</span><span class="p">,</span> <span class="n">cos</span><span class="p">,</span> <span class="n">radians</span><span class="p">,</span> <span class="n">pi</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>from math import sin, cos, radians, pi
 </pre></div>
 </div>
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">cos</span><span class="p">(</span><span class="n">pi</span> <span class="o">/</span> <span class="mi">4</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>cos(pi / 4)
 </pre></div>
 </div>
 </div>
@@ -578,7 +583,7 @@ glavnih razlogov, zakaj se učimo programiranja v Pythonu in ne v jeziku, kjer b
 <p>Obstaja še “preprostejši” način uvažanja.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">math</span> <span class="kn">import</span> <span class="o">*</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>from math import *
 </pre></div>
 </div>
 </div>
