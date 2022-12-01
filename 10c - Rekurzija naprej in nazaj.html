@@ -143,8 +143,13 @@ const thebe_selector_output = ".output, .cell_output"
   </a>
  </li>
  <li class="toctree-l1">
+  <a class="reference internal" href="03b_indeksi_in_rezine.html">
+   6. Indeksi in rezine
+  </a>
+ </li>
+ <li class="toctree-l1">
   <a class="reference internal" href="04a_funkcije.html">
-   6. Funkcije
+   7. Funkcije
   </a>
  </li>
 </ul>
@@ -470,14 +475,14 @@ title="Print to PDF"
 <p>Ko je <code class="docutils literal notranslate"><span class="pre">s</span></code> prazen, se je rekurzija iztekla in le še izpišemo, kar se je nabralo v vreči.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">potencna</span><span class="p">(</span><span class="n">s</span><span class="p">,</span> <span class="n">vreca</span><span class="p">):</span>
-    <span class="k">if</span> <span class="ow">not</span> <span class="n">s</span><span class="p">:</span>
-        <span class="nb">print</span><span class="p">(</span><span class="n">vreca</span><span class="p">)</span>
-    <span class="k">else</span><span class="p">:</span>
-        <span class="n">potencna</span><span class="p">(</span><span class="n">s</span><span class="p">[</span><span class="mi">1</span><span class="p">:],</span> <span class="n">vreca</span> <span class="o">+</span> <span class="p">[</span><span class="n">s</span><span class="p">[</span><span class="mi">0</span><span class="p">]])</span>
-        <span class="n">potencna</span><span class="p">(</span><span class="n">s</span><span class="p">[</span><span class="mi">1</span><span class="p">:],</span> <span class="n">vreca</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>def potencna(s, vreca):
+    if not s:
+        print(vreca)
+    else:
+        potencna(s[1:], vreca + [s[0]])
+        potencna(s[1:], vreca)
         
-<span class="n">potencna</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">],</span> <span class="p">[])</span>
+potencna([1, 2, 3, 4], [])
 </pre></div>
 </div>
 </div>
@@ -509,13 +514,13 @@ title="Print to PDF"
 </ul>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">potencna</span><span class="p">(</span><span class="n">s</span><span class="p">,</span> <span class="n">vreca</span><span class="p">):</span>
-    <span class="k">if</span> <span class="ow">not</span> <span class="n">s</span><span class="p">:</span>
-        <span class="k">return</span> <span class="p">[</span><span class="n">vreca</span><span class="p">]</span>
-    <span class="k">else</span><span class="p">:</span>
-        <span class="k">return</span> <span class="n">potencna</span><span class="p">(</span><span class="n">s</span><span class="p">[</span><span class="mi">1</span><span class="p">:],</span> <span class="n">vreca</span><span class="p">)</span> <span class="o">+</span> <span class="n">potencna</span><span class="p">(</span><span class="n">s</span><span class="p">[</span><span class="mi">1</span><span class="p">:],</span> <span class="n">vreca</span> <span class="o">+</span> <span class="p">[</span><span class="n">s</span><span class="p">[</span><span class="mi">0</span><span class="p">]])</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>def potencna(s, vreca):
+    if not s:
+        return [vreca]
+    else:
+        return potencna(s[1:], vreca) + potencna(s[1:], vreca + [s[0]])
 
-<span class="n">potencna</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">],</span> <span class="p">[])</span>
+potencna([1, 2, 3, 4], [])
 </pre></div>
 </div>
 </div>
@@ -553,14 +558,14 @@ title="Print to PDF"
 <p>Sicer pa naredimo tole: najprej sestavimo potenčno množico <code class="docutils literal notranslate"><span class="pre">s</span></code>-ja brez prvega elementa, <code class="docutils literal notranslate"><span class="pre">brez</span> <span class="pre">=</span> <span class="pre">potencna(s[1:])</span></code>. Dobili smo … pač nekaj množic. Zdaj ta seznam podvojimo: enkrat ga vzamemo takšnega kot je (<code class="docutils literal notranslate"><span class="pre">brez</span></code>), enkrat pa k vsem njegovim elementom dodamo še <code class="docutils literal notranslate"><span class="pre">s[0]</span></code> (<code class="docutils literal notranslate"><span class="pre">[[s[0]]</span> <span class="pre">+</span> <span class="pre">b</span> <span class="pre">for</span> <span class="pre">b</span> <span class="pre">in</span> <span class="pre">brez]</span></code>). To potem vrnemo.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">potencna</span><span class="p">(</span><span class="n">s</span><span class="p">):</span>
-    <span class="k">if</span> <span class="ow">not</span> <span class="n">s</span><span class="p">:</span>
-        <span class="k">return</span> <span class="p">[[]]</span>
-    <span class="k">else</span><span class="p">:</span>
-        <span class="n">brez</span> <span class="o">=</span> <span class="n">potencna</span><span class="p">(</span><span class="n">s</span><span class="p">[</span><span class="mi">1</span><span class="p">:])</span>
-        <span class="k">return</span> <span class="n">brez</span> <span class="o">+</span> <span class="p">[[</span><span class="n">s</span><span class="p">[</span><span class="mi">0</span><span class="p">]]</span> <span class="o">+</span> <span class="n">b</span> <span class="k">for</span> <span class="n">b</span> <span class="ow">in</span> <span class="n">brez</span><span class="p">]</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>def potencna(s):
+    if not s:
+        return [[]]
+    else:
+        brez = potencna(s[1:])
+        return brez + [[s[0]] + b for b in brez]
 
-<span class="n">potencna</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">])</span>
+potencna([1, 2, 3, 4])
 </pre></div>
 </div>
 </div>
@@ -595,13 +600,13 @@ title="Print to PDF"
 <p>Očitna razlika med gornjima funkcijama je v tem, da ima prva še dodaten argument, v katero se tekom rekurzivnih klicev nabirajo vrednosti, nekakšen “akumulator”. Kako ta princip deluje v splošnem, bomo najlepše videli ob funkciji, ki vrne vsoto elementov seznama.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">vsota</span><span class="p">(</span><span class="n">s</span><span class="p">,</span> <span class="n">a</span><span class="p">):</span>
-    <span class="k">if</span> <span class="n">s</span> <span class="o">==</span> <span class="p">[]:</span>
-        <span class="k">return</span> <span class="n">a</span>
-    <span class="k">else</span><span class="p">:</span>
-        <span class="k">return</span> <span class="n">vsota</span><span class="p">(</span><span class="n">s</span><span class="p">[</span><span class="mi">1</span><span class="p">:],</span> <span class="n">a</span> <span class="o">+</span> <span class="n">s</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>def vsota(s, a):
+    if s == []:
+        return a
+    else:
+        return vsota(s[1:], a + s[0])
         
-<span class="n">vsota</span><span class="p">([</span><span class="mi">5</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">],</span> <span class="mi">0</span><span class="p">)</span>
+vsota([5, 3, 4], 0)
 </pre></div>
 </div>
 </div>
@@ -615,13 +620,13 @@ title="Print to PDF"
 <p>Funkcija ima dodatni argument. Ker gre za število, torej <code class="docutils literal notranslate"><span class="pre">int</span></code>, ki je nespremenljiv (<em>immutable</em>) se tu z lahkoto zmažemo tako, da mu damo privzeto vrednost.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">vsota</span><span class="p">(</span><span class="n">s</span><span class="p">,</span> <span class="n">a</span><span class="o">=</span><span class="mi">0</span><span class="p">):</span>
-    <span class="k">if</span> <span class="n">s</span> <span class="o">==</span> <span class="p">[]:</span>
-        <span class="k">return</span> <span class="n">a</span>
-    <span class="k">else</span><span class="p">:</span>
-        <span class="k">return</span> <span class="n">vsota</span><span class="p">(</span><span class="n">s</span><span class="p">[</span><span class="mi">1</span><span class="p">:],</span> <span class="n">a</span> <span class="o">+</span> <span class="n">s</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>def vsota(s, a=0):
+    if s == []:
+        return a
+    else:
+        return vsota(s[1:], a + s[0])
         
-<span class="n">vsota</span><span class="p">([</span><span class="mi">5</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">])</span>
+vsota([5, 3, 4])
 </pre></div>
 </div>
 </div>
@@ -634,12 +639,12 @@ title="Print to PDF"
 <p>Trik s privzeto vrednostjo bo včasih vžgal, včasih pa se bo potrebno malo bolj potruditi. A to ni poanta. Primerjajmo to funkcijo z vsoto, ki smo jo sprogramirali na predavanjih (ali pa je vsaj v zapiskih o rekurziji na seznamih).</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">vsota</span><span class="p">(</span><span class="n">s</span><span class="p">):</span>
-    <span class="k">if</span> <span class="n">s</span> <span class="o">==</span> <span class="p">[]:</span>
-        <span class="k">return</span> <span class="mi">0</span>
-    <span class="k">return</span> <span class="n">vsota</span><span class="p">(</span><span class="n">s</span><span class="p">[</span><span class="mi">1</span><span class="p">:])</span> <span class="o">+</span> <span class="n">s</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>def vsota(s):
+    if s == []:
+        return 0
+    return vsota(s[1:]) + s[0]
 
-<span class="n">vsota</span><span class="p">([</span><span class="mi">5</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">])</span>
+vsota([5, 3, 4])
 </pre></div>
 </div>
 </div>
