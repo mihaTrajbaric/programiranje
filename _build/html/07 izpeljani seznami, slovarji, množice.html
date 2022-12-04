@@ -597,7 +597,7 @@ naravnih števil, katerih kvadrat je manjši od 120, takole:</p>
 <p>Začnimo s tistim, kar najbolj poznamo: s seznami. Doslej smo jih zapisali tako, da smo v oglatih oklepajih naštevali njihove elemente,</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>k = [9, 16, 81, 25, 196]
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">k</span> <span class="o">=</span> <span class="p">[</span><span class="mi">9</span><span class="p">,</span> <span class="mi">16</span><span class="p">,</span> <span class="mi">81</span><span class="p">,</span> <span class="mi">25</span><span class="p">,</span> <span class="mi">196</span><span class="p">]</span>
 </pre></div>
 </div>
 </div>
@@ -605,9 +605,9 @@ naravnih števil, katerih kvadrat je manjši od 120, takole:</p>
 <p>Oglate oklepaje bomo uporabljali tudi poslej, le da znotraj njih ne bomo našteli elementov, temveč napisali izraz, ki jih sestavi. Recimo, da bi hotel seznam korenov števil iz gornjega seznama (po nekem čednem naključju gornji seznam vsebuje ravno same kvadrate). Naredil bi tako:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>from math import sqrt
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">math</span> <span class="kn">import</span> <span class="n">sqrt</span>
 
-[sqrt(x) for x in k]
+<span class="p">[</span><span class="n">sqrt</span><span class="p">(</span><span class="n">x</span><span class="p">)</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">k</span><span class="p">]</span>
 </pre></div>
 </div>
 </div>
@@ -619,7 +619,7 @@ elementi seznama <code class="docutils literal notranslate"><span class="pre">k<
 števil? Isti šmorn:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>[x ** 2 for x in k]
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="p">[</span><span class="n">x</span> <span class="o">**</span> <span class="mi">2</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">k</span><span class="p">]</span>
 </pre></div>
 </div>
 </div>
@@ -634,7 +634,7 @@ elementi seznama <code class="docutils literal notranslate"><span class="pre">k<
 <p>Imam seznam imen, recimo,</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>imena = [&quot;Ana&quot;, &quot;Berta&quot;, &quot;Cilka&quot;, &quot;Dani&quot;, &quot;Ema&quot;]
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">imena</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;Ana&quot;</span><span class="p">,</span> <span class="s2">&quot;Berta&quot;</span><span class="p">,</span> <span class="s2">&quot;Cilka&quot;</span><span class="p">,</span> <span class="s2">&quot;Dani&quot;</span><span class="p">,</span> <span class="s2">&quot;Ema&quot;</span><span class="p">]</span>
 </pre></div>
 </div>
 </div>
@@ -644,7 +644,7 @@ sešteti števila v seznamu. Potrebujem torej le še seznam dolžin (namesto
 seznama imen). Pa poglejmo gornji “točki”. Kaj želim v seznamu? Dolžine imen. Kako jih dobim? Očitno z nekim <code class="docutils literal notranslate"><span class="pre">len(ime)</span></code>, pri čemer je <code class="docutils literal notranslate"><span class="pre">ime</span></code> pač vsako ime iz seznama <code class="docutils literal notranslate"><span class="pre">imena</span></code>. V tem stavku smo odgovorili na obe vprašanji – kaj bom računal (<code class="docutils literal notranslate"><span class="pre">len(ime)</span></code>) in čez kaj bom spustil zanko (čez <code class="docutils literal notranslate"><span class="pre">imena</span></code>). Torej vemo: potrebujemo</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>[len(ime) for ime in imena]
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="p">[</span><span class="nb">len</span><span class="p">(</span><span class="n">ime</span><span class="p">)</span> <span class="k">for</span> <span class="n">ime</span> <span class="ow">in</span> <span class="n">imena</span><span class="p">]</span>
 </pre></div>
 </div>
 </div>
@@ -652,7 +652,7 @@ seznama imen). Pa poglejmo gornji “točki”. Kaj želim v seznamu? Dolžine i
 <p>Zdaj pa tole le še seštejem in delim z dolžino seznama.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>sum([len(ime) for ime in imena]) / len(imena)
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">sum</span><span class="p">([</span><span class="nb">len</span><span class="p">(</span><span class="n">ime</span><span class="p">)</span> <span class="k">for</span> <span class="n">ime</span> <span class="ow">in</span> <span class="n">imena</span><span class="p">])</span> <span class="o">/</span> <span class="nb">len</span><span class="p">(</span><span class="n">imena</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -662,13 +662,13 @@ poprečno težo in, da nam ne bo dolgčas, jo bomo računali iz teh
 troj <code class="docutils literal notranslate"><span class="pre">(teža,</span> <span class="pre">ime,</span> <span class="pre">je_ženska)</span></code>:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>podatki = [
-    (74, &quot;Anže&quot;, False),
-    (82, &quot;Benjamin&quot;, False),
-    (58, &quot;Cilka&quot;, True),
-    (66, &quot;Dani&quot;, False),
-    (61, &quot;Eva&quot;, True),
-    (84, &quot;Franc&quot;, False)]
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">podatki</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="p">(</span><span class="mi">74</span><span class="p">,</span> <span class="s2">&quot;Anže&quot;</span><span class="p">,</span> <span class="kc">False</span><span class="p">),</span>
+    <span class="p">(</span><span class="mi">82</span><span class="p">,</span> <span class="s2">&quot;Benjamin&quot;</span><span class="p">,</span> <span class="kc">False</span><span class="p">),</span>
+    <span class="p">(</span><span class="mi">58</span><span class="p">,</span> <span class="s2">&quot;Cilka&quot;</span><span class="p">,</span> <span class="kc">True</span><span class="p">),</span>
+    <span class="p">(</span><span class="mi">66</span><span class="p">,</span> <span class="s2">&quot;Dani&quot;</span><span class="p">,</span> <span class="kc">False</span><span class="p">),</span>
+    <span class="p">(</span><span class="mi">61</span><span class="p">,</span> <span class="s2">&quot;Eva&quot;</span><span class="p">,</span> <span class="kc">True</span><span class="p">),</span>
+    <span class="p">(</span><span class="mi">84</span><span class="p">,</span> <span class="s2">&quot;Franc&quot;</span><span class="p">,</span> <span class="kc">False</span><span class="p">)]</span>
 </pre></div>
 </div>
 </div>
@@ -677,11 +677,11 @@ troj <code class="docutils literal notranslate"><span class="pre">(teža,</span>
 <p>Najprej poglejmo, kako bi to počeli po starem. Lepo prosim, ne tako:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>vsota = 0
-for i in range(len(podatki)):
-    vsota += podatki[i][0]
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">vsota</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">podatki</span><span class="p">)):</span>
+    <span class="n">vsota</span> <span class="o">+=</span> <span class="n">podatki</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span>
 
-print(vsota / len(podatki))
+<span class="nb">print</span><span class="p">(</span><span class="n">vsota</span> <span class="o">/</span> <span class="nb">len</span><span class="p">(</span><span class="n">podatki</span><span class="p">))</span>
 </pre></div>
 </div>
 </div>
@@ -689,11 +689,11 @@ print(vsota / len(podatki))
 <p>Tole je že boljše:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>vsota = 0
-for podatek in podatki:
-    vsota += podatek[0]
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">vsota</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="k">for</span> <span class="n">podatek</span> <span class="ow">in</span> <span class="n">podatki</span><span class="p">:</span>
+    <span class="n">vsota</span> <span class="o">+=</span> <span class="n">podatek</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
     
-print(vsota / len(podatki))
+<span class="nb">print</span><span class="p">(</span><span class="n">vsota</span> <span class="o">/</span> <span class="nb">len</span><span class="p">(</span><span class="n">podatki</span><span class="p">))</span>
 </pre></div>
 </div>
 </div>
@@ -701,11 +701,11 @@ print(vsota / len(podatki))
 <p>Če hočete, da vas vaš profesor ohrani v trajnem lepem spominu, pa boste sprogrmirali tako:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>vsota = 0
-for teza, ime, zenska in podatki:
-    vsota += teza
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">vsota</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="k">for</span> <span class="n">teza</span><span class="p">,</span> <span class="n">ime</span><span class="p">,</span> <span class="n">zenska</span> <span class="ow">in</span> <span class="n">podatki</span><span class="p">:</span>
+    <span class="n">vsota</span> <span class="o">+=</span> <span class="n">teza</span>
     
-print(vsota / len(podatki))
+<span class="nb">print</span><span class="p">(</span><span class="n">vsota</span> <span class="o">/</span> <span class="nb">len</span><span class="p">(</span><span class="n">podatki</span><span class="p">))</span>
 </pre></div>
 </div>
 </div>
@@ -713,9 +713,9 @@ print(vsota / len(podatki))
 <p>Zdaj pa naredimo tako, kot smo se naučili danes. Naredimo lahko</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>vsota = sum([podatek[0] for podatek in podatki])
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">vsota</span> <span class="o">=</span> <span class="nb">sum</span><span class="p">([</span><span class="n">podatek</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="k">for</span> <span class="n">podatek</span> <span class="ow">in</span> <span class="n">podatki</span><span class="p">])</span>
 
-print(vsota / len(podatki))
+<span class="nb">print</span><span class="p">(</span><span class="n">vsota</span> <span class="o">/</span> <span class="nb">len</span><span class="p">(</span><span class="n">podatki</span><span class="p">))</span>
 </pre></div>
 </div>
 </div>
@@ -723,9 +723,9 @@ print(vsota / len(podatki))
 <p>ali, po boljši, zadnji različici</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>vsota = sum([teza for teza, ime, zenska in podatki])
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">vsota</span> <span class="o">=</span> <span class="nb">sum</span><span class="p">([</span><span class="n">teza</span> <span class="k">for</span> <span class="n">teza</span><span class="p">,</span> <span class="n">ime</span><span class="p">,</span> <span class="n">zenska</span> <span class="ow">in</span> <span class="n">podatki</span><span class="p">])</span>
 
-print(vsota / len(podatki))
+<span class="nb">print</span><span class="p">(</span><span class="n">vsota</span> <span class="o">/</span> <span class="nb">len</span><span class="p">(</span><span class="n">podatki</span><span class="p">))</span>
 </pre></div>
 </div>
 </div>
@@ -736,7 +736,7 @@ print(vsota / len(podatki))
 <p>Kako bi sestavili seznam kvadratov vseh lihih števil do 100? Seznam kvadratov vseh števil do 100 je trivialen, napisati nam je treba le:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>[x ** 2 for x in range(10)]
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="p">[</span><span class="n">x</span> <span class="o">**</span> <span class="mi">2</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">10</span><span class="p">)]</span>
 </pre></div>
 </div>
 </div>
@@ -744,7 +744,7 @@ print(vsota / len(podatki))
 <p>Če želimo pobrati samo liha števila, lahko v izpeljavo seznama dodamo še pogoj.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>[x ** 2 for x in range(10) if x % 2 == 1]
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="p">[</span><span class="n">x</span> <span class="o">**</span> <span class="mi">2</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span> <span class="k">if</span> <span class="n">x</span> <span class="o">%</span> <span class="mi">2</span> <span class="o">==</span> <span class="mi">1</span><span class="p">]</span>
 </pre></div>
 </div>
 </div>
@@ -752,7 +752,7 @@ print(vsota / len(podatki))
 <p>Tole pravzaprav ni čisto potrebno, lahko bi rekli preprosto</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>s = [x ** 2 for x in range(1, 10, 2)]
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">s</span> <span class="o">=</span> <span class="p">[</span><span class="n">x</span> <span class="o">**</span> <span class="mi">2</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">2</span><span class="p">)]</span>
 </pre></div>
 </div>
 </div>
@@ -760,7 +760,7 @@ print(vsota / len(podatki))
 <p>Kaj pa, če bi hoteli seznam vseh števil do 30, ki niso deljiva s 7 in ne vsebujejo števke 7?</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>[x for x in range(30) if x % 7 != 0 and &quot;7&quot; not in str(x)]
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="p">[</span><span class="n">x</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">30</span><span class="p">)</span> <span class="k">if</span> <span class="n">x</span> <span class="o">%</span> <span class="mi">7</span> <span class="o">!=</span> <span class="mi">0</span> <span class="ow">and</span> <span class="s2">&quot;7&quot;</span> <span class="ow">not</span> <span class="ow">in</span> <span class="nb">str</span><span class="p">(</span><span class="n">x</span><span class="p">)]</span>
 </pre></div>
 </div>
 </div>
@@ -796,7 +796,7 @@ print(vsota / len(podatki))
 <p>Kako bi izračunali vsoto tež moških v gornjem seznamu <code class="docutils literal notranslate"><span class="pre">podatki</span></code>? Za zanko dodamo pogoj. Za začetek sestavimo le seznam imen vseh moških.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>[ime for teza, ime, zenska in podatki if not zenska]
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="p">[</span><span class="n">ime</span> <span class="k">for</span> <span class="n">teza</span><span class="p">,</span> <span class="n">ime</span><span class="p">,</span> <span class="n">zenska</span> <span class="ow">in</span> <span class="n">podatki</span> <span class="k">if</span> <span class="ow">not</span> <span class="n">zenska</span><span class="p">]</span>
 </pre></div>
 </div>
 </div>
@@ -811,7 +811,7 @@ pogoj, ki mu mora zadoščati element, da nas zanima.</p>
 <p>Na enak način naberemo tudi teže.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>[teza for teza, ime, zenska in podatki if not zenska]
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="p">[</span><span class="n">teza</span> <span class="k">for</span> <span class="n">teza</span><span class="p">,</span> <span class="n">ime</span><span class="p">,</span> <span class="n">zenska</span> <span class="ow">in</span> <span class="n">podatki</span> <span class="k">if</span> <span class="ow">not</span> <span class="n">zenska</span><span class="p">]</span>
 </pre></div>
 </div>
 </div>
@@ -824,7 +824,7 @@ pogoj, ki mu mora zadoščati element, da nas zanima.</p>
 <p>Elemente tega seznama seštejemo s <code class="docutils literal notranslate"><span class="pre">sum</span></code>, pa smo.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>sum([teza for teza, ime, zenska in podatki if not zenska])
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">sum</span><span class="p">([</span><span class="n">teza</span> <span class="k">for</span> <span class="n">teza</span><span class="p">,</span> <span class="n">ime</span><span class="p">,</span> <span class="n">zenska</span> <span class="ow">in</span> <span class="n">podatki</span> <span class="k">if</span> <span class="ow">not</span> <span class="n">zenska</span><span class="p">])</span>
 </pre></div>
 </div>
 </div>
@@ -846,8 +846,8 @@ prihaja z intervala 1 ≤ x ≤ n, za katere velja, da je ostanek po
 deljenju <code class="docutils literal notranslate"><span class="pre">n</span></code> z <code class="docutils literal notranslate"><span class="pre">x</span></code> enak 0 (torej <code class="docutils literal notranslate"><span class="pre">x</span></code> deli <code class="docutils literal notranslate"><span class="pre">n</span></code>).</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>def delitelji(n):
-    return [x for x in range(1, n + 1) if n % x == 0]
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">delitelji</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+    <span class="k">return</span> <span class="p">[</span><span class="n">x</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">n</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span> <span class="k">if</span> <span class="n">n</span> <span class="o">%</span> <span class="n">x</span> <span class="o">==</span> <span class="mi">0</span><span class="p">]</span>
 </pre></div>
 </div>
 </div>
@@ -857,8 +857,8 @@ so (se še spomnimo?) števila, ki so enaka vsoti svojih deliteljev (brez
 sebe samega).</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>def popolno(n):
-    return n == sum(delitelji(n)) - n
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">popolno</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">n</span> <span class="o">==</span> <span class="nb">sum</span><span class="p">(</span><span class="n">delitelji</span><span class="p">(</span><span class="n">n</span><span class="p">))</span> <span class="o">-</span> <span class="n">n</span>
 </pre></div>
 </div>
 </div>
@@ -867,8 +867,8 @@ sebe samega).</p>
 pravi tista, ki so deljiva le z 1 in s samim seboj.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>def prastevilo(n):
-    return delitelji(n) == [1, n]
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">prastevilo</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">delitelji</span><span class="p">(</span><span class="n">n</span><span class="p">)</span> <span class="o">==</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="n">n</span><span class="p">]</span>
 </pre></div>
 </div>
 </div>
@@ -879,8 +879,8 @@ praštevilo, bi še vedno dognali v eni sami vrstici. Poleg tega bi lahko
 razglasili za praštevilo, če je je deljivo le z 1 in s samim seboj.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>def prastevilo(n):
-    return [x for x in range(1, n + 1) if n % x == 0] == [1, n]
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">prastevilo</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+    <span class="k">return</span> <span class="p">[</span><span class="n">x</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">n</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span> <span class="k">if</span> <span class="n">n</span> <span class="o">%</span> <span class="n">x</span> <span class="o">==</span> <span class="mi">0</span><span class="p">]</span> <span class="o">==</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="n">n</span><span class="p">]</span>
 </pre></div>
 </div>
 </div>
@@ -888,8 +888,8 @@ razglasili za praštevilo, če je je deljivo le z 1 in s samim seboj.</p>
 <p>Seveda je preprosteje, če spremenimo meje v <code class="docutils literal notranslate"><span class="pre">range</span></code> tako, da ne vključujejo <code class="docutils literal notranslate"><span class="pre">1</span></code> in <code class="docutils literal notranslate"><span class="pre">n</span></code>.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>def prastevilo(n):
-    return [x for x in range(2, n) if n % x == 0] == []
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">prastevilo</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+    <span class="k">return</span> <span class="p">[</span><span class="n">x</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="n">n</span><span class="p">)</span> <span class="k">if</span> <span class="n">n</span> <span class="o">%</span> <span class="n">x</span> <span class="o">==</span> <span class="mi">0</span><span class="p">]</span> <span class="o">==</span> <span class="p">[]</span>
 </pre></div>
 </div>
 </div>
@@ -897,8 +897,8 @@ razglasili za praštevilo, če je je deljivo le z 1 in s samim seboj.</p>
 <p>Še boljše pa je, če se spomnimo, da so prazni seznami neresnični.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>def prastevilo(n):
-    return not [x for x in range(2, n) if n % x == 0]
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">prastevilo</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+    <span class="k">return</span> <span class="ow">not</span> <span class="p">[</span><span class="n">x</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="n">n</span><span class="p">)</span> <span class="k">if</span> <span class="n">n</span> <span class="o">%</span> <span class="n">x</span> <span class="o">==</span> <span class="mi">0</span><span class="p">]</span>
 </pre></div>
 </div>
 </div>
@@ -906,8 +906,8 @@ razglasili za praštevilo, če je je deljivo le z 1 in s samim seboj.</p>
 <p>Za bis dodajmo še nekaj, česar ne bomo razložili.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>def prastevilo(n):
-    return all(n % x for x in range(2, n))
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">prastevilo</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+    <span class="k">return</span> <span class="nb">all</span><span class="p">(</span><span class="n">n</span> <span class="o">%</span> <span class="n">x</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="n">n</span><span class="p">))</span>
 </pre></div>
 </div>
 </div>
@@ -915,7 +915,7 @@ razglasili za praštevilo, če je je deljivo le z 1 in s samim seboj.</p>
 <p>S to funkcijo - v katerikoliže obliki - hitro sestavimo seznam vseh praštevil med 2 in 100:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>[n for n in range(2, 101) if prastevilo(n)]
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="p">[</span><span class="n">n</span> <span class="k">for</span> <span class="n">n</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">101</span><span class="p">)</span> <span class="k">if</span> <span class="n">prastevilo</span><span class="p">(</span><span class="n">n</span><span class="p">)]</span>
 </pre></div>
 </div>
 </div>
@@ -953,7 +953,7 @@ razglasili za praštevilo, če je je deljivo le z 1 in s samim seboj.</p>
 prepišemo v pogoj.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>[n for n in range(2, 101) if not [x for x in range(2, n) if n % x == 0]]
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="p">[</span><span class="n">n</span> <span class="k">for</span> <span class="n">n</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">101</span><span class="p">)</span> <span class="k">if</span> <span class="ow">not</span> <span class="p">[</span><span class="n">x</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="n">n</span><span class="p">)</span> <span class="k">if</span> <span class="n">n</span> <span class="o">%</span> <span class="n">x</span> <span class="o">==</span> <span class="mi">0</span><span class="p">]]</span>
 </pre></div>
 </div>
 </div>
@@ -1010,7 +1010,7 @@ prepišemo v pogoj.</p>
 oklepajev uporabimo zavite. Takole dobimo vse delitelje 60</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>{i for i in range(1, 61) if 60 % i == 0}
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="p">{</span><span class="n">i</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">61</span><span class="p">)</span> <span class="k">if</span> <span class="mi">60</span> <span class="o">%</span> <span class="n">i</span> <span class="o">==</span> <span class="mi">0</span><span class="p">}</span>
 </pre></div>
 </div>
 </div>
@@ -1027,7 +1027,7 @@ oklepajev uporabimo zavite. Takole dobimo vse delitelje 60</p>
 do 10, kot vrednosti pa njihove kvadrate, napišemo</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>{i: i ** 2 for i in range(11)}
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="p">{</span><span class="n">i</span><span class="p">:</span> <span class="n">i</span> <span class="o">**</span> <span class="mi">2</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">11</span><span class="p">)}</span>
 </pre></div>
 </div>
 </div>
@@ -1047,13 +1047,13 @@ do 10, kot vrednosti pa njihove kvadrate, napišemo</p>
 <p>Zdaj, ko smo ravno tako pametni, vemo tudi, kako bi napisali <code class="docutils literal notranslate"><span class="pre">enumerate</span></code>, če le-tega še ne bi bilo.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>def enumerate(s):
-    i = 0
-    for x in s:
-        yield i, x
-        i += 1
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">enumerate</span><span class="p">(</span><span class="n">s</span><span class="p">):</span>
+    <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">s</span><span class="p">:</span>
+        <span class="k">yield</span> <span class="n">i</span><span class="p">,</span> <span class="n">x</span>
+        <span class="n">i</span> <span class="o">+=</span> <span class="mi">1</span>
         
-list(enumerate(&quot;Ana&quot;))
+<span class="nb">list</span><span class="p">(</span><span class="nb">enumerate</span><span class="p">(</span><span class="s2">&quot;Ana&quot;</span><span class="p">))</span>
 </pre></div>
 </div>
 </div>
@@ -1070,7 +1070,7 @@ list(enumerate(&quot;Ana&quot;))
 <p>No, od danes vemo: v resnici vrne generator parov, ne seznama parov.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>zip(&quot;Benjamin&quot;, &quot;Margareta&quot;)
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">zip</span><span class="p">(</span><span class="s2">&quot;Benjamin&quot;</span><span class="p">,</span> <span class="s2">&quot;Margareta&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -1083,7 +1083,7 @@ list(enumerate(&quot;Ana&quot;))
 <p>Ignorirajte tiste <code class="docutils literal notranslate"><span class="pre">0x10193c308</span></code> (ali karkoli že se prikaže) - izpis je povedal, da smo naredili <code class="docutils literal notranslate"><span class="pre">zip</span></code> in ne seznama. Seveda lahko iz njega “izgeneriramo” seznam.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>list(zip(&quot;Benjamin&quot;, &quot;Margareta&quot;))
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">list</span><span class="p">(</span><span class="nb">zip</span><span class="p">(</span><span class="s2">&quot;Benjamin&quot;</span><span class="p">,</span> <span class="s2">&quot;Margareta&quot;</span><span class="p">))</span>
 </pre></div>
 </div>
 </div>
@@ -1109,7 +1109,7 @@ list(enumerate(&quot;Ana&quot;))
 <p>Da bo naše delo lažje, se najprej spomnimo, da se <code class="docutils literal notranslate"><span class="pre">True</span></code> vede, kot da bi bil <code class="docutils literal notranslate"><span class="pre">1</span></code> in <code class="docutils literal notranslate"><span class="pre">False</span></code>, kot da bi bil 0.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>True + 7
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kc">True</span> <span class="o">+</span> <span class="mi">7</span>
 </pre></div>
 </div>
 </div>
@@ -1122,8 +1122,8 @@ list(enumerate(&quot;Ana&quot;))
 <p>Vzemimo torehj besedi MELODIJA in DELODAJALEC.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>b1 = &quot;MELODIJA&quot;
-b2 = &quot;DELODAJALEC&quot;
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">b1</span> <span class="o">=</span> <span class="s2">&quot;MELODIJA&quot;</span>
+<span class="n">b2</span> <span class="o">=</span> <span class="s2">&quot;DELODAJALEC&quot;</span>
 </pre></div>
 </div>
 </div>
@@ -1131,7 +1131,7 @@ b2 = &quot;DELODAJALEC&quot;
 <p>Združimo ju v seznam parov črk (<code class="docutils literal notranslate"><span class="pre">list</span></code> pa dodamo samo v izpisu, da vidimo, kaj smo v resnici setavili).</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>list(zip(b1, b2))
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">list</span><span class="p">(</span><span class="nb">zip</span><span class="p">(</span><span class="n">b1</span><span class="p">,</span> <span class="n">b2</span><span class="p">))</span>
 </pre></div>
 </div>
 </div>
@@ -1151,7 +1151,7 @@ b2 = &quot;DELODAJALEC&quot;
 <p>Poženimo zanko čez seznam parov črk in sestavimo nov seznam, ki bo vseboval <code class="docutils literal notranslate"><span class="pre">True</span></code>, če sta črki enaki in <code class="docutils literal notranslate"><span class="pre">False</span></code>, če različni.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>[c == d for c, d in zip(b1, b2)]
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="p">[</span><span class="n">c</span> <span class="o">==</span> <span class="n">d</span> <span class="k">for</span> <span class="n">c</span><span class="p">,</span> <span class="n">d</span> <span class="ow">in</span> <span class="nb">zip</span><span class="p">(</span><span class="n">b1</span><span class="p">,</span> <span class="n">b2</span><span class="p">)]</span>
 </pre></div>
 </div>
 </div>
@@ -1164,7 +1164,7 @@ b2 = &quot;DELODAJALEC&quot;
 <p>Zdaj pa preštejmo, koliko je <code class="docutils literal notranslate"><span class="pre">True</span></code>-jev. Kako? Če je <code class="docutils literal notranslate"><span class="pre">False</span></code> isto kot 0 in <code class="docutils literal notranslate"><span class="pre">True</span></code> isto kot 1, potem preprosto izračunamo vsoto elementov seznama.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>sum(c == d for c, d in zip(b1, b2))
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">sum</span><span class="p">(</span><span class="n">c</span> <span class="o">==</span> <span class="n">d</span> <span class="k">for</span> <span class="n">c</span><span class="p">,</span> <span class="n">d</span> <span class="ow">in</span> <span class="nb">zip</span><span class="p">(</span><span class="n">b1</span><span class="p">,</span> <span class="n">b2</span><span class="p">))</span>
 </pre></div>
 </div>
 </div>
@@ -1177,8 +1177,8 @@ b2 = &quot;DELODAJALEC&quot;
 <p>Če bi torej hoteli napisati funkcijo, ki pove, v koliko črkah se besedi ujemata, bi rekli kar</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>def ujemanj(b1, b2):
-    return sum(c==d for c, d in zip(b1, b2))
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">ujemanj</span><span class="p">(</span><span class="n">b1</span><span class="p">,</span> <span class="n">b2</span><span class="p">):</span>
+    <span class="k">return</span> <span class="nb">sum</span><span class="p">(</span><span class="n">c</span><span class="o">==</span><span class="n">d</span> <span class="k">for</span> <span class="n">c</span><span class="p">,</span> <span class="n">d</span> <span class="ow">in</span> <span class="nb">zip</span><span class="p">(</span><span class="n">b1</span><span class="p">,</span> <span class="n">b2</span><span class="p">))</span>
 </pre></div>
 </div>
 </div>
@@ -1186,8 +1186,8 @@ b2 = &quot;DELODAJALEC&quot;
 <p>Napišimo funkcijo, ki izračuna Evklidsko razdaljo med dvema točkama, katerih koordinate so predstavljene s seznamom. Imejmo</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>a = [2, 1, -3]
-b = [3, 5, 4]
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="o">-</span><span class="mi">3</span><span class="p">]</span>
+<span class="n">b</span> <span class="o">=</span> <span class="p">[</span><span class="mi">3</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">4</span><span class="p">]</span>
 </pre></div>
 </div>
 </div>
@@ -1195,11 +1195,11 @@ b = [3, 5, 4]
 <p>Nalogo bi včasih rešili takole:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>def euclid(a, b):
-    s = 0
-    for x, y in zip(a, b):
-         s += (x - y) ** 2
-    return sqrt(s)
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">euclid</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">):</span>
+    <span class="n">s</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="k">for</span> <span class="n">x</span><span class="p">,</span> <span class="n">y</span> <span class="ow">in</span> <span class="nb">zip</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">):</span>
+         <span class="n">s</span> <span class="o">+=</span> <span class="p">(</span><span class="n">x</span> <span class="o">-</span> <span class="n">y</span><span class="p">)</span> <span class="o">**</span> <span class="mi">2</span>
+    <span class="k">return</span> <span class="n">sqrt</span><span class="p">(</span><span class="n">s</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -1207,7 +1207,7 @@ b = [3, 5, 4]
 <p>Zdaj znamo veliko veliko preprosteje. Znamo sestaviti seznam parov? Znamo.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>[(x, y) for x, y in zip(a, b)]
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="p">[(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">)</span> <span class="k">for</span> <span class="n">x</span><span class="p">,</span> <span class="n">y</span> <span class="ow">in</span> <span class="nb">zip</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">)]</span>
 </pre></div>
 </div>
 </div>
@@ -1220,7 +1220,7 @@ b = [3, 5, 4]
 <p>Znamo sestaviti seznam razlik parov? Znamo.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>[x - y for x, y in zip(a, b)]
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="p">[</span><span class="n">x</span> <span class="o">-</span> <span class="n">y</span> <span class="k">for</span> <span class="n">x</span><span class="p">,</span> <span class="n">y</span> <span class="ow">in</span> <span class="nb">zip</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">)]</span>
 </pre></div>
 </div>
 </div>
@@ -1235,7 +1235,7 @@ b = [3, 5, 4]
 <p>In zdaj moramo vse to le še sešteti.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>sum((x - y) ** 2 for x, y in zip(a, b))
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">sum</span><span class="p">((</span><span class="n">x</span> <span class="o">-</span> <span class="n">y</span><span class="p">)</span> <span class="o">**</span> <span class="mi">2</span> <span class="k">for</span> <span class="n">x</span><span class="p">,</span> <span class="n">y</span> <span class="ow">in</span> <span class="nb">zip</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">))</span>
 </pre></div>
 </div>
 </div>
@@ -1248,8 +1248,8 @@ b = [3, 5, 4]
 <p>Funkcija, ki izračuna Evklidsko razdaljo, je torej</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>def euclid(a, b):
-    return sqrt(sum((x - y) ** 2 for x, y in zip(a, b)))
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">euclid</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">sqrt</span><span class="p">(</span><span class="nb">sum</span><span class="p">((</span><span class="n">x</span> <span class="o">-</span> <span class="n">y</span><span class="p">)</span> <span class="o">**</span> <span class="mi">2</span> <span class="k">for</span> <span class="n">x</span><span class="p">,</span> <span class="n">y</span> <span class="ow">in</span> <span class="nb">zip</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">)))</span>
 </pre></div>
 </div>
 </div>
@@ -1263,8 +1263,8 @@ pa sta prav imenitni in uporabni. Prva, <code class="docutils literal notranslat
 <p>Število <code class="docutils literal notranslate"><span class="pre">n</span></code> je praštevilo, če so vsi ostanki po deljenju z <code class="docutils literal notranslate"><span class="pre">i</span></code> (za vsak <code class="docutils literal notranslate"><span class="pre">i</span></code> od <code class="docutils literal notranslate"><span class="pre">2</span></code> do <code class="docutils literal notranslate"><span class="pre">n</span></code>) različni od 0. Z <code class="docutils literal notranslate"><span class="pre">all</span></code> se tole prevede skoraj dobesedno v Python.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>def prastevilo(n):
-    return all(n % i != 0 for i in range(2, n))
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">prastevilo</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+    <span class="k">return</span> <span class="nb">all</span><span class="p">(</span><span class="n">n</span> <span class="o">%</span> <span class="n">i</span> <span class="o">!=</span> <span class="mi">0</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="n">n</span><span class="p">))</span>
 </pre></div>
 </div>
 </div>
@@ -1272,8 +1272,8 @@ pa sta prav imenitni in uporabni. Prva, <code class="docutils literal notranslat
 <p>Funkcija <code class="docutils literal notranslate"><span class="pre">any</span></code> vrne <code class="docutils literal notranslate"><span class="pre">True</span></code>, če tisto, kar podamo kot argument, vsebuje vsaj kakšno resnično vrednost. Kako deluje, pokažimo kar na obrnjenih praštevilih: število je sestavljeno, če je ostanek po deljenju s kakim drugim številom enak 0.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>def sestavljeno(n):
-    return any(n % i == 0 for i in range(2, n))
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">sestavljeno</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+    <span class="k">return</span> <span class="nb">any</span><span class="p">(</span><span class="n">n</span> <span class="o">%</span> <span class="n">i</span> <span class="o">==</span> <span class="mi">0</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="n">n</span><span class="p">))</span>
 </pre></div>
 </div>
 </div>
@@ -1281,8 +1281,8 @@ pa sta prav imenitni in uporabni. Prva, <code class="docutils literal notranslat
 <p>Mimogrede opazimo, da sta <code class="docutils literal notranslate"><span class="pre">all</span></code> in <code class="docutils literal notranslate"><span class="pre">any</span></code> povezana prek de Morganovega pravila, ki se bi ga morali spomniti iz matematike. Število je praštevilo, če ni sestavljeno,</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>def prastevilo(n):
-    return not sestavljeno(n)
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">prastevilo</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+    <span class="k">return</span> <span class="ow">not</span> <span class="n">sestavljeno</span><span class="p">(</span><span class="n">n</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -1290,8 +1290,8 @@ pa sta prav imenitni in uporabni. Prva, <code class="docutils literal notranslat
 <p>Če namesto, da bi poklicali <code class="docutils literal notranslate"><span class="pre">sestavljeno</span></code>, vstavimo kar kodo funkcije <code class="docutils literal notranslate"><span class="pre">sestavljeno</span></code>, dobimo</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>def prastevilo(n):
-    return not any(n % i == 0 for i in range(2, n))
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">prastevilo</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+    <span class="k">return</span> <span class="ow">not</span> <span class="nb">any</span><span class="p">(</span><span class="n">n</span> <span class="o">%</span> <span class="n">i</span> <span class="o">==</span> <span class="mi">0</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="n">n</span><span class="p">))</span>
 </pre></div>
 </div>
 </div>
@@ -1324,10 +1324,10 @@ pa sta prav imenitni in uporabni. Prva, <code class="docutils literal notranslat
 <p>Če imamo več generatorjev (ali seznamov, slovarjev…) in bi radi šli z eno zanko čez vse, torej čez enega za drugim, jih sestavimo s <code class="docutils literal notranslate"><span class="pre">chain</span></code>.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>from itertools import chain
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">itertools</span> <span class="kn">import</span> <span class="n">chain</span>
 
-for c in chain(&quot;Ana&quot;, &quot;Berta&quot;, &quot;Cilka&quot;):
-    print(c)
+<span class="k">for</span> <span class="n">c</span> <span class="ow">in</span> <span class="n">chain</span><span class="p">(</span><span class="s2">&quot;Ana&quot;</span><span class="p">,</span> <span class="s2">&quot;Berta&quot;</span><span class="p">,</span> <span class="s2">&quot;Cilka&quot;</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">c</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>

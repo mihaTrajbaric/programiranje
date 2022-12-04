@@ -623,7 +623,7 @@ b
 # koristilo.
 # 
 # 
-# ## Računske operacije na seznamih (in drugod)
+# ## Računske operacije na seznamih
 # 
 # V svojem prvem soočenju s programiranjem smo spoznali aritmetične
 # izraze: seštevali in množili smo števila, jih kvadrirali in računali
@@ -681,3 +681,25 @@ True
 
 # V resnici `not in` ni prav potreben, saj je `x not in l` isto kot
 # `not x in l`.
+
+# ### Dodajanje elementov seznamu
+# 
+# Imamo obstoječ seznam. Recimo `[1, 2, 3]` ali pa zgolj prazen seznam `[]`. Kako bi mu dodali element `4`? Ena možnost je, da uporabimo operacijo seštevanja seznamov, kjer element `4` spremenimo v seznam z enim elementom:
+
+# In[ ]:
+
+
+seznam = [1, 2, 3]
+nov_seznam = seznam + [4]
+print(nov_seznam)
+
+
+# Druga možnost pa je, da uporabimo `append`. Pazi! Ta funkcija dela *in place*, torej naredi spremembno na obstoječem seznamu. Tako ni treba (v resnici ne smemo) prirediti vrednosti novemu seznamu. Pravilna uporaba je taka:
+
+# In[ ]:
+
+
+seznam = [1, 2, 3]
+seznam.append(4)
+print(seznam)
+

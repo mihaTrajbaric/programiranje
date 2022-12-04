@@ -42,7 +42,7 @@ Priporočeno delo tako obsega tedensko **udeležbo na krožku** kjer bomo spozna
 - [Python za programerje](https://ucilnica.fri.uni-lj.si/file.php/166/Python%20za%20programerje.pdf)
 - [Python Cheat Sheet](https://www.pythoncheatsheet.org/)
 - [Programiranje 1 na FRI](https://github.com/janezd/predavanja/tree/master/p1)
-- [Rešene naloga iz programiranja v Pythonu](https://ucilnica.fri.uni-lj.si/mod/resource/view.php?id=36178)
+- [Rešene naloga iz programiranja v Pythonu](https://drive.google.com/file/d/1QTEJUuuJmt7e8x9AHmbiGrqL5rgh0L2z/view?usp=sharing)
 
 ## Zasluge in zahvala
 Pri pripravi gradiva za ta krožek se močno naslanjam na predavanja in vaje, ki jih je za potrebe poučevanja na FRI pripravil prof. Janez Demšar. Brez tega gradiva ta krožek ne bi bil, kar je, zato se profesorju in njegovi ekipi lepo zahvaljujem.

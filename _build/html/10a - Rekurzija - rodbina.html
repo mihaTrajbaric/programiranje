@@ -561,27 +561,27 @@ listku – vaše ime in imena vaših otrok.</p></li>
 <p>Najstarejši član rodbine Novakovih, Adam, 111 let, ima štiri otroke: Matjaža, Cilko, Danieka in Erika. Matjaž ima enega, namreč Viljema. Danijel ima Elizabeto in Hansa (kasneje se je Daniel namreč preselil v predmestje Graza, kjer ima manjše podjetje, in se poročil z Avstrijko), Cilka in Erik pa nimata otrok. In tako naprej. Vse skupaj je nabrano v spodnjem slovarju.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>otroci = {
-    &quot;Adam&quot;: [&quot;Matjaž&quot;, &quot;Cilka&quot;, &quot;Daniel&quot;],
-    &quot;Aleksander&quot;: [],
-    &quot;Alenka&quot;: [],
-    &quot;Barbara&quot;: [],
-    &quot;Cilka&quot;: [],
-    &quot;Daniel&quot;: [&quot;Elizabeta&quot;, &quot;Hans&quot;],
-    &quot;Erik&quot;: [],
-    &quot;Elizabeta&quot;: [&quot;Ludvik&quot;, &quot;Jurij&quot;, &quot;Barbara&quot;],
-    &quot;Franc&quot;: [],
-    &quot;Herman&quot;: [&quot;Margareta&quot;],
-    &quot;Hans&quot;: [&quot;Herman&quot;, &quot;Erik&quot;],
-    &quot;Jožef&quot;: [&quot;Alenka&quot;, &quot;Aleksander&quot;, &quot;Petra&quot;],
-    &quot;Jurij&quot;: [&quot;Franc&quot;, &quot;Jožef&quot;],
-    &quot;Ludvik&quot;: [],
-    &quot;Margareta&quot;: [],
-    &quot;Matjaž&quot;: [&quot;Viljem&quot;],
-    &quot;Petra&quot;: [],
-    &quot;Tadeja&quot;: [],
-    &quot;Viljem&quot;: [&quot;Tadeja&quot;],
-}
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">otroci</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s2">&quot;Adam&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;Matjaž&quot;</span><span class="p">,</span> <span class="s2">&quot;Cilka&quot;</span><span class="p">,</span> <span class="s2">&quot;Daniel&quot;</span><span class="p">],</span>
+    <span class="s2">&quot;Aleksander&quot;</span><span class="p">:</span> <span class="p">[],</span>
+    <span class="s2">&quot;Alenka&quot;</span><span class="p">:</span> <span class="p">[],</span>
+    <span class="s2">&quot;Barbara&quot;</span><span class="p">:</span> <span class="p">[],</span>
+    <span class="s2">&quot;Cilka&quot;</span><span class="p">:</span> <span class="p">[],</span>
+    <span class="s2">&quot;Daniel&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;Elizabeta&quot;</span><span class="p">,</span> <span class="s2">&quot;Hans&quot;</span><span class="p">],</span>
+    <span class="s2">&quot;Erik&quot;</span><span class="p">:</span> <span class="p">[],</span>
+    <span class="s2">&quot;Elizabeta&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;Ludvik&quot;</span><span class="p">,</span> <span class="s2">&quot;Jurij&quot;</span><span class="p">,</span> <span class="s2">&quot;Barbara&quot;</span><span class="p">],</span>
+    <span class="s2">&quot;Franc&quot;</span><span class="p">:</span> <span class="p">[],</span>
+    <span class="s2">&quot;Herman&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;Margareta&quot;</span><span class="p">],</span>
+    <span class="s2">&quot;Hans&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;Herman&quot;</span><span class="p">,</span> <span class="s2">&quot;Erik&quot;</span><span class="p">],</span>
+    <span class="s2">&quot;Jožef&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;Alenka&quot;</span><span class="p">,</span> <span class="s2">&quot;Aleksander&quot;</span><span class="p">,</span> <span class="s2">&quot;Petra&quot;</span><span class="p">],</span>
+    <span class="s2">&quot;Jurij&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;Franc&quot;</span><span class="p">,</span> <span class="s2">&quot;Jožef&quot;</span><span class="p">],</span>
+    <span class="s2">&quot;Ludvik&quot;</span><span class="p">:</span> <span class="p">[],</span>
+    <span class="s2">&quot;Margareta&quot;</span><span class="p">:</span> <span class="p">[],</span>
+    <span class="s2">&quot;Matjaž&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;Viljem&quot;</span><span class="p">],</span>
+    <span class="s2">&quot;Petra&quot;</span><span class="p">:</span> <span class="p">[],</span>
+    <span class="s2">&quot;Tadeja&quot;</span><span class="p">:</span> <span class="p">[],</span>
+    <span class="s2">&quot;Viljem&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;Tadeja&quot;</span><span class="p">],</span>
+<span class="p">}</span>
 </pre></div>
 </div>
 </div>
@@ -589,11 +589,11 @@ listku – vaše ime in imena vaših otrok.</p></li>
 <p>Znane so tudi starosti vseh teh ljudi. V teh zapiskih jih sicer ne bomo potrebovali, uporabne pa so za kakšne druge naloge.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>starost = {
-    &quot;Adam&quot;: 111, &quot;Matjaž&quot;: 90, &quot;Cilka&quot;: 88, &quot;Daniel&quot;: 85, &quot;Erik&quot;: 83,
-    &quot;Viljem&quot;: 58, &quot;Tadeja&quot;: 20, &quot;Elizabeta&quot;: 68, &quot;Hans&quot;: 64, &quot;Ludvik&quot;: 50,
-    &quot;Jurij&quot;: 49, &quot;Barbara&quot;: 45, &quot;Herman&quot;: 39, &quot;Mihael&quot;: 32, &quot;Franc&quot;: 30,
-    &quot;Jožef&quot;: 29, &quot;Margareta&quot;: 3, &quot;Alenka&quot;: 9, &quot;Aleksander&quot;: 5, &quot;Petra&quot;: 7}
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">starost</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s2">&quot;Adam&quot;</span><span class="p">:</span> <span class="mi">111</span><span class="p">,</span> <span class="s2">&quot;Matjaž&quot;</span><span class="p">:</span> <span class="mi">90</span><span class="p">,</span> <span class="s2">&quot;Cilka&quot;</span><span class="p">:</span> <span class="mi">88</span><span class="p">,</span> <span class="s2">&quot;Daniel&quot;</span><span class="p">:</span> <span class="mi">85</span><span class="p">,</span> <span class="s2">&quot;Erik&quot;</span><span class="p">:</span> <span class="mi">83</span><span class="p">,</span>
+    <span class="s2">&quot;Viljem&quot;</span><span class="p">:</span> <span class="mi">58</span><span class="p">,</span> <span class="s2">&quot;Tadeja&quot;</span><span class="p">:</span> <span class="mi">20</span><span class="p">,</span> <span class="s2">&quot;Elizabeta&quot;</span><span class="p">:</span> <span class="mi">68</span><span class="p">,</span> <span class="s2">&quot;Hans&quot;</span><span class="p">:</span> <span class="mi">64</span><span class="p">,</span> <span class="s2">&quot;Ludvik&quot;</span><span class="p">:</span> <span class="mi">50</span><span class="p">,</span>
+    <span class="s2">&quot;Jurij&quot;</span><span class="p">:</span> <span class="mi">49</span><span class="p">,</span> <span class="s2">&quot;Barbara&quot;</span><span class="p">:</span> <span class="mi">45</span><span class="p">,</span> <span class="s2">&quot;Herman&quot;</span><span class="p">:</span> <span class="mi">39</span><span class="p">,</span> <span class="s2">&quot;Mihael&quot;</span><span class="p">:</span> <span class="mi">32</span><span class="p">,</span> <span class="s2">&quot;Franc&quot;</span><span class="p">:</span> <span class="mi">30</span><span class="p">,</span>
+    <span class="s2">&quot;Jožef&quot;</span><span class="p">:</span> <span class="mi">29</span><span class="p">,</span> <span class="s2">&quot;Margareta&quot;</span><span class="p">:</span> <span class="mi">3</span><span class="p">,</span> <span class="s2">&quot;Alenka&quot;</span><span class="p">:</span> <span class="mi">9</span><span class="p">,</span> <span class="s2">&quot;Aleksander&quot;</span><span class="p">:</span> <span class="mi">5</span><span class="p">,</span> <span class="s2">&quot;Petra&quot;</span><span class="p">:</span> <span class="mi">7</span><span class="p">}</span>
 </pre></div>
 </div>
 </div>
@@ -603,10 +603,10 @@ listku – vaše ime in imena vaših otrok.</p></li>
 koliko otrok ima.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>def stevilo_otrok(oseba):
-    return len(otroci[oseba])
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">stevilo_otrok</span><span class="p">(</span><span class="n">oseba</span><span class="p">):</span>
+    <span class="k">return</span> <span class="nb">len</span><span class="p">(</span><span class="n">otroci</span><span class="p">[</span><span class="n">oseba</span><span class="p">])</span>
     
-stevilo_otrok(&quot;Jožef&quot;)
+<span class="n">stevilo_otrok</span><span class="p">(</span><span class="s2">&quot;Jožef&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -614,13 +614,13 @@ stevilo_otrok(&quot;Jožef&quot;)
 <p>Kako pa bi izvemo število vnukov posamezne osebe? Tako da gremo prek vseh otrok in seštevamo število njihovih otrok, recimo z</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>def stevilo_vnukov(oseba):
-    v = 0
-    for otrok in otroci[oseba]:
-        v += len(otroci[otrok])
-    return v
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">stevilo_vnukov</span><span class="p">(</span><span class="n">oseba</span><span class="p">):</span>
+    <span class="n">v</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="k">for</span> <span class="n">otrok</span> <span class="ow">in</span> <span class="n">otroci</span><span class="p">[</span><span class="n">oseba</span><span class="p">]:</span>
+        <span class="n">v</span> <span class="o">+=</span> <span class="nb">len</span><span class="p">(</span><span class="n">otroci</span><span class="p">[</span><span class="n">otrok</span><span class="p">])</span>
+    <span class="k">return</span> <span class="n">v</span>
 
-stevilo_vnukov(&quot;Daniel&quot;)
+<span class="n">stevilo_vnukov</span><span class="p">(</span><span class="s2">&quot;Daniel&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -628,13 +628,13 @@ stevilo_vnukov(&quot;Daniel&quot;)
 <p>ali, brez velike razlike,</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>def stevilo_vnukov(oseba):
-    v = 0
-    for otrok in otroci[oseba]:
-        v += stevilo_otrok(otrok)
-    return v
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">stevilo_vnukov</span><span class="p">(</span><span class="n">oseba</span><span class="p">):</span>
+    <span class="n">v</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="k">for</span> <span class="n">otrok</span> <span class="ow">in</span> <span class="n">otroci</span><span class="p">[</span><span class="n">oseba</span><span class="p">]:</span>
+        <span class="n">v</span> <span class="o">+=</span> <span class="n">stevilo_otrok</span><span class="p">(</span><span class="n">otrok</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">v</span>
 
-stevilo_vnukov(&quot;Daniel&quot;)
+<span class="n">stevilo_vnukov</span><span class="p">(</span><span class="s2">&quot;Daniel&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -642,8 +642,8 @@ stevilo_vnukov(&quot;Daniel&quot;)
 <p>Uh, kaj kompliciramo, saj že od predprejšnjega tedna znamo</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>def stevilo_vnukov(oseba):
-    return sum(stevilo_otrok(otrok) for otrok in otroci[oseba])
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">stevilo_vnukov</span><span class="p">(</span><span class="n">oseba</span><span class="p">):</span>
+    <span class="k">return</span> <span class="nb">sum</span><span class="p">(</span><span class="n">stevilo_otrok</span><span class="p">(</span><span class="n">otrok</span><span class="p">)</span> <span class="k">for</span> <span class="n">otrok</span> <span class="ow">in</span> <span class="n">otroci</span><span class="p">[</span><span class="n">oseba</span><span class="p">])</span>
 </pre></div>
 </div>
 </div>
@@ -657,13 +657,13 @@ stevilo_vnukov(&quot;Daniel&quot;)
 <p>Spremenimo to v funkcijo. Velikost rodbine dobimo tako, da gremo prek otrok in seštevamo velikosti njihovih rodbin.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>def velikost_rodbine(oseba):
-    v = 0
-    for otrok in otroci[oseba]:
-        v += velikost_rodbine(otrok)
-    return v + 1
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">velikost_rodbine</span><span class="p">(</span><span class="n">oseba</span><span class="p">):</span>
+    <span class="n">v</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="k">for</span> <span class="n">otrok</span> <span class="ow">in</span> <span class="n">otroci</span><span class="p">[</span><span class="n">oseba</span><span class="p">]:</span>
+        <span class="n">v</span> <span class="o">+=</span> <span class="n">velikost_rodbine</span><span class="p">(</span><span class="n">otrok</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">v</span> <span class="o">+</span> <span class="mi">1</span>
 
-velikost_rodbine(&quot;Elizabeta&quot;)
+<span class="n">velikost_rodbine</span><span class="p">(</span><span class="s2">&quot;Elizabeta&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -671,10 +671,10 @@ velikost_rodbine(&quot;Elizabeta&quot;)
 <p>Za tiste, ki znajo snov izpred dveh tednov:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>def velikost_rodbine(oseba):
-    return sum(velikost_rodbine(otrok) for otrok in otroci[oseba]) + 1
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">velikost_rodbine</span><span class="p">(</span><span class="n">oseba</span><span class="p">):</span>
+    <span class="k">return</span> <span class="nb">sum</span><span class="p">(</span><span class="n">velikost_rodbine</span><span class="p">(</span><span class="n">otrok</span><span class="p">)</span> <span class="k">for</span> <span class="n">otrok</span> <span class="ow">in</span> <span class="n">otroci</span><span class="p">[</span><span class="n">oseba</span><span class="p">])</span> <span class="o">+</span> <span class="mi">1</span>
 
-velikost_rodbine(&quot;Elizabeta&quot;)
+<span class="n">velikost_rodbine</span><span class="p">(</span><span class="s2">&quot;Elizabeta&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -687,15 +687,15 @@ velikost_rodbine(&quot;Elizabeta&quot;)
 <p>Storiti nam je tole: če je tako ime ravno vprašani osebi, bo odgovorila <code class="docutils literal notranslate"><span class="pre">True</span></code>. Sicer bo enega za drugim spraševala otroke, dokler prvi ne odgovori <code class="docutils literal notranslate"><span class="pre">True</span></code>; tedaj vrnemo <code class="docutils literal notranslate"><span class="pre">True</span></code>. Če noben otrok nima takšnega potomca - in torej noben otrok ne odgovori <code class="docutils literal notranslate"><span class="pre">True</span></code>, odgovorimo <code class="docutils literal notranslate"><span class="pre">False</span></code>. Z drugimi besedami,</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>def obstaja_ime(oseba, ime):
-    if oseba == ime:
-        return True
-    for otrok in otroci[oseba]:
-        if obstaja_ime(otrok, ime):
-            return True
-    return False
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">obstaja_ime</span><span class="p">(</span><span class="n">oseba</span><span class="p">,</span> <span class="n">ime</span><span class="p">):</span>
+    <span class="k">if</span> <span class="n">oseba</span> <span class="o">==</span> <span class="n">ime</span><span class="p">:</span>
+        <span class="k">return</span> <span class="kc">True</span>
+    <span class="k">for</span> <span class="n">otrok</span> <span class="ow">in</span> <span class="n">otroci</span><span class="p">[</span><span class="n">oseba</span><span class="p">]:</span>
+        <span class="k">if</span> <span class="n">obstaja_ime</span><span class="p">(</span><span class="n">otrok</span><span class="p">,</span> <span class="n">ime</span><span class="p">):</span>
+            <span class="k">return</span> <span class="kc">True</span>
+    <span class="k">return</span> <span class="kc">False</span>
 
-obstaja_ime(&quot;Elizabeta&quot;, &quot;Franc&quot;)
+<span class="n">obstaja_ime</span><span class="p">(</span><span class="s2">&quot;Elizabeta&quot;</span><span class="p">,</span> <span class="s2">&quot;Franc&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -703,22 +703,22 @@ obstaja_ime(&quot;Elizabeta&quot;, &quot;Franc&quot;)
 <p>S snovjo izpred dveh tednov:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>def obstaja_ime(oseba, ime):
-    return oseba == ime or any(obstaja_ime(otrok, ime) for otrok in otroci[oseba])
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">obstaja_ime</span><span class="p">(</span><span class="n">oseba</span><span class="p">,</span> <span class="n">ime</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">oseba</span> <span class="o">==</span> <span class="n">ime</span> <span class="ow">or</span> <span class="nb">any</span><span class="p">(</span><span class="n">obstaja_ime</span><span class="p">(</span><span class="n">otrok</span><span class="p">,</span> <span class="n">ime</span><span class="p">)</span> <span class="k">for</span> <span class="n">otrok</span> <span class="ow">in</span> <span class="n">otroci</span><span class="p">[</span><span class="n">oseba</span><span class="p">])</span>
 </pre></div>
 </div>
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>obstaja_ime(&quot;Elizabeta&quot;, &quot;Franc&quot;)
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">obstaja_ime</span><span class="p">(</span><span class="s2">&quot;Elizabeta&quot;</span><span class="p">,</span> <span class="s2">&quot;Franc&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>obstaja_ime(&quot;Elizabeta&quot;, &quot;Herman&quot;)
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">obstaja_ime</span><span class="p">(</span><span class="s2">&quot;Elizabeta&quot;</span><span class="p">,</span> <span class="s2">&quot;Herman&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -729,13 +729,13 @@ obstaja_ime(&quot;Elizabeta&quot;, &quot;Franc&quot;)
 <p>Kako velika je največja družina v rodbini neke osebe - s tem mislimo le otroke, brez staršev? Tu osebe razmišljajo tako: najprej predpostavijo, da je to njihova družina - največ otrok je torej toliko otrok, kolikor jih imajo oni. Potem vprašajo vsakega od otrok, kako velika je največja družina v njegovi rodbini. Če naleti na koga z večjo družino, si to zapomni. Na koncu vrne največ, kar je videl.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>def najvec_otrok(oseba):
-    najvec = len(otroci[oseba])
-    for otrok in otroci[oseba]:
-        koliko = najvec_otrok(otrok)
-        if  koliko &gt; najvec:
-            najvec = koliko
-    return najvec
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">najvec_otrok</span><span class="p">(</span><span class="n">oseba</span><span class="p">):</span>
+    <span class="n">najvec</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">otroci</span><span class="p">[</span><span class="n">oseba</span><span class="p">])</span>
+    <span class="k">for</span> <span class="n">otrok</span> <span class="ow">in</span> <span class="n">otroci</span><span class="p">[</span><span class="n">oseba</span><span class="p">]:</span>
+        <span class="n">koliko</span> <span class="o">=</span> <span class="n">najvec_otrok</span><span class="p">(</span><span class="n">otrok</span><span class="p">)</span>
+        <span class="k">if</span>  <span class="n">koliko</span> <span class="o">&gt;</span> <span class="n">najvec</span><span class="p">:</span>
+            <span class="n">najvec</span> <span class="o">=</span> <span class="n">koliko</span>
+    <span class="k">return</span> <span class="n">najvec</span>
 </pre></div>
 </div>
 </div>
@@ -743,7 +743,7 @@ obstaja_ime(&quot;Elizabeta&quot;, &quot;Franc&quot;)
 <p>Največja družina v Danielovi rodbini ima tri otroke, zato</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>najvec_otrok(&quot;Daniel&quot;)
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">najvec_otrok</span><span class="p">(</span><span class="s2">&quot;Daniel&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -756,10 +756,10 @@ obstaja_ime(&quot;Elizabeta&quot;, &quot;Franc&quot;)
 <p>Kdor zna, zna takole:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>def najvec_otrok(oseba):
-    return max([len(otroci[oseba])] + [najvec_otrok(otrok) for otrok in otroci[oseba]])
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">najvec_otrok</span><span class="p">(</span><span class="n">oseba</span><span class="p">):</span>
+    <span class="k">return</span> <span class="nb">max</span><span class="p">([</span><span class="nb">len</span><span class="p">(</span><span class="n">otroci</span><span class="p">[</span><span class="n">oseba</span><span class="p">])]</span> <span class="o">+</span> <span class="p">[</span><span class="n">najvec_otrok</span><span class="p">(</span><span class="n">otrok</span><span class="p">)</span> <span class="k">for</span> <span class="n">otrok</span> <span class="ow">in</span> <span class="n">otroci</span><span class="p">[</span><span class="n">oseba</span><span class="p">]])</span>
 
-najvec_otrok(&quot;Daniel&quot;)
+<span class="n">najvec_otrok</span><span class="p">(</span><span class="s2">&quot;Daniel&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -776,15 +776,15 @@ najvec_otrok(&quot;Daniel&quot;)
 <p>Katero je najdaljše ime v rodbini neke osebe? Tole je precej podobno največjemu številu otrok: najdaljše je moje, razen če je daljše katero od imen v rodbini katerega od otrok.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>def najdaljse_ime(oseba):
-    najdaljse = oseba
-    for otrok in otroci[oseba]:
-        naj_pod = najdaljse_ime(otrok)
-        if len(naj_pod) &gt; len(najdaljse):
-            najdaljse = naj_pod
-    return najdaljse
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">najdaljse_ime</span><span class="p">(</span><span class="n">oseba</span><span class="p">):</span>
+    <span class="n">najdaljse</span> <span class="o">=</span> <span class="n">oseba</span>
+    <span class="k">for</span> <span class="n">otrok</span> <span class="ow">in</span> <span class="n">otroci</span><span class="p">[</span><span class="n">oseba</span><span class="p">]:</span>
+        <span class="n">naj_pod</span> <span class="o">=</span> <span class="n">najdaljse_ime</span><span class="p">(</span><span class="n">otrok</span><span class="p">)</span>
+        <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">naj_pod</span><span class="p">)</span> <span class="o">&gt;</span> <span class="nb">len</span><span class="p">(</span><span class="n">najdaljse</span><span class="p">):</span>
+            <span class="n">najdaljse</span> <span class="o">=</span> <span class="n">naj_pod</span>
+    <span class="k">return</span> <span class="n">najdaljse</span>
     
-najdaljse_ime(&quot;Adam&quot;)
+<span class="n">najdaljse_ime</span><span class="p">(</span><span class="s2">&quot;Adam&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -802,15 +802,15 @@ najdaljse_ime(&quot;Adam&quot;)
 <p>Globino rodbine izračunamo tako, da vprašamo vse otroke po globinah njihovih rodbin in k največji globini, ki jo dobimo, prištejemo 1. Začetna največja globina pa bo <code class="docutils literal notranslate"><span class="pre">-1</span></code>; če oseba nima otrok, bo tudi ostala -1, in ko bomo prišteli 1, bo 0. Kot mora biti.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>def globina(oseba):
-    najvecja = -1
-    for otrok in otroci[oseba]:
-        g = globina(otrok)
-        if g &gt; najvecja:
-            najvecja = g
-    return najvecja + 1
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">globina</span><span class="p">(</span><span class="n">oseba</span><span class="p">):</span>
+    <span class="n">najvecja</span> <span class="o">=</span> <span class="o">-</span><span class="mi">1</span>
+    <span class="k">for</span> <span class="n">otrok</span> <span class="ow">in</span> <span class="n">otroci</span><span class="p">[</span><span class="n">oseba</span><span class="p">]:</span>
+        <span class="n">g</span> <span class="o">=</span> <span class="n">globina</span><span class="p">(</span><span class="n">otrok</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">g</span> <span class="o">&gt;</span> <span class="n">najvecja</span><span class="p">:</span>
+            <span class="n">najvecja</span> <span class="o">=</span> <span class="n">g</span>
+    <span class="k">return</span> <span class="n">najvecja</span> <span class="o">+</span> <span class="mi">1</span>
 
-globina(&quot;Elizabeta&quot;)
+<span class="n">globina</span><span class="p">(</span><span class="s2">&quot;Elizabeta&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -823,10 +823,10 @@ globina(&quot;Elizabeta&quot;)
 <p>Ali, krajše</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>def globina(oseba):
-    return max([globina(otrok) for otrok in otroci[oseba]], default=-1) + 1    
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">globina</span><span class="p">(</span><span class="n">oseba</span><span class="p">):</span>
+    <span class="k">return</span> <span class="nb">max</span><span class="p">([</span><span class="n">globina</span><span class="p">(</span><span class="n">otrok</span><span class="p">)</span> <span class="k">for</span> <span class="n">otrok</span> <span class="ow">in</span> <span class="n">otroci</span><span class="p">[</span><span class="n">oseba</span><span class="p">]],</span> <span class="n">default</span><span class="o">=-</span><span class="mi">1</span><span class="p">)</span> <span class="o">+</span> <span class="mi">1</span>    
 
-globina(&quot;Elizabeta&quot;)
+<span class="n">globina</span><span class="p">(</span><span class="s2">&quot;Elizabeta&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -843,11 +843,11 @@ globina(&quot;Elizabeta&quot;)
 <p>Tale zahteva malo razmisleka. Navidez bi jo lahko ugnali tako, kot smo velikost rodbine, le 1 ne smemo prišteti na koncu, saj oseba ne sme šteti sebe.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>def stevilo_potomcev(oseba):
-    v = 0
-    for otrok in otroci[oseba]:
-        v += stevilo_potomcev(otrok)
-    return v
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">stevilo_potomcev</span><span class="p">(</span><span class="n">oseba</span><span class="p">):</span>
+    <span class="n">v</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="k">for</span> <span class="n">otrok</span> <span class="ow">in</span> <span class="n">otroci</span><span class="p">[</span><span class="n">oseba</span><span class="p">]:</span>
+        <span class="n">v</span> <span class="o">+=</span> <span class="n">stevilo_potomcev</span><span class="p">(</span><span class="n">otrok</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">v</span>
 </pre></div>
 </div>
 </div>
@@ -855,7 +855,7 @@ globina(&quot;Elizabeta&quot;)
 <p>Zoprna reč je, da je ta funkcija nekoliko napačna. No, precej napačna. Vedno vrne 0 - ker nihče nikoli ničesar ne prišteje, vse seštevajo samo ničle. In iz ničel nikoli ne boš dobil ničesar, pa jih seštevaj, kolikor dolgo hočeš.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>stevilo_potomcev(&quot;Elizabeta&quot;)
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">stevilo_potomcev</span><span class="p">(</span><span class="s2">&quot;Elizabeta&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -868,13 +868,13 @@ globina(&quot;Elizabeta&quot;)
 <p>Ena rešitev je, da vsak vrne število svojih otrok, ki čemur morajo otroci prišteti število svojih otrok, in vnuki število svojih…</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>def stevilo_potomcev(oseba):
-    potomcev = len(otroci[oseba])
-    for otrok in otroci[oseba]:
-        potomcev += stevilo_potomcev(otrok)
-    return potomcev
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">stevilo_potomcev</span><span class="p">(</span><span class="n">oseba</span><span class="p">):</span>
+    <span class="n">potomcev</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">otroci</span><span class="p">[</span><span class="n">oseba</span><span class="p">])</span>
+    <span class="k">for</span> <span class="n">otrok</span> <span class="ow">in</span> <span class="n">otroci</span><span class="p">[</span><span class="n">oseba</span><span class="p">]:</span>
+        <span class="n">potomcev</span> <span class="o">+=</span> <span class="n">stevilo_potomcev</span><span class="p">(</span><span class="n">otrok</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">potomcev</span>
     
-stevilo_potomcev(&quot;Elizabeta&quot;)
+<span class="n">stevilo_potomcev</span><span class="p">(</span><span class="s2">&quot;Elizabeta&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -887,13 +887,13 @@ stevilo_potomcev(&quot;Elizabeta&quot;)
 <p>Ali isto, le na drug način:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>def stevilo_potomcev(oseba):
-    potomcev = 0
-    for otrok in otroci[oseba]:
-        potomcev += 1 + stevilo_potomcev(otrok)
-    return potomcev
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">stevilo_potomcev</span><span class="p">(</span><span class="n">oseba</span><span class="p">):</span>
+    <span class="n">potomcev</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="k">for</span> <span class="n">otrok</span> <span class="ow">in</span> <span class="n">otroci</span><span class="p">[</span><span class="n">oseba</span><span class="p">]:</span>
+        <span class="n">potomcev</span> <span class="o">+=</span> <span class="mi">1</span> <span class="o">+</span> <span class="n">stevilo_potomcev</span><span class="p">(</span><span class="n">otrok</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">potomcev</span>
 
-stevilo_potomcev(&quot;Elizabeta&quot;)
+<span class="n">stevilo_potomcev</span><span class="p">(</span><span class="s2">&quot;Elizabeta&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -906,10 +906,10 @@ stevilo_potomcev(&quot;Elizabeta&quot;)
 <p>Lahko pa si pomagamo tudi z rodbino:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>def stevilo_potomcev(oseba):
-    return velikost_rodbine(oseba) - 1
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">stevilo_potomcev</span><span class="p">(</span><span class="n">oseba</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">velikost_rodbine</span><span class="p">(</span><span class="n">oseba</span><span class="p">)</span> <span class="o">-</span> <span class="mi">1</span>
     
-stevilo_potomcev(&quot;Elizabeta&quot;)
+<span class="n">stevilo_potomcev</span><span class="p">(</span><span class="s2">&quot;Elizabeta&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -926,12 +926,12 @@ stevilo_potomcev(&quot;Elizabeta&quot;)
 <p>Naloga je res preprosta: vsak izpiše svoje ime in pozove svoje otroke, naj storijo isto.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>def izpis(oseba):
-    print(oseba)
-    for otrok in otroci[oseba]:
-        izpis(otrok)
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">izpis</span><span class="p">(</span><span class="n">oseba</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">oseba</span><span class="p">)</span>
+    <span class="k">for</span> <span class="n">otrok</span> <span class="ow">in</span> <span class="n">otroci</span><span class="p">[</span><span class="n">oseba</span><span class="p">]:</span>
+        <span class="n">izpis</span><span class="p">(</span><span class="n">otrok</span><span class="p">)</span>
         
-izpis(&quot;Adam&quot;)
+<span class="n">izpis</span><span class="p">(</span><span class="s2">&quot;Adam&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -973,14 +973,14 @@ Erik
 <p>Ideja je, da se vsi dopisujejo v seznam <code class="docutils literal notranslate"><span class="pre">clani</span></code>. In to - kot je vsem, ki to napišejo, jasno na prvi pogled, ne deluje, ker nimamo seznama <code class="docutils literal notranslate"><span class="pre">clani</span></code>. Zato v resnici naredijo tole.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>def rodbina(oseba):
-    clani = []
-    clani.append(oseba)
-    for otrok in otroci[oseba]:
-        rodbina(otrok)
-    return clani
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">rodbina</span><span class="p">(</span><span class="n">oseba</span><span class="p">):</span>
+    <span class="n">clani</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="n">clani</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">oseba</span><span class="p">)</span>
+    <span class="k">for</span> <span class="n">otrok</span> <span class="ow">in</span> <span class="n">otroci</span><span class="p">[</span><span class="n">oseba</span><span class="p">]:</span>
+        <span class="n">rodbina</span><span class="p">(</span><span class="n">otrok</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">clani</span>
 
-rodbina(&quot;Adam&quot;)
+<span class="n">rodbina</span><span class="p">(</span><span class="s2">&quot;Adam&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -995,15 +995,15 @@ rodbina(&quot;Adam&quot;)
 <p>Študent, ki napiše gornje, je naredil zgolj napako. V obupu pa se zatečejo iz <em>napake</em> naravnost v <em>greh</em>. Naredijo pogodbo s hudičem (v obliki globalne spremenljivke) in mislijo, da jih bo to rešilo.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>clani = []
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">clani</span> <span class="o">=</span> <span class="p">[]</span>
 
-def rodbina(oseba):
-    clani.append(oseba)
-    for otrok in otroci[oseba]:
-        rodbina(otrok)
-    return clani
+<span class="k">def</span> <span class="nf">rodbina</span><span class="p">(</span><span class="n">oseba</span><span class="p">):</span>
+    <span class="n">clani</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">oseba</span><span class="p">)</span>
+    <span class="k">for</span> <span class="n">otrok</span> <span class="ow">in</span> <span class="n">otroci</span><span class="p">[</span><span class="n">oseba</span><span class="p">]:</span>
+        <span class="n">rodbina</span><span class="p">(</span><span class="n">otrok</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">clani</span>
 
-rodbina(&quot;Adam&quot;)
+<span class="n">rodbina</span><span class="p">(</span><span class="s2">&quot;Adam&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -1035,7 +1035,7 @@ rodbina(&quot;Adam&quot;)
 <p>Torej: zgoraj je videti, da funkcija deluje. Za vsak slučaj poglejmo še Jožefovo rodbino, ki, kot vemo, obsega njega in njegove tri otroke.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>rodbina(&quot;Jožef&quot;)
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">rodbina</span><span class="p">(</span><span class="s2">&quot;Jožef&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -1070,16 +1070,16 @@ rodbina(&quot;Adam&quot;)
 <p>Razumemo, kaj se dogaja? Vsakič, ko pokličemo funkcijo, dodaja nove ljudi v isti seznam. Ta bo vsakič vedno daljši. Potem se grešnik domisli, da bi <code class="docutils literal notranslate"><span class="pre">clani</span></code> spraznil na začetku klica funkcije,</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>clani = []
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">clani</span> <span class="o">=</span> <span class="p">[]</span>
 
-def rodbina(oseba):
-    clani = []
-    clani.append(oseba)
-    for otrok in otroci[oseba]:
-        rodbina(otrok)
-    return clani
+<span class="k">def</span> <span class="nf">rodbina</span><span class="p">(</span><span class="n">oseba</span><span class="p">):</span>
+    <span class="n">clani</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="n">clani</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">oseba</span><span class="p">)</span>
+    <span class="k">for</span> <span class="n">otrok</span> <span class="ow">in</span> <span class="n">otroci</span><span class="p">[</span><span class="n">oseba</span><span class="p">]:</span>
+        <span class="n">rodbina</span><span class="p">(</span><span class="n">otrok</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">clani</span>
 
-rodbina(&quot;Adam&quot;)
+<span class="n">rodbina</span><span class="p">(</span><span class="s2">&quot;Adam&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -1093,16 +1093,16 @@ rodbina(&quot;Adam&quot;)
 <p>Grešnik išče odrešenja v tem, da v funkciji ne naredi nove, lokalne spremenljivke, temveč sprazni globalno,</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>clani = []
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">clani</span> <span class="o">=</span> <span class="p">[]</span>
 
-def rodbina(oseba):
-    clani.clear()
-    clani.append(oseba)
-    for otrok in otroci[oseba]:
-        rodbina(otrok)
-    return clani
+<span class="k">def</span> <span class="nf">rodbina</span><span class="p">(</span><span class="n">oseba</span><span class="p">):</span>
+    <span class="n">clani</span><span class="o">.</span><span class="n">clear</span><span class="p">()</span>
+    <span class="n">clani</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">oseba</span><span class="p">)</span>
+    <span class="k">for</span> <span class="n">otrok</span> <span class="ow">in</span> <span class="n">otroci</span><span class="p">[</span><span class="n">oseba</span><span class="p">]:</span>
+        <span class="n">rodbina</span><span class="p">(</span><span class="n">otrok</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">clani</span>
 
-rodbina(&quot;Adam&quot;)
+<span class="n">rodbina</span><span class="p">(</span><span class="s2">&quot;Adam&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -1118,13 +1118,13 @@ rodbina(&quot;Adam&quot;)
 <p>Razmišljati moramo z vidika igre, ki jo igramo ob učenju rekurzije v predavalnici: vsak otrok sporoči svojo rodbino in to, kar vrnejo otroci, je potrebno seštevati.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>def rodbina(oseba):
-    clani = [oseba]
-    for otrok in otroci[oseba]:
-        clani += rodbina(otrok)
-    return clani
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">rodbina</span><span class="p">(</span><span class="n">oseba</span><span class="p">):</span>
+    <span class="n">clani</span> <span class="o">=</span> <span class="p">[</span><span class="n">oseba</span><span class="p">]</span>
+    <span class="k">for</span> <span class="n">otrok</span> <span class="ow">in</span> <span class="n">otroci</span><span class="p">[</span><span class="n">oseba</span><span class="p">]:</span>
+        <span class="n">clani</span> <span class="o">+=</span> <span class="n">rodbina</span><span class="p">(</span><span class="n">otrok</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">clani</span>
 
-rodbina(&quot;Adam&quot;)
+<span class="n">rodbina</span><span class="p">(</span><span class="s2">&quot;Adam&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -1154,7 +1154,7 @@ rodbina(&quot;Adam&quot;)
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>rodbina(&quot;Jožef&quot;)
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">rodbina</span><span class="p">(</span><span class="s2">&quot;Jožef&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -1171,16 +1171,16 @@ rodbina(&quot;Adam&quot;)
 <p>Gre za variacijo funkcije <code class="docutils literal notranslate"><span class="pre">obstaja_ime</span></code>. Tako kot prej tudi tu vrnemo <code class="docutils literal notranslate"><span class="pre">None</span></code>, če imena ni. Če kateri od otrok pove, da je dotični potomec na globini <code class="docutils literal notranslate"><span class="pre">n</span></code>, pa je ta potomec, glede na to osebo, na globini <code class="docutils literal notranslate"><span class="pre">n</span> <span class="pre">+</span> <span class="pre">1</span></code>.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>def globina_imena(oseba, ime):
-    if oseba == ime:
-        return 0
-    for otrok in otroci[oseba]:
-        n = globina_imena(otrok, ime)
-        if n != None:
-            return n + 1
-    return None
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">globina_imena</span><span class="p">(</span><span class="n">oseba</span><span class="p">,</span> <span class="n">ime</span><span class="p">):</span>
+    <span class="k">if</span> <span class="n">oseba</span> <span class="o">==</span> <span class="n">ime</span><span class="p">:</span>
+        <span class="k">return</span> <span class="mi">0</span>
+    <span class="k">for</span> <span class="n">otrok</span> <span class="ow">in</span> <span class="n">otroci</span><span class="p">[</span><span class="n">oseba</span><span class="p">]:</span>
+        <span class="n">n</span> <span class="o">=</span> <span class="n">globina_imena</span><span class="p">(</span><span class="n">otrok</span><span class="p">,</span> <span class="n">ime</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">n</span> <span class="o">!=</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="k">return</span> <span class="n">n</span> <span class="o">+</span> <span class="mi">1</span>
+    <span class="k">return</span> <span class="kc">None</span>
 
-globina_imena(&quot;Daniel&quot;, &quot;Jožef&quot;)
+<span class="n">globina_imena</span><span class="p">(</span><span class="s2">&quot;Daniel&quot;</span><span class="p">,</span> <span class="s2">&quot;Jožef&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -1193,15 +1193,15 @@ globina_imena(&quot;Daniel&quot;, &quot;Jožef&quot;)
 <p>Pri <code class="docutils literal notranslate"><span class="pre">najvec_otrok</span></code> sem opozoril, da znajo študenti pri programiranju te funkcije narediti zoprno napako. Tudi <code class="docutils literal notranslate"><span class="pre">globina_imena</span></code> ponuja podobno skušnjavo. Marsikateri študent bi jo skrajšal za eno vrstico in naredil tako:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>def globina_imena(oseba, ime):
-    if oseba == ime:
-        return 0
-    for otrok in otroci[oseba]:
-        if globina_imena(otrok, ime) != None:
-            return globina_imena(otrok, ime) + 1
-    return None
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">globina_imena</span><span class="p">(</span><span class="n">oseba</span><span class="p">,</span> <span class="n">ime</span><span class="p">):</span>
+    <span class="k">if</span> <span class="n">oseba</span> <span class="o">==</span> <span class="n">ime</span><span class="p">:</span>
+        <span class="k">return</span> <span class="mi">0</span>
+    <span class="k">for</span> <span class="n">otrok</span> <span class="ow">in</span> <span class="n">otroci</span><span class="p">[</span><span class="n">oseba</span><span class="p">]:</span>
+        <span class="k">if</span> <span class="n">globina_imena</span><span class="p">(</span><span class="n">otrok</span><span class="p">,</span> <span class="n">ime</span><span class="p">)</span> <span class="o">!=</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="k">return</span> <span class="n">globina_imena</span><span class="p">(</span><span class="n">otrok</span><span class="p">,</span> <span class="n">ime</span><span class="p">)</span> <span class="o">+</span> <span class="mi">1</span>
+    <span class="k">return</span> <span class="kc">None</span>
 
-globina_imena(&quot;Daniel&quot;, &quot;Jožef&quot;)
+<span class="n">globina_imena</span><span class="p">(</span><span class="s2">&quot;Daniel&quot;</span><span class="p">,</span> <span class="s2">&quot;Jožef&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -1213,17 +1213,17 @@ globina_imena(&quot;Daniel&quot;, &quot;Jožef&quot;)
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>def globina_imena(oseba, ime):
-    print(oseba)
-    if oseba == ime:
-        return 0
-    for otrok in otroci[oseba]:
-        n = globina_imena(otrok, ime)
-        if n != None:
-            return n + 1
-    return None
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">globina_imena</span><span class="p">(</span><span class="n">oseba</span><span class="p">,</span> <span class="n">ime</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">oseba</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">oseba</span> <span class="o">==</span> <span class="n">ime</span><span class="p">:</span>
+        <span class="k">return</span> <span class="mi">0</span>
+    <span class="k">for</span> <span class="n">otrok</span> <span class="ow">in</span> <span class="n">otroci</span><span class="p">[</span><span class="n">oseba</span><span class="p">]:</span>
+        <span class="n">n</span> <span class="o">=</span> <span class="n">globina_imena</span><span class="p">(</span><span class="n">otrok</span><span class="p">,</span> <span class="n">ime</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">n</span> <span class="o">!=</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="k">return</span> <span class="n">n</span> <span class="o">+</span> <span class="mi">1</span>
+    <span class="k">return</span> <span class="kc">None</span>
 
-globina_imena(&quot;Daniel&quot;, &quot;Jožef&quot;)
+<span class="n">globina_imena</span><span class="p">(</span><span class="s2">&quot;Daniel&quot;</span><span class="p">,</span> <span class="s2">&quot;Jožef&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -1244,16 +1244,16 @@ Jožef
 <p>Druga funkcija - tista, ki se pokliče dvakrat.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>def globina_imena(oseba, ime):
-    print(oseba)
-    if oseba == ime:
-        return 0
-    for otrok in otroci[oseba]:
-        if globina_imena(otrok, ime) != None:
-            return globina_imena(otrok, ime) + 1
-    return None
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">globina_imena</span><span class="p">(</span><span class="n">oseba</span><span class="p">,</span> <span class="n">ime</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">oseba</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">oseba</span> <span class="o">==</span> <span class="n">ime</span><span class="p">:</span>
+        <span class="k">return</span> <span class="mi">0</span>
+    <span class="k">for</span> <span class="n">otrok</span> <span class="ow">in</span> <span class="n">otroci</span><span class="p">[</span><span class="n">oseba</span><span class="p">]:</span>
+        <span class="k">if</span> <span class="n">globina_imena</span><span class="p">(</span><span class="n">otrok</span><span class="p">,</span> <span class="n">ime</span><span class="p">)</span> <span class="o">!=</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="k">return</span> <span class="n">globina_imena</span><span class="p">(</span><span class="n">otrok</span><span class="p">,</span> <span class="n">ime</span><span class="p">)</span> <span class="o">+</span> <span class="mi">1</span>
+    <span class="k">return</span> <span class="kc">None</span>
 
-globina_imena(&quot;Daniel&quot;, &quot;Jožef&quot;)
+<span class="n">globina_imena</span><span class="p">(</span><span class="s2">&quot;Daniel&quot;</span><span class="p">,</span> <span class="s2">&quot;Jožef&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>

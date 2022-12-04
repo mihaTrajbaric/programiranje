@@ -552,7 +552,7 @@ title="Print to PDF"
 <p>Recimo, da smo zbrali teže šestih dijakov. Seznam tež zapišemo takole:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>teze = [74, 82, 58, 66, 61, 84]
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">teze</span> <span class="o">=</span> <span class="p">[</span><span class="mi">74</span><span class="p">,</span> <span class="mi">82</span><span class="p">,</span> <span class="mi">58</span><span class="p">,</span> <span class="mi">66</span><span class="p">,</span> <span class="mi">61</span><span class="p">,</span> <span class="mi">84</span><span class="p">]</span>
 </pre></div>
 </div>
 </div>
@@ -560,7 +560,7 @@ title="Print to PDF"
 <p>Seznam (angl. <em>list</em>) je zaporedje česarkoli, recimo števil, lahko pa tudi česa drugega. Števila ali kaj drugega naštejemo, vmes pišemo vejice in vse skupaj zapremo v oglate oklepaje (<code class="docutils literal notranslate"><span class="pre">[</span></code> in <code class="docutils literal notranslate"><span class="pre">]</span></code>). Za primer sestavimo še seznam imen dijakov:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>imena = [&quot;Anze&quot;, &quot;Benjamin&quot;, &quot;Cilka&quot;, &quot;Dani&quot;, &quot;Eva&quot;, &quot;Franc&quot;]
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">imena</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;Anze&quot;</span><span class="p">,</span> <span class="s2">&quot;Benjamin&quot;</span><span class="p">,</span> <span class="s2">&quot;Cilka&quot;</span><span class="p">,</span> <span class="s2">&quot;Dani&quot;</span><span class="p">,</span> <span class="s2">&quot;Eva&quot;</span><span class="p">,</span> <span class="s2">&quot;Franc&quot;</span><span class="p">]</span>
 </pre></div>
 </div>
 </div>
@@ -568,7 +568,7 @@ title="Print to PDF"
 <p>in seznam, ki bo povedal, ali gre za dijaka ali dijakinjo</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>dijakinja = [False, False, True, False, True, False]
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">dijakinja</span> <span class="o">=</span> <span class="p">[</span><span class="kc">False</span><span class="p">,</span> <span class="kc">False</span><span class="p">,</span> <span class="kc">True</span><span class="p">,</span> <span class="kc">False</span><span class="p">,</span> <span class="kc">True</span><span class="p">,</span> <span class="kc">False</span><span class="p">]</span>
 </pre></div>
 </div>
 </div>
@@ -576,14 +576,14 @@ title="Print to PDF"
 <p>Seznami lahko vsebujejo tudi še hujšo eksotiko. Imamo lahko, recimo, seznam seznamov - vanj bomo, prikladno, stlačili (pod)sezname teža-ime-spol:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>podatki = [
-    [74, &quot;Anze&quot;, False],
-    [82, &quot;Benjamin&quot;, False],
-    [58, &quot;Cilka&quot;, True],
-    [66, &quot;Dani&quot;, False],
-    [61, &quot;Eva&quot;, True],
-    [84, &quot;Franc&quot;, False],
-]
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">podatki</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="p">[</span><span class="mi">74</span><span class="p">,</span> <span class="s2">&quot;Anze&quot;</span><span class="p">,</span> <span class="kc">False</span><span class="p">],</span>
+    <span class="p">[</span><span class="mi">82</span><span class="p">,</span> <span class="s2">&quot;Benjamin&quot;</span><span class="p">,</span> <span class="kc">False</span><span class="p">],</span>
+    <span class="p">[</span><span class="mi">58</span><span class="p">,</span> <span class="s2">&quot;Cilka&quot;</span><span class="p">,</span> <span class="kc">True</span><span class="p">],</span>
+    <span class="p">[</span><span class="mi">66</span><span class="p">,</span> <span class="s2">&quot;Dani&quot;</span><span class="p">,</span> <span class="kc">False</span><span class="p">],</span>
+    <span class="p">[</span><span class="mi">61</span><span class="p">,</span> <span class="s2">&quot;Eva&quot;</span><span class="p">,</span> <span class="kc">True</span><span class="p">],</span>
+    <span class="p">[</span><span class="mi">84</span><span class="p">,</span> <span class="s2">&quot;Franc&quot;</span><span class="p">,</span> <span class="kc">False</span><span class="p">],</span>
+<span class="p">]</span>
 </pre></div>
 </div>
 </div>
@@ -591,8 +591,8 @@ title="Print to PDF"
 <p>To sicer navadno delamo malo drugače (pogosto celo precej drugače), a dokler tega še ne znamo, bo dobro tudi tako. Mimogrede opazimo še dve stvari: seznam lahko, če želimo, raztegnemo v več vrst, preprosto tako, da ne zapremo oklepaja. Naredili bi lahko tudi tole</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>teze = [74, 82, 58,
-        66, 61, 84]
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">teze</span> <span class="o">=</span> <span class="p">[</span><span class="mi">74</span><span class="p">,</span> <span class="mi">82</span><span class="p">,</span> <span class="mi">58</span><span class="p">,</span>
+        <span class="mi">66</span><span class="p">,</span> <span class="mi">61</span><span class="p">,</span> <span class="mi">84</span><span class="p">]</span>
 </pre></div>
 </div>
 </div>
@@ -602,8 +602,8 @@ title="Print to PDF"
 <p>Seznami lahko vsebujejo še hujšo eksotiko. V resnici lahko vsebujejo karkoli, celo, recimo, funkcije:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>from math import *
-par_funkcij = [sin, cos, radians]
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">math</span> <span class="kn">import</span> <span class="o">*</span>
+<span class="n">par_funkcij</span> <span class="o">=</span> <span class="p">[</span><span class="n">sin</span><span class="p">,</span> <span class="n">cos</span><span class="p">,</span> <span class="n">radians</span><span class="p">]</span>
 </pre></div>
 </div>
 </div>
@@ -613,7 +613,7 @@ par_funkcij = [sin, cos, radians]
 <p>Seznam je lahko tudi prazen</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>prazen = []
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">prazen</span> <span class="o">=</span> <span class="p">[]</span>
 </pre></div>
 </div>
 </div>
@@ -621,7 +621,7 @@ par_funkcij = [sin, cos, radians]
 <p>ali pa ima en sam element</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>samo_edini = [42]
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">samo_edini</span> <span class="o">=</span> <span class="p">[</span><span class="mi">42</span><span class="p">]</span>
 </pre></div>
 </div>
 </div>
@@ -629,7 +629,7 @@ par_funkcij = [sin, cos, radians]
 <p>Ali pa je poln praznih seznamov</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>polnoprazen = [[], [], [], [], [], []]
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">polnoprazen</span> <span class="o">=</span> <span class="p">[[],</span> <span class="p">[],</span> <span class="p">[],</span> <span class="p">[],</span> <span class="p">[],</span> <span class="p">[]]</span>
 </pre></div>
 </div>
 </div>
@@ -640,8 +640,8 @@ par_funkcij = [sin, cos, radians]
 <p>Terka (angl. <em>tuple</em>) je podobna seznamu. Kakšna je pomembna razlika, bomo še videli, manj pomembna pa je ta, da pri terki namesto oglatih oklepajev uporabljamo kar okrogle. (Skoraj) vse ostalo ostane enako:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>teze = (74, 82, 58, 66, 61, 84)
-imena = (&quot;Anze&quot;, &quot;Benjamin&quot;, &quot;Cilka&quot;, &quot;Dani&quot;, &quot;Eva&quot;, &quot;Franc&quot;)
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">teze</span> <span class="o">=</span> <span class="p">(</span><span class="mi">74</span><span class="p">,</span> <span class="mi">82</span><span class="p">,</span> <span class="mi">58</span><span class="p">,</span> <span class="mi">66</span><span class="p">,</span> <span class="mi">61</span><span class="p">,</span> <span class="mi">84</span><span class="p">)</span>
+<span class="n">imena</span> <span class="o">=</span> <span class="p">(</span><span class="s2">&quot;Anze&quot;</span><span class="p">,</span> <span class="s2">&quot;Benjamin&quot;</span><span class="p">,</span> <span class="s2">&quot;Cilka&quot;</span><span class="p">,</span> <span class="s2">&quot;Dani&quot;</span><span class="p">,</span> <span class="s2">&quot;Eva&quot;</span><span class="p">,</span> <span class="s2">&quot;Franc&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -649,7 +649,7 @@ imena = (&quot;Anze&quot;, &quot;Benjamin&quot;, &quot;Cilka&quot;, &quot;Dani&q
 <p>Pri terkah se nam - zaradi tega, kje in kako jih uporabljamo, pogosteje zgodi, da vsebuje elemente različnih tipov. Recimo takole:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>student = (74, &quot;Anze&quot;, False)
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">student</span> <span class="o">=</span> <span class="p">(</span><span class="mi">74</span><span class="p">,</span> <span class="s2">&quot;Anze&quot;</span><span class="p">,</span> <span class="kc">False</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -657,14 +657,14 @@ imena = (&quot;Anze&quot;, &quot;Benjamin&quot;, &quot;Cilka&quot;, &quot;Dani&q
 <p>Tudi seznam teža-ime-spol bi raje naredili takole:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>podatki = [
-    (74, &quot;Anze&quot;, False),
-    (82, &quot;Benjamin&quot;, False),
-    (58, &quot;Cilka&quot;, True),
-    (66, &quot;Dani&quot;, False),
-    (61, &quot;Eva&quot;, True),
-    (84, &quot;Franc&quot;, False),
-]
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">podatki</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="p">(</span><span class="mi">74</span><span class="p">,</span> <span class="s2">&quot;Anze&quot;</span><span class="p">,</span> <span class="kc">False</span><span class="p">),</span>
+    <span class="p">(</span><span class="mi">82</span><span class="p">,</span> <span class="s2">&quot;Benjamin&quot;</span><span class="p">,</span> <span class="kc">False</span><span class="p">),</span>
+    <span class="p">(</span><span class="mi">58</span><span class="p">,</span> <span class="s2">&quot;Cilka&quot;</span><span class="p">,</span> <span class="kc">True</span><span class="p">),</span>
+    <span class="p">(</span><span class="mi">66</span><span class="p">,</span> <span class="s2">&quot;Dani&quot;</span><span class="p">,</span> <span class="kc">False</span><span class="p">),</span>
+    <span class="p">(</span><span class="mi">61</span><span class="p">,</span> <span class="s2">&quot;Eva&quot;</span><span class="p">,</span> <span class="kc">True</span><span class="p">),</span>
+    <span class="p">(</span><span class="mi">84</span><span class="p">,</span> <span class="s2">&quot;Franc&quot;</span><span class="p">,</span> <span class="kc">False</span><span class="p">),</span>
+<span class="p">]</span>
 </pre></div>
 </div>
 </div>
@@ -672,7 +672,7 @@ imena = (&quot;Anze&quot;, &quot;Benjamin&quot;, &quot;Cilka&quot;, &quot;Dani&q
 <p>Tako kot seznami so tudi terke lahko prazne (<code class="docutils literal notranslate"><span class="pre">()</span></code>) ali pa imajo po en sam element. Tu imamo težavo pri terki z enim samim elementom: če bi napisali <code class="docutils literal notranslate"><span class="pre">(42)</span></code> to ni seznam, temveč le 42 v oklepaju (odvečnem, seveda). Da bi povedali, da gre za terko, moramo dodati še vejico:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>samo_en = (42, )
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">samo_en</span> <span class="o">=</span> <span class="p">(</span><span class="mi">42</span><span class="p">,</span> <span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -680,9 +680,9 @@ imena = (&quot;Anze&quot;, &quot;Benjamin&quot;, &quot;Cilka&quot;, &quot;Dani&q
 <p>Terko smemo, zanimivo, pisati tudi brez oklepajev.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>&gt;&gt;&gt; t = 1, 2, 3, 4
-&gt;&gt;&gt; t
-(1, 2, 3, 4)
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">&gt;&gt;&gt;</span> <span class="n">t</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">t</span>
+<span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -696,7 +696,7 @@ imena = (&quot;Anze&quot;, &quot;Benjamin&quot;, &quot;Cilka&quot;, &quot;Dani&q
 <p>Če želimo podatke prirediti spremenljivkam <code class="docutils literal notranslate"><span class="pre">teza</span></code>, <code class="docutils literal notranslate"><span class="pre">ime</span></code> in <code class="docutils literal notranslate"><span class="pre">je_zenska</span></code>, terko <em>razpakiramo</em>:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>teza, ime, je_zenska = student
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">teza</span><span class="p">,</span> <span class="n">ime</span><span class="p">,</span> <span class="n">je_zenska</span> <span class="o">=</span> <span class="n">student</span>
 </pre></div>
 </div>
 </div>
@@ -704,15 +704,15 @@ imena = (&quot;Anze&quot;, &quot;Benjamin&quot;, &quot;Cilka&quot;, &quot;Dani&q
 <p>Doslej smo imeli pri prirejanju na levi strani vedno eno samo spremenljivko, ki smo ji želeli prirediti vrednost na desni strani enačaja. Tu pa smo na levi našteli več imen spremenljivk (tri), na desni pa mora biti za to terka z enakim številom elementov (tremi). Terka? No, lahko je tudi seznam ali niz.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>&gt;&gt;&gt; a, b, c = [1, 2, 3]
-&gt;&gt;&gt; a
-1
-&gt;&gt;&gt; a, b, c = &quot;xyz&quot;
-&gt;&gt;&gt; a
-&#39;x&#39;
-&gt;&gt;&gt; b
-&#39;y&#39;
-&gt;&gt;&gt; c &#39;z&#39;
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">&gt;&gt;&gt;</span> <span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">c</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">]</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">a</span>
+<span class="mi">1</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">c</span> <span class="o">=</span> <span class="s2">&quot;xyz&quot;</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">a</span>
+<span class="s1">&#39;x&#39;</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">b</span>
+<span class="s1">&#39;y&#39;</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">c</span> <span class="s1">&#39;z&#39;</span>
 </pre></div>
 </div>
 </div>
@@ -720,13 +720,13 @@ imena = (&quot;Anze&quot;, &quot;Benjamin&quot;, &quot;Cilka&quot;, &quot;Dani&q
 <p>Več ko boste programirali v Pythonu, bolj boste čutili moč terk. Omenimo, recimo, da je z njimi mogoče napisati funkcijo, ki ne vrača ene, temveč več stvari. Vzemimo funkcijo <code class="docutils literal notranslate"><span class="pre">splitext</span></code>, ki ji damo ime datoteke, pa vrne njeno osnovno ime in njeno končnico.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>&gt;&gt;&gt; from os.path import *
-&gt;&gt;&gt; film = &quot;Babylon 5 - 3x04 - Passing through Gethsemane.avi&quot;
-&gt;&gt;&gt; zac, konc = splitext(film)
-&gt;&gt;&gt; zac
-&#39;Babylon 5 - 3x04 - Passing through Gethsemane&#39;
-&gt;&gt;&gt; konc
-&#39;.avi&#39;
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">&gt;&gt;&gt;</span> <span class="kn">from</span> <span class="nn">os.path</span> <span class="kn">import</span> <span class="o">*</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">film</span> <span class="o">=</span> <span class="s2">&quot;Babylon 5 - 3x04 - Passing through Gethsemane.avi&quot;</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">zac</span><span class="p">,</span> <span class="n">konc</span> <span class="o">=</span> <span class="n">splitext</span><span class="p">(</span><span class="n">film</span><span class="p">)</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">zac</span>
+<span class="s1">&#39;Babylon 5 - 3x04 - Passing through Gethsemane&#39;</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">konc</span>
+<span class="s1">&#39;.avi&#39;</span>
 </pre></div>
 </div>
 </div>
@@ -734,9 +734,9 @@ imena = (&quot;Anze&quot;, &quot;Benjamin&quot;, &quot;Cilka&quot;, &quot;Dani&q
 <p>V resnici funkcija <code class="docutils literal notranslate"><span class="pre">splitext</span></code> vrne terko,</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>&gt;&gt;&gt; from os.path import *
-&gt;&gt;&gt; splitext(film)
-(&#39;Babylon 5 - 3x04 - Passing through Gethsemane&#39;, &#39;.avi&#39;)
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">&gt;&gt;&gt;</span> <span class="kn">from</span> <span class="nn">os.path</span> <span class="kn">import</span> <span class="o">*</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">splitext</span><span class="p">(</span><span class="n">film</span><span class="p">)</span>
+<span class="p">(</span><span class="s1">&#39;Babylon 5 - 3x04 - Passing through Gethsemane&#39;</span><span class="p">,</span> <span class="s1">&#39;.avi&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -745,9 +745,9 @@ imena = (&quot;Anze&quot;, &quot;Benjamin&quot;, &quot;Cilka&quot;, &quot;Dani&q
 <p>Seveda bi lahko rezultat funkcije priredili tudi eni sami spremenljivki - v tem primeru bi bila ta spremenljivka terka.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>&gt;&gt;&gt; t = splitext(film)
-&gt;&gt;&gt; t
-(&#39;Babylon 5 - 3x04 - Passing through Gethsemane&#39;, &#39;.avi&#39;)
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">&gt;&gt;&gt;</span> <span class="n">t</span> <span class="o">=</span> <span class="n">splitext</span><span class="p">(</span><span class="n">film</span><span class="p">)</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">t</span>
+<span class="p">(</span><span class="s1">&#39;Babylon 5 - 3x04 - Passing through Gethsemane&#39;</span><span class="p">,</span> <span class="s1">&#39;.avi&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -755,7 +755,7 @@ imena = (&quot;Anze&quot;, &quot;Benjamin&quot;, &quot;Cilka&quot;, &quot;Dani&q
 <p>In seveda bi lahko terko nato še razpakirali.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>ime, koncnica = t
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">ime</span><span class="p">,</span> <span class="n">koncnica</span> <span class="o">=</span> <span class="n">t</span>
 </pre></div>
 </div>
 </div>
@@ -763,8 +763,8 @@ imena = (&quot;Anze&quot;, &quot;Benjamin&quot;, &quot;Cilka&quot;, &quot;Dani&q
 <p>Kako v Pythonu zamenjamo vrednosti dveh spremenljivk?</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>&gt;&gt;&gt; a = &quot;Alenka&quot;
-&gt;&gt;&gt; b = &quot;Tina&quot;
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">&gt;&gt;&gt;</span> <span class="n">a</span> <span class="o">=</span> <span class="s2">&quot;Alenka&quot;</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">b</span> <span class="o">=</span> <span class="s2">&quot;Tina&quot;</span>
 </pre></div>
 </div>
 </div>
@@ -773,8 +773,8 @@ imena = (&quot;Anze&quot;, &quot;Benjamin&quot;, &quot;Cilka&quot;, &quot;Dani&q
 tale nesmisel:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>&gt;&gt;&gt; a = b
-&gt;&gt;&gt; b = a
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">&gt;&gt;&gt;</span> <span class="n">a</span> <span class="o">=</span> <span class="n">b</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">b</span> <span class="o">=</span> <span class="n">a</span>
 </pre></div>
 </div>
 </div>
@@ -783,9 +783,9 @@ tale nesmisel:</p>
 <p>V drugih jezikih se navadno rešimo tako, da vrednost <code class="docutils literal notranslate"><span class="pre">a</span></code>-ja spravimo na varno, preden ga povozimo.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>&gt;&gt;&gt; tmp = a
-&gt;&gt;&gt; a = b
-&gt;&gt;&gt; b = tmp
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">&gt;&gt;&gt;</span> <span class="n">tmp</span> <span class="o">=</span> <span class="n">a</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">a</span> <span class="o">=</span> <span class="n">b</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">b</span> <span class="o">=</span> <span class="n">tmp</span>
 </pre></div>
 </div>
 </div>
@@ -793,7 +793,7 @@ tale nesmisel:</p>
 <p>V Pythonu pa to ni potrebno. Spremenljivki preprosto zapakiramo v terko, ki jo takoj razpakiramo nazaj, a v obratnem vrstnem redu.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>&gt;&gt;&gt; a, b = (b, a)
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">&gt;&gt;&gt;</span> <span class="n">a</span><span class="p">,</span> <span class="n">b</span> <span class="o">=</span> <span class="p">(</span><span class="n">b</span><span class="p">,</span> <span class="n">a</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -801,7 +801,7 @@ tale nesmisel:</p>
 <p>V resnici navadno ne pišemo tako, temveč izpustimo oklepaje.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>&gt;&gt;&gt; a, b = b, a
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">&gt;&gt;&gt;</span> <span class="n">a</span><span class="p">,</span> <span class="n">b</span> <span class="o">=</span> <span class="n">b</span><span class="p">,</span> <span class="n">a</span>
 </pre></div>
 </div>
 </div>
@@ -819,8 +819,8 @@ tale nesmisel:</p>
 <p>V Pythonu pa prav tako, samo brez sklonov:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>for teza in teze:
-    print(teza, teza ** 2)
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">teza</span> <span class="ow">in</span> <span class="n">teze</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">teza</span><span class="p">,</span> <span class="n">teza</span> <span class="o">**</span> <span class="mi">2</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -836,9 +836,9 @@ tale nesmisel:</p>
 <p>Zdaj pa izpišimo vse teže, ki so večje od 70.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>for teza in teze:
-    if teza &gt; 70:
-        print(teza)
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">teza</span> <span class="ow">in</span> <span class="n">teze</span><span class="p">:</span>
+    <span class="k">if</span> <span class="n">teza</span> <span class="o">&gt;</span> <span class="mi">70</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">teza</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -846,11 +846,11 @@ tale nesmisel:</p>
 <p>Napišimo program, ki pove, kako težak je najlažji študent.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>najlazji = 1000
-for teza in teze:
-    if teza &lt; najlazji:
-        najlazji = teza
-print(najlazji)
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">najlazji</span> <span class="o">=</span> <span class="mi">1000</span>
+<span class="k">for</span> <span class="n">teza</span> <span class="ow">in</span> <span class="n">teze</span><span class="p">:</span>
+    <span class="k">if</span> <span class="n">teza</span> <span class="o">&lt;</span> <span class="n">najlazji</span><span class="p">:</span>
+        <span class="n">najlazji</span> <span class="o">=</span> <span class="n">teza</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">najlazji</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -868,9 +868,9 @@ print(najlazji)
 <p>Kako bi izračunali vsoto elementov seznama?</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>s = 0
-for teza in teze:
-    s += teza
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">s</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="k">for</span> <span class="n">teza</span> <span class="ow">in</span> <span class="n">teze</span><span class="p">:</span>
+    <span class="n">s</span> <span class="o">+=</span> <span class="n">teza</span>
 </pre></div>
 </div>
 </div>
@@ -878,11 +878,11 @@ for teza in teze:
 <p>Pa poprečno vrednost? Za to moramo poznati dolžino seznama. Pove nam jo funkcija <code class="docutils literal notranslate"><span class="pre">len</span></code> (okrajšava za <em>length</em>, če ji kot argument podamo nek seznam).</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>s = 0
-for teza in teze:
-    s += teza
-s /= len(teze)
-print(s)
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">s</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="k">for</span> <span class="n">teza</span> <span class="ow">in</span> <span class="n">teze</span><span class="p">:</span>
+    <span class="n">s</span> <span class="o">+=</span> <span class="n">teza</span>
+<span class="n">s</span> <span class="o">/=</span> <span class="nb">len</span><span class="p">(</span><span class="n">teze</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">s</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -890,12 +890,12 @@ print(s)
 <p>Samo… malo previdni moramo biti. Seznam bi lahko bil tudi prazen. Dogovorimo se, da bo poprečna vrednost v tem primeru 0. Pravilno delujoč program bi bil takšen.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>s = 0
-for teza in teze:
-    s += teza
-if len(teze) &gt; 0:
-    s /= len(teze)
-print(s)
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">s</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="k">for</span> <span class="n">teza</span> <span class="ow">in</span> <span class="n">teze</span><span class="p">:</span>
+    <span class="n">s</span> <span class="o">+=</span> <span class="n">teza</span>
+<span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">teze</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
+    <span class="n">s</span> <span class="o">/=</span> <span class="nb">len</span><span class="p">(</span><span class="n">teze</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">s</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -903,10 +903,10 @@ print(s)
 <p>Zanka <code class="docutils literal notranslate"><span class="pre">for</span></code> ne deluje le na seznamih. Kot smo omenili, jo lahko naženemo tudi prek terk, nizov in še prek mnogih drugih reči. V Pythonu celo za branje datotek pogosto uporabimo <code class="docutils literal notranslate"><span class="pre">for</span></code>, kot se bomo kmalu naučili.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>&gt;&gt;&gt; ime = &quot;Cilka&quot;
-&gt;&gt;&gt; for crka in ime:
-...     print(crka)
-&#39;C&#39; &#39;i&#39; &#39;l&#39; &#39;k&#39; &#39;a&#39;
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">&gt;&gt;&gt;</span> <span class="n">ime</span> <span class="o">=</span> <span class="s2">&quot;Cilka&quot;</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="k">for</span> <span class="n">crka</span> <span class="ow">in</span> <span class="n">ime</span><span class="p">:</span>
+<span class="o">...</span>     <span class="nb">print</span><span class="p">(</span><span class="n">crka</span><span class="p">)</span>
+<span class="s1">&#39;C&#39;</span> <span class="s1">&#39;i&#39;</span> <span class="s1">&#39;l&#39;</span> <span class="s1">&#39;k&#39;</span> <span class="s1">&#39;a&#39;</span>
 </pre></div>
 </div>
 </div>
@@ -916,16 +916,16 @@ print(s)
 <p>Kako bi ugotovili, ali vsebuje seznam kako sodo število?</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>s = [11, 13, 5, 12, 5, 16, 7]
-imamo_sodo = False
-for e in s:
-    if e % 2 == 0:
-        imamo_sodo = True
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">s</span> <span class="o">=</span> <span class="p">[</span><span class="mi">11</span><span class="p">,</span> <span class="mi">13</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">12</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">16</span><span class="p">,</span> <span class="mi">7</span><span class="p">]</span>
+<span class="n">imamo_sodo</span> <span class="o">=</span> <span class="kc">False</span>
+<span class="k">for</span> <span class="n">e</span> <span class="ow">in</span> <span class="n">s</span><span class="p">:</span>
+    <span class="k">if</span> <span class="n">e</span> <span class="o">%</span> <span class="mi">2</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+        <span class="n">imamo_sodo</span> <span class="o">=</span> <span class="kc">True</span>
 
-if imamo_sodo:
-    print(&quot;Seznam vsebuje sodo število&quot;)
-else:
-    print(&quot;Seznam ne vsebuje sodega števila&quot;)
+<span class="k">if</span> <span class="n">imamo_sodo</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Seznam vsebuje sodo število&quot;</span><span class="p">)</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Seznam ne vsebuje sodega števila&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -935,11 +935,11 @@ else:
 <p>Kak duhovitež bi gotovo raje napisal</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>ostanki = 0
-for e in s:
-    ostanki += e % 2
-if ostanki != len(e):
-    ...
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">ostanki</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="k">for</span> <span class="n">e</span> <span class="ow">in</span> <span class="n">s</span><span class="p">:</span>
+    <span class="n">ostanki</span> <span class="o">+=</span> <span class="n">e</span> <span class="o">%</span> <span class="mi">2</span>
+<span class="k">if</span> <span class="n">ostanki</span> <span class="o">!=</span> <span class="nb">len</span><span class="p">(</span><span class="n">e</span><span class="p">):</span>
+    <span class="o">...</span>
 </pre></div>
 </div>
 </div>
@@ -949,18 +949,18 @@ if ostanki != len(e):
 <p>Ne naredite klasične napake. Tole je narobe:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>s = [11, 13, 5, 12, 5, 16, 7]
-imamo_sodo = False
-for e in s:
-    if e % 2 == 0:
-        imamo_sodo = True
-    else:
-        imamo_sodo = False
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">s</span> <span class="o">=</span> <span class="p">[</span><span class="mi">11</span><span class="p">,</span> <span class="mi">13</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">12</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">16</span><span class="p">,</span> <span class="mi">7</span><span class="p">]</span>
+<span class="n">imamo_sodo</span> <span class="o">=</span> <span class="kc">False</span>
+<span class="k">for</span> <span class="n">e</span> <span class="ow">in</span> <span class="n">s</span><span class="p">:</span>
+    <span class="k">if</span> <span class="n">e</span> <span class="o">%</span> <span class="mi">2</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+        <span class="n">imamo_sodo</span> <span class="o">=</span> <span class="kc">True</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">imamo_sodo</span> <span class="o">=</span> <span class="kc">False</span>
 
-if imamo_sodo:
-    print(&quot;Seznam vsebuje sodo število&quot;)
-else:
-    print(&quot;Seznam ne vsebuje sodega števila&quot;)
+<span class="k">if</span> <span class="n">imamo_sodo</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Seznam vsebuje sodo število&quot;</span><span class="p">)</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Seznam ne vsebuje sodega števila&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -969,15 +969,15 @@ else:
 <p>Kako pa ugotovimo, ali ima seznam <em>sama soda števila</em>?</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>sama_soda = True
-for e in s:
-    if e % 2 != 0:
-        sama_soda = False
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">sama_soda</span> <span class="o">=</span> <span class="kc">True</span>
+<span class="k">for</span> <span class="n">e</span> <span class="ow">in</span> <span class="n">s</span><span class="p">:</span>
+    <span class="k">if</span> <span class="n">e</span> <span class="o">%</span> <span class="mi">2</span> <span class="o">!=</span> <span class="mi">0</span><span class="p">:</span>
+        <span class="n">sama_soda</span> <span class="o">=</span> <span class="kc">False</span>
 
-if sama_soda:
-    print(&quot;Seznam vsebuje sama soda število&quot;)
-else:
-    print(&quot;Seznam ne vsebuje samo sodih števil&quot;)
+<span class="k">if</span> <span class="n">sama_soda</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Seznam vsebuje sama soda število&quot;</span><span class="p">)</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Seznam ne vsebuje samo sodih števil&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -986,11 +986,11 @@ else:
 <p>Duhovitež ne lenari in napiše:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>ostanki = 0
-for e in s:
-    ostanki += e % 2
-if ostanki == 0:
-    ...
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">ostanki</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="k">for</span> <span class="n">e</span> <span class="ow">in</span> <span class="n">s</span><span class="p">:</span>
+    <span class="n">ostanki</span> <span class="o">+=</span> <span class="n">e</span> <span class="o">%</span> <span class="mi">2</span>
+<span class="k">if</span> <span class="n">ostanki</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+    <span class="o">...</span>
 </pre></div>
 </div>
 </div>
@@ -999,13 +999,13 @@ if ostanki == 0:
 <p>Spet bomo naredili podobno napako kot prej, če bomo pisali:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>s = [11, 13, 5, 12, 5, 16, 72]
-sama_soda = True
-for e in s:
-    if e % 2 != 0:
-        sama_soda = False
-    else:
-        sama_soda = True
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">s</span> <span class="o">=</span> <span class="p">[</span><span class="mi">11</span><span class="p">,</span> <span class="mi">13</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">12</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">16</span><span class="p">,</span> <span class="mi">72</span><span class="p">]</span>
+<span class="n">sama_soda</span> <span class="o">=</span> <span class="kc">True</span>
+<span class="k">for</span> <span class="n">e</span> <span class="ow">in</span> <span class="n">s</span><span class="p">:</span>
+    <span class="k">if</span> <span class="n">e</span> <span class="o">%</span> <span class="mi">2</span> <span class="o">!=</span> <span class="mi">0</span><span class="p">:</span>
+        <span class="n">sama_soda</span> <span class="o">=</span> <span class="kc">False</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">sama_soda</span> <span class="o">=</span> <span class="kc">True</span>
 </pre></div>
 </div>
 </div>
@@ -1018,16 +1018,16 @@ for e in s:
 <p>Včasih to ni potrebno. Pravzaprav smo pravkar videli takšen primer: rezultat gornjega programa je znan že, čim naletimo na prvo liho število. Torej bi bilo čisto vseeno, če računalnik v tistem trenutku konča pregledovanje. To mu v resnici lahko naročimo.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>sama_soda = True
-for e in s:
-    if e % 2 != 0:
-        sama_soda = False
-        break
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">sama_soda</span> <span class="o">=</span> <span class="kc">True</span>
+<span class="k">for</span> <span class="n">e</span> <span class="ow">in</span> <span class="n">s</span><span class="p">:</span>
+    <span class="k">if</span> <span class="n">e</span> <span class="o">%</span> <span class="mi">2</span> <span class="o">!=</span> <span class="mi">0</span><span class="p">:</span>
+        <span class="n">sama_soda</span> <span class="o">=</span> <span class="kc">False</span>
+        <span class="k">break</span>
 
-if sama_soda:
-    print(&quot;Seznam vsebuje sama soda število&quot;)
-else:
-    print(&quot;Seznam ne vsebuje samo sodih števil&quot;)
+<span class="k">if</span> <span class="n">sama_soda</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Seznam vsebuje sama soda število&quot;</span><span class="p">)</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Seznam ne vsebuje samo sodih števil&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -1037,17 +1037,17 @@ else:
 <p>Tule je bil <code class="docutils literal notranslate"><span class="pre">break</span></code> bolj zaradi lepšega - da računalnik ne izgublja časa brez potrebe, češ elektrika je draga, pa globalno segrevanje pa te stvari. Poskusimo napisati program, ki takrat, ko seznam ni vseboval samo sodih števil, izpiše prvo liho število.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>sama_soda = True
-for e in s:
-    if e % 2 != 0:
-        sama_soda = False
-        liho = e
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">sama_soda</span> <span class="o">=</span> <span class="kc">True</span>
+<span class="k">for</span> <span class="n">e</span> <span class="ow">in</span> <span class="n">s</span><span class="p">:</span>
+    <span class="k">if</span> <span class="n">e</span> <span class="o">%</span> <span class="mi">2</span> <span class="o">!=</span> <span class="mi">0</span><span class="p">:</span>
+        <span class="n">sama_soda</span> <span class="o">=</span> <span class="kc">False</span>
+        <span class="n">liho</span> <span class="o">=</span> <span class="n">e</span>
 
-if sama_soda:
-    print(&quot;Seznam vsebuje samo soda števila&quot;)
-else:
-    print(&quot;Seznam ne vsebuje samo sodih števil:&quot;,
-          &quot; prvo liho število je&quot;, liho)
+<span class="k">if</span> <span class="n">sama_soda</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Seznam vsebuje samo soda števila&quot;</span><span class="p">)</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Seznam ne vsebuje samo sodih števil:&quot;</span><span class="p">,</span>
+          <span class="s2">&quot; prvo liho število je&quot;</span><span class="p">,</span> <span class="n">liho</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -1055,17 +1055,17 @@ else:
 <p>Brez <code class="docutils literal notranslate"><span class="pre">break</span></code> tole ne deluje: namesto prvega izpiše zadnje liho število. Rešimo se lahko z dodatnim pogojem:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>sama_soda = True
-for e in s:
-    if e % 2 != 0 and sama_soda:
-        sama_soda = False
-        liho = e
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">sama_soda</span> <span class="o">=</span> <span class="kc">True</span>
+<span class="k">for</span> <span class="n">e</span> <span class="ow">in</span> <span class="n">s</span><span class="p">:</span>
+    <span class="k">if</span> <span class="n">e</span> <span class="o">%</span> <span class="mi">2</span> <span class="o">!=</span> <span class="mi">0</span> <span class="ow">and</span> <span class="n">sama_soda</span><span class="p">:</span>
+        <span class="n">sama_soda</span> <span class="o">=</span> <span class="kc">False</span>
+        <span class="n">liho</span> <span class="o">=</span> <span class="n">e</span>
 
-if sama_soda:
-    print(&quot;Seznam vsebuje samo soda števila&quot;)
-else:
-    print(&quot;Seznam ne vsebuje samo sodih števil:&quot;,
-          &quot; prvo liho število je&quot;, liho)
+<span class="k">if</span> <span class="n">sama_soda</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Seznam vsebuje samo soda števila&quot;</span><span class="p">)</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Seznam ne vsebuje samo sodih števil:&quot;</span><span class="p">,</span>
+          <span class="s2">&quot; prvo liho število je&quot;</span><span class="p">,</span> <span class="n">liho</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -1075,18 +1075,18 @@ else:
 <p>Namesto dodatnega pogoja lahko napišemo <code class="docutils literal notranslate"><span class="pre">break</span></code>.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>sama_soda = True
-for e in s:
-    if e % 2 != 0:
-        sama_soda = False
-        liho = e
-        break
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">sama_soda</span> <span class="o">=</span> <span class="kc">True</span>
+<span class="k">for</span> <span class="n">e</span> <span class="ow">in</span> <span class="n">s</span><span class="p">:</span>
+    <span class="k">if</span> <span class="n">e</span> <span class="o">%</span> <span class="mi">2</span> <span class="o">!=</span> <span class="mi">0</span><span class="p">:</span>
+        <span class="n">sama_soda</span> <span class="o">=</span> <span class="kc">False</span>
+        <span class="n">liho</span> <span class="o">=</span> <span class="n">e</span>
+        <span class="k">break</span>
 
-if sama_soda:
-    print(&quot;Seznam vsebuje samo soda števila&quot;)
-else:
-    print(&quot;Seznam ne vsebuje samo sodih števil:&quot;,
-          &quot; prvo liho število je&quot;, liho)
+<span class="k">if</span> <span class="n">sama_soda</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Seznam vsebuje samo soda števila&quot;</span><span class="p">)</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Seznam ne vsebuje samo sodih števil:&quot;</span><span class="p">,</span>
+          <span class="s2">&quot; prvo liho število je&quot;</span><span class="p">,</span> <span class="n">liho</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -1094,17 +1094,17 @@ else:
 <p>S tem se program lahko pravzaprav še bolj poenostavi. Ko zanko prekinemo, <code class="docutils literal notranslate"><span class="pre">e</span></code> ostane, kar je bil. Torej ne potrebujemo več spremenljivke <code class="docutils literal notranslate"><span class="pre">liho</span></code>.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>sama_soda = True
-for e in s:
-    if e % 2 != 0:
-        sama_soda = False
-        break
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">sama_soda</span> <span class="o">=</span> <span class="kc">True</span>
+<span class="k">for</span> <span class="n">e</span> <span class="ow">in</span> <span class="n">s</span><span class="p">:</span>
+    <span class="k">if</span> <span class="n">e</span> <span class="o">%</span> <span class="mi">2</span> <span class="o">!=</span> <span class="mi">0</span><span class="p">:</span>
+        <span class="n">sama_soda</span> <span class="o">=</span> <span class="kc">False</span>
+        <span class="k">break</span>
 
-if sama_soda:
-    print(&quot;Seznam vsebuje samo soda števila&quot;)
-else:
-    print(&quot;Seznam ne vsebuje samo sodih števil:&quot;,
-          &quot; prvo liho število je&quot;, e)
+<span class="k">if</span> <span class="n">sama_soda</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Seznam vsebuje samo soda števila&quot;</span><span class="p">)</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Seznam ne vsebuje samo sodih števil:&quot;</span><span class="p">,</span>
+          <span class="s2">&quot; prvo liho število je&quot;</span><span class="p">,</span> <span class="n">e</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -1117,13 +1117,13 @@ else:
 <p>Zgornji odstavek se približno, a ne čisto povsem prilega zadnjemu kosu programa. V resnici je napisan po spodnjem programu:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>for e in s:
-    if e % 2 != 0:
-        print(&quot;Seznam ne vsebuje samo sodih števil:&quot;,
-              &quot;prvo liho število je&quot;, e)
-        break
-else:
-    print(&quot;Seznam vsebuje samo soda števila&quot;)
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">e</span> <span class="ow">in</span> <span class="n">s</span><span class="p">:</span>
+    <span class="k">if</span> <span class="n">e</span> <span class="o">%</span> <span class="mi">2</span> <span class="o">!=</span> <span class="mi">0</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Seznam ne vsebuje samo sodih števil:&quot;</span><span class="p">,</span>
+              <span class="s2">&quot;prvo liho število je&quot;</span><span class="p">,</span> <span class="n">e</span><span class="p">)</span>
+        <span class="k">break</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Seznam vsebuje samo soda števila&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -1135,14 +1135,14 @@ else:
 <p>Nekoč na začetku predavanja smo imeli seznam študentov in njihovih tež:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>podatki = [
-    (74, &quot;Anze&quot;, False),
-    (82, &quot;Benjamin&quot;, False),
-    (58, &quot;Cilka&quot;, True),
-    (66, &quot;Dani&quot;, False),
-    (61, &quot;Eva&quot;, True),
-    (84, &quot;Franc&quot;, False),
-]
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">podatki</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="p">(</span><span class="mi">74</span><span class="p">,</span> <span class="s2">&quot;Anze&quot;</span><span class="p">,</span> <span class="kc">False</span><span class="p">),</span>
+    <span class="p">(</span><span class="mi">82</span><span class="p">,</span> <span class="s2">&quot;Benjamin&quot;</span><span class="p">,</span> <span class="kc">False</span><span class="p">),</span>
+    <span class="p">(</span><span class="mi">58</span><span class="p">,</span> <span class="s2">&quot;Cilka&quot;</span><span class="p">,</span> <span class="kc">True</span><span class="p">),</span>
+    <span class="p">(</span><span class="mi">66</span><span class="p">,</span> <span class="s2">&quot;Dani&quot;</span><span class="p">,</span> <span class="kc">False</span><span class="p">),</span>
+    <span class="p">(</span><span class="mi">61</span><span class="p">,</span> <span class="s2">&quot;Eva&quot;</span><span class="p">,</span> <span class="kc">True</span><span class="p">),</span>
+    <span class="p">(</span><span class="mi">84</span><span class="p">,</span> <span class="s2">&quot;Franc&quot;</span><span class="p">,</span> <span class="kc">False</span><span class="p">),</span>
+<span class="p">]</span>
 </pre></div>
 </div>
 </div>
@@ -1151,9 +1151,9 @@ else:
 <p>Če gremo prek seznama z zanko <code class="docutils literal notranslate"><span class="pre">for</span></code>, bomo dobivali terke. Te lahko, vemo, razpakiramo.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>for student in podatki:
-    teza, ime, spol = student
-    print(ime, &quot;: &quot;, teza)
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">student</span> <span class="ow">in</span> <span class="n">podatki</span><span class="p">:</span>
+    <span class="n">teza</span><span class="p">,</span> <span class="n">ime</span><span class="p">,</span> <span class="n">spol</span> <span class="o">=</span> <span class="n">student</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">ime</span><span class="p">,</span> <span class="s2">&quot;: &quot;</span><span class="p">,</span> <span class="n">teza</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -1161,8 +1161,8 @@ else:
 <p>Gre pa še dosti elegantneje: razpakiranje lahko opravimo kar znotraj glave zanke, brez (nepotrebne) terke <code class="docutils literal notranslate"><span class="pre">student</span></code>:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>for teza, ime, je_zenska in podatki:
-    print(ime, &quot;: &quot;, teza)
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">teza</span><span class="p">,</span> <span class="n">ime</span><span class="p">,</span> <span class="n">je_zenska</span> <span class="ow">in</span> <span class="n">podatki</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">ime</span><span class="p">,</span> <span class="s2">&quot;: &quot;</span><span class="p">,</span> <span class="n">teza</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -1175,8 +1175,8 @@ else:
 <p>Lahko pa se tudi malo igramo in izrišemo graf:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>for teza, ime, je_zenska in podatki:
-    print(ime + &quot; &quot; + &quot;*&quot; * teza)
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">teza</span><span class="p">,</span> <span class="n">ime</span><span class="p">,</span> <span class="n">je_zenska</span> <span class="ow">in</span> <span class="n">podatki</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">ime</span> <span class="o">+</span> <span class="s2">&quot; &quot;</span> <span class="o">+</span> <span class="s2">&quot;*&quot;</span> <span class="o">*</span> <span class="n">teza</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -1184,8 +1184,8 @@ else:
 <p>Skoraj, ampak ne čisto. Vse skupaj bi radi še poravnali. O tem, kako se v resnici oblikuje izpis, se bomo pogovarjali drugič, danes pa bomo s tem opravili nekoliko po domače. Predpostavimo, da so imena dolga največ 15 znakov. Pred vsako ime bomo dopisali toliko presledkov, da bo skupna dolžina enaka 15. (Mimogrede bom izdal, da tudi dolžino niza, ne le seznamov, dobimo s funkcijo <code class="docutils literal notranslate"><span class="pre">len</span></code>.)</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>for teza, ime, je_zenska in podatki:
-    print(&quot; &quot; * (15 - len(ime)) + ime + &quot; &quot; + &quot;*&quot; * teza)
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">teza</span><span class="p">,</span> <span class="n">ime</span><span class="p">,</span> <span class="n">je_zenska</span> <span class="ow">in</span> <span class="n">podatki</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot; &quot;</span> <span class="o">*</span> <span class="p">(</span><span class="mi">15</span> <span class="o">-</span> <span class="nb">len</span><span class="p">(</span><span class="n">ime</span><span class="p">))</span> <span class="o">+</span> <span class="n">ime</span> <span class="o">+</span> <span class="s2">&quot; &quot;</span> <span class="o">+</span> <span class="s2">&quot;*&quot;</span> <span class="o">*</span> <span class="n">teza</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -1196,9 +1196,9 @@ else:
 <p>Zdaj pa izpišimo imena in teže, pri tem, da se le-te nahajajo v ločenih seznamih.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>teze = [74, 82, 58, 66, 61, 84]
-imena = [&quot;Anze&quot;, &quot;Benjamin&quot;, &quot;Cilka&quot;, &quot;Dani&quot;, &quot;Eva&quot;, &quot;Franc&quot;]
-studentka = [False, False, True, False, True, False]
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">teze</span> <span class="o">=</span> <span class="p">[</span><span class="mi">74</span><span class="p">,</span> <span class="mi">82</span><span class="p">,</span> <span class="mi">58</span><span class="p">,</span> <span class="mi">66</span><span class="p">,</span> <span class="mi">61</span><span class="p">,</span> <span class="mi">84</span><span class="p">]</span>
+<span class="n">imena</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;Anze&quot;</span><span class="p">,</span> <span class="s2">&quot;Benjamin&quot;</span><span class="p">,</span> <span class="s2">&quot;Cilka&quot;</span><span class="p">,</span> <span class="s2">&quot;Dani&quot;</span><span class="p">,</span> <span class="s2">&quot;Eva&quot;</span><span class="p">,</span> <span class="s2">&quot;Franc&quot;</span><span class="p">]</span>
+<span class="n">studentka</span> <span class="o">=</span> <span class="p">[</span><span class="kc">False</span><span class="p">,</span> <span class="kc">False</span><span class="p">,</span> <span class="kc">True</span><span class="p">,</span> <span class="kc">False</span><span class="p">,</span> <span class="kc">True</span><span class="p">,</span> <span class="kc">False</span><span class="p">]</span>
 </pre></div>
 </div>
 </div>
@@ -1215,9 +1215,9 @@ studentka = [False, False, True, False, True, False]
 <p>in potem obstali, ker na tem mestu ne moremo priti do teže študenta s tem imenom. Do običajne in zelo zelo zelo napačne rešitve nas pripelje ta zgrešeni premislek: zanko moramo speljati prek imen in prek tež, torej</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>for ime in imena:
-    for teza in teze:
-        print(ime, &quot;: &quot;, teza)
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">ime</span> <span class="ow">in</span> <span class="n">imena</span><span class="p">:</span>
+    <span class="k">for</span> <span class="n">teza</span> <span class="ow">in</span> <span class="n">teze</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">ime</span><span class="p">,</span> <span class="s2">&quot;: &quot;</span><span class="p">,</span> <span class="n">teza</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -1225,21 +1225,21 @@ studentka = [False, False, True, False, True, False]
 <p>Rezultat je nepričakovan za vse tiste, ki ga niso pričakovali. Program namreč izpiše</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>Anze : 74
-Anze : 82
-Anze : 58
-Anze : 66
-Anze : 61
-Anze : 84
-Benjamin : 74
-Benjamin : 82
-Benjamin : 58
-Benjamin : 66
-Benjamin : 61
-Benjamin : 84
-Cilka : 74
-Cilka : 82
-... in tako naprej
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">Anze</span> <span class="p">:</span> <span class="mi">74</span>
+<span class="n">Anze</span> <span class="p">:</span> <span class="mi">82</span>
+<span class="n">Anze</span> <span class="p">:</span> <span class="mi">58</span>
+<span class="n">Anze</span> <span class="p">:</span> <span class="mi">66</span>
+<span class="n">Anze</span> <span class="p">:</span> <span class="mi">61</span>
+<span class="n">Anze</span> <span class="p">:</span> <span class="mi">84</span>
+<span class="n">Benjamin</span> <span class="p">:</span> <span class="mi">74</span>
+<span class="n">Benjamin</span> <span class="p">:</span> <span class="mi">82</span>
+<span class="n">Benjamin</span> <span class="p">:</span> <span class="mi">58</span>
+<span class="n">Benjamin</span> <span class="p">:</span> <span class="mi">66</span>
+<span class="n">Benjamin</span> <span class="p">:</span> <span class="mi">61</span>
+<span class="n">Benjamin</span> <span class="p">:</span> <span class="mi">84</span>
+<span class="n">Cilka</span> <span class="p">:</span> <span class="mi">74</span>
+<span class="n">Cilka</span> <span class="p">:</span> <span class="mi">82</span>
+<span class="o">...</span> <span class="ow">in</span> <span class="n">tako</span> <span class="n">naprej</span>
 </pre></div>
 </div>
 </div>
@@ -1254,9 +1254,9 @@ Cilka : 82
 <p>Ko bo to opravljeno, bo razumel: potrebujemo samo eno zanko, ki gre istočasno po obeh seznamih. Aha, takole?</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>for ime in imena:
-for teza in teze:
-    print(ime, &quot;: &quot;, teza)
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">ime</span> <span class="ow">in</span> <span class="n">imena</span><span class="p">:</span>
+<span class="k">for</span> <span class="n">teza</span> <span class="ow">in</span> <span class="n">teze</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">ime</span><span class="p">,</span> <span class="s2">&quot;: &quot;</span><span class="p">,</span> <span class="n">teza</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -1267,15 +1267,15 @@ for teza in teze:
 <p>Funkcija <code class="docutils literal notranslate"><span class="pre">zip</span></code> združi dva seznama (ali več seznamov) v seznam terk.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>&gt;&gt;&gt; zip(teze, imena)
-[(74, &#39;Anze&#39;), (82, &#39;Benjamin&#39;), (58, &#39;Cilka&#39;), (66, &#39;Daniel&#39;), (61, &#39;Eva&#39;), (84, &#39;Franc&#39;)]
-&gt;&gt;&gt; zip(teze, imena, studentka)
-[(74, &#39;Anze&#39;, False), (82, &#39;Benjamin&#39;, False), (58, &#39;Cilka&#39;, True),
-(66, &#39;Daniel&#39;, False), (61, &#39;Eva&#39;, True), (84, &#39;Franc&#39;, False)]
-&gt;&gt;&gt; zip(teze, imena, studentka, teze)
-[(74, &#39;Anze&#39;, False, 74), (82, &#39;Benjamin&#39;, False, 82),
-(58, &#39;Cilka&#39;, True, 58), (66, &#39;Daniel&#39;, False, 66),
-(61, &#39;Eva&#39;, True, 61), (84, &#39;Franc&#39;, False, 84)]
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">&gt;&gt;&gt;</span> <span class="nb">zip</span><span class="p">(</span><span class="n">teze</span><span class="p">,</span> <span class="n">imena</span><span class="p">)</span>
+<span class="p">[(</span><span class="mi">74</span><span class="p">,</span> <span class="s1">&#39;Anze&#39;</span><span class="p">),</span> <span class="p">(</span><span class="mi">82</span><span class="p">,</span> <span class="s1">&#39;Benjamin&#39;</span><span class="p">),</span> <span class="p">(</span><span class="mi">58</span><span class="p">,</span> <span class="s1">&#39;Cilka&#39;</span><span class="p">),</span> <span class="p">(</span><span class="mi">66</span><span class="p">,</span> <span class="s1">&#39;Daniel&#39;</span><span class="p">),</span> <span class="p">(</span><span class="mi">61</span><span class="p">,</span> <span class="s1">&#39;Eva&#39;</span><span class="p">),</span> <span class="p">(</span><span class="mi">84</span><span class="p">,</span> <span class="s1">&#39;Franc&#39;</span><span class="p">)]</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="nb">zip</span><span class="p">(</span><span class="n">teze</span><span class="p">,</span> <span class="n">imena</span><span class="p">,</span> <span class="n">studentka</span><span class="p">)</span>
+<span class="p">[(</span><span class="mi">74</span><span class="p">,</span> <span class="s1">&#39;Anze&#39;</span><span class="p">,</span> <span class="kc">False</span><span class="p">),</span> <span class="p">(</span><span class="mi">82</span><span class="p">,</span> <span class="s1">&#39;Benjamin&#39;</span><span class="p">,</span> <span class="kc">False</span><span class="p">),</span> <span class="p">(</span><span class="mi">58</span><span class="p">,</span> <span class="s1">&#39;Cilka&#39;</span><span class="p">,</span> <span class="kc">True</span><span class="p">),</span>
+<span class="p">(</span><span class="mi">66</span><span class="p">,</span> <span class="s1">&#39;Daniel&#39;</span><span class="p">,</span> <span class="kc">False</span><span class="p">),</span> <span class="p">(</span><span class="mi">61</span><span class="p">,</span> <span class="s1">&#39;Eva&#39;</span><span class="p">,</span> <span class="kc">True</span><span class="p">),</span> <span class="p">(</span><span class="mi">84</span><span class="p">,</span> <span class="s1">&#39;Franc&#39;</span><span class="p">,</span> <span class="kc">False</span><span class="p">)]</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="nb">zip</span><span class="p">(</span><span class="n">teze</span><span class="p">,</span> <span class="n">imena</span><span class="p">,</span> <span class="n">studentka</span><span class="p">,</span> <span class="n">teze</span><span class="p">)</span>
+<span class="p">[(</span><span class="mi">74</span><span class="p">,</span> <span class="s1">&#39;Anze&#39;</span><span class="p">,</span> <span class="kc">False</span><span class="p">,</span> <span class="mi">74</span><span class="p">),</span> <span class="p">(</span><span class="mi">82</span><span class="p">,</span> <span class="s1">&#39;Benjamin&#39;</span><span class="p">,</span> <span class="kc">False</span><span class="p">,</span> <span class="mi">82</span><span class="p">),</span>
+<span class="p">(</span><span class="mi">58</span><span class="p">,</span> <span class="s1">&#39;Cilka&#39;</span><span class="p">,</span> <span class="kc">True</span><span class="p">,</span> <span class="mi">58</span><span class="p">),</span> <span class="p">(</span><span class="mi">66</span><span class="p">,</span> <span class="s1">&#39;Daniel&#39;</span><span class="p">,</span> <span class="kc">False</span><span class="p">,</span> <span class="mi">66</span><span class="p">),</span>
+<span class="p">(</span><span class="mi">61</span><span class="p">,</span> <span class="s1">&#39;Eva&#39;</span><span class="p">,</span> <span class="kc">True</span><span class="p">,</span> <span class="mi">61</span><span class="p">),</span> <span class="p">(</span><span class="mi">84</span><span class="p">,</span> <span class="s1">&#39;Franc&#39;</span><span class="p">,</span> <span class="kc">False</span><span class="p">,</span> <span class="mi">84</span><span class="p">)]</span>
 </pre></div>
 </div>
 </div>
@@ -1284,8 +1284,8 @@ for teza in teze:
 <p>Zipamo lahko vse, prek česar lahko naženemo zanko <code class="docutils literal notranslate"><span class="pre">for</span></code>.  Torej ne le seznamov, temveč tudi nize, terke in še kaj.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>&gt;&gt;&gt; zip(&quot;abcd&quot;, &quot;ABCD&quot;)
-[(&#39;a&#39;, &#39;A&#39;), (&#39;b&#39;, &#39;B&#39;), (&#39;c&#39;, &#39;C&#39;), (&#39;d&#39;, &#39;D&#39;)]
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">&gt;&gt;&gt;</span> <span class="nb">zip</span><span class="p">(</span><span class="s2">&quot;abcd&quot;</span><span class="p">,</span> <span class="s2">&quot;ABCD&quot;</span><span class="p">)</span>
+<span class="p">[(</span><span class="s1">&#39;a&#39;</span><span class="p">,</span> <span class="s1">&#39;A&#39;</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;b&#39;</span><span class="p">,</span> <span class="s1">&#39;B&#39;</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;c&#39;</span><span class="p">,</span> <span class="s1">&#39;C&#39;</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;d&#39;</span><span class="p">,</span> <span class="s1">&#39;D&#39;</span><span class="p">)]</span>
 </pre></div>
 </div>
 </div>
@@ -1293,8 +1293,8 @@ for teza in teze:
 <p>Rešimo torej nalogo: izpišimo imena in teže iz ločenih seznamov.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>for ime, teza in zip(imena, teze):
-    print(ime, &quot;: &quot;, teza)
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">ime</span><span class="p">,</span> <span class="n">teza</span> <span class="ow">in</span> <span class="nb">zip</span><span class="p">(</span><span class="n">imena</span><span class="p">,</span> <span class="n">teze</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">ime</span><span class="p">,</span> <span class="s2">&quot;: &quot;</span><span class="p">,</span> <span class="n">teza</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -1302,13 +1302,13 @@ for teza in teze:
 <p>Za konec pa izpišimo še poprečno težo študentk.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>skupna_teza = 0
-studentk = 0
-for teza, je_zenska in zip(teze, studentka):
-    if je_zenska:
-        skupna_teza += teza
-        studentk += 1
-print(skupna_teza / studentk)  # ... ob predpostavki, da studentk &gt; 0
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">skupna_teza</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="n">studentk</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="k">for</span> <span class="n">teza</span><span class="p">,</span> <span class="n">je_zenska</span> <span class="ow">in</span> <span class="nb">zip</span><span class="p">(</span><span class="n">teze</span><span class="p">,</span> <span class="n">studentka</span><span class="p">):</span>
+    <span class="k">if</span> <span class="n">je_zenska</span><span class="p">:</span>
+        <span class="n">skupna_teza</span> <span class="o">+=</span> <span class="n">teza</span>
+        <span class="n">studentk</span> <span class="o">+=</span> <span class="mi">1</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">skupna_teza</span> <span class="o">/</span> <span class="n">studentk</span><span class="p">)</span>  <span class="c1"># ... ob predpostavki, da studentk &gt; 0</span>
 </pre></div>
 </div>
 </div>
@@ -1324,9 +1324,9 @@ seznam <code class="docutils literal notranslate"><span class="pre">[2,</span> <
 <p>Neučakani naredijo tole:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>t = []
-for i in range(1, len(s)):
-    t.append(s[i - 1] - s[i])&lt;/xmp&gt;
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">t</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">s</span><span class="p">)):</span>
+    <span class="n">t</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">s</span><span class="p">[</span><span class="n">i</span> <span class="o">-</span> <span class="mi">1</span><span class="p">]</span> <span class="o">-</span> <span class="n">s</span><span class="p">[</span><span class="n">i</span><span class="p">])</span><span class="o">&lt;/</span><span class="n">xmp</span><span class="o">&gt;</span>
 </pre></div>
 </div>
 </div>
@@ -1344,9 +1344,9 @@ seznam <code class="docutils literal notranslate"><span class="pre">[2,</span> <
 <p>Neučakani naredijo tole:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>t = []
-for i in range(1, len(s)):
-    t.append(s[i - 1] - s[i])&lt;/xmp&gt;
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">t</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">s</span><span class="p">)):</span>
+    <span class="n">t</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">s</span><span class="p">[</span><span class="n">i</span> <span class="o">-</span> <span class="mi">1</span><span class="p">]</span> <span class="o">-</span> <span class="n">s</span><span class="p">[</span><span class="n">i</span><span class="p">])</span><span class="o">&lt;/</span><span class="n">xmp</span><span class="o">&gt;</span>
 </pre></div>
 </div>
 </div>
@@ -1369,9 +1369,9 @@ jih razpakiramo, odštevamo in zlagamo v nov seznam. Obljubljena boljša rešite
 te naloge je torej:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>t = []
-for e1, e2 in zip(s, s[1:]):
-    t.append(e1 - e2)
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">t</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="k">for</span> <span class="n">e1</span><span class="p">,</span> <span class="n">e2</span> <span class="ow">in</span> <span class="nb">zip</span><span class="p">(</span><span class="n">s</span><span class="p">,</span> <span class="n">s</span><span class="p">[</span><span class="mi">1</span><span class="p">:]):</span>
+    <span class="n">t</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">e1</span> <span class="o">-</span> <span class="n">e2</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -1380,7 +1380,7 @@ for e1, e2 in zip(s, s[1:]):
 razumeli krajšo rešitev:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>t = [e1 - e2 for e1, e2 in zip(s, s[1:])]
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">t</span> <span class="o">=</span> <span class="p">[</span><span class="n">e1</span> <span class="o">-</span> <span class="n">e2</span> <span class="k">for</span> <span class="n">e1</span><span class="p">,</span> <span class="n">e2</span> <span class="ow">in</span> <span class="nb">zip</span><span class="p">(</span><span class="n">s</span><span class="p">,</span> <span class="n">s</span><span class="p">[</span><span class="mi">1</span><span class="p">:])]</span>
 </pre></div>
 </div>
 </div>
@@ -1392,16 +1392,16 @@ razumeli krajšo rešitev:</p>
 <p>Seznami, terke in naši stari znanci nizi imajo nekaj skupnega. Pravzaprav veliko skupnega. Razlikujejo se le v podrobnostih. Skupno jim je, recimo, da imajo vsi trije dolžino. Gornji seznami šestih tež, šestih imen in šestih indikatorjev spola so dolžine 6. Terka <code class="docutils literal notranslate"><span class="pre">(1,</span> <span class="pre">2,</span> <span class="pre">3,</span> <span class="pre">4)</span></code> ima dolžino 4 in niz “Benjamin” je dolžine 8. Dolžine reči, ki imajo dolžino, nam pove funkcija <code class="docutils literal notranslate"><span class="pre">len</span></code>. To sem napisal tako imenitno, da bom moral še enkrat, da bo sploh kdo razumel: funkcija <code class="docutils literal notranslate"><span class="pre">len</span></code>sprejme en argument, recimo seznam, terko ali niz in kot rezultat vrne dolžino tega seznama, terke ali niza.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>&gt;&gt;&gt; b = &#39;Benjamin&#39;
-&gt;&gt;&gt; len(b)
-8
-&gt;&gt;&gt; len(podatki)
-6
-&gt;&gt;&gt; len((1, 2, 3))
-3
-&gt;&gt;&gt; len(12)
-Traceback (most recent call last):
-File &quot;&quot;, line 1, in TypeError: object of type &#39;int&#39; has no len()
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">&gt;&gt;&gt;</span> <span class="n">b</span> <span class="o">=</span> <span class="s1">&#39;Benjamin&#39;</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="nb">len</span><span class="p">(</span><span class="n">b</span><span class="p">)</span>
+<span class="mi">8</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="nb">len</span><span class="p">(</span><span class="n">podatki</span><span class="p">)</span>
+<span class="mi">6</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="nb">len</span><span class="p">((</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">))</span>
+<span class="mi">3</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="nb">len</span><span class="p">(</span><span class="mi">12</span><span class="p">)</span>
+<span class="n">Traceback</span> <span class="p">(</span><span class="n">most</span> <span class="n">recent</span> <span class="n">call</span> <span class="n">last</span><span class="p">):</span>
+<span class="n">File</span> <span class="s2">&quot;&quot;</span><span class="p">,</span> <span class="n">line</span> <span class="mi">1</span><span class="p">,</span> <span class="ow">in</span> <span class="ne">TypeError</span><span class="p">:</span> <span class="nb">object</span> <span class="n">of</span> <span class="nb">type</span> <span class="s1">&#39;int&#39;</span> <span class="n">has</span> <span class="n">no</span> <span class="nb">len</span><span class="p">()</span>
 </pre></div>
 </div>
 </div>
@@ -1410,10 +1410,10 @@ File &quot;&quot;, line 1, in TypeError: object of type &#39;int&#39; has no len
 <p>Še ena prikladna značilnost seznamov (nizov, terk in še česa): prazni seznami so, tako kot prazni nizi, neresnični. Seznam lahko uporabimo v pogoju.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>if s:
-    print(&quot;Seznam s ni prazen&quot;)
-else:
-    print(&quot;Seznam s je prazen&quot;)
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">if</span> <span class="n">s</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Seznam s ni prazen&quot;</span><span class="p">)</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Seznam s je prazen&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
