@@ -154,6 +154,28 @@ const thebe_selector_output = ".output, .cell_output"
    7. Funkcije
   </a>
  </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="04b_uvazanje_modulov.html">
+   8. Uvažanje modulov
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="04c_pisanje_modulov.html">
+   9. Kako pišemo module
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Naloge
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="naloge/01_topovske_bitke/navodila.html">
+   1. Topovske bitke
+  </a>
+ </li>
 </ul>
 
     </div>
@@ -464,10 +486,10 @@ title="Print to PDF"
 <p>Začnimo s preprostim programom za izračun indeksa telesne teže.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">teza</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Teža: &quot;</span><span class="p">))</span>
-<span class="n">visina</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Telesna višina: &quot;</span><span class="p">))</span>
-<span class="n">bmi</span> <span class="o">=</span> <span class="n">teza</span> <span class="o">/</span> <span class="n">visina</span> <span class="o">**</span> <span class="mi">2</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Indeks vaše telesne teže je&quot;</span><span class="p">,</span> <span class="n">bmi</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>teza = float(input(&quot;Teža: &quot;))
+visina = float(input(&quot;Telesna višina: &quot;))
+bmi = teza / visina ** 2
+print(&quot;Indeks vaše telesne teže je&quot;, bmi)
 </pre></div>
 </div>
 </div>
@@ -482,11 +504,11 @@ Indeks vaše telesne teže je 20.761245674740486
 <p>Želimo si, da bi program povedal še, ali je uporabnik slučajno preobilen. Prvi, seveda napačni poskus, bi bil takšen.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">teza</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Teža: &quot;</span><span class="p">))</span>
-<span class="n">visina</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Telesna višina: &quot;</span><span class="p">))</span>
-<span class="n">bmi</span> <span class="o">=</span> <span class="n">teza</span> <span class="o">/</span> <span class="n">visina</span> <span class="o">**</span> <span class="mi">2</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Indeks vaše telesne teže je&quot;</span><span class="p">,</span> <span class="n">bmi</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Potrebno bo shujšati!&quot;</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>teza = float(input(&quot;Teža: &quot;))
+visina = float(input(&quot;Telesna višina: &quot;))
+bmi = teza / visina ** 2
+print(&quot;Indeks vaše telesne teže je&quot;, bmi)
+print(&quot;Potrebno bo shujšati!&quot;)
 </pre></div>
 </div>
 </div>
@@ -495,12 +517,12 @@ Indeks vaše telesne teže je 20.761245674740486
 <p>To storimo tako, da pred vrstico dodamo pogoj. Ta se glasi “če bmi &gt; 25”, le da ga moramo napisati v angleščini.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">teza</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Teža: &quot;</span><span class="p">))</span>
-<span class="n">visina</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Telesna višina: &quot;</span><span class="p">))</span>
-<span class="n">bmi</span> <span class="o">=</span> <span class="n">teza</span> <span class="o">/</span> <span class="n">visina</span> <span class="o">**</span> <span class="mi">2</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Indeks vaše telesne teže je&quot;</span><span class="p">,</span> <span class="n">bmi</span><span class="p">)</span>
-<span class="k">if</span> <span class="n">bmi</span> <span class="o">&gt;</span> <span class="mi">25</span><span class="p">:</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Potrebno bo shujšati!&quot;</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>teza = float(input(&quot;Teža: &quot;))
+visina = float(input(&quot;Telesna višina: &quot;))
+bmi = teza / visina ** 2
+print(&quot;Indeks vaše telesne teže je&quot;, bmi)
+if bmi &gt; 25:
+    print(&quot;Potrebno bo shujšati!&quot;)
 </pre></div>
 </div>
 </div>
@@ -510,14 +532,14 @@ Indeks vaše telesne teže je 20.761245674740486
 <p>Zamaknjenih vrstic bi lahko bilo še več. Vse se izvedejo le, če je pogoj izpolnjen.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">teza</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Teža: &quot;</span><span class="p">))</span>
-<span class="n">visina</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Telesna višina: &quot;</span><span class="p">))</span>
-<span class="n">bmi</span> <span class="o">=</span> <span class="n">teza</span> <span class="o">/</span> <span class="n">visina</span> <span class="o">**</span> <span class="mi">2</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Indeks vaše telesne teže je&quot;</span><span class="p">,</span> <span class="n">bmi</span><span class="p">)</span>
-<span class="k">if</span> <span class="n">bmi</span> <span class="o">&gt;</span> <span class="mi">25</span><span class="p">:</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Potrebno bo shujšati!&quot;</span><span class="p">)</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Da, gospod ali gospa, preveč vas je skupaj.&quot;</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Pregled je končan, oglasite se spet čez dva tedna.&quot;</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>teza = float(input(&quot;Teža: &quot;))
+visina = float(input(&quot;Telesna višina: &quot;))
+bmi = teza / visina ** 2
+print(&quot;Indeks vaše telesne teže je&quot;, bmi)
+if bmi &gt; 25:
+    print(&quot;Potrebno bo shujšati!&quot;)
+    print(&quot;Da, gospod ali gospa, preveč vas je skupaj.&quot;)
+print(&quot;Pregled je končan, oglasite se spet čez dva tedna.&quot;)
 </pre></div>
 </div>
 </div>
@@ -527,16 +549,16 @@ Indeks vaše telesne teže je 20.761245674740486
 <p>Program bi bil še bolj simpatičen, če bi tiste, ki niso predebeli, pohvalil.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">teza</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Teža: &quot;</span><span class="p">))</span>
-<span class="n">visina</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Telesna višina: &quot;</span><span class="p">))</span>
-<span class="n">bmi</span> <span class="o">=</span> <span class="n">teza</span> <span class="o">/</span> <span class="n">visina</span> <span class="o">**</span> <span class="mi">2</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Indeks vaše telesne teže je&quot;</span><span class="p">,</span> <span class="n">bmi</span><span class="p">)</span>
-<span class="k">if</span> <span class="n">bmi</span> <span class="o">&gt;</span> <span class="mi">25</span><span class="p">:</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Potrebno bo shujšati!&quot;</span><span class="p">)</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Da, gospod ali gospa, preveč vas je skupaj.&quot;</span><span class="p">)</span>
-<span class="k">else</span><span class="p">:</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Odlično, le še naprej jejte toliko kot doslej!&quot;</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Pregled je končan, oglasite se spet čez dva tedna.&quot;</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>teza = float(input(&quot;Teža: &quot;))
+visina = float(input(&quot;Telesna višina: &quot;))
+bmi = teza / visina ** 2
+print(&quot;Indeks vaše telesne teže je&quot;, bmi)
+if bmi &gt; 25:
+    print(&quot;Potrebno bo shujšati!&quot;)
+    print(&quot;Da, gospod ali gospa, preveč vas je skupaj.&quot;)
+else:
+    print(&quot;Odlično, le še naprej jejte toliko kot doslej!&quot;)
+print(&quot;Pregled je končan, oglasite se spet čez dva tedna.&quot;)
 </pre></div>
 </div>
 </div>
@@ -546,11 +568,11 @@ Indeks vaše telesne teže je 20.761245674740486
 <p>Začetek programa tako postane takšen.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">teza</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Teža: &quot;</span><span class="p">))</span>
-<span class="n">visina</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Telesna višina: &quot;</span><span class="p">))</span>
-<span class="k">if</span> <span class="n">visina</span> <span class="o">&gt;</span> <span class="mi">3</span><span class="p">:</span>  <span class="c1"># Predpostavimo, da ni Hagrid</span>
-    <span class="n">visina</span> <span class="o">=</span> <span class="n">visina</span> <span class="o">/</span> <span class="mi">100</span>
-<span class="n">bmi</span> <span class="o">=</span> <span class="n">teza</span> <span class="o">/</span> <span class="n">visina</span> <span class="o">**</span> <span class="mi">2</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>teza = float(input(&quot;Teža: &quot;))
+visina = float(input(&quot;Telesna višina: &quot;))
+if visina &gt; 3:  # Predpostavimo, da ni Hagrid
+    visina = visina / 100
+bmi = teza / visina ** 2
 </pre></div>
 </div>
 </div>
@@ -561,14 +583,14 @@ Indeks vaše telesne teže je 20.761245674740486
 <p>Nekoliko off topic: tako zamaknjenim delom programa pravimo, kot ste me že večkrat slišali reči, <em>bloki</em>. Bloke poznajo vsi “normalni” programski jeziki, le označujejo jih različno. Pogost način označevanja je označevanje z zavitimi oklepaji: v Cju (in iz njega izpeljanih oz. njemu podobnih jezikih C++, Java, C#, JavaScript, Php…) bi bili naši <code class="docutils literal notranslate"><span class="pre">if</span></code>i videti takole (poleg oklepajev je razlik še nekaj, vendar nas ne zanimajo in jih spreglejte):</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">if</span> <span class="p">(</span><span class="n">bmi</span> <span class="o">&gt;</span> <span class="mi">25</span><span class="p">)</span> <span class="p">{</span>
-    <span class="n">printf</span><span class="p">(</span><span class="s2">&quot;Potrebno bo shujšati&quot;</span><span class="p">);</span>
-    <span class="n">printf</span><span class="p">(</span><span class="s2">&quot;Da, gospod ali gospa, preveč vas je skupaj.&quot;</span><span class="p">);</span>
-<span class="p">}</span>
-<span class="k">else</span> <span class="p">{</span>
-    <span class="n">printf</span><span class="p">(</span><span class="s2">&quot;Odlično, le še naprej jejte toliko kot doslej!&quot;</span><span class="p">);</span>
-<span class="p">}</span>
-<span class="n">printf</span><span class="p">(</span><span class="s2">&quot;Pregled je končan, oglasite se spet čez dva tedna.&quot;</span><span class="p">);</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>if (bmi &gt; 25) {
+    printf(&quot;Potrebno bo shujšati&quot;);
+    printf(&quot;Da, gospod ali gospa, preveč vas je skupaj.&quot;);
+}
+else {
+    printf(&quot;Odlično, le še naprej jejte toliko kot doslej!&quot;);
+}
+printf(&quot;Pregled je končan, oglasite se spet čez dva tedna.&quot;);
 </pre></div>
 </div>
 </div>
@@ -579,7 +601,7 @@ Indeks vaše telesne teže je 20.761245674740486
 <p>Še ena estetska zadeva: za dvopičjem vedno pojdite v novo vrsto. Kot boste zvedavi kmalu odkrili, Python sicer dovoli, da napišete tudi</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">if</span> <span class="n">bmi</span> <span class="o">&gt;</span> <span class="mi">25</span><span class="p">:</span> <span class="nb">print</span> <span class="p">(</span><span class="s2">&quot;Potrebno bo shujšati&quot;</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>if bmi &gt; 25: print (&quot;Potrebno bo shujšati&quot;)
 </pre></div>
 </div>
 </div>
@@ -597,12 +619,12 @@ Indeks vaše telesne teže je 20.761245674740486
 <p>Če poskušamo zagnati kateregakoli od naštetih programov, bo Python javil sintaktično napako. Za razliko od običajnih napak, ki jih boste delali, in ko bodo programi naredili vsaj nekaj malega in potem crknili, ta ne bo niti trznil, temveč kar takoj javil napako. Spodnji program pa je sintaktično pravilen. Python ga lahko izvede. Najbrž pa to ni to, kar smo hoteli, saj se zadnji <code class="docutils literal notranslate"><span class="pre">print</span></code> izvede le, če pogoj ni izpolnjen.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">if</span> <span class="n">bmi</span> <span class="o">&gt;</span> <span class="mi">25</span><span class="p">:</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Potrebno bo shujšati!&quot;</span><span class="p">)</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Da, gospod ali gospa, preveč vas je skupaj.&quot;</span><span class="p">)</span>
-<span class="k">else</span><span class="p">:</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Odlično, le še naprej jejte toliko kot doslej!&quot;</span><span class="p">)</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Pregled je končan, oglasite se spet čez dva tedna.&quot;</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>if bmi &gt; 25:
+    print(&quot;Potrebno bo shujšati!&quot;)
+    print(&quot;Da, gospod ali gospa, preveč vas je skupaj.&quot;)
+else:
+    print(&quot;Odlično, le še naprej jejte toliko kot doslej!&quot;)
+    print(&quot;Pregled je končan, oglasite se spet čez dva tedna.&quot;)
 </pre></div>
 </div>
 </div>
@@ -613,20 +635,20 @@ Indeks vaše telesne teže je 20.761245674740486
 <p>Do sem vse lepo in prav, vendar: kaj bomo z anoreksičnimi? Program bi jim mirno svetoval, naj še naprej jedo toliko kot doslej (torej: premalo). Ne: pri takšnih, ki imajo BMI manjši od 18.5, moramo zastokati, naj vendar že začnejo jesti.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">teza</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Teža: &quot;</span><span class="p">))</span>
-<span class="n">visina</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Telesna višina: &quot;</span><span class="p">))</span>
-<span class="n">bmi</span> <span class="o">=</span> <span class="n">teza</span> <span class="o">/</span> <span class="n">visina</span> <span class="o">**</span> <span class="mi">2</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Indeks vaše telesne teže je&quot;</span><span class="p">,</span> <span class="n">bmi</span><span class="p">)</span>
-<span class="k">if</span> <span class="n">bmi</span> <span class="o">&gt;</span> <span class="mi">25</span><span class="p">:</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Potrebno bo shujšati!&quot;</span><span class="p">)</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Da, gospod ali gospa, preveč vas je skupaj.&quot;</span><span class="p">)</span>
-<span class="k">else</span><span class="p">:</span>
-    <span class="k">if</span> <span class="n">bmi</span> <span class="o">&lt;</span> <span class="mf">18.5</span><span class="p">:</span>
-        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Trlica!&quot;</span><span class="p">)</span>
-        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Zunaj so avtomati s sendviči in čokolado. Med pavzo si le postrezite!&quot;</span><span class="p">)</span>
-    <span class="k">else</span><span class="p">:</span>
-        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Odlično, le še naprej jejte toliko kot doslej!&quot;</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Pregled je končan, oglasite se spet čez dva tedna.&quot;</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>teza = float(input(&quot;Teža: &quot;))
+visina = float(input(&quot;Telesna višina: &quot;))
+bmi = teza / visina ** 2
+print(&quot;Indeks vaše telesne teže je&quot;, bmi)
+if bmi &gt; 25:
+    print(&quot;Potrebno bo shujšati!&quot;)
+    print(&quot;Da, gospod ali gospa, preveč vas je skupaj.&quot;)
+else:
+    if bmi &lt; 18.5:
+        print(&quot;Trlica!&quot;)
+        print(&quot;Zunaj so avtomati s sendviči in čokolado. Med pavzo si le postrezite!&quot;)
+    else:
+        print(&quot;Odlično, le še naprej jejte toliko kot doslej!&quot;)
+print(&quot;Pregled je končan, oglasite se spet čez dva tedna.&quot;)
 </pre></div>
 </div>
 </div>
@@ -635,21 +657,21 @@ Indeks vaše telesne teže je 20.761245674740486
 <p>Da bodo reči še nekoliko daljše (a poučnejše), dodajmo še en <code class="docutils literal notranslate"><span class="pre">print</span></code>.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">teza</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Teža: &quot;</span><span class="p">))</span>
-<span class="n">visina</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Telesna višina: &quot;</span><span class="p">))</span>
-<span class="n">bmi</span> <span class="o">=</span> <span class="n">teza</span> <span class="o">/</span> <span class="n">visina</span> <span class="o">**</span> <span class="mi">2</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Indeks vaše telesne teže je&quot;</span><span class="p">,</span> <span class="n">bmi</span><span class="p">)</span>
-<span class="k">if</span> <span class="n">bmi</span> <span class="o">&gt;</span> <span class="mi">25</span><span class="p">:</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Potrebno bo shujšati!&quot;</span><span class="p">)</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Da, gospod ali gospa, preveč vas je skupaj.&quot;</span><span class="p">)</span>
-<span class="k">else</span><span class="p">:</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Predebeli ravno niste.&quot;</span><span class="p">)</span>
-    <span class="k">if</span> <span class="n">bmi</span> <span class="o">&lt;</span> <span class="mf">18.5</span><span class="p">:</span>
-        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Trlica!&quot;</span><span class="p">)</span>
-        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Zunaj so avtomati s sendviči in čokolado. Med pavzo si le postrezite!&quot;</span><span class="p">)</span>
-    <span class="k">else</span><span class="p">:</span>
-        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Odlično, le še naprej jejte toliko kot doslej!&quot;</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Pregled je končan, oglasite se spet čez dva tedna.&quot;</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>teza = float(input(&quot;Teža: &quot;))
+visina = float(input(&quot;Telesna višina: &quot;))
+bmi = teza / visina ** 2
+print(&quot;Indeks vaše telesne teže je&quot;, bmi)
+if bmi &gt; 25:
+    print(&quot;Potrebno bo shujšati!&quot;)
+    print(&quot;Da, gospod ali gospa, preveč vas je skupaj.&quot;)
+else:
+    print(&quot;Predebeli ravno niste.&quot;)
+    if bmi &lt; 18.5:
+        print(&quot;Trlica!&quot;)
+        print(&quot;Zunaj so avtomati s sendviči in čokolado. Med pavzo si le postrezite!&quot;)
+    else:
+        print(&quot;Odlično, le še naprej jejte toliko kot doslej!&quot;)
+print(&quot;Pregled je končan, oglasite se spet čez dva tedna.&quot;)
 </pre></div>
 </div>
 </div>
@@ -658,22 +680,22 @@ Indeks vaše telesne teže je 20.761245674740486
 <p>Tule mimogrede (prvič - a še velikokrat bomo) posvarimo pred ponavljanjem kode. Gornji program bi lahko napisali tudi tako:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">teza</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Teža: &quot;</span><span class="p">))</span>
-<span class="n">visina</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Telesna višina: &quot;</span><span class="p">))</span>
-<span class="n">bmi</span> <span class="o">=</span> <span class="n">teza</span> <span class="o">/</span> <span class="n">visina</span> <span class="o">**</span> <span class="mi">2</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Indeks vaše telesne teže je&quot;</span><span class="p">,</span> <span class="n">bmi</span><span class="p">)</span>
-<span class="k">if</span> <span class="n">bmi</span> <span class="o">&gt;</span> <span class="mi">25</span><span class="p">:</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Potrebno bo shujšati!&quot;</span><span class="p">)</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Da, gospod ali gospa, preveč vas je skupaj.&quot;</span><span class="p">)</span>
-<span class="k">else</span><span class="p">:</span>
-    <span class="k">if</span> <span class="n">bmi</span> <span class="o">&lt;</span> <span class="mf">18.5</span><span class="p">:</span>
-        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Predebeli ravno niste.&quot;</span><span class="p">)</span>
-        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Trlica!&quot;</span><span class="p">)</span>
-        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Zunaj so avtomati s sendviči in čokolado. Med pavzo si le postrezite!&quot;</span><span class="p">)</span>
-    <span class="k">else</span><span class="p">:</span>
-        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Predebeli ravno niste.&quot;</span><span class="p">)</span>
-        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Odlično, le še naprej jejte toliko kot doslej!&quot;</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Pregled je končan, oglasite se spet čez dva tedna.&quot;</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>teza = float(input(&quot;Teža: &quot;))
+visina = float(input(&quot;Telesna višina: &quot;))
+bmi = teza / visina ** 2
+print(&quot;Indeks vaše telesne teže je&quot;, bmi)
+if bmi &gt; 25:
+    print(&quot;Potrebno bo shujšati!&quot;)
+    print(&quot;Da, gospod ali gospa, preveč vas je skupaj.&quot;)
+else:
+    if bmi &lt; 18.5:
+        print(&quot;Predebeli ravno niste.&quot;)
+        print(&quot;Trlica!&quot;)
+        print(&quot;Zunaj so avtomati s sendviči in čokolado. Med pavzo si le postrezite!&quot;)
+    else:
+        print(&quot;Predebeli ravno niste.&quot;)
+        print(&quot;Odlično, le še naprej jejte toliko kot doslej!&quot;)
+print(&quot;Pregled je končan, oglasite se spet čez dva tedna.&quot;)
 </pre></div>
 </div>
 </div>
@@ -681,24 +703,24 @@ Indeks vaše telesne teže je 20.761245674740486
 <p>Ali celo tako.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">teza</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Teža: &quot;</span><span class="p">))</span>
-<span class="n">visina</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Telesna višina: &quot;</span><span class="p">))</span>
-<span class="n">bmi</span> <span class="o">=</span> <span class="n">teza</span> <span class="o">/</span> <span class="n">visina</span> <span class="o">**</span> <span class="mi">2</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Indeks vaše telesne teže je&quot;</span><span class="p">,</span> <span class="n">bmi</span><span class="p">)</span>
-<span class="k">if</span> <span class="n">bmi</span> <span class="o">&gt;</span> <span class="mi">25</span><span class="p">:</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Potrebno bo shujšati!&quot;</span><span class="p">)</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Da, gospod ali gospa, preveč vas je skupaj.&quot;</span><span class="p">)</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Pregled je končan, oglasite se spet čez dva tedna.&quot;</span><span class="p">)</span>
-<span class="k">else</span><span class="p">:</span>
-    <span class="k">if</span> <span class="n">bmi</span> <span class="o">&lt;</span> <span class="mf">18.5</span><span class="p">:</span>
-        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Predebeli ravno niste.&quot;</span><span class="p">)</span>
-        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Trlica!&quot;</span><span class="p">)</span>
-        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Zunaj so avtomati s sendviči in čokolado. Med pavzo si le postrezite!&quot;</span><span class="p">)</span>
-        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Pregled je končan, oglasite se spet čez dva tedna.&quot;</span><span class="p">)</span>
-    <span class="k">else</span><span class="p">:</span>
-        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Predebeli ravno niste.&quot;</span><span class="p">)</span>
-        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Odlično, le še naprej jejte toliko kot doslej!&quot;</span><span class="p">)</span>
-        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Pregled je končan, oglasite se spet čez dva tedna.&quot;</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>teza = float(input(&quot;Teža: &quot;))
+visina = float(input(&quot;Telesna višina: &quot;))
+bmi = teza / visina ** 2
+print(&quot;Indeks vaše telesne teže je&quot;, bmi)
+if bmi &gt; 25:
+    print(&quot;Potrebno bo shujšati!&quot;)
+    print(&quot;Da, gospod ali gospa, preveč vas je skupaj.&quot;)
+    print(&quot;Pregled je končan, oglasite se spet čez dva tedna.&quot;)
+else:
+    if bmi &lt; 18.5:
+        print(&quot;Predebeli ravno niste.&quot;)
+        print(&quot;Trlica!&quot;)
+        print(&quot;Zunaj so avtomati s sendviči in čokolado. Med pavzo si le postrezite!&quot;)
+        print(&quot;Pregled je končan, oglasite se spet čez dva tedna.&quot;)
+    else:
+        print(&quot;Predebeli ravno niste.&quot;)
+        print(&quot;Odlično, le še naprej jejte toliko kot doslej!&quot;)
+        print(&quot;Pregled je končan, oglasite se spet čez dva tedna.&quot;)
 </pre></div>
 </div>
 </div>
@@ -710,17 +732,17 @@ Indeks vaše telesne teže je 20.761245674740486
 <p>Da se ne izgubimo, spet malo skrajšajmo program.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">teza</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Teža: &quot;</span><span class="p">))</span>
-<span class="n">visina</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Telesna višina: &quot;</span><span class="p">))</span>
-<span class="n">bmi</span> <span class="o">=</span> <span class="n">teza</span> <span class="o">/</span> <span class="n">visina</span> <span class="o">**</span> <span class="mi">2</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Indeks vaše telesne teže je&quot;</span><span class="p">,</span> <span class="n">bmi</span><span class="p">)</span>
-<span class="k">if</span> <span class="n">bmi</span> <span class="o">&gt;</span> <span class="mi">25</span><span class="p">:</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Potrebno bo shujšati!&quot;</span><span class="p">)</span>
-<span class="k">else</span><span class="p">:</span>
-    <span class="k">if</span> <span class="n">bmi</span> <span class="o">&lt;</span> <span class="mf">18.5</span><span class="p">:</span>
-        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Trlica!&quot;</span><span class="p">)</span>
-    <span class="k">else</span><span class="p">:</span>
-        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Odlično, le še naprej jejte toliko kot doslej!&quot;</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>teza = float(input(&quot;Teža: &quot;))
+visina = float(input(&quot;Telesna višina: &quot;))
+bmi = teza / visina ** 2
+print(&quot;Indeks vaše telesne teže je&quot;, bmi)
+if bmi &gt; 25:
+    print(&quot;Potrebno bo shujšati!&quot;)
+else:
+    if bmi &lt; 18.5:
+        print(&quot;Trlica!&quot;)
+    else:
+        print(&quot;Odlično, le še naprej jejte toliko kot doslej!&quot;)
 </pre></div>
 </div>
 </div>
@@ -728,16 +750,16 @@ Indeks vaše telesne teže je 20.761245674740486
 <p>Pogojni stavki se nam lahko hitro zagnezdijo precej globoko in vrstice zbežijo nekam daleč proti desni. (Da ne govorimo o tem, da pogojni stavki niso niti približno edina reč, za katero bomo morali zamikati vrstice.) Ker so situacija, kakršna je zgornja, kar pogoste, imajo nekateri programski jeziki - in Python je med njimi - poleg <code class="docutils literal notranslate"><span class="pre">if</span></code> in <code class="docutils literal notranslate"><span class="pre">else</span></code> še <code class="docutils literal notranslate"><span class="pre">elseif</span></code> oziroma <code class="docutils literal notranslate"><span class="pre">elif</span></code>. (Še ena rezervirana beseda!) V Pythonu se uporablja slednja različica, <code class="docutils literal notranslate"><span class="pre">elif</span></code>. V gornjem programu ga uporabimo takole:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">teza</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Teža: &quot;</span><span class="p">))</span>
-<span class="n">visina</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Telesna višina: &quot;</span><span class="p">))</span>
-<span class="n">bmi</span> <span class="o">=</span> <span class="n">teza</span> <span class="o">/</span> <span class="n">visina</span> <span class="o">**</span> <span class="mi">2</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Indeks vaše telesne teže je&quot;</span><span class="p">,</span> <span class="n">bmi</span><span class="p">)</span>
-<span class="k">if</span> <span class="n">bmi</span> <span class="o">&gt;</span> <span class="mi">25</span><span class="p">:</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Potrebno bo shujšati!&quot;</span><span class="p">)</span>
-<span class="k">elif</span> <span class="n">bmi</span> <span class="o">&lt;</span> <span class="mf">18.5</span><span class="p">:</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Trlica!&quot;</span><span class="p">)</span>
-<span class="k">else</span><span class="p">:</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Odlično, le še naprej jejte toliko kot doslej!&quot;</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>teza = float(input(&quot;Teža: &quot;))
+visina = float(input(&quot;Telesna višina: &quot;))
+bmi = teza / visina ** 2
+print(&quot;Indeks vaše telesne teže je&quot;, bmi)
+if bmi &gt; 25:
+    print(&quot;Potrebno bo shujšati!&quot;)
+elif bmi &lt; 18.5:
+    print(&quot;Trlica!&quot;)
+else:
+    print(&quot;Odlično, le še naprej jejte toliko kot doslej!&quot;)
 </pre></div>
 </div>
 </div>
@@ -746,10 +768,10 @@ Indeks vaše telesne teže je 20.761245674740486
 <p>Po izkušnjah je <code class="docutils literal notranslate"><span class="pre">elif</span></code> za študente huda, nenavadna skušnjava: nekateri ga pogosto uporabljajo namesto <code class="docutils literal notranslate"><span class="pre">else</span></code>a. Recimo, da bi hoteli sprogramirati skrajšano pesimistično različico, po kateri so vsi, ki niso debeluhi, trlice. Radi bi torej tole:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">if</span> <span class="n">bmi</span> <span class="o">&gt;</span> <span class="mi">25</span><span class="p">:</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Potrebno bo shujšati!&quot;</span><span class="p">)</span>
-<span class="k">else</span><span class="p">:</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Trlica!&quot;</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>if bmi &gt; 25:
+    print(&quot;Potrebno bo shujšati!&quot;)
+else:
+    print(&quot;Trlica!&quot;)
 </pre></div>
 </div>
 </div>
@@ -757,10 +779,10 @@ Indeks vaše telesne teže je 20.761245674740486
 <p>Mnogi bi (iz meni neznanega razloga) naredili takole:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">if</span> <span class="n">bmi</span> <span class="o">&gt;</span> <span class="mi">25</span><span class="p">:</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Potrebno bo shujšati!&quot;</span><span class="p">)</span>
-<span class="k">elif</span> <span class="n">bmi</span> <span class="o">&lt;</span> <span class="mi">25</span><span class="p">:</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Trlica!&quot;</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>if bmi &gt; 25:
+    print(&quot;Potrebno bo shujšati!&quot;)
+elif bmi &lt; 25:
+    print(&quot;Trlica!&quot;)
 </pre></div>
 </div>
 </div>
@@ -779,16 +801,16 @@ različnih števil (<code class="docutils literal notranslate"><span class="pre"
 <p>Za logične izraze imamo (predvsem) tri operatorje: <code class="docutils literal notranslate"><span class="pre">or</span></code>, <code class="docutils literal notranslate"><span class="pre">and</span></code> in <code class="docutils literal notranslate"><span class="pre">not</span></code>. Kaj pomenijo, je menda jasno, če je kdo v dvomih, pa naj se pouči ob prvem predavanju iz Diskretnih struktur.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">&gt;&gt;&gt;</span> <span class="kc">True</span> <span class="ow">and</span> <span class="kc">True</span>
-<span class="kc">True</span>
-<span class="o">&gt;&gt;&gt;</span> <span class="kc">True</span> <span class="ow">and</span> <span class="kc">False</span>
-<span class="kc">False</span>
-<span class="o">&gt;&gt;&gt;</span> <span class="kc">False</span> <span class="ow">or</span> <span class="kc">True</span>
-<span class="kc">True</span>
-<span class="o">&gt;&gt;&gt;</span> <span class="ow">not</span> <span class="kc">False</span>
-<span class="kc">True</span>
-<span class="o">&gt;&gt;&gt;</span> <span class="kc">False</span> <span class="ow">or</span> <span class="ow">not</span> <span class="kc">False</span>
-<span class="kc">True</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>&gt;&gt;&gt; True and True
+True
+&gt;&gt;&gt; True and False
+False
+&gt;&gt;&gt; False or True
+True
+&gt;&gt;&gt; not False
+True
+&gt;&gt;&gt; False or not False
+True
 </pre></div>
 </div>
 </div>
@@ -799,28 +821,28 @@ oklepaji: <code class="docutils literal notranslate"><span class="pre">a</span> 
 <p>Da bo reč lažje razumljiva, jo potrenirajmo na prav tem izrazu, vendar tako, da namesto <code class="docutils literal notranslate"><span class="pre">a</span></code>, <code class="docutils literal notranslate"><span class="pre">b</span></code> in <code class="docutils literal notranslate"><span class="pre">c</span></code> oziroma namesto “golih” <code class="docutils literal notranslate"><span class="pre">True</span></code> in <code class="docutils literal notranslate"><span class="pre">False</span></code> pišemo bolj “konkretne” izraze.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">&gt;&gt;&gt;</span> <span class="mi">352</span> <span class="o">&gt;</span> <span class="mi">0</span>
-<span class="kc">True</span>
-<span class="o">&gt;&gt;&gt;</span> <span class="mi">5</span> <span class="o">&lt;</span> <span class="mi">3</span>
-<span class="kc">False</span>
-<span class="o">&gt;&gt;&gt;</span> <span class="mi">352</span> <span class="o">&gt;</span> <span class="mi">0</span> <span class="ow">or</span> <span class="mi">5</span> <span class="o">&lt;</span> <span class="mi">3</span>
-<span class="kc">True</span>
-<span class="o">&gt;&gt;&gt;</span> <span class="mi">352</span> <span class="o">&gt;</span> <span class="mi">0</span> <span class="ow">or</span> <span class="mi">5</span> <span class="o">&gt;</span> <span class="mi">3</span>
-<span class="kc">True</span>
-<span class="o">&gt;&gt;&gt;</span> <span class="mi">352</span> <span class="o">&gt;</span> <span class="mi">0</span> <span class="ow">and</span> <span class="mi">5</span> <span class="o">&gt;</span> <span class="mi">3</span>
-<span class="kc">True</span>
-<span class="o">&gt;&gt;&gt;</span> <span class="mi">352</span> <span class="o">&gt;</span> <span class="mi">0</span> <span class="ow">and</span> <span class="mi">5</span> <span class="o">&lt;</span> <span class="mi">3</span>
-<span class="kc">False</span>
-<span class="o">&gt;&gt;&gt;</span> <span class="mi">352</span> <span class="o">&gt;</span> <span class="mi">0</span> <span class="ow">and</span> <span class="ow">not</span> <span class="mi">5</span> <span class="o">&lt;</span> <span class="mi">3</span>
-<span class="kc">True</span>
-<span class="o">&gt;&gt;&gt;</span> <span class="mi">10</span> <span class="o">&gt;</span> <span class="mi">8</span> <span class="ow">or</span> <span class="mi">352</span> <span class="o">&gt;</span> <span class="mi">0</span> <span class="ow">and</span> <span class="mi">5</span> <span class="o">&lt;</span> <span class="mi">3</span>
-<span class="kc">True</span>
-<span class="o">&gt;&gt;&gt;</span> <span class="mi">10</span> <span class="o">&gt;</span> <span class="mi">8</span> <span class="ow">or</span> <span class="p">(</span><span class="mi">352</span> <span class="o">&gt;</span> <span class="mi">0</span> <span class="ow">and</span> <span class="mi">5</span> <span class="o">&lt;</span> <span class="mi">3</span><span class="p">)</span>
-<span class="kc">True</span>
-<span class="o">&gt;&gt;&gt;</span> <span class="p">(</span><span class="mi">10</span> <span class="o">&gt;</span> <span class="mi">8</span> <span class="ow">or</span> <span class="mi">352</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">)</span> <span class="ow">and</span> <span class="mi">5</span> <span class="o">&lt;</span> <span class="mi">3</span>
-<span class="kc">False</span>
-<span class="o">&gt;&gt;&gt;</span> <span class="p">(</span><span class="mi">10</span> <span class="o">&gt;</span> <span class="mi">8</span> <span class="ow">or</span> <span class="mi">352</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">)</span> <span class="ow">and</span> <span class="ow">not</span> <span class="mi">5</span> <span class="o">&lt;</span> <span class="mi">3</span>
-<span class="kc">True</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>&gt;&gt;&gt; 352 &gt; 0
+True
+&gt;&gt;&gt; 5 &lt; 3
+False
+&gt;&gt;&gt; 352 &gt; 0 or 5 &lt; 3
+True
+&gt;&gt;&gt; 352 &gt; 0 or 5 &gt; 3
+True
+&gt;&gt;&gt; 352 &gt; 0 and 5 &gt; 3
+True
+&gt;&gt;&gt; 352 &gt; 0 and 5 &lt; 3
+False
+&gt;&gt;&gt; 352 &gt; 0 and not 5 &lt; 3
+True
+&gt;&gt;&gt; 10 &gt; 8 or 352 &gt; 0 and 5 &lt; 3
+True
+&gt;&gt;&gt; 10 &gt; 8 or (352 &gt; 0 and 5 &lt; 3)
+True
+&gt;&gt;&gt; (10 &gt; 8 or 352 &gt; 0) and 5 &lt; 3
+False
+&gt;&gt;&gt; (10 &gt; 8 or 352 &gt; 0) and not 5 &lt; 3
+True
 </pre></div>
 </div>
 </div>
@@ -829,10 +851,10 @@ oklepaji: <code class="docutils literal notranslate"><span class="pre">a</span> 
 <p>Če želimo preveriti enakost dveh števil (ali, v splošnem, enakost dveh stvari), uporabimo dvojni enačaj, <code class="docutils literal notranslate"><span class="pre">==</span></code>. Enojni enačaj je namreč dobil svojo zadolžitev prejšnjo uro, namenjen je prirejanju. Ali sta dve stvari različni, preverimo z <code class="docutils literal notranslate"><span class="pre">!=</span></code>.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">&gt;&gt;&gt;</span> <span class="mi">1</span> <span class="o">+</span> <span class="mi">1</span> <span class="o">==</span> <span class="mi">2</span>
-<span class="kc">True</span>
-<span class="o">&gt;&gt;&gt;</span> <span class="mi">1</span> <span class="o">+</span> <span class="mi">1</span> <span class="o">!=</span> <span class="mi">2</span>
-<span class="kc">False</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>&gt;&gt;&gt; 1 + 1 == 2
+True
+&gt;&gt;&gt; 1 + 1 != 2
+False
 </pre></div>
 </div>
 </div>
@@ -840,8 +862,8 @@ oklepaji: <code class="docutils literal notranslate"><span class="pre">a</span> 
 <p>Ne zamenjujte dvojnih in enojnih enačajev. Če pomotoma napišemo (a to se nam bo redko zgodilo), <code class="docutils literal notranslate"><span class="pre">a</span> <span class="pre">==</span> <span class="pre">1</span> <span class="pre">+</span> <span class="pre">1</span></code> s tem nismo priredili <code class="docutils literal notranslate"><span class="pre">a</span></code>-ju dvojke, temveč smo le preverili, ali je enak 2. Pogostejša napaka pa bo</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">if</span> <span class="n">a</span> <span class="o">=</span> <span class="mi">1</span><span class="p">:</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Vrednost a je ena&quot;</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>if a = 1:
+    print(&quot;Vrednost a je ena&quot;)
 </pre></div>
 </div>
 </div>
@@ -853,8 +875,8 @@ od 10, <code class="docutils literal notranslate"><span class="pre">t2</span></c
 <p>Če se torej končno vrnemo k suhcem in debeluhom: če bi se hoteli skoncentrirati le na te, ki so ravno pravšnji, bi lahko napisali, recimo</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">if</span> <span class="n">bmi</span> <span class="o">&gt;</span> <span class="mf">18.5</span> <span class="ow">and</span> <span class="n">bmi</span> <span class="o">&lt;</span> <span class="mi">25</span><span class="p">:</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Čestitamo, ravno pravšnji ste.&quot;</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>if bmi &gt; 18.5 and bmi &lt; 25:
+    print(&quot;Čestitamo, ravno pravšnji ste.&quot;)
 </pre></div>
 </div>
 </div>
@@ -862,8 +884,8 @@ od 10, <code class="docutils literal notranslate"><span class="pre">t2</span></c
 <p>Če bi kdo napisal</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">if</span> <span class="p">(</span><span class="n">bmi</span> <span class="o">&gt;</span> <span class="mf">18.5</span><span class="p">)</span> <span class="ow">and</span> <span class="p">(</span><span class="n">bmi</span> <span class="o">&lt;</span> <span class="mi">25</span><span class="p">):</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Čestitamo, ravno pravšnji ste.&quot;</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>if (bmi &gt; 18.5) and (bmi &lt; 25):
+    print(&quot;Čestitamo, ravno pravšnji ste.&quot;)
 </pre></div>
 </div>
 </div>
@@ -871,8 +893,8 @@ od 10, <code class="docutils literal notranslate"><span class="pre">t2</span></c
 <p>ali celo</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">if</span> <span class="p">((</span><span class="n">bmi</span> <span class="o">&gt;</span> <span class="mf">18.5</span><span class="p">)</span> <span class="ow">and</span> <span class="p">(</span><span class="n">bmi</span> <span class="o">&lt;</span> <span class="mi">25</span><span class="p">)):</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Čestitamo, ravno pravšnji ste.&quot;</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>if ((bmi &gt; 18.5) and (bmi &lt; 25)):
+    print(&quot;Čestitamo, ravno pravšnji ste.&quot;)
 </pre></div>
 </div>
 </div>
@@ -881,8 +903,8 @@ od 10, <code class="docutils literal notranslate"><span class="pre">t2</span></c
 <a class="reference external" href="http://xkcd.com/297/">Lispu</a>))). Prav po Pythonovsko pa se reče:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">if</span> <span class="mf">18.5</span> <span class="o">&lt;</span> <span class="n">bmi</span> <span class="o">&lt;</span> <span class="mi">25</span><span class="p">:</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Čestitamo, ravno pravšnji ste.&quot;</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>if 18.5 &lt; bmi &lt; 25:
+    print(&quot;Čestitamo, ravno pravšnji ste.&quot;)
 </pre></div>
 </div>
 </div>

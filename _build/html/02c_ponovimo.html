@@ -154,6 +154,28 @@ const thebe_selector_output = ".output, .cell_output"
    7. Funkcije
   </a>
  </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="04b_uvazanje_modulov.html">
+   8. Uvažanje modulov
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="04c_pisanje_modulov.html">
+   9. Kako pišemo module
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Naloge
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="naloge/01_topovske_bitke/navodila.html">
+   1. Topovske bitke
+  </a>
+ </li>
 </ul>
 
     </div>
@@ -711,7 +733,7 @@ title="Print to PDF"
 <p>Vrednosti na zaslon prikažemo z ukazom <code class="docutils literal notranslate"><span class="pre">print()</span></code></p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;hello, world!&quot;</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>print(&quot;hello, world!&quot;)
 </pre></div>
 </div>
 </div>
@@ -724,7 +746,7 @@ title="Print to PDF"
 <p>Izraz znotraj printa se bo najprej poračunal, nato pa prikazal na zaslonu.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="mi">4</span> <span class="o">+</span> <span class="mi">5</span> <span class="o">/</span> <span class="mi">3</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>print(4 + 5 / 3)
 </pre></div>
 </div>
 </div>
@@ -737,7 +759,7 @@ title="Print to PDF"
 <p>Izpise lahko oblikujemo na dva načina. Prvi način je, da posamezne dele ločimo z vejico. Na ta način lahko tiskamo <strong>različne podatkovne tipe</strong>, vendar bo python vmes avtomatsko <strong>dodal presledek</strong>.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Danes&quot;</span><span class="p">,</span> <span class="s2">&quot;je&quot;</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="s2">&quot;stopinj.&quot;</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>print(&quot;Danes&quot;, &quot;je&quot;, 5, &quot;stopinj.&quot;)
 </pre></div>
 </div>
 </div>
@@ -750,7 +772,7 @@ title="Print to PDF"
 <p>Če želimo več nadzora nad izpisom, uporabimo <strong>lepljenje nizov</strong>. Vsi elementi izpisa morajo biti tipa <code class="docutils literal notranslate"><span class="pre">str</span></code>, zato jih <strong>ustrezno pretvorimo</strong>.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Danes &quot;</span> <span class="o">+</span> <span class="s2">&quot;je &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span> <span class="o">+</span> <span class="s2">&quot;°C.&quot;</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>print(&quot;Danes &quot; + &quot;je &quot; + str(5) + &quot;°C.&quot;)
 </pre></div>
 </div>
 </div>
@@ -766,7 +788,7 @@ title="Print to PDF"
 <p>Podatke od uporabnika dobimo z ukazom <code class="docutils literal notranslate"><span class="pre">input(prompt)</span></code>. Znotraj oklepajev napišemo <strong>iztočnico</strong>, ki se bo uporabniku prikazala na zaslonu. Kar dobimo, moramo nujno nato <strong>shraniti v spremenljivko</strong>.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">ime</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Vnesi svoje ime: &quot;</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>ime = input(&quot;Vnesi svoje ime: &quot;)
 </pre></div>
 </div>
 </div>
@@ -778,7 +800,7 @@ title="Print to PDF"
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">ime</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>print(ime)
 </pre></div>
 </div>
 </div>
@@ -791,7 +813,7 @@ title="Print to PDF"
 <p>Funkcija <code class="docutils literal notranslate"><span class="pre">input()</span></code> bo vedno podatke pridobila kot podatkovni tip <code class="docutils literal notranslate"><span class="pre">str</span></code>. Če pričakujemo število, moramo podatke ustrezno pretvoriti (<code class="docutils literal notranslate"><span class="pre">int()</span></code>, <code class="docutils literal notranslate"><span class="pre">float()</span></code>), drugače ne bomo mogli računati z njim. Največkrat to naredimo kar v isti vrstici, kot input:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">letnica_rojstva</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Vnesi svojo letnico rojstva: &quot;</span><span class="p">))</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>letnica_rojstva = int(input(&quot;Vnesi svojo letnico rojstva: &quot;))
 </pre></div>
 </div>
 </div>
@@ -803,8 +825,8 @@ title="Print to PDF"
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">starost</span> <span class="o">=</span> <span class="mi">2022</span> <span class="o">-</span> <span class="n">letnica_rojstva</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Star sem &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">starost</span><span class="p">)</span> <span class="o">+</span> <span class="s2">&quot; let.&quot;</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>starost = 2022 - letnica_rojstva
+print(&quot;Star sem &quot; + str(starost) + &quot; let.&quot;)
 </pre></div>
 </div>
 </div>
@@ -820,8 +842,8 @@ title="Print to PDF"
 <p>Pogoj je lahko katerikoli izraz, ki se evaluira v <code class="docutils literal notranslate"><span class="pre">bool</span></code> (logično vrednost).</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># primerjanje &lt; &gt; &lt;= &gt;=</span>
-<span class="mi">4</span> <span class="o">&lt;</span> <span class="mi">5</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span># primerjanje &lt; &gt; &lt;= &gt;=
+4 &lt; 5
 </pre></div>
 </div>
 </div>
@@ -833,9 +855,9 @@ title="Print to PDF"
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Pozor! Enakost preverjamo z dvojnim enačajem!</span>
-<span class="c1"># enakost == in neenakost !=</span>
-<span class="mi">4</span> <span class="o">==</span> <span class="mi">4</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span># Pozor! Enakost preverjamo z dvojnim enačajem!
+# enakost == in neenakost !=
+4 == 4
 </pre></div>
 </div>
 </div>
@@ -847,10 +869,10 @@ title="Print to PDF"
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># pogoje lahko zduzujemo s poljubnimi logičnimi vezniki</span>
-<span class="c1"># Logični vezniki: and, or, not</span>
-<span class="n">a</span> <span class="o">=</span> <span class="mi">5</span>
-<span class="n">a</span> <span class="o">!=</span> <span class="mi">4</span> <span class="ow">and</span> <span class="kc">True</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span># pogoje lahko zduzujemo s poljubnimi logičnimi vezniki
+# Logični vezniki: and, or, not
+a = 5
+a != 4 and True
 </pre></div>
 </div>
 </div>
@@ -862,9 +884,9 @@ title="Print to PDF"
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Lahko preverjamo tudi več neenakosti hkrati</span>
-<span class="n">a</span> <span class="o">=</span> <span class="mi">5</span>
-<span class="mi">3</span> <span class="o">&lt;</span> <span class="n">a</span> <span class="o">&lt;</span> <span class="mi">6</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span># Lahko preverjamo tudi več neenakosti hkrati
+a = 5
+3 &lt; a &lt; 6
 </pre></div>
 </div>
 </div>
@@ -880,9 +902,9 @@ title="Print to PDF"
 <p>S pogojnim stavkom lahko v program dodamo pogoje. Kodo, ki se izvede pod določenim pogojem, moramo zamakniti za 4 presledke ali tabulator (vendar znotraj programa teh dveh ne mešamo!)</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">starost</span> <span class="o">=</span> <span class="mi">15</span>
-<span class="k">if</span> <span class="mi">10</span> <span class="o">&lt;</span> <span class="n">starost</span> <span class="o">&lt;</span> <span class="mi">20</span><span class="p">:</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Najstnik&quot;</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>starost = 15
+if 10 &lt; starost &lt; 20:
+    print(&quot;Najstnik&quot;)
 </pre></div>
 </div>
 </div>
@@ -895,11 +917,11 @@ title="Print to PDF"
 <p>Dodamo lahko tudi <code class="docutils literal notranslate"><span class="pre">else</span></code> del, ki se izvede, če pogoj ni izpolnjen:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">starost</span> <span class="o">=</span> <span class="mi">21</span>
-<span class="k">if</span> <span class="mi">10</span> <span class="o">&lt;</span> <span class="n">starost</span> <span class="o">&lt;</span> <span class="mi">20</span><span class="p">:</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Najstnik&quot;</span><span class="p">)</span>
-<span class="k">else</span><span class="p">:</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Očitno nisi najstnik&quot;</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>starost = 21
+if 10 &lt; starost &lt; 20:
+    print(&quot;Najstnik&quot;)
+else:
+    print(&quot;Očitno nisi najstnik&quot;)
 </pre></div>
 </div>
 </div>
@@ -912,15 +934,15 @@ title="Print to PDF"
 <p>Preverjamo lahko tudi več različnih možnosti. Prvo začnemo z <code class="docutils literal notranslate"><span class="pre">if</span></code>, naslednje z <code class="docutils literal notranslate"><span class="pre">elif</span></code>, če pa noben pogoj ni izpolnjen, pa zaključimo z <code class="docutils literal notranslate"><span class="pre">else</span></code>:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">zival</span> <span class="o">=</span> <span class="s2">&quot;mačka&quot;</span>
-<span class="k">if</span> <span class="n">zival</span> <span class="o">==</span> <span class="s1">&#39;pes&#39;</span><span class="p">:</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;hov hov!&quot;</span><span class="p">)</span>
-<span class="k">elif</span> <span class="n">zival</span> <span class="o">==</span> <span class="s2">&quot;mačka&quot;</span><span class="p">:</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;mijav!&quot;</span><span class="p">)</span>
-<span class="k">elif</span> <span class="n">zival</span> <span class="o">==</span> <span class="s2">&quot;konj&quot;</span><span class="p">:</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;ihaha&quot;</span><span class="p">)</span>
-<span class="k">else</span><span class="p">:</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Ne poznam živali!&quot;</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>zival = &quot;mačka&quot;
+if zival == &#39;pes&#39;:
+    print(&quot;hov hov!&quot;)
+elif zival == &quot;mačka&quot;:
+    print(&quot;mijav!&quot;)
+elif zival == &quot;konj&quot;:
+    print(&quot;ihaha&quot;)
+else:
+    print(&quot;Ne poznam živali!&quot;)
 </pre></div>
 </div>
 </div>
@@ -933,14 +955,14 @@ title="Print to PDF"
 <p>Pogoje lahko tudi gnezdimo</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">starost</span> <span class="o">=</span> <span class="mi">17</span>
-<span class="k">if</span>  <span class="n">starost</span> <span class="o">&lt;</span> <span class="mi">20</span><span class="p">:</span>
-    <span class="k">if</span> <span class="n">starost</span> <span class="o">&gt;</span> <span class="mi">10</span><span class="p">:</span>
-        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;najstnik&quot;</span><span class="p">)</span>
-    <span class="k">else</span><span class="p">:</span>
-        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;otrok&quot;</span><span class="p">)</span>
-<span class="k">else</span><span class="p">:</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;ne najstnik, ne otrok&quot;</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>starost = 17
+if  starost &lt; 20:
+    if starost &gt; 10:
+        print(&quot;najstnik&quot;)
+    else:
+        print(&quot;otrok&quot;)
+else:
+    print(&quot;ne najstnik, ne otrok&quot;)
 </pre></div>
 </div>
 </div>
@@ -962,10 +984,10 @@ title="Print to PDF"
 <h3><span class="section-number">4.10.1. </span>Petkrat ponovimo <code class="docutils literal notranslate"><span class="pre">print()</span></code>:<a class="headerlink" href="#petkrat-ponovimo-print" title="Permalink to this headline">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">i</span> <span class="o">=</span> <span class="mi">0</span>
-<span class="k">while</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="mi">5</span><span class="p">:</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;hej&quot;</span><span class="p">)</span>
-    <span class="n">i</span> <span class="o">+=</span> <span class="mi">1</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>i = 0
+while i &lt; 5:
+    print(&quot;hej&quot;)
+    i += 1
 </pre></div>
 </div>
 </div>
@@ -984,10 +1006,10 @@ hej
 <h3><span class="section-number">4.10.2. </span>Štetje od 1 do 10<a class="headerlink" href="#stetje-od-1-do-10" title="Permalink to this headline">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">i</span> <span class="o">=</span> <span class="mi">1</span>
-<span class="k">while</span> <span class="n">i</span> <span class="o">&lt;=</span> <span class="mi">10</span><span class="p">:</span>
-    <span class="nb">print</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
-    <span class="n">i</span> <span class="o">+=</span> <span class="mi">1</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>i = 1
+while i &lt;= 10:
+    print(i)
+    i += 1
 </pre></div>
 </div>
 </div>
@@ -1012,13 +1034,13 @@ hej
 <p>Recimo da nam uporabnik poda 5 števil, mi pa jih moramo sešteti. Kako bi naredili to? <strong>Izven zanke</strong> definiramo spremenljivko vsota. Zanko moramo izvesti <em>5x</em>, pri čemer v vsaki iteraciji od uporabnika dobimo nov <em>input</em>.  Trenutni input prištejemo vsoti. Na koncu natisnemo rezultat.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">vsota</span> <span class="o">=</span> <span class="mi">0</span>
-<span class="n">i</span> <span class="o">=</span> <span class="mi">0</span>
-<span class="k">while</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="mi">5</span><span class="p">:</span>
-    <span class="n">st</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Vnesi število: &quot;</span><span class="p">))</span>
-    <span class="n">vsota</span> <span class="o">+=</span> <span class="n">st</span>
-    <span class="n">i</span> <span class="o">+=</span> <span class="mi">1</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Vsota je&quot;</span><span class="p">,</span> <span class="n">vsota</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>vsota = 0
+i = 0
+while i &lt; 5:
+    st = int(input(&quot;Vnesi število: &quot;))
+    vsota += st
+    i += 1
+print(&quot;Vsota je&quot;, vsota)
 </pre></div>
 </div>
 </div>
@@ -1039,14 +1061,14 @@ Vsota je 16
 <p>Kako bi izračunali povprečje? Povprečje je v resnici vsota, deljena s številom elementov, ki smo jih sešteli. Kot v prejšnjem primeru z zanko seštejemo elemente, nato pa vsoto delimo s številom elementov.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">st_elementov</span> <span class="o">=</span> <span class="mi">3</span>
-<span class="n">vsota</span> <span class="o">=</span> <span class="mi">0</span>
-<span class="n">i</span> <span class="o">=</span> <span class="mi">0</span>
-<span class="k">while</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">st_elementov</span><span class="p">:</span>
-    <span class="n">vsota</span> <span class="o">+=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Vnesi število: &quot;</span><span class="p">))</span>
-    <span class="n">i</span> <span class="o">+=</span> <span class="mi">1</span>
-<span class="n">povprecje</span> <span class="o">=</span> <span class="n">vsota</span> <span class="o">/</span> <span class="n">st_elementov</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Povprečje:&quot;</span><span class="p">,</span> <span class="n">povprecje</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>st_elementov = 3
+vsota = 0
+i = 0
+while i &lt; st_elementov:
+    vsota += int(input(&quot;Vnesi število: &quot;))
+    i += 1
+povprecje = vsota / st_elementov
+print(&quot;Povprečje:&quot;, povprecje)
 </pre></div>
 </div>
 </div>
@@ -1065,11 +1087,11 @@ Povprečje: 4.0
 <p>Z zanko se bomo sprehodili čez števila, če bo trenutno število liho, ga izpišemo.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">i</span> <span class="o">=</span> <span class="mi">0</span>
-<span class="k">while</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="mi">10</span><span class="p">:</span>
-    <span class="k">if</span> <span class="n">i</span> <span class="o">%</span> <span class="mi">2</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
-        <span class="nb">print</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
-    <span class="n">i</span> <span class="o">+=</span> <span class="mi">1</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>i = 0
+while i &lt; 10:
+    if i % 2 == 1:
+        print(i)
+    i += 1
 </pre></div>
 </div>
 </div>

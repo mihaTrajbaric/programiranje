@@ -118,7 +118,7 @@ from math import *
 # 
 # Tretji način je v splošnem slab. Izrazi so krajši, vendar za posamične funkcije ne vemo, odkod so prišle. Na ta način uvažamo kvečjemu modul `math` in nobenega drugega. Posebej v večjih projektih.
 # 
-# # Kje uvažamo
+# ### Kje uvažamo
 # 
 # Vedno na začetku programa. Ne kar tako, vmes.
 # 

@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>Uvažanje modulov &#8212; Krožek začetnega programiranja 2022-23</title>
+    <title>8. Uvažanje modulov &#8212; Krožek začetnega programiranja 2022-23</title>
     
   <!-- Loaded before other Sphinx assets -->
   <link href="_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
@@ -54,6 +54,8 @@ const thebe_selector_output = ".output, .cell_output"
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="9. Kako pišemo module" href="04c_pisanje_modulov.html" />
+    <link rel="prev" title="7. Funkcije" href="04a_funkcije.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -118,7 +120,7 @@ const thebe_selector_output = ".output, .cell_output"
   Vsebina
  </span>
 </p>
-<ul class="nav bd-sidenav">
+<ul class="current nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="01_izrazi_spremenljivke_program.html">
    1. Izrazi in spremenljivke
@@ -152,6 +154,28 @@ const thebe_selector_output = ".output, .cell_output"
  <li class="toctree-l1">
   <a class="reference internal" href="04a_funkcije.html">
    7. Funkcije
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   8. Uvažanje modulov
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="04c_pisanje_modulov.html">
+   9. Kako pišemo module
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Naloge
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="naloge/01_topovske_bitke/navodila.html">
+   1. Topovske bitke
   </a>
  </li>
 </ul>
@@ -213,7 +237,7 @@ title="Toggle navigation"
   <div class="menu-dropdown__content">
     <ul>
       <li>
-        <a href="https://mybinder.org/v2/gh/mihaTrajbaric/programiranje/main?urlpath=tree/04b uvažanje modulov.ipynb"
+        <a href="https://mybinder.org/v2/gh/mihaTrajbaric/programiranje/main?urlpath=tree/04b_uvazanje_modulov.ipynb"
    class="headerbtn"
    data-toggle="tooltip"
 data-placement="left"
@@ -291,7 +315,7 @@ title="Source repository"
       </li>
       
       <li>
-        <a href="https://github.com/mihaTrajbaric/programiranje/issues/new?title=Issue%20on%20page%20%2F04b uvažanje modulov.html&body=Your%20issue%20content%20here."
+        <a href="https://github.com/mihaTrajbaric/programiranje/issues/new?title=Issue%20on%20page%20%2F04b_uvazanje_modulov.html&body=Your%20issue%20content%20here."
    class="headerbtn"
    data-toggle="tooltip"
 data-placement="left"
@@ -319,7 +343,7 @@ title="Open an issue"
   <div class="menu-dropdown__content">
     <ul>
       <li>
-        <a href="_sources/04b uvažanje modulov.ipynb"
+        <a href="_sources/04b_uvazanje_modulov.ipynb"
    class="headerbtn"
    data-toggle="tooltip"
 data-placement="left"
@@ -378,26 +402,19 @@ title="Print to PDF"
     </div>
     <nav id="bd-toc-nav" aria-label="Page">
         <ul class="visible nav section-nav flex-column">
- <li class="toc-h1 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#">
-   Uvažanje modulov
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#uvazanje-modula">
+   8.1. Uvažanje modula
   </a>
-  <ul class="visible nav section-nav flex-column">
-   <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#uvazanje-modula">
-     Uvažanje modula
-    </a>
-   </li>
-   <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#uvazanje-posamicnih-funkcij">
-     Uvažanje posamičnih funkcij
-    </a>
-   </li>
-  </ul>
  </li>
- <li class="toc-h1 nav-item toc-entry">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#uvazanje-posamicnih-funkcij">
+   8.2. Uvažanje posamičnih funkcij
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#kje-uvazamo">
-   Kje uvažamo
+   8.3. Kje uvažamo
   </a>
  </li>
 </ul>
@@ -419,26 +436,19 @@ title="Print to PDF"
                         </div>
                         <nav aria-label="Page">
                             <ul class="visible nav section-nav flex-column">
- <li class="toc-h1 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#">
-   Uvažanje modulov
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#uvazanje-modula">
+   8.1. Uvažanje modula
   </a>
-  <ul class="visible nav section-nav flex-column">
-   <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#uvazanje-modula">
-     Uvažanje modula
-    </a>
-   </li>
-   <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#uvazanje-posamicnih-funkcij">
-     Uvažanje posamičnih funkcij
-    </a>
-   </li>
-  </ul>
  </li>
- <li class="toc-h1 nav-item toc-entry">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#uvazanje-posamicnih-funkcij">
+   8.2. Uvažanje posamičnih funkcij
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#kje-uvazamo">
-   Kje uvažamo
+   8.3. Kje uvažamo
   </a>
  </li>
 </ul>
@@ -452,18 +462,18 @@ title="Print to PDF"
               <div>
                 
   <section id="uvazanje-modulov">
-<h1>Uvažanje modulov<a class="headerlink" href="#uvazanje-modulov" title="Permalink to this headline">#</a></h1>
+<h1><span class="section-number">8. </span>Uvažanje modulov<a class="headerlink" href="#uvazanje-modulov" title="Permalink to this headline">#</a></h1>
 <p>Doslej smo spoznali le prgišče funkcij - <code class="docutils literal notranslate"><span class="pre">input</span></code>, <code class="docutils literal notranslate"><span class="pre">len</span></code>, <code class="docutils literal notranslate"><span class="pre">sqrt</span></code>. V resnici pa skupaj s Pythonom dobimo tisoče funkcij za vse mogoče reči, od pošiljanja pošte in kriptografije do predvajanja zvoka in brskanja po datotekah .zip. Še večja gora funkcij obstaja na spletu: karkoli si zamislite napisati, skoraj gotovo je nekdo - če le gre za dovolj splošno
 reč - že potreboval kaj takšnega ter to tudi napisal in vam dal na razpolago.</p>
 <p>Da se ne bi izgubili v gori funkcij (in drugih reči), jih moramo nekako urediti. Funkcije pridejo lepo zapakirane v škatlice – včasih celo tako, da so znotraj škatlice nove škatlice. Škatlici rečemo <em>modul</em>.</p>
 <p>Doslej smo uporabljali, na primer, funkcije iz modula <code class="docutils literal notranslate"><span class="pre">math</span></code>, tako da smo jih uvozili z <code class="docutils literal notranslate"><span class="pre">from</span> <span class="pre">math</span> <span class="pre">import</span> <span class="pre">*</span></code>. Pri poučevanju programiranja se izogibam temu, da bi morali tipkati kakšne fraze, ki jih ne razumete (kar je eden od
 glavnih razlogov, zakaj se učimo programiranja v Pythonu in ne v jeziku, kjer bi morali na prvem predavanju definirati razrede in pisati <code class="docutils literal notranslate"><span class="pre">public</span> <span class="pre">static</span> <span class="pre">void</span> <span class="pre">main(String</span> <span class="pre">args[])</span></code>). <code class="docutils literal notranslate"><span class="pre">from</span> <span class="pre">math</span> <span class="pre">import</span> <span class="pre">*</span></code> je bila ena redkih in čas je, da izvemo, za kaj gre. Ter tudi čas, da se te fraze odvadimo in se naučimo pisati kot se spodobi.</p>
 <section id="uvazanje-modula">
-<h2>Uvažanje modula<a class="headerlink" href="#uvazanje-modula" title="Permalink to this headline">#</a></h2>
+<h2><span class="section-number">8.1. </span>Uvažanje modula<a class="headerlink" href="#uvazanje-modula" title="Permalink to this headline">#</a></h2>
 <p>Modul z matematičnimim funkcijami, <code class="docutils literal notranslate"><span class="pre">math</span></code>, uvozimo tako:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">math</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>import math
 </pre></div>
 </div>
 </div>
@@ -471,7 +481,7 @@ glavnih razlogov, zakaj se učimo programiranja v Pythonu in ne v jeziku, kjer b
 <p>S tem v bistvu dobimo novo spremenljivko, <code class="docutils literal notranslate"><span class="pre">math</span></code>.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">math</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>math
 </pre></div>
 </div>
 </div>
@@ -485,7 +495,7 @@ glavnih razlogov, zakaj se učimo programiranja v Pythonu in ne v jeziku, kjer b
 <p>Modulov ne moremo seštevati ali množiti. Niti izpisati bolj ali manj ne. Kaj pa potem znajo? Kaj je njihov superpower? To, da vsebujejo stvari. Modul <code class="docutils literal notranslate"><span class="pre">math</span></code> vsebuje funkcije <code class="docutils literal notranslate"><span class="pre">sin</span></code>, <code class="docutils literal notranslate"><span class="pre">radians</span></code> in <code class="docutils literal notranslate"><span class="pre">sqrt</span></code>, poleg tega pa tudi kakšno konstanto, na primer <code class="docutils literal notranslate"><span class="pre">pi</span></code>. Do vseh teh stvari pridemo tako, da k spremenljivki, ki predstavlja modul, dodamo piko in ime stvari. Tako je <code class="docutils literal notranslate"><span class="pre">math.sin</span></code> funkcija, ki izračuna sinus in <code class="docutils literal notranslate"><span class="pre">math.pi</span></code> konstanta <span class="math notranslate nohighlight">\(pi\)</span>.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">math</span><span class="o">.</span><span class="n">pi</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>math.pi
 </pre></div>
 </div>
 </div>
@@ -497,7 +507,7 @@ glavnih razlogov, zakaj se učimo programiranja v Pythonu in ne v jeziku, kjer b
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">math</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="n">math</span><span class="o">.</span><span class="n">pi</span> <span class="o">/</span> <span class="mi">4</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>math.sin(math.pi / 4)
 </pre></div>
 </div>
 </div>
@@ -510,7 +520,7 @@ glavnih razlogov, zakaj se učimo programiranja v Pythonu in ne v jeziku, kjer b
 <p>Uvozimo še en modul, <code class="docutils literal notranslate"><span class="pre">os</span></code>.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">os</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>import os
 </pre></div>
 </div>
 </div>
@@ -518,14 +528,14 @@ glavnih razlogov, zakaj se učimo programiranja v Pythonu in ne v jeziku, kjer b
 <p>V <code class="docutils literal notranslate"><span class="pre">os</span></code> so funkcije, s katerimi lahko ustvarimo direktorij ali pobrišemo datoteko. Poleg tega pa vsebuje še nekaj zanimivega: modul. Modul <code class="docutils literal notranslate"><span class="pre">path</span></code> je modul znotraj modula <code class="docutils literal notranslate"><span class="pre">os</span></code>. Vsebuje, recimo, funkcijo <code class="docutils literal notranslate"><span class="pre">splitext</span></code>, ki za podano ime datoteke vrne osnovo in končnico.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">osnova</span><span class="p">,</span> <span class="n">koncnica</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">splitext</span><span class="p">(</span><span class="s2">&quot;nek_film.avi&quot;</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>osnova, koncnica = os.path.splitext(&quot;nek_film.avi&quot;)
 </pre></div>
 </div>
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">osnova</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>osnova
 </pre></div>
 </div>
 </div>
@@ -537,7 +547,7 @@ glavnih razlogov, zakaj se učimo programiranja v Pythonu in ne v jeziku, kjer b
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">koncnica</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>koncnica
 </pre></div>
 </div>
 </div>
@@ -550,7 +560,7 @@ glavnih razlogov, zakaj se učimo programiranja v Pythonu in ne v jeziku, kjer b
 <p>Tako se uvaža module.</p>
 </section>
 <section id="uvazanje-posamicnih-funkcij">
-<h2>Uvažanje posamičnih funkcij<a class="headerlink" href="#uvazanje-posamicnih-funkcij" title="Permalink to this headline">#</a></h2>
+<h2><span class="section-number">8.2. </span>Uvažanje posamičnih funkcij<a class="headerlink" href="#uvazanje-posamicnih-funkcij" title="Permalink to this headline">#</a></h2>
 <p>Če funkcije določenega modula kličemo velikokrat in predvsem, če to počnemo v aritmetičnih izrazih, to postane nepregledno.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="mi">2</span> <span class="o">*</span> <span class="n">math</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="n">math</span><span class="o">.</span><span class="n">radians</span><span class="p">(</span><span class="n">phi</span><span class="p">)</span> <span class="o">+</span> <span class="n">math</span><span class="o">.</span><span class="n">pi</span> <span class="o">/</span> <span class="mi">2</span><span class="p">)</span> <span class="o">-</span> <span class="mi">2</span> <span class="o">*</span> <span class="n">math</span><span class="o">.</span><span class="n">cos</span><span class="p">(</span><span class="n">math</span><span class="o">.</span><span class="n">radians</span><span class="p">(</span><span class="n">alpha</span><span class="p">))</span>
 </pre></div>
@@ -558,14 +568,14 @@ glavnih razlogov, zakaj se učimo programiranja v Pythonu in ne v jeziku, kjer b
 <p>Boljše bi bilo imeti te funkcije pri roki brez ponavljajočega se <code class="docutils literal notranslate"><span class="pre">math</span></code>. Uvozimo jih z</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">math</span> <span class="kn">import</span> <span class="n">sin</span><span class="p">,</span> <span class="n">cos</span><span class="p">,</span> <span class="n">radians</span><span class="p">,</span> <span class="n">pi</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>from math import sin, cos, radians, pi
 </pre></div>
 </div>
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">cos</span><span class="p">(</span><span class="n">pi</span> <span class="o">/</span> <span class="mi">4</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>cos(pi / 4)
 </pre></div>
 </div>
 </div>
@@ -583,7 +593,7 @@ glavnih razlogov, zakaj se učimo programiranja v Pythonu in ne v jeziku, kjer b
 <p>Obstaja še “preprostejši” način uvažanja.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">math</span> <span class="kn">import</span> <span class="o">*</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>from math import *
 </pre></div>
 </div>
 </div>
@@ -593,13 +603,13 @@ glavnih razlogov, zakaj se učimo programiranja v Pythonu in ne v jeziku, kjer b
 <p>Drugi način, uvažanje posamičnih funkcij skrajša izraze. Odkod prihaja kakšna funkcija, še vedno vidimo, vendar je potrebno za to pogledati na začetek programa, v <code class="docutils literal notranslate"><span class="pre">import</span></code>-e.</p>
 <p>Tretji način je v splošnem slab. Izrazi so krajši, vendar za posamične funkcije ne vemo, odkod so prišle. Na ta način uvažamo kvečjemu modul <code class="docutils literal notranslate"><span class="pre">math</span></code> in nobenega drugega. Posebej v večjih projektih.</p>
 </section>
-</section>
-<section class="tex2jax_ignore mathjax_ignore" id="kje-uvazamo">
-<h1>Kje uvažamo<a class="headerlink" href="#kje-uvazamo" title="Permalink to this headline">#</a></h1>
+<section id="kje-uvazamo">
+<h2><span class="section-number">8.3. </span>Kje uvažamo<a class="headerlink" href="#kje-uvazamo" title="Permalink to this headline">#</a></h2>
 <p>Vedno na začetku programa. Ne kar tako, vmes.</p>
 <p>Izjemoma: na začetku funkcije. To storimo, recimo, kadar ni jasno, ali bo modul možno uvoziti oziroma je uvažanje počasno, potrebujemo pa ga le v neki funkciji. Druga situacija, kjer bi to prišlo prav, je, če se dva modula uvažata vzajemno, eden drugega. To razrešimo tako, da določen modul uvozimo šele, ko ga potrebujemo.</p>
 <p>To ni zakon, samo dogovor.</p>
 <p>Uvažanje modulov se v resnici zgodi samo enkrat. Če petkrat napišemo <code class="docutils literal notranslate"><span class="pre">import</span> <span class="pre">math</span></code>, se bo modul v resnici uvozil le prvič.</p>
+</section>
 </section>
 
     <script type="text/x-thebe-config">
@@ -629,6 +639,20 @@ glavnih razlogov, zakaj se učimo programiranja v Pythonu in ne v jeziku, kjer b
                 
     <!-- Previous / next buttons -->
 <div class='prev-next-area'>
+    <a class='left-prev' id="prev-link" href="04a_funkcije.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title"><span class="section-number">7. </span>Funkcije</p>
+        </div>
+    </a>
+    <a class='right-next' id="next-link" href="04c_pisanje_modulov.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title"><span class="section-number">9. </span>Kako pišemo module</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
 </div>
             </footer>
         </div>

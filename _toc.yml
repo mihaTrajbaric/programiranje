@@ -14,4 +14,10 @@ parts:
     - file: 03a_seznami_terke_zanka_for
     - file: 03b_indeksi_in_rezine
     - file: 04a_funkcije
+    - file: 04b_uvazanje_modulov
+    - file: 04c_pisanje_modulov
+- caption: Naloge
+  numbered: true
+  chapters:
+    - file: naloge/01_topovske_bitke/navodila
 

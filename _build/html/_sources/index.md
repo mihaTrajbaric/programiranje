@@ -15,7 +15,7 @@ Ponedeljek 14.30 - 16.00 v `računalnici 1` (Mihael) \
 
 ## Potek krožka
 
-Krožek bo potekal v dveh delih. V prvem delu bomo s pomočjo te skripte skupaj pregledali **nove programske konstrukte**, v drugem delu, pa boste dijaki individualno (ali v parih) **reševali naloge**. Pri praktičnem delu bomo uporabljali [Projekt TOMO](https://www.projekt-tomo.si/course/207/).
+Vsako srečanje krožka bo potekalo v dveh delih. V prvem delu bomo s pomočjo te skripte skupaj pregledali **nove programske konstrukte**, v drugem delu, pa boste dijaki individualno (ali v parih) **reševali naloge**. Pri praktičnem delu bomo reševali naloge na [Projektu TOMO](https://www.projekt-tomo.si/course/207/) ali pa daljše naloge, ki so del poglavja `Naloge`.
 
 ## Vsebina
 
