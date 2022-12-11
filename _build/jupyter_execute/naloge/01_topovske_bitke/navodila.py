@@ -20,7 +20,7 @@
 # 
 # Da bo reševanje šlo kar najbolj gladko, si najprej prenesi predlogo:
 # 
-# [01_topovske_bitke_predloga.zip](https://github.com/mihaTrajbaric/programiranje/tree/main/naloge/01_topovske_bitke/01_topovske_bitke_predloga.zip)
+# [01_topovske_bitke_predloga.zip](https://github.com/mihaTrajbaric/programiranje/raw/main/naloge/01_topovske_bitke/01_topovske_bitke_predloga.zip)
 # 
 # Stisnjeno datoteko razširi in odpri v svojem najljubšem IDE-ju.
 # 
