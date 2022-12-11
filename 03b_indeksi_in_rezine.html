@@ -154,6 +154,28 @@ const thebe_selector_output = ".output, .cell_output"
    7. Funkcije
   </a>
  </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="04b_uvazanje_modulov.html">
+   8. Uvažanje modulov
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="04c_pisanje_modulov.html">
+   9. Kako pišemo module
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Naloge
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="naloge/01_topovske_bitke/navodila.html">
+   1. Topovske bitke
+  </a>
+ </li>
 </ul>
 
     </div>
@@ -411,9 +433,16 @@ title="Print to PDF"
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#racunske-operacije-na-seznamih-in-drugod">
-   6.5. Računske operacije na seznamih (in drugod)
+  <a class="reference internal nav-link" href="#racunske-operacije-na-seznamih">
+   6.5. Računske operacije na seznamih
   </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#dodajanje-elementov-seznamu">
+     6.5.1. Dodajanje elementov seznamu
+    </a>
+   </li>
+  </ul>
  </li>
 </ul>
 
@@ -467,9 +496,16 @@ title="Print to PDF"
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#racunske-operacije-na-seznamih-in-drugod">
-   6.5. Računske operacije na seznamih (in drugod)
+  <a class="reference internal nav-link" href="#racunske-operacije-na-seznamih">
+   6.5. Računske operacije na seznamih
   </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#dodajanje-elementov-seznamu">
+     6.5.1. Dodajanje elementov seznamu
+    </a>
+   </li>
+  </ul>
  </li>
 </ul>
 
@@ -1074,8 +1110,8 @@ obtesovali, zelo redko pa si želimo spreminjati posamezne črke. Zato nas
 to, da so konstantni, ne bo preveč motilo, velikokrat pa nam bo
 koristilo.</p>
 </section>
-<section id="racunske-operacije-na-seznamih-in-drugod">
-<h2><span class="section-number">6.5. </span>Računske operacije na seznamih (in drugod)<a class="headerlink" href="#racunske-operacije-na-seznamih-in-drugod" title="Permalink to this headline">#</a></h2>
+<section id="racunske-operacije-na-seznamih">
+<h2><span class="section-number">6.5. </span>Računske operacije na seznamih<a class="headerlink" href="#racunske-operacije-na-seznamih" title="Permalink to this headline">#</a></h2>
 <p>V svojem prvem soočenju s programiranjem smo spoznali aritmetične
 izraze: seštevali in množili smo števila, jih kvadrirali in računali
 sinuse. Zadnjič smo naleteli na logične izraze, kjer smo računali z
@@ -1128,6 +1164,39 @@ True
 </div>
 <p>V resnici <code class="docutils literal notranslate"><span class="pre">not</span> <span class="pre">in</span></code> ni prav potreben, saj je <code class="docutils literal notranslate"><span class="pre">x</span> <span class="pre">not</span> <span class="pre">in</span> <span class="pre">l</span></code> isto kot
 <code class="docutils literal notranslate"><span class="pre">not</span> <span class="pre">x</span> <span class="pre">in</span> <span class="pre">l</span></code>.</p>
+<section id="dodajanje-elementov-seznamu">
+<h3><span class="section-number">6.5.1. </span>Dodajanje elementov seznamu<a class="headerlink" href="#dodajanje-elementov-seznamu" title="Permalink to this headline">#</a></h3>
+<p>Imamo obstoječ seznam. Recimo <code class="docutils literal notranslate"><span class="pre">[1,</span> <span class="pre">2,</span> <span class="pre">3]</span></code> ali pa zgolj prazen seznam <code class="docutils literal notranslate"><span class="pre">[]</span></code>. Kako bi mu dodali element <code class="docutils literal notranslate"><span class="pre">4</span></code>? Ena možnost je, da uporabimo operacijo seštevanja seznamov, kjer element <code class="docutils literal notranslate"><span class="pre">4</span></code> spremenimo v seznam z enim elementom:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>seznam = [1, 2, 3]
+nov_seznam = seznam + [4]
+print(nov_seznam)
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[1, 2, 3, 4]
+</pre></div>
+</div>
+</div>
+</div>
+<p>Druga možnost pa je, da uporabimo <code class="docutils literal notranslate"><span class="pre">append</span></code>. Pazi! Ta funkcija dela <em>in place</em>, torej naredi spremembno na obstoječem seznamu. Tako ni treba (v resnici ne smemo) prirediti vrednosti novemu seznamu. Pravilna uporaba je taka:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>seznam = [1, 2, 3]
+seznam.append(4)
+print(seznam)
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[1, 2, 3, 4]
+</pre></div>
+</div>
+</div>
+</div>
+</section>
 </section>
 </section>
 
