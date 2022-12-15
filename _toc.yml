@@ -16,6 +16,7 @@ parts:
     - file: 04a_funkcije
     - file: 04b_uvazanje_modulov
     - file: 04c_pisanje_modulov
+    - file: 04d_ponovimo_2
 - caption: Naloge
   numbered: true
   chapters:

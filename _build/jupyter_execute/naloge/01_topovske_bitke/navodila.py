@@ -24,8 +24,7 @@
 # 
 # Stisnjeno datoteko razširi in odpri v svojem najljubšem IDE-ju.
 # 
-# Predloga vsebuje dve datoteki: `topovske_bitke.py`, kamor pišeš svoje rešitve, in `testi.py`, ki vsebuje teste za avtomatsko testiranje. Če jo po
-# eneš, bo potestirala tvoje rešitve v prejšni datoteki. Datoteki morata biti seveda v isti mapi.
+# Predloga vsebuje dve datoteki: `topovske_bitke.py`, kamor pišeš svoje rešitve, in `testi.py`, ki vsebuje teste za avtomatsko testiranje. Če jo poženeš, bo potestirala tvoje rešitve v prejšni datoteki. Datoteki morata biti seveda v isti mapi.
 # 
 # 
 

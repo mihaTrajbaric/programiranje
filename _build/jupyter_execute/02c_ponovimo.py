@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# # Ponovitev
+# # Ponovitev - osnove
 # V času krožka smo vzeli že kar nekaj konstruktov in se naučili pisanja preprostih programov. Ker sem med reševanjem nalog opazil ponavljanje enakih osnovnih napak, je nastopil čas, da še enkrat ponovimo, kar smo se naučili do sedaj. Počitnice pretekli teden pa so še dodaten razlog, da še enkrat pogledamo, kaj vse imamo zaenkrat na voljo v našem programerskem arzenalu.
 
 # ## Osnovne operacije
