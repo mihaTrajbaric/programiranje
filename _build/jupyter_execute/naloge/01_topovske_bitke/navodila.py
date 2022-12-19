@@ -16,16 +16,18 @@
 # 
 
 # 
-# ## Struktura delovnega direktorija
+# ## Predloga
 # 
-# Da bo reševanje šlo kar najbolj gladko, si najprej prenesi predlogo:
+# Da bo reševanje šlo kar najbolj gladko, si najprej prenesi [topovske_bitke.py](https://raw.githubusercontent.com/programiranje-SKG/naloge-daljse/main/01_topovske_bitke/topovske_bitke.py) (predloga za reševanje) in [testi.py](https://raw.githubusercontent.com/programiranje-SKG/naloge-daljse/main/01_topovske_bitke/testi.py), ki vsebuje teste za avtomatsko testiranje.
 # 
-# [01_topovske_bitke_predloga.zip](https://github.com/mihaTrajbaric/programiranje/raw/main/naloge/01_topovske_bitke/01_topovske_bitke_predloga.zip)
+# Če želiš, da testi delujejo, morata biti datoteki shranjeni v isti mapi, druga zraven druge.
 # 
-# Stisnjeno datoteko razširi in odpri v svojem najljubšem IDE-ju.
+# Datoteki odpri v svojem najljubšem IDE-ju. 
 # 
-# Predloga vsebuje dve datoteki: `topovske_bitke.py`, kamor pišeš svoje rešitve, in `testi.py`, ki vsebuje teste za avtomatsko testiranje. Če jo poženeš, bo potestirala tvoje rešitve v prejšni datoteki. Datoteki morata biti seveda v isti mapi.
+# `Topovske_bitke.py` vsebuje že napisano ogrodje funkcij, ki jih moraš zgolj dopolniti, da bodo računale in vračale prave vrednosti (zamenjaj besedo `pass` s svojo kodo).
+# Ko želiš preveriti pravilnost rešitve, poženi datoteko `testi.py`, ki bo preverila tvojo rešitev. V večini IDE-jev lahko tudi poženeš posamezne teste. V pyvharmu to narediš s klikom na zelen trikotnik ob določenem testu:
 # 
+# ![Run single test](./run-test.png)
 # 
 
 # 
