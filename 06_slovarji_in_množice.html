@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>12. Slovarji in množice &#8212; Krožek začetnega programiranja 2022-23</title>
+    <title>Slovarji in množice &#8212; Krožek začetnega programiranja 2022-23</title>
     
   <!-- Loaded before other Sphinx assets -->
   <link href="_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
@@ -52,8 +52,6 @@ const thebe_selector_output = ".output, .cell_output"
     <script async="async" src="_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="1. Topovske bitke" href="naloge/01_topovske_bitke/navodila.html" />
-    <link rel="prev" title="11. Metode nizov in seznamov" href="05_metode_nizov_in_seznamov.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -118,7 +116,7 @@ const thebe_selector_output = ".output, .cell_output"
   Vsebina
  </span>
 </p>
-<ul class="current nav bd-sidenav">
+<ul class="nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="01_izrazi_spremenljivke_program.html">
    1. Izrazi in spremenljivke
@@ -172,11 +170,6 @@ const thebe_selector_output = ".output, .cell_output"
  <li class="toctree-l1">
   <a class="reference internal" href="05_metode_nizov_in_seznamov.html">
    11. Metode nizov in seznamov
-  </a>
- </li>
- <li class="toctree-l1 current active">
-  <a class="current reference internal" href="#">
-   12. Slovarji in množice
   </a>
  </li>
 </ul>
@@ -417,34 +410,34 @@ title="Print to PDF"
         <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#slovar">
-   12.1. Slovar
+   Slovar
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#kaj-lahko-pocnemo-s-slovarji">
-     12.1.1. Kaj lahko počnemo s slovarji?
+     Kaj lahko počnemo s slovarji?
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#primer-kronogrami">
-     12.1.2. Primer: kronogrami
+     Primer: kronogrami
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#privzete-vrednosti">
-     12.1.3. Privzete vrednosti
+     Privzete vrednosti
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#stevec">
-     12.1.4. Števec
+     Števec
     </a>
    </li>
   </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#mnozice">
-   12.2. Množice
+   Množice
   </a>
  </li>
 </ul>
@@ -468,34 +461,34 @@ title="Print to PDF"
                             <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#slovar">
-   12.1. Slovar
+   Slovar
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#kaj-lahko-pocnemo-s-slovarji">
-     12.1.1. Kaj lahko počnemo s slovarji?
+     Kaj lahko počnemo s slovarji?
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#primer-kronogrami">
-     12.1.2. Primer: kronogrami
+     Primer: kronogrami
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#privzete-vrednosti">
-     12.1.3. Privzete vrednosti
+     Privzete vrednosti
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#stevec">
-     12.1.4. Števec
+     Števec
     </a>
    </li>
   </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#mnozice">
-   12.2. Množice
+   Množice
   </a>
  </li>
 </ul>
@@ -509,9 +502,9 @@ title="Print to PDF"
               <div>
                 
   <section class="tex2jax_ignore mathjax_ignore" id="slovarji-in-mnozice">
-<h1><span class="section-number">12. </span>Slovarji in množice<a class="headerlink" href="#slovarji-in-mnozice" title="Permalink to this headline">#</a></h1>
+<h1>Slovarji in množice<a class="headerlink" href="#slovarji-in-mnozice" title="Permalink to this headline">#</a></h1>
 <section id="slovar">
-<h2><span class="section-number">12.1. </span>Slovar<a class="headerlink" href="#slovar" title="Permalink to this headline">#</a></h2>
+<h2>Slovar<a class="headerlink" href="#slovar" title="Permalink to this headline">#</a></h2>
 <p>Poglejmo še enkrat sezname. Seznam je nekakšna zbirka nekih poljubnih reči, pri čemer je vsaka reč v svojem “predalčku”, predalčki pa so oštevilčeni. Prvi ima številko 0, drugi 1, tretji 2 in tako naprej. Za vsak predalček lahko pogledamo, kaj je v njem, spremenimo njegovo vsebino, predalčke lahko odvzemamo in dodajamo.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">s</span> <span class="o">=</span> <span class="p">[</span><span class="mi">6</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">1</span><span class="p">]</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">s</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
@@ -578,7 +571,7 @@ tretjega elementa, saj ključi niso nujno primerljivi - v istem slovarju se lahk
 <p>Drugi obrok cene, ki jo plačamo za učinkovitost slovarjev, je poraba pomnilnika: slovar porabi nekako dvakrat več pomnilnika kot seznam. Koliko, točno, več, je odvisno od velikost slovarja in tega, kaj shranjujemo. Pri tem predmetu se s pomnilnikom ne obremenjujte.</p>
 <p>Aha, še tretji obrok cene, iz drobnega tiska: vsak ključ se lahko pojavi največ enkrat. Če poskušamo prirediti neko vrednost ključu, ki že obstaja, le povozimo staro vrednost. Ampak to je tako ali tako pričakovati. Tudi v seznamu nimamo nikoli dveh različnih elementov na istem mestu.</p>
 <section id="kaj-lahko-pocnemo-s-slovarji">
-<h3><span class="section-number">12.1.1. </span>Kaj lahko počnemo s slovarji?<a class="headerlink" href="#kaj-lahko-pocnemo-s-slovarji" title="Permalink to this headline">#</a></h3>
+<h3>Kaj lahko počnemo s slovarji?<a class="headerlink" href="#kaj-lahko-pocnemo-s-slovarji" title="Permalink to this headline">#</a></h3>
 <p>Lahko jim dodajamo nove elemente: preprosto priredimo jim nov element.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -788,7 +781,7 @@ stevilke2
 <p>Še enkrat: ne pišite <code class="docutils literal notranslate"><span class="pre">stevilke.get(&quot;Ema&quot;)</span></code>. To je čudno. Piše se <code class="docutils literal notranslate"><span class="pre">stevilke[&quot;Ema&quot;]</span></code>. Metodo <code class="docutils literal notranslate"><span class="pre">get</span></code> uporabite le takrat, kadar niste prepričani, ali slovar vsebuje ta ključ, in bi radi podali privzeto vrednost.</p>
 </section>
 <section id="primer-kronogrami">
-<h3><span class="section-number">12.1.2. </span>Primer: kronogrami<a class="headerlink" href="#primer-kronogrami" title="Permalink to this headline">#</a></h3>
+<h3>Primer: kronogrami<a class="headerlink" href="#primer-kronogrami" title="Permalink to this headline">#</a></h3>
 <p>Neka stara domača naloga je šla takole.</p>
 <p>Veliko latinskih napisov, ki obeležujejo kak pomemben dogodek, je napisanih v obliki <a class="reference external" href="http://en.wikipedia.org/wiki/Chronogram">kronograma</a>: če seštejemo vrednosti črk, ki predstavljajo tudi rimske številke (I=1, V=5, X=10, L=50, C=100, D=500, M=1000), dajo letnico dogodka.</p>
 <p>Tako, recimo, napis na cerkvi sv. Jakoba v Opatiji, CVIVS IN HOC RENOVATA LOCO PIA FVLGET IMAGO SIS CVSTOS POPVLI SANCTE IACOBE TVI, da vsoto 1793, ko je bila cerkev prenovljena (o čemer govori napis).</p>
@@ -893,7 +886,7 @@ kronogram(napis)
 </div>
 </section>
 <section id="privzete-vrednosti">
-<h3><span class="section-number">12.1.3. </span>Privzete vrednosti<a class="headerlink" href="#privzete-vrednosti" title="Permalink to this headline">#</a></h3>
+<h3>Privzete vrednosti<a class="headerlink" href="#privzete-vrednosti" title="Permalink to this headline">#</a></h3>
 <p>Slovarji so uporabne reči. V veliko primerih pa uporabimo neko različico slovarja, ki ima še en dodaten superpower.</p>
 <p>Denimo, da smo dobili v preskušanje igralno kocko, za katero nas zanima, ali goljufa. Stokrat smo jo vrgli in zabeležili rezultate.</p>
 <div class="cell docutils container">
@@ -1010,7 +1003,7 @@ pogostosti
 <p>Poglejmo si nekaj, kar je kul še bolj.</p>
 </section>
 <section id="stevec">
-<h3><span class="section-number">12.1.4. </span>Števec<a class="headerlink" href="#stevec" title="Permalink to this headline">#</a></h3>
+<h3>Števec<a class="headerlink" href="#stevec" title="Permalink to this headline">#</a></h3>
 <p>Preštevanje je tako pogosta reč, da obstaja zanj specializiran tip. Tako kot <code class="docutils literal notranslate"><span class="pre">defaultdict</span></code> je v modulu <code class="docutils literal notranslate"><span class="pre">collections</span></code>, imenuje pa se <code class="docutils literal notranslate"><span class="pre">Counter</span></code>.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1079,7 +1072,7 @@ kronogram(napis)
 </section>
 </section>
 <section id="mnozice">
-<h2><span class="section-number">12.2. </span>Množice<a class="headerlink" href="#mnozice" title="Permalink to this headline">#</a></h2>
+<h2>Množice<a class="headerlink" href="#mnozice" title="Permalink to this headline">#</a></h2>
 <p>Množice so podobne seznamom, a s to razliko, da lahko vsebujejo vsak element samo enkrat. Po drugi strani (in ne le po drugi strani, tudi tehnično) pa so podobne slovarjem. Vsebujejo lahko le elemente, ki so nespremenljivi, poleg tega pa lahko zelo hitro ugotovimo, ali množica vsebuje določen element ali ne, na podoben način kot pri slovarjih hitro ugotovimo, ali vsebujejo določen ključ ali ne.</p>
 <p>Množice zapišemo z zavitimi oklepaji, tako kot smo vajeni pri matematiki.</p>
 <div class="cell docutils container">
@@ -1367,20 +1360,6 @@ u | v
                 
     <!-- Previous / next buttons -->
 <div class='prev-next-area'>
-    <a class='left-prev' id="prev-link" href="05_metode_nizov_in_seznamov.html" title="previous page">
-        <i class="fas fa-angle-left"></i>
-        <div class="prev-next-info">
-            <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title"><span class="section-number">11. </span>Metode nizov in seznamov</p>
-        </div>
-    </a>
-    <a class='right-next' id="next-link" href="naloge/01_topovske_bitke/navodila.html" title="next page">
-    <div class="prev-next-info">
-        <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title"><span class="section-number">1. </span>Topovske bitke</p>
-    </div>
-    <i class="fas fa-angle-right"></i>
-    </a>
 </div>
             </footer>
         </div>
