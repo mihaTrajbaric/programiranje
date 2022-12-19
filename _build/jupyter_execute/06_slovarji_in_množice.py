@@ -1,6 +1,7 @@
 #!/usr/bin/env python
 # coding: utf-8
 
+# # Slovarji in množice
 # ## Slovar
 # 
 # Poglejmo še enkrat sezname. Seznam je nekakšna zbirka nekih poljubnih reči, pri čemer je vsaka reč v svojem "predalčku", predalčki pa so oštevilčeni. Prvi ima številko 0, drugi 1, tretji 2 in tako naprej. Za vsak predalček lahko pogledamo, kaj je v njem, spremenimo njegovo vsebino, predalčke lahko odvzemamo in dodajamo.
@@ -270,8 +271,8 @@ def kronogram(s):
 kronogram(napis)
 
 
-# Slovarji s privzetimi vrednostmi
-# --------------------------------
+# ### Privzete vrednosti
+# 
 # 
 # Slovarji so uporabne reči. V veliko primerih pa uporabimo neko različico slovarja, ki ima še en dodaten superpower.
 # 
@@ -377,8 +378,7 @@ pogostosti
 # 
 # Poglejmo si nekaj, kar je kul še bolj.
 # 
-# Števec
-# ------
+# ### Števec
 # 
 # Preštevanje je tako pogosta reč, da obstaja zanj specializiran tip. Tako kot `defaultdict` je v modulu `collections`, imenuje pa se `Counter`.
 
@@ -413,8 +413,8 @@ def kronogram(s):
 kronogram(napis)
 
 
-# Množice
-# -------
+# ## Množice
+# 
 # 
 # Množice so podobne seznamom, a s to razliko, da lahko vsebujejo vsak element samo enkrat. Po drugi strani (in ne le po drugi strani, tudi tehnično) pa so podobne slovarjem. Vsebujejo lahko le elemente, ki so nespremenljivi, poleg tega pa lahko zelo hitro ugotovimo, ali množica vsebuje določen element ali ne, na podoben način kot pri slovarjih hitro ugotovimo, ali vsebujejo določen ključ ali ne.
 # 

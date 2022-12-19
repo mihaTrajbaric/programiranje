@@ -1,6 +1,7 @@
 #!/usr/bin/env python
 # coding: utf-8
 
+# # Metode nizov in seznamov
 # ## Kako kličemo metode
 # 
 # Funkcijam, ki smo jih srečevali doslej, smo, da so kaj naredile, morali dati podatke, na katerih so delale. Funkcija `len` kot argument zahteva seznam ali niz, katerega dolžino bi radi izvedeli. Funkcija `input` kot
@@ -93,9 +94,9 @@ x.is_integer()
 # Med tipi, ki smo jih spoznali doslej, pa imajo uporabe vredne metode nizi in seznami. V okviru predavanj ne bomo podrobneje spoznavali vse mogočih podatkovnih tipov. Temeljiteje pa bomo pogledali metode nizov, seznamov in podobnih reči, ki jih pri programiranju v Pythonu vsakodnevno uporabljamo. Obenem bomo tako dobili vtis, kako te reči
 # izgledajo.
 # 
-# **Namen tega predavanja ni, da si zapomnite vse te metode in jih znate na pamet za izpit. :)** Namen je le, da dobite predstavo, kako to deluje in kakšne vse stvari obstajajo. Za konkretna imena pa vam bo vedno na voljo dokumentacija.
+# **Namen tega poglavja ni, da si zapomnite vse te metode in jih znate na pamet :)** Namen je le, da dobite predstavo, kako to deluje in kakšne vse stvari obstajajo. Za konkretna imena pa vam bo vedno na voljo dokumentacija.
 # 
-# ### Metode nizov
+# ## Metode nizov
 # 
 # Nekaj smo jih že spoznali: `count`, `replace` in `lower`. Zadnja ima sestro, `upper`, ki vrne niz, pri katerem so vse črke pretvorjene v velike črke. Podobna sta še `capitalize` in `title`.
 
@@ -315,7 +316,7 @@ imena = ["Ana"]
 ", ".join(imena[:-1]) + " in " + imena[-1]
 
 
-# ### Metode seznamov
+# ## Metode seznamov
 # 
 # Tako kot nizi imajo tudi seznami metodi `count` in `index`, o katerih ne bomo izgubljali besed.
 # 
