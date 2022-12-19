@@ -242,7 +242,7 @@ title="Toggle navigation"
   <div class="menu-dropdown__content">
     <ul>
       <li>
-        <a href="https://mybinder.org/v2/gh/mihaTrajbaric/programiranje/main?urlpath=tree/04b_uvazanje_modulov.ipynb"
+        <a href="https://mybinder.org/v2/gh/programiranje-SKG/skripta/main?urlpath=tree/04b_uvazanje_modulov.ipynb"
    class="headerbtn"
    data-toggle="tooltip"
 data-placement="left"
@@ -303,7 +303,7 @@ title="Fullscreen mode"
   <div class="menu-dropdown__content">
     <ul>
       <li>
-        <a href="https://github.com/mihaTrajbaric/programiranje"
+        <a href="https://github.com/programiranje-SKG/skripta"
    class="headerbtn"
    data-toggle="tooltip"
 data-placement="left"
@@ -320,7 +320,7 @@ title="Source repository"
       </li>
       
       <li>
-        <a href="https://github.com/mihaTrajbaric/programiranje/issues/new?title=Issue%20on%20page%20%2F04b_uvazanje_modulov.html&body=Your%20issue%20content%20here."
+        <a href="https://github.com/programiranje-SKG/skripta/issues/new?title=Issue%20on%20page%20%2F04b_uvazanje_modulov.html&body=Your%20issue%20content%20here."
    class="headerbtn"
    data-toggle="tooltip"
 data-placement="left"
@@ -478,7 +478,7 @@ glavnih razlogov, zakaj se učimo programiranja v Pythonu in ne v jeziku, kjer b
 <p>Modul z matematičnimim funkcijami, <code class="docutils literal notranslate"><span class="pre">math</span></code>, uvozimo tako:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>import math
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">math</span>
 </pre></div>
 </div>
 </div>
@@ -486,7 +486,7 @@ glavnih razlogov, zakaj se učimo programiranja v Pythonu in ne v jeziku, kjer b
 <p>S tem v bistvu dobimo novo spremenljivko, <code class="docutils literal notranslate"><span class="pre">math</span></code>.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>math
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">math</span>
 </pre></div>
 </div>
 </div>
@@ -500,7 +500,7 @@ glavnih razlogov, zakaj se učimo programiranja v Pythonu in ne v jeziku, kjer b
 <p>Modulov ne moremo seštevati ali množiti. Niti izpisati bolj ali manj ne. Kaj pa potem znajo? Kaj je njihov superpower? To, da vsebujejo stvari. Modul <code class="docutils literal notranslate"><span class="pre">math</span></code> vsebuje funkcije <code class="docutils literal notranslate"><span class="pre">sin</span></code>, <code class="docutils literal notranslate"><span class="pre">radians</span></code> in <code class="docutils literal notranslate"><span class="pre">sqrt</span></code>, poleg tega pa tudi kakšno konstanto, na primer <code class="docutils literal notranslate"><span class="pre">pi</span></code>. Do vseh teh stvari pridemo tako, da k spremenljivki, ki predstavlja modul, dodamo piko in ime stvari. Tako je <code class="docutils literal notranslate"><span class="pre">math.sin</span></code> funkcija, ki izračuna sinus in <code class="docutils literal notranslate"><span class="pre">math.pi</span></code> konstanta <span class="math notranslate nohighlight">\(pi\)</span>.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>math.pi
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">math</span><span class="o">.</span><span class="n">pi</span>
 </pre></div>
 </div>
 </div>
@@ -512,7 +512,7 @@ glavnih razlogov, zakaj se učimo programiranja v Pythonu in ne v jeziku, kjer b
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>math.sin(math.pi / 4)
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">math</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="n">math</span><span class="o">.</span><span class="n">pi</span> <span class="o">/</span> <span class="mi">4</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -525,7 +525,7 @@ glavnih razlogov, zakaj se učimo programiranja v Pythonu in ne v jeziku, kjer b
 <p>Uvozimo še en modul, <code class="docutils literal notranslate"><span class="pre">os</span></code>.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>import os
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">os</span>
 </pre></div>
 </div>
 </div>
@@ -533,14 +533,14 @@ glavnih razlogov, zakaj se učimo programiranja v Pythonu in ne v jeziku, kjer b
 <p>V <code class="docutils literal notranslate"><span class="pre">os</span></code> so funkcije, s katerimi lahko ustvarimo direktorij ali pobrišemo datoteko. Poleg tega pa vsebuje še nekaj zanimivega: modul. Modul <code class="docutils literal notranslate"><span class="pre">path</span></code> je modul znotraj modula <code class="docutils literal notranslate"><span class="pre">os</span></code>. Vsebuje, recimo, funkcijo <code class="docutils literal notranslate"><span class="pre">splitext</span></code>, ki za podano ime datoteke vrne osnovo in končnico.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>osnova, koncnica = os.path.splitext(&quot;nek_film.avi&quot;)
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">osnova</span><span class="p">,</span> <span class="n">koncnica</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">splitext</span><span class="p">(</span><span class="s2">&quot;nek_film.avi&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>osnova
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">osnova</span>
 </pre></div>
 </div>
 </div>
@@ -552,7 +552,7 @@ glavnih razlogov, zakaj se učimo programiranja v Pythonu in ne v jeziku, kjer b
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>koncnica
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">koncnica</span>
 </pre></div>
 </div>
 </div>
@@ -573,14 +573,14 @@ glavnih razlogov, zakaj se učimo programiranja v Pythonu in ne v jeziku, kjer b
 <p>Boljše bi bilo imeti te funkcije pri roki brez ponavljajočega se <code class="docutils literal notranslate"><span class="pre">math</span></code>. Uvozimo jih z</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>from math import sin, cos, radians, pi
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">math</span> <span class="kn">import</span> <span class="n">sin</span><span class="p">,</span> <span class="n">cos</span><span class="p">,</span> <span class="n">radians</span><span class="p">,</span> <span class="n">pi</span>
 </pre></div>
 </div>
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>cos(pi / 4)
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">cos</span><span class="p">(</span><span class="n">pi</span> <span class="o">/</span> <span class="mi">4</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -598,7 +598,7 @@ glavnih razlogov, zakaj se učimo programiranja v Pythonu in ne v jeziku, kjer b
 <p>Obstaja še “preprostejši” način uvažanja.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>from math import *
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">math</span> <span class="kn">import</span> <span class="o">*</span>
 </pre></div>
 </div>
 </div>
@@ -621,7 +621,7 @@ glavnih razlogov, zakaj se učimo programiranja v Pythonu in ne v jeziku, kjer b
     {
         requestKernel: true,
         binderOptions: {
-            repo: "mihaTrajbaric/programiranje",
+            repo: "programiranje-SKG/skripta",
             ref: "main",
         },
         codeMirrorConfig: {

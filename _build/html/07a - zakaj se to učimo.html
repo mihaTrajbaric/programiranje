@@ -238,7 +238,7 @@ title="Toggle navigation"
   <div class="menu-dropdown__content">
     <ul>
       <li>
-        <a href="https://mybinder.org/v2/gh/mihaTrajbaric/programiranje/main?urlpath=tree/07a - zakaj se to učimo.ipynb"
+        <a href="https://mybinder.org/v2/gh/programiranje-SKG/skripta/main?urlpath=tree/07a - zakaj se to učimo.ipynb"
    class="headerbtn"
    data-toggle="tooltip"
 data-placement="left"
@@ -299,7 +299,7 @@ title="Fullscreen mode"
   <div class="menu-dropdown__content">
     <ul>
       <li>
-        <a href="https://github.com/mihaTrajbaric/programiranje"
+        <a href="https://github.com/programiranje-SKG/skripta"
    class="headerbtn"
    data-toggle="tooltip"
 data-placement="left"
@@ -316,7 +316,7 @@ title="Source repository"
       </li>
       
       <li>
-        <a href="https://github.com/mihaTrajbaric/programiranje/issues/new?title=Issue%20on%20page%20%2F07a - zakaj se to učimo.html&body=Your%20issue%20content%20here."
+        <a href="https://github.com/programiranje-SKG/skripta/issues/new?title=Issue%20on%20page%20%2F07a - zakaj se to učimo.html&body=Your%20issue%20content%20here."
    class="headerbtn"
    data-toggle="tooltip"
 data-placement="left"
@@ -493,7 +493,7 @@ title="Print to PDF"
 <p>Poglejmo na primeru. Recimo, da imamo nek seznam in naloga je, da preštejemo, kolikokrat se pojavi kateri element.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>s = [4, 5, 1, 3, 2, 1, 6, 3, 3, 4, 3, 1, 1, 4]
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">s</span> <span class="o">=</span> <span class="p">[</span><span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">4</span><span class="p">]</span>
 </pre></div>
 </div>
 </div>
@@ -501,13 +501,13 @@ title="Print to PDF"
 <p>“Po starem” bi naredili tako.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>stevci = {}
-for x in s:
-    if x not in stevci:
-        stevci[x] = 0
-    stevci[x] += 1
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">stevci</span> <span class="o">=</span> <span class="p">{}</span>
+<span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">s</span><span class="p">:</span>
+    <span class="k">if</span> <span class="n">x</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">stevci</span><span class="p">:</span>
+        <span class="n">stevci</span><span class="p">[</span><span class="n">x</span><span class="p">]</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="n">stevci</span><span class="p">[</span><span class="n">x</span><span class="p">]</span> <span class="o">+=</span> <span class="mi">1</span>
 
-stevci
+<span class="n">stevci</span>
 </pre></div>
 </div>
 </div>
@@ -523,11 +523,11 @@ stevci
 <p>V principu se da, vendar je točno to tisto, česar nočemo. Če vemo, da je gornje isto kot</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>stevci = {}
-for x in s:
-    stevci = {**stevci, x: 1 + stevci.get(x, 0)}
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">stevci</span> <span class="o">=</span> <span class="p">{}</span>
+<span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">s</span><span class="p">:</span>
+    <span class="n">stevci</span> <span class="o">=</span> <span class="p">{</span><span class="o">**</span><span class="n">stevci</span><span class="p">,</span> <span class="n">x</span><span class="p">:</span> <span class="mi">1</span> <span class="o">+</span> <span class="n">stevci</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="mi">0</span><span class="p">)}</span>
     
-stevci
+<span class="n">stevci</span>
 </pre></div>
 </div>
 </div>
@@ -541,11 +541,11 @@ stevci
 <p>lahko vse skupaj spremenimo v</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>from functools import reduce
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">functools</span> <span class="kn">import</span> <span class="n">reduce</span>
 
-stevci = reduce(lambda acc, x: {**acc, x: 1 + stevci.get(x, 0)}, s, {})
+<span class="n">stevci</span> <span class="o">=</span> <span class="n">reduce</span><span class="p">(</span><span class="k">lambda</span> <span class="n">acc</span><span class="p">,</span> <span class="n">x</span><span class="p">:</span> <span class="p">{</span><span class="o">**</span><span class="n">acc</span><span class="p">,</span> <span class="n">x</span><span class="p">:</span> <span class="mi">1</span> <span class="o">+</span> <span class="n">stevci</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="mi">0</span><span class="p">)},</span> <span class="n">s</span><span class="p">,</span> <span class="p">{})</span>
 
-stevci
+<span class="n">stevci</span>
 </pre></div>
 </div>
 </div>
@@ -563,9 +563,9 @@ stevci
 <p>Pravilna rešitev je</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>stevci = {x: s.count(x) for x in set(s)}
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">stevci</span> <span class="o">=</span> <span class="p">{</span><span class="n">x</span><span class="p">:</span> <span class="n">s</span><span class="o">.</span><span class="n">count</span><span class="p">(</span><span class="n">x</span><span class="p">)</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="nb">set</span><span class="p">(</span><span class="n">s</span><span class="p">)}</span>
 
-stevci
+<span class="n">stevci</span>
 </pre></div>
 </div>
 </div>
@@ -606,7 +606,7 @@ stevci
     {
         requestKernel: true,
         binderOptions: {
-            repo: "mihaTrajbaric/programiranje",
+            repo: "programiranje-SKG/skripta",
             ref: "main",
         },
         codeMirrorConfig: {

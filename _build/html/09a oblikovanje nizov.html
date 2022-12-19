@@ -238,7 +238,7 @@ title="Toggle navigation"
   <div class="menu-dropdown__content">
     <ul>
       <li>
-        <a href="https://mybinder.org/v2/gh/mihaTrajbaric/programiranje/main?urlpath=tree/09a oblikovanje nizov.ipynb"
+        <a href="https://mybinder.org/v2/gh/programiranje-SKG/skripta/main?urlpath=tree/09a oblikovanje nizov.ipynb"
    class="headerbtn"
    data-toggle="tooltip"
 data-placement="left"
@@ -299,7 +299,7 @@ title="Fullscreen mode"
   <div class="menu-dropdown__content">
     <ul>
       <li>
-        <a href="https://github.com/mihaTrajbaric/programiranje"
+        <a href="https://github.com/programiranje-SKG/skripta"
    class="headerbtn"
    data-toggle="tooltip"
 data-placement="left"
@@ -316,7 +316,7 @@ title="Source repository"
       </li>
       
       <li>
-        <a href="https://github.com/mihaTrajbaric/programiranje/issues/new?title=Issue%20on%20page%20%2F09a oblikovanje nizov.html&body=Your%20issue%20content%20here."
+        <a href="https://github.com/programiranje-SKG/skripta/issues/new?title=Issue%20on%20page%20%2F09a oblikovanje nizov.html&body=Your%20issue%20content%20here."
    class="headerbtn"
    data-toggle="tooltip"
 data-placement="left"
@@ -477,7 +477,7 @@ title="Print to PDF"
 <p>Pri izpisovanju smo bili doslej omejeni na dokaj zoprni <code class="docutils literal notranslate"><span class="pre">print</span></code>. Za začetek nam je zadoščal, kmalu pa postane neroden, saj nekaterih stvari z njim preprosto ni mogoče (preprosto) narediti. Za začetek se je potrebno z njim pogajati, da ne gre po vsakem izpisu v novo vrsto in da ne dodaja presledkov med reči, ki jih izpisujemo. Mu je mogoče reči, naj pri izpisu števil ne izpiše vseh šestnajst ali kolikor že decimalk? Tudi ne. <code class="docutils literal notranslate"><span class="pre">print</span></code> se s takimi rečmi ne ukvarja.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>print(6 / 7)
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="mi">6</span> <span class="o">/</span> <span class="mi">7</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -497,8 +497,8 @@ title="Print to PDF"
 <p>Recimo, da imamo</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>fahr = 42
-celz = (fahr - 32) * 5 / 9
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">fahr</span> <span class="o">=</span> <span class="mi">42</span>
+<span class="n">celz</span> <span class="o">=</span> <span class="p">(</span><span class="n">fahr</span> <span class="o">-</span> <span class="mi">32</span><span class="p">)</span> <span class="o">*</span> <span class="mi">5</span> <span class="o">/</span> <span class="mi">9</span>
 </pre></div>
 </div>
 </div>
@@ -506,7 +506,7 @@ celz = (fahr - 32) * 5 / 9
 <p>Zdaj bi radi sestavili, v bistvu, takšen niz:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>&quot;{fahr} Fahrenheitov je {celz} Celzijev&quot;
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="s2">&quot;</span><span class="si">{fahr}</span><span class="s2"> Fahrenheitov je </span><span class="si">{celz}</span><span class="s2"> Celzijev&quot;</span>
 </pre></div>
 </div>
 </div>
@@ -520,7 +520,7 @@ celz = (fahr - 32) * 5 / 9
 <p>To počnejo f-nizi. F-niz je kot običajen niz, le da mu pred prvi narekovaj dodamo črko f (kot <em>format</em>). V takšnih nizih imajo zaviti oklepaji poseben pomen: kar je v njih, se (izračuna in) vstavi.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>f&quot;{fahr} Fahrenheitov je {celz} Celzijev&quot;
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">fahr</span><span class="si">}</span><span class="s2"> Fahrenheitov je </span><span class="si">{</span><span class="n">celz</span><span class="si">}</span><span class="s2"> Celzijev&quot;</span>
 </pre></div>
 </div>
 </div>
@@ -555,8 +555,8 @@ celz = (fahr - 32) * 5 / 9
 <p>Na ta način ne vstavljamo le števil, temveč karkoli, kar se da izpisati.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>datoteka = &quot;kraljice.py&quot;
-f&quot;Datoteke {datoteka} ne najdem&quot;
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">datoteka</span> <span class="o">=</span> <span class="s2">&quot;kraljice.py&quot;</span>
+<span class="sa">f</span><span class="s2">&quot;Datoteke </span><span class="si">{</span><span class="n">datoteka</span><span class="si">}</span><span class="s2"> ne najdem&quot;</span>
 </pre></div>
 </div>
 </div>
@@ -572,9 +572,9 @@ f&quot;Datoteke {datoteka} ne najdem&quot;
 <p>V nize ne vstavljamo le vrednosti spremenljivk: v zavite oklepaje lahko pišemo kar cele izraze.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>fahr = 42
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">fahr</span> <span class="o">=</span> <span class="mi">42</span>
 
-f&quot;{fahr} Fahrenheitov je {(fahr - 32) * 5 / 9} Celzijev&quot;
+<span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">fahr</span><span class="si">}</span><span class="s2"> Fahrenheitov je </span><span class="si">{</span><span class="p">(</span><span class="n">fahr</span> <span class="o">-</span> <span class="mi">32</span><span class="p">)</span> <span class="o">*</span> <span class="mi">5</span> <span class="o">/</span> <span class="mi">9</span><span class="si">}</span><span class="s2"> Celzijev&quot;</span>
 </pre></div>
 </div>
 </div>
@@ -592,7 +592,7 @@ f&quot;{fahr} Fahrenheitov je {(fahr - 32) * 5 / 9} Celzijev&quot;
 <p>To bomo najpogosteje potrebovali za oblikovanje necelih števil. To gre tako:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>f&quot;{fahr:4.1f} Fahrenheitov je {celz:4.1f} Celzijev&quot;
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">fahr</span><span class="si">:</span><span class="s2">4.1f</span><span class="si">}</span><span class="s2"> Fahrenheitov je </span><span class="si">{</span><span class="n">celz</span><span class="si">:</span><span class="s2">4.1f</span><span class="si">}</span><span class="s2"> Celzijev&quot;</span>
 </pre></div>
 </div>
 </div>
@@ -606,8 +606,8 @@ f&quot;{fahr} Fahrenheitov je {(fahr - 32) * 5 / 9} Celzijev&quot;
 <p>Če pustimo za število premalo prostora, ga bo izpis pač zasedel več.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>x = 1234.5678
-f&quot;Primer predolgega števila: {x:3.1f}&quot;
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="mf">1234.5678</span>
+<span class="sa">f</span><span class="s2">&quot;Primer predolgega števila: </span><span class="si">{</span><span class="n">x</span><span class="si">:</span><span class="s2">3.1f</span><span class="si">}</span><span class="s2">&quot;</span>
 </pre></div>
 </div>
 </div>
@@ -623,17 +623,17 @@ f&quot;Primer predolgega števila: {x:3.1f}&quot;
 vstavljamo nize ali cela števila, lahko določamo le širino:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>podatki = [
-    (74, &quot;Anze&quot;, False),
-    (82, &quot;Benjamin&quot;, False),
-    (48, &quot;Cilka&quot;, True),
-    (66, &quot;Dani&quot;, False),
-    (61, &quot;Eva&quot;, True),
-    (101, &quot;Franc&quot;, False),
-    ]
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">podatki</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="p">(</span><span class="mi">74</span><span class="p">,</span> <span class="s2">&quot;Anze&quot;</span><span class="p">,</span> <span class="kc">False</span><span class="p">),</span>
+    <span class="p">(</span><span class="mi">82</span><span class="p">,</span> <span class="s2">&quot;Benjamin&quot;</span><span class="p">,</span> <span class="kc">False</span><span class="p">),</span>
+    <span class="p">(</span><span class="mi">48</span><span class="p">,</span> <span class="s2">&quot;Cilka&quot;</span><span class="p">,</span> <span class="kc">True</span><span class="p">),</span>
+    <span class="p">(</span><span class="mi">66</span><span class="p">,</span> <span class="s2">&quot;Dani&quot;</span><span class="p">,</span> <span class="kc">False</span><span class="p">),</span>
+    <span class="p">(</span><span class="mi">61</span><span class="p">,</span> <span class="s2">&quot;Eva&quot;</span><span class="p">,</span> <span class="kc">True</span><span class="p">),</span>
+    <span class="p">(</span><span class="mi">101</span><span class="p">,</span> <span class="s2">&quot;Franc&quot;</span><span class="p">,</span> <span class="kc">False</span><span class="p">),</span>
+    <span class="p">]</span>
 
-for teza, ime, spol in podatki:
-    print(f&quot;{ime:10}{teza:6}&quot;)
+<span class="k">for</span> <span class="n">teza</span><span class="p">,</span> <span class="n">ime</span><span class="p">,</span> <span class="n">spol</span> <span class="ow">in</span> <span class="n">podatki</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">ime</span><span class="si">:</span><span class="s2">10</span><span class="si">}{</span><span class="n">teza</span><span class="si">:</span><span class="s2">6</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -653,8 +653,8 @@ Franc        101
 <p>Nizi so poravnani na levo - presledki so dodani za njimi. Večina reči, ki jih izpisujemo (nizi in števila namreč niso edino, kar se da izpisati), so poravnani tako. Številke pa so poravnane desno. To lahko spremenimo, če za dvopičje dodamo <code class="docutils literal notranslate"><span class="pre">&lt;</span></code>, <code class="docutils literal notranslate"><span class="pre">&gt;</span></code> ali <code class="docutils literal notranslate"><span class="pre">^</span></code>, s katerimi naročimo, naj bo reč poravnana levo, desno ali na sredino. Ravno obratni izpis kot zgoraj bi dosegli z</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>for teza, ime, spol in podatki:
-    print(f&quot;{ime:&gt;10}{teza:&lt;6}&quot;)
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">teza</span><span class="p">,</span> <span class="n">ime</span><span class="p">,</span> <span class="n">spol</span> <span class="ow">in</span> <span class="n">podatki</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">ime</span><span class="si">:</span><span class="s2">&gt;10</span><span class="si">}{</span><span class="n">teza</span><span class="si">:</span><span class="s2">&lt;6</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -672,8 +672,8 @@ Franc        101
 <p>To ni ravno posrečeno. Dodajmo še presledek.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>for teza, ime, spol in podatki:
-    print(f&quot;{ime:&gt;10} {teza:&lt;6}&quot;)
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">teza</span><span class="p">,</span> <span class="n">ime</span><span class="p">,</span> <span class="n">spol</span> <span class="ow">in</span> <span class="n">podatki</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">ime</span><span class="si">:</span><span class="s2">&gt;10</span><span class="si">}</span><span class="s2"> </span><span class="si">{</span><span class="n">teza</span><span class="si">:</span><span class="s2">&lt;6</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -692,8 +692,8 @@ Franc        101
 <p>Pred znak, ki določa poravnavo, lahko dodamo simbol, ki naj se uporabi za zapolnjevanje - če seveda nismo zadovoljni s presledkom. Poravnajmo imena levo, števile desno, namesto presledkov pa zapolnimo prazen prostor s pikami.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>for teza, ime, spol in podatki:
-    print(f&quot;{ime:.&lt;10}{teza:.&gt;6}&quot;)
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">teza</span><span class="p">,</span> <span class="n">ime</span><span class="p">,</span> <span class="n">spol</span> <span class="ow">in</span> <span class="n">podatki</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">ime</span><span class="si">:</span><span class="s2">.&lt;10</span><span class="si">}{</span><span class="n">teza</span><span class="si">:</span><span class="s2">.&gt;6</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -716,11 +716,11 @@ Franc........101
 <p>Niz se lahko razprostira prek več vrstic, če ga zapremo v trojne narekovaje.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>s = &quot;&quot;&quot;Niz, ki je
-dolg vec vrstic.
-Konkretno, tri!&quot;&quot;&quot;
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">s</span> <span class="o">=</span> <span class="s2">&quot;&quot;&quot;Niz, ki je</span>
+<span class="s2">dolg vec vrstic.</span>
+<span class="s2">Konkretno, tri!&quot;&quot;&quot;</span>
 
-print(s)
+<span class="nb">print</span><span class="p">(</span><span class="n">s</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -736,7 +736,7 @@ Konkretno, tri!
 <p>Poleg “običajnih” znakov, ki jih je mogoče izpisati, vsebuje niz tudi kontrolne znake. Če jih želimo “videti”, to lahko storimo tako, da niz izpišemo v ukazni vrstici, vendar brez <code class="docutils literal notranslate"><span class="pre">print</span></code>.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>s
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">s</span>
 </pre></div>
 </div>
 </div>
@@ -749,7 +749,7 @@ Konkretno, tri!
 <p>Znak <code class="docutils literal notranslate"><span class="pre">\n</span></code> ni pravi znak (in, predvsem, nista dva znaka, temveč en sam) in pomeni prehod v novo vrstico. Napišemo ga lahko tudi sami.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>s = &quot;Tole gre pa\nv dve vrstici&quot;
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">s</span> <span class="o">=</span> <span class="s2">&quot;Tole gre pa</span><span class="se">\n</span><span class="s2">v dve vrstici&quot;</span>
 </pre></div>
 </div>
 </div>
@@ -761,8 +761,8 @@ navadno uporabljamo le še enega, namreč <code class="docutils literal notransl
 tabulator. Pa ga preskusimo.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>for i in range(5, 15):
-    print(f&quot;{i}\t{i**2}&quot;)
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span> <span class="mi">15</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">i</span><span class="si">}</span><span class="se">\t</span><span class="si">{</span><span class="n">i</span><span class="o">**</span><span class="mi">2</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -786,8 +786,8 @@ tabulator. Pa ga preskusimo.</p>
 <p>Da gre pri <code class="docutils literal notranslate"><span class="pre">\n</span></code> za en znak in ne za dva, se lahko hitro prepričamo.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>s = &quot;a\nb&quot;
-print(s)
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">s</span> <span class="o">=</span> <span class="s2">&quot;a</span><span class="se">\n</span><span class="s2">b&quot;</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">s</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -800,7 +800,7 @@ b
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>print(len(s))
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">s</span><span class="p">))</span>
 </pre></div>
 </div>
 </div>
@@ -812,7 +812,7 @@ b
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>s[1]
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">s</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
 </pre></div>
 </div>
 </div>
@@ -825,7 +825,7 @@ b
 <p>Znake lahko opisujemo tudi z njihovimi kodami. To storimo z ubežnim zaporedjem <code class="docutils literal notranslate"><span class="pre">\x</span></code>, ki ji sledi koda znaka, zapisana v šestnajstiškem številskem sistemu. Tako, je, npr. koda črke a 97, to je 61 po šestnajstiško, koda z pa 122 oz. 7a po šestnajstiško. Zato lahko niz “Janez” napišemo tudi takole.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>&quot;J\x61ne\x7a&quot;
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="s2">&quot;J</span><span class="se">\x61</span><span class="s2">ne</span><span class="se">\x7a</span><span class="s2">&quot;</span>
 </pre></div>
 </div>
 </div>
@@ -839,8 +839,8 @@ b
 <p>Vzvratna poševnica (<em>backslash</em>) ima torej v nizih posebno vlogo: uporablja se za ubežno zaporedje. Kaj pa, kadar želimo, da bi bila vzvratna poševnica samo vzvratna poševnica? V tem primeru naredimo dve. Torej: <code class="docutils literal notranslate"><span class="pre">\\</span></code> je ubežno zaporedje, ki predstavlja vzvratno poševnico (eno samo!). Kupiš dva, dobiš enega. Na Windowsih bomo to reč najpogosteje srečali v imenih direktorijev.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>dir = &quot;c:\\documents and settings\\nina\\telovadba&quot;
-print(dir)
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">dir</span> <span class="o">=</span> <span class="s2">&quot;c:</span><span class="se">\\</span><span class="s2">documents and settings</span><span class="se">\\</span><span class="s2">nina</span><span class="se">\\</span><span class="s2">telovadba&quot;</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">dir</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -854,8 +854,8 @@ print(dir)
 <p>Če pozabimo pisati dvojne poševnice, dobimo, kar si zaslužimo, kar ni nujno tisto, kar bi radi.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>dir = &quot;c:\documents and settings\nina\telovadba&quot;
-print(dir)
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">dir</span> <span class="o">=</span> <span class="s2">&quot;c:\documents and settings</span><span class="se">\n</span><span class="s2">ina</span><span class="se">\t</span><span class="s2">elovadba&quot;</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">dir</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -870,8 +870,8 @@ ina	elovadba
 <p>Pisanju dvojnih poševnic se lahko izognemo z r-nizi (<em>r</em> kor <em>raw</em>). Ti so podobni f-nizom, le da pred narekovaj damo črko <code class="docutils literal notranslate"><span class="pre">r</span></code> in vzvratna poševnica bo samo vzvratna poševnica.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>dir = r&quot;c:\documents and settings\nina\telovadba&quot;
-print(dir)
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">dir</span> <span class="o">=</span> <span class="sa">r</span><span class="s2">&quot;c:\documents and settings\nina\telovadba&quot;</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">dir</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -886,7 +886,7 @@ print(dir)
 <p>Mimogrede, če vam bo kdaj prišlo prav: kodo znaka dobimo s funkcijo <code class="docutils literal notranslate"><span class="pre">ord</span></code>.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>ord(&quot;A&quot;)
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">ord</span><span class="p">(</span><span class="s2">&quot;A&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -898,7 +898,7 @@ print(dir)
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>ord(&quot;B&quot;)
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">ord</span><span class="p">(</span><span class="s2">&quot;B&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -910,7 +910,7 @@ print(dir)
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>ord(&quot;a&quot;)
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">ord</span><span class="p">(</span><span class="s2">&quot;a&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -922,7 +922,7 @@ print(dir)
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>ord(&quot;\n&quot;)
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">ord</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -935,7 +935,7 @@ print(dir)
 <p>V drugo smer vodi funkcija <code class="docutils literal notranslate"><span class="pre">chr</span></code>, ki ji povemo kodo znaka in vrne niz, ki vsebuje znak s to kodo.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>chr(65)
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">chr</span><span class="p">(</span><span class="mi">65</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -947,7 +947,7 @@ print(dir)
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>chr(66)
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">chr</span><span class="p">(</span><span class="mi">66</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -959,7 +959,7 @@ print(dir)
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>chr(10)
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">chr</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -976,7 +976,7 @@ print(dir)
     {
         requestKernel: true,
         binderOptions: {
-            repo: "mihaTrajbaric/programiranje",
+            repo: "programiranje-SKG/skripta",
             ref: "main",
         },
         codeMirrorConfig: {

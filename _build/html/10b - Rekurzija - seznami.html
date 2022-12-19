@@ -238,7 +238,7 @@ title="Toggle navigation"
   <div class="menu-dropdown__content">
     <ul>
       <li>
-        <a href="https://mybinder.org/v2/gh/mihaTrajbaric/programiranje/main?urlpath=tree/10b - Rekurzija - seznami.ipynb"
+        <a href="https://mybinder.org/v2/gh/programiranje-SKG/skripta/main?urlpath=tree/10b - Rekurzija - seznami.ipynb"
    class="headerbtn"
    data-toggle="tooltip"
 data-placement="left"
@@ -299,7 +299,7 @@ title="Fullscreen mode"
   <div class="menu-dropdown__content">
     <ul>
       <li>
-        <a href="https://github.com/mihaTrajbaric/programiranje"
+        <a href="https://github.com/programiranje-SKG/skripta"
    class="headerbtn"
    data-toggle="tooltip"
 data-placement="left"
@@ -316,7 +316,7 @@ title="Source repository"
       </li>
       
       <li>
-        <a href="https://github.com/mihaTrajbaric/programiranje/issues/new?title=Issue%20on%20page%20%2F10b - Rekurzija - seznami.html&body=Your%20issue%20content%20here."
+        <a href="https://github.com/programiranje-SKG/skripta/issues/new?title=Issue%20on%20page%20%2F10b - Rekurzija - seznami.html&body=Your%20issue%20content%20here."
    class="headerbtn"
    data-toggle="tooltip"
 data-placement="left"
@@ -524,15 +524,15 @@ title="Print to PDF"
 <p>Kar smo napisali, “<em>niz je palindrom, če je prazen ali pa je prvi znak enak zadnjemu in je vse, kar je vmes palindrom</em>” dobesedno prevedemo v Python.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>def palindrom(s):
-    return s == &quot;&quot; or s[0] == s[-1] and palindrom(s[1:-1])
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">palindrom</span><span class="p">(</span><span class="n">s</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">s</span> <span class="o">==</span> <span class="s2">&quot;&quot;</span> <span class="ow">or</span> <span class="n">s</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">==</span> <span class="n">s</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="ow">and</span> <span class="n">palindrom</span><span class="p">(</span><span class="n">s</span><span class="p">[</span><span class="mi">1</span><span class="p">:</span><span class="o">-</span><span class="mi">1</span><span class="p">])</span>
 </pre></div>
 </div>
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>palindrom(&quot;pericarežeracirep&quot;)
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">palindrom</span><span class="p">(</span><span class="s2">&quot;pericarežeracirep&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -544,7 +544,7 @@ title="Print to PDF"
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>palindrom(&quot;abcba&quot;)
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">palindrom</span><span class="p">(</span><span class="s2">&quot;abcba&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -556,7 +556,7 @@ title="Print to PDF"
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>palindrom(&quot;abccba&quot;)
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">palindrom</span><span class="p">(</span><span class="s2">&quot;abccba&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -568,7 +568,7 @@ title="Print to PDF"
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>palindrom(&quot;abcdba&quot;)
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">palindrom</span><span class="p">(</span><span class="s2">&quot;abcdba&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -600,12 +600,12 @@ title="Print to PDF"
 <p>Takole lahko rečemo: vsoto elementov seznama dobimo tako, da k prvemu elementu prištejemo vsoto ostalih. Če je seznam prazen, pa je vsota 0.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>def vsota(s):
-    if not s:
-        return 0
-    return s[0] + vsota(s[1:])
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">vsota</span><span class="p">(</span><span class="n">s</span><span class="p">):</span>
+    <span class="k">if</span> <span class="ow">not</span> <span class="n">s</span><span class="p">:</span>
+        <span class="k">return</span> <span class="mi">0</span>
+    <span class="k">return</span> <span class="n">s</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">+</span> <span class="n">vsota</span><span class="p">(</span><span class="n">s</span><span class="p">[</span><span class="mi">1</span><span class="p">:])</span>
 
-vsota([5, 8, 2])
+<span class="n">vsota</span><span class="p">([</span><span class="mi">5</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">2</span><span class="p">])</span>
 </pre></div>
 </div>
 </div>
@@ -621,15 +621,15 @@ vsota([5, 8, 2])
 <p>Seznam vsebuje sama soda števila, če je prazen ali pa je prvi element sod in vsebuje preostanek seznama sama soda števila.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>def soda(s):
-    return not s or s[0] % 2 == 0 and soda(s[1:])
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">soda</span><span class="p">(</span><span class="n">s</span><span class="p">):</span>
+    <span class="k">return</span> <span class="ow">not</span> <span class="n">s</span> <span class="ow">or</span> <span class="n">s</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">%</span> <span class="mi">2</span> <span class="o">==</span> <span class="mi">0</span> <span class="ow">and</span> <span class="n">soda</span><span class="p">(</span><span class="n">s</span><span class="p">[</span><span class="mi">1</span><span class="p">:])</span>
 </pre></div>
 </div>
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>soda([4, 8, 6, 1, 2, 4])
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">soda</span><span class="p">([</span><span class="mi">4</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">4</span><span class="p">])</span>
 </pre></div>
 </div>
 </div>
@@ -641,7 +641,7 @@ vsota([5, 8, 2])
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>soda([4, 8, 6, 2, 4])
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">soda</span><span class="p">([</span><span class="mi">4</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">4</span><span class="p">])</span>
 </pre></div>
 </div>
 </div>
@@ -663,15 +663,15 @@ vsota([5, 8, 2])
 </ul>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>def vsota_sodih(s):
-    if not s:
-        return 0
-    if s[0] % 2 == 0:
-        return s[0] + vsota_sodih(s[1:])
-    else:
-        return vsota_sodih(s[1:])
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">vsota_sodih</span><span class="p">(</span><span class="n">s</span><span class="p">):</span>
+    <span class="k">if</span> <span class="ow">not</span> <span class="n">s</span><span class="p">:</span>
+        <span class="k">return</span> <span class="mi">0</span>
+    <span class="k">if</span> <span class="n">s</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">%</span> <span class="mi">2</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">s</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">+</span> <span class="n">vsota_sodih</span><span class="p">(</span><span class="n">s</span><span class="p">[</span><span class="mi">1</span><span class="p">:])</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">vsota_sodih</span><span class="p">(</span><span class="n">s</span><span class="p">[</span><span class="mi">1</span><span class="p">:])</span>
         
-vsota_sodih([4, 2, 5, 11, 6])
+<span class="n">vsota_sodih</span><span class="p">([</span><span class="mi">4</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">11</span><span class="p">,</span> <span class="mi">6</span><span class="p">])</span>
 </pre></div>
 </div>
 </div>
@@ -688,13 +688,13 @@ vsota_sodih([4, 2, 5, 11, 6])
 <p>Če je ničti element sod, vrnemo tega. Sicer vrnemo prvega sodega med ostalimi.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>def prvi_sodi(s):
-    if s[0] % 2 == 0:
-        return s[0]
-    else:
-        return prvi_sodi(s[1:])
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">prvi_sodi</span><span class="p">(</span><span class="n">s</span><span class="p">):</span>
+    <span class="k">if</span> <span class="n">s</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">%</span> <span class="mi">2</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">s</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">prvi_sodi</span><span class="p">(</span><span class="n">s</span><span class="p">[</span><span class="mi">1</span><span class="p">:])</span>
         
-prvi_sodi([5, 11, 3, 4, 8, 7, 12])
+<span class="n">prvi_sodi</span><span class="p">([</span><span class="mi">5</span><span class="p">,</span> <span class="mi">11</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">12</span><span class="p">])</span>
 </pre></div>
 </div>
 </div>
@@ -719,17 +719,17 @@ return prvi_sodi(s[1:])</p>
 <p>Funkcija, ki vrne vse sode elemente seznama je železna klasika napačnih rešitev. Tipični prvi poskus je</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>def vsi_sodi(s):
-    if s == []:
-        return []
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">vsi_sodi</span><span class="p">(</span><span class="n">s</span><span class="p">):</span>
+    <span class="k">if</span> <span class="n">s</span> <span class="o">==</span> <span class="p">[]:</span>
+        <span class="k">return</span> <span class="p">[]</span>
     
-    t = []
-    if s[0] % 2 == 0:
-        t.append(s[0])
-    vsi_sodi(s[1:])
-    return t
+    <span class="n">t</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="k">if</span> <span class="n">s</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">%</span> <span class="mi">2</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+        <span class="n">t</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">s</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+    <span class="n">vsi_sodi</span><span class="p">(</span><span class="n">s</span><span class="p">[</span><span class="mi">1</span><span class="p">:])</span>
+    <span class="k">return</span> <span class="n">t</span>
 
-vsi_sodi([4, 2, 5, 11, 6])
+<span class="n">vsi_sodi</span><span class="p">([</span><span class="mi">4</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">11</span><span class="p">,</span> <span class="mi">6</span><span class="p">])</span>
 </pre></div>
 </div>
 </div>
@@ -743,16 +743,16 @@ vsi_sodi([4, 2, 5, 11, 6])
 <p>V drugem poskusu poskusimo zagotoviti, da bodo vse funkcije uporabljale isti <code class="docutils literal notranslate"><span class="pre">t</span></code> tako, da ga postavimo pred funkcijo - tako da postane globalna spremenljivka.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>t = []
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">t</span> <span class="o">=</span> <span class="p">[]</span>
 
-def vsi_sodi(s):
-    if s == []:
-        return []
+<span class="k">def</span> <span class="nf">vsi_sodi</span><span class="p">(</span><span class="n">s</span><span class="p">):</span>
+    <span class="k">if</span> <span class="n">s</span> <span class="o">==</span> <span class="p">[]:</span>
+        <span class="k">return</span> <span class="p">[]</span>
     
-    if s[0] % 2 == 0:
-        t.append(s[0])
-    vsi_sodi(s[1:])
-    return t
+    <span class="k">if</span> <span class="n">s</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">%</span> <span class="mi">2</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+        <span class="n">t</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">s</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+    <span class="n">vsi_sodi</span><span class="p">(</span><span class="n">s</span><span class="p">[</span><span class="mi">1</span><span class="p">:])</span>
+    <span class="k">return</span> <span class="n">t</span>
 </pre></div>
 </div>
 </div>
@@ -760,7 +760,7 @@ def vsi_sodi(s):
 <p>To deluje - vendar le enkrat. Če tole poskusimo poklicati večkrat, bo funkcija vedno dodajale elemente v ta seznam - in to ne bo dobro.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>vsi_sodi([4, 2, 5, 11, 6])
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">vsi_sodi</span><span class="p">([</span><span class="mi">4</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">11</span><span class="p">,</span> <span class="mi">6</span><span class="p">])</span>
 </pre></div>
 </div>
 </div>
@@ -772,7 +772,7 @@ def vsi_sodi(s):
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>vsi_sodi([4, 2, 5, 11, 6])
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">vsi_sodi</span><span class="p">([</span><span class="mi">4</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">11</span><span class="p">,</span> <span class="mi">6</span><span class="p">])</span>
 </pre></div>
 </div>
 </div>
@@ -784,7 +784,7 @@ def vsi_sodi(s):
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>vsi_sodi([4, 2, 5, 11, 6])
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">vsi_sodi</span><span class="p">([</span><span class="mi">4</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">11</span><span class="p">,</span> <span class="mi">6</span><span class="p">])</span>
 </pre></div>
 </div>
 </div>
@@ -797,20 +797,20 @@ def vsi_sodi(s):
 <p>To lahko poskušamo rešiti na vse žive načine. Recimo tako, da seznam praznimo na začetku funkcije.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>t = []
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">t</span> <span class="o">=</span> <span class="p">[]</span>
 
-def vsi_sodi(s):
-    t.clear()
+<span class="k">def</span> <span class="nf">vsi_sodi</span><span class="p">(</span><span class="n">s</span><span class="p">):</span>
+    <span class="n">t</span><span class="o">.</span><span class="n">clear</span><span class="p">()</span>
     
-    if s == []:
-        return t
+    <span class="k">if</span> <span class="n">s</span> <span class="o">==</span> <span class="p">[]:</span>
+        <span class="k">return</span> <span class="n">t</span>
     
-    if s[0] % 2 == 0:
-        t.append(s[0])
-    vsi_sodi(s[1:])
-    return t
+    <span class="k">if</span> <span class="n">s</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">%</span> <span class="mi">2</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+        <span class="n">t</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">s</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+    <span class="n">vsi_sodi</span><span class="p">(</span><span class="n">s</span><span class="p">[</span><span class="mi">1</span><span class="p">:])</span>
+    <span class="k">return</span> <span class="n">t</span>
 
-vsi_sodi([4, 2, 5, 11, 6])
+<span class="n">vsi_sodi</span><span class="p">([</span><span class="mi">4</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">11</span><span class="p">,</span> <span class="mi">6</span><span class="p">])</span>
 </pre></div>
 </div>
 </div>
@@ -840,13 +840,13 @@ else:
 <p>Napisati moramo funkciji <code class="docutils literal notranslate"><span class="pre">sodolih</span></code> in <code class="docutils literal notranslate"><span class="pre">lihosod</span></code>, ki preverita, ali je seznam tak, kot pravi ime funkcije.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>def sodolih(s):
-    return s == [] or s[0] % 2 == 0 and lihosod(s[1:])
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">sodolih</span><span class="p">(</span><span class="n">s</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">s</span> <span class="o">==</span> <span class="p">[]</span> <span class="ow">or</span> <span class="n">s</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">%</span> <span class="mi">2</span> <span class="o">==</span> <span class="mi">0</span> <span class="ow">and</span> <span class="n">lihosod</span><span class="p">(</span><span class="n">s</span><span class="p">[</span><span class="mi">1</span><span class="p">:])</span>
     
-def lihosod(s):
-    return s == [] or s[0] % 2 == 1 and sodolih(s[1:])
+<span class="k">def</span> <span class="nf">lihosod</span><span class="p">(</span><span class="n">s</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">s</span> <span class="o">==</span> <span class="p">[]</span> <span class="ow">or</span> <span class="n">s</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">%</span> <span class="mi">2</span> <span class="o">==</span> <span class="mi">1</span> <span class="ow">and</span> <span class="n">sodolih</span><span class="p">(</span><span class="n">s</span><span class="p">[</span><span class="mi">1</span><span class="p">:])</span>
     
-sodolih([4, 5, 8, 13, 2, 7, 0])
+<span class="n">sodolih</span><span class="p">([</span><span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">13</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">0</span><span class="p">])</span>
 </pre></div>
 </div>
 </div>
@@ -863,7 +863,7 @@ sodolih([4, 5, 8, 13, 2, 7, 0])
     {
         requestKernel: true,
         binderOptions: {
-            repo: "mihaTrajbaric/programiranje",
+            repo: "programiranje-SKG/skripta",
             ref: "main",
         },
         codeMirrorConfig: {

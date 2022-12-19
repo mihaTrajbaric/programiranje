@@ -238,7 +238,7 @@ title="Toggle navigation"
   <div class="menu-dropdown__content">
     <ul>
       <li>
-        <a href="https://mybinder.org/v2/gh/mihaTrajbaric/programiranje/main?urlpath=tree/12b objektno programiranje - dedovanje.ipynb"
+        <a href="https://mybinder.org/v2/gh/programiranje-SKG/skripta/main?urlpath=tree/12b objektno programiranje - dedovanje.ipynb"
    class="headerbtn"
    data-toggle="tooltip"
 data-placement="left"
@@ -299,7 +299,7 @@ title="Fullscreen mode"
   <div class="menu-dropdown__content">
     <ul>
       <li>
-        <a href="https://github.com/mihaTrajbaric/programiranje"
+        <a href="https://github.com/programiranje-SKG/skripta"
    class="headerbtn"
    data-toggle="tooltip"
 data-placement="left"
@@ -316,7 +316,7 @@ title="Source repository"
       </li>
       
       <li>
-        <a href="https://github.com/mihaTrajbaric/programiranje/issues/new?title=Issue%20on%20page%20%2F12b objektno programiranje - dedovanje.html&body=Your%20issue%20content%20here."
+        <a href="https://github.com/programiranje-SKG/skripta/issues/new?title=Issue%20on%20page%20%2F12b objektno programiranje - dedovanje.html&body=Your%20issue%20content%20here."
    class="headerbtn"
    data-toggle="tooltip"
 data-placement="left"
@@ -501,13 +501,13 @@ stvar v kri, pa ne pričakujmo čudežev. Pri tem predmetu se boste naučili zgo
 <p>Definirajmo razred <code class="docutils literal notranslate"><span class="pre">Oseba</span></code>. Vsaka oseba ima <code class="docutils literal notranslate"><span class="pre">ime</span></code> in <code class="docutils literal notranslate"><span class="pre">spol</span></code> (<code class="docutils literal notranslate"><span class="pre">Z</span></code> ali <code class="docutils literal notranslate"><span class="pre">M</span></code>); oba podatka podamo kot argumenta konstruktorju. Oseba zna pozdravljati: metoda <code class="docutils literal notranslate"><span class="pre">pozdravi</span></code> izpiše <code class="docutils literal notranslate"><span class="pre">Pozdravljeni,</span> <span class="pre">jaz</span> <span class="pre">sem</span> <span class="pre">{}</span></code>, kjer namesto <code class="docutils literal notranslate"><span class="pre">{}</span></code> vstavi svoje ime.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>class Oseba:
-    def __init__(self, ime, spol):
-        self.ime = ime
-        self.spol = spol
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Oseba</span><span class="p">:</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">ime</span><span class="p">,</span> <span class="n">spol</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">ime</span> <span class="o">=</span> <span class="n">ime</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">spol</span> <span class="o">=</span> <span class="n">spol</span>
 
-    def pozdravi(self):
-        print(&quot;Pozdravljeni, jaz sem {}&quot;.format(self.ime))
+    <span class="k">def</span> <span class="nf">pozdravi</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Pozdravljeni, jaz sem </span><span class="si">{}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">ime</span><span class="p">))</span>
 </pre></div>
 </div>
 </div>
@@ -515,7 +515,7 @@ stvar v kri, pa ne pričakujmo čudežev. Pri tem predmetu se boste naučili zgo
 <p>Tu smo mimogrede prvič srečali konstruktor (metodo <code class="docutils literal notranslate"><span class="pre">__init__</span></code>) z argumenti. Želva je imela konstruktor brez argumentov; novo želvo smo naredili s <code class="docutils literal notranslate"><span class="pre">Turtle()</span></code> in vedno je stala na sredini, obrnjena navzgor, vidna in s spuščenim peresom. Pri osebah ne bomo imeli “začetnega imena” (Janez Novak?!), temveč bomo morali ob konstrukciji objekta <code class="docutils literal notranslate"><span class="pre">Oseba</span></code> vedno povedati tudi njeno ime in spol.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>benjamin = Oseba(&quot;Benjamin&quot;, &quot;M&quot;)
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">benjamin</span> <span class="o">=</span> <span class="n">Oseba</span><span class="p">(</span><span class="s2">&quot;Benjamin&quot;</span><span class="p">,</span> <span class="s2">&quot;M&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -524,7 +524,7 @@ stvar v kri, pa ne pričakujmo čudežev. Pri tem predmetu se boste naučili zgo
 <p>Osebe znajo tudi vljudno pozdravljati:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>benjamin.pozdravi()
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">benjamin</span><span class="o">.</span><span class="n">pozdravi</span><span class="p">()</span>
 </pre></div>
 </div>
 </div>
@@ -541,18 +541,18 @@ bo imel metodo <code class="docutils literal notranslate"><span class="pre">ocen
 <p>Kako to storimo? Zelo preprosto: ko definiramo razred <code class="docutils literal notranslate"><span class="pre">Student</span></code>, v oklepaju dodamo še razred, iz katerega naj bo ta izpeljan.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>class Student(Oseba):
-    def __init__(self, ime, spol):
-        super().__init__(ime, spol)
-        self.ocene = {}
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Student</span><span class="p">(</span><span class="n">Oseba</span><span class="p">):</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">ime</span><span class="p">,</span> <span class="n">spol</span><span class="p">):</span>
+        <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="n">ime</span><span class="p">,</span> <span class="n">spol</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">ocene</span> <span class="o">=</span> <span class="p">{}</span>
 
-    def oceni(self, predmet, ocena):
-        self.ocene[predmet] = ocena
+    <span class="k">def</span> <span class="nf">oceni</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">predmet</span><span class="p">,</span> <span class="n">ocena</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">ocene</span><span class="p">[</span><span class="n">predmet</span><span class="p">]</span> <span class="o">=</span> <span class="n">ocena</span>
 
-    def poprecje(self):
-        if not self.ocene:
-            return 0
-        return sum(self.ocene.values()) / len(self.ocene)
+    <span class="k">def</span> <span class="nf">poprecje</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="bp">self</span><span class="o">.</span><span class="n">ocene</span><span class="p">:</span>
+            <span class="k">return</span> <span class="mi">0</span>
+        <span class="k">return</span> <span class="nb">sum</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">ocene</span><span class="o">.</span><span class="n">values</span><span class="p">())</span> <span class="o">/</span> <span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">ocene</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -560,10 +560,10 @@ bo imel metodo <code class="docutils literal notranslate"><span class="pre">ocen
 <p>Najprej preverimo, ali reč deluje.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>rebeka = Student(&quot;Rebeka&quot;, &quot;Z&quot;)
-rebeka.oceni(&quot;Programiranje 1&quot;, 10)
-rebeka.oceni(&quot;Uvod v racunalnistvo&quot;, 9)
-rebeka.poprecje()
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">rebeka</span> <span class="o">=</span> <span class="n">Student</span><span class="p">(</span><span class="s2">&quot;Rebeka&quot;</span><span class="p">,</span> <span class="s2">&quot;Z&quot;</span><span class="p">)</span>
+<span class="n">rebeka</span><span class="o">.</span><span class="n">oceni</span><span class="p">(</span><span class="s2">&quot;Programiranje 1&quot;</span><span class="p">,</span> <span class="mi">10</span><span class="p">)</span>
+<span class="n">rebeka</span><span class="o">.</span><span class="n">oceni</span><span class="p">(</span><span class="s2">&quot;Uvod v racunalnistvo&quot;</span><span class="p">,</span> <span class="mi">9</span><span class="p">)</span>
+<span class="n">rebeka</span><span class="o">.</span><span class="n">poprecje</span><span class="p">()</span>
 </pre></div>
 </div>
 </div>
@@ -576,22 +576,22 @@ rebeka.poprecje()
 <p>Sestavimo tri študente, zložimo jih v seznam in vsakemu študentu dodelimo deset naključnih ocen pri naključno izbranih predmetih.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>from random import choice, randint
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">random</span> <span class="kn">import</span> <span class="n">choice</span><span class="p">,</span> <span class="n">randint</span>
 
-s1 = Student(&quot;Ana Karenina&quot;, &quot;Z&quot;)
-s2 = Student(&quot;Berta Novak&quot;, &quot;Z&quot;)
-s3 = Student(&quot;Cilka Celarec&quot;, &quot;Z&quot;)
+<span class="n">s1</span> <span class="o">=</span> <span class="n">Student</span><span class="p">(</span><span class="s2">&quot;Ana Karenina&quot;</span><span class="p">,</span> <span class="s2">&quot;Z&quot;</span><span class="p">)</span>
+<span class="n">s2</span> <span class="o">=</span> <span class="n">Student</span><span class="p">(</span><span class="s2">&quot;Berta Novak&quot;</span><span class="p">,</span> <span class="s2">&quot;Z&quot;</span><span class="p">)</span>
+<span class="n">s3</span> <span class="o">=</span> <span class="n">Student</span><span class="p">(</span><span class="s2">&quot;Cilka Celarec&quot;</span><span class="p">,</span> <span class="s2">&quot;Z&quot;</span><span class="p">)</span>
 
-studenti = [s1, s2, s3]
+<span class="n">studenti</span> <span class="o">=</span> <span class="p">[</span><span class="n">s1</span><span class="p">,</span> <span class="n">s2</span><span class="p">,</span> <span class="n">s3</span><span class="p">]</span>
 
-predmeti = [&quot;Uvod v racunalnistvo&quot;, &quot;Programiranje 1&quot;, &quot;Racunalniska arhitektura&quot;,
-            &quot;Matematika&quot;, &quot;Diskretne strukture&quot;, &quot;Programiranje 2&quot;,
-            &quot;Podatkovne baze&quot;, &quot;Racunalniske komunikacije&quot;, &quot;Operacijski sistemi&quot;,
-            &quot;Osnove verjetnosti in statistike&quot;]
+<span class="n">predmeti</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;Uvod v racunalnistvo&quot;</span><span class="p">,</span> <span class="s2">&quot;Programiranje 1&quot;</span><span class="p">,</span> <span class="s2">&quot;Racunalniska arhitektura&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;Matematika&quot;</span><span class="p">,</span> <span class="s2">&quot;Diskretne strukture&quot;</span><span class="p">,</span> <span class="s2">&quot;Programiranje 2&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;Podatkovne baze&quot;</span><span class="p">,</span> <span class="s2">&quot;Racunalniske komunikacije&quot;</span><span class="p">,</span> <span class="s2">&quot;Operacijski sistemi&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;Osnove verjetnosti in statistike&quot;</span><span class="p">]</span>
 
-for student in studenti:
-    for i in range(10):
-        student.oceni(choice(predmeti), randint(6, 10))
+<span class="k">for</span> <span class="n">student</span> <span class="ow">in</span> <span class="n">studenti</span><span class="p">:</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">10</span><span class="p">):</span>
+        <span class="n">student</span><span class="o">.</span><span class="n">oceni</span><span class="p">(</span><span class="n">choice</span><span class="p">(</span><span class="n">predmeti</span><span class="p">),</span> <span class="n">randint</span><span class="p">(</span><span class="mi">6</span><span class="p">,</span> <span class="mi">10</span><span class="p">))</span>
 </pre></div>
 </div>
 </div>
@@ -599,8 +599,8 @@ for student in studenti:
 <p>Zdaj lahko izpišemo poprečne ocene vseh študentov.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>for student in studenti:
-    print(student.ime, student.poprecje())
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">student</span> <span class="ow">in</span> <span class="n">studenti</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">student</span><span class="o">.</span><span class="n">ime</span><span class="p">,</span> <span class="n">student</span><span class="o">.</span><span class="n">poprecje</span><span class="p">())</span>
 </pre></div>
 </div>
 </div>
@@ -615,7 +615,7 @@ Cilka Celarec 7.571428571428571
 <p>Vse to so bile študentske zadeve. Ker je Rebeka tudi oseba, pa zna tudi pozdravljati.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>rebeka.pozdravi()
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">rebeka</span><span class="o">.</span><span class="n">pozdravi</span><span class="p">()</span>
 </pre></div>
 </div>
 </div>
@@ -632,21 +632,21 @@ Cilka Celarec 7.571428571428571
 <p>Da je res tako, se najprej prepričajmo na preprostem zgledu: razredu <code class="docutils literal notranslate"><span class="pre">Student</span></code> definirajmo novo metodo <code class="docutils literal notranslate"><span class="pre">pozdravi</span></code>.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>class Student(Oseba):
-    def __init__(self, ime, spol):
-        super().__init__(ime, spol)
-        self.ocene = {}
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Student</span><span class="p">(</span><span class="n">Oseba</span><span class="p">):</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">ime</span><span class="p">,</span> <span class="n">spol</span><span class="p">):</span>
+        <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="n">ime</span><span class="p">,</span> <span class="n">spol</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">ocene</span> <span class="o">=</span> <span class="p">{}</span>
 
-    def oceni(self, predmet, ocena):
-        self.ocene[predmet] = ocena
+    <span class="k">def</span> <span class="nf">oceni</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">predmet</span><span class="p">,</span> <span class="n">ocena</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">ocene</span><span class="p">[</span><span class="n">predmet</span><span class="p">]</span> <span class="o">=</span> <span class="n">ocena</span>
 
-    def poprecje(self):
-        if not self.ocene:
-            return 0
-        return sum(self.ocene.values()) / len(self.ocene)
+    <span class="k">def</span> <span class="nf">poprecje</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="bp">self</span><span class="o">.</span><span class="n">ocene</span><span class="p">:</span>
+            <span class="k">return</span> <span class="mi">0</span>
+        <span class="k">return</span> <span class="nb">sum</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">ocene</span><span class="o">.</span><span class="n">values</span><span class="p">())</span> <span class="o">/</span> <span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">ocene</span><span class="p">)</span>
         
-    def pozdravi(self):
-        print(&quot;Pozdravljeni, jaz sem {} in sem student(ka)&quot;.format(self.ime))
+    <span class="k">def</span> <span class="nf">pozdravi</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Pozdravljeni, jaz sem </span><span class="si">{}</span><span class="s2"> in sem student(ka)&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">ime</span><span class="p">))</span>
 </pre></div>
 </div>
 </div>
@@ -654,8 +654,8 @@ Cilka Celarec 7.571428571428571
 <p>Sestavimo novo Rebeko in jo pozovimo, naj nas pozdravi.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>rebeka = Student(&quot;Rebeka&quot;, &quot;Z&quot;)
-rebeka.pozdravi()
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">rebeka</span> <span class="o">=</span> <span class="n">Student</span><span class="p">(</span><span class="s2">&quot;Rebeka&quot;</span><span class="p">,</span> <span class="s2">&quot;Z&quot;</span><span class="p">)</span>
+<span class="n">rebeka</span><span class="o">.</span><span class="n">pozdravi</span><span class="p">()</span>
 </pre></div>
 </div>
 </div>
@@ -669,22 +669,22 @@ rebeka.pozdravi()
 <p>Kaj pa, če bi hoteli poklicati podedovano metodo in ne nove? Tega ne počnemo. To je nenaravno, ne predstavljam si situacije, kjer bi nam v lepo napisanem programu to moglo priti prav … razen v enem primeru: ko nova metoda kliče staro. Tule lahko razmišljamo takole: <code class="docutils literal notranslate"><span class="pre">Student</span></code> je izpeljan iz <code class="docutils literal notranslate"><span class="pre">Oseba</span></code> in torej zna pozdravljati. Vse, kar doda k pozdravu, je “in sem student(ka)”. To pomeni, da bi lahko najprej prepustili pozdravljanje podedovani metodi in v <code class="docutils literal notranslate"><span class="pre">Student</span></code>ovem <code class="docutils literal notranslate"><span class="pre">pozdravi</span></code> le še dodatno izpisali “in sem student(ka)”. To se stori takole:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>class Student(Oseba):
-    def __init__(self, ime, spol):
-        super().__init__(ime, spol)
-        self.ocene = {}
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Student</span><span class="p">(</span><span class="n">Oseba</span><span class="p">):</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">ime</span><span class="p">,</span> <span class="n">spol</span><span class="p">):</span>
+        <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="n">ime</span><span class="p">,</span> <span class="n">spol</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">ocene</span> <span class="o">=</span> <span class="p">{}</span>
 
-    def oceni(self, predmet, ocena):
-        self.ocene[predmet] = ocena
+    <span class="k">def</span> <span class="nf">oceni</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">predmet</span><span class="p">,</span> <span class="n">ocena</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">ocene</span><span class="p">[</span><span class="n">predmet</span><span class="p">]</span> <span class="o">=</span> <span class="n">ocena</span>
 
-    def poprecje(self):
-        if not self.ocene:
-            return 0
-        return sum(self.ocene.values()) / len(self.ocene)
+    <span class="k">def</span> <span class="nf">poprecje</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="bp">self</span><span class="o">.</span><span class="n">ocene</span><span class="p">:</span>
+            <span class="k">return</span> <span class="mi">0</span>
+        <span class="k">return</span> <span class="nb">sum</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">ocene</span><span class="o">.</span><span class="n">values</span><span class="p">())</span> <span class="o">/</span> <span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">ocene</span><span class="p">)</span>
         
-    def pozdravi(self):
-        super().pozdravi()
-        print(&quot;in sem student(ka)&quot;)
+    <span class="k">def</span> <span class="nf">pozdravi</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="n">pozdravi</span><span class="p">()</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;in sem student(ka)&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -696,12 +696,12 @@ zapletenega, saj je potrebno, kadar dedujemo iz večih razredov, vsakič poiskat
 <p>Pa definirajmo še razred <code class="docutils literal notranslate"><span class="pre">Ucitelj</span></code>. Tudi ta je <code class="docutils literal notranslate"><span class="pre">Oseba</span></code> (ima ime in starost in zna pozdravljati). Ena od njegovih lastnosti je seznam predmetov, ki jih predava.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>class Ucitelj(Oseba):
-    def __init__(self, ime, spol, predmeti):
-        super().__init__(ime, spol)
-        self.predmeti = predmeti
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Ucitelj</span><span class="p">(</span><span class="n">Oseba</span><span class="p">):</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">ime</span><span class="p">,</span> <span class="n">spol</span><span class="p">,</span> <span class="n">predmeti</span><span class="p">):</span>
+        <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="n">ime</span><span class="p">,</span> <span class="n">spol</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">predmeti</span> <span class="o">=</span> <span class="n">predmeti</span>
         
-u1 = Ucitelj(&quot;Tomaž Poljanšek&quot;, &quot;M&quot;, [&quot;Programiranje 2&quot;])
+<span class="n">u1</span> <span class="o">=</span> <span class="n">Ucitelj</span><span class="p">(</span><span class="s2">&quot;Tomaž Poljanšek&quot;</span><span class="p">,</span> <span class="s2">&quot;M&quot;</span><span class="p">,</span> <span class="p">[</span><span class="s2">&quot;Programiranje 2&quot;</span><span class="p">])</span>
 </pre></div>
 </div>
 </div>
@@ -713,9 +713,9 @@ u1 = Ucitelj(&quot;Tomaž Poljanšek&quot;, &quot;M&quot;, [&quot;Programiranje 
 <p>Sestavimo funkcijo, ki izpiše imena vseh oseb na podanem seznamu.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>def izpisi_imena(s):
-    for e in s:
-        print(e.ime)
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">izpisi_imena</span><span class="p">(</span><span class="n">s</span><span class="p">):</span>
+    <span class="k">for</span> <span class="n">e</span> <span class="ow">in</span> <span class="n">s</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">e</span><span class="o">.</span><span class="n">ime</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -723,7 +723,7 @@ u1 = Ucitelj(&quot;Tomaž Poljanšek&quot;, &quot;M&quot;, [&quot;Programiranje 
 <p>Pokličemo jo lahko s seznamom študentov.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>izpisi_imena(studenti)
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">izpisi_imena</span><span class="p">(</span><span class="n">studenti</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -738,8 +738,8 @@ Cilka Celarec
 <p>Pokličemo jo lahko tudi s seznamom, v katerem so tako učitelji kot študenti.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>ljudje = [s1, s2, s3, u1]
-izpisi_imena(ljudje)
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">ljudje</span> <span class="o">=</span> <span class="p">[</span><span class="n">s1</span><span class="p">,</span> <span class="n">s2</span><span class="p">,</span> <span class="n">s3</span><span class="p">,</span> <span class="n">u1</span><span class="p">]</span>
+<span class="n">izpisi_imena</span><span class="p">(</span><span class="n">ljudje</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -755,8 +755,8 @@ Tomaž Poljanšek
 <p>Pa če imamo kar nek seznam?</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>s = [1, 2, 3]
-izpisi_imena(s)
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">s</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">]</span>
+<span class="n">izpisi_imena</span><span class="p">(</span><span class="n">s</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -779,8 +779,8 @@ izpisi_imena(s)
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>s = [&quot;Ana&quot;, &quot;Berta&quot;, &quot;Cilka&quot;]
-izpisi_imena(s)
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">s</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;Ana&quot;</span><span class="p">,</span> <span class="s2">&quot;Berta&quot;</span><span class="p">,</span> <span class="s2">&quot;Cilka&quot;</span><span class="p">]</span>
+<span class="n">izpisi_imena</span><span class="p">(</span><span class="n">s</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -807,18 +807,18 @@ drugem hočemo klicati, recimo, <code class="docutils literal notranslate"><span
 <p>Res? Pravzaprav ne. Zadošča, da imajo polje <code class="docutils literal notranslate"><span class="pre">ime</span></code>, ni pa treba, da so osebe.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>class KrNeki:
-    def __init__(self):
-        self.ime = &quot;jazbec&quot;
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">KrNeki</span><span class="p">:</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">ime</span> <span class="o">=</span> <span class="s2">&quot;jazbec&quot;</span>
 </pre></div>
 </div>
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>a, b, c = KrNeki(), KrNeki(), KrNeki()
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">c</span> <span class="o">=</span> <span class="n">KrNeki</span><span class="p">(),</span> <span class="n">KrNeki</span><span class="p">(),</span> <span class="n">KrNeki</span><span class="p">()</span>
 
-a
+<span class="n">a</span>
 </pre></div>
 </div>
 </div>
@@ -830,7 +830,7 @@ a
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>a.ime
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">a</span><span class="o">.</span><span class="n">ime</span>
 </pre></div>
 </div>
 </div>
@@ -842,7 +842,7 @@ a
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>izpisi_imena([a, b, c])
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">izpisi_imena</span><span class="p">([</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">c</span><span class="p">])</span>
 </pre></div>
 </div>
 </div>
@@ -869,30 +869,30 @@ jazbec
 <p>No, pa naredimo, kot smo sklenili: spremenimo metodo <code class="docutils literal notranslate"><span class="pre">pozdravi</span></code> (obenem pa poenostavimo razred <code class="docutils literal notranslate"><span class="pre">Student</span></code>, odvzemimo mu ocene, zato pa tudi ne potrebuje več konstruktorja in ker v tem trenutku nima nobene metode, nekaj pa je znotraj razreda vseeno potrebno napisati, napišimo <code class="docutils literal notranslate"><span class="pre">pass</span></code>). Poglejmo, kaj se zgodi.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>class Oseba:
-    def __init__(self, ime, spol):
-        self.ime = ime
-        self.spol = spol
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Oseba</span><span class="p">:</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">ime</span><span class="p">,</span> <span class="n">spol</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">ime</span> <span class="o">=</span> <span class="n">ime</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">spol</span> <span class="o">=</span> <span class="n">spol</span>
         
-    def pozdravi(self):
-        print(&quot;Pozdravljeni, jaz sem {} {}&quot;.format(self.naziv(), self.ime))
+    <span class="k">def</span> <span class="nf">pozdravi</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Pozdravljeni, jaz sem </span><span class="si">{}</span><span class="s2"> </span><span class="si">{}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">naziv</span><span class="p">(),</span> <span class="bp">self</span><span class="o">.</span><span class="n">ime</span><span class="p">))</span>
         
-class Student(Oseba):
-    pass
+<span class="k">class</span> <span class="nc">Student</span><span class="p">(</span><span class="n">Oseba</span><span class="p">):</span>
+    <span class="k">pass</span>
 </pre></div>
 </div>
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>rebeka = Student(&quot;Rebeka&quot;, &quot;Z&quot;)
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">rebeka</span> <span class="o">=</span> <span class="n">Student</span><span class="p">(</span><span class="s2">&quot;Rebeka&quot;</span><span class="p">,</span> <span class="s2">&quot;Z&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>rebeka.ime
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">rebeka</span><span class="o">.</span><span class="n">ime</span>
 </pre></div>
 </div>
 </div>
@@ -904,7 +904,7 @@ class Student(Oseba):
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>rebeka.pozdravi()
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">rebeka</span><span class="o">.</span><span class="n">pozdravi</span><span class="p">()</span>
 </pre></div>
 </div>
 </div>
@@ -930,27 +930,27 @@ class Student(Oseba):
 <p>Metodo <code class="docutils literal notranslate"><span class="pre">naziv</span></code> pa bomo naredili ločeno za študente in za učitelje.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>class Oseba:
-    def __init__(self, ime, spol):
-        self.ime = ime
-        self.spol = spol
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Oseba</span><span class="p">:</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">ime</span><span class="p">,</span> <span class="n">spol</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">ime</span> <span class="o">=</span> <span class="n">ime</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">spol</span> <span class="o">=</span> <span class="n">spol</span>
         
-    def pozdravi(self):
-        print(&quot;Pozdravljeni, jaz sem {} {}&quot;.format(self.naziv(), self.ime))
+    <span class="k">def</span> <span class="nf">pozdravi</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Pozdravljeni, jaz sem </span><span class="si">{}</span><span class="s2"> </span><span class="si">{}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">naziv</span><span class="p">(),</span> <span class="bp">self</span><span class="o">.</span><span class="n">ime</span><span class="p">))</span>
         
-class Student(Oseba):
-    def naziv(self):
-        if self.spol == &quot;Ž&quot;:
-            return &quot;študentka&quot;
-        else:
-            return &quot;študent&quot;
+<span class="k">class</span> <span class="nc">Student</span><span class="p">(</span><span class="n">Oseba</span><span class="p">):</span>
+    <span class="k">def</span> <span class="nf">naziv</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">spol</span> <span class="o">==</span> <span class="s2">&quot;Ž&quot;</span><span class="p">:</span>
+            <span class="k">return</span> <span class="s2">&quot;študentka&quot;</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="k">return</span> <span class="s2">&quot;študent&quot;</span>
 
-class Ucitelj(Oseba):
-    def naziv(self):
-            if self.spol == &quot;Z&quot;:
-                return &quot;profesorica&quot;
-            else:
-                return &quot;profesor&quot;
+<span class="k">class</span> <span class="nc">Ucitelj</span><span class="p">(</span><span class="n">Oseba</span><span class="p">):</span>
+    <span class="k">def</span> <span class="nf">naziv</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+            <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">spol</span> <span class="o">==</span> <span class="s2">&quot;Z&quot;</span><span class="p">:</span>
+                <span class="k">return</span> <span class="s2">&quot;profesorica&quot;</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="k">return</span> <span class="s2">&quot;profesor&quot;</span>
 </pre></div>
 </div>
 </div>
@@ -958,9 +958,9 @@ class Ucitelj(Oseba):
 <p>Pa poglejmo, kako deluje.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>s1 = Student(&quot;Ana Karenina&quot;, &quot;Ž&quot;)
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">s1</span> <span class="o">=</span> <span class="n">Student</span><span class="p">(</span><span class="s2">&quot;Ana Karenina&quot;</span><span class="p">,</span> <span class="s2">&quot;Ž&quot;</span><span class="p">)</span>
 
-s1.pozdravi()
+<span class="n">s1</span><span class="o">.</span><span class="n">pozdravi</span><span class="p">()</span>
 </pre></div>
 </div>
 </div>
@@ -972,9 +972,9 @@ s1.pozdravi()
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>u1 = Ucitelj(&quot;Tomaz Poljanšek&quot;, &quot;M&quot;)
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">u1</span> <span class="o">=</span> <span class="n">Ucitelj</span><span class="p">(</span><span class="s2">&quot;Tomaz Poljanšek&quot;</span><span class="p">,</span> <span class="s2">&quot;M&quot;</span><span class="p">)</span>
 
-u1.pozdravi()
+<span class="n">u1</span><span class="o">.</span><span class="n">pozdravi</span><span class="p">()</span>
 </pre></div>
 </div>
 </div>
@@ -994,9 +994,9 @@ med izvajanjem te metode pokličemo metodo <code class="docutils literal notrans
 <p>Kar smo povedali ravnokar, je res res pomembno. To je najpomembnejša reč v objektnem programiranju, zato jo moramo še malo raziskovati.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>nekdo = Oseba(&quot;Akakij Akakijevič&quot;, &quot;M&quot;)
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">nekdo</span> <span class="o">=</span> <span class="n">Oseba</span><span class="p">(</span><span class="s2">&quot;Akakij Akakijevič&quot;</span><span class="p">,</span> <span class="s2">&quot;M&quot;</span><span class="p">)</span>
 
-nekdo.pozdravi()
+<span class="n">nekdo</span><span class="o">.</span><span class="n">pozdravi</span><span class="p">()</span>
 </pre></div>
 </div>
 </div>
@@ -1029,17 +1029,17 @@ nekdo.pozdravi()
 <p>Nadaljujmo: dodajmo še en razred. Ali dva.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>class Snazilka(Oseba):
-    def __init__(self, ime):
-        super().__init__(ime, &quot;Ž&quot;)
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Snazilka</span><span class="p">(</span><span class="n">Oseba</span><span class="p">):</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">ime</span><span class="p">):</span>
+        <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="n">ime</span><span class="p">,</span> <span class="s2">&quot;Ž&quot;</span><span class="p">)</span>
         
-class Hisnik(Oseba):
-    def __init__(self, ime):
-        super().__init__(ime, &quot;M&quot;)
+<span class="k">class</span> <span class="nc">Hisnik</span><span class="p">(</span><span class="n">Oseba</span><span class="p">):</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">ime</span><span class="p">):</span>
+        <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="n">ime</span><span class="p">,</span> <span class="s2">&quot;M&quot;</span><span class="p">)</span>
         
-fata = Snazilka(&quot;Fata&quot;)
+<span class="n">fata</span> <span class="o">=</span> <span class="n">Snazilka</span><span class="p">(</span><span class="s2">&quot;Fata&quot;</span><span class="p">)</span>
 
-fata.pozdravi()
+<span class="n">fata</span><span class="o">.</span><span class="n">pozdravi</span><span class="p">()</span>
 </pre></div>
 </div>
 </div>
@@ -1067,41 +1067,41 @@ fata.pozdravi()
 <p>V vsakem jeziku in družbi pa se razvijejo norme naslavljanja neznancev. V davnih časih moje mladosti se je neznancem uradno reklo tovariš in tovarišica (v praksi se je to nanašalo samo na učitelje in učiteljice), danes sta to gospod in gospa. To so privzeti nazivi, odvisno od situacije pa uporabimo drugačnega (doktor, če gre za zdravnika ali koga, ki se je potrudil napisati daljše besedilo, ki je zaradi vezave v črno usnje dajalo vtis pomembnosti; docent, izredni profesor ali profesor za nekoga, ki je naredil vse potrebne kljukice in tako naprej). Vsi, ostali, ki niso nič posebnega, pa so torej gospodje in gospe, zato opremimo <code class="docutils literal notranslate"><span class="pre">Osebo</span></code> s tem, privzetim nazivom.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>class Oseba:
-    def __init__(self, ime, spol):
-        self.ime = ime
-        self.spol = spol
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Oseba</span><span class="p">:</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">ime</span><span class="p">,</span> <span class="n">spol</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">ime</span> <span class="o">=</span> <span class="n">ime</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">spol</span> <span class="o">=</span> <span class="n">spol</span>
         
-    def pozdravi(self):
-        print(&quot;Pozdravljeni, jaz sem {} {}.&quot;.format(self.naziv(), self.ime))
+    <span class="k">def</span> <span class="nf">pozdravi</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Pozdravljeni, jaz sem </span><span class="si">{}</span><span class="s2"> </span><span class="si">{}</span><span class="s2">.&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">naziv</span><span class="p">(),</span> <span class="bp">self</span><span class="o">.</span><span class="n">ime</span><span class="p">))</span>
         
-    def naziv(self):
-        if self.spol == &quot;Ž&quot;:
-            return &quot;gospa&quot;
-        else:
-            return &quot;gospod&quot;
+    <span class="k">def</span> <span class="nf">naziv</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">spol</span> <span class="o">==</span> <span class="s2">&quot;Ž&quot;</span><span class="p">:</span>
+            <span class="k">return</span> <span class="s2">&quot;gospa&quot;</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="k">return</span> <span class="s2">&quot;gospod&quot;</span>
         
-class Student(Oseba):
-    def naziv(self):
-        if self.spol == &quot;Ž&quot;:
-            return &quot;študentka&quot;
-        else:
-            return &quot;študent&quot;
+<span class="k">class</span> <span class="nc">Student</span><span class="p">(</span><span class="n">Oseba</span><span class="p">):</span>
+    <span class="k">def</span> <span class="nf">naziv</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">spol</span> <span class="o">==</span> <span class="s2">&quot;Ž&quot;</span><span class="p">:</span>
+            <span class="k">return</span> <span class="s2">&quot;študentka&quot;</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="k">return</span> <span class="s2">&quot;študent&quot;</span>
 
-class Ucitelj(Oseba):
-    def naziv(self):
-            if self.spol == &quot;Z&quot;:
-                return &quot;profesorica&quot;
-            else:
-                return &quot;profesor&quot;
+<span class="k">class</span> <span class="nc">Ucitelj</span><span class="p">(</span><span class="n">Oseba</span><span class="p">):</span>
+    <span class="k">def</span> <span class="nf">naziv</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+            <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">spol</span> <span class="o">==</span> <span class="s2">&quot;Z&quot;</span><span class="p">:</span>
+                <span class="k">return</span> <span class="s2">&quot;profesorica&quot;</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="k">return</span> <span class="s2">&quot;profesor&quot;</span>
 
-class Snazilka(Oseba):
-    def __init__(self, ime):
-        super().__init__(ime, &quot;Ž&quot;)
+<span class="k">class</span> <span class="nc">Snazilka</span><span class="p">(</span><span class="n">Oseba</span><span class="p">):</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">ime</span><span class="p">):</span>
+        <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="n">ime</span><span class="p">,</span> <span class="s2">&quot;Ž&quot;</span><span class="p">)</span>
         
-class Hisnik(Oseba):
-    def __init__(self, ime):
-        super().__init__(ime, &quot;M&quot;)
+<span class="k">class</span> <span class="nc">Hisnik</span><span class="p">(</span><span class="n">Oseba</span><span class="p">):</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">ime</span><span class="p">):</span>
+        <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="n">ime</span><span class="p">,</span> <span class="s2">&quot;M&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -1109,10 +1109,10 @@ class Hisnik(Oseba):
 <p>Poselimo fakulteto.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>ana = Student(&quot;Ana Karenina&quot;, &quot;Ž&quot;)
-tomaz = Ucitelj(&quot;Tomaž Poljanšek&quot;, &quot;M&quot;)
-fata = Snazilka(&quot;Fata&quot;)
-joze = Hisnik(&quot;Jože&quot;)
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">ana</span> <span class="o">=</span> <span class="n">Student</span><span class="p">(</span><span class="s2">&quot;Ana Karenina&quot;</span><span class="p">,</span> <span class="s2">&quot;Ž&quot;</span><span class="p">)</span>
+<span class="n">tomaz</span> <span class="o">=</span> <span class="n">Ucitelj</span><span class="p">(</span><span class="s2">&quot;Tomaž Poljanšek&quot;</span><span class="p">,</span> <span class="s2">&quot;M&quot;</span><span class="p">)</span>
+<span class="n">fata</span> <span class="o">=</span> <span class="n">Snazilka</span><span class="p">(</span><span class="s2">&quot;Fata&quot;</span><span class="p">)</span>
+<span class="n">joze</span> <span class="o">=</span> <span class="n">Hisnik</span><span class="p">(</span><span class="s2">&quot;Jože&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -1120,7 +1120,7 @@ joze = Hisnik(&quot;Jože&quot;)
 <p>Vsi so vljudni in se lepo pozdravljajo.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>ana.pozdravi()
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">ana</span><span class="o">.</span><span class="n">pozdravi</span><span class="p">()</span>
 </pre></div>
 </div>
 </div>
@@ -1132,7 +1132,7 @@ joze = Hisnik(&quot;Jože&quot;)
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>tomaz.pozdravi()
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">tomaz</span><span class="o">.</span><span class="n">pozdravi</span><span class="p">()</span>
 </pre></div>
 </div>
 </div>
@@ -1144,7 +1144,7 @@ joze = Hisnik(&quot;Jože&quot;)
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>fata.pozdravi()
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">fata</span><span class="o">.</span><span class="n">pozdravi</span><span class="p">()</span>
 </pre></div>
 </div>
 </div>
@@ -1156,7 +1156,7 @@ joze = Hisnik(&quot;Jože&quot;)
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>joze.pozdravi()
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">joze</span><span class="o">.</span><span class="n">pozdravi</span><span class="p">()</span>
 </pre></div>
 </div>
 </div>
@@ -1186,7 +1186,7 @@ včasih <code class="docutils literal notranslate"><span class="pre">Student.naz
     {
         requestKernel: true,
         binderOptions: {
-            repo: "mihaTrajbaric/programiranje",
+            repo: "programiranje-SKG/skripta",
             ref: "main",
         },
         codeMirrorConfig: {
