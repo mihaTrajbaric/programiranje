@@ -167,6 +167,16 @@ const thebe_selector_output = ".output, .cell_output"
    10. Ponovitev - seznami, funkcije, moduli
   </a>
  </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="05_metode_nizov_in_seznamov.html">
+   11. Metode nizov in seznamov
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="06_slovarji_in_mno%C5%BEice.html">
+   12. Slovarji in množice
+  </a>
+ </li>
 </ul>
 <p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
@@ -490,7 +500,7 @@ title="Print to PDF"
 <p>Če jo hočemo brati, jo moramo najprej odpreti.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">datoteka</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&quot;planeti.txt&quot;</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>datoteka = open(&quot;planeti.txt&quot;)
 </pre></div>
 </div>
 </div>
@@ -498,7 +508,7 @@ title="Print to PDF"
 <p>Kaj se je zgodilo tule? <code class="docutils literal notranslate"><span class="pre">open</span></code> je, očitno, funkcija, ki kot argument dobi ime datoteke, ki jo hočemo odpreti. Kot rezultat vrne … hm, datoteko? Glede na to, da smo rezultat funkcije priredili spremenljivki <code class="docutils literal notranslate"><span class="pre">datoteka</span></code>, lahko s <code class="docutils literal notranslate"><span class="pre">print(datoteka)</span></code> poškilimo vanjo in izvemo naslednje:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">datoteka</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>print(datoteka)
 </pre></div>
 </div>
 </div>
@@ -512,8 +522,8 @@ title="Print to PDF"
 <p>Tole ni bilo nič posebej informativnega. Kaj lahko počnemo z datoteko? Lahko jo prehodimo z zanko <code class="docutils literal notranslate"><span class="pre">for</span></code>.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">vrstica</span> <span class="ow">in</span> <span class="n">datoteka</span><span class="p">:</span>
-    <span class="nb">print</span><span class="p">(</span><span class="n">vrstica</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>for vrstica in datoteka:
+    print(vrstica)
 </pre></div>
 </div>
 </div>
@@ -543,8 +553,8 @@ Pluton
 <p>A gremo še enkrat?</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">vrstica</span> <span class="ow">in</span> <span class="n">datoteka</span><span class="p">:</span>
-    <span class="nb">print</span><span class="p">(</span><span class="n">vrstica</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>for vrstica in datoteka:
+    print(vrstica)
 </pre></div>
 </div>
 </div>
@@ -558,8 +568,8 @@ počnejo različne stvari. Prav tako imajo svoje metode datoteke. Ena od njih je
 celotno datoteko in vrne njeno vsebino kot niz.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">datoteka</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&quot;planeti.txt&quot;</span><span class="p">)</span>
-<span class="n">datoteka</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>datoteka = open(&quot;planeti.txt&quot;)
+datoteka.read()
 </pre></div>
 </div>
 </div>
@@ -574,10 +584,10 @@ celotno datoteko in vrne njeno vsebino kot niz.</p>
 <p>Dva nauka. Prvi: <code class="docutils literal notranslate"><span class="pre">strip</span></code> je tvoj prijatelj - še prav posebej pri branju datotek.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">datoteka</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&quot;planeti.txt&quot;</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>datoteka = open(&quot;planeti.txt&quot;)
 
-<span class="k">for</span> <span class="n">vrstica</span> <span class="ow">in</span> <span class="n">datoteka</span><span class="p">:</span>
-    <span class="nb">print</span><span class="p">(</span><span class="n">vrstica</span><span class="o">.</span><span class="n">strip</span><span class="p">())</span>
+for vrstica in datoteka:
+    print(vrstica.strip())
 </pre></div>
 </div>
 </div>
@@ -612,8 +622,8 @@ zapletati življenje, potem uporabite vsaj</p>
 <p>Datoteke vedno beremo po vrsti. Kot pove njihovo ime, datoteke tečejo.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">datoteka</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&quot;planeti.txt&quot;</span><span class="p">)</span>
-<span class="n">datoteka</span><span class="o">.</span><span class="n">readline</span><span class="p">()</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>datoteka = open(&quot;planeti.txt&quot;)
+datoteka.readline()
 </pre></div>
 </div>
 </div>
@@ -625,7 +635,7 @@ zapletati življenje, potem uporabite vsaj</p>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">datoteka</span><span class="o">.</span><span class="n">readline</span><span class="p">()</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>datoteka.readline()
 </pre></div>
 </div>
 </div>
@@ -637,7 +647,7 @@ zapletati življenje, potem uporabite vsaj</p>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">datoteka</span><span class="o">.</span><span class="n">readline</span><span class="p">()</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>datoteka.readline()
 </pre></div>
 </div>
 </div>
@@ -649,7 +659,7 @@ zapletati življenje, potem uporabite vsaj</p>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">datoteka</span><span class="o">.</span><span class="n">readlines</span><span class="p">()</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>datoteka.readlines()
 </pre></div>
 </div>
 </div>
@@ -663,7 +673,7 @@ zapletati življenje, potem uporabite vsaj</p>
 ko smo na koncu, smo na koncu.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">datoteka</span><span class="o">.</span><span class="n">readline</span><span class="p">()</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>datoteka.readline()
 </pre></div>
 </div>
 </div>
@@ -675,7 +685,7 @@ ko smo na koncu, smo na koncu.</p>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">datoteka</span><span class="o">.</span><span class="n">readlines</span><span class="p">()</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>datoteka.readlines()
 </pre></div>
 </div>
 </div>
@@ -703,7 +713,7 @@ pisanje. Način “a” pa pomeni dodajanje na konec datoteke “a”.</p>
 <p>Če torej napišemo</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">datoteka</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&quot;bogovi.txt&quot;</span><span class="p">,</span> <span class="s2">&quot;w&quot;</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>datoteka = open(&quot;bogovi.txt&quot;, &quot;w&quot;)
 </pre></div>
 </div>
 </div>
@@ -713,7 +723,7 @@ Zdaj obstaja prazna datoteka s tem imenom. Da uganemo, kako se imenuje metoda za
 datoteko, ni potrebno biti Einstein.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">datoteka</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s2">&quot;Hermes&quot;</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>datoteka.write(&quot;Hermes&quot;)
 </pre></div>
 </div>
 </div>
@@ -727,7 +737,7 @@ datoteko, ni potrebno biti Einstein.</p>
 Pojma nimam.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">datoteka</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s2">&quot;Afrodita&quot;</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>datoteka.write(&quot;Afrodita&quot;)
 </pre></div>
 </div>
 </div>
@@ -739,7 +749,7 @@ Pojma nimam.</p>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">datoteka</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s2">&quot;Ares&quot;</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>datoteka.write(&quot;Ares&quot;)
 </pre></div>
 </div>
 </div>
@@ -751,7 +761,7 @@ Pojma nimam.</p>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">datoteka</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s2">&quot;Zeus&quot;</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>datoteka.write(&quot;Zeus&quot;)
 </pre></div>
 </div>
 </div>
@@ -763,7 +773,7 @@ Pojma nimam.</p>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">datoteka</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s2">&quot;Kronos&quot;</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>datoteka.write(&quot;Kronos&quot;)
 </pre></div>
 </div>
 </div>
@@ -779,7 +789,7 @@ posebej, temveč čaka, da se bo malo nabralo. Zagotovo pa bo zapisal, vse kar j
 zapremo.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">datoteka</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>datoteka.close()
 </pre></div>
 </div>
 </div>
@@ -787,7 +797,7 @@ zapremo.</p>
 <p>Po tem ne moremo več pisati vanjo.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">datoteka</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s2">&quot;Caelus&quot;</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>datoteka.write(&quot;Caelus&quot;)
 </pre></div>
 </div>
 </div>
@@ -810,11 +820,11 @@ zapremo.</p>
 <p>Popravni izpit:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">datoteka</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&quot;bogovi.txt&quot;</span><span class="p">,</span> <span class="s2">&quot;w&quot;</span><span class="p">)</span>
-<span class="n">datoteka</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s2">&quot;Hermes</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
-<span class="n">datoteka</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s2">&quot;Afrodita</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
-<span class="n">datoteka</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s2">&quot;Ares</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
-<span class="n">datoteka</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>datoteka = open(&quot;bogovi.txt&quot;, &quot;w&quot;)
+datoteka.write(&quot;Hermes\n&quot;)
+datoteka.write(&quot;Afrodita\n&quot;)
+datoteka.write(&quot;Ares\n&quot;)
+datoteka.close()
 </pre></div>
 </div>
 </div>
@@ -830,8 +840,8 @@ argumentov poljubnega tipa, sprejme <code class="docutils literal notranslate"><
 <em>izpisati</em> prvih deset števil in njihove kvadrate, bi pisali</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">10</span><span class="p">):</span>
-    <span class="nb">print</span><span class="p">(</span><span class="n">i</span><span class="p">,</span> <span class="n">i</span> <span class="o">**</span> <span class="mi">2</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>for i in range(10):
+    print(i, i ** 2)
 </pre></div>
 </div>
 </div>
@@ -853,10 +863,10 @@ argumentov poljubnega tipa, sprejme <code class="docutils literal notranslate"><
 <p>Če bi jih hoteli zapisati v datoteko, bi jih morali najprej preoblikovati v nize.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">k</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&quot;kvadrati.txt&quot;</span><span class="p">,</span> <span class="s2">&quot;w&quot;</span><span class="p">)</span>
-<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">10</span><span class="p">):</span>
-    <span class="n">k</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">i</span><span class="si">}</span><span class="s2"> </span><span class="si">{</span><span class="n">i</span> <span class="o">**</span> <span class="mi">2</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
-<span class="n">k</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>k = open(&quot;kvadrati.txt&quot;, &quot;w&quot;)
+for i in range(10):
+    k.write(f&quot;{i} {i ** 2}&quot;)
+k.close()
 </pre></div>
 </div>
 </div>
@@ -871,9 +881,9 @@ določi operacijski sistem (kako, je odvisno od sistema, programa in bogvečesa 
 izvemo s funkcijo <code class="docutils literal notranslate"><span class="pre">os.getcwd()</span></code>.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">os</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>import os
 
-<span class="n">os</span><span class="o">.</span><span class="n">getcwd</span><span class="p">()</span>
+os.getcwd()
 </pre></div>
 </div>
 </div>
@@ -911,7 +921,7 @@ naglasov), se lahko delamo, da je v UTF-8. Čim vsebuje šumnike (recimo po stan
 <p>Kako Pythonu povemo, kako naj bere besedilo? Metoda <code class="docutils literal notranslate"><span class="pre">open</span></code> ima še par argumentov. Tretji nas ne zanima in naj ima vrednost <code class="docutils literal notranslate"><span class="pre">-1</span></code>, četrti pa poda vrsto zapisa. Ime mu je <code class="docutils literal notranslate"><span class="pre">encoding</span></code>. Da preskočimo tretjega, <code class="docutils literal notranslate"><span class="pre">encoding</span></code> navadno podamo poimensko.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">open</span><span class="p">(</span><span class="s2">&quot;planeti.txt&quot;</span><span class="p">,</span> <span class="s2">&quot;r&quot;</span><span class="p">,</span> <span class="n">encoding</span><span class="o">=</span><span class="s2">&quot;utf8&quot;</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>open(&quot;planeti.txt&quot;, &quot;r&quot;, encoding=&quot;utf8&quot;)
 </pre></div>
 </div>
 </div>
