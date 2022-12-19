@@ -252,7 +252,7 @@ title="Fullscreen mode"
   <div class="menu-dropdown__content">
     <ul>
       <li>
-        <a href="https://github.com/mihaTrajbaric/programiranje"
+        <a href="https://github.com/programiranje-SKG/skripta"
    class="headerbtn"
    data-toggle="tooltip"
 data-placement="left"
@@ -269,7 +269,7 @@ title="Source repository"
       </li>
       
       <li>
-        <a href="https://github.com/mihaTrajbaric/programiranje/issues/new?title=Issue%20on%20page%20%2FREADME.html&body=Your%20issue%20content%20here."
+        <a href="https://github.com/programiranje-SKG/skripta/issues/new?title=Issue%20on%20page%20%2FREADME.html&body=Your%20issue%20content%20here."
    class="headerbtn"
    data-toggle="tooltip"
 data-placement="left"
@@ -357,13 +357,18 @@ title="Print to PDF"
     <nav id="bd-toc-nav" aria-label="Page">
         <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#build">
-   Build
+  <a class="reference internal nav-link" href="#namestitev-paketov">
+   Namestitev paketov
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#publish">
-   Publish
+  <a class="reference internal nav-link" href="#generiranje-html-ja">
+   Generiranje html-ja
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#objava-nove-verzije">
+   Objava nove verzije
   </a>
  </li>
 </ul>
@@ -386,13 +391,18 @@ title="Print to PDF"
                         <nav aria-label="Page">
                             <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#build">
-   Build
+  <a class="reference internal nav-link" href="#namestitev-paketov">
+   Namestitev paketov
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#publish">
-   Publish
+  <a class="reference internal nav-link" href="#generiranje-html-ja">
+   Generiranje html-ja
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#objava-nove-verzije">
+   Objava nove verzije
   </a>
  </li>
 </ul>
@@ -407,16 +417,24 @@ title="Print to PDF"
                 
   <section class="tex2jax_ignore mathjax_ignore" id="programiranje">
 <h1>Programiranje<a class="headerlink" href="#programiranje" title="Permalink to this headline">#</a></h1>
-<p>Ta repozitorij vsebuje skripto, ki jo uporabljam pri krožku Začetnega programiranja na Škofijski klasični gimnaziji v Ljubljani. Skripta je dostopna na <a class="reference external" href="https://mihatrajbaric.github.io/programiranje/">https://mihatrajbaric.github.io/programiranje/</a></p>
-<section id="build">
-<h2>Build<a class="headerlink" href="#build" title="Permalink to this headline">#</a></h2>
+<p>Ta repozitorij vsebuje skripto, ki jo uporabljamo pri krožku Začetnega programiranja na Škofijski klasični gimnaziji v Ljubljani. Skripta je dostopna na <a class="reference external" href="https://mihatrajbaric.github.io/programiranje/">https://mihatrajbaric.github.io/programiranje/</a></p>
+<section id="namestitev-paketov">
+<h2>Namestitev paketov<a class="headerlink" href="#namestitev-paketov" title="Permalink to this headline">#</a></h2>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">pip</span> <span class="n">install</span> <span class="o">-</span><span class="n">r</span> <span class="n">requirements</span><span class="o">.</span><span class="n">txt</span>
+</pre></div>
+</div>
+</section>
+<section id="generiranje-html-ja">
+<h2>Generiranje html-ja<a class="headerlink" href="#generiranje-html-ja" title="Permalink to this headline">#</a></h2>
+<p>Iz mape projekta:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">jupyter</span><span class="o">-</span><span class="n">book</span> <span class="n">clean</span> <span class="o">.</span>
 <span class="n">jupyter</span><span class="o">-</span><span class="n">book</span> <span class="n">build</span> <span class="o">.</span>
 </pre></div>
 </div>
 </section>
-<section id="publish">
-<h2>Publish<a class="headerlink" href="#publish" title="Permalink to this headline">#</a></h2>
+<section id="objava-nove-verzije">
+<h2>Objava nove verzije<a class="headerlink" href="#objava-nove-verzije" title="Permalink to this headline">#</a></h2>
+<p>Ko je v glavnem branchu že koda nove verzije knjige, iz katere smo uspešno zgenerirali html, lahko stran posodobimo kot:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">ghp</span><span class="o">-</span><span class="kn">import</span> <span class="o">-</span><span class="n">n</span> <span class="o">-</span><span class="n">p</span> <span class="o">-</span><span class="n">f</span> <span class="n">_build</span><span class="o">/</span><span class="n">html</span>
 </pre></div>
 </div>
@@ -427,7 +445,7 @@ title="Print to PDF"
     {
         requestKernel: true,
         binderOptions: {
-            repo: "mihaTrajbaric/programiranje",
+            repo: "programiranje-SKG/skripta",
             ref: "main",
         },
         codeMirrorConfig: {
