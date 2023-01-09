@@ -174,6 +174,11 @@ const thebe_selector_output = ".output, .cell_output"
    11. Metode nizov in seznamov
   </a>
  </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="06_slovarji_in_mno%C5%BEice.html">
+   12. Slovarji in množice
+  </a>
+ </li>
 </ul>
 <p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
@@ -184,6 +189,11 @@ const thebe_selector_output = ".output, .cell_output"
  <li class="toctree-l1">
   <a class="reference internal" href="naloge/01_topovske_bitke/navodila.html">
    1. Topovske bitke
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="naloge/02_slovarji_in_mnozice/navodila.html">
+   2. Naloge - slovarji in mnozice
   </a>
  </li>
 </ul>
@@ -545,14 +555,14 @@ skočili v stari Python 2.7. Kar sledi, v novem Pythonu namreč ne bi dalo
 enakih izpisov - imelo pa bi (praktično) ekvivalenten učinek.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>&gt;&gt;&gt; range(5, 10)
-[5, 6, 7, 8, 9]
-&gt;&gt;&gt; range(10, 20)
-[10, 11, 12, 13, 14, 15, 16, 17, 18, 19]
-&gt;&gt;&gt; range(7)
-[0, 1, 2, 3, 4, 5, 6]
-&gt;&gt;&gt; range(16)
-[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15]
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">&gt;&gt;&gt;</span> <span class="nb">range</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span> <span class="mi">10</span><span class="p">)</span>
+<span class="p">[</span><span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">9</span><span class="p">]</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="nb">range</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">20</span><span class="p">)</span>
+<span class="p">[</span><span class="mi">10</span><span class="p">,</span> <span class="mi">11</span><span class="p">,</span> <span class="mi">12</span><span class="p">,</span> <span class="mi">13</span><span class="p">,</span> <span class="mi">14</span><span class="p">,</span> <span class="mi">15</span><span class="p">,</span> <span class="mi">16</span><span class="p">,</span> <span class="mi">17</span><span class="p">,</span> <span class="mi">18</span><span class="p">,</span> <span class="mi">19</span><span class="p">]</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="nb">range</span><span class="p">(</span><span class="mi">7</span><span class="p">)</span>
+<span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">]</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="nb">range</span><span class="p">(</span><span class="mi">16</span><span class="p">)</span>
+<span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">11</span><span class="p">,</span> <span class="mi">12</span><span class="p">,</span> <span class="mi">13</span><span class="p">,</span> <span class="mi">14</span><span class="p">,</span> <span class="mi">15</span><span class="p">]</span>
 </pre></div>
 </div>
 </div>
@@ -586,8 +596,8 @@ argument avtoritete: to je dobro zato, ker je Demšar tako rekel.</p>
 <p>Funkcija ima lahko še en, tretji argument. Ta predstavlja korak.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>&gt;&gt;&gt; range(5, 15, 2)
-[5, 7, 9, 11, 13]
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">&gt;&gt;&gt;</span> <span class="nb">range</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span> <span class="mi">15</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
+<span class="p">[</span><span class="mi">5</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">11</span><span class="p">,</span> <span class="mi">13</span><span class="p">]</span>
 </pre></div>
 </div>
 </div>
@@ -595,12 +605,12 @@ argument avtoritete: to je dobro zato, ker je Demšar tako rekel.</p>
 <p>Korak je lahko tudi negativen.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>&gt;&gt;&gt; range(10, 0, -1)
-[10, 9, 8, 7, 6, 5, 4, 3, 2, 1]
-&gt;&gt;&gt; range(10, 0, -3)
-[10, 7, 4, 1]
-&gt;&gt;&gt; range(10, 0, -5)
-[10, 5]
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">&gt;&gt;&gt;</span> <span class="nb">range</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">)</span>
+<span class="p">[</span><span class="mi">10</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">]</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="nb">range</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="o">-</span><span class="mi">3</span><span class="p">)</span>
+<span class="p">[</span><span class="mi">10</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">1</span><span class="p">]</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="nb">range</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="o">-</span><span class="mi">5</span><span class="p">)</span>
+<span class="p">[</span><span class="mi">10</span><span class="p">,</span> <span class="mi">5</span><span class="p">]</span>
 </pre></div>
 </div>
 </div>
@@ -610,10 +620,10 @@ argument avtoritete: to je dobro zato, ker je Demšar tako rekel.</p>
 10, takole nekako:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>i = 1
-while i &lt; 11:
-    print(i)
-    i += 1
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">i</span> <span class="o">=</span> <span class="mi">1</span>
+<span class="k">while</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="mi">11</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
+    <span class="n">i</span> <span class="o">+=</span> <span class="mi">1</span>
 </pre></div>
 </div>
 </div>
@@ -621,8 +631,8 @@ while i &lt; 11:
 <p>Z zanko <code class="docutils literal notranslate"><span class="pre">for</span></code> je preprostejši.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>for i in range(1, 11):
-    print(i)
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">11</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -637,12 +647,12 @@ bomo preverili vsa števila od <code class="docutils literal notranslate"><span 
 potem <code class="docutils literal notranslate"><span class="pre">n</span></code> ni praštevilo.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>n = int(input(&quot;Vpiši število&quot;))
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">n</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Vpiši število&quot;</span><span class="p">))</span>
 
-je_prastevilo = True
-for i in range(2, n):
-    if n % i == 0:
-        je_prastevilo = False
+<span class="n">je_prastevilo</span> <span class="o">=</span> <span class="kc">True</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="n">n</span><span class="p">):</span>
+    <span class="k">if</span> <span class="n">n</span> <span class="o">%</span> <span class="n">i</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+        <span class="n">je_prastevilo</span> <span class="o">=</span> <span class="kc">False</span>
 </pre></div>
 </div>
 </div>
@@ -655,14 +665,14 @@ pa presodimo, da število pač ne more biti praštevilo
 stalno opozarjamo:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>n = int(input(&quot;Vpiši število&quot;))
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">n</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Vpiši število&quot;</span><span class="p">))</span>
 
-je_prastevilo = True
-for i in range(2, n):
-    if n % i == 0:
-        je_prastevilo = False
-    else:
-        je_prastevilo = True
+<span class="n">je_prastevilo</span> <span class="o">=</span> <span class="kc">True</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="n">n</span><span class="p">):</span>
+    <span class="k">if</span> <span class="n">n</span> <span class="o">%</span> <span class="n">i</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+        <span class="n">je_prastevilo</span> <span class="o">=</span> <span class="kc">False</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">je_prastevilo</span> <span class="o">=</span> <span class="kc">True</span>
 </pre></div>
 </div>
 </div>
@@ -673,13 +683,13 @@ bi po tem, ko enkrat odkrijemo delitelj, sploh še preverjali naslednje
 potencialne delitelje. Zdaj že vemo: <code class="docutils literal notranslate"><span class="pre">break</span></code>.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>n = int(input(&quot;Vpiši število&quot;))
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">n</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Vpiši število&quot;</span><span class="p">))</span>
 
-je_prastevilo = True
-for i in range(2, n):
-    if n % i == 0:
-        je_prastevilo = False
-        break
+<span class="n">je_prastevilo</span> <span class="o">=</span> <span class="kc">True</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="n">n</span><span class="p">):</span>
+    <span class="k">if</span> <span class="n">n</span> <span class="o">%</span> <span class="n">i</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+        <span class="n">je_prastevilo</span> <span class="o">=</span> <span class="kc">False</span>
+        <span class="k">break</span>
 </pre></div>
 </div>
 </div>
@@ -693,7 +703,7 @@ jih lahko tudi tako, da preprosto zahtevamo element na tem in tem mestu.
 Vzemimo za primer seznam imen. Spomnimo se, kako je videti.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>&gt;&gt;&gt; imena = [&#39;Anze&#39;, &#39;Benjamin&#39;, &#39;Cilka&#39;, &#39;Dani&#39;, &#39;Eva&#39;, &#39;Franc&#39;]
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">&gt;&gt;&gt;</span> <span class="n">imena</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;Anze&#39;</span><span class="p">,</span> <span class="s1">&#39;Benjamin&#39;</span><span class="p">,</span> <span class="s1">&#39;Cilka&#39;</span><span class="p">,</span> <span class="s1">&#39;Dani&#39;</span><span class="p">,</span> <span class="s1">&#39;Eva&#39;</span><span class="p">,</span> <span class="s1">&#39;Franc&#39;</span><span class="p">]</span>
 </pre></div>
 </div>
 </div>
@@ -704,8 +714,8 @@ indeks, “zaporedno številko”. Zapišemo jo v oglate oklepaje za imenom
 spremenljivke, takole:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>&gt;&gt;&gt; imena[2]
-&#39;Cilka&#39;
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">&gt;&gt;&gt;</span> <span class="n">imena</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span>
+<span class="s1">&#39;Cilka&#39;</span>
 </pre></div>
 </div>
 </div>
@@ -727,8 +737,8 @@ zapiramo indekse. Naj vas to ne vznemirja, python bo že pravilno
 razumel, kaj mislite, celo v tako hecnih situacijah, kot je tale:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>&gt;&gt;&gt; [3, 1, 4, 1, 5, 9][2]
-4
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">&gt;&gt;&gt;</span> <span class="p">[</span><span class="mi">3</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">9</span><span class="p">][</span><span class="mi">2</span><span class="p">]</span>
+<span class="mi">4</span>
 </pre></div>
 </div>
 </div>
@@ -738,10 +748,10 @@ kateri element tega seznama nas zanima. [Taka raba je nenavadna, ni pa neuporabn
 <p>Tako kot sezname indeksiramo tudi terke in nize.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>&gt;&gt;&gt; &#39;Benjamin&#39;[0] 
-&#39;B&#39;
-&gt;&gt;&gt; &#39;Benjamin&#39;[2]
-&#39;n&#39;
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">&gt;&gt;&gt;</span> <span class="s1">&#39;Benjamin&#39;</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> 
+<span class="s1">&#39;B&#39;</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="s1">&#39;Benjamin&#39;</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span>
+<span class="s1">&#39;n&#39;</span>
 </pre></div>
 </div>
 </div>
@@ -750,15 +760,15 @@ kateri element tega seznama nas zanima. [Taka raba je nenavadna, ni pa neuporabn
 <p>V neki dodatni domači nalogi smo sestavili spiralo iz 10000 števil. Mislim, da noben študent ni bil tako zagnan, da bi res sestavil celotno spiralo in jo zapisal v kak seznam seznamov. Lahko pa si privoščimo zapisati spiralo iz primera.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>spirala = [
-    [37, 36, 35, 34, 33, 32, 31],
-    [38, 17, 16, 15, 14, 13, 30],
-    [39, 18,  5,  4,  3, 12, 29],
-    [40, 19,  6,  1,  2, 11, 28],
-    [41, 20,  7,  8,  9, 10, 27],
-    [42, 21, 22, 23, 24, 25, 26],
-    [43, 44, 45, 46, 47, 48, 49]
-]
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">spirala</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="p">[</span><span class="mi">37</span><span class="p">,</span> <span class="mi">36</span><span class="p">,</span> <span class="mi">35</span><span class="p">,</span> <span class="mi">34</span><span class="p">,</span> <span class="mi">33</span><span class="p">,</span> <span class="mi">32</span><span class="p">,</span> <span class="mi">31</span><span class="p">],</span>
+    <span class="p">[</span><span class="mi">38</span><span class="p">,</span> <span class="mi">17</span><span class="p">,</span> <span class="mi">16</span><span class="p">,</span> <span class="mi">15</span><span class="p">,</span> <span class="mi">14</span><span class="p">,</span> <span class="mi">13</span><span class="p">,</span> <span class="mi">30</span><span class="p">],</span>
+    <span class="p">[</span><span class="mi">39</span><span class="p">,</span> <span class="mi">18</span><span class="p">,</span>  <span class="mi">5</span><span class="p">,</span>  <span class="mi">4</span><span class="p">,</span>  <span class="mi">3</span><span class="p">,</span> <span class="mi">12</span><span class="p">,</span> <span class="mi">29</span><span class="p">],</span>
+    <span class="p">[</span><span class="mi">40</span><span class="p">,</span> <span class="mi">19</span><span class="p">,</span>  <span class="mi">6</span><span class="p">,</span>  <span class="mi">1</span><span class="p">,</span>  <span class="mi">2</span><span class="p">,</span> <span class="mi">11</span><span class="p">,</span> <span class="mi">28</span><span class="p">],</span>
+    <span class="p">[</span><span class="mi">41</span><span class="p">,</span> <span class="mi">20</span><span class="p">,</span>  <span class="mi">7</span><span class="p">,</span>  <span class="mi">8</span><span class="p">,</span>  <span class="mi">9</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">27</span><span class="p">],</span>
+    <span class="p">[</span><span class="mi">42</span><span class="p">,</span> <span class="mi">21</span><span class="p">,</span> <span class="mi">22</span><span class="p">,</span> <span class="mi">23</span><span class="p">,</span> <span class="mi">24</span><span class="p">,</span> <span class="mi">25</span><span class="p">,</span> <span class="mi">26</span><span class="p">],</span>
+    <span class="p">[</span><span class="mi">43</span><span class="p">,</span> <span class="mi">44</span><span class="p">,</span> <span class="mi">45</span><span class="p">,</span> <span class="mi">46</span><span class="p">,</span> <span class="mi">47</span><span class="p">,</span> <span class="mi">48</span><span class="p">,</span> <span class="mi">49</span><span class="p">]</span>
+<span class="p">]</span>
 </pre></div>
 </div>
 </div>
@@ -766,8 +776,8 @@ kateri element tega seznama nas zanima. [Taka raba je nenavadna, ni pa neuporabn
 <p>Do tretje vrstice pridemo tako.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>&gt;&gt;&gt; spirala[3]
-[40, 19,  6,  1,  2, 11, 28]
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">&gt;&gt;&gt;</span> <span class="n">spirala</span><span class="p">[</span><span class="mi">3</span><span class="p">]</span>
+<span class="p">[</span><span class="mi">40</span><span class="p">,</span> <span class="mi">19</span><span class="p">,</span>  <span class="mi">6</span><span class="p">,</span>  <span class="mi">1</span><span class="p">,</span>  <span class="mi">2</span><span class="p">,</span> <span class="mi">11</span><span class="p">,</span> <span class="mi">28</span><span class="p">]</span>
 </pre></div>
 </div>
 </div>
@@ -775,8 +785,8 @@ kateri element tega seznama nas zanima. [Taka raba je nenavadna, ni pa neuporabn
 <p>In drugi element iz tretje vrstice je potem</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>&gt;&gt;&gt; spirala[3][2]
-6
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">&gt;&gt;&gt;</span> <span class="n">spirala</span><span class="p">[</span><span class="mi">3</span><span class="p">][</span><span class="mi">2</span><span class="p">]</span>
+<span class="mi">6</span>
 </pre></div>
 </div>
 </div>
@@ -785,9 +795,9 @@ kateri element tega seznama nas zanima. [Taka raba je nenavadna, ni pa neuporabn
 <p>Kaj se zgodi, če je indeks prevelik? Nič lepega.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>&gt;&gt;&gt; &quot;Benjamin&quot;[100]
-Traceback (most recent call last): File &quot;&quot;,
-line 1, in IndexError: string index out of range
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">&gt;&gt;&gt;</span> <span class="s2">&quot;Benjamin&quot;</span><span class="p">[</span><span class="mi">100</span><span class="p">]</span>
+<span class="n">Traceback</span> <span class="p">(</span><span class="n">most</span> <span class="n">recent</span> <span class="n">call</span> <span class="n">last</span><span class="p">):</span> <span class="n">File</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+<span class="n">line</span> <span class="mi">1</span><span class="p">,</span> <span class="ow">in</span> <span class="ne">IndexError</span><span class="p">:</span> <span class="n">string</span> <span class="n">index</span> <span class="n">out</span> <span class="n">of</span> <span class="nb">range</span>
 </pre></div>
 </div>
 </div>
@@ -801,12 +811,12 @@ srbi, da bi vprašal, čemu ni zadnji element -0, naj se ugrizne v jezik,
 ali pa ga zatožim fakultetnim matematikom!)</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>&gt;&gt;&gt; &#39;Benjamin&#39;[-1]
-&#39;n&#39;
-&gt;&gt;&gt; &#39;Benjamin&#39;[-2]
-&#39;i&#39;
-&gt;&gt;&gt; &#39;Benjamin&#39;[-3]
-&#39;m&#39;
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">&gt;&gt;&gt;</span> <span class="s1">&#39;Benjamin&#39;</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+<span class="s1">&#39;n&#39;</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="s1">&#39;Benjamin&#39;</span><span class="p">[</span><span class="o">-</span><span class="mi">2</span><span class="p">]</span>
+<span class="s1">&#39;i&#39;</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="s1">&#39;Benjamin&#39;</span><span class="p">[</span><span class="o">-</span><span class="mi">3</span><span class="p">]</span>
+<span class="s1">&#39;m&#39;</span>
 </pre></div>
 </div>
 </div>
@@ -842,12 +852,12 @@ runde in 8-5=3 iz druge. Skupaj šest.</p>
 <p>Oglejmo si, kaj na to pravi Benjamin.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>&gt;&gt;&gt; b[2:5]
-&#39;nja&#39;
-&gt;&gt;&gt; b[5:8]
-&#39;min&#39;
-&gt;&gt;&gt; b[2:5]+b[5:8]
-&#39;njamin&#39;
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">&gt;&gt;&gt;</span> <span class="n">b</span><span class="p">[</span><span class="mi">2</span><span class="p">:</span><span class="mi">5</span><span class="p">]</span>
+<span class="s1">&#39;nja&#39;</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">b</span><span class="p">[</span><span class="mi">5</span><span class="p">:</span><span class="mi">8</span><span class="p">]</span>
+<span class="s1">&#39;min&#39;</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">b</span><span class="p">[</span><span class="mi">2</span><span class="p">:</span><span class="mi">5</span><span class="p">]</span><span class="o">+</span><span class="n">b</span><span class="p">[</span><span class="mi">5</span><span class="p">:</span><span class="mi">8</span><span class="p">]</span>
+<span class="s1">&#39;njamin&#39;</span>
 </pre></div>
 </div>
 </div>
@@ -858,10 +868,10 @@ navidez neintuitivni pravili - štetje od 0 in to, da rezina ne vključuje
 zadnjega elementa.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>&gt;&gt;&gt; b[:5]
-&#39;Benja&#39;
-&gt;&gt;&gt; b[5:]
-&#39;min&#39;
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">&gt;&gt;&gt;</span> <span class="n">b</span><span class="p">[:</span><span class="mi">5</span><span class="p">]</span>
+<span class="s1">&#39;Benja&#39;</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">b</span><span class="p">[</span><span class="mi">5</span><span class="p">:]</span>
+<span class="s1">&#39;min&#39;</span>
 </pre></div>
 </div>
 </div>
@@ -871,7 +881,7 @@ zadnjega elementa.</p>
 nizu <code class="docutils literal notranslate"><span class="pre">s</span></code> odbiti prvih pet znakov, bomo rekli</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>s = s[5:]
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">s</span> <span class="o">=</span> <span class="n">s</span><span class="p">[</span><span class="mi">5</span><span class="p">:]</span>
 </pre></div>
 </div>
 </div>
@@ -880,8 +890,8 @@ nizu <code class="docutils literal notranslate"><span class="pre">s</span></code
 vriniti. Če bi radi za petim znakom niza vrinili X, to storimo takole:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>&gt;&gt;&gt; b[:5] + &quot;X&quot; + b[5:]
-&#39;BenjaXmin&#39;
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">&gt;&gt;&gt;</span> <span class="n">b</span><span class="p">[:</span><span class="mi">5</span><span class="p">]</span> <span class="o">+</span> <span class="s2">&quot;X&quot;</span> <span class="o">+</span> <span class="n">b</span><span class="p">[</span><span class="mi">5</span><span class="p">:]</span>
+<span class="s1">&#39;BenjaXmin&#39;</span>
 </pre></div>
 </div>
 </div>
@@ -894,8 +904,8 @@ poberemo, recimo, elemente od predpredpredzadnjega (-5) do predzadnjega
 (-2). Koliko jih bo? Trije, seveda.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>&gt;&gt;&gt; b[-5:-2]
-&#39;jam&#39;
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">&gt;&gt;&gt;</span> <span class="n">b</span><span class="p">[</span><span class="o">-</span><span class="mi">5</span><span class="p">:</span><span class="o">-</span><span class="mi">2</span><span class="p">]</span>
+<span class="s1">&#39;jam&#39;</span>
 </pre></div>
 </div>
 </div>
@@ -904,11 +914,11 @@ poberemo, recimo, elemente od predpredpredzadnjega (-5) do predzadnjega
 recimo, zadnji štirje znaki. Ali pa vsi razen zadnjih štirih.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>&gt;&gt;&gt; film = &quot;Babylon 5 - 3x04 - Passing through Gethsemane.avi&quot;
-&gt;&gt;&gt; film[-4:]
-&#39;.avi&#39;
-&gt;&gt;&gt; film[:-4]
-&#39;Babylon 5 - 3x04 - Passing through Gethsemane&#39;
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">&gt;&gt;&gt;</span> <span class="n">film</span> <span class="o">=</span> <span class="s2">&quot;Babylon 5 - 3x04 - Passing through Gethsemane.avi&quot;</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">film</span><span class="p">[</span><span class="o">-</span><span class="mi">4</span><span class="p">:]</span>
+<span class="s1">&#39;.avi&#39;</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">film</span><span class="p">[:</span><span class="o">-</span><span class="mi">4</span><span class="p">]</span>
+<span class="s1">&#39;Babylon 5 - 3x04 - Passing through Gethsemane&#39;</span>
 </pre></div>
 </div>
 </div>
@@ -919,8 +929,8 @@ dvema elementoma, imenom datoteke brez končnice in končnico.</p>
 <p>Kako pa bi od niza odbili prve tri in zadnja dva znaka? Takole:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>&gt;&gt;&gt; b[3:-2]
-&#39;jam&#39;
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">&gt;&gt;&gt;</span> <span class="n">b</span><span class="p">[</span><span class="mi">3</span><span class="p">:</span><span class="o">-</span><span class="mi">2</span><span class="p">]</span>
+<span class="s1">&#39;jam&#39;</span>
 </pre></div>
 </div>
 </div>
@@ -936,15 +946,15 @@ zahtevamo, recimo, vsak drugi znak, tako da dodamo še eno dvopičje, ki
 mu sledi velikost koraka.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>&gt;&gt;&gt; &#39;0123456789&#39;[2:9]
-&#39;2345678&#39;
-&gt;&gt;&gt; &#39;0123456789&#39;[2:9:2]
-&#39;2468&#39;
-&gt;&gt;&gt; &#39;0123456789&#39;[2:9:3]
-&#39;258&#39;
-&gt;&gt;&gt;
-&#39;0123456789&#39;[2:9:4]
-&#39;26&#39;
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">&gt;&gt;&gt;</span> <span class="s1">&#39;0123456789&#39;</span><span class="p">[</span><span class="mi">2</span><span class="p">:</span><span class="mi">9</span><span class="p">]</span>
+<span class="s1">&#39;2345678&#39;</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="s1">&#39;0123456789&#39;</span><span class="p">[</span><span class="mi">2</span><span class="p">:</span><span class="mi">9</span><span class="p">:</span><span class="mi">2</span><span class="p">]</span>
+<span class="s1">&#39;2468&#39;</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="s1">&#39;0123456789&#39;</span><span class="p">[</span><span class="mi">2</span><span class="p">:</span><span class="mi">9</span><span class="p">:</span><span class="mi">3</span><span class="p">]</span>
+<span class="s1">&#39;258&#39;</span>
+<span class="o">&gt;&gt;&gt;</span>
+<span class="s1">&#39;0123456789&#39;</span><span class="p">[</span><span class="mi">2</span><span class="p">:</span><span class="mi">9</span><span class="p">:</span><span class="mi">4</span><span class="p">]</span>
+<span class="s1">&#39;26&#39;</span>
 </pre></div>
 </div>
 </div>
@@ -953,10 +963,10 @@ mu sledi velikost koraka.</p>
 potrebno zamenjati meji - prva mora biti višja od druge.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>&gt;&gt;&gt; &#39;0123456789&#39;[9:2:-1]
-&#39;9876543&#39;
-&gt;&gt;&gt; &#39;0123456789&#39;[9:2:-2]
-&#39;9753&#39;
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">&gt;&gt;&gt;</span> <span class="s1">&#39;0123456789&#39;</span><span class="p">[</span><span class="mi">9</span><span class="p">:</span><span class="mi">2</span><span class="p">:</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+<span class="s1">&#39;9876543&#39;</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="s1">&#39;0123456789&#39;</span><span class="p">[</span><span class="mi">9</span><span class="p">:</span><span class="mi">2</span><span class="p">:</span><span class="o">-</span><span class="mi">2</span><span class="p">]</span>
+<span class="s1">&#39;9753&#39;</span>
 </pre></div>
 </div>
 </div>
@@ -964,8 +974,8 @@ potrebno zamenjati meji - prva mora biti višja od druge.</p>
 <p>Meje smemo seveda spet tudi izpuščati:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>&gt;&gt;&gt; &#39;0123456789&#39;[9::-1]
-&#39;9876543210&#39;
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">&gt;&gt;&gt;</span> <span class="s1">&#39;0123456789&#39;</span><span class="p">[</span><span class="mi">9</span><span class="p">::</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+<span class="s1">&#39;9876543210&#39;</span>
 </pre></div>
 </div>
 </div>
@@ -973,8 +983,8 @@ potrebno zamenjati meji - prva mora biti višja od druge.</p>
 <p>Takole obrnemo predavatelja.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>&gt;&gt;&gt; &#39;demšar janez&#39;[::-1]
-&#39;zenaj rašmed&#39;
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">&gt;&gt;&gt;</span> <span class="s1">&#39;demšar janez&#39;</span><span class="p">[::</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+<span class="s1">&#39;zenaj rašmed&#39;</span>
 </pre></div>
 </div>
 </div>
@@ -987,19 +997,19 @@ zanke <code class="docutils literal notranslate"><span class="pre">for</span></c
 <p>Poglejmo si torej še rezanje seznamov.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>&gt;&gt;&gt; imena = [&quot;Anze&quot;, &quot;Benjamin&quot;, &quot;Cilka&quot;, &quot;Dani&quot;, &quot;Eva&quot;, &quot;Franc&quot;]
-&gt;&gt;&gt; imena[2:5]
-[&#39;Cilka&#39;, &#39;Dani&#39;, &#39;Eva&#39;]
-&gt;&gt;&gt; imena[2:]
-[&#39;Cilka&#39;, &#39;Dani&#39;, &#39;Eva&#39;, &#39;Franc&#39;]
-&gt;&gt;&gt; imena[:2]
-[&#39;Anze&#39;, &#39;Benjamin&#39;]
-&gt;&gt;&gt; imena[:-2]
-[&#39;Anze&#39;, &#39;Benjamin&#39;, &#39;Cilka&#39;, &#39;Dani&#39;]
-&gt;&gt;&gt; imena[-2:]
-[&#39;Eva&#39;, &#39;Franc&#39;]
-&gt;&gt;&gt; imena[::-1]
-[&#39;Franc&#39;, &#39;Eva&#39;, &#39;Dani&#39;, &#39;Cilka&#39;, &#39;Benjamin&#39;, &#39;Anze&#39;]
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">&gt;&gt;&gt;</span> <span class="n">imena</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;Anze&quot;</span><span class="p">,</span> <span class="s2">&quot;Benjamin&quot;</span><span class="p">,</span> <span class="s2">&quot;Cilka&quot;</span><span class="p">,</span> <span class="s2">&quot;Dani&quot;</span><span class="p">,</span> <span class="s2">&quot;Eva&quot;</span><span class="p">,</span> <span class="s2">&quot;Franc&quot;</span><span class="p">]</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">imena</span><span class="p">[</span><span class="mi">2</span><span class="p">:</span><span class="mi">5</span><span class="p">]</span>
+<span class="p">[</span><span class="s1">&#39;Cilka&#39;</span><span class="p">,</span> <span class="s1">&#39;Dani&#39;</span><span class="p">,</span> <span class="s1">&#39;Eva&#39;</span><span class="p">]</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">imena</span><span class="p">[</span><span class="mi">2</span><span class="p">:]</span>
+<span class="p">[</span><span class="s1">&#39;Cilka&#39;</span><span class="p">,</span> <span class="s1">&#39;Dani&#39;</span><span class="p">,</span> <span class="s1">&#39;Eva&#39;</span><span class="p">,</span> <span class="s1">&#39;Franc&#39;</span><span class="p">]</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">imena</span><span class="p">[:</span><span class="mi">2</span><span class="p">]</span>
+<span class="p">[</span><span class="s1">&#39;Anze&#39;</span><span class="p">,</span> <span class="s1">&#39;Benjamin&#39;</span><span class="p">]</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">imena</span><span class="p">[:</span><span class="o">-</span><span class="mi">2</span><span class="p">]</span>
+<span class="p">[</span><span class="s1">&#39;Anze&#39;</span><span class="p">,</span> <span class="s1">&#39;Benjamin&#39;</span><span class="p">,</span> <span class="s1">&#39;Cilka&#39;</span><span class="p">,</span> <span class="s1">&#39;Dani&#39;</span><span class="p">]</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">imena</span><span class="p">[</span><span class="o">-</span><span class="mi">2</span><span class="p">:]</span>
+<span class="p">[</span><span class="s1">&#39;Eva&#39;</span><span class="p">,</span> <span class="s1">&#39;Franc&#39;</span><span class="p">]</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">imena</span><span class="p">[::</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+<span class="p">[</span><span class="s1">&#39;Franc&#39;</span><span class="p">,</span> <span class="s1">&#39;Eva&#39;</span><span class="p">,</span> <span class="s1">&#39;Dani&#39;</span><span class="p">,</span> <span class="s1">&#39;Cilka&#39;</span><span class="p">,</span> <span class="s1">&#39;Benjamin&#39;</span><span class="p">,</span> <span class="s1">&#39;Anze&#39;</span><span class="p">]</span>
 </pre></div>
 </div>
 </div>
@@ -1013,10 +1023,10 @@ spremenljivka: lahko mu priredimo vrednost in s tem “povozimo”
 prejšnjo vrednost.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>&gt;&gt;&gt; imena
-[&#39;Anze&#39;, &#39;Benjamin&#39;, &#39;Cilka&#39;, &#39;Dani&#39;, &#39;Eva&#39;, &#39;Franc&#39;]
-&gt;&gt;&gt; imena[3] = &quot;Daniel&quot;
-&gt;&gt;&gt; imena [&#39;Anze&#39;, &#39;Benjamin&#39;, &#39;Cilka&#39;, &#39;Daniel&#39;, &#39;Eva&#39;, &#39;Franc&#39;]
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">&gt;&gt;&gt;</span> <span class="n">imena</span>
+<span class="p">[</span><span class="s1">&#39;Anze&#39;</span><span class="p">,</span> <span class="s1">&#39;Benjamin&#39;</span><span class="p">,</span> <span class="s1">&#39;Cilka&#39;</span><span class="p">,</span> <span class="s1">&#39;Dani&#39;</span><span class="p">,</span> <span class="s1">&#39;Eva&#39;</span><span class="p">,</span> <span class="s1">&#39;Franc&#39;</span><span class="p">]</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">imena</span><span class="p">[</span><span class="mi">3</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;Daniel&quot;</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">imena</span> <span class="p">[</span><span class="s1">&#39;Anze&#39;</span><span class="p">,</span> <span class="s1">&#39;Benjamin&#39;</span><span class="p">,</span> <span class="s1">&#39;Cilka&#39;</span><span class="p">,</span> <span class="s1">&#39;Daniel&#39;</span><span class="p">,</span> <span class="s1">&#39;Eva&#39;</span><span class="p">,</span> <span class="s1">&#39;Franc&#39;</span><span class="p">]</span>
 </pre></div>
 </div>
 </div>
@@ -1026,11 +1036,11 @@ prejšnjo vrednost.</p>
 prirejanju rezin prirejati podsezname.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>&gt;&gt;&gt; imena
-[&#39;Anze&#39;, &#39;Benjamin&#39;, &#39;Cilka&#39;, &#39;Daniel&#39;, &#39;Eva&#39;, &#39;Franc&#39;]
-&gt;&gt;&gt; imena[1:4] = [&quot;Ben&quot;, &quot;Cecilija&quot;, &quot;Dani&quot;]
-&gt;&gt;&gt; imena
-[&#39;Anze&#39;, &#39;Ben&#39;, &#39;Cecilija&#39;, &#39;Dani&#39;, &#39;Eva&#39;, &#39;Franc&#39;]
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">&gt;&gt;&gt;</span> <span class="n">imena</span>
+<span class="p">[</span><span class="s1">&#39;Anze&#39;</span><span class="p">,</span> <span class="s1">&#39;Benjamin&#39;</span><span class="p">,</span> <span class="s1">&#39;Cilka&#39;</span><span class="p">,</span> <span class="s1">&#39;Daniel&#39;</span><span class="p">,</span> <span class="s1">&#39;Eva&#39;</span><span class="p">,</span> <span class="s1">&#39;Franc&#39;</span><span class="p">]</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">imena</span><span class="p">[</span><span class="mi">1</span><span class="p">:</span><span class="mi">4</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;Ben&quot;</span><span class="p">,</span> <span class="s2">&quot;Cecilija&quot;</span><span class="p">,</span> <span class="s2">&quot;Dani&quot;</span><span class="p">]</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">imena</span>
+<span class="p">[</span><span class="s1">&#39;Anze&#39;</span><span class="p">,</span> <span class="s1">&#39;Ben&#39;</span><span class="p">,</span> <span class="s1">&#39;Cecilija&#39;</span><span class="p">,</span> <span class="s1">&#39;Dani&#39;</span><span class="p">,</span> <span class="s1">&#39;Eva&#39;</span><span class="p">,</span> <span class="s1">&#39;Franc&#39;</span><span class="p">]</span>
 </pre></div>
 </div>
 </div>
@@ -1039,9 +1049,9 @@ prirejanju rezin prirejati podsezname.</p>
 povozili? Ne, čemu? Takole zamenjamo tri z dvema:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>&gt;&gt;&gt; imena[1:4] = [&quot;Ben-Cecil&quot;, &quot;Daniel&quot;]
-&gt;&gt;&gt; imena
-[&#39;Anze&#39;, &#39;Ben-Cecil&#39;, &#39;Daniel&#39;, &#39;Eva&#39;, &#39;Franc&#39;]
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">&gt;&gt;&gt;</span> <span class="n">imena</span><span class="p">[</span><span class="mi">1</span><span class="p">:</span><span class="mi">4</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;Ben-Cecil&quot;</span><span class="p">,</span> <span class="s2">&quot;Daniel&quot;</span><span class="p">]</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">imena</span>
+<span class="p">[</span><span class="s1">&#39;Anze&#39;</span><span class="p">,</span> <span class="s1">&#39;Ben-Cecil&#39;</span><span class="p">,</span> <span class="s1">&#39;Daniel&#39;</span><span class="p">,</span> <span class="s1">&#39;Eva&#39;</span><span class="p">,</span> <span class="s1">&#39;Franc&#39;</span><span class="p">]</span>
 </pre></div>
 </div>
 </div>
@@ -1049,9 +1059,9 @@ povozili? Ne, čemu? Takole zamenjamo tri z dvema:</p>
 <p>Ali pa nobenega s tremi:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>&gt;&gt;&gt; imena[2:2] = [&quot;D2&quot;, &quot;D3&quot;, &quot;D4&quot;]
-&gt;&gt;&gt; imena
-[&#39;Anze&#39;, &#39;Ben-Cecil&#39;, &#39;D2&#39;, &#39;D3&#39;, &#39;D4&#39;, &#39;Daniel&#39;, &#39;Eva&#39;, &#39;Franc&#39;]
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">&gt;&gt;&gt;</span> <span class="n">imena</span><span class="p">[</span><span class="mi">2</span><span class="p">:</span><span class="mi">2</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;D2&quot;</span><span class="p">,</span> <span class="s2">&quot;D3&quot;</span><span class="p">,</span> <span class="s2">&quot;D4&quot;</span><span class="p">]</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">imena</span>
+<span class="p">[</span><span class="s1">&#39;Anze&#39;</span><span class="p">,</span> <span class="s1">&#39;Ben-Cecil&#39;</span><span class="p">,</span> <span class="s1">&#39;D2&#39;</span><span class="p">,</span> <span class="s1">&#39;D3&#39;</span><span class="p">,</span> <span class="s1">&#39;D4&#39;</span><span class="p">,</span> <span class="s1">&#39;Daniel&#39;</span><span class="p">,</span> <span class="s1">&#39;Eva&#39;</span><span class="p">,</span> <span class="s1">&#39;Franc&#39;</span><span class="p">]</span>
 </pre></div>
 </div>
 </div>
@@ -1059,13 +1069,13 @@ povozili? Ne, čemu? Takole zamenjamo tri z dvema:</p>
 <p>Z rezinami lahko tudi pobrišemo del seznama.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>&gt;&gt;&gt; imena
-[&#39;Anze&#39;, &#39;Ben-Cecil&#39;, &#39;D2&#39;, &#39;D3&#39;, &#39;D4&#39;, &#39;Daniel&#39;, &#39;Eva&#39;, &#39;Franc&#39;]
-&gt;&gt;&gt; imena[2:5]
-[&#39;D2&#39;, &#39;D3&#39;, &#39;D4&#39;]
-&gt;&gt;&gt; imena[2:5] = []
-&gt;&gt;&gt; imena
-[&#39;Anze&#39;, &#39;Ben-Cecil&#39;, &#39;Daniel&#39;, &#39;Eva&#39;, &#39;Franc&#39;]
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">&gt;&gt;&gt;</span> <span class="n">imena</span>
+<span class="p">[</span><span class="s1">&#39;Anze&#39;</span><span class="p">,</span> <span class="s1">&#39;Ben-Cecil&#39;</span><span class="p">,</span> <span class="s1">&#39;D2&#39;</span><span class="p">,</span> <span class="s1">&#39;D3&#39;</span><span class="p">,</span> <span class="s1">&#39;D4&#39;</span><span class="p">,</span> <span class="s1">&#39;Daniel&#39;</span><span class="p">,</span> <span class="s1">&#39;Eva&#39;</span><span class="p">,</span> <span class="s1">&#39;Franc&#39;</span><span class="p">]</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">imena</span><span class="p">[</span><span class="mi">2</span><span class="p">:</span><span class="mi">5</span><span class="p">]</span>
+<span class="p">[</span><span class="s1">&#39;D2&#39;</span><span class="p">,</span> <span class="s1">&#39;D3&#39;</span><span class="p">,</span> <span class="s1">&#39;D4&#39;</span><span class="p">]</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">imena</span><span class="p">[</span><span class="mi">2</span><span class="p">:</span><span class="mi">5</span><span class="p">]</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">imena</span>
+<span class="p">[</span><span class="s1">&#39;Anze&#39;</span><span class="p">,</span> <span class="s1">&#39;Ben-Cecil&#39;</span><span class="p">,</span> <span class="s1">&#39;Daniel&#39;</span><span class="p">,</span> <span class="s1">&#39;Eva&#39;</span><span class="p">,</span> <span class="s1">&#39;Franc&#39;</span><span class="p">]</span>
 </pre></div>
 </div>
 </div>
@@ -1073,14 +1083,14 @@ povozili? Ne, čemu? Takole zamenjamo tri z dvema:</p>
 <p>Za brisanje obstaja še veliko drugih načinov, recimo tale</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>&gt;&gt;&gt; imena
-[&#39;Anze&#39;, &#39;Ben-Cecil&#39;, &#39;Daniel&#39;, &#39;Eva&#39;, &#39;Franc&#39;]
-&gt;&gt;&gt; del imena[2]
-&gt;&gt;&gt; imena
-[&#39;Anze&#39;, &#39;Ben-Cecil&#39;, &#39;Eva&#39;, &#39;Franc&#39;]
-&gt;&gt;&gt; del imena[1:3]
-&gt;&gt;&gt; imena
-[&#39;Anze&#39;, &#39;Franc&#39;]
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">&gt;&gt;&gt;</span> <span class="n">imena</span>
+<span class="p">[</span><span class="s1">&#39;Anze&#39;</span><span class="p">,</span> <span class="s1">&#39;Ben-Cecil&#39;</span><span class="p">,</span> <span class="s1">&#39;Daniel&#39;</span><span class="p">,</span> <span class="s1">&#39;Eva&#39;</span><span class="p">,</span> <span class="s1">&#39;Franc&#39;</span><span class="p">]</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="k">del</span> <span class="n">imena</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">imena</span>
+<span class="p">[</span><span class="s1">&#39;Anze&#39;</span><span class="p">,</span> <span class="s1">&#39;Ben-Cecil&#39;</span><span class="p">,</span> <span class="s1">&#39;Eva&#39;</span><span class="p">,</span> <span class="s1">&#39;Franc&#39;</span><span class="p">]</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="k">del</span> <span class="n">imena</span><span class="p">[</span><span class="mi">1</span><span class="p">:</span><span class="mi">3</span><span class="p">]</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">imena</span>
+<span class="p">[</span><span class="s1">&#39;Anze&#39;</span><span class="p">,</span> <span class="s1">&#39;Franc&#39;</span><span class="p">]</span>
 </pre></div>
 </div>
 </div>
@@ -1089,10 +1099,10 @@ povozili? Ne, čemu? Takole zamenjamo tri z dvema:</p>
 in terkami … se moti. Nizov in terk ne moremo spreminjati!</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>&gt;&gt;&gt; b = &#39;Benjamin&#39;
-&gt;&gt;&gt; b[2]=&#39;a&#39;
-Traceback (most recent call last):
-File &quot;&quot;, line 1, in TypeError: &#39;str&#39; object does not support item assignment
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">&gt;&gt;&gt;</span> <span class="n">b</span> <span class="o">=</span> <span class="s1">&#39;Benjamin&#39;</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">b</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span><span class="o">=</span><span class="s1">&#39;a&#39;</span>
+<span class="n">Traceback</span> <span class="p">(</span><span class="n">most</span> <span class="n">recent</span> <span class="n">call</span> <span class="n">last</span><span class="p">):</span>
+<span class="n">File</span> <span class="s2">&quot;&quot;</span><span class="p">,</span> <span class="n">line</span> <span class="mi">1</span><span class="p">,</span> <span class="ow">in</span> <span class="ne">TypeError</span><span class="p">:</span> <span class="s1">&#39;str&#39;</span> <span class="nb">object</span> <span class="n">does</span> <span class="ow">not</span> <span class="n">support</span> <span class="n">item</span> <span class="n">assignment</span>
 </pre></div>
 </div>
 </div>
@@ -1103,9 +1113,9 @@ pravkar videli. Kako pa bi potem zamenjali tretji znak niza b s črko
 ‘a’?</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>&gt;&gt;&gt; b = b[:2] + &#39;a&#39; + b[3:]
-&gt;&gt;&gt; b
-&#39;Beajamin&#39;
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">&gt;&gt;&gt;</span> <span class="n">b</span> <span class="o">=</span> <span class="n">b</span><span class="p">[:</span><span class="mi">2</span><span class="p">]</span> <span class="o">+</span> <span class="s1">&#39;a&#39;</span> <span class="o">+</span> <span class="n">b</span><span class="p">[</span><span class="mi">3</span><span class="p">:]</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">b</span>
+<span class="s1">&#39;Beajamin&#39;</span>
 </pre></div>
 </div>
 </div>
@@ -1145,13 +1155,13 @@ pa lahko pomnožimo s celim številom - in z ničemer drugim.</p>
 element in ali niz vsebuje določen podniz.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>&gt;&gt;&gt; 1 in [1, 2, 3]
-True
-&gt;&gt;&gt; 4 in [1, 2, 3]
-False
-&gt;&gt;&gt; &#39;in&#39; in &#39;Benjamin&#39;
-True
-&gt;&gt;&gt; &#39;an&#39; in &#39;Benjamin&#39;
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">&gt;&gt;&gt;</span> <span class="mi">1</span> <span class="ow">in</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">]</span>
+<span class="kc">True</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="mi">4</span> <span class="ow">in</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">]</span>
+<span class="kc">False</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="s1">&#39;in&#39;</span> <span class="ow">in</span> <span class="s1">&#39;Benjamin&#39;</span>
+<span class="kc">True</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="s1">&#39;an&#39;</span> <span class="ow">in</span> <span class="s1">&#39;Benjamin&#39;</span>
 </pre></div>
 </div>
 </div>
@@ -1160,14 +1170,14 @@ True
 vsebuje</em> elementa (podniza).</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>&gt;&gt;&gt; 1 not in [1, 2, 3]
-False
-&gt;&gt;&gt; 4 not in [1, 2, 3]
-True
-&gt;&gt;&gt; &#39;in&#39; not in &#39;Benjamin&#39;
-False
-&gt;&gt;&gt; &#39;an&#39; not in &#39;Benjamin&#39;
-True
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">&gt;&gt;&gt;</span> <span class="mi">1</span> <span class="ow">not</span> <span class="ow">in</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">]</span>
+<span class="kc">False</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="mi">4</span> <span class="ow">not</span> <span class="ow">in</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">]</span>
+<span class="kc">True</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="s1">&#39;in&#39;</span> <span class="ow">not</span> <span class="ow">in</span> <span class="s1">&#39;Benjamin&#39;</span>
+<span class="kc">False</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="s1">&#39;an&#39;</span> <span class="ow">not</span> <span class="ow">in</span> <span class="s1">&#39;Benjamin&#39;</span>
+<span class="kc">True</span>
 </pre></div>
 </div>
 </div>
@@ -1179,9 +1189,9 @@ True
 <p>Imamo obstoječ seznam. Recimo <code class="docutils literal notranslate"><span class="pre">[1,</span> <span class="pre">2,</span> <span class="pre">3]</span></code> ali pa zgolj prazen seznam <code class="docutils literal notranslate"><span class="pre">[]</span></code>. Kako bi mu dodali element <code class="docutils literal notranslate"><span class="pre">4</span></code>? Ena možnost je, da uporabimo operacijo seštevanja seznamov, kjer element <code class="docutils literal notranslate"><span class="pre">4</span></code> spremenimo v seznam z enim elementom:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>seznam = [1, 2, 3]
-nov_seznam = seznam + [4]
-print(nov_seznam)
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">seznam</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">]</span>
+<span class="n">nov_seznam</span> <span class="o">=</span> <span class="n">seznam</span> <span class="o">+</span> <span class="p">[</span><span class="mi">4</span><span class="p">]</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">nov_seznam</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -1194,9 +1204,9 @@ print(nov_seznam)
 <p>Druga možnost pa je, da uporabimo <code class="docutils literal notranslate"><span class="pre">append</span></code>. Pazi! Ta funkcija dela <em>in place</em>, torej naredi spremembno na obstoječem seznamu. Tako ni treba (v resnici ne smemo) prirediti vrednosti novemu seznamu. Pravilna uporaba je taka:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>seznam = [1, 2, 3]
-seznam.append(4)
-print(seznam)
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">seznam</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">]</span>
+<span class="n">seznam</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="mi">4</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">seznam</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>

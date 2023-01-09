@@ -176,6 +176,11 @@ const thebe_selector_output = ".output, .cell_output"
    11. Metode nizov in seznamov
   </a>
  </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="06_slovarji_in_mno%C5%BEice.html">
+   12. Slovarji in množice
+  </a>
+ </li>
 </ul>
 <p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
@@ -186,6 +191,11 @@ const thebe_selector_output = ".output, .cell_output"
  <li class="toctree-l1">
   <a class="reference internal" href="naloge/01_topovske_bitke/navodila.html">
    1. Topovske bitke
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="naloge/02_slovarji_in_mnozice/navodila.html">
+   2. Naloge - slovarji in mnozice
   </a>
  </li>
 </ul>
@@ -591,12 +601,12 @@ title="Print to PDF"
 <p>Znamo napisati program, ki sestavi seznam vseh deliteljev nekega števila <em>n</em>?</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>n = int(input(&quot;Vnesi število: &quot;))
-s = []
-for i in range(1, n):
-    if n % i == 0:
-        s.append(i)
-print(s)
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">n</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Vnesi število: &quot;</span><span class="p">))</span>
+<span class="n">s</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">n</span><span class="p">):</span>
+    <span class="k">if</span> <span class="n">n</span> <span class="o">%</span> <span class="n">i</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+        <span class="n">s</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">s</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -611,9 +621,9 @@ print(s)
 <p>Kaj ne bi bilo lepo, če bi imel Python kar funkcijo <code class="docutils literal notranslate"><span class="pre">delitelji</span></code>, ki bi jo lahko uporabili? Potem bi lahko napisali kar</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>stevilka = int(input(&quot;Vnesi število: &quot;))
-s = delitelji(stevilka)
-print(s)
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">stevilka</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Vnesi število: &quot;</span><span class="p">))</span>
+<span class="n">s</span> <span class="o">=</span> <span class="n">delitelji</span><span class="p">(</span><span class="n">stevilka</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">s</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -636,12 +646,12 @@ print(s)
 <p>Kot je povsem pravilno predlagal profesor Franc Oblak: <em>česar ni, se pa nardi</em> (ter v sredo polinoma, ki se ga na noben način ni dalo razcepiti, dodal “<span class="math notranslate nohighlight">\(+ x - x\)</span>” in polinom je šel na faktorje kot toplo maslo). Napišimo si takšno funkcijo, da jo bomo lahko klicali.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>def delitelji(n):
-    s = []
-    for i in range(1, n):
-        if n % i == 0:
-            s.append(i)
-    return s
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">delitelji</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+    <span class="n">s</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">n</span><span class="p">):</span>
+        <span class="k">if</span> <span class="n">n</span> <span class="o">%</span> <span class="n">i</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+            <span class="n">s</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">s</span>
 </pre></div>
 </div>
 </div>
@@ -651,7 +661,7 @@ print(s)
 <p>Tista reč, ki jo bomo ob klicu funkcije podali kot argument, se bo znotraj funkcije pojavila kot spremenljivka z imenom <code class="docutils literal notranslate"><span class="pre">n</span></code>. Takšno ime smo namreč uporabili v prvi vrstici, v “glavi” funkcije. Vrednosti ji ne bomo priredili: ko bo nekdo poklical funkcijo, bo Python tej “spremenljivki” kar sam od sebe priredil vrednost, ki jo bo “klicatelj” napisal kot argument funkcije. Če torej nekdo pokliče</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>delitelji(35)
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">delitelji</span><span class="p">(</span><span class="mi">35</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -664,7 +674,7 @@ print(s)
 <p>bo imel <code class="docutils literal notranslate"><span class="pre">n</span></code> vrednost 35 in če pokliče</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>delitelji(13)
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">delitelji</span><span class="p">(</span><span class="mi">13</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -683,10 +693,10 @@ print(s)
 <p>Napišimo funkcijo, ki dobi kot argument dolžine stranic trikotnika in vrne njegovo ploščino. Ta funkcija bo imela tri argumente; poimenujmo jih <code class="docutils literal notranslate"><span class="pre">a</span></code>, <code class="docutils literal notranslate"><span class="pre">b</span></code> in <code class="docutils literal notranslate"><span class="pre">c</span></code>.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>from math import *
-def ploscina_trikotnika(a, b, c):
-    s = (a + b + c) / 2
-    return sqrt(s * (s - a) * (s - b) * (s - c))
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">math</span> <span class="kn">import</span> <span class="o">*</span>
+<span class="k">def</span> <span class="nf">ploscina_trikotnika</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">c</span><span class="p">):</span>
+    <span class="n">s</span> <span class="o">=</span> <span class="p">(</span><span class="n">a</span> <span class="o">+</span> <span class="n">b</span> <span class="o">+</span> <span class="n">c</span><span class="p">)</span> <span class="o">/</span> <span class="mi">2</span>
+    <span class="k">return</span> <span class="n">sqrt</span><span class="p">(</span><span class="n">s</span> <span class="o">*</span> <span class="p">(</span><span class="n">s</span> <span class="o">-</span> <span class="n">a</span><span class="p">)</span> <span class="o">*</span> <span class="p">(</span><span class="n">s</span> <span class="o">-</span> <span class="n">b</span><span class="p">)</span> <span class="o">*</span> <span class="p">(</span><span class="n">s</span> <span class="o">-</span> <span class="n">c</span><span class="p">))</span>
 </pre></div>
 </div>
 </div>
@@ -694,16 +704,16 @@ def ploscina_trikotnika(a, b, c):
 <p>Ko smo pri tem, napišimo še funkcijo funkcijo za obseg trikotnika ter za obseg in ploščino kroga.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>from math import *
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">math</span> <span class="kn">import</span> <span class="o">*</span>
 
-def obseg_trikotnika(a, b, c):
-    return a + b + c
+<span class="k">def</span> <span class="nf">obseg_trikotnika</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">c</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">a</span> <span class="o">+</span> <span class="n">b</span> <span class="o">+</span> <span class="n">c</span>
 
-def ploscina_kroga(r):
-    return pi * r ** 2
+<span class="k">def</span> <span class="nf">ploscina_kroga</span><span class="p">(</span><span class="n">r</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">pi</span> <span class="o">*</span> <span class="n">r</span> <span class="o">**</span> <span class="mi">2</span>
 
-def obseg_kroga(r):
-    return 2 * pi * r
+<span class="k">def</span> <span class="nf">obseg_kroga</span><span class="p">(</span><span class="n">r</span><span class="p">):</span>
+    <span class="k">return</span> <span class="mi">2</span> <span class="o">*</span> <span class="n">pi</span> <span class="o">*</span> <span class="n">r</span>
 </pre></div>
 </div>
 </div>
@@ -714,11 +724,11 @@ def obseg_kroga(r):
 <p>Zdaj napišimo drugo funkcijo: funkcijo, ki dobi seznam števil in izračuna njihovo vsoto.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>def vsota(s):
-    vsota = 0
-    for e in s:
-        vsota += e
-    return vsota
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">vsota</span><span class="p">(</span><span class="n">s</span><span class="p">):</span>
+    <span class="n">vsota</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="k">for</span> <span class="n">e</span> <span class="ow">in</span> <span class="n">s</span><span class="p">:</span>
+        <span class="n">vsota</span> <span class="o">+=</span> <span class="n">e</span>
+    <span class="k">return</span> <span class="n">vsota</span>
 </pre></div>
 </div>
 </div>
@@ -732,8 +742,8 @@ def obseg_kroga(r):
 <p>Za primer vzemimo preprostejšo funkcijo <code class="docutils literal notranslate"><span class="pre">sestej</span></code>, ki ji podamo dva argumenta, funkcija pa vrne njuno vsoto.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>def sestej(a, b):
-    return a + b
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">sestej</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">a</span> <span class="o">+</span> <span class="n">b</span>
 </pre></div>
 </div>
 </div>
@@ -741,7 +751,7 @@ def obseg_kroga(r):
 <p>Preskusimo jo.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>sestej(1, 5)
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">sestej</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">5</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -753,7 +763,7 @@ def obseg_kroga(r):
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>sestej(&quot;Ana&quot;, &quot;marija&quot;)
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">sestej</span><span class="p">(</span><span class="s2">&quot;Ana&quot;</span><span class="p">,</span> <span class="s2">&quot;marija&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -765,7 +775,7 @@ def obseg_kroga(r):
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>sestej(1, &quot;Ana&quot;)
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">sestej</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="s2">&quot;Ana&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -789,7 +799,7 @@ def obseg_kroga(r):
 <p>Vrnimo se k funkciji <code class="docutils literal notranslate"><span class="pre">vsota</span></code>, oni od prej. Kaj bi se zgodilo, če bi dali funkciji namesto seznama kaj drugega, recimo terko ali kaj podobnega? No, preskusimo jo.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>vsota([1, 2, 3])
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">vsota</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">])</span>
 </pre></div>
 </div>
 </div>
@@ -801,7 +811,7 @@ def obseg_kroga(r):
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>vsota((1, 2, 3))
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">vsota</span><span class="p">((</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">))</span>
 </pre></div>
 </div>
 </div>
@@ -813,7 +823,7 @@ def obseg_kroga(r):
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>vsota(range(4))
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">vsota</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="mi">4</span><span class="p">))</span>
 </pre></div>
 </div>
 </div>
@@ -826,9 +836,9 @@ def obseg_kroga(r):
 <p>S seznamom dela. Prvi klic pomeni isto, kot če bi napisali:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>v = 0
-for e in [1, 5, 3]:
-    v += e
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">v</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="k">for</span> <span class="n">e</span> <span class="ow">in</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">3</span><span class="p">]:</span>
+    <span class="n">v</span> <span class="o">+=</span> <span class="n">e</span>
 </pre></div>
 </div>
 </div>
@@ -836,9 +846,9 @@ for e in [1, 5, 3]:
 <p>Drugi klic je podoben, le da je <code class="docutils literal notranslate"><span class="pre">s</span></code> zdaj terka <code class="docutils literal notranslate"><span class="pre">(1,</span> <span class="pre">5,</span> <span class="pre">3)</span></code>, torej dobimo</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>v = 0
-for e in (1, 5, 2):
-    v += e
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">v</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="k">for</span> <span class="n">e</span> <span class="ow">in</span> <span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">2</span><span class="p">):</span>
+    <span class="n">v</span> <span class="o">+=</span> <span class="n">e</span>
 </pre></div>
 </div>
 </div>
@@ -846,9 +856,9 @@ for e in (1, 5, 2):
 <p>Tretji klic pa je isto, kot če bi napisali</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>v = 0
-for e in range(4):
-    v += e
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">v</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="k">for</span> <span class="n">e</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">4</span><span class="p">):</span>
+    <span class="n">v</span> <span class="o">+=</span> <span class="n">e</span>
 </pre></div>
 </div>
 </div>
@@ -856,7 +866,7 @@ for e in range(4):
 <p>Kaj pa, če bi namesto seznama celih števil podali seznam necelih?</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>vsota([1.3, 2.2, 3.1])
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">vsota</span><span class="p">([</span><span class="mf">1.3</span><span class="p">,</span> <span class="mf">2.2</span><span class="p">,</span> <span class="mf">3.1</span><span class="p">])</span>
 </pre></div>
 </div>
 </div>
@@ -870,7 +880,7 @@ for e in range(4):
 <p>Kaj pa, če bi dali seznam nizov? Poglejmo, poučno bo.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>vsota([&quot;Ana&quot;, &quot;Berta&quot;, &quot;Cilka&quot;])
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">vsota</span><span class="p">([</span><span class="s2">&quot;Ana&quot;</span><span class="p">,</span> <span class="s2">&quot;Berta&quot;</span><span class="p">,</span> <span class="s2">&quot;Cilka&quot;</span><span class="p">])</span>
 </pre></div>
 </div>
 </div>
@@ -896,14 +906,14 @@ izračunati <code class="docutils literal notranslate"><span class="pre">0</span
 <p>Funkcijo je mogoče popraviti, da bo delovala tudi za nize.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>def vsota(s):
-    v = None
-    for e in s:
-        if v == None:
-            v = e
-        else:
-            v += e
-    return v
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">vsota</span><span class="p">(</span><span class="n">s</span><span class="p">):</span>
+    <span class="n">v</span> <span class="o">=</span> <span class="kc">None</span>
+    <span class="k">for</span> <span class="n">e</span> <span class="ow">in</span> <span class="n">s</span><span class="p">:</span>
+        <span class="k">if</span> <span class="n">v</span> <span class="o">==</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="n">v</span> <span class="o">=</span> <span class="n">e</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">v</span> <span class="o">+=</span> <span class="n">e</span>
+    <span class="k">return</span> <span class="n">v</span>
 </pre></div>
 </div>
 </div>
@@ -912,7 +922,7 @@ izračunati <code class="docutils literal notranslate"><span class="pre">0</span
 <p>Zdaj bo <code class="docutils literal notranslate"><span class="pre">v</span></code> gotovo pravega tipa in funkcija bo znala seštevati vse živo.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>vsota([1, 2, 3])
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">vsota</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">])</span>
 </pre></div>
 </div>
 </div>
@@ -924,7 +934,7 @@ izračunati <code class="docutils literal notranslate"><span class="pre">0</span
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>vsota(range(4))
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">vsota</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="mi">4</span><span class="p">))</span>
 </pre></div>
 </div>
 </div>
@@ -936,7 +946,7 @@ izračunati <code class="docutils literal notranslate"><span class="pre">0</span
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>vsota([&quot;Ana&quot;, &quot;Berta&quot;, &quot;Cilka&quot;])
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">vsota</span><span class="p">([</span><span class="s2">&quot;Ana&quot;</span><span class="p">,</span> <span class="s2">&quot;Berta&quot;</span><span class="p">,</span> <span class="s2">&quot;Cilka&quot;</span><span class="p">])</span>
 </pre></div>
 </div>
 </div>
@@ -949,7 +959,7 @@ izračunati <code class="docutils literal notranslate"><span class="pre">0</span
 <p>Kaj pa tole?</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>vsota(&quot;Benjamin&quot;)
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">vsota</span><span class="p">(</span><span class="s2">&quot;Benjamin&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -965,7 +975,7 @@ spet isti niz.</p>
 mogoče sešteti.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>vsota([1, &quot;a&quot;])
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">vsota</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="s2">&quot;a&quot;</span><span class="p">])</span>
 </pre></div>
 </div>
 </div>
@@ -994,13 +1004,13 @@ mogoče sešteti.</p>
 enako vsoti svojih deliteljev. Lahko bi torej rekli</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>stevilo = int(input(&quot;Vnesi število: &quot;))
-d = delitelji(stevilo)
-v = vsota(d)
-if v == stevilo:
-    print(&quot;Število&quot;, stevilo, &quot;je popolno&quot;)
-else:
-    print(&quot;Število&quot;, stevilo, &quot;ni popolno&quot;)
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">stevilo</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Vnesi število: &quot;</span><span class="p">))</span>
+<span class="n">d</span> <span class="o">=</span> <span class="n">delitelji</span><span class="p">(</span><span class="n">stevilo</span><span class="p">)</span>
+<span class="n">v</span> <span class="o">=</span> <span class="n">vsota</span><span class="p">(</span><span class="n">d</span><span class="p">)</span>
+<span class="k">if</span> <span class="n">v</span> <span class="o">==</span> <span class="n">stevilo</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Število&quot;</span><span class="p">,</span> <span class="n">stevilo</span><span class="p">,</span> <span class="s2">&quot;je popolno&quot;</span><span class="p">)</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Število&quot;</span><span class="p">,</span> <span class="n">stevilo</span><span class="p">,</span> <span class="s2">&quot;ni popolno&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -1014,10 +1024,10 @@ else:
 <p>vendar ne bomo. Napisali bomo funkcijo, ki vrne <code class="docutils literal notranslate"><span class="pre">True</span></code>, če je število popolno in <code class="docutils literal notranslate"><span class="pre">False</span></code>, če ni.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>def popolno(n):
-    d = delitelji(n)
-    v = vsota(d)
-    return v == n
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">popolno</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+    <span class="n">d</span> <span class="o">=</span> <span class="n">delitelji</span><span class="p">(</span><span class="n">n</span><span class="p">)</span>
+    <span class="n">v</span> <span class="o">=</span> <span class="n">vsota</span><span class="p">(</span><span class="n">d</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">v</span> <span class="o">==</span> <span class="n">n</span>
 </pre></div>
 </div>
 </div>
@@ -1025,13 +1035,13 @@ else:
 <p>Pazite, tule nismo pisali</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>def popolno(n):
-    d = delitelji(n)
-    v = vsota(d)
-    if v == n:
-        return True
-    else:
-        return False
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">popolno</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+    <span class="n">d</span> <span class="o">=</span> <span class="n">delitelji</span><span class="p">(</span><span class="n">n</span><span class="p">)</span>
+    <span class="n">v</span> <span class="o">=</span> <span class="n">vsota</span><span class="p">(</span><span class="n">d</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">v</span> <span class="o">==</span> <span class="n">n</span><span class="p">:</span>
+        <span class="k">return</span> <span class="kc">True</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="k">return</span> <span class="kc">False</span>
 </pre></div>
 </div>
 </div>
@@ -1040,8 +1050,8 @@ else:
 navadno bi jo tudi res), takole</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>def popolno(n):
-    return vsota(delitelji(n)) == n
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">popolno</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">vsota</span><span class="p">(</span><span class="n">delitelji</span><span class="p">(</span><span class="n">n</span><span class="p">))</span> <span class="o">==</span> <span class="n">n</span>
 </pre></div>
 </div>
 </div>
@@ -1052,11 +1062,11 @@ preštejemo do 1000, za vsako število posebej preverimo, ali je popolno
 in če je, ga dodamo na seznam.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>s = []
-for i in range(1, 1001):
-    if popolno(i):
-        s.append(i)
-print(s)
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">s</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1001</span><span class="p">):</span>
+    <span class="k">if</span> <span class="n">popolno</span><span class="p">(</span><span class="n">i</span><span class="p">):</span>
+        <span class="n">s</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">s</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -1075,30 +1085,30 @@ ne?</p>
 <p>Najprej zberimo vse skupaj:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>def delitelji(n):
-    s = []
-    for i in range(1, n):
-        if n % i == 0:
-            s.append(i)
-    return s
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">delitelji</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+    <span class="n">s</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">n</span><span class="p">):</span>
+        <span class="k">if</span> <span class="n">n</span> <span class="o">%</span> <span class="n">i</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+            <span class="n">s</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">s</span>
 
-def vsota(s):
-    v = 0
-    for e in s:
-        v += e
-    return v
+<span class="k">def</span> <span class="nf">vsota</span><span class="p">(</span><span class="n">s</span><span class="p">):</span>
+    <span class="n">v</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="k">for</span> <span class="n">e</span> <span class="ow">in</span> <span class="n">s</span><span class="p">:</span>
+        <span class="n">v</span> <span class="o">+=</span> <span class="n">e</span>
+    <span class="k">return</span> <span class="n">v</span>
 
-def popolno(n):
-    d = delitelji(n)
-    v = vsota(d)
-    return v == n
+<span class="k">def</span> <span class="nf">popolno</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+    <span class="n">d</span> <span class="o">=</span> <span class="n">delitelji</span><span class="p">(</span><span class="n">n</span><span class="p">)</span>
+    <span class="n">v</span> <span class="o">=</span> <span class="n">vsota</span><span class="p">(</span><span class="n">d</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">v</span> <span class="o">==</span> <span class="n">n</span>
 
 
-s = []
-for i in range(1, 1001):
-    if popolno(i):
-        s.append(i)
-print(s)
+<span class="n">s</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1001</span><span class="p">):</span>
+    <span class="k">if</span> <span class="n">popolno</span><span class="p">(</span><span class="n">i</span><span class="p">):</span>
+        <span class="n">s</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">s</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -1119,11 +1129,11 @@ print(s)
 <p>Prejšnjič smo videli, da lahko zanko prekinemo z <code class="docutils literal notranslate"><span class="pre">break</span></code>. Prekinemo jo lahko tudi z <code class="docutils literal notranslate"><span class="pre">return</span></code>.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>def prastevilo(n):
-    for i in range(2, n):
-        if n % i == 0:
-            return False
-    return True
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">prastevilo</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="n">n</span><span class="p">):</span>
+        <span class="k">if</span> <span class="n">n</span> <span class="o">%</span> <span class="n">i</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+            <span class="k">return</span> <span class="kc">False</span>
+    <span class="k">return</span> <span class="kc">True</span>
 </pre></div>
 </div>
 </div>
@@ -1132,13 +1142,13 @@ print(s)
 <p>Kot so odkrili študenti, funkcija meni, da je 1 praštevilo. To počne iz <a class="reference external" href="https://en.wikipedia.org/wiki/Prime_number#Primality_of_one">zgodovinskih razlogov</a>. Če funkcija vrne <code class="docutils literal notranslate"><span class="pre">False</span></code>, si bo še kdo mislil, da je 1 sestavljeno število, ne? Če smo pripravljeni tvegati, pa lahko funkcijo popravimo tako</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>def prastevilo(n):
-    if n == 1:
-        return False
-    for i in range(2, n):
-        if n % i == 0:
-            return False
-    return True
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">prastevilo</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+    <span class="k">if</span> <span class="n">n</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
+        <span class="k">return</span> <span class="kc">False</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="n">n</span><span class="p">):</span>
+        <span class="k">if</span> <span class="n">n</span> <span class="o">%</span> <span class="n">i</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+            <span class="k">return</span> <span class="kc">False</span>
+    <span class="k">return</span> <span class="kc">True</span>
 </pre></div>
 </div>
 </div>
@@ -1146,11 +1156,11 @@ print(s)
 <p>ali pa celo tako</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>def prastevilo(n):
-    for i in range(2, n):
-        if n % i == 0:
-            return False
-    return n != 1
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">prastevilo</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="n">n</span><span class="p">):</span>
+        <span class="k">if</span> <span class="n">n</span> <span class="o">%</span> <span class="n">i</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+            <span class="k">return</span> <span class="kc">False</span>
+    <span class="k">return</span> <span class="n">n</span> <span class="o">!=</span> <span class="mi">1</span>
 </pre></div>
 </div>
 </div>
@@ -1169,10 +1179,10 @@ print(s)
 <p>Napišimo, na primer, funkcijo, ki kot argument dobi seznam in vrne prvo sodo število v njem.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>def prvo_sodo(s):
-    for e in s:
-        if e % 2 == 0:
-            return e
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">prvo_sodo</span><span class="p">(</span><span class="n">s</span><span class="p">):</span>
+    <span class="k">for</span> <span class="n">e</span> <span class="ow">in</span> <span class="n">s</span><span class="p">:</span>
+        <span class="k">if</span> <span class="n">e</span> <span class="o">%</span> <span class="mi">2</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+            <span class="k">return</span> <span class="n">e</span>
 </pre></div>
 </div>
 </div>
@@ -1180,7 +1190,7 @@ print(s)
 <p>In zdaj jo preskusimo.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>print(prvo_sodo([1, 2, 3, 4, 5]))
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">prvo_sodo</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">]))</span>
 </pre></div>
 </div>
 </div>
@@ -1192,7 +1202,7 @@ print(s)
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>print(prvo_sodo([1, 3, 5]))
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">prvo_sodo</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">5</span><span class="p">]))</span>
 </pre></div>
 </div>
 </div>
@@ -1206,11 +1216,11 @@ print(s)
 <p>Konstanta <code class="docutils literal notranslate"><span class="pre">None</span></code> se šteje za neresnično. To je praktično, saj jo lahko uporabljamo v pogojnih stavkih. Imejmo nek seznam <code class="docutils literal notranslate"><span class="pre">s</span></code> in izpišimo prvo sodo število ali pa povejmo, da v seznamu ni sodih števil.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>sodo = prvo_sodo([1, 3, 5])
-if sodo:
-    print(&quot;Prvo sodo število je&quot;, sodo)
-else:
-    print(&quot;V seznamu ni sodih števil.&quot;)
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">sodo</span> <span class="o">=</span> <span class="n">prvo_sodo</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">5</span><span class="p">])</span>
+<span class="k">if</span> <span class="n">sodo</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Prvo sodo število je&quot;</span><span class="p">,</span> <span class="n">sodo</span><span class="p">)</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;V seznamu ni sodih števil.&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -1223,11 +1233,11 @@ else:
 <p>Vendar moramo biti pri takšnem početju majčkeno previdni. Kaj, če je prvo sodo število v seznamu 0? Ker je tudi 0 neresnično, bo program v tem primeru napisal, da ni sodih števil. Pravilno bi bilo torej</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>sodo = prvo_sodo([1, 3, 5])
-if sodo != None:
-    print(&quot;Prvo sodo število je&quot;, sodo)
-else:
-    print(&quot;V seznamu ni sodih števil.&quot;)
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">sodo</span> <span class="o">=</span> <span class="n">prvo_sodo</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">5</span><span class="p">])</span>
+<span class="k">if</span> <span class="n">sodo</span> <span class="o">!=</span> <span class="kc">None</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Prvo sodo število je&quot;</span><span class="p">,</span> <span class="n">sodo</span><span class="p">)</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;V seznamu ni sodih števil.&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -1240,11 +1250,11 @@ else:
 <p>Iz nekega razloga, ki ga bomo pojasnili čez dva tedna, pa običajno pišemo</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>sodo = prvo_sodo([1, 3, 5])
-if sodo is not None:
-    print(&quot;Prvo sodo število je&quot;, sodo)
-else:
-    print(&quot;V seznamu ni sodih števil.&quot;)
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">sodo</span> <span class="o">=</span> <span class="n">prvo_sodo</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">5</span><span class="p">])</span>
+<span class="k">if</span> <span class="n">sodo</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Prvo sodo število je&quot;</span><span class="p">,</span> <span class="n">sodo</span><span class="p">)</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;V seznamu ni sodih števil.&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -1257,11 +1267,11 @@ else:
 <p>Pa še nekaj iz lepopisa. Če pišemo funkcijo, ki nikoli ne vrne ničesar, pač ne napišemo <code class="docutils literal notranslate"><span class="pre">return</span></code>-a. Kadar funkcija včasih vrne rezultat, včasih pa vrne <code class="docutils literal notranslate"><span class="pre">None</span></code>, pa je vračanje <code class="docutils literal notranslate"><span class="pre">None</span></code> praviloma eksplicitno. Sicer bi lahko kdo, ki bere funkcijo, mislil, da v nekaterih primerih ne vrne ničesar, ker je programer pozabil na <code class="docutils literal notranslate"><span class="pre">return</span></code>. Lepo napisana funkcija <code class="docutils literal notranslate"><span class="pre">prvo_sodo</span></code> je torej</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>def prvo_sodo(s):
-    for e in s:
-        if e % 2 == 0:
-            return e
-    return None
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">prvo_sodo</span><span class="p">(</span><span class="n">s</span><span class="p">):</span>
+    <span class="k">for</span> <span class="n">e</span> <span class="ow">in</span> <span class="n">s</span><span class="p">:</span>
+        <span class="k">if</span> <span class="n">e</span> <span class="o">%</span> <span class="mi">2</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+            <span class="k">return</span> <span class="n">e</span>
+    <span class="k">return</span> <span class="kc">None</span>
 </pre></div>
 </div>
 </div>
@@ -1273,8 +1283,8 @@ else:
 vrne, kvadrat in kub števila.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>def kk(x):
-    return x ** 2, x ** 3
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">kk</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">x</span> <span class="o">**</span> <span class="mi">2</span><span class="p">,</span> <span class="n">x</span> <span class="o">**</span> <span class="mi">3</span>
 </pre></div>
 </div>
 </div>
@@ -1282,7 +1292,7 @@ vrne, kvadrat in kub števila.</p>
 <p>Pokličemo jo lahko takole.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>kvad, kub = kk(5)
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">kvad</span><span class="p">,</span> <span class="n">kub</span> <span class="o">=</span> <span class="n">kk</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -1295,11 +1305,11 @@ vrne, kvadrat in kub števila.</p>
 <p>Funkcija ima seveda lahko več <code class="docutils literal notranslate"><span class="pre">return</span></code>ov. Izvede se tisti, na katerega naleti. En primer smo že videli (določanje praštevilskosti). Naredimo še enega: funkcijo, ki vrne absolutno vrednost danega števila.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>def abs(x):
-    if x &lt; 0:
-        return -x
-    else:
-        return x
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">abs</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
+    <span class="k">if</span> <span class="n">x</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="p">:</span>
+        <span class="k">return</span> <span class="o">-</span><span class="n">x</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">x</span>
 </pre></div>
 </div>
 </div>
@@ -1312,8 +1322,8 @@ vrne, kvadrat in kub števila.</p>
 argumentov, vrne pa 42. Vedno.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>def odgovor():
-    return 42
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">odgovor</span><span class="p">():</span>
+    <span class="k">return</span> <span class="mi">42</span>
 </pre></div>
 </div>
 </div>
@@ -1321,7 +1331,7 @@ argumentov, vrne pa 42. Vedno.</p>
 <p>Tako funkcijo je potrebno tudi poklicati brez argumentov - oklepajev pa vseeno ne smemo pozabiti.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>odgovor()
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">odgovor</span><span class="p">()</span>
 </pre></div>
 </div>
 </div>

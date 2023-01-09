@@ -18,9 +18,10 @@ parts:
     - file: 04c_pisanje_modulov
     - file: 04d_ponovimo_2
     - file: 05_metode_nizov_in_seznamov
-    # - file: 06_slovarji_in_množice
+    - file: 06_slovarji_in_množice
 - caption: Naloge
   numbered: true
   chapters:
     - file: naloge/01_topovske_bitke/navodila
+    - file: naloge/02_slovarji_in_mnozice/navodila
 

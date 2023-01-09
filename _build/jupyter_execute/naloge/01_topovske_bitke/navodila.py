@@ -29,6 +29,9 @@
 # 
 # ![Run single test](./run-test.png)
 # 
+# ## Resitve
+# [resitev.py](https://raw.githubusercontent.com/programiranje-SKG/naloge-daljse/main/01_topovske_bitke/resitev.py)
+# 
 
 # 
 # ## Naloge

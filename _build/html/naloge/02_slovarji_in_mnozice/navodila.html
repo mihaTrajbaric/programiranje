@@ -1,0 +1,791 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>2. Naloge - slovarji in mnozice &#8212; Krožek začetnega programiranja 2022-23</title>
+    
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
+    <link rel="stylesheet" href="../../_static/styles/sphinx-book-theme.css?digest=5115cc725059bd94278eecd172e13a965bf8f5a9" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" />
+    
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
+
+    <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/clipboard.min.js"></script>
+    <script src="../../_static/copybutton.js"></script>
+    <script src="../../_static/scripts/sphinx-book-theme.js?digest=9c920249402e914e316237a7dbc6769907cce411"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../../_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../../_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="../../_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="prev" title="1. Topovske bitke" href="../01_topovske_bitke/navodila.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
+<!-- Checkboxes to toggle the left sidebar -->
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation" aria-label="Toggle navigation sidebar">
+<label class="overlay overlay-navbar" for="__navigation">
+    <div class="visually-hidden">Toggle navigation sidebar</div>
+</label>
+<!-- Checkboxes to toggle the in-page toc -->
+<input type="checkbox" class="sidebar-toggle" name="__page-toc" id="__page-toc" aria-label="Toggle in-page Table of Contents">
+<label class="overlay overlay-pagetoc" for="__page-toc">
+    <div class="visually-hidden">Toggle in-page Table of Contents</div>
+</label>
+<!-- Headers at the top -->
+<div class="announcement header-item noprint"></div>
+<div class="header header-item noprint"></div>
+
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<!-- Sidebar -->
+<div class="bd-sidebar noprint" id="site-navigation">
+    <div class="bd-sidebar__content">
+        <div class="bd-sidebar__top"><div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../../index.html">
+      
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
+      
+      <img src="../../_static/python-logo.png" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">Krožek začetnega programiranja 2022-23</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../../index.html">
+                    Splošno
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Vsebina
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../01_izrazi_spremenljivke_program.html">
+   1. Izrazi in spremenljivke
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../02a_pogoji.html">
+   2. Pogojni stavki
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../02b_zanke.html">
+   3. Zanke
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../02c_ponovimo.html">
+   4. Ponovitev - osnove
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../03a_seznami_terke_zanka_for.html">
+   5. Seznami, terke in zanka for
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../03b_indeksi_in_rezine.html">
+   6. Indeksi in rezine
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../04a_funkcije.html">
+   7. Funkcije
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../04b_uvazanje_modulov.html">
+   8. Uvažanje modulov
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../04c_pisanje_modulov.html">
+   9. Kako pišemo module
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../04d_ponovimo_2.html">
+   10. Ponovitev - seznami, funkcije, moduli
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../05_metode_nizov_in_seznamov.html">
+   11. Metode nizov in seznamov
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../06_slovarji_in_mno%C5%BEice.html">
+   12. Slovarji in množice
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Naloge
+ </span>
+</p>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../01_topovske_bitke/navodila.html">
+   1. Topovske bitke
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   2. Naloge - slovarji in mnozice
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav></div>
+        <div class="bd-sidebar__bottom">
+             <!-- To handle the deprecated key -->
+            
+            <div class="navbar_extra_footer">
+            Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+            </div>
+            
+        </div>
+    </div>
+    <div id="rtd-footer-container"></div>
+</div>
+
+
+          
+
+
+          
+<!-- A tiny helper pixel to detect if we've scrolled -->
+<div class="sbt-scroll-pixel-helper"></div>
+<!-- Main content -->
+<div class="col py-0 content-container">
+    
+    <div class="header-article row sticky-top noprint">
+        
+
+
+
+<div class="col py-1 d-flex header-article-main">
+    <div class="header-article__left">
+        
+        <label for="__navigation"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="right"
+title="Toggle navigation"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-bars"></i>
+  </span>
+
+</label>
+
+        
+    </div>
+    <div class="header-article__right">
+<div class="menu-dropdown menu-dropdown-launch-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Launch interactive content">
+      <i class="fas fa-rocket"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="https://mybinder.org/v2/gh/programiranje-SKG/skripta/main?urlpath=tree/naloge/02_slovarji_in_mnozice/navodila.ipynb"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Launch on Binder"
+>
+  
+
+<span class="headerbtn__icon-container">
+  
+    <img src="../../_static/images/logo_binder.svg">
+  </span>
+<span class="headerbtn__text-container">Binder</span>
+</a>
+
+      </li>
+      
+      <li>
+        
+<button onclick="initThebeSBT()"
+  class="headerbtn headerbtn-launch-thebe"
+  data-toggle="tooltip"
+data-placement="left"
+title="Launch Thebe"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-play"></i>
+  </span>
+<span class="headerbtn__text-container">Live Code</span>
+</button>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+
+<button onclick="toggleFullScreen()"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="bottom"
+title="Fullscreen mode"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+<div class="menu-dropdown menu-dropdown-repository-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Source repositories">
+      <i class="fab fa-github"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="https://github.com/programiranje-SKG/skripta"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Source repository"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="headerbtn__text-container">repository</span>
+</a>
+
+      </li>
+      
+      <li>
+        <a href="https://github.com/programiranje-SKG/skripta/issues/new?title=Issue%20on%20page%20%2Fnaloge/02_slovarji_in_mnozice/navodila.html&body=Your%20issue%20content%20here."
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Open an issue"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="headerbtn__text-container">open issue</span>
+</a>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+
+<div class="menu-dropdown menu-dropdown-download-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Download this page">
+      <i class="fas fa-download"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="../../_sources/naloge/02_slovarji_in_mnozice/navodila.ipynb"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Download source file"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="headerbtn__text-container">.ipynb</span>
+</a>
+
+      </li>
+      
+      <li>
+        
+<button onclick="printPdf(this)"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="left"
+title="Print to PDF"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="headerbtn__text-container">.pdf</span>
+</button>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+<label for="__page-toc"
+  class="headerbtn headerbtn-page-toc"
+  
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-list"></i>
+  </span>
+
+</label>
+
+    </div>
+</div>
+
+<!-- Table of contents -->
+<div class="col-md-3 bd-toc show noprint">
+    <div class="tocsection onthispage pt-5 pb-3">
+        <i class="fas fa-list"></i> Contents
+    </div>
+    <nav id="bd-toc-nav" aria-label="Page">
+        <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#inventar">
+   2.1. Inventar
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#zaloga">
+     2.1.1. Zaloga
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#prodaj">
+     2.1.2. Prodaj
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#primanjkljaj">
+     2.1.3. Primanjkljaj
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#najpogostejse">
+   2.2. Najpogostejše
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#freq">
+     2.2.1. Freq
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#max-freq">
+     2.2.2. Max freq
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id1">
+     2.2.3. Najpogostejse
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#najpogostejse-urejene">
+     2.2.4. Najpogostejse urejene
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#druzinsko-drevo">
+   2.3. Družinsko drevo
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#family-tree">
+     2.3.1. Family tree
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#children">
+     2.3.2. Children
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#grandchildren">
+     2.3.3. Grandchildren
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#successors-zahtevnejsa">
+     2.3.4. Successors (zahtevnejsa)
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+    </nav>
+</div>
+    </div>
+    <div class="article row">
+        <div class="col pl-md-3 pl-lg-5 content-container">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>Naloge - slovarji in mnozice</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#inventar">
+   2.1. Inventar
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#zaloga">
+     2.1.1. Zaloga
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#prodaj">
+     2.1.2. Prodaj
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#primanjkljaj">
+     2.1.3. Primanjkljaj
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#najpogostejse">
+   2.2. Najpogostejše
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#freq">
+     2.2.1. Freq
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#max-freq">
+     2.2.2. Max freq
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id1">
+     2.2.3. Najpogostejse
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#najpogostejse-urejene">
+     2.2.4. Najpogostejse urejene
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#druzinsko-drevo">
+   2.3. Družinsko drevo
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#family-tree">
+     2.3.1. Family tree
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#children">
+     2.3.2. Children
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#grandchildren">
+     2.3.3. Grandchildren
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#successors-zahtevnejsa">
+     2.3.4. Successors (zahtevnejsa)
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            <main id="main-content" role="main">
+                
+              <div>
+                
+  <section class="tex2jax_ignore mathjax_ignore" id="naloge-slovarji-in-mnozice">
+<h1><span class="section-number">2. </span>Naloge - slovarji in mnozice<a class="headerlink" href="#naloge-slovarji-in-mnozice" title="Permalink to this headline">#</a></h1>
+<p>Najprej si prenesi predlogo za reševanje, jo ekstrahiraj in odpri v najljubšem IDEju. Kasneje se bodo tukaj pojavile tudi rešitve.</p>
+<p><a class="reference external" href="https://github.com/programiranje-SKG/naloge-daljse/raw/main/02_slovarji_in_mnozice/slovarji_in_mnozice.zip">predloga.zip</a></p>
+<section id="inventar">
+<h2><span class="section-number">2.1. </span>Inventar<a class="headerlink" href="#inventar" title="Permalink to this headline">#</a></h2>
+<p>Neka trgovina shranjuje svoj inventar v slovarju, katerega ključi so artikli in vrednosti količine:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">inv</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;sir&#39;</span><span class="p">:</span> <span class="mi">8</span><span class="p">,</span> <span class="s1">&#39;kruh&#39;</span><span class="p">:</span> <span class="mi">15</span><span class="p">,</span> <span class="s1">&#39;makovka&#39;</span><span class="p">:</span> <span class="mi">10</span><span class="p">,</span> <span class="s1">&#39;pasja radost&#39;</span><span class="p">:</span> <span class="mi">2</span><span class="p">,</span> <span class="s1">&#39;pašteta&#39;</span><span class="p">:</span> <span class="mi">10</span><span class="p">,</span> <span class="s1">&#39;mortadela&#39;</span><span class="p">:</span> <span class="mi">4</span><span class="p">,</span> <span class="s1">&#39;klobasa&#39;</span><span class="p">:</span> <span class="mi">7</span><span class="p">}</span>
+</pre></div>
+</div>
+<p>Pazi: vrednosti so števila (npr. 10) in ne nizi (“10”).</p>
+<section id="zaloga">
+<h3><span class="section-number">2.1.1. </span>Zaloga<a class="headerlink" href="#zaloga" title="Permalink to this headline">#</a></h3>
+<p>Napišite funkcijo <code class="docutils literal notranslate"><span class="pre">zaloga(inventar,</span> <span class="pre">artikel)</span></code> naj pove, koliko izdelka artikel imamo na zalogi. Če bi imeli gornji slovar z inventarjem shranjen v slovarju inv, mora klic <code class="docutils literal notranslate"><span class="pre">zaloga(inv,</span> <span class="pre">&quot;makovka&quot;)</span></code> vrniti 10.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">zaloga</span><span class="p">(</span><span class="n">inv</span><span class="p">,</span> <span class="s2">&quot;makovka&quot;</span><span class="p">)</span>
+<span class="go">10</span>
+</pre></div>
+</div>
+</section>
+<section id="prodaj">
+<h3><span class="section-number">2.1.2. </span>Prodaj<a class="headerlink" href="#prodaj" title="Permalink to this headline">#</a></h3>
+<p>Napišite funkcijo <code class="docutils literal notranslate"><span class="pre">prodaj(inventar,</span> <span class="pre">artikel,</span> <span class="pre">kolicina)</span></code>, ki zmanjša količino artikla artikel v inventarju inventar za kolicina. Klic <code class="docutils literal notranslate"><span class="pre">prodaj(inv,</span> <span class="pre">&quot;makovka&quot;,</span> <span class="pre">3)</span></code> (prodali smo tri makovke) mora spremeniti slovar <code class="docutils literal notranslate"><span class="pre">inv</span></code> tako, da zmanjša vrednost pri ključu “makovke” za 3. Funkcija ne vrača ničesar.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">inv</span>
+<span class="go">{&#39;sir&#39;: 8, &#39;kruh&#39;: 15, &#39;makovka&#39;: 10, &#39;pasja radost&#39;: 2, &#39;pašteta&#39;: 10, &#39;mortadela&#39;: 4, &#39;klobasa&#39;: 7}</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">prodaj</span><span class="p">(</span><span class="n">inv</span><span class="p">,</span> <span class="s2">&quot;makovka&quot;</span><span class="p">,</span> <span class="mi">3</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">inv</span>
+<span class="go">{&#39;sir&#39;: 8, &#39;kruh&#39;: 15, &#39;makovka&#39;: 7, &#39;pasja radost&#39;: 2, &#39;pašteta&#39;: 10, &#39;mortadela&#39;: 4, &#39;klobasa&#39;: 7}</span>
+</pre></div>
+</div>
+<p>Nasvet: če veš preveč in si že slišal za argumente po vrednosti in po referenci, te misli do nadaljnjega opusti, saj za Python niso relevantne.</p>
+</section>
+<section id="primanjkljaj">
+<h3><span class="section-number">2.1.3. </span>Primanjkljaj<a class="headerlink" href="#primanjkljaj" title="Permalink to this headline">#</a></h3>
+<p>Napišite funkcijo <code class="docutils literal notranslate"><span class="pre">primanjkljaj(inventar,</span> <span class="pre">narocilo)</span></code>, ki prejme dva slovarja: prvi predstavlja trenutni inventar, drugi pa, kaj neka stranka naroča; naročilo je predstavljeno s slovarjem enake oblike kot inventar. Funkcija mora vrniti nov slovar, v katerem bo zapisano, koliko česa moramo še kupiti, da bomo lahko stranki dobavili vse, kar si želi. Če bi, recimo, stranka želela tri paštete, devet klobas in eno pivo, mora funkcija vrniti slovar <code class="docutils literal notranslate"><span class="pre">{&quot;klobasa&quot;:</span> <span class="pre">2,</span> <span class="pre">&quot;pivo&quot;:</span> <span class="pre">1}</span></code>. Dve klobasi zato, ker jih imamo sedem, stranka pa jih želi devet. Paštet ne bo potrebno naročati, saj jih imamo dovolj. Pivo pa potrebujemo, saj nimamo nobenega.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">primanjkljaj</span><span class="p">(</span><span class="n">inv</span><span class="p">,</span> <span class="p">{</span><span class="s2">&quot;pašteta&quot;</span><span class="p">:</span> <span class="mi">3</span><span class="p">,</span> <span class="s2">&quot;klobasa&quot;</span><span class="p">:</span> <span class="mi">9</span><span class="p">,</span> <span class="s2">&quot;pivo&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">})</span>
+<span class="go">{&quot;klobasa&quot;: 2, &quot;pivo&quot;: 1}</span>
+</pre></div>
+</div>
+</section>
+</section>
+<section id="najpogostejse">
+<h2><span class="section-number">2.2. </span>Najpogostejše<a class="headerlink" href="#najpogostejse" title="Permalink to this headline">#</a></h2>
+<section id="freq">
+<h3><span class="section-number">2.2.1. </span>Freq<a class="headerlink" href="#freq" title="Permalink to this headline">#</a></h3>
+<p>Napišite pomožno funkcijo <code class="docutils literal notranslate"><span class="pre">freq(s)</span></code>, ki sestavi in vrne slovar pogostosti črk v nizu <code class="docutils literal notranslate"><span class="pre">s</span></code>.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">freq</span><span class="p">(</span><span class="s2">&quot;abcaad&quot;</span><span class="p">)</span>
+<span class="go">{&#39;a&#39;: 3, &#39;b&#39;: 1, &#39;c&#39;: 1, &#39;d&#39;: 1}</span>
+</pre></div>
+</div>
+</section>
+<section id="max-freq">
+<h3><span class="section-number">2.2.2. </span>Max freq<a class="headerlink" href="#max-freq" title="Permalink to this headline">#</a></h3>
+<p>Napišite pomožno funkcijo <code class="docutils literal notranslate"><span class="pre">max_freq(f)</span></code>, ki vrne ključ v slovarju <code class="docutils literal notranslate"><span class="pre">f</span></code> z največjo shranjeno vrednostjo.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">max_freq</span><span class="p">({</span><span class="s1">&#39;a&#39;</span><span class="p">:</span> <span class="mi">3</span><span class="p">,</span> <span class="s1">&#39;b&#39;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span> <span class="s1">&#39;c&#39;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span> <span class="s1">&#39;d&#39;</span><span class="p">:</span> <span class="mi">1</span><span class="p">})</span>
+<span class="go">&#39;a&#39;</span>
+</pre></div>
+</div>
+</section>
+<section id="id1">
+<h3><span class="section-number">2.2.3. </span>Najpogostejse<a class="headerlink" href="#id1" title="Permalink to this headline">#</a></h3>
+<p>Napišite funkcijo <code class="docutils literal notranslate"><span class="pre">najpogostejse(s)</span></code>, ki vrne besedo in znak, ki se v podanem nizu največkrat pojavita. V nizu ‘in to in ono in to smo mi’ se največkrat pojavita beseda ‘in’ in znak ‘ ‘ (presledek).</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">najpogostejse</span><span class="p">(</span><span class="s1">&#39;aa bb aa&#39;</span><span class="p">)</span>
+<span class="go">(&#39;aa&#39;, &#39;a&#39;)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">najpogostejse</span><span class="p">(</span><span class="s1">&#39;in to in ono in to smo mi&#39;</span><span class="p">)</span>
+<span class="go">(&#39;in&#39;, &#39; &#39;)</span>
+</pre></div>
+</div>
+</section>
+<section id="najpogostejse-urejene">
+<h3><span class="section-number">2.2.4. </span>Najpogostejse urejene<a class="headerlink" href="#najpogostejse-urejene" title="Permalink to this headline">#</a></h3>
+<p>Tisti, ki se ob teh nalogah dolgočasijo, naj napišejo še funkcijo <code class="docutils literal notranslate"><span class="pre">najpogostejse_urejene</span></code>, ki vrne vse besede in črke, ki se v podanem nizu pojavijo, urejene po številu pojavitev (besede in črke z enakim številom pojavitev uredite po abecednem vrstnem redu).</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">najpogostejse_urejene</span><span class="p">(</span><span class="s1">&#39;aa bb aa&#39;</span><span class="p">)</span>
+<span class="go">([&#39;aa&#39;, &#39;bb&#39;], [&#39;a&#39;, &#39; &#39;, &#39;b&#39;])</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">najpogostejse_urejene</span><span class="p">(</span><span class="s1">&#39;in to in ono in to smo mi&#39;</span><span class="p">)</span>
+<span class="go">([&#39;in&#39;, &#39;to&#39;, &#39;mi&#39;, &#39;ono&#39;, &#39;smo&#39;], [&#39; &#39;, &#39;o&#39;, &#39;i&#39;, &#39;n&#39;, &#39;m&#39;, &#39;t&#39;, &#39;s&#39;])</span>
+</pre></div>
+</div>
+</section>
+</section>
+<section id="druzinsko-drevo">
+<h2><span class="section-number">2.3. </span>Družinsko drevo<a class="headerlink" href="#druzinsko-drevo" title="Permalink to this headline">#</a></h2>
+<p>V seznamu family je spravljeno družinsko drevo:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">family</span> <span class="o">=</span> <span class="p">[(</span><span class="s1">&#39;bob&#39;</span><span class="p">,</span> <span class="s1">&#39;mary&#39;</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;bob&#39;</span><span class="p">,</span> <span class="s1">&#39;tom&#39;</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;bob&#39;</span><span class="p">,</span> <span class="s1">&#39;judy&#39;</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;alice&#39;</span><span class="p">,</span> <span class="s1">&#39;mary&#39;</span><span class="p">),</span> 
+    <span class="p">(</span><span class="s1">&#39;alice&#39;</span><span class="p">,</span> <span class="s1">&#39;tom&#39;</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;alice&#39;</span><span class="p">,</span> <span class="s1">&#39;judy&#39;</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;renee&#39;</span><span class="p">,</span> <span class="s1">&#39;rob&#39;</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;renee&#39;</span><span class="p">,</span> <span class="s1">&#39;bob&#39;</span><span class="p">),</span> 
+    <span class="p">(</span><span class="s1">&#39;sid&#39;</span><span class="p">,</span> <span class="s1">&#39;rob&#39;</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;sid&#39;</span><span class="p">,</span> <span class="s1">&#39;bob&#39;</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;tom&#39;</span><span class="p">,</span> <span class="s1">&#39;ken&#39;</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;ken&#39;</span><span class="p">,</span> <span class="s1">&#39;suzan&#39;</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;rob&#39;</span><span class="p">,</span> <span class="s1">&#39;jim&#39;</span><span class="p">)]</span>
+</pre></div>
+</div>
+<p>V vsaki terki sta zapisani dve imeni: ime starša in ime otroka. Terka <code class="docutils literal notranslate"><span class="pre">('bob',</span> <span class="pre">'mary')</span></code> nam pove, da je Bob Maryjin oče, terka <code class="docutils literal notranslate"><span class="pre">('bob',</span> <span class="pre">'tom')</span></code> pa, da je Bob Tomov oče, itd.</p>
+<p><img alt="Familiy" src="../../_images/family.png" /></p>
+<section id="family-tree">
+<h3><span class="section-number">2.3.1. </span>Family tree<a class="headerlink" href="#family-tree" title="Permalink to this headline">#</a></h3>
+<p>Napišite funkcijo <code class="docutils literal notranslate"><span class="pre">family_tree(family)</span></code>, ki sprejeme seznam v kateri je spravljeno družinsko drevo in vrne slovar v katerem je za vsakega starša spravljen seznam vseh njegovih otrok.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">family_tree</span><span class="p">(</span><span class="n">family</span><span class="p">)</span>
+<span class="go">{&#39;renee&#39;: [&#39;rob&#39;, &#39;bob&#39;], &#39;ken&#39;: [&#39;suzan&#39;], &#39;rob&#39;: [&#39;jim&#39;], &#39;sid&#39;: [&#39;rob&#39;, &#39;bob&#39;], ... , &#39;bob&#39;: [&#39;mary&#39;, &#39;tom&#39;, &#39;judy&#39;]}</span>
+</pre></div>
+</div>
+</section>
+<section id="children">
+<h3><span class="section-number">2.3.2. </span>Children<a class="headerlink" href="#children" title="Permalink to this headline">#</a></h3>
+<p>Napišite funkcijo <code class="docutils literal notranslate"><span class="pre">children(tree,</span> <span class="pre">name)</span></code>, ki v družinskem drevesu <code class="docutils literal notranslate"><span class="pre">tree</span></code> vrne seznam vseh otrok osebe. V primeru, da oseba nima otrok vrnite prazen seznam.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">tree</span> <span class="o">=</span> <span class="n">family_tree</span><span class="p">(</span><span class="n">family</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">children</span><span class="p">(</span><span class="n">tree</span><span class="p">,</span> <span class="s1">&#39;alice&#39;</span><span class="p">)</span>
+<span class="go">[&#39;mary&#39;, &#39;tom&#39;, &#39;judy&#39;]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">children</span><span class="p">(</span><span class="n">tree</span><span class="p">,</span> <span class="s1">&#39;mary&#39;</span><span class="p">)</span>
+<span class="go">[]</span>
+</pre></div>
+</div>
+</section>
+<section id="grandchildren">
+<h3><span class="section-number">2.3.3. </span>Grandchildren<a class="headerlink" href="#grandchildren" title="Permalink to this headline">#</a></h3>
+<p>Napišite funkcijo <code class="docutils literal notranslate"><span class="pre">grandchildren(tree,</span> <span class="pre">name)</span></code>, ki vrne seznam vseh vnukov in vnukinj osebe.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">grandchildren</span><span class="p">(</span><span class="n">tree</span><span class="p">,</span> <span class="s1">&#39;renee&#39;</span><span class="p">)</span>
+<span class="go">[&#39;jim&#39;, &#39;mary&#39;, &#39;tom&#39;, &#39;judy&#39;]</span>
+</pre></div>
+</div>
+</section>
+<section id="successors-zahtevnejsa">
+<h3><span class="section-number">2.3.4. </span>Successors (zahtevnejsa)<a class="headerlink" href="#successors-zahtevnejsa" title="Permalink to this headline">#</a></h3>
+<p>Naslednja funkcija je malo zahtevnejša od ostalih, zato jo lahko preskočite. Napišite funkcijo <code class="docutils literal notranslate"><span class="pre">successors(tree,</span> <span class="pre">name)</span></code>, ki vrne seznam vseh naslednikov osebe.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">successors</span><span class="p">(</span><span class="n">tree</span><span class="p">,</span> <span class="s1">&#39;tom&#39;</span><span class="p">)</span>
+<span class="go">[&#39;ken&#39;, &#39;suzan&#39;]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">successors</span><span class="p">(</span><span class="n">tree</span><span class="p">,</span> <span class="s1">&#39;sid&#39;</span><span class="p">)</span>
+<span class="go">[&#39;rob&#39;, &#39;bob&#39;, &#39;jim&#39;, &#39;mary&#39;, &#39;tom&#39;, &#39;judy&#39;, &#39;ken&#39;, &#39;suzan&#39;]</span>
+</pre></div>
+</div>
+</section>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "programiranje-SKG/skripta",
+            ref: "main",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./naloge/02_slovarji_in_mnozice"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+            </main>
+            <footer class="footer-article noprint">
+                
+    <!-- Previous / next buttons -->
+<div class='prev-next-area'>
+    <a class='left-prev' id="prev-link" href="../01_topovske_bitke/navodila.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title"><span class="section-number">1. </span>Topovske bitke</p>
+        </div>
+    </a>
+</div>
+            </footer>
+        </div>
+    </div>
+    <div class="footer-content row">
+        <footer class="col footer"><p>
+  
+    By Mihael Trajbarič<br/>
+  
+      &copy; Copyright 2022.<br/>
+</p>
+        </footer>
+    </div>
+    
+</div>
+
+
+      </div>
+    </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+
+
+  </body>
+</html>
