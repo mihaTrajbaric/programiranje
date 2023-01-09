@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>Slovarji in množice &#8212; Krožek začetnega programiranja 2022-23</title>
+    <title>12. Slovarji in množice &#8212; Krožek začetnega programiranja 2022-23</title>
     
   <!-- Loaded before other Sphinx assets -->
   <link href="_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
@@ -52,6 +52,8 @@ const thebe_selector_output = ".output, .cell_output"
     <script async="async" src="_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="1. Topovske bitke" href="naloge/01_topovske_bitke/navodila.html" />
+    <link rel="prev" title="11. Metode nizov in seznamov" href="05_metode_nizov_in_seznamov.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -116,7 +118,7 @@ const thebe_selector_output = ".output, .cell_output"
   Vsebina
  </span>
 </p>
-<ul class="nav bd-sidenav">
+<ul class="current nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="01_izrazi_spremenljivke_program.html">
    1. Izrazi in spremenljivke
@@ -172,6 +174,11 @@ const thebe_selector_output = ".output, .cell_output"
    11. Metode nizov in seznamov
   </a>
  </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   12. Slovarji in množice
+  </a>
+ </li>
 </ul>
 <p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
@@ -182,6 +189,11 @@ const thebe_selector_output = ".output, .cell_output"
  <li class="toctree-l1">
   <a class="reference internal" href="naloge/01_topovske_bitke/navodila.html">
    1. Topovske bitke
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="naloge/02_slovarji_in_mnozice/navodila.html">
+   2. Naloge - slovarji in mnozice
   </a>
  </li>
 </ul>
@@ -410,34 +422,34 @@ title="Print to PDF"
         <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#slovar">
-   Slovar
+   12.1. Slovar
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#kaj-lahko-pocnemo-s-slovarji">
-     Kaj lahko počnemo s slovarji?
+     12.1.1. Kaj lahko počnemo s slovarji?
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#primer-kronogrami">
-     Primer: kronogrami
+     12.1.2. Primer: kronogrami
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#privzete-vrednosti">
-     Privzete vrednosti
+     12.1.3. Privzete vrednosti
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#stevec">
-     Števec
+     12.1.4. Števec
     </a>
    </li>
   </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#mnozice">
-   Množice
+   12.2. Množice
   </a>
  </li>
 </ul>
@@ -461,34 +473,34 @@ title="Print to PDF"
                             <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#slovar">
-   Slovar
+   12.1. Slovar
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#kaj-lahko-pocnemo-s-slovarji">
-     Kaj lahko počnemo s slovarji?
+     12.1.1. Kaj lahko počnemo s slovarji?
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#primer-kronogrami">
-     Primer: kronogrami
+     12.1.2. Primer: kronogrami
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#privzete-vrednosti">
-     Privzete vrednosti
+     12.1.3. Privzete vrednosti
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#stevec">
-     Števec
+     12.1.4. Števec
     </a>
    </li>
   </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#mnozice">
-   Množice
+   12.2. Množice
   </a>
  </li>
 </ul>
@@ -502,9 +514,9 @@ title="Print to PDF"
               <div>
                 
   <section class="tex2jax_ignore mathjax_ignore" id="slovarji-in-mnozice">
-<h1>Slovarji in množice<a class="headerlink" href="#slovarji-in-mnozice" title="Permalink to this headline">#</a></h1>
+<h1><span class="section-number">12. </span>Slovarji in množice<a class="headerlink" href="#slovarji-in-mnozice" title="Permalink to this headline">#</a></h1>
 <section id="slovar">
-<h2>Slovar<a class="headerlink" href="#slovar" title="Permalink to this headline">#</a></h2>
+<h2><span class="section-number">12.1. </span>Slovar<a class="headerlink" href="#slovar" title="Permalink to this headline">#</a></h2>
 <p>Poglejmo še enkrat sezname. Seznam je nekakšna zbirka nekih poljubnih reči, pri čemer je vsaka reč v svojem “predalčku”, predalčki pa so oštevilčeni. Prvi ima številko 0, drugi 1, tretji 2 in tako naprej. Za vsak predalček lahko pogledamo, kaj je v njem, spremenimo njegovo vsebino, predalčke lahko odvzemamo in dodajamo.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">s</span> <span class="o">=</span> <span class="p">[</span><span class="mi">6</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">1</span><span class="p">]</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">s</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
@@ -524,8 +536,8 @@ title="Print to PDF"
 <p>Stalno omenjani Benjamin si lahko takole sestavi slovar s telefonskimi številkami svojih oboževalk:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>stevilke = {&quot;Ana&quot;: &quot;041 310239&quot;, &quot;Berta&quot;: &quot;040 318319&quot;, &quot;Cilka&quot;: &quot;041 103194&quot;, &quot;Dani&quot;: &quot;040 193831&quot;,
-            &quot;Ema&quot;: &quot;051 123123&quot;, &quot;Fanči&quot;: &quot;040 135367&quot;, &quot;Helga&quot;: &quot;+49 175 4728 475&quot;}
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">stevilke</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;Ana&quot;</span><span class="p">:</span> <span class="s2">&quot;041 310239&quot;</span><span class="p">,</span> <span class="s2">&quot;Berta&quot;</span><span class="p">:</span> <span class="s2">&quot;040 318319&quot;</span><span class="p">,</span> <span class="s2">&quot;Cilka&quot;</span><span class="p">:</span> <span class="s2">&quot;041 103194&quot;</span><span class="p">,</span> <span class="s2">&quot;Dani&quot;</span><span class="p">:</span> <span class="s2">&quot;040 193831&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;Ema&quot;</span><span class="p">:</span> <span class="s2">&quot;051 123123&quot;</span><span class="p">,</span> <span class="s2">&quot;Fanči&quot;</span><span class="p">:</span> <span class="s2">&quot;040 135367&quot;</span><span class="p">,</span> <span class="s2">&quot;Helga&quot;</span><span class="p">:</span> <span class="s2">&quot;+49 175 4728 475&quot;</span><span class="p">}</span>
 </pre></div>
 </div>
 </div>
@@ -535,14 +547,14 @@ seznamu: z indeksiranjem, le da v oglate oklepaje ne napiše zaporedne
 številke, temveč ključ.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>stevilke[&quot;Ana&quot;]
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">stevilke</span><span class="p">[</span><span class="s2">&quot;Ana&quot;</span><span class="p">]</span>
 </pre></div>
 </div>
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>stevilke[&quot;Dani&quot;]
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">stevilke</span><span class="p">[</span><span class="s2">&quot;Dani&quot;</span><span class="p">]</span>
 </pre></div>
 </div>
 </div>
@@ -551,7 +563,7 @@ seznamu: z indeksiranjem, le da v oglate oklepaje ne napiše zaporedne
 tretjega elementa, saj ključi niso nujno primerljivi - v istem slovarju se lahko kot ključi pojavljajo števila in nizi (kar sicer ni dobra ideja), zdaj pa uredite to, če morete. Vsaj v splošnem se to ne da. Od različice 3.5 si Python neuradno (bolj “slučajno”) zapomni vrstni red dodajanja, od 3.7 pa je to del standarda jezika. Ker ni vrstnega reda, tudi ni rezin.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>stevilke[&quot;Ana&quot;:&quot;Cilka&quot;]
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">stevilke</span><span class="p">[</span><span class="s2">&quot;Ana&quot;</span><span class="p">:</span><span class="s2">&quot;Cilka&quot;</span><span class="p">]</span>
 </pre></div>
 </div>
 </div>
@@ -571,13 +583,13 @@ tretjega elementa, saj ključi niso nujno primerljivi - v istem slovarju se lahk
 <p>Drugi obrok cene, ki jo plačamo za učinkovitost slovarjev, je poraba pomnilnika: slovar porabi nekako dvakrat več pomnilnika kot seznam. Koliko, točno, več, je odvisno od velikost slovarja in tega, kaj shranjujemo. Pri tem predmetu se s pomnilnikom ne obremenjujte.</p>
 <p>Aha, še tretji obrok cene, iz drobnega tiska: vsak ključ se lahko pojavi največ enkrat. Če poskušamo prirediti neko vrednost ključu, ki že obstaja, le povozimo staro vrednost. Ampak to je tako ali tako pričakovati. Tudi v seznamu nimamo nikoli dveh različnih elementov na istem mestu.</p>
 <section id="kaj-lahko-pocnemo-s-slovarji">
-<h3>Kaj lahko počnemo s slovarji?<a class="headerlink" href="#kaj-lahko-pocnemo-s-slovarji" title="Permalink to this headline">#</a></h3>
+<h3><span class="section-number">12.1.1. </span>Kaj lahko počnemo s slovarji?<a class="headerlink" href="#kaj-lahko-pocnemo-s-slovarji" title="Permalink to this headline">#</a></h3>
 <p>Lahko jim dodajamo nove elemente: preprosto priredimo jim nov element.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>stevilke[&quot;Iva&quot;] = &quot;040 222333&quot;
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">stevilke</span><span class="p">[</span><span class="s2">&quot;Iva&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;040 222333&quot;</span>
 
-stevilke
+<span class="n">stevilke</span>
 </pre></div>
 </div>
 </div>
@@ -599,7 +611,7 @@ dodajati na konec. Sploh pa moramo tako ali tako povedati ključ, zato dodajamo,
 <p>Vprašamo se lahko, ali v slovarju obstaja določen ključ.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>&quot;Cilka&quot; in stevilke
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="s2">&quot;Cilka&quot;</span> <span class="ow">in</span> <span class="n">stevilke</span>
 </pre></div>
 </div>
 </div>
@@ -611,7 +623,7 @@ dodajati na konec. Sploh pa moramo tako ali tako povedati ključ, zato dodajamo,
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>&quot;Jana&quot; in stevilke
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="s2">&quot;Jana&quot;</span> <span class="ow">in</span> <span class="n">stevilke</span>
 </pre></div>
 </div>
 </div>
@@ -624,9 +636,9 @@ dodajati na konec. Sploh pa moramo tako ali tako povedati ključ, zato dodajamo,
 <p>Če se Cilka skrega z Benjaminom, jo lahko ta pobriše (mislim, pobriše njeno številko).</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>del stevilke[&quot;Cilka&quot;]
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">del</span> <span class="n">stevilke</span><span class="p">[</span><span class="s2">&quot;Cilka&quot;</span><span class="p">]</span>
 
-stevilke
+<span class="n">stevilke</span>
 </pre></div>
 </div>
 </div>
@@ -644,8 +656,8 @@ stevilke
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>&quot;Cilka&quot; in stevilke
-False
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="s2">&quot;Cilka&quot;</span> <span class="ow">in</span> <span class="n">stevilke</span>
+<span class="kc">False</span>
 </pre></div>
 </div>
 </div>
@@ -658,8 +670,8 @@ False
 <p>Če gremo prek slovarjev z zanko <code class="docutils literal notranslate"><span class="pre">for</span></code>, dobimo vrednosti ključev.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>for ime in stevilke:
-    print(ime)
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">ime</span> <span class="ow">in</span> <span class="n">stevilke</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">ime</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -678,8 +690,8 @@ Iva
 <p>Seveda lahko ob vsakem imenu izpišemo tudi številko.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>for ime in stevilke:
-    print(ime + &quot;:&quot;, stevilke[ime])
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">ime</span> <span class="ow">in</span> <span class="n">stevilke</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">ime</span> <span class="o">+</span> <span class="s2">&quot;:&quot;</span><span class="p">,</span> <span class="n">stevilke</span><span class="p">[</span><span class="n">ime</span><span class="p">])</span>
 </pre></div>
 </div>
 </div>
@@ -699,8 +711,8 @@ Iva: 040 222333
 <p>Najprej poglejmo <code class="docutils literal notranslate"><span class="pre">items()</span></code>.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>for ime, stevilka in stevilke.items():
-    print(ime + &quot;:&quot;, stevilka)
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">ime</span><span class="p">,</span> <span class="n">stevilka</span> <span class="ow">in</span> <span class="n">stevilke</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">ime</span> <span class="o">+</span> <span class="s2">&quot;:&quot;</span><span class="p">,</span> <span class="n">stevilka</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -723,8 +735,8 @@ Iva: 040 222333
 <p>Slovar ima še dve metodi, ki smo ju videli tudi pri seznamu: metodo, ki sprazni slovar in drugo, ki naredi nov, enak slovar.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>stevilke2 = stevilke.copy()
-stevilke2
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">stevilke2</span> <span class="o">=</span> <span class="n">stevilke</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
+<span class="n">stevilke2</span>
 </pre></div>
 </div>
 </div>
@@ -742,8 +754,8 @@ stevilke2
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>stevilke2.clear()
-stevilke2
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">stevilke2</span><span class="o">.</span><span class="n">clear</span><span class="p">()</span>
+<span class="n">stevilke2</span>
 </pre></div>
 </div>
 </div>
@@ -756,7 +768,7 @@ stevilke2
 <p>Omenimo le še eno od slovarjevih metod, <code class="docutils literal notranslate"><span class="pre">get</span></code>. Ta dela podobno kot indeksiranje, <code class="docutils literal notranslate"><span class="pre">stevilke.get(&quot;Ana&quot;)</span></code> naredi isto kot <code class="docutils literal notranslate"><span class="pre">stevilke[&quot;Ana&quot;]</span></code>. Metodo <code class="docutils literal notranslate"><span class="pre">get</span></code> uporabimo, kadar želimo v primeru, da ključa morda ni v slovarju, dobiti neko privzeto vrednost. Le-to podamo kot drugi argument.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>stevilke.get(&quot;Ema&quot;, &quot;ni številke&quot;)
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">stevilke</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;Ema&quot;</span><span class="p">,</span> <span class="s2">&quot;ni številke&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -768,7 +780,7 @@ stevilke2
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>stevilke.get(&quot;Greta&quot;, &quot;ni številke&quot;)
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">stevilke</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;Greta&quot;</span><span class="p">,</span> <span class="s2">&quot;ni številke&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -781,7 +793,7 @@ stevilke2
 <p>Še enkrat: ne pišite <code class="docutils literal notranslate"><span class="pre">stevilke.get(&quot;Ema&quot;)</span></code>. To je čudno. Piše se <code class="docutils literal notranslate"><span class="pre">stevilke[&quot;Ema&quot;]</span></code>. Metodo <code class="docutils literal notranslate"><span class="pre">get</span></code> uporabite le takrat, kadar niste prepričani, ali slovar vsebuje ta ključ, in bi radi podali privzeto vrednost.</p>
 </section>
 <section id="primer-kronogrami">
-<h3>Primer: kronogrami<a class="headerlink" href="#primer-kronogrami" title="Permalink to this headline">#</a></h3>
+<h3><span class="section-number">12.1.2. </span>Primer: kronogrami<a class="headerlink" href="#primer-kronogrami" title="Permalink to this headline">#</a></h3>
 <p>Neka stara domača naloga je šla takole.</p>
 <p>Veliko latinskih napisov, ki obeležujejo kak pomemben dogodek, je napisanih v obliki <a class="reference external" href="http://en.wikipedia.org/wiki/Chronogram">kronograma</a>: če seštejemo vrednosti črk, ki predstavljajo tudi rimske številke (I=1, V=5, X=10, L=50, C=100, D=500, M=1000), dajo letnico dogodka.</p>
 <p>Tako, recimo, napis na cerkvi sv. Jakoba v Opatiji, CVIVS IN HOC RENOVATA LOCO PIA FVLGET IMAGO SIS CVSTOS POPVLI SANCTE IACOBE TVI, da vsoto 1793, ko je bila cerkev prenovljena (o čemer govori napis).</p>
@@ -790,27 +802,27 @@ stevilke2
 <p>Očitna rešitev je:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>def kronogram(s):
-    v = 0
-    for c in s:
-        if c==&quot;I&quot;:
-            v += 1
-        elif c==&quot;V&quot;:
-            v += 5
-        elif c==&quot;X&quot;:
-            v += 10
-        elif c==&quot;L&quot;:
-            v += 50
-        elif c==&quot;C&quot;:
-            v += 100
-        elif c==&quot;D&quot;:
-            v += 500
-        elif c==&quot;M&quot;:
-            v += 1000
-    return v
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">kronogram</span><span class="p">(</span><span class="n">s</span><span class="p">):</span>
+    <span class="n">v</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="k">for</span> <span class="n">c</span> <span class="ow">in</span> <span class="n">s</span><span class="p">:</span>
+        <span class="k">if</span> <span class="n">c</span><span class="o">==</span><span class="s2">&quot;I&quot;</span><span class="p">:</span>
+            <span class="n">v</span> <span class="o">+=</span> <span class="mi">1</span>
+        <span class="k">elif</span> <span class="n">c</span><span class="o">==</span><span class="s2">&quot;V&quot;</span><span class="p">:</span>
+            <span class="n">v</span> <span class="o">+=</span> <span class="mi">5</span>
+        <span class="k">elif</span> <span class="n">c</span><span class="o">==</span><span class="s2">&quot;X&quot;</span><span class="p">:</span>
+            <span class="n">v</span> <span class="o">+=</span> <span class="mi">10</span>
+        <span class="k">elif</span> <span class="n">c</span><span class="o">==</span><span class="s2">&quot;L&quot;</span><span class="p">:</span>
+            <span class="n">v</span> <span class="o">+=</span> <span class="mi">50</span>
+        <span class="k">elif</span> <span class="n">c</span><span class="o">==</span><span class="s2">&quot;C&quot;</span><span class="p">:</span>
+            <span class="n">v</span> <span class="o">+=</span> <span class="mi">100</span>
+        <span class="k">elif</span> <span class="n">c</span><span class="o">==</span><span class="s2">&quot;D&quot;</span><span class="p">:</span>
+            <span class="n">v</span> <span class="o">+=</span> <span class="mi">500</span>
+        <span class="k">elif</span> <span class="n">c</span><span class="o">==</span><span class="s2">&quot;M&quot;</span><span class="p">:</span>
+            <span class="n">v</span> <span class="o">+=</span> <span class="mi">1000</span>
+    <span class="k">return</span> <span class="n">v</span>
 
-napis = &quot;CVIVS IN HOC RENOVATA LOCO PIA FVLGET IMAGO SIS CVSTOS POPVLI SANCTE IACOBE TVI&quot;
-kronogram(napis)
+<span class="n">napis</span> <span class="o">=</span> <span class="s2">&quot;CVIVS IN HOC RENOVATA LOCO PIA FVLGET IMAGO SIS CVSTOS POPVLI SANCTE IACOBE TVI&quot;</span>
+<span class="n">kronogram</span><span class="p">(</span><span class="n">napis</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -824,7 +836,7 @@ kronogram(napis)
 <p>V slovar si bomo zapisali, katero številko pomeni katera črka.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>stevke = {&quot;I&quot;: 1, &quot;V&quot;: 5, &quot;X&quot;: 10, &quot;L&quot;: 50, &quot;C&quot;: 100, &quot;D&quot;: 500, &quot;M&quot;: 1000}
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">stevke</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;I&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span> <span class="s2">&quot;V&quot;</span><span class="p">:</span> <span class="mi">5</span><span class="p">,</span> <span class="s2">&quot;X&quot;</span><span class="p">:</span> <span class="mi">10</span><span class="p">,</span> <span class="s2">&quot;L&quot;</span><span class="p">:</span> <span class="mi">50</span><span class="p">,</span> <span class="s2">&quot;C&quot;</span><span class="p">:</span> <span class="mi">100</span><span class="p">,</span> <span class="s2">&quot;D&quot;</span><span class="p">:</span> <span class="mi">500</span><span class="p">,</span> <span class="s2">&quot;M&quot;</span><span class="p">:</span> <span class="mi">1000</span><span class="p">}</span>
 </pre></div>
 </div>
 </div>
@@ -832,14 +844,14 @@ kronogram(napis)
 <p>Funkcija zdaj deluje tako, da gre prek niza in za vsako črko preveri, ali je v slovarju. Če je ni, ne pomeni številke; če je, prištejemo toliko, kolikor je vredna.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>def kronogram(s):
-    v = 0
-    for c in s:
-        if c in stevke:
-            v += stevke[c]
-    return v
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">kronogram</span><span class="p">(</span><span class="n">s</span><span class="p">):</span>
+    <span class="n">v</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="k">for</span> <span class="n">c</span> <span class="ow">in</span> <span class="n">s</span><span class="p">:</span>
+        <span class="k">if</span> <span class="n">c</span> <span class="ow">in</span> <span class="n">stevke</span><span class="p">:</span>
+            <span class="n">v</span> <span class="o">+=</span> <span class="n">stevke</span><span class="p">[</span><span class="n">c</span><span class="p">]</span>
+    <span class="k">return</span> <span class="n">v</span>
 
-kronogram(napis)
+<span class="n">kronogram</span><span class="p">(</span><span class="n">napis</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -852,13 +864,13 @@ kronogram(napis)
 <p>Še hitreje gre z <code class="docutils literal notranslate"><span class="pre">get</span></code>; če črke ni, je njena privzeta vrednost 0.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>def kronogram(s):
-    v = 0
-    for c in s:
-        v += stevke.get(c, 0)
-    return v
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">kronogram</span><span class="p">(</span><span class="n">s</span><span class="p">):</span>
+    <span class="n">v</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="k">for</span> <span class="n">c</span> <span class="ow">in</span> <span class="n">s</span><span class="p">:</span>
+        <span class="n">v</span> <span class="o">+=</span> <span class="n">stevke</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">c</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">v</span>
 
-kronogram(napis)
+<span class="n">kronogram</span><span class="p">(</span><span class="n">napis</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -871,10 +883,10 @@ kronogram(napis)
 <p>Ob tem si ne moremo kaj, da ne bi poškilili za en teden naprej, ko se bomo učili bolj funkcijskega sloga programiranja in znali biti še krajši in jedrnatejši, spet predvsem po zaslugi slovarjev.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>def kronogram(s):
-    return sum(stevke.get(c, 0) for c in s)
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">kronogram</span><span class="p">(</span><span class="n">s</span><span class="p">):</span>
+    <span class="k">return</span> <span class="nb">sum</span><span class="p">(</span><span class="n">stevke</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">c</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span> <span class="k">for</span> <span class="n">c</span> <span class="ow">in</span> <span class="n">s</span><span class="p">)</span>
 
-kronogram(napis)
+<span class="n">kronogram</span><span class="p">(</span><span class="n">napis</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -886,16 +898,16 @@ kronogram(napis)
 </div>
 </section>
 <section id="privzete-vrednosti">
-<h3>Privzete vrednosti<a class="headerlink" href="#privzete-vrednosti" title="Permalink to this headline">#</a></h3>
+<h3><span class="section-number">12.1.3. </span>Privzete vrednosti<a class="headerlink" href="#privzete-vrednosti" title="Permalink to this headline">#</a></h3>
 <p>Slovarji so uporabne reči. V veliko primerih pa uporabimo neko različico slovarja, ki ima še en dodaten superpower.</p>
 <p>Denimo, da smo dobili v preskušanje igralno kocko, za katero nas zanima, ali goljufa. Stokrat smo jo vrgli in zabeležili rezultate.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>meti = [4, 4, 4, 3, 2, 3, 5, 3, 3, 4, 6, 6, 6, 1, 3,
-        6, 6, 4, 1, 4, 6, 1, 4, 4, 4, 6, 4, 6, 5, 5, 6, 6, 2, 4, 4, 6,
-        3, 2, 6, 1, 3, 6, 3, 2, 6, 6, 4, 6, 4, 2, 4, 4, 1, 1, 6, 2, 6,
-        6, 4, 3, 4, 2, 6, 5, 6, 3, 2, 5, 1, 5, 3, 6, 4, 6, 2, 2, 4, 1,
-        4, 4, 3, 1, 4, 2, 1, 3, 1, 4, 6, 1, 1, 3, 4, 1, 4, 3, 2, 4, 6, 6]
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">meti</span> <span class="o">=</span> <span class="p">[</span><span class="mi">4</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span>
+        <span class="mi">6</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span>
+        <span class="mi">3</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span>
+        <span class="mi">6</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span>
+        <span class="mi">4</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">6</span><span class="p">]</span>
 </pre></div>
 </div>
 </div>
@@ -903,8 +915,8 @@ kronogram(napis)
 <p>Zanima nas, kolikokrat je padla katera številka. Nič lažjega. Najprej si pripravimo seznam s sedmimi ničlami.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>kolikokrat = [0] * 7
-kolikokrat
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">kolikokrat</span> <span class="o">=</span> <span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">*</span> <span class="mi">7</span>
+<span class="n">kolikokrat</span>
 </pre></div>
 </div>
 </div>
@@ -917,10 +929,10 @@ kolikokrat
 <p>Zdaj nam bo, recimo <code class="docutils literal notranslate"><span class="pre">kolikokrat[3]</span></code> povedal, kolikokrat je padla trojka. (Čemu sedem? Saj ima kocka samo šest ploskev. Boste videli. Finta.) Zdaj pa štejmo: pojdimo čez vse mete in povečujmo števce.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>for met in meti:
-    kolikokrat[met] += 1
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">met</span> <span class="ow">in</span> <span class="n">meti</span><span class="p">:</span>
+    <span class="n">kolikokrat</span><span class="p">[</span><span class="n">met</span><span class="p">]</span> <span class="o">+=</span> <span class="mi">1</span>
 
-kolikokrat
+<span class="n">kolikokrat</span>
 </pre></div>
 </div>
 </div>
@@ -935,12 +947,12 @@ kolikokrat
 <p>Ups, nalogo smo rešili kar s seznamom! Da, to gre, ker so “predalčki” seznama oštevilčeni, tako kot ploskve kocke. Tole pa ne bo šlo: tule je seznam telefonskih številk deklet, ki jih je danes klical Benjamin. Katero je poklical kolikokrat?</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>klici = [&#39;041 103194&#39;, &#39;040 193831&#39;, &#39;040 318319&#39;, &#39;040 193831&#39;, &#39;041 310239&#39;,
-        &#39;040 318319&#39;, &#39;040 318319&#39;, &#39;040 318319&#39;, &#39;040 193831&#39;, &#39;040 193831&#39;,
-        &#39;040 193831&#39;, &#39;040 193831&#39;, &#39;040 193831&#39;, &#39;040 318319&#39;, &#39;040 318319&#39;,
-        &#39;040 318319&#39;, &#39;040 193831&#39;, &#39;040 318319&#39;, &#39;041 103194&#39;, &#39;041 103194&#39;,
-        &#39;041 310239&#39;, &#39;040 193831&#39;, &#39;041 103194&#39;, &#39;041 310239&#39;, &#39;041 310239&#39;,
-        &#39;040 193831&#39;, &#39;041 310239&#39;, &#39;041 103194&#39;, &#39;040 193831&#39;, &#39;040 318319&#39;]
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">klici</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;041 103194&#39;</span><span class="p">,</span> <span class="s1">&#39;040 193831&#39;</span><span class="p">,</span> <span class="s1">&#39;040 318319&#39;</span><span class="p">,</span> <span class="s1">&#39;040 193831&#39;</span><span class="p">,</span> <span class="s1">&#39;041 310239&#39;</span><span class="p">,</span>
+        <span class="s1">&#39;040 318319&#39;</span><span class="p">,</span> <span class="s1">&#39;040 318319&#39;</span><span class="p">,</span> <span class="s1">&#39;040 318319&#39;</span><span class="p">,</span> <span class="s1">&#39;040 193831&#39;</span><span class="p">,</span> <span class="s1">&#39;040 193831&#39;</span><span class="p">,</span>
+        <span class="s1">&#39;040 193831&#39;</span><span class="p">,</span> <span class="s1">&#39;040 193831&#39;</span><span class="p">,</span> <span class="s1">&#39;040 193831&#39;</span><span class="p">,</span> <span class="s1">&#39;040 318319&#39;</span><span class="p">,</span> <span class="s1">&#39;040 318319&#39;</span><span class="p">,</span>
+        <span class="s1">&#39;040 318319&#39;</span><span class="p">,</span> <span class="s1">&#39;040 193831&#39;</span><span class="p">,</span> <span class="s1">&#39;040 318319&#39;</span><span class="p">,</span> <span class="s1">&#39;041 103194&#39;</span><span class="p">,</span> <span class="s1">&#39;041 103194&#39;</span><span class="p">,</span>
+        <span class="s1">&#39;041 310239&#39;</span><span class="p">,</span> <span class="s1">&#39;040 193831&#39;</span><span class="p">,</span> <span class="s1">&#39;041 103194&#39;</span><span class="p">,</span> <span class="s1">&#39;041 310239&#39;</span><span class="p">,</span> <span class="s1">&#39;041 310239&#39;</span><span class="p">,</span>
+        <span class="s1">&#39;040 193831&#39;</span><span class="p">,</span> <span class="s1">&#39;041 310239&#39;</span><span class="p">,</span> <span class="s1">&#39;041 103194&#39;</span><span class="p">,</span> <span class="s1">&#39;040 193831&#39;</span><span class="p">,</span> <span class="s1">&#39;040 318319&#39;</span><span class="p">]</span>
 </pre></div>
 </div>
 </div>
@@ -948,10 +960,10 @@ kolikokrat
 <p>Za tako velike številke bi moral imeti seznam zelo veliko predalčkov. Še huje bi bilo, če bi namesto seznama številk dobili seznam klicanih oseb.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>klici = [&#39;Cilka&#39;, &#39;Dani&#39;, &#39;Berta&#39;, &#39;Dani&#39;, &#39;Ana&#39;, &#39;Berta&#39;, &#39;Berta&#39;,
-         &#39;Berta&#39;, &#39;Dani&#39;, &#39;Dani&#39;, &#39;Dani&#39;, &#39;Dani&#39;, &#39;Dani&#39;, &#39;Berta&#39;, &#39;Berta&#39;,
-         &#39;Berta&#39;, &#39;Dani&#39;, &#39;Berta&#39;, &#39;Cilka&#39;, &#39;Cilka&#39;, &#39;Ana&#39;, &#39;Dani&#39;, &#39;Cilka&#39;,
-         &#39;Ana&#39;, &#39;Ana&#39;, &#39;Dani&#39;, &#39;Ana&#39;, &#39;Cilka&#39;, &#39;Dani&#39;, &#39;Berta&#39;]
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">klici</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;Cilka&#39;</span><span class="p">,</span> <span class="s1">&#39;Dani&#39;</span><span class="p">,</span> <span class="s1">&#39;Berta&#39;</span><span class="p">,</span> <span class="s1">&#39;Dani&#39;</span><span class="p">,</span> <span class="s1">&#39;Ana&#39;</span><span class="p">,</span> <span class="s1">&#39;Berta&#39;</span><span class="p">,</span> <span class="s1">&#39;Berta&#39;</span><span class="p">,</span>
+         <span class="s1">&#39;Berta&#39;</span><span class="p">,</span> <span class="s1">&#39;Dani&#39;</span><span class="p">,</span> <span class="s1">&#39;Dani&#39;</span><span class="p">,</span> <span class="s1">&#39;Dani&#39;</span><span class="p">,</span> <span class="s1">&#39;Dani&#39;</span><span class="p">,</span> <span class="s1">&#39;Dani&#39;</span><span class="p">,</span> <span class="s1">&#39;Berta&#39;</span><span class="p">,</span> <span class="s1">&#39;Berta&#39;</span><span class="p">,</span>
+         <span class="s1">&#39;Berta&#39;</span><span class="p">,</span> <span class="s1">&#39;Dani&#39;</span><span class="p">,</span> <span class="s1">&#39;Berta&#39;</span><span class="p">,</span> <span class="s1">&#39;Cilka&#39;</span><span class="p">,</span> <span class="s1">&#39;Cilka&#39;</span><span class="p">,</span> <span class="s1">&#39;Ana&#39;</span><span class="p">,</span> <span class="s1">&#39;Dani&#39;</span><span class="p">,</span> <span class="s1">&#39;Cilka&#39;</span><span class="p">,</span>
+         <span class="s1">&#39;Ana&#39;</span><span class="p">,</span> <span class="s1">&#39;Ana&#39;</span><span class="p">,</span> <span class="s1">&#39;Dani&#39;</span><span class="p">,</span> <span class="s1">&#39;Ana&#39;</span><span class="p">,</span> <span class="s1">&#39;Cilka&#39;</span><span class="p">,</span> <span class="s1">&#39;Dani&#39;</span><span class="p">,</span> <span class="s1">&#39;Berta&#39;</span><span class="p">]</span>
 </pre></div>
 </div>
 </div>
@@ -960,13 +972,13 @@ kolikokrat
 <p>S slovarji je veliko lepše:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>pogostosti = {}
-for ime in klici:
-    if ime not in pogostosti:
-        pogostosti[ime] = 0
-    pogostosti[ime] += 1
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">pogostosti</span> <span class="o">=</span> <span class="p">{}</span>
+<span class="k">for</span> <span class="n">ime</span> <span class="ow">in</span> <span class="n">klici</span><span class="p">:</span>
+    <span class="k">if</span> <span class="n">ime</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">pogostosti</span><span class="p">:</span>
+        <span class="n">pogostosti</span><span class="p">[</span><span class="n">ime</span><span class="p">]</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="n">pogostosti</span><span class="p">[</span><span class="n">ime</span><span class="p">]</span> <span class="o">+=</span> <span class="mi">1</span>
 
-pogostosti
+<span class="n">pogostosti</span>
 </pre></div>
 </div>
 </div>
@@ -983,13 +995,13 @@ pogostosti
 <p>Preštejmo torej še enkrat Benjaminove klice, tokrat s slovarjem s privzetimi vrednostmi.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>import collections
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">collections</span>
 
-pogostosti = collections.defaultdict(int)
-for ime in klici:
-    pogostosti[ime] += 1
+<span class="n">pogostosti</span> <span class="o">=</span> <span class="n">collections</span><span class="o">.</span><span class="n">defaultdict</span><span class="p">(</span><span class="nb">int</span><span class="p">)</span>
+<span class="k">for</span> <span class="n">ime</span> <span class="ow">in</span> <span class="n">klici</span><span class="p">:</span>
+    <span class="n">pogostosti</span><span class="p">[</span><span class="n">ime</span><span class="p">]</span> <span class="o">+=</span> <span class="mi">1</span>
     
-pogostosti
+<span class="n">pogostosti</span>
 </pre></div>
 </div>
 </div>
@@ -1003,12 +1015,12 @@ pogostosti
 <p>Poglejmo si nekaj, kar je kul še bolj.</p>
 </section>
 <section id="stevec">
-<h3>Števec<a class="headerlink" href="#stevec" title="Permalink to this headline">#</a></h3>
+<h3><span class="section-number">12.1.4. </span>Števec<a class="headerlink" href="#stevec" title="Permalink to this headline">#</a></h3>
 <p>Preštevanje je tako pogosta reč, da obstaja zanj specializiran tip. Tako kot <code class="docutils literal notranslate"><span class="pre">defaultdict</span></code> je v modulu <code class="docutils literal notranslate"><span class="pre">collections</span></code>, imenuje pa se <code class="docutils literal notranslate"><span class="pre">Counter</span></code>.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>stevilo_klicev = collections.Counter(klici)
-stevilo_klicev
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">stevilo_klicev</span> <span class="o">=</span> <span class="n">collections</span><span class="o">.</span><span class="n">Counter</span><span class="p">(</span><span class="n">klici</span><span class="p">)</span>
+<span class="n">stevilo_klicev</span>
 </pre></div>
 </div>
 </div>
@@ -1021,10 +1033,10 @@ stevilo_klicev
 <p>Komentirali ne bomo veliko, ker še ne znamo. Že ob tem, da sem temu rekel tip, sem se moral ugrizniti v jezik, saj bi raje govoril o razredu. Kaj je in kako deluje, pa nas še presega. Zna pa pravzaprav še veliko stvari, tako da tem, ki jih zanima, priporočam, da si ga ogledajo. Mimogrede:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>napis = &quot;CVIVS IN HOC RENOVATA LOCO PIA FVLGET IMAGO SIS&quot; \
-        &quot;CVSTOS POPVLI SANCTE IACOBE TVI&quot;
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">napis</span> <span class="o">=</span> <span class="s2">&quot;CVIVS IN HOC RENOVATA LOCO PIA FVLGET IMAGO SIS&quot;</span> \
+        <span class="s2">&quot;CVSTOS POPVLI SANCTE IACOBE TVI&quot;</span>
 
-collections.Counter(napis)
+<span class="n">collections</span><span class="o">.</span><span class="n">Counter</span><span class="p">(</span><span class="n">napis</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -1054,12 +1066,12 @@ collections.Counter(napis)
 <p>Se pravi, da lahko kronogram rešimo tudi z</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>def kronogram(s):
-    crke = collections.Counter(s)
-    return crke[&quot;I&quot;] + 5 * crke[&quot;V&quot;] + 10 * crke[&quot;X&quot;] + 50 * crke[&quot;L&quot;] + \
-           100 * crke[&quot;C&quot;] + 500 * crke[&quot;D&quot;] + 1000 * crke[&quot;M&quot;]
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">kronogram</span><span class="p">(</span><span class="n">s</span><span class="p">):</span>
+    <span class="n">crke</span> <span class="o">=</span> <span class="n">collections</span><span class="o">.</span><span class="n">Counter</span><span class="p">(</span><span class="n">s</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">crke</span><span class="p">[</span><span class="s2">&quot;I&quot;</span><span class="p">]</span> <span class="o">+</span> <span class="mi">5</span> <span class="o">*</span> <span class="n">crke</span><span class="p">[</span><span class="s2">&quot;V&quot;</span><span class="p">]</span> <span class="o">+</span> <span class="mi">10</span> <span class="o">*</span> <span class="n">crke</span><span class="p">[</span><span class="s2">&quot;X&quot;</span><span class="p">]</span> <span class="o">+</span> <span class="mi">50</span> <span class="o">*</span> <span class="n">crke</span><span class="p">[</span><span class="s2">&quot;L&quot;</span><span class="p">]</span> <span class="o">+</span> \
+           <span class="mi">100</span> <span class="o">*</span> <span class="n">crke</span><span class="p">[</span><span class="s2">&quot;C&quot;</span><span class="p">]</span> <span class="o">+</span> <span class="mi">500</span> <span class="o">*</span> <span class="n">crke</span><span class="p">[</span><span class="s2">&quot;D&quot;</span><span class="p">]</span> <span class="o">+</span> <span class="mi">1000</span> <span class="o">*</span> <span class="n">crke</span><span class="p">[</span><span class="s2">&quot;M&quot;</span><span class="p">]</span>
 
-kronogram(napis)
+<span class="n">kronogram</span><span class="p">(</span><span class="n">napis</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -1072,12 +1084,12 @@ kronogram(napis)
 </section>
 </section>
 <section id="mnozice">
-<h2>Množice<a class="headerlink" href="#mnozice" title="Permalink to this headline">#</a></h2>
+<h2><span class="section-number">12.2. </span>Množice<a class="headerlink" href="#mnozice" title="Permalink to this headline">#</a></h2>
 <p>Množice so podobne seznamom, a s to razliko, da lahko vsebujejo vsak element samo enkrat. Po drugi strani (in ne le po drugi strani, tudi tehnično) pa so podobne slovarjem. Vsebujejo lahko le elemente, ki so nespremenljivi, poleg tega pa lahko zelo hitro ugotovimo, ali množica vsebuje določen element ali ne, na podoben način kot pri slovarjih hitro ugotovimo, ali vsebujejo določen ključ ali ne.</p>
 <p>Množice zapišemo z zavitimi oklepaji, tako kot smo vajeni pri matematiki.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>danasnji_klici = {&quot;Ana&quot;, &quot;Cilka&quot;, &quot;Eva&quot;}
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">danasnji_klici</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;Ana&quot;</span><span class="p">,</span> <span class="s2">&quot;Cilka&quot;</span><span class="p">,</span> <span class="s2">&quot;Eva&quot;</span><span class="p">}</span>
 </pre></div>
 </div>
 </div>
@@ -1085,7 +1097,7 @@ kronogram(napis)
 <p>Tako lahko sestavimo le neprazno množico. Če napišemo le oklepaj in zaklepaj, <code class="docutils literal notranslate"><span class="pre">{}</span></code>, pa dobimo slovar. (Čemu so se odločili, naj bo to slovar, ne množica? Slovar je bil prej, množice je Python dobil kasneje. Zato. Poleg tega pa slovarje potrebujemo res velikokrat, množice pa precej redkeje.) Če hočemo narediti prazno množico, rečemo</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>prazna = set()
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">prazna</span> <span class="o">=</span> <span class="nb">set</span><span class="p">()</span>
 </pre></div>
 </div>
 </div>
@@ -1093,7 +1105,7 @@ kronogram(napis)
 <p>“Funkcija” <code class="docutils literal notranslate"><span class="pre">set</span></code> je malo podobna “funkciji” <code class="docutils literal notranslate"><span class="pre">int</span></code>: damo ji lahko različne argumente, pa jih bo spremenila v množico. Damo ji lahko, recimo, seznam, pa bomo dobili množico z vsemi elementi, ki se pojavijo v njem.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>set([1, 2, 3])
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">set</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">])</span>
 </pre></div>
 </div>
 </div>
@@ -1105,7 +1117,7 @@ kronogram(napis)
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>set(range(5))
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">set</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="mi">5</span><span class="p">))</span>
 </pre></div>
 </div>
 </div>
@@ -1117,7 +1129,7 @@ kronogram(napis)
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>set([6, 42, 1, 3, 1, 1, 6])
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">set</span><span class="p">([</span><span class="mi">6</span><span class="p">,</span> <span class="mi">42</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">6</span><span class="p">])</span>
 </pre></div>
 </div>
 </div>
@@ -1130,7 +1142,7 @@ kronogram(napis)
 <p>Poleg seznamov lahko množicam podtaknemo karkoli, prek česar bi lahko šli z zanko <code class="docutils literal notranslate"><span class="pre">for</span></code>, recimo niz ali slovar.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>set(&quot;Benjamin&quot;)
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">set</span><span class="p">(</span><span class="s2">&quot;Benjamin&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -1142,7 +1154,7 @@ kronogram(napis)
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>set(stevilke)
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">set</span><span class="p">(</span><span class="n">stevilke</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -1156,14 +1168,14 @@ kronogram(napis)
 <p>V množico lahko dodajamo elemente in vprašamo se lahko, ali množica vsebuje določen element.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>s = set(&quot;Benjamin&quot;)
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">s</span> <span class="o">=</span> <span class="nb">set</span><span class="p">(</span><span class="s2">&quot;Benjamin&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>&quot;e&quot; in s
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="s2">&quot;e&quot;</span> <span class="ow">in</span> <span class="n">s</span>
 </pre></div>
 </div>
 </div>
@@ -1175,7 +1187,7 @@ kronogram(napis)
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>&quot;u&quot; in s
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="s2">&quot;u&quot;</span> <span class="ow">in</span> <span class="n">s</span>
 </pre></div>
 </div>
 </div>
@@ -1187,14 +1199,14 @@ kronogram(napis)
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>s.add(&quot;u&quot;)
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">s</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="s2">&quot;u&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>&quot;u&quot; in s
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="s2">&quot;u&quot;</span> <span class="ow">in</span> <span class="n">s</span>
 </pre></div>
 </div>
 </div>
@@ -1206,10 +1218,10 @@ kronogram(napis)
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>s.add(&quot;a&quot;)
-s.add(&quot;a&quot;)
-s.add(&quot;a&quot;)
-s
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">s</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="s2">&quot;a&quot;</span><span class="p">)</span>
+<span class="n">s</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="s2">&quot;a&quot;</span><span class="p">)</span>
+<span class="n">s</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="s2">&quot;a&quot;</span><span class="p">)</span>
+<span class="n">s</span>
 </pre></div>
 </div>
 </div>
@@ -1223,9 +1235,9 @@ s
 <p>Če imamo dve množici, lahko izračunamo njuno unijo, presek, razliko (elementi, ki se pojavijo v prvi, ne pa tudi v drugi množici) in simetrično razliko (elementi, ki se pojavijo v eni množici in v drugi) …</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>u = {1, 2, 3}
-v = {3, 4, 5}
-u | v
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">u</span> <span class="o">=</span> <span class="p">{</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">}</span>
+<span class="n">v</span> <span class="o">=</span> <span class="p">{</span><span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">}</span>
+<span class="n">u</span> <span class="o">|</span> <span class="n">v</span>
 </pre></div>
 </div>
 </div>
@@ -1237,7 +1249,7 @@ u | v
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>u &amp; v
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">u</span> <span class="o">&amp;</span> <span class="n">v</span>
 </pre></div>
 </div>
 </div>
@@ -1249,7 +1261,7 @@ u | v
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>u - v
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">u</span> <span class="o">-</span> <span class="n">v</span>
 </pre></div>
 </div>
 </div>
@@ -1261,7 +1273,7 @@ u | v
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>u ^ v
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">u</span> <span class="o">^</span> <span class="n">v</span>
 </pre></div>
 </div>
 </div>
@@ -1275,14 +1287,14 @@ u | v
 <p>Preverimo lahko tudi, ali je neka množica podmnožica (ali nadmnožica druge). To najpreprosteje storimo kar z operatorji za primerjanje.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>u = {1, 2, 3}
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">u</span> <span class="o">=</span> <span class="p">{</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">}</span>
 </pre></div>
 </div>
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>{1, 2} &lt;= u
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="p">{</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">}</span> <span class="o">&lt;=</span> <span class="n">u</span>
 </pre></div>
 </div>
 </div>
@@ -1294,7 +1306,7 @@ u | v
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>{1, 2, 3, 4} &lt;= u
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="p">{</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">}</span> <span class="o">&lt;=</span> <span class="n">u</span>
 </pre></div>
 </div>
 </div>
@@ -1306,7 +1318,7 @@ u | v
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>{1, 2, 3} &lt;= u
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="p">{</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">}</span> <span class="o">&lt;=</span> <span class="n">u</span>
 </pre></div>
 </div>
 </div>
@@ -1318,7 +1330,7 @@ u | v
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>{1, 2, 3} &lt; u
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="p">{</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">}</span> <span class="o">&lt;</span> <span class="n">u</span>
 </pre></div>
 </div>
 </div>
@@ -1360,6 +1372,20 @@ u | v
                 
     <!-- Previous / next buttons -->
 <div class='prev-next-area'>
+    <a class='left-prev' id="prev-link" href="05_metode_nizov_in_seznamov.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title"><span class="section-number">11. </span>Metode nizov in seznamov</p>
+        </div>
+    </a>
+    <a class='right-next' id="next-link" href="naloge/01_topovske_bitke/navodila.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title"><span class="section-number">1. </span>Topovske bitke</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
 </div>
             </footer>
         </div>

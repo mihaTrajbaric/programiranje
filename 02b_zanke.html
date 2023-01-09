@@ -174,6 +174,11 @@ const thebe_selector_output = ".output, .cell_output"
    11. Metode nizov in seznamov
   </a>
  </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="06_slovarji_in_mno%C5%BEice.html">
+   12. Slovarji in množice
+  </a>
+ </li>
 </ul>
 <p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
@@ -184,6 +189,11 @@ const thebe_selector_output = ".output, .cell_output"
  <li class="toctree-l1">
   <a class="reference internal" href="naloge/01_topovske_bitke/navodila.html">
    1. Topovske bitke
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="naloge/02_slovarji_in_mnozice/navodila.html">
+   2. Naloge - slovarji in mnozice
   </a>
  </li>
 </ul>
@@ -468,11 +478,11 @@ title="Print to PDF"
 <p>Tisočletna tradicija veleva, da mora biti začetnikov prvi program z zanko program, ki šteje do deset. V Pythonu je videti takole</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>x = 1
-while x &lt;= 10:
-    print(x)
-    x = x + 1
-print(&#39;Pa sva preštela&#39;)
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="mi">1</span>
+<span class="k">while</span> <span class="n">x</span> <span class="o">&lt;=</span> <span class="mi">10</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+    <span class="n">x</span> <span class="o">=</span> <span class="n">x</span> <span class="o">+</span> <span class="mi">1</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Pa sva preštela&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -480,11 +490,11 @@ print(&#39;Pa sva preštela&#39;)
 <p>Zanka <code class="docutils literal notranslate"><span class="pre">while</span></code> je po svoje podobna stavku <code class="docutils literal notranslate"><span class="pre">if</span></code>. Medtem ko se stavki znotraj <code class="docutils literal notranslate"><span class="pre">if</span></code> izvedejo, <em>če</em> je pogoj resničen, se stavki znotraj <code class="docutils literal notranslate"><span class="pre">while</span></code> ponavljajo, <em>dokler</em> je pogoj resničen. “If” je “če” in “while” je “dokler”, to vedo celo učiteljice angleščine. (Mimogrede, če že štejemo, <code class="docutils literal notranslate"><span class="pre">while</span></code> je zadnja, enajsta rezervirana beseda danes. Smo že na tretjini!) Gornji program lahko torej kar dobesedno prevedemo iz Pythona v slovenščino:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>postavi x na 1
-dokler je x manjši ali enak 10:
-    izpiši vrednost x
-    povečaj x za 1
-izpiši &#39;Pa sva preštela&#39;
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">postavi</span> <span class="n">x</span> <span class="n">na</span> <span class="mi">1</span>
+<span class="n">dokler</span> <span class="n">je</span> <span class="n">x</span> <span class="n">manjši</span> <span class="n">ali</span> <span class="n">enak</span> <span class="mi">10</span><span class="p">:</span>
+    <span class="n">izpiši</span> <span class="n">vrednost</span> <span class="n">x</span>
+    <span class="n">povečaj</span> <span class="n">x</span> <span class="n">za</span> <span class="mi">1</span>
+<span class="n">izpiši</span> <span class="s1">&#39;Pa sva preštela&#39;</span>
 </pre></div>
 </div>
 </div>
@@ -503,12 +513,12 @@ izpiši &#39;Pa sva preštela&#39;
 <p>Najprej povejmo kar po slovensko:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>stevilo = kar vpiše uporabnik
-dokler stevilo != 1:
-    če je število sodo:
-        deli število z 2
-    sicer:
-        pomnoži število s 3 in prištej 1
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">stevilo</span> <span class="o">=</span> <span class="n">kar</span> <span class="n">vpiše</span> <span class="n">uporabnik</span>
+<span class="n">dokler</span> <span class="n">stevilo</span> <span class="o">!=</span> <span class="mi">1</span><span class="p">:</span>
+    <span class="n">če</span> <span class="n">je</span> <span class="n">število</span> <span class="n">sodo</span><span class="p">:</span>
+        <span class="n">deli</span> <span class="n">število</span> <span class="n">z</span> <span class="mi">2</span>
+    <span class="n">sicer</span><span class="p">:</span>
+        <span class="n">pomnoži</span> <span class="n">število</span> <span class="n">s</span> <span class="mi">3</span> <span class="ow">in</span> <span class="n">prištej</span> <span class="mi">1</span>
 </pre></div>
 </div>
 </div>
@@ -517,14 +527,14 @@ dokler stevilo != 1:
 <p>Prevedimo torej one slovenske besede v pythonovske.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>n = int(input(&quot;Vnesi število: &quot;))
-while n != 1:
-    print(n)
-    if n % 2 == 0:
-        n //= 2
-    else:
-        n = n * 3 + 1
-print(1)
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">n</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Vnesi število: &quot;</span><span class="p">))</span>
+<span class="k">while</span> <span class="n">n</span> <span class="o">!=</span> <span class="mi">1</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">n</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">n</span> <span class="o">%</span> <span class="mi">2</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+        <span class="n">n</span> <span class="o">//=</span> <span class="mi">2</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">n</span> <span class="o">=</span> <span class="n">n</span> <span class="o">*</span> <span class="mi">3</span> <span class="o">+</span> <span class="mi">1</span>
+<span class="nb">print</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -534,17 +544,17 @@ print(1)
 <p>Dodajmo še nekaj: na koncu naj se izpiše, koliko členov ima zaporedje.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>n = int(input(&quot;Vnesi število: &quot;))
-clenov = 1
-while n != 1:
-    clenov += 1
-    print(n)
-    if n % 2 == 0:
-        n //= 2
-    else:
-        n = n * 3 + 1
-print(1)
-print(&quot;Zaporedje, ki se začne z&quot;, n, &quot;ima&quot;, clenov, &quot;členov&quot;)
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">n</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Vnesi število: &quot;</span><span class="p">))</span>
+<span class="n">clenov</span> <span class="o">=</span> <span class="mi">1</span>
+<span class="k">while</span> <span class="n">n</span> <span class="o">!=</span> <span class="mi">1</span><span class="p">:</span>
+    <span class="n">clenov</span> <span class="o">+=</span> <span class="mi">1</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">n</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">n</span> <span class="o">%</span> <span class="mi">2</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+        <span class="n">n</span> <span class="o">//=</span> <span class="mi">2</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">n</span> <span class="o">=</span> <span class="n">n</span> <span class="o">*</span> <span class="mi">3</span> <span class="o">+</span> <span class="mi">1</span>
+<span class="nb">print</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Zaporedje, ki se začne z&quot;</span><span class="p">,</span> <span class="n">n</span><span class="p">,</span> <span class="s2">&quot;ima&quot;</span><span class="p">,</span> <span class="n">clenov</span><span class="p">,</span> <span class="s2">&quot;členov&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -552,17 +562,17 @@ print(&quot;Zaporedje, ki se začne z&quot;, n, &quot;ima&quot;, clenov, &quot;�
 <p>Ups. V zanki smo pokvarili <code class="docutils literal notranslate"><span class="pre">n</span></code>, spremenil smo ga v 1. To bomo rešili tako, da shranimo začetno število v še eno spremenljivko.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>zac = n = int(input(&quot;Vnesi število: &quot;))
-clenov = 1
-while n != 1:
-    clenov += 1
-    print(n)
-    if n % 2 == 0:
-        n //= 2
-    else:
-        n = n * 3 + 1
-print(1)
-print(&quot;Zaporedje, ki se začne z&quot;, zac, &quot;ima&quot;, clenov, &quot;členov&quot;)
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">zac</span> <span class="o">=</span> <span class="n">n</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Vnesi število: &quot;</span><span class="p">))</span>
+<span class="n">clenov</span> <span class="o">=</span> <span class="mi">1</span>
+<span class="k">while</span> <span class="n">n</span> <span class="o">!=</span> <span class="mi">1</span><span class="p">:</span>
+    <span class="n">clenov</span> <span class="o">+=</span> <span class="mi">1</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">n</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">n</span> <span class="o">%</span> <span class="mi">2</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+        <span class="n">n</span> <span class="o">//=</span> <span class="mi">2</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">n</span> <span class="o">=</span> <span class="n">n</span> <span class="o">*</span> <span class="mi">3</span> <span class="o">+</span> <span class="mi">1</span>
+<span class="nb">print</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Zaporedje, ki se začne z&quot;</span><span class="p">,</span> <span class="n">zac</span><span class="p">,</span> <span class="s2">&quot;ima&quot;</span><span class="p">,</span> <span class="n">clenov</span><span class="p">,</span> <span class="s2">&quot;členov&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
