@@ -1,6 +1,6 @@
 # Programiranje
 
-Ta repozitorij vsebuje skripto, ki jo uporabljamo pri krožku Začetnega programiranja na Škofijski klasični gimnaziji v Ljubljani. Skripta je dostopna na https://mihatrajbaric.github.io/programiranje/
+Ta repozitorij vsebuje skripto, ki jo uporabljamo pri krožku Začetnega programiranja na Škofijski klasični gimnaziji v Ljubljani. Skripta je dostopna na https://programiranje-skg.github.io/skripta/
 
 
 ## Namestitev paketov
