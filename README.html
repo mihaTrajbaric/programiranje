@@ -177,6 +177,11 @@ const thebe_selector_output = ".output, .cell_output"
    12. Slovarji in množice
   </a>
  </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="07_izpeljani_seznami_slovarji_mno%C5%BEice.html">
+   13. Izpeljani seznami, slovarji, množice
+  </a>
+ </li>
 </ul>
 <p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
@@ -386,6 +391,18 @@ title="Print to PDF"
    Objava nove verzije
   </a>
  </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#faq">
+   FAQ
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#ukaz-jupyte-book-ali-ghp-import-ne-dela">
+     Ukaz ‘jupyte-book’ ali ‘ghp-import’ ne dela
+    </a>
+   </li>
+  </ul>
+ </li>
 </ul>
 
     </nav>
@@ -420,6 +437,18 @@ title="Print to PDF"
    Objava nove verzije
   </a>
  </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#faq">
+   FAQ
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#ukaz-jupyte-book-ali-ghp-import-ne-dela">
+     Ukaz ‘jupyte-book’ ali ‘ghp-import’ ne dela
+    </a>
+   </li>
+  </ul>
+ </li>
 </ul>
 
                         </nav>
@@ -432,7 +461,7 @@ title="Print to PDF"
                 
   <section class="tex2jax_ignore mathjax_ignore" id="programiranje">
 <h1>Programiranje<a class="headerlink" href="#programiranje" title="Permalink to this headline">#</a></h1>
-<p>Ta repozitorij vsebuje skripto, ki jo uporabljamo pri krožku Začetnega programiranja na Škofijski klasični gimnaziji v Ljubljani. Skripta je dostopna na <a class="reference external" href="https://mihatrajbaric.github.io/programiranje/">https://mihatrajbaric.github.io/programiranje/</a></p>
+<p>Ta repozitorij vsebuje skripto, ki jo uporabljamo pri krožku Začetnega programiranja na Škofijski klasični gimnaziji v Ljubljani. Skripta je dostopna na <a class="reference external" href="https://programiranje-skg.github.io/skripta/">https://programiranje-skg.github.io/skripta/</a></p>
 <section id="namestitev-paketov">
 <h2>Namestitev paketov<a class="headerlink" href="#namestitev-paketov" title="Permalink to this headline">#</a></h2>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">pip</span> <span class="n">install</span> <span class="o">-</span><span class="n">r</span> <span class="n">requirements</span><span class="o">.</span><span class="n">txt</span>
@@ -446,13 +475,22 @@ title="Print to PDF"
 <span class="n">jupyter</span><span class="o">-</span><span class="n">book</span> <span class="n">build</span> <span class="o">.</span>
 </pre></div>
 </div>
+<p>Nato s svojim najljubšim internetnim brskalnikom odpremo datoteko <code class="docutils literal notranslate"><span class="pre">_build/html/index.html</span></code> in si lahko lokalno ogledamo stran.</p>
 </section>
 <section id="objava-nove-verzije">
 <h2>Objava nove verzije<a class="headerlink" href="#objava-nove-verzije" title="Permalink to this headline">#</a></h2>
-<p>Ko je v glavnem branchu že koda nove verzije knjige, iz katere smo uspešno zgenerirali html, lahko stran posodobimo kot:</p>
+<p>Če smo zadovoljni z novo verzijo strani, vse skupaj (vključno z avtomatsko generiranimi datotekami) porinemo v glavni branch (<code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">commit...</span></code>, <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">push...</span></code>).</p>
+<p>Nato stran posodobimo z ukazom:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">ghp</span><span class="o">-</span><span class="kn">import</span> <span class="o">-</span><span class="n">n</span> <span class="o">-</span><span class="n">p</span> <span class="o">-</span><span class="n">f</span> <span class="n">_build</span><span class="o">/</span><span class="n">html</span>
 </pre></div>
 </div>
+</section>
+<section id="faq">
+<h2>FAQ<a class="headerlink" href="#faq" title="Permalink to this headline">#</a></h2>
+<section id="ukaz-jupyte-book-ali-ghp-import-ne-dela">
+<h3>Ukaz ‘jupyte-book’ ali ‘ghp-import’ ne dela<a class="headerlink" href="#ukaz-jupyte-book-ali-ghp-import-ne-dela" title="Permalink to this headline">#</a></h3>
+<p>Če ukaz poganjamo takoj po instalacij, (in paketov nismo namestili na PATH), jih Linux terminal ne bo našel. Po ponovnem zagonu računalnika bi moralo vse spet delovati.</p>
+</section>
 </section>
 </section>
 
