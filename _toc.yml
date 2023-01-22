@@ -19,6 +19,7 @@ parts:
     - file: 04d_ponovimo_2
     - file: 05_metode_nizov_in_seznamov
     - file: 06_slovarji_in_množice
+    - file: 07_izpeljani_seznami_slovarji_množice
 - caption: Naloge
   numbered: true
   chapters:
