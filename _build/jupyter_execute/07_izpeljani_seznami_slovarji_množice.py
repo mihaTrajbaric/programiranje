@@ -1,6 +1,8 @@
 #!/usr/bin/env python
 # coding: utf-8
 
+# # Izpeljani seznami, slovarji, množice
+# 
 # Matematiki si lahko privoščijo opisati množico dvakratnikov vseh
 # naravnih števil, katerih kvadrat je manjši od 120, takole:
 # 
@@ -329,8 +331,10 @@ def prastevilo(n):
 # r = [izraz for e in s if pogoj(e)]
 # ```
 # 
-# Množice
-# -------
+
+# 
+# ## Izpeljane množice
+# 
 # 
 # Množice sestavljamo natančno tako kot sezname, le da namesto oglatih
 # oklepajev uporabimo zavite. Takole dobimo vse delitelje 60
@@ -341,8 +345,8 @@ def prastevilo(n):
 {i for i in range(1, 61) if 60 % i == 0}
 
 
-# Slovarji
-# --------
+# ## Izpeljani slovarji
+# 
 # 
 # Ista reč. Če hočemo narediti slovar, ki bo kot ključe vseboval števila
 # do 10, kot vrednosti pa njihove kvadrate, napišemo

@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>Izpeljani seznami &#8212; Krožek začetnega programiranja 2022-23</title>
+    <title>13. Izpeljani seznami, slovarji, množice &#8212; Krožek začetnega programiranja 2022-23</title>
     
   <!-- Loaded before other Sphinx assets -->
   <link href="_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
@@ -54,6 +54,8 @@ const thebe_selector_output = ".output, .cell_output"
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="1. Topovske bitke" href="naloge/01_topovske_bitke/navodila.html" />
+    <link rel="prev" title="12. Slovarji in množice" href="06_slovarji_in_mno%C5%BEice.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -118,7 +120,7 @@ const thebe_selector_output = ".output, .cell_output"
   Vsebina
  </span>
 </p>
-<ul class="nav bd-sidenav">
+<ul class="current nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="01_izrazi_spremenljivke_program.html">
    1. Izrazi in spremenljivke
@@ -177,6 +179,11 @@ const thebe_selector_output = ".output, .cell_output"
  <li class="toctree-l1">
   <a class="reference internal" href="06_slovarji_in_mno%C5%BEice.html">
    12. Slovarji in množice
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   13. Izpeljani seznami, slovarji, množice
   </a>
  </li>
 </ul>
@@ -255,7 +262,7 @@ title="Toggle navigation"
   <div class="menu-dropdown__content">
     <ul>
       <li>
-        <a href="https://mybinder.org/v2/gh/programiranje-SKG/skripta/main?urlpath=tree/07 izpeljani seznami, slovarji, množice.ipynb"
+        <a href="https://mybinder.org/v2/gh/programiranje-SKG/skripta/main?urlpath=tree/07_izpeljani_seznami_slovarji_množice.ipynb"
    class="headerbtn"
    data-toggle="tooltip"
 data-placement="left"
@@ -333,7 +340,7 @@ title="Source repository"
       </li>
       
       <li>
-        <a href="https://github.com/programiranje-SKG/skripta/issues/new?title=Issue%20on%20page%20%2F07 izpeljani seznami, slovarji, množice.html&body=Your%20issue%20content%20here."
+        <a href="https://github.com/programiranje-SKG/skripta/issues/new?title=Issue%20on%20page%20%2F07_izpeljani_seznami_slovarji_množice.html&body=Your%20issue%20content%20here."
    class="headerbtn"
    data-toggle="tooltip"
 data-placement="left"
@@ -361,7 +368,7 @@ title="Open an issue"
   <div class="menu-dropdown__content">
     <ul>
       <li>
-        <a href="_sources/07 izpeljani seznami, slovarji, množice.ipynb"
+        <a href="_sources/07_izpeljani_seznami_slovarji_množice.ipynb"
    class="headerbtn"
    data-toggle="tooltip"
 data-placement="left"
@@ -420,40 +427,41 @@ title="Print to PDF"
     </div>
     <nav id="bd-toc-nav" aria-label="Page">
         <ul class="visible nav section-nav flex-column">
- <li class="toc-h1 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#">
-   Izpeljani seznami
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#izpeljani-seznami">
+   13.1. Izpeljani seznami
   </a>
-  <ul class="visible nav section-nav flex-column">
-   <li class="toc-h2 nav-item toc-entry">
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#izpeljani-seznami-in-pogoji">
-     Izpeljani seznami in pogoji
+     13.1.1. Izpeljani seznami in pogoji
     </a>
    </li>
-   <li class="toc-h2 nav-item toc-entry">
+   <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#splosni-vzorec">
-     Splošni vzorec
+     13.1.2. Splošni vzorec
     </a>
    </li>
   </ul>
  </li>
- <li class="toc-h1 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#mnozice">
-   Množice
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#izpeljane-mnozice">
+   13.2. Izpeljane množice
   </a>
  </li>
- <li class="toc-h1 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#slovarji">
-   Slovarji
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#izpeljani-slovarji">
+   13.3. Izpeljani slovarji
   </a>
  </li>
- <li class="toc-h1 nav-item toc-entry">
+ <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#nekaj-uporabnih-funkcij">
-   Nekaj uporabnih funkcij
+   13.4. Nekaj uporabnih funkcij
   </a>
-  <ul class="visible nav section-nav flex-column">
-   <li class="toc-h2 nav-item toc-entry">
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#enumerate">
+     13.4.1.
      <code class="docutils literal notranslate">
       <span class="pre">
        enumerate
@@ -461,8 +469,9 @@ title="Print to PDF"
      </code>
     </a>
    </li>
-   <li class="toc-h2 nav-item toc-entry">
+   <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#zip">
+     13.4.2.
      <code class="docutils literal notranslate">
       <span class="pre">
        zip
@@ -470,8 +479,9 @@ title="Print to PDF"
      </code>
     </a>
    </li>
-   <li class="toc-h2 nav-item toc-entry">
+   <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#all-in-any">
+     13.4.3.
      <code class="docutils literal notranslate">
       <span class="pre">
        all
@@ -485,8 +495,9 @@ title="Print to PDF"
      </code>
     </a>
    </li>
-   <li class="toc-h2 nav-item toc-entry">
+   <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#itertools-count">
+     13.4.4.
      <code class="docutils literal notranslate">
       <span class="pre">
        itertools.count
@@ -494,8 +505,9 @@ title="Print to PDF"
      </code>
     </a>
    </li>
-   <li class="toc-h2 nav-item toc-entry">
+   <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#itertools-chain">
+     13.4.5.
      <code class="docutils literal notranslate">
       <span class="pre">
        itertools.chain
@@ -503,9 +515,9 @@ title="Print to PDF"
      </code>
     </a>
    </li>
-   <li class="toc-h2 nav-item toc-entry">
+   <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#itertools">
-     Itertools
+     13.4.6. Itertools
     </a>
    </li>
   </ul>
@@ -519,7 +531,7 @@ title="Print to PDF"
         <div class="col pl-md-3 pl-lg-5 content-container">
             <!-- Table of contents that is only displayed when printing the page -->
             <div id="jb-print-docs-body" class="onlyprint">
-                <h1>Izpeljani seznami</h1>
+                <h1>Izpeljani seznami, slovarji, množice</h1>
                 <!-- Table of contents -->
                 <div id="print-main-content">
                     <div id="jb-print-toc">
@@ -529,40 +541,41 @@ title="Print to PDF"
                         </div>
                         <nav aria-label="Page">
                             <ul class="visible nav section-nav flex-column">
- <li class="toc-h1 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#">
-   Izpeljani seznami
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#izpeljani-seznami">
+   13.1. Izpeljani seznami
   </a>
-  <ul class="visible nav section-nav flex-column">
-   <li class="toc-h2 nav-item toc-entry">
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#izpeljani-seznami-in-pogoji">
-     Izpeljani seznami in pogoji
+     13.1.1. Izpeljani seznami in pogoji
     </a>
    </li>
-   <li class="toc-h2 nav-item toc-entry">
+   <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#splosni-vzorec">
-     Splošni vzorec
+     13.1.2. Splošni vzorec
     </a>
    </li>
   </ul>
  </li>
- <li class="toc-h1 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#mnozice">
-   Množice
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#izpeljane-mnozice">
+   13.2. Izpeljane množice
   </a>
  </li>
- <li class="toc-h1 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#slovarji">
-   Slovarji
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#izpeljani-slovarji">
+   13.3. Izpeljani slovarji
   </a>
  </li>
- <li class="toc-h1 nav-item toc-entry">
+ <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#nekaj-uporabnih-funkcij">
-   Nekaj uporabnih funkcij
+   13.4. Nekaj uporabnih funkcij
   </a>
-  <ul class="visible nav section-nav flex-column">
-   <li class="toc-h2 nav-item toc-entry">
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#enumerate">
+     13.4.1.
      <code class="docutils literal notranslate">
       <span class="pre">
        enumerate
@@ -570,8 +583,9 @@ title="Print to PDF"
      </code>
     </a>
    </li>
-   <li class="toc-h2 nav-item toc-entry">
+   <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#zip">
+     13.4.2.
      <code class="docutils literal notranslate">
       <span class="pre">
        zip
@@ -579,8 +593,9 @@ title="Print to PDF"
      </code>
     </a>
    </li>
-   <li class="toc-h2 nav-item toc-entry">
+   <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#all-in-any">
+     13.4.3.
      <code class="docutils literal notranslate">
       <span class="pre">
        all
@@ -594,8 +609,9 @@ title="Print to PDF"
      </code>
     </a>
    </li>
-   <li class="toc-h2 nav-item toc-entry">
+   <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#itertools-count">
+     13.4.4.
      <code class="docutils literal notranslate">
       <span class="pre">
        itertools.count
@@ -603,8 +619,9 @@ title="Print to PDF"
      </code>
     </a>
    </li>
-   <li class="toc-h2 nav-item toc-entry">
+   <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#itertools-chain">
+     13.4.5.
      <code class="docutils literal notranslate">
       <span class="pre">
        itertools.chain
@@ -612,9 +629,9 @@ title="Print to PDF"
      </code>
     </a>
    </li>
-   <li class="toc-h2 nav-item toc-entry">
+   <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#itertools">
-     Itertools
+     13.4.6. Itertools
     </a>
    </li>
   </ul>
@@ -629,13 +646,15 @@ title="Print to PDF"
                 
               <div>
                 
-  <p>Matematiki si lahko privoščijo opisati množico dvakratnikov vseh
+  <section class="tex2jax_ignore mathjax_ignore" id="izpeljani-seznami-slovarji-mnozice">
+<h1><span class="section-number">13. </span>Izpeljani seznami, slovarji, množice<a class="headerlink" href="#izpeljani-seznami-slovarji-mnozice" title="Permalink to this headline">#</a></h1>
+<p>Matematiki si lahko privoščijo opisati množico dvakratnikov vseh
 naravnih števil, katerih kvadrat je manjši od 120, takole:</p>
 <div class="math notranslate nohighlight">
 \[S= \{2 x; \forall x \in \mathbb{N} \wedge x^2&lt;120\}.\]</div>
 <p>Mi tudi.</p>
 <section id="izpeljani-seznami">
-<h1>Izpeljani seznami<a class="headerlink" href="#izpeljani-seznami" title="Permalink to this headline">#</a></h1>
+<h2><span class="section-number">13.1. </span>Izpeljani seznami<a class="headerlink" href="#izpeljani-seznami" title="Permalink to this headline">#</a></h2>
 <p>Začnimo s tistim, kar najbolj poznamo: s seznami. Doslej smo jih zapisali tako, da smo v oglatih oklepajih naštevali njihove elemente,</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -773,7 +792,7 @@ troj <code class="docutils literal notranslate"><span class="pre">(teža,</span>
 </div>
 </div>
 <section id="izpeljani-seznami-in-pogoji">
-<h2>Izpeljani seznami in pogoji<a class="headerlink" href="#izpeljani-seznami-in-pogoji" title="Permalink to this headline">#</a></h2>
+<h3><span class="section-number">13.1.1. </span>Izpeljani seznami in pogoji<a class="headerlink" href="#izpeljani-seznami-in-pogoji" title="Permalink to this headline">#</a></h3>
 <p>Pri izpeljevanju seznamov lahko dodamo še pogoj, s katerim izbiramo elemente, ki naj se dodajo.</p>
 <p>Kako bi sestavili seznam kvadratov vseh lihih števil do 100? Seznam kvadratov vseh števil do 100 je trivialen, napisati nam je treba le:</p>
 <div class="cell docutils container">
@@ -1032,7 +1051,7 @@ prepišemo v pogoj.</p>
 <p>Takšnih reči sicer raje ne pišemo, saj hitro postanejo nepregledne.</p>
 </section>
 <section id="splosni-vzorec">
-<h2>Splošni vzorec<a class="headerlink" href="#splosni-vzorec" title="Permalink to this headline">#</a></h2>
+<h3><span class="section-number">13.1.2. </span>Splošni vzorec<a class="headerlink" href="#splosni-vzorec" title="Permalink to this headline">#</a></h3>
 <p>V splošnem: vsak kos kode, ki izgleda takole</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">r</span> <span class="o">=</span> <span class="p">[]</span>
 <span class="k">for</span> <span class="n">e</span> <span class="ow">in</span> <span class="n">s</span><span class="p">:</span>
@@ -1046,8 +1065,8 @@ prepišemo v pogoj.</p>
 </div>
 </section>
 </section>
-<section id="mnozice">
-<h1>Množice<a class="headerlink" href="#mnozice" title="Permalink to this headline">#</a></h1>
+<section id="izpeljane-mnozice">
+<h2><span class="section-number">13.2. </span>Izpeljane množice<a class="headerlink" href="#izpeljane-mnozice" title="Permalink to this headline">#</a></h2>
 <p>Množice sestavljamo natančno tako kot sezname, le da namesto oglatih
 oklepajev uporabimo zavite. Takole dobimo vse delitelje 60</p>
 <div class="cell docutils container">
@@ -1063,8 +1082,8 @@ oklepajev uporabimo zavite. Takole dobimo vse delitelje 60</p>
 </div>
 </div>
 </section>
-<section id="slovarji">
-<h1>Slovarji<a class="headerlink" href="#slovarji" title="Permalink to this headline">#</a></h1>
+<section id="izpeljani-slovarji">
+<h2><span class="section-number">13.3. </span>Izpeljani slovarji<a class="headerlink" href="#izpeljani-slovarji" title="Permalink to this headline">#</a></h2>
 <p>Ista reč. Če hočemo narediti slovar, ki bo kot ključe vseboval števila
 do 10, kot vrednosti pa njihove kvadrate, napišemo</p>
 <div class="cell docutils container">
@@ -1081,10 +1100,10 @@ do 10, kot vrednosti pa njihove kvadrate, napišemo</p>
 </div>
 </section>
 <section id="nekaj-uporabnih-funkcij">
-<h1>Nekaj uporabnih funkcij<a class="headerlink" href="#nekaj-uporabnih-funkcij" title="Permalink to this headline">#</a></h1>
+<h2><span class="section-number">13.4. </span>Nekaj uporabnih funkcij<a class="headerlink" href="#nekaj-uporabnih-funkcij" title="Permalink to this headline">#</a></h2>
 <p>Te stvari res zaživijo, če jih uporabljamo v kombinaciji z nekaj funkcijami. Nekatere že poznamo, nekatere bodo postale smiselne šele danes.</p>
 <section id="enumerate">
-<h2><code class="docutils literal notranslate"><span class="pre">enumerate</span></code><a class="headerlink" href="#enumerate" title="Permalink to this headline">#</a></h2>
+<h3><span class="section-number">13.4.1. </span><code class="docutils literal notranslate"><span class="pre">enumerate</span></code><a class="headerlink" href="#enumerate" title="Permalink to this headline">#</a></h3>
 <p>Doslej sem sitnaril, da jo uporabljajmo, kadar potrebujemo tako indeks elementa kot njegovo vrednost. Zdaj bo še toliko uporabnejša, saj bo bistveno izboljšala preglednost izpeljanih seznamov, množic in slovarjev.</p>
 <p>Zdaj, ko smo ravno tako pametni, vemo tudi, kako bi napisali <code class="docutils literal notranslate"><span class="pre">enumerate</span></code>, če le-tega še ne bi bilo.</p>
 <div class="cell docutils container">
@@ -1107,7 +1126,7 @@ do 10, kot vrednosti pa njihove kvadrate, napišemo</p>
 </div>
 </section>
 <section id="zip">
-<h2><code class="docutils literal notranslate"><span class="pre">zip</span></code><a class="headerlink" href="#zip" title="Permalink to this headline">#</a></h2>
+<h3><span class="section-number">13.4.2. </span><code class="docutils literal notranslate"><span class="pre">zip</span></code><a class="headerlink" href="#zip" title="Permalink to this headline">#</a></h3>
 <p>Tudi za <code class="docutils literal notranslate"><span class="pre">zip</span></code> že vemo: podamo ji nekaj seznamov in vrne nov seznam - seznam terk z elementi seznamov, ki smo jih poslali kot argumente.</p>
 <p>No, od danes vemo: v resnici vrne generator parov, ne seznama parov.</p>
 <div class="cell docutils container">
@@ -1299,7 +1318,7 @@ do 10, kot vrednosti pa njihove kvadrate, napišemo</p>
 <p>Te reči so, ko se jih navadiš, prav imenitno berljive. Program je skoraj dobesedno prepisan opis v naravnem jeziku: evklidska razdalja je koren vsote kvadratov razlik elementov, ki jih “vzporedno” jemljemo iz dveh seznamov.</p>
 </section>
 <section id="all-in-any">
-<h2><code class="docutils literal notranslate"><span class="pre">all</span></code> in <code class="docutils literal notranslate"><span class="pre">any</span></code><a class="headerlink" href="#all-in-any" title="Permalink to this headline">#</a></h2>
+<h3><span class="section-number">13.4.3. </span><code class="docutils literal notranslate"><span class="pre">all</span></code> in <code class="docutils literal notranslate"><span class="pre">any</span></code><a class="headerlink" href="#all-in-any" title="Permalink to this headline">#</a></h3>
 <p>Funkciji <code class="docutils literal notranslate"><span class="pre">all</span></code> in <code class="docutils literal notranslate"><span class="pre">any</span></code> sta videti trivialno, v resnici
 pa sta prav imenitni in uporabni. Prva, <code class="docutils literal notranslate"><span class="pre">all</span></code>, prejme generator (ali, seveda, seznam, množico, niz, slovar…) in vrne <code class="docutils literal notranslate"><span class="pre">True</span></code>, če le-ta generira same resnične reči (recimo same <code class="docutils literal notranslate"><span class="pre">True</span></code>).</p>
 <p>Število <code class="docutils literal notranslate"><span class="pre">n</span></code> je praštevilo, če so vsi ostanki po deljenju z <code class="docutils literal notranslate"><span class="pre">i</span></code> (za vsak <code class="docutils literal notranslate"><span class="pre">i</span></code> od <code class="docutils literal notranslate"><span class="pre">2</span></code> do <code class="docutils literal notranslate"><span class="pre">n</span></code>) različni od 0. Z <code class="docutils literal notranslate"><span class="pre">all</span></code> se tole prevede skoraj dobesedno v Python.</p>
@@ -1348,7 +1367,7 @@ pa sta prav imenitni in uporabni. Prva, <code class="docutils literal notranslat
 </div>
 </section>
 <section id="itertools-count">
-<h2><code class="docutils literal notranslate"><span class="pre">itertools.count</span></code><a class="headerlink" href="#itertools-count" title="Permalink to this headline">#</a></h2>
+<h3><span class="section-number">13.4.4. </span><code class="docutils literal notranslate"><span class="pre">itertools.count</span></code><a class="headerlink" href="#itertools-count" title="Permalink to this headline">#</a></h3>
 <p>Še več cukra se nahaja v modulu <code class="docutils literal notranslate"><span class="pre">itertools</span></code>.</p>
 <p>Funkcija <code class="docutils literal notranslate"><span class="pre">count</span></code> iz modula <code class="docutils literal notranslate"><span class="pre">itertools</span></code> je kot <code class="docutils literal notranslate"><span class="pre">range</span></code>, ki ji podamo kvečjemu spodnjo mejo ali pa še te ne. <code class="docutils literal notranslate"><span class="pre">count()</span></code> generira vsa števila od 0 do neskončno, <code class="docutils literal notranslate"><span class="pre">count(n)</span></code> pa vsa števila od <code class="docutils literal notranslate"><span class="pre">n</span></code> naprej.</p>
 <p>Sam jo najpogosteje uporabljam v zvezi z <code class="docutils literal notranslate"><span class="pre">zip</span></code>. <code class="docutils literal notranslate"><span class="pre">zip(count(),</span> <span class="pre">s)</span></code> je isto kot <code class="docutils literal notranslate"><span class="pre">enumerate(s)</span></code>. To sicer ni prav uporabno - očitno je <code class="docutils literal notranslate"><span class="pre">enumerate(s)</span></code> preprosteje in jasneje kot <code class="docutils literal notranslate"><span class="pre">zip(count(),</span> <span class="pre">s)</span></code>. Pač pa se dogaja, da greš z <code class="docutils literal notranslate"><span class="pre">zip</span></code> čez tri sezname hkrati, poleg tega pa potrebuješ še indekse. To se da pisati kot</p>
@@ -1362,7 +1381,7 @@ pa sta prav imenitni in uporabni. Prva, <code class="docutils literal notranslat
 <p>Pa še kje vam bo prišel prav, če se spomnite nanj.</p>
 </section>
 <section id="itertools-chain">
-<h2><code class="docutils literal notranslate"><span class="pre">itertools.chain</span></code><a class="headerlink" href="#itertools-chain" title="Permalink to this headline">#</a></h2>
+<h3><span class="section-number">13.4.5. </span><code class="docutils literal notranslate"><span class="pre">itertools.chain</span></code><a class="headerlink" href="#itertools-chain" title="Permalink to this headline">#</a></h3>
 <p>Če imamo več generatorjev (ali seznamov, slovarjev…) in bi radi šli z eno zanko čez vse, torej čez enega za drugim, jih sestavimo s <code class="docutils literal notranslate"><span class="pre">chain</span></code>.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1394,8 +1413,9 @@ a
 <p>Seveda je to isto kot <code class="docutils literal notranslate"><span class="pre">for</span> <span class="pre">c</span> <span class="pre">in</span> <span class="pre">&quot;Ana&quot;</span> <span class="pre">+</span> <span class="pre">&quot;Berta&quot;</span> <span class="pre">+</span> <span class="pre">&quot;Cilka&quot;:</span></code>, vendar je lepota v tem, da nizov nismo sešteli, temveč je <code class="docutils literal notranslate"><span class="pre">chain</span></code>. To je lepo predvsem, kadar ne verižimo nizov, temveč kaj, česar se ne da seštevati.</p>
 </section>
 <section id="itertools">
-<h2>Itertools<a class="headerlink" href="#itertools" title="Permalink to this headline">#</a></h2>
+<h3><span class="section-number">13.4.6. </span>Itertools<a class="headerlink" href="#itertools" title="Permalink to this headline">#</a></h3>
 <p>Vsi, ki vam je bilo tole všeč, bodo uživali tudi v ostalih <a class="reference external" href="https://docs.python.org/3/library/itertools.html#itertools.chain">dobrotah iz modula <code class="docutils literal notranslate"><span class="pre">itertools</span></code></a>.</p>
+</section>
 </section>
 </section>
 
@@ -1426,6 +1446,20 @@ a
                 
     <!-- Previous / next buttons -->
 <div class='prev-next-area'>
+    <a class='left-prev' id="prev-link" href="06_slovarji_in_mno%C5%BEice.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title"><span class="section-number">12. </span>Slovarji in množice</p>
+        </div>
+    </a>
+    <a class='right-next' id="next-link" href="naloge/01_topovske_bitke/navodila.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title"><span class="section-number">1. </span>Topovske bitke</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
 </div>
             </footer>
         </div>
