@@ -25,4 +25,5 @@ parts:
   chapters:
     - file: naloge/01_topovske_bitke/navodila
     - file: naloge/02_slovarji_in_mnozice/navodila
+    - file: naloge/03_miklavzeva_knjiga/navodila
 
