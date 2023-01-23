@@ -611,4 +611,4 @@ for c in chain("Ana", "Berta", "Cilka"):
 
 # ## Koda iz ure
 # 
-# [list_comprehension.py](./koda_z_ure/list_comprehension_ura.py)
+# [list_comprehension.py](https://raw.githubusercontent.com/programiranje-SKG/skripta/main/koda_z_ure/list_comprehension_ura.py)
