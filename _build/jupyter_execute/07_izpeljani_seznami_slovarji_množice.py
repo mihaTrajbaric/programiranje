@@ -608,3 +608,7 @@ for c in chain("Ana", "Berta", "Cilka"):
 # ### Itertools
 # 
 # Vsi, ki vam je bilo tole všeč, bodo uživali tudi v ostalih [dobrotah iz modula `itertools`](https://docs.python.org/3/library/itertools.html#itertools.chain).
+
+# ## Koda iz ure
+# 
+# [list_comprehension.py](./koda_z_ure/list_comprehension_ura.py)
