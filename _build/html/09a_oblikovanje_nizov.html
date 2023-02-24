@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>Oblikovanje nizov &#8212; Krožek začetnega programiranja 2022-23</title>
+    <title>14. Oblikovanje nizov &#8212; Krožek začetnega programiranja 2022-23</title>
     
   <!-- Loaded before other Sphinx assets -->
   <link href="_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
@@ -52,6 +52,8 @@ const thebe_selector_output = ".output, .cell_output"
     <script async="async" src="_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="1. Topovske bitke" href="naloge/01_topovske_bitke/navodila.html" />
+    <link rel="prev" title="13. Izpeljani seznami, slovarji, množice" href="07_izpeljani_seznami_slovarji_mno%C5%BEice.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -116,7 +118,7 @@ const thebe_selector_output = ".output, .cell_output"
   Vsebina
  </span>
 </p>
-<ul class="nav bd-sidenav">
+<ul class="current nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="01_izrazi_spremenljivke_program.html">
    1. Izrazi in spremenljivke
@@ -180,6 +182,11 @@ const thebe_selector_output = ".output, .cell_output"
  <li class="toctree-l1">
   <a class="reference internal" href="07_izpeljani_seznami_slovarji_mno%C5%BEice.html">
    13. Izpeljani seznami, slovarji, množice
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   14. Oblikovanje nizov
   </a>
  </li>
 </ul>
@@ -263,7 +270,7 @@ title="Toggle navigation"
   <div class="menu-dropdown__content">
     <ul>
       <li>
-        <a href="https://mybinder.org/v2/gh/programiranje-SKG/skripta/main?urlpath=tree/09a oblikovanje nizov.ipynb"
+        <a href="https://mybinder.org/v2/gh/programiranje-SKG/skripta/main?urlpath=tree/09a_oblikovanje_nizov.ipynb"
    class="headerbtn"
    data-toggle="tooltip"
 data-placement="left"
@@ -341,7 +348,7 @@ title="Source repository"
       </li>
       
       <li>
-        <a href="https://github.com/programiranje-SKG/skripta/issues/new?title=Issue%20on%20page%20%2F09a oblikovanje nizov.html&body=Your%20issue%20content%20here."
+        <a href="https://github.com/programiranje-SKG/skripta/issues/new?title=Issue%20on%20page%20%2F09a_oblikovanje_nizov.html&body=Your%20issue%20content%20here."
    class="headerbtn"
    data-toggle="tooltip"
 data-placement="left"
@@ -369,7 +376,7 @@ title="Open an issue"
   <div class="menu-dropdown__content">
     <ul>
       <li>
-        <a href="_sources/09a oblikovanje nizov.ipynb"
+        <a href="_sources/09a_oblikovanje_nizov.ipynb"
    class="headerbtn"
    data-toggle="tooltip"
 data-placement="left"
@@ -430,22 +437,22 @@ title="Print to PDF"
         <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#f-nizi">
-   f-nizi
+   14.1. f-nizi
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#izrazi-v-f-nizih">
-   Izrazi v f-nizih
+   14.2. Izrazi v f-nizih
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#kako-oblikujemo-reci">
-   Kako oblikujemo reči
+   14.3. Kako oblikujemo reči
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#kontrolni-znaki-v-nizih">
-   Kontrolni znaki v nizih
+   14.4. Kontrolni znaki v nizih
   </a>
  </li>
 </ul>
@@ -469,22 +476,22 @@ title="Print to PDF"
                             <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#f-nizi">
-   f-nizi
+   14.1. f-nizi
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#izrazi-v-f-nizih">
-   Izrazi v f-nizih
+   14.2. Izrazi v f-nizih
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#kako-oblikujemo-reci">
-   Kako oblikujemo reči
+   14.3. Kako oblikujemo reči
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#kontrolni-znaki-v-nizih">
-   Kontrolni znaki v nizih
+   14.4. Kontrolni znaki v nizih
   </a>
  </li>
 </ul>
@@ -498,7 +505,7 @@ title="Print to PDF"
               <div>
                 
   <section class="tex2jax_ignore mathjax_ignore" id="oblikovanje-nizov">
-<h1>Oblikovanje nizov<a class="headerlink" href="#oblikovanje-nizov" title="Permalink to this headline">#</a></h1>
+<h1><span class="section-number">14. </span>Oblikovanje nizov<a class="headerlink" href="#oblikovanje-nizov" title="Permalink to this headline">#</a></h1>
 <p>Pri izpisovanju smo bili doslej omejeni na dokaj zoprni <code class="docutils literal notranslate"><span class="pre">print</span></code>. Za začetek nam je zadoščal, kmalu pa postane neroden, saj nekaterih stvari z njim preprosto ni mogoče (preprosto) narediti. Za začetek se je potrebno z njim pogajati, da ne gre po vsakem izpisu v novo vrsto in da ne dodaja presledkov med reči, ki jih izpisujemo. Mu je mogoče reči, naj pri izpisu števil ne izpiše vseh šestnajst ali kolikor že decimalk? Tudi ne. <code class="docutils literal notranslate"><span class="pre">print</span></code> se s takimi rečmi ne ukvarja.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -518,7 +525,7 @@ title="Print to PDF"
 <p>Eno od načel Pythona je, da se da vsako stvar narediti na en in samo en očiten način. To je dobro zato, ker, posledično, vsi programerji pišemo podobne programe in zato lažje sodelujemo. Prav pri oblikovanju nizov pa se je to sfižilo: nize lahko oblikujemo na tri različne načine. Do tega je prišlo, ko je Python z leti postajal pametnejši. V začetku je uporabljal <a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#printf-style-string-formatting">nekoliko izboljšano različico C-jevskega oblikovanja</a>, saj druge praktično ni bilo. Kasneje so dodali <a class="reference external" href="https://docs.python.org/3.6/library/string.html#format-string-syntax">veliko preprostejši način oblikovanja nizov</a>, C-jevskega pa obdržali zato, da so stari programi še vedno delovali. Leta so tekla in programski jeziki napredovali. V modo je prišel drugačen še veliko prikladnejši način in Python je bil s svojima, precej nerodnejšima, videti prav štorast. Zato lahko od različice 3.6 naprej tudi v Pythonu oblikujemo nize na enak način kot v drugih modernih jezikih.</p>
 <p>Pri tem predmetu se bomo naučili le tretji načinu. Prva dva je potrebno poznati, če boste resno programirali v Pythonu in boste morali brati tudi tuje programe. Sami pa ju boste rekdo uporabili.</p>
 <section id="f-nizi">
-<h2>f-nizi<a class="headerlink" href="#f-nizi" title="Permalink to this headline">#</a></h2>
+<h2><span class="section-number">14.1. </span>f-nizi<a class="headerlink" href="#f-nizi" title="Permalink to this headline">#</a></h2>
 <p>Recimo, da imamo</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -593,7 +600,7 @@ title="Print to PDF"
 </div>
 </section>
 <section id="izrazi-v-f-nizih">
-<h2>Izrazi v f-nizih<a class="headerlink" href="#izrazi-v-f-nizih" title="Permalink to this headline">#</a></h2>
+<h2><span class="section-number">14.2. </span>Izrazi v f-nizih<a class="headerlink" href="#izrazi-v-f-nizih" title="Permalink to this headline">#</a></h2>
 <p>V nize ne vstavljamo le vrednosti spremenljivk: v zavite oklepaje lahko pišemo kar cele izraze.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -611,7 +618,7 @@ title="Print to PDF"
 </div>
 </section>
 <section id="kako-oblikujemo-reci">
-<h2>Kako oblikujemo reči<a class="headerlink" href="#kako-oblikujemo-reci" title="Permalink to this headline">#</a></h2>
+<h2><span class="section-number">14.3. </span>Kako oblikujemo reči<a class="headerlink" href="#kako-oblikujemo-reci" title="Permalink to this headline">#</a></h2>
 <p>Nize zdaj znamo zlagati, tistega, kar nas je najbolj motilo, pa se sploh še nismo lotili: 60.0 Fahrenheitov je 15.555555555555555 Celzijev? Za moje potrebe bi popolnoma zadostovalo 15.5 in tudi pri 15 me ne bi nič bolj zeblo.</p>
 <p>Če bi radi povedali, kako naj se izpiše neko število (ali niz ali karkoli že), dodamo izrazu dvopičje in za njim opis formata.</p>
 <p>To bomo najpogosteje potrebovali za oblikovanje necelih števil. To gre tako:</p>
@@ -737,7 +744,7 @@ Franc........101
 <p>V vse detajle ne bomo šli. Določiti je mogoče še veliko reči. Pri številih lahko zahtevamo, naj se vedno izpiše predznak, torej +, kadar je število pozitivno. Za števila lahko določimo, naj se izpišejo dvojiško ali šestnajstiško… Kdor potrebuje več kot to, naj Googla.</p>
 </section>
 <section id="kontrolni-znaki-v-nizih">
-<h2>Kontrolni znaki v nizih<a class="headerlink" href="#kontrolni-znaki-v-nizih" title="Permalink to this headline">#</a></h2>
+<h2><span class="section-number">14.4. </span>Kontrolni znaki v nizih<a class="headerlink" href="#kontrolni-znaki-v-nizih" title="Permalink to this headline">#</a></h2>
 <p>Niz se lahko razprostira prek več vrstic, če ga zapremo v trojne narekovaje.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1024,6 +1031,20 @@ ina	elovadba
                 
     <!-- Previous / next buttons -->
 <div class='prev-next-area'>
+    <a class='left-prev' id="prev-link" href="07_izpeljani_seznami_slovarji_mno%C5%BEice.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title"><span class="section-number">13. </span>Izpeljani seznami, slovarji, množice</p>
+        </div>
+    </a>
+    <a class='right-next' id="next-link" href="naloge/01_topovske_bitke/navodila.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title"><span class="section-number">1. </span>Topovske bitke</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
 </div>
             </footer>
         </div>
