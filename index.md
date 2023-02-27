@@ -47,6 +47,8 @@ Priporočeno delo tako obsega tedensko **udeležbo na krožku** kjer bomo spozna
 ## Gradivo za tekmovanja
 - [Guide to Competitive Programming](https://drive.google.com/file/d/1vjwFxSsQzI8fd5AGps_pLTTg8wNu404l/view?usp=share_link)
 - [Competitive Programming 3](https://drive.google.com/file/d/1s1EwQSUOYcAEEzfHdev8G44YiVx86wiR/view?usp=share_link)
+- [Priprave na računalniške olimpiade 22/23](https://ucilnica.acm.si/course/view.php?id=80)
+- [Priprave na računalniške olimpiade 21/22](https://moodle.lusy.fri.uni-lj.si/course/view.php?id=78)
 
 ## Zasluge in zahvala
 Pri pripravi gradiva za ta krožek se močno naslanjam na predavanja in vaje, ki jih je za potrebe poučevanja na FRI pripravil prof. Janez Demšar. Brez tega gradiva ta krožek ne bi bil, kar je, zato se profesorju in njegovi ekipi lepo zahvaljujem.
