@@ -1,6 +1,7 @@
 #!/usr/bin/env python
 # coding: utf-8
 
+# # Delo z datotekami
 # ## Branje datotek
 # 
 # Delo z datotekami v Pythonu je tako preprosto, da ga že skoraj obvladamo.
@@ -310,7 +311,7 @@ os.getcwd()
 # os.chdir("/Users/jananovak/Desktop")
 # ```
 
-# Če po tem odpremo datoteko v načinu "w", se bo le-ta pojavila v direktoriju /Users/jananovak/Desktop, kar bi utegnilo biti Janino namizje.
+# Če po tem odpremo datoteko v načinu "w", se bo le-ta pojavila v direktoriju `/Users/jananovak/Desktop`, kar bi utegnilo biti Janino namizje.
 # 
 # Ime datoteke je lahko relativno ali absolutno.
 # 
@@ -323,6 +324,43 @@ os.getcwd()
 # Ob poševnicah povejmo še, da dandanes vsi operacijski sistemi sprejemajo običajno, "napredno"
 # poševnico, `/`. Windowsi (oziroma MS-DOS, na katerem temeljijo) so dolgo uporabljali vzvratno
 # poševnico `\`, ki pa povzroča same sitnosti - kot smo izvedeli, ko smo govorili o nizih.
+# 
+# ### Premikanje po direktorijih
+# Če želimo ciljni direktorij podati relativno, glede na trenutni direktorij, si lahko pomagamo z naslednjimi triki.
+# 
+# Premik v starševski direktorij:
+# ```python
+# os.chdir('..')
+# ```
+# Premik v bratski direktorij 'resitve' (najprej se premaknemo v starsevski dir, nato spustimo v 'resitve')
+# ```python
+# os.chdir('../resitev')
+# ```
+# Takole ostanemo v trenutnem direktoriju (uporabno kasneje):
+# ```python
+# os.chdir('.')
+# ```
+# Seveda lahko poljubno kombiniramo zgornje ukaze, tako da vmes damo poševnico (`/`). Če smo trenutno v `/Users/jananovak/Desktop/programi/` in bi radi prišli v `/Users/jananovak/Desktop/programi`, to naredimo s sledečo relativno potjo:
+# 
+# ```python
+# os.chdir('../../Desktop/programi')
+# ```
+# 
+# S prvim `../` smo se najprej dvignili v direktorij `/Users/jananovak/Desktop/`, z drugim v `/Users/jananovak/`, nato pa smo z `Desktop/` vstopili v `/Users/jananovak/Desktop/` in nato še z `/programi` v `/Users/jananovak/Desktop/programi`.
+# 
+
+# ### Kaj je v trenutnem direktoriju?
+# Včasih ne poznamo točnega imena datotek v nekem direktoriju, zato nas najprej zanima, kaj sploh je notri. To naredimo z ukazom `os.listdir(pot)`. Takole bi preverili, kaj se skriva v trenutnem direktoriju:
+# 
+
+# In[2]:
+
+
+import os
+os.listdir('.')
+
+
+# seveda lahko funkciji podamo poljubno pot in tako preverimo, kaj je v poljubnem direktoriju.
 
 # ## Kako je zapisano besedilo
 # 
@@ -358,3 +396,138 @@ open("planeti.txt", "r", encoding="utf8")
 # številko naj se spremeni posamezni znak. (Pozoren študent, ki kaj ve, ve tudi, da so tudi nizi v Pythonu, torej spremenljivke tipa `str`, že shranjene kot zaporedje številke. Drži, vendar Python interno shranjuje nize pač v nekem standardu in nič nas ne briga, v katerem (v resnici v UTF-16 ali UTF-32, saj bi bil UTF-8 za tole zelo nepraktičen), pri zapisovanju v datoteko pa pretvori v tak standard, kot želimo. Pri branju pa je ravno obratno: ko Python bere datoteko, mora spreminjati številke v znake niza; ta nastavitev pove, kako.
 # 
 # Tule bi se lahko pogovorili še marsikaj. Predvsem ne vsebujejo vse datoteke besedil. Vendar so te stvare že precej tehnične in nekatere tudi specifične za Python, tako da se tu morda ustavimo. Več pa v dodatnih zapiskih
+
+# ## Branje in pisanje JSON datotek
+
+# Datoteke se uporabne, saj lahko z njimi delimo podatke med računalniki. Podatke, pišemo in beremo vrstico za vrstico, kar je naraven način za branje in pisanje stvari, ki jih v pythonu hranimo v podatkovni strukturi `seznam`. Vendar pa včasih takšno preprosto pisanje ne zadošča. Kako bi shranili kaj bolj kompleksnega, kot na primer `slovar`? 
+# 
+# Recimo, da bi radi shranili naslednji slovar:
+
+# In[3]:
+
+
+glavna_mesta = {
+    'Evropa': {
+        'Slovenija': 'Ljubljana',
+        'Hrvaška': 'Zagreb',
+        'Avstrija': 'Dunaj',
+        'Madžarska': 'Budimpešta',
+        'Italija': 'Rim'
+    },
+    'Afrika': {
+        'Egipt': "Kairo"
+    }
+}
+
+
+# 
+# 
+# Če bi ga shranili v datoteko, kot smo vajeni do sedaj, bi ali izgubili večnivojsko strukturo, ali pa poskrbeli za nek nestandarden način shranjevanja, ki ga drugi programerji ne bi razumeli.
+# 
+# Zato raje shranimo v formatu `json`, ki je narejen točno za shranjevanje in deljenje slovarjev.
+# 
+# Zgornji slovar tako shranimo v datoteko `glavna_mesta.json`, ki ima sledečo vsebino:
+# 
+# ```json
+# 
+# {
+#     "Evropa": {
+#         "Slovenija": "Ljubljana",
+#         "Hrvaška": "Zagreb",
+#         "Avstrija": "Dunaj",
+#         "Madžarska": "Budimpešta",
+#         "Italija": "Rim"
+#     },
+#     "Afrika": {
+#         "Egipt": "Kairo"
+#     }
+# }
+# ```
+# 
+# Vidimo, da je struktura datoteke v formatu json skoraj identična zapisu slovarja v Pythonu. Glavna razlika je, da json očitno pozna zgolj dvojni narekovaj (`"`).
+# 
+# Seveda se z lepim shranjevanjem v datoteko ne bomo ukvarjali sami. Za to bo poskrbela knjižjica `json`.
+# 
+# Slovar v datoteko shranimo s funkcijo `json.dump`:
+# 
+# 
+
+# In[9]:
+
+
+import json
+
+with open('izhod.json', 'w') as jsonfile:
+    json.dump(glavna_mesta, jsonfile, ensure_ascii=False)
+
+
+# Najprej moramo odpreti neko datoteko za pisanje, nato pa funkciji podamo spremenljivko s slovarjem (`glavna_mesta`) in spremenljivko z odprto datoteko (`jsonfile`).
+# 
+# Ker smo datoteko odprli v kontekstu, se po uspešnem izvozu zapre sama.
+# 
+# V funkcijo smo dodali še en parameter. `ensure_ascii=False`, poskrbi, da se bodo čšž-ji shranili, kot smo vajeni. To seveda lahko izpustimo, če delamo s standardno (angleško) ASCII kodno tabelo.
+# 
+# Če odpremo nastalo datoteko `izhod.json`, opazimo, da je notri res naš slovar:
+# 
+# ```python
+# {"Evropa": {"Slovenija": "Ljubljana", "Hrvaška": "Zagreb", "Avstrija": "Dunaj", "Madžarska": "Budimpešta", "Italija": "Rim"}, "Afrika": {"Egipt": "Kairo"}}
+# ```
+# 
+# Edino, kar nas moti je, da je celoten slovar stisnjen v eno vrstico. Takšen zapis je še vedno veljaven, razumela ga bo vsaka knjižnjica, ki bo poskusila odkodirati json datoteko, edino ni najbolj berljiv. To lahko popravimo z dodatkom parametra `indent=4`, ki poskrbi, da bo vsak nov nivo zamaknjen za 4 presledke bolj v desno:
+
+# In[10]:
+
+
+with open('izhod.json', 'w') as jsonfile:
+    json.dump(glavna_mesta, jsonfile, ensure_ascii=False, indent=4)
+
+
+# Datoteka `izhod.json` sedaj izgleda veliko lepše:
+# 
+# ```python
+# {
+#     "Evropa": {
+#         "Slovenija": "Ljubljana",
+#         "Hrvaška": "Zagreb",
+#         "Avstrija": "Dunaj",
+#         "Madžarska": "Budimpešta",
+#         "Italija": "Rim"
+#     },
+#     "Afrika": {
+#         "Egipt": "Kairo"
+#     }
+# }
+# ```
+
+# Iz datoteke beremo s funkcijo `json.load`:
+
+# In[7]:
+
+
+with open('izhod.json', 'r') as jsonfile:
+    print(json.load(jsonfile))
+
+
+# Spet odpremo datoteko, tokrat za branje, in jo podamo funkciji `json.load`, ki vrne prebrani slovar.
+# 
+# Mimogrede, shranjevanju podatkovne strukture, ki "živi" med izvajanjem programa v delovnem pomnilniku računalnika, v datoteko, rečemo *serializacija*, obratni operaciji (nalaganju iz datoteke v pomnilnik) pa *deserializacija*.
+# 
+# Včasih pa ne želimo pisati direktno v datoteko, pač pa bi radi vsebino slovarja samo pretvorili v niz, ki ga potem lahko shranimo na kakšen drugačen način, npr. v podatkovno bazo, ki je vajena shranjevanja nizov. Za takšne primere ima knjižnjica `json` na voljo funkciji `json.dumps` in `json.loads` (`s` se nanaša na string oz. niz). Tako lahko slovar pretvorimo v niz:
+
+# In[11]:
+
+
+json_str = json.dumps(glavna_mesta, ensure_ascii=False, indent=4)
+print(json_str)
+
+
+# Ker smo spet uporabili parameter `indent=4` smo dobili lep izpis z zamiki. Tega sicer ponavadi ne delamo, ko shranjujemo v bazo, je pa uporabno, ko želimo s funkcijo `print` prikazati vsebino slovarja na zaslonu.
+# 
+# Funkcija `json.dumps` pa tako naše podatke pretvori nazaj iz niza v slovar:
+
+# In[12]:
+
+
+slovar_2 = json.loads(json_str)
+print(slovar_2)
+

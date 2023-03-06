@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>15. Branje datotek &#8212; Krožek začetnega programiranja 2022-23</title>
+    <title>15. Delo z datotekami &#8212; Krožek začetnega programiranja 2022-23</title>
     
   <!-- Loaded before other Sphinx assets -->
   <link href="_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
@@ -191,7 +191,7 @@ const thebe_selector_output = ".output, .cell_output"
  </li>
  <li class="toctree-l1 current active">
   <a class="current reference internal" href="#">
-   15. Branje datotek
+   15. Delo z datotekami
   </a>
  </li>
 </ul>
@@ -445,24 +445,41 @@ title="Print to PDF"
     </div>
     <nav id="bd-toc-nav" aria-label="Page">
         <ul class="visible nav section-nav flex-column">
- <li class="toc-h1 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#">
-   15. Branje datotek
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#branje-datotek">
+   15.1. Branje datotek
   </a>
  </li>
- <li class="toc-h1 nav-item toc-entry">
+ <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#pisanje-datotek">
-   16. Pisanje datotek
+   15.2. Pisanje datotek
   </a>
  </li>
- <li class="toc-h1 nav-item toc-entry">
+ <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#trenutni-direktorij">
-   17. Trenutni direktorij
+   15.3. Trenutni direktorij
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#premikanje-po-direktorijih">
+     15.3.1. Premikanje po direktorijih
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#kaj-je-v-trenutnem-direktoriju">
+     15.3.2. Kaj je v trenutnem direktoriju?
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#kako-je-zapisano-besedilo">
+   15.4. Kako je zapisano besedilo
   </a>
  </li>
- <li class="toc-h1 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#kako-je-zapisano-besedilo">
-   18. Kako je zapisano besedilo
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#branje-in-pisanje-json-datotek">
+   15.5. Branje in pisanje JSON datotek
   </a>
  </li>
 </ul>
@@ -474,7 +491,7 @@ title="Print to PDF"
         <div class="col pl-md-3 pl-lg-5 content-container">
             <!-- Table of contents that is only displayed when printing the page -->
             <div id="jb-print-docs-body" class="onlyprint">
-                <h1>Branje datotek</h1>
+                <h1>Delo z datotekami</h1>
                 <!-- Table of contents -->
                 <div id="print-main-content">
                     <div id="jb-print-toc">
@@ -484,24 +501,41 @@ title="Print to PDF"
                         </div>
                         <nav aria-label="Page">
                             <ul class="visible nav section-nav flex-column">
- <li class="toc-h1 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#">
-   15. Branje datotek
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#branje-datotek">
+   15.1. Branje datotek
   </a>
  </li>
- <li class="toc-h1 nav-item toc-entry">
+ <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#pisanje-datotek">
-   16. Pisanje datotek
+   15.2. Pisanje datotek
   </a>
  </li>
- <li class="toc-h1 nav-item toc-entry">
+ <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#trenutni-direktorij">
-   17. Trenutni direktorij
+   15.3. Trenutni direktorij
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#premikanje-po-direktorijih">
+     15.3.1. Premikanje po direktorijih
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#kaj-je-v-trenutnem-direktoriju">
+     15.3.2. Kaj je v trenutnem direktoriju?
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#kako-je-zapisano-besedilo">
+   15.4. Kako je zapisano besedilo
   </a>
  </li>
- <li class="toc-h1 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#kako-je-zapisano-besedilo">
-   18. Kako je zapisano besedilo
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#branje-in-pisanje-json-datotek">
+   15.5. Branje in pisanje JSON datotek
   </a>
  </li>
 </ul>
@@ -514,8 +548,10 @@ title="Print to PDF"
                 
               <div>
                 
-  <section id="branje-datotek">
-<h1><span class="section-number">15. </span>Branje datotek<a class="headerlink" href="#branje-datotek" title="Permalink to this headline">#</a></h1>
+  <section class="tex2jax_ignore mathjax_ignore" id="delo-z-datotekami">
+<h1><span class="section-number">15. </span>Delo z datotekami<a class="headerlink" href="#delo-z-datotekami" title="Permalink to this headline">#</a></h1>
+<section id="branje-datotek">
+<h2><span class="section-number">15.1. </span>Branje datotek<a class="headerlink" href="#branje-datotek" title="Permalink to this headline">#</a></h2>
 <p>Delo z datotekami v Pythonu je tako preprosto, da ga že skoraj obvladamo.</p>
 <p>Imejmo datoteko z imenom planeti.txt in takšno vsebino:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Merkur</span>
@@ -737,7 +773,7 @@ ko smo na koncu, smo na koncu.</p>
 Pa znamo <em>mi</em> pisati v datoteko?</p>
 </section>
 <section id="pisanje-datotek">
-<h1><span class="section-number">16. </span>Pisanje datotek<a class="headerlink" href="#pisanje-datotek" title="Permalink to this headline">#</a></h1>
+<h2><span class="section-number">15.2. </span>Pisanje datotek<a class="headerlink" href="#pisanje-datotek" title="Permalink to this headline">#</a></h2>
 <p>Funkcija <code class="docutils literal notranslate"><span class="pre">open</span></code> sprejme poleg imena datoteke, ki jo želimo odpreti, še nekaj argumentov. Drugi
 po vrsti vsebuje način, na katerega želimo odpreti datoteko. Ta je lahko “r”, “w” ali “a”.
 Način “r” smo že videli zgoraj in vemo, da se nanaša na branje. Potem je očitno, da se “w” na
@@ -905,7 +941,7 @@ argumentov poljubnega tipa, sprejme <code class="docutils literal notranslate"><
 </div>
 </section>
 <section id="trenutni-direktorij">
-<h1><span class="section-number">17. </span>Trenutni direktorij<a class="headerlink" href="#trenutni-direktorij" title="Permalink to this headline">#</a></h1>
+<h2><span class="section-number">15.3. </span>Trenutni direktorij<a class="headerlink" href="#trenutni-direktorij" title="Permalink to this headline">#</a></h2>
 <p>Kje mora biti datoteka, da jo bo <code class="docutils literal notranslate"><span class="pre">open</span></code> našel? Ali, kadar pišemo: kam, v kateri direktorij, jo
 bo shranil?</p>
 <p>Vsak program, ki trenutno teče, ima določen “trenutni direktoij”. V začetku mu ga na nek način
@@ -929,7 +965,7 @@ izvemo s funkcijo <code class="docutils literal notranslate"><span class="pre">o
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">os</span><span class="o">.</span><span class="n">chdir</span><span class="p">(</span><span class="s2">&quot;/Users/jananovak/Desktop&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
-<p>Če po tem odpremo datoteko v načinu “w”, se bo le-ta pojavila v direktoriju /Users/jananovak/Desktop, kar bi utegnilo biti Janino namizje.</p>
+<p>Če po tem odpremo datoteko v načinu “w”, se bo le-ta pojavila v direktoriju <code class="docutils literal notranslate"><span class="pre">/Users/jananovak/Desktop</span></code>, kar bi utegnilo biti Janino namizje.</p>
 <p>Ime datoteke je lahko relativno ali absolutno.</p>
 <p>Relativna imena začnemo brez poševnice. Če je trenutni direktorij Users/janez/Downloads in napišemo <code class="docutils literal notranslate"><span class="pre">open(&quot;programi/naloga.py&quot;)</span></code>, bo Python poskusil odpreti datoteko “/Users/jananovak/Desktop/programi/naloga.py”. Takšno ime je torej relativno glede na trenutni direktorij.</p>
 <p>Če pa ime datoteke začnemo s poševnico, gre za absolutno ime, od, s kleno slovensko besedo,
@@ -938,9 +974,49 @@ korenskega imenika oziroma mape. Napišemo lahko torej, na primer,
 <p>Ob poševnicah povejmo še, da dandanes vsi operacijski sistemi sprejemajo običajno, “napredno”
 poševnico, <code class="docutils literal notranslate"><span class="pre">/</span></code>. Windowsi (oziroma MS-DOS, na katerem temeljijo) so dolgo uporabljali vzvratno
 poševnico <code class="docutils literal notranslate"><span class="pre">\</span></code>, ki pa povzroča same sitnosti - kot smo izvedeli, ko smo govorili o nizih.</p>
+<section id="premikanje-po-direktorijih">
+<h3><span class="section-number">15.3.1. </span>Premikanje po direktorijih<a class="headerlink" href="#premikanje-po-direktorijih" title="Permalink to this headline">#</a></h3>
+<p>Če želimo ciljni direktorij podati relativno, glede na trenutni direktorij, si lahko pomagamo z naslednjimi triki.</p>
+<p>Premik v starševski direktorij:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">os</span><span class="o">.</span><span class="n">chdir</span><span class="p">(</span><span class="s1">&#39;..&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Premik v bratski direktorij ‘resitve’ (najprej se premaknemo v starsevski dir, nato spustimo v ‘resitve’)</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">os</span><span class="o">.</span><span class="n">chdir</span><span class="p">(</span><span class="s1">&#39;../resitev&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Takole ostanemo v trenutnem direktoriju (uporabno kasneje):</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">os</span><span class="o">.</span><span class="n">chdir</span><span class="p">(</span><span class="s1">&#39;.&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Seveda lahko poljubno kombiniramo zgornje ukaze, tako da vmes damo poševnico (<code class="docutils literal notranslate"><span class="pre">/</span></code>). Če smo trenutno v <code class="docutils literal notranslate"><span class="pre">/Users/jananovak/Desktop/programi/</span></code> in bi radi prišli v <code class="docutils literal notranslate"><span class="pre">/Users/jananovak/Desktop/programi</span></code>, to naredimo s sledečo relativno potjo:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">os</span><span class="o">.</span><span class="n">chdir</span><span class="p">(</span><span class="s1">&#39;../../Desktop/programi&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>S prvim <code class="docutils literal notranslate"><span class="pre">../</span></code> smo se najprej dvignili v direktorij <code class="docutils literal notranslate"><span class="pre">/Users/jananovak/Desktop/</span></code>, z drugim v <code class="docutils literal notranslate"><span class="pre">/Users/jananovak/</span></code>, nato pa smo z <code class="docutils literal notranslate"><span class="pre">Desktop/</span></code> vstopili v <code class="docutils literal notranslate"><span class="pre">/Users/jananovak/Desktop/</span></code> in nato še z <code class="docutils literal notranslate"><span class="pre">/programi</span></code> v <code class="docutils literal notranslate"><span class="pre">/Users/jananovak/Desktop/programi</span></code>.</p>
+</section>
+<section id="kaj-je-v-trenutnem-direktoriju">
+<h3><span class="section-number">15.3.2. </span>Kaj je v trenutnem direktoriju?<a class="headerlink" href="#kaj-je-v-trenutnem-direktoriju" title="Permalink to this headline">#</a></h3>
+<p>Včasih ne poznamo točnega imena datotek v nekem direktoriju, zato nas najprej zanima, kaj sploh je notri. To naredimo z ukazom <code class="docutils literal notranslate"><span class="pre">os.listdir(pot)</span></code>. Takole bi preverili, kaj se skriva v trenutnem direktoriju:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">os</span>
+<span class="n">os</span><span class="o">.</span><span class="n">listdir</span><span class="p">(</span><span class="s1">&#39;.&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&#39;program.py&#39;,
+ &#39;podatki.txt&#39;]
+</pre></div>
+</div>
+</div>
+</div>
+<p>seveda lahko funkciji podamo poljubno pot in tako preverimo, kaj je v poljubnem direktoriju.</p>
+</section>
 </section>
 <section id="kako-je-zapisano-besedilo">
-<h1><span class="section-number">18. </span>Kako je zapisano besedilo<a class="headerlink" href="#kako-je-zapisano-besedilo" title="Permalink to this headline">#</a></h1>
+<h2><span class="section-number">15.4. </span>Kako je zapisano besedilo<a class="headerlink" href="#kako-je-zapisano-besedilo" title="Permalink to this headline">#</a></h2>
 <p>Računalnik v resnici shranjuje samo številke. Da lahko shranimo besedilo, se zmenimo, da vsak znak predstavimo z določeno številko. V ta namen je bilo razvitih več standardov, od katerih je preživel bolj ali manj samo ASCII. Ta pravi, recimo, da veliki A predstavimo s številko 65, B s 66, C z 67… Mali a je 97, b 98 … in tako naprej. Svoje kode imajo tudi drugi znaki: presledek je 32, pika je 46, oklepaj 40… Vsak znak, ki ga lahko natipkamo ali kako drugače napišemo, mora imeti neko kodo. Problem: ASCII je (bil) sedembitni standard, pri čemer so prvih 32 znakov zasedle kontrolne kode, kot recimo prehod v novo vrsto, tabulator, zvonček in še kup eksotičnih reči, ki so jih potrebovali za teleprinterje. Tako so proste le kode od 32 do 127, s čimer lahko zapišemo 96 znakov. To nekako zadošča za angleško abecedo, ločila in še par malenkosti, za trde in mehke č-je pa se Američani, ki so sestavljali standard, niso posebej menili. Kitajci pa si niti s celotnim naborom 96 mest ne bi mogli veliko pomagati.</p>
 <p>ASCII je doživel kup razširitev. Že v sedembitni različici smo ga v rajnki domovini popravili v YUSCII, v katerem smo žrtvovali nekaj znakov, kot so zaviti oklepaji in vzvratne poševnice in jih zamenjali s šumniki. Microsoft in IBM sta kasneje sestavila vsak svoj standard, takoimenovane kodne tabele; gre za razporede, v katerih je “spodnji del”, znaki s kodami do 127, enak kot v izvirnem ASCII, v gornjem delu - kode od 128 do 256 - pa so različni drugi znaki. V naših krajih se je najbolj prijela tabela CP1250, namenjeni srednje- in vzhodnoevropskim jezikom, v kateri ima, recimo, č kodo 232. V zahodnoevroski tabeli, CP1252, č-ja ni, na mestu 232 pa je znak è. Poleg teh, Microsoftovih tabel, obstajajo IBMove, kjer je Slovanom namenjen IBM 852; da bi bilo programiranje še preprostejše, obstaja tudi tretji standard, ISO-8859, ki nam je namenil tabelo ISO-8859-2, ki je podobna, vendar ne povsem enaka CP1250.</p>
 <p>Ko torej računalnik prikazuje kako besedilo, mora vedeti, v katerem kodnem naboru je zapisan, se pravi, kako razumeti, recimo, številko 232. Če je besedilo v CP1252, je to è, če v CP1250, pa č. In kako naj to ve? V splošnem ne more! Spletne strani navadno vsebujejo glavo, v kateri je zapisan podatek o uporabljenem kodnem naboru. Če tega ni, se bodo šumniki pokazali prav ali pa tudi ne. In še huje: vse besedilo je napisano v istem kodnem naboru, zato se lahko zgodi, da ne bo moglo vsebovati tako črke č kot è. (To morda razloži kaj v zvezi s podnapisi filmov, ki napačno sugerirajo, da so na pikniku jedle <em>èvapèièe s èebulo</em>?)</p>
@@ -969,6 +1045,147 @@ odvisno od nastavitev sistema - zato imajo Windowsi nastavitev “System locale�
 datoteko, ga mora Python pretvoriti v zaporedje številk. Ta nastavitev pove, kako - v katero
 številko naj se spremeni posamezni znak. (Pozoren študent, ki kaj ve, ve tudi, da so tudi nizi v Pythonu, torej spremenljivke tipa <code class="docutils literal notranslate"><span class="pre">str</span></code>, že shranjene kot zaporedje številke. Drži, vendar Python interno shranjuje nize pač v nekem standardu in nič nas ne briga, v katerem (v resnici v UTF-16 ali UTF-32, saj bi bil UTF-8 za tole zelo nepraktičen), pri zapisovanju v datoteko pa pretvori v tak standard, kot želimo. Pri branju pa je ravno obratno: ko Python bere datoteko, mora spreminjati številke v znake niza; ta nastavitev pove, kako.</p>
 <p>Tule bi se lahko pogovorili še marsikaj. Predvsem ne vsebujejo vse datoteke besedil. Vendar so te stvare že precej tehnične in nekatere tudi specifične za Python, tako da se tu morda ustavimo. Več pa v dodatnih zapiskih</p>
+</section>
+<section id="branje-in-pisanje-json-datotek">
+<h2><span class="section-number">15.5. </span>Branje in pisanje JSON datotek<a class="headerlink" href="#branje-in-pisanje-json-datotek" title="Permalink to this headline">#</a></h2>
+<p>Datoteke se uporabne, saj lahko z njimi delimo podatke med računalniki. Podatke, pišemo in beremo vrstico za vrstico, kar je naraven način za branje in pisanje stvari, ki jih v pythonu hranimo v podatkovni strukturi <code class="docutils literal notranslate"><span class="pre">seznam</span></code>. Vendar pa včasih takšno preprosto pisanje ne zadošča. Kako bi shranili kaj bolj kompleksnega, kot na primer <code class="docutils literal notranslate"><span class="pre">slovar</span></code>?</p>
+<p>Recimo, da bi radi shranili naslednji slovar:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">glavna_mesta</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s1">&#39;Evropa&#39;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="s1">&#39;Slovenija&#39;</span><span class="p">:</span> <span class="s1">&#39;Ljubljana&#39;</span><span class="p">,</span>
+        <span class="s1">&#39;Hrvaška&#39;</span><span class="p">:</span> <span class="s1">&#39;Zagreb&#39;</span><span class="p">,</span>
+        <span class="s1">&#39;Avstrija&#39;</span><span class="p">:</span> <span class="s1">&#39;Dunaj&#39;</span><span class="p">,</span>
+        <span class="s1">&#39;Madžarska&#39;</span><span class="p">:</span> <span class="s1">&#39;Budimpešta&#39;</span><span class="p">,</span>
+        <span class="s1">&#39;Italija&#39;</span><span class="p">:</span> <span class="s1">&#39;Rim&#39;</span>
+    <span class="p">},</span>
+    <span class="s1">&#39;Afrika&#39;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="s1">&#39;Egipt&#39;</span><span class="p">:</span> <span class="s2">&quot;Kairo&quot;</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Če bi ga shranili v datoteko, kot smo vajeni do sedaj, bi ali izgubili večnivojsko strukturo, ali pa poskrbeli za nek nestandarden način shranjevanja, ki ga drugi programerji ne bi razumeli.</p>
+<p>Zato raje shranimo v formatu <code class="docutils literal notranslate"><span class="pre">json</span></code>, ki je narejen točno za shranjevanje in deljenje slovarjev.</p>
+<p>Zgornji slovar tako shranimo v datoteko <code class="docutils literal notranslate"><span class="pre">glavna_mesta.json</span></code>, ki ima sledečo vsebino:</p>
+<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+<span class="w">    </span><span class="nt">&quot;Evropa&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="nt">&quot;Slovenija&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Ljubljana&quot;</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">&quot;Hrvaška&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Zagreb&quot;</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">&quot;Avstrija&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Dunaj&quot;</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">&quot;Madžarska&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Budimpešta&quot;</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">&quot;Italija&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Rim&quot;</span>
+<span class="w">    </span><span class="p">},</span>
+<span class="w">    </span><span class="nt">&quot;Afrika&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="nt">&quot;Egipt&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Kairo&quot;</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>Vidimo, da je struktura datoteke v formatu json skoraj identična zapisu slovarja v Pythonu. Glavna razlika je, da json očitno pozna zgolj dvojni narekovaj (<code class="docutils literal notranslate"><span class="pre">&quot;</span></code>).</p>
+<p>Seveda se z lepim shranjevanjem v datoteko ne bomo ukvarjali sami. Za to bo poskrbela knjižjica <code class="docutils literal notranslate"><span class="pre">json</span></code>.</p>
+<p>Slovar v datoteko shranimo s funkcijo <code class="docutils literal notranslate"><span class="pre">json.dump</span></code>:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">json</span>
+
+<span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;izhod.json&#39;</span><span class="p">,</span> <span class="s1">&#39;w&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">jsonfile</span><span class="p">:</span>
+    <span class="n">json</span><span class="o">.</span><span class="n">dump</span><span class="p">(</span><span class="n">glavna_mesta</span><span class="p">,</span> <span class="n">jsonfile</span><span class="p">,</span> <span class="n">ensure_ascii</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Najprej moramo odpreti neko datoteko za pisanje, nato pa funkciji podamo spremenljivko s slovarjem (<code class="docutils literal notranslate"><span class="pre">glavna_mesta</span></code>) in spremenljivko z odprto datoteko (<code class="docutils literal notranslate"><span class="pre">jsonfile</span></code>).</p>
+<p>Ker smo datoteko odprli v kontekstu, se po uspešnem izvozu zapre sama.</p>
+<p>V funkcijo smo dodali še en parameter. <code class="docutils literal notranslate"><span class="pre">ensure_ascii=False</span></code>, poskrbi, da se bodo čšž-ji shranili, kot smo vajeni. To seveda lahko izpustimo, če delamo s standardno (angleško) ASCII kodno tabelo.</p>
+<p>Če odpremo nastalo datoteko <code class="docutils literal notranslate"><span class="pre">izhod.json</span></code>, opazimo, da je notri res naš slovar:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="p">{</span><span class="s2">&quot;Evropa&quot;</span><span class="p">:</span> <span class="p">{</span><span class="s2">&quot;Slovenija&quot;</span><span class="p">:</span> <span class="s2">&quot;Ljubljana&quot;</span><span class="p">,</span> <span class="s2">&quot;Hrvaška&quot;</span><span class="p">:</span> <span class="s2">&quot;Zagreb&quot;</span><span class="p">,</span> <span class="s2">&quot;Avstrija&quot;</span><span class="p">:</span> <span class="s2">&quot;Dunaj&quot;</span><span class="p">,</span> <span class="s2">&quot;Madžarska&quot;</span><span class="p">:</span> <span class="s2">&quot;Budimpešta&quot;</span><span class="p">,</span> <span class="s2">&quot;Italija&quot;</span><span class="p">:</span> <span class="s2">&quot;Rim&quot;</span><span class="p">},</span> <span class="s2">&quot;Afrika&quot;</span><span class="p">:</span> <span class="p">{</span><span class="s2">&quot;Egipt&quot;</span><span class="p">:</span> <span class="s2">&quot;Kairo&quot;</span><span class="p">}}</span>
+</pre></div>
+</div>
+<p>Edino, kar nas moti je, da je celoten slovar stisnjen v eno vrstico. Takšen zapis je še vedno veljaven, razumela ga bo vsaka knjižnjica, ki bo poskusila odkodirati json datoteko, edino ni najbolj berljiv. To lahko popravimo z dodatkom parametra <code class="docutils literal notranslate"><span class="pre">indent=4</span></code>, ki poskrbi, da bo vsak nov nivo zamaknjen za 4 presledke bolj v desno:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;izhod.json&#39;</span><span class="p">,</span> <span class="s1">&#39;w&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">jsonfile</span><span class="p">:</span>
+    <span class="n">json</span><span class="o">.</span><span class="n">dump</span><span class="p">(</span><span class="n">glavna_mesta</span><span class="p">,</span> <span class="n">jsonfile</span><span class="p">,</span> <span class="n">ensure_ascii</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">indent</span><span class="o">=</span><span class="mi">4</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Datoteka <code class="docutils literal notranslate"><span class="pre">izhod.json</span></code> sedaj izgleda veliko lepše:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+    <span class="s2">&quot;Evropa&quot;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="s2">&quot;Slovenija&quot;</span><span class="p">:</span> <span class="s2">&quot;Ljubljana&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;Hrvaška&quot;</span><span class="p">:</span> <span class="s2">&quot;Zagreb&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;Avstrija&quot;</span><span class="p">:</span> <span class="s2">&quot;Dunaj&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;Madžarska&quot;</span><span class="p">:</span> <span class="s2">&quot;Budimpešta&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;Italija&quot;</span><span class="p">:</span> <span class="s2">&quot;Rim&quot;</span>
+    <span class="p">},</span>
+    <span class="s2">&quot;Afrika&quot;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="s2">&quot;Egipt&quot;</span><span class="p">:</span> <span class="s2">&quot;Kairo&quot;</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>Iz datoteke beremo s funkcijo <code class="docutils literal notranslate"><span class="pre">json.load</span></code>:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;izhod.json&#39;</span><span class="p">,</span> <span class="s1">&#39;r&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">jsonfile</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">json</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="n">jsonfile</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{&#39;Evropa&#39;: {&#39;Slovenija&#39;: &#39;Ljubljana&#39;, &#39;Hrvaška&#39;: &#39;Zagreb&#39;, &#39;Avstrija&#39;: &#39;Dunaj&#39;, &#39;Madžarska&#39;: &#39;Budimpešta&#39;, &#39;Italija&#39;: &#39;Rim&#39;}, &#39;Afrika&#39;: {&#39;Egipt&#39;: &#39;Kairo&#39;}}
+</pre></div>
+</div>
+</div>
+</div>
+<p>Spet odpremo datoteko, tokrat za branje, in jo podamo funkciji <code class="docutils literal notranslate"><span class="pre">json.load</span></code>, ki vrne prebrani slovar.</p>
+<p>Mimogrede, shranjevanju podatkovne strukture, ki “živi” med izvajanjem programa v delovnem pomnilniku računalnika, v datoteko, rečemo <em>serializacija</em>, obratni operaciji (nalaganju iz datoteke v pomnilnik) pa <em>deserializacija</em>.</p>
+<p>Včasih pa ne želimo pisati direktno v datoteko, pač pa bi radi vsebino slovarja samo pretvorili v niz, ki ga potem lahko shranimo na kakšen drugačen način, npr. v podatkovno bazo, ki je vajena shranjevanja nizov. Za takšne primere ima knjižnjica <code class="docutils literal notranslate"><span class="pre">json</span></code> na voljo funkciji <code class="docutils literal notranslate"><span class="pre">json.dumps</span></code> in <code class="docutils literal notranslate"><span class="pre">json.loads</span></code> (<code class="docutils literal notranslate"><span class="pre">s</span></code> se nanaša na string oz. niz). Tako lahko slovar pretvorimo v niz:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">json_str</span> <span class="o">=</span> <span class="n">json</span><span class="o">.</span><span class="n">dumps</span><span class="p">(</span><span class="n">glavna_mesta</span><span class="p">,</span> <span class="n">ensure_ascii</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">indent</span><span class="o">=</span><span class="mi">4</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">json_str</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{
+    &quot;Evropa&quot;: {
+        &quot;Slovenija&quot;: &quot;Ljubljana&quot;,
+        &quot;Hrvaška&quot;: &quot;Zagreb&quot;,
+        &quot;Avstrija&quot;: &quot;Dunaj&quot;,
+        &quot;Madžarska&quot;: &quot;Budimpešta&quot;,
+        &quot;Italija&quot;: &quot;Rim&quot;
+    },
+    &quot;Afrika&quot;: {
+        &quot;Egipt&quot;: &quot;Kairo&quot;
+    }
+}
+</pre></div>
+</div>
+</div>
+</div>
+<p>Ker smo spet uporabili parameter <code class="docutils literal notranslate"><span class="pre">indent=4</span></code> smo dobili lep izpis z zamiki. Tega sicer ponavadi ne delamo, ko shranjujemo v bazo, je pa uporabno, ko želimo s funkcijo <code class="docutils literal notranslate"><span class="pre">print</span></code> prikazati vsebino slovarja na zaslonu.</p>
+<p>Funkcija <code class="docutils literal notranslate"><span class="pre">json.dumps</span></code> pa tako naše podatke pretvori nazaj iz niza v slovar:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">slovar_2</span> <span class="o">=</span> <span class="n">json</span><span class="o">.</span><span class="n">loads</span><span class="p">(</span><span class="n">json_str</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">slovar_2</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{&#39;Evropa&#39;: {&#39;Slovenija&#39;: &#39;Ljubljana&#39;, &#39;Hrvaška&#39;: &#39;Zagreb&#39;, &#39;Avstrija&#39;: &#39;Dunaj&#39;, &#39;Madžarska&#39;: &#39;Budimpešta&#39;, &#39;Italija&#39;: &#39;Rim&#39;}, &#39;Afrika&#39;: {&#39;Egipt&#39;: &#39;Kairo&#39;}}
+</pre></div>
+</div>
+</div>
+</div>
+</section>
 </section>
 
     <script type="text/x-thebe-config">
