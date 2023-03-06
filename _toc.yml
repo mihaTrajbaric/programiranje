@@ -21,10 +21,12 @@ parts:
     - file: 06_slovarji_in_množice
     - file: 07_izpeljani_seznami_slovarji_množice
     - file: 09a_oblikovanje_nizov
+    - file: 09b_datoteke
 - caption: Naloge
   numbered: true
   chapters:
     - file: naloge/01_topovske_bitke/navodila
     - file: naloge/02_slovarji_in_mnozice/navodila
     - file: naloge/03_miklavzeva_knjiga/navodila
+    - file: naloge/04_pisma_sv_miklavzu/navodila
 

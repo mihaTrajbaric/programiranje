@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>Branje datotek &#8212; Krožek začetnega programiranja 2022-23</title>
+    <title>15. Branje datotek &#8212; Krožek začetnega programiranja 2022-23</title>
     
   <!-- Loaded before other Sphinx assets -->
   <link href="_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
@@ -52,6 +52,8 @@ const thebe_selector_output = ".output, .cell_output"
     <script async="async" src="_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="1. Topovske bitke" href="naloge/01_topovske_bitke/navodila.html" />
+    <link rel="prev" title="14. Oblikovanje nizov" href="09a_oblikovanje_nizov.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -116,7 +118,7 @@ const thebe_selector_output = ".output, .cell_output"
   Vsebina
  </span>
 </p>
-<ul class="nav bd-sidenav">
+<ul class="current nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="01_izrazi_spremenljivke_program.html">
    1. Izrazi in spremenljivke
@@ -187,6 +189,11 @@ const thebe_selector_output = ".output, .cell_output"
    14. Oblikovanje nizov
   </a>
  </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   15. Branje datotek
+  </a>
+ </li>
 </ul>
 <p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
@@ -207,6 +214,11 @@ const thebe_selector_output = ".output, .cell_output"
  <li class="toctree-l1">
   <a class="reference internal" href="naloge/03_miklavzeva_knjiga/navodila.html">
    3. Miklavževa knjiga
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="naloge/04_pisma_sv_miklavzu/navodila.html">
+   4. Pisma sv. Miklavžu
   </a>
  </li>
 </ul>
@@ -268,7 +280,7 @@ title="Toggle navigation"
   <div class="menu-dropdown__content">
     <ul>
       <li>
-        <a href="https://mybinder.org/v2/gh/programiranje-SKG/skripta/main?urlpath=tree/09b datoteke.ipynb"
+        <a href="https://mybinder.org/v2/gh/programiranje-SKG/skripta/main?urlpath=tree/09b_datoteke.ipynb"
    class="headerbtn"
    data-toggle="tooltip"
 data-placement="left"
@@ -346,7 +358,7 @@ title="Source repository"
       </li>
       
       <li>
-        <a href="https://github.com/programiranje-SKG/skripta/issues/new?title=Issue%20on%20page%20%2F09b datoteke.html&body=Your%20issue%20content%20here."
+        <a href="https://github.com/programiranje-SKG/skripta/issues/new?title=Issue%20on%20page%20%2F09b_datoteke.html&body=Your%20issue%20content%20here."
    class="headerbtn"
    data-toggle="tooltip"
 data-placement="left"
@@ -374,7 +386,7 @@ title="Open an issue"
   <div class="menu-dropdown__content">
     <ul>
       <li>
-        <a href="_sources/09b datoteke.ipynb"
+        <a href="_sources/09b_datoteke.ipynb"
    class="headerbtn"
    data-toggle="tooltip"
 data-placement="left"
@@ -435,22 +447,22 @@ title="Print to PDF"
         <ul class="visible nav section-nav flex-column">
  <li class="toc-h1 nav-item toc-entry">
   <a class="reference internal nav-link" href="#">
-   Branje datotek
+   15. Branje datotek
   </a>
  </li>
  <li class="toc-h1 nav-item toc-entry">
   <a class="reference internal nav-link" href="#pisanje-datotek">
-   Pisanje datotek
+   16. Pisanje datotek
   </a>
  </li>
  <li class="toc-h1 nav-item toc-entry">
   <a class="reference internal nav-link" href="#trenutni-direktorij">
-   Trenutni direktorij
+   17. Trenutni direktorij
   </a>
  </li>
  <li class="toc-h1 nav-item toc-entry">
   <a class="reference internal nav-link" href="#kako-je-zapisano-besedilo">
-   Kako je zapisano besedilo
+   18. Kako je zapisano besedilo
   </a>
  </li>
 </ul>
@@ -474,22 +486,22 @@ title="Print to PDF"
                             <ul class="visible nav section-nav flex-column">
  <li class="toc-h1 nav-item toc-entry">
   <a class="reference internal nav-link" href="#">
-   Branje datotek
+   15. Branje datotek
   </a>
  </li>
  <li class="toc-h1 nav-item toc-entry">
   <a class="reference internal nav-link" href="#pisanje-datotek">
-   Pisanje datotek
+   16. Pisanje datotek
   </a>
  </li>
  <li class="toc-h1 nav-item toc-entry">
   <a class="reference internal nav-link" href="#trenutni-direktorij">
-   Trenutni direktorij
+   17. Trenutni direktorij
   </a>
  </li>
  <li class="toc-h1 nav-item toc-entry">
   <a class="reference internal nav-link" href="#kako-je-zapisano-besedilo">
-   Kako je zapisano besedilo
+   18. Kako je zapisano besedilo
   </a>
  </li>
 </ul>
@@ -503,7 +515,7 @@ title="Print to PDF"
               <div>
                 
   <section id="branje-datotek">
-<h1>Branje datotek<a class="headerlink" href="#branje-datotek" title="Permalink to this headline">#</a></h1>
+<h1><span class="section-number">15. </span>Branje datotek<a class="headerlink" href="#branje-datotek" title="Permalink to this headline">#</a></h1>
 <p>Delo z datotekami v Pythonu je tako preprosto, da ga že skoraj obvladamo.</p>
 <p>Imejmo datoteko z imenom planeti.txt in takšno vsebino:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Merkur</span>
@@ -725,7 +737,7 @@ ko smo na koncu, smo na koncu.</p>
 Pa znamo <em>mi</em> pisati v datoteko?</p>
 </section>
 <section id="pisanje-datotek">
-<h1>Pisanje datotek<a class="headerlink" href="#pisanje-datotek" title="Permalink to this headline">#</a></h1>
+<h1><span class="section-number">16. </span>Pisanje datotek<a class="headerlink" href="#pisanje-datotek" title="Permalink to this headline">#</a></h1>
 <p>Funkcija <code class="docutils literal notranslate"><span class="pre">open</span></code> sprejme poleg imena datoteke, ki jo želimo odpreti, še nekaj argumentov. Drugi
 po vrsti vsebuje način, na katerega želimo odpreti datoteko. Ta je lahko “r”, “w” ali “a”.
 Način “r” smo že videli zgoraj in vemo, da se nanaša na branje. Potem je očitno, da se “w” na
@@ -893,7 +905,7 @@ argumentov poljubnega tipa, sprejme <code class="docutils literal notranslate"><
 </div>
 </section>
 <section id="trenutni-direktorij">
-<h1>Trenutni direktorij<a class="headerlink" href="#trenutni-direktorij" title="Permalink to this headline">#</a></h1>
+<h1><span class="section-number">17. </span>Trenutni direktorij<a class="headerlink" href="#trenutni-direktorij" title="Permalink to this headline">#</a></h1>
 <p>Kje mora biti datoteka, da jo bo <code class="docutils literal notranslate"><span class="pre">open</span></code> našel? Ali, kadar pišemo: kam, v kateri direktorij, jo
 bo shranil?</p>
 <p>Vsak program, ki trenutno teče, ima določen “trenutni direktoij”. V začetku mu ga na nek način
@@ -928,7 +940,7 @@ poševnico, <code class="docutils literal notranslate"><span class="pre">/</span
 poševnico <code class="docutils literal notranslate"><span class="pre">\</span></code>, ki pa povzroča same sitnosti - kot smo izvedeli, ko smo govorili o nizih.</p>
 </section>
 <section id="kako-je-zapisano-besedilo">
-<h1>Kako je zapisano besedilo<a class="headerlink" href="#kako-je-zapisano-besedilo" title="Permalink to this headline">#</a></h1>
+<h1><span class="section-number">18. </span>Kako je zapisano besedilo<a class="headerlink" href="#kako-je-zapisano-besedilo" title="Permalink to this headline">#</a></h1>
 <p>Računalnik v resnici shranjuje samo številke. Da lahko shranimo besedilo, se zmenimo, da vsak znak predstavimo z določeno številko. V ta namen je bilo razvitih več standardov, od katerih je preživel bolj ali manj samo ASCII. Ta pravi, recimo, da veliki A predstavimo s številko 65, B s 66, C z 67… Mali a je 97, b 98 … in tako naprej. Svoje kode imajo tudi drugi znaki: presledek je 32, pika je 46, oklepaj 40… Vsak znak, ki ga lahko natipkamo ali kako drugače napišemo, mora imeti neko kodo. Problem: ASCII je (bil) sedembitni standard, pri čemer so prvih 32 znakov zasedle kontrolne kode, kot recimo prehod v novo vrsto, tabulator, zvonček in še kup eksotičnih reči, ki so jih potrebovali za teleprinterje. Tako so proste le kode od 32 do 127, s čimer lahko zapišemo 96 znakov. To nekako zadošča za angleško abecedo, ločila in še par malenkosti, za trde in mehke č-je pa se Američani, ki so sestavljali standard, niso posebej menili. Kitajci pa si niti s celotnim naborom 96 mest ne bi mogli veliko pomagati.</p>
 <p>ASCII je doživel kup razširitev. Že v sedembitni različici smo ga v rajnki domovini popravili v YUSCII, v katerem smo žrtvovali nekaj znakov, kot so zaviti oklepaji in vzvratne poševnice in jih zamenjali s šumniki. Microsoft in IBM sta kasneje sestavila vsak svoj standard, takoimenovane kodne tabele; gre za razporede, v katerih je “spodnji del”, znaki s kodami do 127, enak kot v izvirnem ASCII, v gornjem delu - kode od 128 do 256 - pa so različni drugi znaki. V naših krajih se je najbolj prijela tabela CP1250, namenjeni srednje- in vzhodnoevropskim jezikom, v kateri ima, recimo, č kodo 232. V zahodnoevroski tabeli, CP1252, č-ja ni, na mestu 232 pa je znak è. Poleg teh, Microsoftovih tabel, obstajajo IBMove, kjer je Slovanom namenjen IBM 852; da bi bilo programiranje še preprostejše, obstaja tudi tretji standard, ISO-8859, ki nam je namenil tabelo ISO-8859-2, ki je podobna, vendar ne povsem enaka CP1250.</p>
 <p>Ko torej računalnik prikazuje kako besedilo, mora vedeti, v katerem kodnem naboru je zapisan, se pravi, kako razumeti, recimo, številko 232. Če je besedilo v CP1252, je to è, če v CP1250, pa č. In kako naj to ve? V splošnem ne more! Spletne strani navadno vsebujejo glavo, v kateri je zapisan podatek o uporabljenem kodnem naboru. Če tega ni, se bodo šumniki pokazali prav ali pa tudi ne. In še huje: vse besedilo je napisano v istem kodnem naboru, zato se lahko zgodi, da ne bo moglo vsebovati tako črke č kot è. (To morda razloži kaj v zvezi s podnapisi filmov, ki napačno sugerirajo, da so na pikniku jedle <em>èvapèièe s èebulo</em>?)</p>
@@ -986,6 +998,20 @@ datoteko, ga mora Python pretvoriti v zaporedje številk. Ta nastavitev pove, ka
                 
     <!-- Previous / next buttons -->
 <div class='prev-next-area'>
+    <a class='left-prev' id="prev-link" href="09a_oblikovanje_nizov.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title"><span class="section-number">14. </span>Oblikovanje nizov</p>
+        </div>
+    </a>
+    <a class='right-next' id="next-link" href="naloge/01_topovske_bitke/navodila.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title"><span class="section-number">1. </span>Topovske bitke</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
 </div>
             </footer>
         </div>
