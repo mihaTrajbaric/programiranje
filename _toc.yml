@@ -22,6 +22,7 @@ parts:
     - file: 07_izpeljani_seznami_slovarji_množice
     - file: 09a_oblikovanje_nizov
     - file: 09b_datoteke
+    - file: 10a_rekurzija_rodbina
 - caption: Naloge
   numbered: true
   chapters:
