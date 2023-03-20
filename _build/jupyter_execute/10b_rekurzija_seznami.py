@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# ## Rekurzivne funkcije na seznamih
+# # Rekurzivne funkcije na seznamih
 # 
 # Tole je običajen način poučevanja rekurzije. Strinjam se z argumenti, zakaj je zgrešen. Vendar sem pogosto naletel na študente, ki jim je bilo tole lažje kot karkoli drugega. Zategadelj poskušam tudi tako; nekateri doživijo razsvetljenje po tej poti.
 # 

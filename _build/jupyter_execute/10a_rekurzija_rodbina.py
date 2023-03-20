@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# # Rekurzivne funkcije - rodbina
+# # Rekurzivne funkcije - drevesa
 #   
 # 
 # ## Novakovi

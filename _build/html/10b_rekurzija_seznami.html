@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>Rekurzivne funkcije na seznamih &#8212; Krožek začetnega programiranja 2022-23</title>
+    <title>17. Rekurzivne funkcije na seznamih &#8212; Krožek začetnega programiranja 2022-23</title>
     
   <!-- Loaded before other Sphinx assets -->
   <link href="_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
@@ -52,6 +52,8 @@ const thebe_selector_output = ".output, .cell_output"
     <script async="async" src="_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="1. Topovske bitke" href="naloge/01_topovske_bitke/navodila.html" />
+    <link rel="prev" title="16. Rekurzivne funkcije - drevesa" href="10a_rekurzija_rodbina.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -116,7 +118,7 @@ const thebe_selector_output = ".output, .cell_output"
   Vsebina
  </span>
 </p>
-<ul class="nav bd-sidenav">
+<ul class="current nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="01_izrazi_spremenljivke_program.html">
    1. Izrazi in spremenljivke
@@ -194,7 +196,12 @@ const thebe_selector_output = ".output, .cell_output"
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="10a_rekurzija_rodbina.html">
-   16. Rekurzivne funkcije - rodbina
+   16. Rekurzivne funkcije - drevesa
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   17. Rekurzivne funkcije na seznamih
   </a>
  </li>
 </ul>
@@ -283,7 +290,7 @@ title="Toggle navigation"
   <div class="menu-dropdown__content">
     <ul>
       <li>
-        <a href="https://mybinder.org/v2/gh/programiranje-SKG/skripta/main?urlpath=tree/10b - Rekurzija - seznami.ipynb"
+        <a href="https://mybinder.org/v2/gh/programiranje-SKG/skripta/main?urlpath=tree/10b_rekurzija_seznami.ipynb"
    class="headerbtn"
    data-toggle="tooltip"
 data-placement="left"
@@ -361,7 +368,7 @@ title="Source repository"
       </li>
       
       <li>
-        <a href="https://github.com/programiranje-SKG/skripta/issues/new?title=Issue%20on%20page%20%2F10b - Rekurzija - seznami.html&body=Your%20issue%20content%20here."
+        <a href="https://github.com/programiranje-SKG/skripta/issues/new?title=Issue%20on%20page%20%2F10b_rekurzija_seznami.html&body=Your%20issue%20content%20here."
    class="headerbtn"
    data-toggle="tooltip"
 data-placement="left"
@@ -389,7 +396,7 @@ title="Open an issue"
   <div class="menu-dropdown__content">
     <ul>
       <li>
-        <a href="_sources/10b - Rekurzija - seznami.ipynb"
+        <a href="_sources/10b_rekurzija_seznami.ipynb"
    class="headerbtn"
    data-toggle="tooltip"
 data-placement="left"
@@ -448,44 +455,39 @@ title="Print to PDF"
     </div>
     <nav id="bd-toc-nav" aria-label="Page">
         <ul class="visible nav section-nav flex-column">
- <li class="toc-h1 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#">
-   Rekurzivne funkcije na seznamih
-  </a>
- </li>
- <li class="toc-h1 nav-item toc-entry">
+ <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#palindrom">
-   Palindrom
+   17.1. Palindrom
   </a>
  </li>
- <li class="toc-h1 nav-item toc-entry">
+ <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#vsota-elementov-seznama">
-   Vsota elementov seznama
+   17.2. Vsota elementov seznama
   </a>
  </li>
- <li class="toc-h1 nav-item toc-entry">
+ <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#vsebuje-seznam-sama-soda-stevila">
-   Vsebuje seznam sama soda števila?
+   17.3. Vsebuje seznam sama soda števila?
   </a>
  </li>
- <li class="toc-h1 nav-item toc-entry">
+ <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#vsota-sodih-stevil-v-seznamu">
-   Vsota sodih števil v seznamu
+   17.4. Vsota sodih števil v seznamu
   </a>
  </li>
- <li class="toc-h1 nav-item toc-entry">
+ <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#prvi-sodi-element-seznama">
-   Prvi sodi element seznama
+   17.5. Prvi sodi element seznama
   </a>
  </li>
- <li class="toc-h1 nav-item toc-entry">
+ <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#vsi-sodi-elementi-seznama">
-   Vsi sodi elementi seznama
+   17.6. Vsi sodi elementi seznama
   </a>
  </li>
- <li class="toc-h1 nav-item toc-entry">
+ <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#sodolihi-in-lihosodi">
-   Sodolihi in lihosodi
+   17.7. Sodolihi in lihosodi
   </a>
  </li>
 </ul>
@@ -507,44 +509,39 @@ title="Print to PDF"
                         </div>
                         <nav aria-label="Page">
                             <ul class="visible nav section-nav flex-column">
- <li class="toc-h1 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#">
-   Rekurzivne funkcije na seznamih
-  </a>
- </li>
- <li class="toc-h1 nav-item toc-entry">
+ <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#palindrom">
-   Palindrom
+   17.1. Palindrom
   </a>
  </li>
- <li class="toc-h1 nav-item toc-entry">
+ <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#vsota-elementov-seznama">
-   Vsota elementov seznama
+   17.2. Vsota elementov seznama
   </a>
  </li>
- <li class="toc-h1 nav-item toc-entry">
+ <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#vsebuje-seznam-sama-soda-stevila">
-   Vsebuje seznam sama soda števila?
+   17.3. Vsebuje seznam sama soda števila?
   </a>
  </li>
- <li class="toc-h1 nav-item toc-entry">
+ <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#vsota-sodih-stevil-v-seznamu">
-   Vsota sodih števil v seznamu
+   17.4. Vsota sodih števil v seznamu
   </a>
  </li>
- <li class="toc-h1 nav-item toc-entry">
+ <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#prvi-sodi-element-seznama">
-   Prvi sodi element seznama
+   17.5. Prvi sodi element seznama
   </a>
  </li>
- <li class="toc-h1 nav-item toc-entry">
+ <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#vsi-sodi-elementi-seznama">
-   Vsi sodi elementi seznama
+   17.6. Vsi sodi elementi seznama
   </a>
  </li>
- <li class="toc-h1 nav-item toc-entry">
+ <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#sodolihi-in-lihosodi">
-   Sodolihi in lihosodi
+   17.7. Sodolihi in lihosodi
   </a>
  </li>
 </ul>
@@ -557,12 +554,11 @@ title="Print to PDF"
                 
               <div>
                 
-  <section id="rekurzivne-funkcije-na-seznamih">
-<h1>Rekurzivne funkcije na seznamih<a class="headerlink" href="#rekurzivne-funkcije-na-seznamih" title="Permalink to this headline">#</a></h1>
+  <section class="tex2jax_ignore mathjax_ignore" id="rekurzivne-funkcije-na-seznamih">
+<h1><span class="section-number">17. </span>Rekurzivne funkcije na seznamih<a class="headerlink" href="#rekurzivne-funkcije-na-seznamih" title="Permalink to this headline">#</a></h1>
 <p>Tole je običajen način poučevanja rekurzije. Strinjam se z argumenti, zakaj je zgrešen. Vendar sem pogosto naletel na študente, ki jim je bilo tole lažje kot karkoli drugega. Zategadelj poskušam tudi tako; nekateri doživijo razsvetljenje po tej poti.</p>
-</section>
 <section id="palindrom">
-<h1>Palindrom<a class="headerlink" href="#palindrom" title="Permalink to this headline">#</a></h1>
+<h2><span class="section-number">17.1. </span>Palindrom<a class="headerlink" href="#palindrom" title="Permalink to this headline">#</a></h2>
 <p>Niz je palindrom, če se naprej in nazaj bere enako.</p>
 <p>Očitno obstaja kup načinov, da preverimo, ali je niz palindrom. Najlažji v Pythonu je, da ga pač obrnemo in pogledamo, ali ostane pri tem enak, <code class="docutils literal notranslate"><span class="pre">s[::-1]</span> <span class="pre">==</span> <span class="pre">s</span></code>.</p>
 <p>Vendar nas danes zanima rekurzivna rešitev. Zato se moramo najprej domisliti rekurzivne definicije palindroma: niz je palindrom, če sta prvi in zadnji znak enaka, vse, kar je vmes, pa je palindrom. Obenem moramo pristaviti, da so tudi prazni nizi palindromi.</p>
@@ -640,7 +636,7 @@ title="Print to PDF"
 <p>Funkcijam, ki kličejo same sebe, rečemo “rekurzivne funkcije”.</p>
 </section>
 <section id="vsota-elementov-seznama">
-<h1>Vsota elementov seznama<a class="headerlink" href="#vsota-elementov-seznama" title="Permalink to this headline">#</a></h1>
+<h2><span class="section-number">17.2. </span>Vsota elementov seznama<a class="headerlink" href="#vsota-elementov-seznama" title="Permalink to this headline">#</a></h2>
 <p>Kako bi izračunali vsoto elementov seznama. Z zanko seveda znamo. Pa poskusimo še s trikom, kakršnega smo uporabili zgoraj. Za to spet potrebujemo rekurzivno definicijo vsote seznama - definicijo, ki se nanaša sama nase.</p>
 <p>Takole lahko rečemo: vsoto elementov seznama dobimo tako, da k prvemu elementu prištejemo vsoto ostalih. Če je seznam prazen, pa je vsota 0.</p>
 <div class="cell docutils container">
@@ -662,7 +658,7 @@ title="Print to PDF"
 </div>
 </section>
 <section id="vsebuje-seznam-sama-soda-stevila">
-<h1>Vsebuje seznam sama soda števila?<a class="headerlink" href="#vsebuje-seznam-sama-soda-stevila" title="Permalink to this headline">#</a></h1>
+<h2><span class="section-number">17.3. </span>Vsebuje seznam sama soda števila?<a class="headerlink" href="#vsebuje-seznam-sama-soda-stevila" title="Permalink to this headline">#</a></h2>
 <p>Seznam vsebuje sama soda števila, če je prazen ali pa je prvi element sod in vsebuje preostanek seznama sama soda števila.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -698,7 +694,7 @@ title="Print to PDF"
 </div>
 </section>
 <section id="vsota-sodih-stevil-v-seznamu">
-<h1>Vsota sodih števil v seznamu<a class="headerlink" href="#vsota-sodih-stevil-v-seznamu" title="Permalink to this headline">#</a></h1>
+<h2><span class="section-number">17.4. </span>Vsota sodih števil v seznamu<a class="headerlink" href="#vsota-sodih-stevil-v-seznamu" title="Permalink to this headline">#</a></h2>
 <p>Napisati želimo funkcijo, ki vrne vsoto vseh sodih elementov v podanem seznamu.</p>
 <p>Recimo tako:</p>
 <ul class="simple">
@@ -728,7 +724,7 @@ title="Print to PDF"
 </div>
 </section>
 <section id="prvi-sodi-element-seznama">
-<h1>Prvi sodi element seznama<a class="headerlink" href="#prvi-sodi-element-seznama" title="Permalink to this headline">#</a></h1>
+<h2><span class="section-number">17.5. </span>Prvi sodi element seznama<a class="headerlink" href="#prvi-sodi-element-seznama" title="Permalink to this headline">#</a></h2>
 <p>Napisati želimo funkcijo, ki vrne prvi sodi element seznama.</p>
 <p>Če je ničti element sod, vrnemo tega. Sicer vrnemo prvega sodega med ostalimi.</p>
 <div class="cell docutils container">
@@ -760,7 +756,7 @@ else:
 return prvi_sodi(s[1:])</p>
 </section>
 <section id="vsi-sodi-elementi-seznama">
-<h1>Vsi sodi elementi seznama<a class="headerlink" href="#vsi-sodi-elementi-seznama" title="Permalink to this headline">#</a></h1>
+<h2><span class="section-number">17.6. </span>Vsi sodi elementi seznama<a class="headerlink" href="#vsi-sodi-elementi-seznama" title="Permalink to this headline">#</a></h2>
 <p>Funkcija, ki vrne vse sode elemente seznama je železna klasika napačnih rešitev. Tipični prvi poskus je</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -879,7 +875,7 @@ else:
 <p>Obstajajo tudi elegantnejši načini, obstajajo tudi hitrejši načini. A za nas je tale dovolj dober.</p>
 </section>
 <section id="sodolihi-in-lihosodi">
-<h1>Sodolihi in lihosodi<a class="headerlink" href="#sodolihi-in-lihosodi" title="Permalink to this headline">#</a></h1>
+<h2><span class="section-number">17.7. </span>Sodolihi in lihosodi<a class="headerlink" href="#sodolihi-in-lihosodi" title="Permalink to this headline">#</a></h2>
 <p>Seznam je sodolih, če se v njem izmenjujejo sodi in lihi elementi, začenši s sodim.</p>
 <p>Seznam je lihosod, če se v njem izmenjujejo lihi in sodi elementi, začenši z lihim.</p>
 <p>Napisati moramo funkciji <code class="docutils literal notranslate"><span class="pre">sodolih</span></code> in <code class="docutils literal notranslate"><span class="pre">lihosod</span></code>, ki preverita, ali je seznam tak, kot pravi ime funkcije.</p>
@@ -902,6 +898,7 @@ else:
 </div>
 </div>
 <p>Tu vidimo primer, ko se dve funkciji kličeta med sabo. Tudi to je rekurzija in tudi za takšno obliko ni razloga, da ne bi delovala.</p>
+</section>
 </section>
 
     <script type="text/x-thebe-config">
@@ -931,6 +928,20 @@ else:
                 
     <!-- Previous / next buttons -->
 <div class='prev-next-area'>
+    <a class='left-prev' id="prev-link" href="10a_rekurzija_rodbina.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title"><span class="section-number">16. </span>Rekurzivne funkcije - drevesa</p>
+        </div>
+    </a>
+    <a class='right-next' id="next-link" href="naloge/01_topovske_bitke/navodila.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title"><span class="section-number">1. </span>Topovske bitke</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
 </div>
             </footer>
         </div>

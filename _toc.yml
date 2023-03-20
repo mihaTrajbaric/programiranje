@@ -23,6 +23,7 @@ parts:
     - file: 09a_oblikovanje_nizov
     - file: 09b_datoteke
     - file: 10a_rekurzija_rodbina
+    - file: 10b_rekurzija_seznami
 - caption: Naloge
   numbered: true
   chapters:
