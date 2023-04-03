@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>Programiranje &#8212; Krožek začetnega programiranja 2022-23</title>
+    <title>18. Sortirni algoritmi &#8212; Krožek začetnega programiranja 2022-23</title>
     
   <!-- Loaded before other Sphinx assets -->
   <link href="_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
@@ -52,6 +52,8 @@ const thebe_selector_output = ".output, .cell_output"
     <script async="async" src="_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="1. Topovske bitke" href="naloge/01_topovske_bitke/navodila.html" />
+    <link rel="prev" title="17. Rekurzivne funkcije na seznamih" href="10b_rekurzija_seznami.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -116,7 +118,7 @@ const thebe_selector_output = ".output, .cell_output"
   Vsebina
  </span>
 </p>
-<ul class="nav bd-sidenav">
+<ul class="current nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="01_izrazi_spremenljivke_program.html">
    1. Izrazi in spremenljivke
@@ -202,8 +204,8 @@ const thebe_selector_output = ".output, .cell_output"
    17. Rekurzivne funkcije na seznamih
   </a>
  </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="11_sortirni_algoritmi.html">
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
    18. Sortirni algoritmi
   </a>
  </li>
@@ -324,7 +326,7 @@ title="Source repository"
       </li>
       
       <li>
-        <a href="https://github.com/programiranje-SKG/skripta/issues/new?title=Issue%20on%20page%20%2FREADME.html&body=Your%20issue%20content%20here."
+        <a href="https://github.com/programiranje-SKG/skripta/issues/new?title=Issue%20on%20page%20%2F11_sortirni_algoritmi.html&body=Your%20issue%20content%20here."
    class="headerbtn"
    data-toggle="tooltip"
 data-placement="left"
@@ -352,7 +354,7 @@ title="Open an issue"
   <div class="menu-dropdown__content">
     <ul>
       <li>
-        <a href="_sources/README.md"
+        <a href="_sources/11_sortirni_algoritmi.ipynb"
    class="headerbtn"
    data-toggle="tooltip"
 data-placement="left"
@@ -363,7 +365,7 @@ title="Download source file"
 <span class="headerbtn__icon-container">
   <i class="fas fa-file"></i>
   </span>
-<span class="headerbtn__text-container">.md</span>
+<span class="headerbtn__text-container">.ipynb</span>
 </a>
 
       </li>
@@ -389,104 +391,23 @@ title="Print to PDF"
     </ul>
   </div>
 </div>
-<label for="__page-toc"
-  class="headerbtn headerbtn-page-toc"
-  
->
-  
-
-<span class="headerbtn__icon-container">
-  <i class="fas fa-list"></i>
-  </span>
-
-</label>
 
     </div>
 </div>
 
 <!-- Table of contents -->
 <div class="col-md-3 bd-toc show noprint">
-    <div class="tocsection onthispage pt-5 pb-3">
-        <i class="fas fa-list"></i> Contents
-    </div>
-    <nav id="bd-toc-nav" aria-label="Page">
-        <ul class="visible nav section-nav flex-column">
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#namestitev-paketov">
-   Namestitev paketov
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#generiranje-html-ja">
-   Generiranje html-ja
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#objava-nove-verzije">
-   Objava nove verzije
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#faq">
-   FAQ
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#ukaz-jupyte-book-ali-ghp-import-ne-dela">
-     Ukaz ‘jupyte-book’ ali ‘ghp-import’ ne dela
-    </a>
-   </li>
-  </ul>
- </li>
-</ul>
-
-    </nav>
 </div>
     </div>
     <div class="article row">
         <div class="col pl-md-3 pl-lg-5 content-container">
             <!-- Table of contents that is only displayed when printing the page -->
             <div id="jb-print-docs-body" class="onlyprint">
-                <h1>Programiranje</h1>
+                <h1>Sortirni algoritmi</h1>
                 <!-- Table of contents -->
                 <div id="print-main-content">
                     <div id="jb-print-toc">
                         
-                        <div>
-                            <h2> Contents </h2>
-                        </div>
-                        <nav aria-label="Page">
-                            <ul class="visible nav section-nav flex-column">
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#namestitev-paketov">
-   Namestitev paketov
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#generiranje-html-ja">
-   Generiranje html-ja
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#objava-nove-verzije">
-   Objava nove verzije
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#faq">
-   FAQ
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#ukaz-jupyte-book-ali-ghp-import-ne-dela">
-     Ukaz ‘jupyte-book’ ali ‘ghp-import’ ne dela
-    </a>
-   </li>
-  </ul>
- </li>
-</ul>
-
-                        </nav>
                     </div>
                 </div>
             </div>
@@ -494,39 +415,9 @@ title="Print to PDF"
                 
               <div>
                 
-  <section class="tex2jax_ignore mathjax_ignore" id="programiranje">
-<h1>Programiranje<a class="headerlink" href="#programiranje" title="Permalink to this headline">#</a></h1>
-<p>Ta repozitorij vsebuje skripto, ki jo uporabljamo pri krožku Začetnega programiranja na Škofijski klasični gimnaziji v Ljubljani. Skripta je dostopna na <a class="reference external" href="https://programiranje-skg.github.io/skripta/">https://programiranje-skg.github.io/skripta/</a></p>
-<section id="namestitev-paketov">
-<h2>Namestitev paketov<a class="headerlink" href="#namestitev-paketov" title="Permalink to this headline">#</a></h2>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">pip</span> <span class="n">install</span> <span class="o">-</span><span class="n">r</span> <span class="n">requirements</span><span class="o">.</span><span class="n">txt</span>
-</pre></div>
-</div>
-</section>
-<section id="generiranje-html-ja">
-<h2>Generiranje html-ja<a class="headerlink" href="#generiranje-html-ja" title="Permalink to this headline">#</a></h2>
-<p>Iz mape projekta:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">jupyter</span><span class="o">-</span><span class="n">book</span> <span class="n">clean</span> <span class="o">.</span>
-<span class="n">jupyter</span><span class="o">-</span><span class="n">book</span> <span class="n">build</span> <span class="o">.</span>
-</pre></div>
-</div>
-<p>Nato s svojim najljubšim internetnim brskalnikom odpremo datoteko <code class="docutils literal notranslate"><span class="pre">_build/html/index.html</span></code> in si lahko lokalno ogledamo stran.</p>
-</section>
-<section id="objava-nove-verzije">
-<h2>Objava nove verzije<a class="headerlink" href="#objava-nove-verzije" title="Permalink to this headline">#</a></h2>
-<p>Če smo zadovoljni z novo verzijo strani, vse skupaj (vključno z avtomatsko generiranimi datotekami) porinemo v glavni branch (<code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">commit...</span></code>, <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">push...</span></code>).</p>
-<p>Nato stran posodobimo z ukazom:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">ghp</span><span class="o">-</span><span class="kn">import</span> <span class="o">-</span><span class="n">n</span> <span class="o">-</span><span class="n">p</span> <span class="o">-</span><span class="n">f</span> <span class="n">_build</span><span class="o">/</span><span class="n">html</span>
-</pre></div>
-</div>
-</section>
-<section id="faq">
-<h2>FAQ<a class="headerlink" href="#faq" title="Permalink to this headline">#</a></h2>
-<section id="ukaz-jupyte-book-ali-ghp-import-ne-dela">
-<h3>Ukaz ‘jupyte-book’ ali ‘ghp-import’ ne dela<a class="headerlink" href="#ukaz-jupyte-book-ali-ghp-import-ne-dela" title="Permalink to this headline">#</a></h3>
-<p>Če ukaz poganjamo takoj po instalacij, (in paketov nismo namestili na PATH), jih Linux terminal ne bo našel. Po ponovnem zagonu računalnika bi moralo vse spet delovati.</p>
-</section>
-</section>
+  <section class="tex2jax_ignore mathjax_ignore" id="sortirni-algoritmi">
+<h1><span class="section-number">18. </span>Sortirni algoritmi<a class="headerlink" href="#sortirni-algoritmi" title="Permalink to this headline">#</a></h1>
+<p>Na krožku smo povsem sledili tutorialu <a class="reference external" href="https://realpython.com/sorting-algorithms-python">Real Python: Sorting Algorithms in Python</a>.</p>
 </section>
 
     <script type="text/x-thebe-config">
@@ -556,6 +447,20 @@ title="Print to PDF"
                 
     <!-- Previous / next buttons -->
 <div class='prev-next-area'>
+    <a class='left-prev' id="prev-link" href="10b_rekurzija_seznami.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title"><span class="section-number">17. </span>Rekurzivne funkcije na seznamih</p>
+        </div>
+    </a>
+    <a class='right-next' id="next-link" href="naloge/01_topovske_bitke/navodila.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title"><span class="section-number">1. </span>Topovske bitke</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
 </div>
             </footer>
         </div>

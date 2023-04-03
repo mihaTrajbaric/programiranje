@@ -1,10 +1,9 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# # Še o objektnem programiranju
+# # Objektno programiranje
 # 
-# Objektno programiranje je resna tema, ki je ni mogoče kar tako odpredavati v dveh tednih in se ga ni mogoče kar tako naučiti v dveh mesecih. Ker je vaš študij kratek in boste te reči kmalu potrebovali pri drugih predmetih, vam moramo tule predstaviti osnove. Ker vam mora priti
-# stvar v kri, pa ne pričakujmo čudežev. Pri tem predmetu se boste naučili zgolj nekaterih tehnikalij, ne pa vsega, kar v zvezi s tem ponuja Python, vsega, kar ponujajo drugi jeziki in, predvsem, filozofije, ki je za tem.
+# Objektno programiranje je resna tema, ki se je ni mogoče kar tako naučiti v nekaj tednih, vseeno pa je koristno, da se naučimo osnove. Ker vam mora priti stvar v kri, pa ne pričakujmo čudežev. Pri krožku se boste naučili zgolj nekaterih tehnikalij, ne pa vsega, kar v zvezi s tem ponuja Python, vsega, kar ponujajo drugi jeziki in, predvsem, filozofije, ki je za tem.
 # 
 # ## Dedovanje
 # 

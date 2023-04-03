@@ -24,6 +24,8 @@ parts:
     - file: 09b_datoteke
     - file: 10a_rekurzija_rodbina
     - file: 10b_rekurzija_seznami
+    - file: 11_sortirni_algoritmi.ipynb
+    # - file: 12b_objektno_programiranje_dedovanje
 - caption: Naloge
   numbered: true
   chapters:

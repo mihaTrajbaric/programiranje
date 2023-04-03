@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>Še o objektnem programiranju &#8212; Krožek začetnega programiranja 2022-23</title>
+    <title>Objektno programiranje &#8212; Krožek začetnega programiranja 2022-23</title>
     
   <!-- Loaded before other Sphinx assets -->
   <link href="_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
@@ -202,6 +202,11 @@ const thebe_selector_output = ".output, .cell_output"
    17. Rekurzivne funkcije na seznamih
   </a>
  </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="11_sortirni_algoritmi.html">
+   18. Sortirni algoritmi
+  </a>
+ </li>
 </ul>
 <p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
@@ -288,7 +293,7 @@ title="Toggle navigation"
   <div class="menu-dropdown__content">
     <ul>
       <li>
-        <a href="https://mybinder.org/v2/gh/programiranje-SKG/skripta/main?urlpath=tree/12b objektno programiranje - dedovanje.ipynb"
+        <a href="https://mybinder.org/v2/gh/programiranje-SKG/skripta/main?urlpath=tree/12b_objektno_programiranje_dedovanje.ipynb"
    class="headerbtn"
    data-toggle="tooltip"
 data-placement="left"
@@ -366,7 +371,7 @@ title="Source repository"
       </li>
       
       <li>
-        <a href="https://github.com/programiranje-SKG/skripta/issues/new?title=Issue%20on%20page%20%2F12b objektno programiranje - dedovanje.html&body=Your%20issue%20content%20here."
+        <a href="https://github.com/programiranje-SKG/skripta/issues/new?title=Issue%20on%20page%20%2F12b_objektno_programiranje_dedovanje.html&body=Your%20issue%20content%20here."
    class="headerbtn"
    data-toggle="tooltip"
 data-placement="left"
@@ -394,7 +399,7 @@ title="Open an issue"
   <div class="menu-dropdown__content">
     <ul>
       <li>
-        <a href="_sources/12b objektno programiranje - dedovanje.ipynb"
+        <a href="_sources/12b_objektno_programiranje_dedovanje.ipynb"
    class="headerbtn"
    data-toggle="tooltip"
 data-placement="left"
@@ -492,7 +497,7 @@ title="Print to PDF"
         <div class="col pl-md-3 pl-lg-5 content-container">
             <!-- Table of contents that is only displayed when printing the page -->
             <div id="jb-print-docs-body" class="onlyprint">
-                <h1>Še o objektnem programiranju</h1>
+                <h1>Objektno programiranje</h1>
                 <!-- Table of contents -->
                 <div id="print-main-content">
                     <div id="jb-print-toc">
@@ -542,10 +547,9 @@ title="Print to PDF"
                 
               <div>
                 
-  <section class="tex2jax_ignore mathjax_ignore" id="se-o-objektnem-programiranju">
-<h1>Še o objektnem programiranju<a class="headerlink" href="#se-o-objektnem-programiranju" title="Permalink to this headline">#</a></h1>
-<p>Objektno programiranje je resna tema, ki je ni mogoče kar tako odpredavati v dveh tednih in se ga ni mogoče kar tako naučiti v dveh mesecih. Ker je vaš študij kratek in boste te reči kmalu potrebovali pri drugih predmetih, vam moramo tule predstaviti osnove. Ker vam mora priti
-stvar v kri, pa ne pričakujmo čudežev. Pri tem predmetu se boste naučili zgolj nekaterih tehnikalij, ne pa vsega, kar v zvezi s tem ponuja Python, vsega, kar ponujajo drugi jeziki in, predvsem, filozofije, ki je za tem.</p>
+  <section class="tex2jax_ignore mathjax_ignore" id="objektno-programiranje">
+<h1>Objektno programiranje<a class="headerlink" href="#objektno-programiranje" title="Permalink to this headline">#</a></h1>
+<p>Objektno programiranje je resna tema, ki se je ni mogoče kar tako naučiti v nekaj tednih, vseeno pa je koristno, da se naučimo osnove. Ker vam mora priti stvar v kri, pa ne pričakujmo čudežev. Pri krožku se boste naučili zgolj nekaterih tehnikalij, ne pa vsega, kar v zvezi s tem ponuja Python, vsega, kar ponujajo drugi jeziki in, predvsem, filozofije, ki je za tem.</p>
 <section id="dedovanje">
 <h2>Dedovanje<a class="headerlink" href="#dedovanje" title="Permalink to this headline">#</a></h2>
 <p>Definirajmo razred <code class="docutils literal notranslate"><span class="pre">Oseba</span></code>. Vsaka oseba ima <code class="docutils literal notranslate"><span class="pre">ime</span></code> in <code class="docutils literal notranslate"><span class="pre">spol</span></code> (<code class="docutils literal notranslate"><span class="pre">Z</span></code> ali <code class="docutils literal notranslate"><span class="pre">M</span></code>); oba podatka podamo kot argumenta konstruktorju. Oseba zna pozdravljati: metoda <code class="docutils literal notranslate"><span class="pre">pozdravi</span></code> izpiše <code class="docutils literal notranslate"><span class="pre">Pozdravljeni,</span> <span class="pre">jaz</span> <span class="pre">sem</span> <span class="pre">{}</span></code>, kjer namesto <code class="docutils literal notranslate"><span class="pre">{}</span></code> vstavi svoje ime.</p>
