@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>Objektno programiranje &#8212; Krožek začetnega programiranja 2022-23</title>
+    <title>19. Objektno programiranje &#8212; Krožek začetnega programiranja 2022-23</title>
     
   <!-- Loaded before other Sphinx assets -->
   <link href="_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
@@ -52,6 +52,8 @@ const thebe_selector_output = ".output, .cell_output"
     <script async="async" src="_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="1. Topovske bitke" href="naloge/01_topovske_bitke/navodila.html" />
+    <link rel="prev" title="18. Sortirni algoritmi" href="11_sortirni_algoritmi.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -116,7 +118,7 @@ const thebe_selector_output = ".output, .cell_output"
   Vsebina
  </span>
 </p>
-<ul class="nav bd-sidenav">
+<ul class="current nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="01_izrazi_spremenljivke_program.html">
    1. Izrazi in spremenljivke
@@ -207,6 +209,11 @@ const thebe_selector_output = ".output, .cell_output"
    18. Sortirni algoritmi
   </a>
  </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   19. Objektno programiranje
+  </a>
+ </li>
 </ul>
 <p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
@@ -232,6 +239,11 @@ const thebe_selector_output = ".output, .cell_output"
  <li class="toctree-l1">
   <a class="reference internal" href="naloge/04_pisma_sv_miklavzu/navodila.html">
    4. Pisma sv. Miklavžu
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="naloge/05_modulska_aritmetika/navodila.html">
+   5. Modulska aritmetika
   </a>
  </li>
 </ul>
@@ -460,32 +472,32 @@ title="Print to PDF"
         <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#dedovanje">
-   Dedovanje
+   19.1. Dedovanje
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#kar-je-je-cesar-ni-pa-ni">
-   Kar je, je; česar ni, pa ni
+   19.2. Kar je, je; česar ni, pa ni
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#navidezne-metode">
-   Navidezne metode
+   19.3. Navidezne metode
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#abstraktni-razredi">
-   Abstraktni razredi
+   19.4. Abstraktni razredi
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#navidezne-metode-se-enkrat">
-   Navidezne metode - še enkrat
+   19.5. Navidezne metode - še enkrat
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#o-nepythonu">
-   O Nepythonu
+   19.6. O Nepythonu
   </a>
  </li>
 </ul>
@@ -509,32 +521,32 @@ title="Print to PDF"
                             <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#dedovanje">
-   Dedovanje
+   19.1. Dedovanje
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#kar-je-je-cesar-ni-pa-ni">
-   Kar je, je; česar ni, pa ni
+   19.2. Kar je, je; česar ni, pa ni
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#navidezne-metode">
-   Navidezne metode
+   19.3. Navidezne metode
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#abstraktni-razredi">
-   Abstraktni razredi
+   19.4. Abstraktni razredi
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#navidezne-metode-se-enkrat">
-   Navidezne metode - še enkrat
+   19.5. Navidezne metode - še enkrat
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#o-nepythonu">
-   O Nepythonu
+   19.6. O Nepythonu
   </a>
  </li>
 </ul>
@@ -548,10 +560,10 @@ title="Print to PDF"
               <div>
                 
   <section class="tex2jax_ignore mathjax_ignore" id="objektno-programiranje">
-<h1>Objektno programiranje<a class="headerlink" href="#objektno-programiranje" title="Permalink to this headline">#</a></h1>
+<h1><span class="section-number">19. </span>Objektno programiranje<a class="headerlink" href="#objektno-programiranje" title="Permalink to this headline">#</a></h1>
 <p>Objektno programiranje je resna tema, ki se je ni mogoče kar tako naučiti v nekaj tednih, vseeno pa je koristno, da se naučimo osnove. Ker vam mora priti stvar v kri, pa ne pričakujmo čudežev. Pri krožku se boste naučili zgolj nekaterih tehnikalij, ne pa vsega, kar v zvezi s tem ponuja Python, vsega, kar ponujajo drugi jeziki in, predvsem, filozofije, ki je za tem.</p>
 <section id="dedovanje">
-<h2>Dedovanje<a class="headerlink" href="#dedovanje" title="Permalink to this headline">#</a></h2>
+<h2><span class="section-number">19.1. </span>Dedovanje<a class="headerlink" href="#dedovanje" title="Permalink to this headline">#</a></h2>
 <p>Definirajmo razred <code class="docutils literal notranslate"><span class="pre">Oseba</span></code>. Vsaka oseba ima <code class="docutils literal notranslate"><span class="pre">ime</span></code> in <code class="docutils literal notranslate"><span class="pre">spol</span></code> (<code class="docutils literal notranslate"><span class="pre">Z</span></code> ali <code class="docutils literal notranslate"><span class="pre">M</span></code>); oba podatka podamo kot argumenta konstruktorju. Oseba zna pozdravljati: metoda <code class="docutils literal notranslate"><span class="pre">pozdravi</span></code> izpiše <code class="docutils literal notranslate"><span class="pre">Pozdravljeni,</span> <span class="pre">jaz</span> <span class="pre">sem</span> <span class="pre">{}</span></code>, kjer namesto <code class="docutils literal notranslate"><span class="pre">{}</span></code> vstavi svoje ime.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -763,7 +775,7 @@ zapletenega, saj je potrebno, kadar dedujemo iz večih razredov, vsakič poiskat
 <p>Konstruktor nas, upam, ne preseneča več: <code class="docutils literal notranslate"><span class="pre">ime</span></code> in <code class="docutils literal notranslate"><span class="pre">spol</span></code> prepusti podedovanemu konstruktorju, sam pa le še nastavi seznam predmetov.</p>
 </section>
 <section id="kar-je-je-cesar-ni-pa-ni">
-<h2>Kar je, je; česar ni, pa ni<a class="headerlink" href="#kar-je-je-cesar-ni-pa-ni" title="Permalink to this headline">#</a></h2>
+<h2><span class="section-number">19.2. </span>Kar je, je; česar ni, pa ni<a class="headerlink" href="#kar-je-je-cesar-ni-pa-ni" title="Permalink to this headline">#</a></h2>
 <p>Sestavimo funkcijo, ki izpiše imena vseh oseb na podanem seznamu.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -912,7 +924,7 @@ jazbec
 <p>Podobno kot Python se obnašajo tudi drugi jeziki iste sorte, na primer JavaScript (kjer so reči še bolj drastične, saj imamo objektov, nimamo pa razredov!). Temu slogu (ne)preverjanja tipov pravimo <a class="reference external" href="http://en.wikipedia.org/wiki/Duck_typing">duck typing</a>: <em>When I see a bird that walks like a duck and swims like a duck and quacks like a duck, I call that bird a duck.</em> Pri tem ni pomembno, ali gre v resnici za raco ali ne; če se objekt vede kot raca, ga lahko obravnavamo kot raco.</p>
 </section>
 <section id="navidezne-metode">
-<h2>Navidezne metode<a class="headerlink" href="#navidezne-metode" title="Permalink to this headline">#</a></h2>
+<h2><span class="section-number">19.3. </span>Navidezne metode<a class="headerlink" href="#navidezne-metode" title="Permalink to this headline">#</a></h2>
 <p>S slednjim je povezana še ena reč, ki je v dinamičnih jezikih precej drugačna kot v statično tipiziranih. (Tisti, ki nimate pojma, o čem govorim, se boste naučili, kako je to v Pythonu in se v drugem semestu čudili Javi. Tisti, ki poznate Javo ali C++ ali C#, pa se boste zdajle čudili Pythonu.)</p>
 <p>Recimo, da bi imel metodo <code class="docutils literal notranslate"><span class="pre">naziv</span></code>, ki bi vrnila naziv osebe. Naziv osebe je lahko <code class="docutils literal notranslate"><span class="pre">profesor</span></code>, lahko pa je tudi <code class="docutils literal notranslate"><span class="pre">student</span></code> ali <code class="docutils literal notranslate"><span class="pre">studentka</span></code>. Če bi imeli takšno funkcijo, bi lahko pozdrav napisali takole.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span>    <span class="k">def</span> <span class="nf">pozdravi</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
@@ -1044,7 +1056,7 @@ med izvajanjem te metode pokličemo metodo <code class="docutils literal notrans
 <p>Tako kot je funkcija <code class="docutils literal notranslate"><span class="pre">izpisi_imena</span></code> zahtevala, da imajo vsi objekti na seznamu <code class="docutils literal notranslate"><span class="pre">ime</span></code>, tako metoda <code class="docutils literal notranslate"><span class="pre">pozdravi</span></code> zahteva, da ima <code class="docutils literal notranslate"><span class="pre">self</span></code> metodo <code class="docutils literal notranslate"><span class="pre">naziv</span></code> (ki ne sprejme drugega argumenta kot <code class="docutils literal notranslate"><span class="pre">self</span></code> in ki vrača nekaj, kar se da izpisati…). Odkod se ta <code class="docutils literal notranslate"><span class="pre">naziv</span></code> vzame - je podedovan, je na novo definiran v <code class="docutils literal notranslate"><span class="pre">self</span></code>ovem razredu ali pa je prišel v <code class="docutils literal notranslate"><span class="pre">self</span></code> po kakih drugih, sumljivejših poteh - ji je vseeno. Pomembno je le, da <code class="docutils literal notranslate"><span class="pre">self.naziv</span></code> obstaja.</p>
 </section>
 <section id="abstraktni-razredi">
-<h2>Abstraktni razredi<a class="headerlink" href="#abstraktni-razredi" title="Permalink to this headline">#</a></h2>
+<h2><span class="section-number">19.4. </span>Abstraktni razredi<a class="headerlink" href="#abstraktni-razredi" title="Permalink to this headline">#</a></h2>
 <p>Kar smo povedali ravnokar, je res res pomembno. To je najpomembnejša reč v objektnem programiranju, zato jo moramo še malo raziskovati.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1079,7 +1091,7 @@ med izvajanjem te metode pokličemo metodo <code class="docutils literal notrans
 <p>V Pythonu in podobnih jezikih ni tako. Razred <code class="docutils literal notranslate"><span class="pre">Oseba</span></code> je okrnjen, vendar bi lahko načelno imel tudi kakšne metode, ki bi normalo delovale. Študenti bi lahko še vedno prejemali ocene, le pozdravljali ne bi.</p>
 </section>
 <section id="navidezne-metode-se-enkrat">
-<h2>Navidezne metode - še enkrat<a class="headerlink" href="#navidezne-metode-se-enkrat" title="Permalink to this headline">#</a></h2>
+<h2><span class="section-number">19.5. </span>Navidezne metode - še enkrat<a class="headerlink" href="#navidezne-metode-se-enkrat" title="Permalink to this headline">#</a></h2>
 <p>Nadaljujmo: dodajmo še en razred. Ali dva.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1226,7 +1238,7 @@ med izvajanjem te metode pokličemo metodo <code class="docutils literal notrans
 <p><em>And now for something completely different.</em> <code class="docutils literal notranslate"><span class="pre">fata.pozdravi()</span></code> pokliče <code class="docutils literal notranslate"><span class="pre">Oseba.pozdravi</span></code>. Le-ta spet kliče <code class="docutils literal notranslate"><span class="pre">self.naziv</span></code>. Ker je <code class="docutils literal notranslate"><span class="pre">self</span></code> isto kot <code class="docutils literal notranslate"><span class="pre">fata</span></code>, <code class="docutils literal notranslate"><span class="pre">fata</span></code> pa je <em>objekt tipa</em> <code class="docutils literal notranslate"><span class="pre">Snazilka</span></code>, <code class="docutils literal notranslate"><span class="pre">self.naziv</span></code> pomeni <code class="docutils literal notranslate"><span class="pre">Snazilka.naziv</span></code>. Tega pa ni! Pač pa ima <code class="docutils literal notranslate"><span class="pre">fata</span></code> naziv, ki ga je podedovala od <code class="docutils literal notranslate"><span class="pre">Oseba</span></code>, namreč <code class="docutils literal notranslate"><span class="pre">Oseba.naziv</span></code>. In ta pravi, da je Fata gospa.</p>
 </section>
 <section id="o-nepythonu">
-<h2>O Nepythonu<a class="headerlink" href="#o-nepythonu" title="Permalink to this headline">#</a></h2>
+<h2><span class="section-number">19.6. </span>O Nepythonu<a class="headerlink" href="#o-nepythonu" title="Permalink to this headline">#</a></h2>
 <p>Če želimo na tem predavanju vsaj omeniti tudi objektno programiranje na splošno, ne le v Pythonu, moramo povedati za bistveno razliko med objektnim programiranjem v Pythonu (in drugih tipičnih dinamično tipiziranih jezikih (se opravičujem za besednjak), na primer JavaScriptu) in objektnim programiranjem v statično tipiziranih jezikih, na primer C++, Javi in C#.</p>
 <p>Metodam, kakršen je tale <code class="docutils literal notranslate"><span class="pre">naziv</span></code>, pravimo <em>navidezne metode</em> (<em>virtual method</em>). Za navidezne metode je značilno, da imajo različni podedovani razredi lahko različne metode, pri čemer pa predniki “vedo”, katero metodo poklicati. Tako <code class="docutils literal notranslate"><span class="pre">Oseba.pozdrav</span></code> včasih pokliče <code class="docutils literal notranslate"><span class="pre">Oseba.naziv</span></code>,
 včasih <code class="docutils literal notranslate"><span class="pre">Student.naziv</span></code> in včasih <code class="docutils literal notranslate"><span class="pre">Ucitelj.naziv</span></code>. Če bi se pojavil še kak četrti, peti, ali osmi razred s svojim nazivom, bi znal <code class="docutils literal notranslate"><span class="pre">Oseba.pozdrav</span></code> poklicati tudi tega.</p>
@@ -1263,6 +1275,20 @@ včasih <code class="docutils literal notranslate"><span class="pre">Student.naz
                 
     <!-- Previous / next buttons -->
 <div class='prev-next-area'>
+    <a class='left-prev' id="prev-link" href="11_sortirni_algoritmi.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title"><span class="section-number">18. </span>Sortirni algoritmi</p>
+        </div>
+    </a>
+    <a class='right-next' id="next-link" href="naloge/01_topovske_bitke/navodila.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title"><span class="section-number">1. </span>Topovske bitke</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
 </div>
             </footer>
         </div>
