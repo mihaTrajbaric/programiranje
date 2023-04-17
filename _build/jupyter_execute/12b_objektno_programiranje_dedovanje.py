@@ -21,7 +21,7 @@ class Oseba:
         print("Pozdravljeni, jaz sem {}".format(self.ime))
 
 
-# Tu smo mimogrede prvič srečali konstruktor (metodo `__init__`) z argumenti. Želva je imela konstruktor brez argumentov; novo želvo smo naredili s `Turtle()` in vedno je stala na sredini, obrnjena navzgor, vidna in s spuščenim peresom. Pri osebah ne bomo imeli "začetnega imena" (Janez Novak?!), temveč bomo morali ob konstrukciji objekta `Oseba` vedno povedati tudi njeno ime in spol.
+# Tu smo mimogrede prvič srečali konstruktor (metodo `__init__`) z argumenti. Ob konstrukciji objekta `Oseba` moramo vedno povedati tudi njeno ime in spol.
 
 # In[2]:
 
@@ -40,7 +40,7 @@ benjamin.pozdravi()
 
 
 # Na fakulteti sta, poenostavljeno povedano, dve vrsti oseb, študenti in učitelji. Za študente beležimo njihove ocene pri posameznih predmetih. Ocene bomo pisali v slovar, katerega ključi bodo imena predmetov, vrednosti pa ocene pri teh predmetih. Študenta je mogoče oceniti, zato
-# bo imel metodo `oceni`, ki ji bomo kot argument podali ime predmeta in oceno, pa bo zapisala to v slovar. Poleg tega bo imel funkcijo `poprecje`, ki bo izračunala njegovo poprečno oceno.
+# bo imel metodo `oceni`, ki ji bomo kot argument podali ime predmeta in oceno, pa bo zapisala to v slovar. Poleg tega bo imel funkcijo `povprecje`, ki bo izračunala njegovo poprečno oceno.
 # 
 # Poleg tega pa imajo tudi študenti ime in spol, in tudi pozdravljati znajo. Z drugimi besedami: *študent je vrsta osebe*. Študent ima vse lastnosti osebe in zna vse, kar znajo osebe, poleg tega pa še nekaj več (beležiti ocene in računati poprečja). Zato bomo razred `Student`
 # *izpeljali iz razreda* `Oseba` (Angleži bi rekli `Student` *is derived from* `Oseba`). `Student` bo *podedoval* vse, kar ima `Oseba` (`Student` *inherits attributes and methods from* `Oseba`). Razred `Oseba` bo prednik (*parent*) razreda `Student`.
@@ -527,4 +527,4 @@ joze.pozdravi()
 # 
 # Drugo, po čemer se ti jeziki razlikujejo od Pythona (in Javascripta in podobnih), je, da bi, kot smo že omenili, zahtevali, da je `Oseba.naziv` nujno definiran (točneje: deklariran), če hočemo, da `Oseba.pozdrav` kliče `self.naziv` - ne glede na to, ali bi bila to navidezna metoda ali ne. Včasih se zgodi tudi, da funkcije, kakršna je `Oseba.naziv`, sploh ne moremo napisati (ker bi morala delati kaj, česar se z `Osebo` ne da narediti, temveč lahko to delajo šele njeni nasledniki). V tem primeru, uh, bi definirali čisto navidezno metodo (*pure virtual method*), razred `Oseba` bi bila abstraktni razred ... No, boljše, da ne rinemo v to. Vedite le, da nam je v Pythonu prihranjenih veliko komplikacij.
 # 
-# Na predavanjih pri Programiranju 1 objektno programiranje v Pythonu popraskamo le po površju. Veliko konceptov, kot na primer statične metode, spremenljivke razreda in podobno, ki ste jih morda srečali v drugih jezikih, pozna tudi Python. Vendar je vse to še pretežko za večino poslušalcev tega predmeta. Te stvari boste spoznavali sproti. Še več pa je tehnik, ki so specifične za Python ali pa jih poznajo le skriptni jeziki. Tudi za te pri Programiranju 1 žal ne bo časa.
+# Na krožku objektno programiranje v Pythonu popraskamo le po površju. Veliko konceptov, kot na primer statične metode, spremenljivke razreda in podobno, ki ste jih morda srečali v drugih jezikih, pozna tudi Python. Vendar je vse to še pretežko. Te stvari boste spoznavali sproti. Še več pa je tehnik, ki so specifične za Python ali pa jih poznajo le skriptni jeziki.
