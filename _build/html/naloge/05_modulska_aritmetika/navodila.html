@@ -1,0 +1,1169 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>5. Modulska aritmetika &#8212; Krožek začetnega programiranja 2022-23</title>
+    
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
+    <link rel="stylesheet" href="../../_static/styles/sphinx-book-theme.css?digest=5115cc725059bd94278eecd172e13a965bf8f5a9" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" />
+    
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
+
+    <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/clipboard.min.js"></script>
+    <script src="../../_static/copybutton.js"></script>
+    <script src="../../_static/scripts/sphinx-book-theme.js?digest=9c920249402e914e316237a7dbc6769907cce411"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../../_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../../_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="../../_static/sphinx-thebe.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="prev" title="4. Pisma sv. Miklavžu" href="../04_pisma_sv_miklavzu/navodila.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
+<!-- Checkboxes to toggle the left sidebar -->
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation" aria-label="Toggle navigation sidebar">
+<label class="overlay overlay-navbar" for="__navigation">
+    <div class="visually-hidden">Toggle navigation sidebar</div>
+</label>
+<!-- Checkboxes to toggle the in-page toc -->
+<input type="checkbox" class="sidebar-toggle" name="__page-toc" id="__page-toc" aria-label="Toggle in-page Table of Contents">
+<label class="overlay overlay-pagetoc" for="__page-toc">
+    <div class="visually-hidden">Toggle in-page Table of Contents</div>
+</label>
+<!-- Headers at the top -->
+<div class="announcement header-item noprint"></div>
+<div class="header header-item noprint"></div>
+
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<!-- Sidebar -->
+<div class="bd-sidebar noprint" id="site-navigation">
+    <div class="bd-sidebar__content">
+        <div class="bd-sidebar__top"><div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../../index.html">
+      
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
+      
+      <img src="../../_static/python-logo.png" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">Krožek začetnega programiranja 2022-23</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../../index.html">
+                    Splošno
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Vsebina
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../01_izrazi_spremenljivke_program.html">
+   1. Izrazi in spremenljivke
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../02a_pogoji.html">
+   2. Pogojni stavki
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../02b_zanke.html">
+   3. Zanke
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../02c_ponovimo.html">
+   4. Ponovitev - osnove
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../03a_seznami_terke_zanka_for.html">
+   5. Seznami, terke in zanka for
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../03b_indeksi_in_rezine.html">
+   6. Indeksi in rezine
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../04a_funkcije.html">
+   7. Funkcije
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../04b_uvazanje_modulov.html">
+   8. Uvažanje modulov
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../04c_pisanje_modulov.html">
+   9. Kako pišemo module
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../04d_ponovimo_2.html">
+   10. Ponovitev - seznami, funkcije, moduli
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../05_metode_nizov_in_seznamov.html">
+   11. Metode nizov in seznamov
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../06_slovarji_in_mno%C5%BEice.html">
+   12. Slovarji in množice
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../07_izpeljani_seznami_slovarji_mno%C5%BEice.html">
+   13. Izpeljani seznami, slovarji, množice
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../09a_oblikovanje_nizov.html">
+   14. Oblikovanje nizov
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../09b_datoteke.html">
+   15. Delo z datotekami
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../10a_rekurzija_rodbina.html">
+   16. Rekurzivne funkcije - drevesa
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../10b_rekurzija_seznami.html">
+   17. Rekurzivne funkcije na seznamih
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../11_sortirni_algoritmi.html">
+   18. Sortirni algoritmi
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../12b_objektno_programiranje_dedovanje.html">
+   19. Objektno programiranje
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Naloge
+ </span>
+</p>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../01_topovske_bitke/navodila.html">
+   1. Topovske bitke
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../02_slovarji_in_mnozice/navodila.html">
+   2. Slovarji in množice
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../03_miklavzeva_knjiga/navodila.html">
+   3. Miklavževa knjiga
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../04_pisma_sv_miklavzu/navodila.html">
+   4. Pisma sv. Miklavžu
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   5. Modulska aritmetika
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav></div>
+        <div class="bd-sidebar__bottom">
+             <!-- To handle the deprecated key -->
+            
+            <div class="navbar_extra_footer">
+            Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+            </div>
+            
+        </div>
+    </div>
+    <div id="rtd-footer-container"></div>
+</div>
+
+
+          
+
+
+          
+<!-- A tiny helper pixel to detect if we've scrolled -->
+<div class="sbt-scroll-pixel-helper"></div>
+<!-- Main content -->
+<div class="col py-0 content-container">
+    
+    <div class="header-article row sticky-top noprint">
+        
+
+
+
+<div class="col py-1 d-flex header-article-main">
+    <div class="header-article__left">
+        
+        <label for="__navigation"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="right"
+title="Toggle navigation"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-bars"></i>
+  </span>
+
+</label>
+
+        
+    </div>
+    <div class="header-article__right">
+<div class="menu-dropdown menu-dropdown-launch-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Launch interactive content">
+      <i class="fas fa-rocket"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="https://mybinder.org/v2/gh/programiranje-SKG/skripta/main?urlpath=tree/naloge/05_modulska_aritmetika/navodila.ipynb"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Launch on Binder"
+>
+  
+
+<span class="headerbtn__icon-container">
+  
+    <img src="../../_static/images/logo_binder.svg">
+  </span>
+<span class="headerbtn__text-container">Binder</span>
+</a>
+
+      </li>
+      
+      <li>
+        
+<button onclick="initThebeSBT()"
+  class="headerbtn headerbtn-launch-thebe"
+  data-toggle="tooltip"
+data-placement="left"
+title="Launch Thebe"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-play"></i>
+  </span>
+<span class="headerbtn__text-container">Live Code</span>
+</button>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+
+<button onclick="toggleFullScreen()"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="bottom"
+title="Fullscreen mode"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+<div class="menu-dropdown menu-dropdown-repository-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Source repositories">
+      <i class="fab fa-github"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="https://github.com/programiranje-SKG/skripta"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Source repository"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="headerbtn__text-container">repository</span>
+</a>
+
+      </li>
+      
+      <li>
+        <a href="https://github.com/programiranje-SKG/skripta/issues/new?title=Issue%20on%20page%20%2Fnaloge/05_modulska_aritmetika/navodila.html&body=Your%20issue%20content%20here."
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Open an issue"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="headerbtn__text-container">open issue</span>
+</a>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+
+<div class="menu-dropdown menu-dropdown-download-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Download this page">
+      <i class="fas fa-download"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="../../_sources/naloge/05_modulska_aritmetika/navodila.ipynb"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Download source file"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="headerbtn__text-container">.ipynb</span>
+</a>
+
+      </li>
+      
+      <li>
+        
+<button onclick="printPdf(this)"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="left"
+title="Print to PDF"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="headerbtn__text-container">.pdf</span>
+</button>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+<label for="__page-toc"
+  class="headerbtn headerbtn-page-toc"
+  
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-list"></i>
+  </span>
+
+</label>
+
+    </div>
+</div>
+
+<!-- Table of contents -->
+<div class="col-md-3 bd-toc show noprint">
+    <div class="tocsection onthispage pt-5 pb-3">
+        <i class="fas fa-list"></i> Contents
+    </div>
+    <nav id="bd-toc-nav" aria-label="Page">
+        <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#predloga-in-testi">
+   5.1. Predloga in testi
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#uvod">
+   5.2. Uvod
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#predloga-in-resitve">
+   5.3. Predloga in rešitve
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#naloge">
+   5.4. Naloge
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#vsota">
+     5.4.1. Vsota
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#zmnozek">
+     5.4.2. Zmnožek
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#nasprotno">
+     5.4.3. Nasprotno
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#razlika">
+     5.4.4. Razlika
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#obratno">
+     5.4.5. Obratno
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#kolicnik">
+     5.4.6. Količnik
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#potenca">
+     5.4.7. Potenca
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#stevilo-kvadratnih-korenov">
+     5.4.8. Število kvadratnih korenov
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#je-potenca">
+     5.4.9. Je potenca
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#je-multiplikativni-generator">
+     5.4.10. Je multiplikativni generator
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#namig">
+   5.5. Namig
+  </a>
+ </li>
+</ul>
+
+    </nav>
+</div>
+    </div>
+    <div class="article row">
+        <div class="col pl-md-3 pl-lg-5 content-container">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>Modulska aritmetika</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#predloga-in-testi">
+   5.1. Predloga in testi
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#uvod">
+   5.2. Uvod
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#predloga-in-resitve">
+   5.3. Predloga in rešitve
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#naloge">
+   5.4. Naloge
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#vsota">
+     5.4.1. Vsota
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#zmnozek">
+     5.4.2. Zmnožek
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#nasprotno">
+     5.4.3. Nasprotno
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#razlika">
+     5.4.4. Razlika
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#obratno">
+     5.4.5. Obratno
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#kolicnik">
+     5.4.6. Količnik
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#potenca">
+     5.4.7. Potenca
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#stevilo-kvadratnih-korenov">
+     5.4.8. Število kvadratnih korenov
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#je-potenca">
+     5.4.9. Je potenca
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#je-multiplikativni-generator">
+     5.4.10. Je multiplikativni generator
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#namig">
+   5.5. Namig
+  </a>
+ </li>
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            <main id="main-content" role="main">
+                
+              <div>
+                
+  <section class="tex2jax_ignore mathjax_ignore" id="modulska-aritmetika">
+<h1><span class="section-number">5. </span>Modulska aritmetika<a class="headerlink" href="#modulska-aritmetika" title="Permalink to this headline">#</a></h1>
+<section id="predloga-in-testi">
+<h2><span class="section-number">5.1. </span>Predloga in testi<a class="headerlink" href="#predloga-in-testi" title="Permalink to this headline">#</a></h2>
+<p>Predloga in testi so na voljo v datoteki <a class="reference external" href="https://github.com/programiranje-SKG/naloge-daljse/blob/main/04_modulska_aritmetika/modulska_aritmetika.zip?raw=true">modulska_aritmetika.zip</a>.</p>
+</section>
+<section id="uvod">
+<h2><span class="section-number">5.2. </span>Uvod<a class="headerlink" href="#uvod" title="Permalink to this headline">#</a></h2>
+<p>Za podano praštevilo <span class="math notranslate nohighlight">\(p\)</span>, imenovano modul, definirajmo množico <span class="math notranslate nohighlight">\(Z_p = \{0, 1, ... , p-1\}\)</span>. Za
+števila iz te množice sta operaciji <em>modulskega seštevanja</em> (<span class="math notranslate nohighlight">\(\oplus\)</span>) in modulskega množenja (<span class="math notranslate nohighlight">\(\otimes\)</span>)
+definirani takole:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}a \oplus b = (a + b) \; mod \; p \\
+a \otimes b = a b \; mod \; p\end{split}\]</div>
+<p>Zapis <span class="math notranslate nohighlight">\(s \; mod \; t\)</span> predstavlja ostanek pri deljenju števila <span class="math notranslate nohighlight">\(s\)</span> s številom <span class="math notranslate nohighlight">\(t\)</span>.</p>
+<p>Modulska <em>nasprotna vrednost</em> števila <span class="math notranslate nohighlight">\(a\)</span> je število <span class="math notranslate nohighlight">\(\bar{a}\)</span>, za katero velja <span class="math notranslate nohighlight">\(a \oplus \bar{a} = 0\)</span>. Modulska <em>obratna vrednost</em> števila <span class="math notranslate nohighlight">\(a \neq 0\)</span> je število <span class="math notranslate nohighlight">\(a^*\)</span>, za katero velja <span class="math notranslate nohighlight">\(a \otimes a^* = 1\)</span>. Sedaj lahko definiramo tudi operaciji <em>modulskega odštevanja</em> (<span class="math notranslate nohighlight">\( \ominus \)</span>) in modulskega deljenja (<span class="math notranslate nohighlight">\(\oslash\)</span>):</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}a \ominus b = a \oplus \bar{b} \\
+a \oslash b = a \otimes b^*  \; (pri \; pogoju \; b \neq 0) \end{split}\]</div>
+<p>Na primer, elementi množice <span class="math notranslate nohighlight">\(Z_7\)</span> se med sabo modulsko seštevajo, odštevajo, množijo in
+delijo takole:</p>
+<table>
+<tr><td><center> Modulska vsota </center> </td> <td>    </td><td><center> Modulska razlika </center></td></tr>
+<tr><td>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="head"><p><span class="math notranslate nohighlight">\(\oplus\)</span></p></th>
+<th class="head"><p>0</p></th>
+<th class="head"><p>1</p></th>
+<th class="head"><p>2</p></th>
+<th class="head"><p>3</p></th>
+<th class="head"><p>4</p></th>
+<th class="head"><p>5</p></th>
+<th class="head"><p>6</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><strong>0</strong></p></td>
+<td><p>0</p></td>
+<td><p>1</p></td>
+<td><p>2</p></td>
+<td><p>3</p></td>
+<td><p>4</p></td>
+<td><p>5</p></td>
+<td><p>6</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>1</strong></p></td>
+<td><p>1</p></td>
+<td><p>2</p></td>
+<td><p>3</p></td>
+<td><p>4</p></td>
+<td><p>5</p></td>
+<td><p>6</p></td>
+<td><p>0</p></td>
+</tr>
+<tr class="row-even"><td><p><strong>2</strong></p></td>
+<td><p>2</p></td>
+<td><p>3</p></td>
+<td><p>4</p></td>
+<td><p>5</p></td>
+<td><p>6</p></td>
+<td><p>0</p></td>
+<td><p>1</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>3</strong></p></td>
+<td><p>3</p></td>
+<td><p>4</p></td>
+<td><p>5</p></td>
+<td><p>6</p></td>
+<td><p>0</p></td>
+<td><p>1</p></td>
+<td><p>2</p></td>
+</tr>
+<tr class="row-even"><td><p><strong>4</strong></p></td>
+<td><p>4</p></td>
+<td><p>5</p></td>
+<td><p>6</p></td>
+<td><p>0</p></td>
+<td><p>1</p></td>
+<td><p>2</p></td>
+<td><p>3</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>5</strong></p></td>
+<td><p>5</p></td>
+<td><p>6</p></td>
+<td><p>0</p></td>
+<td><p>1</p></td>
+<td><p>2</p></td>
+<td><p>3</p></td>
+<td><p>4</p></td>
+</tr>
+<tr class="row-even"><td><p><strong>6</strong></p></td>
+<td><p>6</p></td>
+<td><p>0</p></td>
+<td><p>1</p></td>
+<td><p>2</p></td>
+<td><p>3</p></td>
+<td><p>4</p></td>
+<td><p>5</p></td>
+</tr>
+</tbody>
+</table>
+</td><td>
+</td><td>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="head"><p><span class="math notranslate nohighlight">\(\ominus\)</span></p></th>
+<th class="head"><p>0</p></th>
+<th class="head"><p>1</p></th>
+<th class="head"><p>2</p></th>
+<th class="head"><p>3</p></th>
+<th class="head"><p>4</p></th>
+<th class="head"><p>5</p></th>
+<th class="head"><p>6</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><strong>0</strong></p></td>
+<td><p>0</p></td>
+<td><p>6</p></td>
+<td><p>5</p></td>
+<td><p>4</p></td>
+<td><p>3</p></td>
+<td><p>2</p></td>
+<td><p>1</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>1</strong></p></td>
+<td><p>1</p></td>
+<td><p>0</p></td>
+<td><p>6</p></td>
+<td><p>5</p></td>
+<td><p>4</p></td>
+<td><p>3</p></td>
+<td><p>2</p></td>
+</tr>
+<tr class="row-even"><td><p><strong>2</strong></p></td>
+<td><p>2</p></td>
+<td><p>1</p></td>
+<td><p>0</p></td>
+<td><p>6</p></td>
+<td><p>5</p></td>
+<td><p>4</p></td>
+<td><p>3</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>3</strong></p></td>
+<td><p>3</p></td>
+<td><p>2</p></td>
+<td><p>1</p></td>
+<td><p>0</p></td>
+<td><p>6</p></td>
+<td><p>5</p></td>
+<td><p>4</p></td>
+</tr>
+<tr class="row-even"><td><p><strong>4</strong></p></td>
+<td><p>4</p></td>
+<td><p>3</p></td>
+<td><p>2</p></td>
+<td><p>1</p></td>
+<td><p>0</p></td>
+<td><p>6</p></td>
+<td><p>5</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>5</strong></p></td>
+<td><p>5</p></td>
+<td><p>4</p></td>
+<td><p>3</p></td>
+<td><p>2</p></td>
+<td><p>1</p></td>
+<td><p>0</p></td>
+<td><p>6</p></td>
+</tr>
+<tr class="row-even"><td><p><strong>6</strong></p></td>
+<td><p>6</p></td>
+<td><p>5</p></td>
+<td><p>4</p></td>
+<td><p>3</p></td>
+<td><p>2</p></td>
+<td><p>1</p></td>
+<td><p>0</p></td>
+</tr>
+</tbody>
+</table>
+</td></tr>
+<tr> </tr>
+<tr><td><center> Modulski zmnožek </center></td> <td>    </td><td><center> Modulski količnik </center></td></tr>
+<tr><td>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="head"><p><span class="math notranslate nohighlight">\(\otimes\)</span></p></th>
+<th class="head"><p>0</p></th>
+<th class="head"><p>1</p></th>
+<th class="head"><p>2</p></th>
+<th class="head"><p>3</p></th>
+<th class="head"><p>4</p></th>
+<th class="head"><p>5</p></th>
+<th class="head"><p>6</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><strong>0</strong></p></td>
+<td><p>0</p></td>
+<td><p>0</p></td>
+<td><p>0</p></td>
+<td><p>0</p></td>
+<td><p>0</p></td>
+<td><p>0</p></td>
+<td><p>0</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>1</strong></p></td>
+<td><p>0</p></td>
+<td><p>1</p></td>
+<td><p>2</p></td>
+<td><p>3</p></td>
+<td><p>4</p></td>
+<td><p>5</p></td>
+<td><p>6</p></td>
+</tr>
+<tr class="row-even"><td><p><strong>2</strong></p></td>
+<td><p>0</p></td>
+<td><p>2</p></td>
+<td><p>4</p></td>
+<td><p>6</p></td>
+<td><p>1</p></td>
+<td><p>3</p></td>
+<td><p>5</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>3</strong></p></td>
+<td><p>0</p></td>
+<td><p>3</p></td>
+<td><p>6</p></td>
+<td><p>2</p></td>
+<td><p>5</p></td>
+<td><p>1</p></td>
+<td><p>4</p></td>
+</tr>
+<tr class="row-even"><td><p><strong>4</strong></p></td>
+<td><p>0</p></td>
+<td><p>4</p></td>
+<td><p>1</p></td>
+<td><p>5</p></td>
+<td><p>2</p></td>
+<td><p>6</p></td>
+<td><p>3</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>5</strong></p></td>
+<td><p>0</p></td>
+<td><p>5</p></td>
+<td><p>3</p></td>
+<td><p>1</p></td>
+<td><p>6</p></td>
+<td><p>4</p></td>
+<td><p>2</p></td>
+</tr>
+<tr class="row-even"><td><p><strong>6</strong></p></td>
+<td><p>0</p></td>
+<td><p>6</p></td>
+<td><p>5</p></td>
+<td><p>4</p></td>
+<td><p>3</p></td>
+<td><p>2</p></td>
+<td><p>1</p></td>
+</tr>
+</tbody>
+</table>
+</td><td>
+</td><td>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="head"><p><span class="math notranslate nohighlight">\(\oslash\)</span></p></th>
+<th class="head"><p>0</p></th>
+<th class="head"><p>1</p></th>
+<th class="head"><p>2</p></th>
+<th class="head"><p>3</p></th>
+<th class="head"><p>4</p></th>
+<th class="head"><p>5</p></th>
+<th class="head"><p>6</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><strong>0</strong></p></td>
+<td><p>-</p></td>
+<td><p>0</p></td>
+<td><p>0</p></td>
+<td><p>0</p></td>
+<td><p>0</p></td>
+<td><p>0</p></td>
+<td><p>0</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>1</strong></p></td>
+<td><p>-</p></td>
+<td><p>1</p></td>
+<td><p>4</p></td>
+<td><p>5</p></td>
+<td><p>2</p></td>
+<td><p>3</p></td>
+<td><p>6</p></td>
+</tr>
+<tr class="row-even"><td><p><strong>2</strong></p></td>
+<td><p>-</p></td>
+<td><p>2</p></td>
+<td><p>1</p></td>
+<td><p>3</p></td>
+<td><p>4</p></td>
+<td><p>6</p></td>
+<td><p>5</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>3</strong></p></td>
+<td><p>-</p></td>
+<td><p>3</p></td>
+<td><p>5</p></td>
+<td><p>1</p></td>
+<td><p>6</p></td>
+<td><p>2</p></td>
+<td><p>4</p></td>
+</tr>
+<tr class="row-even"><td><p><strong>4</strong></p></td>
+<td><p>-</p></td>
+<td><p>4</p></td>
+<td><p>2</p></td>
+<td><p>6</p></td>
+<td><p>1</p></td>
+<td><p>5</p></td>
+<td><p>3</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>5</strong></p></td>
+<td><p>-</p></td>
+<td><p>5</p></td>
+<td><p>6</p></td>
+<td><p>4</p></td>
+<td><p>3</p></td>
+<td><p>1</p></td>
+<td><p>2</p></td>
+</tr>
+<tr class="row-even"><td><p><strong>6</strong></p></td>
+<td><p>-</p></td>
+<td><p>6</p></td>
+<td><p>3</p></td>
+<td><p>2</p></td>
+<td><p>5</p></td>
+<td><p>4</p></td>
+<td><p>1</p></td>
+</tr>
+</tbody>
+</table>
+</td></tr>
+ </table>
+<p><em>Modulska potenca</em> <span class="math notranslate nohighlight">\(mpow(a, t)\)</span>, pri čemer je <span class="math notranslate nohighlight">\(a \in Z_p\)</span>, <span class="math notranslate nohighlight">\(t\)</span> pa je lahko <em>poljubno</em> celo število, je deﬁnirana takole:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}mpow(a, t) = 
+    \begin{cases}
+    1 &amp; pri \; t=0 \\
+    a \otimes mpow(a,t-1) &amp; pri \; t &gt; 0 \\
+    mpow(a, -t)^* &amp; pri \; t &lt; 0 \\
+    \end{cases}\end{split}\]</div>
+<p>Na primer, pri <span class="math notranslate nohighlight">\(p = 7\)</span> velja:</p>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(mpow(5,0) = 1\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(mpow(5,1) = 5\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(mpow(5,2) = 5 \otimes 5 = 4\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(mpow(5,3) = 5 \otimes 5 \otimes 5 = 6\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(mpow(5,-1) = 5^* = 3\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(mpow(5,-2) = (5 \otimes 5)^* = 4^* = 2\)</span></p></li>
+</ul>
+<p>Deﬁnirajmo še modulski <em>kvadratni koren</em> (msqrt):</p>
+<div class="math notranslate nohighlight">
+\[ msqrt(a) = \{b \in Z_p \; | \; b \otimes b = a\}\]</div>
+<p>Za razliko od običajnega kvadratnega korena modulski ni enolično določen, zato ga deﬁniramo kot množico vseh števil, ki pri modulskem množenju s samim seboj dajo podano
+število.</p>
+<p>Na primer, pri <span class="math notranslate nohighlight">\(p=7\)</span> velja:</p>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(msqrt(0)=\{0\}\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(msqrt(1)=\{1,6\}\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(msqrt(2)=\{3,4\}\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(msqrt(3)= \emptyset\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(msqrt(4)=\{2,5\}\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(msqrt(5)= \emptyset\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(msqrt(6)= \emptyset\)</span></p></li>
+</ul>
+<p>Število <span class="math notranslate nohighlight">\(n \in  Z_p\)</span> je <em>multiplikativni generator</em> množice <span class="math notranslate nohighlight">\(Z_p\)</span> , če je množica</p>
+<div class="math notranslate nohighlight">
+\[
+P(n) = \{mpow(n,i) \; | \; i \in \{0,1, \dots, p-1 \}\}
+\]</div>
+<p>enaka množici <span class="math notranslate nohighlight">\(Z_p\ \{0\} = \{1,2, \dots,p-1 \}\)</span>.</p>
+<p>Na primer, pri <span class="math notranslate nohighlight">\(p=7\)</span> velja:</p>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(P(0) = \{0\}\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(P(1) = \{1\}\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(P(2) = \{1,2,4\}\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(P(3) = \{1,2,3,4,5,6\}\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(P(4) = \{1,2,4\}\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(P(5) = \{1,2,3,4,5,6\}\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(P(6) = \{1,6\}\)</span></p></li>
+</ul>
+<p>Multiplikativna generatorja množice <span class="math notranslate nohighlight">\(Z_7\)</span> sta torej števili 3 in 5.</p>
+</section>
+<section id="predloga-in-resitve">
+<h2><span class="section-number">5.3. </span>Predloga in rešitve<a class="headerlink" href="#predloga-in-resitve" title="Permalink to this headline">#</a></h2>
+<p>Najprej si prenesi predlogo za reševanje, jo ekstrahiraj in odpri v najljubšem IDEju. Kasneje se bodo tukaj pojavile tudi rešitve.</p>
+<p><a class="reference external" href="https://github.com/programiranje-SKG/naloge-daljse/raw/main/04_modulska_aritmetika/modulska_aritmetika.zip">predloga.zip</a></p>
+<p>Če ne maraš predlog, lahko seveda rešuješ tudi samostojno in funkcije testiraš s primeri iz teh navodil.</p>
+</section>
+<section id="naloge">
+<h2><span class="section-number">5.4. </span>Naloge<a class="headerlink" href="#naloge" title="Permalink to this headline">#</a></h2>
+<p>V razredu <code class="docutils literal notranslate"><span class="pre">Zp</span></code>, čigar objekt predstavlja množico <span class="math notranslate nohighlight">\(Z_p\)</span> za podani modul <span class="math notranslate nohighlight">\(p\)</span> implementirajte sledeče metode:</p>
+<section id="vsota">
+<h3><span class="section-number">5.4.1. </span>Vsota<a class="headerlink" href="#vsota" title="Permalink to this headline">#</a></h3>
+<p>Definiratje metodo <code class="docutils literal notranslate"><span class="pre">vsota(self,</span> <span class="pre">prvo,</span> <span class="pre">drugo)</span></code>, ki vrne modulsko vsoto števil <code class="docutils literal notranslate"><span class="pre">prvo</span></code> in <code class="docutils literal notranslate"><span class="pre">drugo</span></code> v okviru množice, ki jo predstavlja trenutni objekt. Obe števili sta iz intervala <span class="math notranslate nohighlight">\([0, p-1]\)</span>, kjer je <span class="math notranslate nohighlight">\(p\)</span> modul množice trenutnega objekta.</p>
+</section>
+<section id="zmnozek">
+<h3><span class="section-number">5.4.2. </span>Zmnožek<a class="headerlink" href="#zmnozek" title="Permalink to this headline">#</a></h3>
+<p>Metoda <code class="docutils literal notranslate"><span class="pre">zmnozek(self,</span> <span class="pre">prvo,</span> <span class="pre">drugo)</span></code> vrne modulski zmnožek števil <code class="docutils literal notranslate"><span class="pre">prvo</span></code> in <code class="docutils literal notranslate"><span class="pre">drugo</span></code> v okviru množice, ki jo predstavlja trenutni objekt. Obe števili sta iz intervala <span class="math notranslate nohighlight">\([0, p-1]\)</span>, kjer je <span class="math notranslate nohighlight">\(p\)</span> modul množice trenutnega objekta.</p>
+</section>
+<section id="nasprotno">
+<h3><span class="section-number">5.4.3. </span>Nasprotno<a class="headerlink" href="#nasprotno" title="Permalink to this headline">#</a></h3>
+<p>Metoda <code class="docutils literal notranslate"><span class="pre">nasprotno(self,</span> <span class="pre">stevilo)</span></code> vrne modulsko nasprotno vrednost števila <code class="docutils literal notranslate"><span class="pre">stevilo</span></code>.Število je iz intervala <span class="math notranslate nohighlight">\([0, p-1]\)</span>, kjer je <span class="math notranslate nohighlight">\(p\)</span> modul množice trenutnega objekta.</p>
+</section>
+<section id="razlika">
+<h3><span class="section-number">5.4.4. </span>Razlika<a class="headerlink" href="#razlika" title="Permalink to this headline">#</a></h3>
+<p>Metoda <code class="docutils literal notranslate"><span class="pre">razlika(self,</span> <span class="pre">prvo,</span> <span class="pre">drugo)</span></code> vrne modulsko razliko števil <code class="docutils literal notranslate"><span class="pre">prvo</span></code> in <code class="docutils literal notranslate"><span class="pre">drugo</span></code> v okviru množice, ki jo predstavlja trenutni objekt. Obe števili sta iz intervala <span class="math notranslate nohighlight">\([0, p-1]\)</span>, kjer je <span class="math notranslate nohighlight">\(p\)</span> modul množice trenutnega objekta.</p>
+</section>
+<section id="obratno">
+<h3><span class="section-number">5.4.5. </span>Obratno<a class="headerlink" href="#obratno" title="Permalink to this headline">#</a></h3>
+<p>Metoda <code class="docutils literal notranslate"><span class="pre">obratno(self,</span> <span class="pre">stevilo)</span></code> vrne modulsko obratno vrednost števila <code class="docutils literal notranslate"><span class="pre">stevilo</span></code>. Število se nahaja na intervalu <span class="math notranslate nohighlight">\([1, p - 1]\)</span>, kjer je <span class="math notranslate nohighlight">\(p\)</span> modul množice trenutnega objekta.</p>
+</section>
+<section id="kolicnik">
+<h3><span class="section-number">5.4.6. </span>Količnik<a class="headerlink" href="#kolicnik" title="Permalink to this headline">#</a></h3>
+<p>Metoda <code class="docutils literal notranslate"><span class="pre">kolicnik(self,</span> <span class="pre">prvo,</span> <span class="pre">drugo)</span></code> vrne modulski količnik števil <code class="docutils literal notranslate"><span class="pre">prvo</span></code> in <code class="docutils literal notranslate"><span class="pre">drugo</span></code>. Parameter <code class="docutils literal notranslate"><span class="pre">prvo</span></code> se nahaja v intervalu <span class="math notranslate nohighlight">\([0, p  - 1]\)</span>, parameter <code class="docutils literal notranslate"><span class="pre">drugo</span></code> pa v intervalu <span class="math notranslate nohighlight">\([1, p  - 1]\)</span>.</p>
+</section>
+<section id="potenca">
+<h3><span class="section-number">5.4.7. </span>Potenca<a class="headerlink" href="#potenca" title="Permalink to this headline">#</a></h3>
+<p>Metoda <code class="docutils literal notranslate"><span class="pre">potenca(self,</span> <span class="pre">stevilo,</span> <span class="pre">eksponent)</span></code> vrne modulsko potenco števila <code class="docutils literal notranslate"><span class="pre">stevilo</span></code> na število <code class="docutils literal notranslate"><span class="pre">eksponent</span></code>. Parameter <code class="docutils literal notranslate"><span class="pre">eksponent</span></code> se nahaja v intervalu <span class="math notranslate nohighlight">\([-10^3, 10^3]\)</span>. Parameter ‘stevilo’ se nahaja v intervalu <span class="math notranslate nohighlight">\([1, p-1]\)</span>.</p>
+</section>
+<section id="stevilo-kvadratnih-korenov">
+<h3><span class="section-number">5.4.8. </span>Število kvadratnih korenov<a class="headerlink" href="#stevilo-kvadratnih-korenov" title="Permalink to this headline">#</a></h3>
+<p>Metoda <code class="docutils literal notranslate"><span class="pre">stevilo_kvadratnih_korenov(self,</span> <span class="pre">stevilo)</span></code> vrne moč množice (število elementov) modulskih kvadratnih korenov števila <code class="docutils literal notranslate"><span class="pre">stevilo</span></code>, torej število števil <span class="math notranslate nohighlight">\(b\)</span> iz intervala <span class="math notranslate nohighlight">\([0, p-1]\)</span>, za katera je produkt <span class="math notranslate nohighlight">\(b \otimes b\)</span>  enak številu <span class="math notranslate nohighlight">\(stevilo\)</span>.</p>
+</section>
+<section id="je-potenca">
+<h3><span class="section-number">5.4.9. </span>Je potenca<a class="headerlink" href="#je-potenca" title="Permalink to this headline">#</a></h3>
+<p>Pomožna metoda. <code class="docutils literal notranslate"><span class="pre">je_potenca(self,</span> <span class="pre">osnova,</span> <span class="pre">iskani_rezultat)</span></code> preveri, če je <code class="docutils literal notranslate"><span class="pre">iskani_rezultat</span></code> potenca števila <code class="docutils literal notranslate"><span class="pre">osnova</span></code> v množici, ki jo predstavlja trenutni objekt.</p>
+</section>
+<section id="je-multiplikativni-generator">
+<h3><span class="section-number">5.4.10. </span>Je multiplikativni generator<a class="headerlink" href="#je-multiplikativni-generator" title="Permalink to this headline">#</a></h3>
+<p>Metoda <code class="docutils literal notranslate"><span class="pre">je_multiplikativni_generator(self,</span> <span class="pre">stevilo)</span></code> vrne <code class="docutils literal notranslate"><span class="pre">True</span></code> natanko v primeru, če je število <code class="docutils literal notranslate"><span class="pre">stevilo</span></code> multiplikativni generator množice, ki jo predstavlja trenutni objekt. Parameter <code class="docutils literal notranslate"><span class="pre">stevilo</span></code> se nahaja v intervalu <span class="math notranslate nohighlight">\([1, p  - 1]\)</span>.</p>
+<p>Pri implementaciji si lahko pomagaš s funkcijo <code class="docutils literal notranslate"><span class="pre">je_potenca(osnova,</span> <span class="pre">iskani_rezultat)</span></code>.</p>
+</section>
+</section>
+<section id="namig">
+<h2><span class="section-number">5.5. </span>Namig<a class="headerlink" href="#namig" title="Permalink to this headline">#</a></h2>
+<p>Kako bi učinkovito izračunali potenco <span class="math notranslate nohighlight">\(a^e\)</span> (oziroma njeno modulsko različico), kjer je eksponent <span class="math notranslate nohighlight">\(e\)</span> veliko pozitivno celo število? Če je <span class="math notranslate nohighlight">\(e\)</span> sod, se nam <span class="math notranslate nohighlight">\(a^e\)</span> splača izračunati kot <span class="math notranslate nohighlight">\((a^{e/2})^2\)</span> , saj lahko potenco <span class="math notranslate nohighlight">\(a^{e/2}\)</span> izračunamo na enak način kot potenco <span class="math notranslate nohighlight">\(a^e\)</span>, le eksponent je za polovico manjši. Lahko podoben trik uporabimo tudi pri lihih eksponentih?</p>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "programiranje-SKG/skripta",
+            ref: "main",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./naloge/05_modulska_aritmetika"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+            </main>
+            <footer class="footer-article noprint">
+                
+    <!-- Previous / next buttons -->
+<div class='prev-next-area'>
+    <a class='left-prev' id="prev-link" href="../04_pisma_sv_miklavzu/navodila.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title"><span class="section-number">4. </span>Pisma sv. Miklavžu</p>
+        </div>
+    </a>
+</div>
+            </footer>
+        </div>
+    </div>
+    <div class="footer-content row">
+        <footer class="col footer"><p>
+  
+    By Mihael Trajbarič<br/>
+  
+      &copy; Copyright 2022.<br/>
+</p>
+        </footer>
+    </div>
+    
+</div>
+
+
+      </div>
+    </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+
+
+  </body>
+</html>

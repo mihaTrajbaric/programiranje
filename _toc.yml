@@ -25,7 +25,7 @@ parts:
     - file: 10a_rekurzija_rodbina
     - file: 10b_rekurzija_seznami
     - file: 11_sortirni_algoritmi.ipynb
-    # - file: 12b_objektno_programiranje_dedovanje
+    - file: 12b_objektno_programiranje_dedovanje
 - caption: Naloge
   numbered: true
   chapters:
@@ -33,4 +33,4 @@ parts:
     - file: naloge/02_slovarji_in_mnozice/navodila
     - file: naloge/03_miklavzeva_knjiga/navodila
     - file: naloge/04_pisma_sv_miklavzu/navodila
-
+    - file: naloge/05_modulska_aritmetika/navodila
